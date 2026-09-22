@@ -1,0 +1,60 @@
+"""Gate every completion, including Instructor repairs and research retries."""
+
+import math
+from types import SimpleNamespace
+from typing import Any
+
+from astrafeed.ports.spend_budget import SpendBudget
+
+
+class BudgetedClient:
+    def __init__(
+        self,
+        client: Any,
+        *,
+        store: SpendBudget,
+        user_id: int,
+        reservation_amount: float = 0.5,
+        max_tokens: int = 8192,
+    ) -> None:
+        if not math.isfinite(reservation_amount) or reservation_amount <= 0:
+            raise ValueError("Reservation must be finite and positive")
+        if max_tokens <= 0:
+            raise ValueError("Token ceiling must be positive")
+        # SDK-internal retries bypass create(); disable them at this boundary.
+        self._client = client.with_options(max_retries=0)
+        self._store = store
+        self._user_id = user_id
+        self._reservation_amount = reservation_amount
+        self._max_tokens = max_tokens
+        self.chat = SimpleNamespace(completions=self)
+
+    def with_options(self, **kwargs: Any) -> "BudgetedClient":
+        return BudgetedClient(
+            self._client.with_options(**{**kwargs, "max_retries": 0}),
+            store=self._store,
+            user_id=self._user_id,
+            reservation_amount=self._reservation_amount,
+            max_tokens=self._max_tokens,
+        )
+
+    async def create(self, **kwargs: Any) -> Any:
+        if kwargs.get("stream"):
+            raise ValueError("Budgeted streaming is not supported")
+        token_key = "max_completion_tokens" if "max_completion_tokens" in kwargs else "max_tokens"
+        kwargs[token_key] = min(kwargs.get(token_key) or self._max_tokens, self._max_tokens)
+        extra_body = dict(kwargs.get("extra_body") or {})
+        extra_body["usage"] = {"include": True}
+        kwargs["extra_body"] = extra_body
+        reservation = await self._store.reserve(self._user_id, self._reservation_amount)
+        # Exceptions/cancellation/crashes leave the durable conservative charge intact.
+        response = await self._client.chat.completions.create(**kwargs)
+        cost = getattr(getattr(response, "usage", None), "cost", None)
+        if cost is not None:
+            try:
+                actual_cost = float(cost)
+            except (TypeError, ValueError):
+                actual_cost = math.nan
+            if math.isfinite(actual_cost) and actual_cost >= 0:
+                await self._store.settle(reservation, actual_cost)
+        return response

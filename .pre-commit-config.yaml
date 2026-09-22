@@ -1,0 +1,27 @@
+# Runs before every commit. Install once with `make install` (or
+# `uv run pre-commit install`). Mirrors the `make check` gate.
+# refs/ is a vendored reference project — excluded everywhere.
+exclude: ^refs/
+repos:
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.15.16
+    hooks:
+      - id: ruff-check      # lint, auto-fix what it safely can
+        args: [--fix]
+      - id: ruff-format     # format
+
+  - repo: local
+    hooks:
+      - id: mypy
+        name: mypy
+        entry: uv run mypy -p astrafeed
+        language: system
+        types: [python]
+        pass_filenames: false
+
+      - id: pytest
+        name: pytest
+        entry: uv run pytest -q
+        language: system
+        types: [python]
+        pass_filenames: false

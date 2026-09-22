@@ -1,0 +1,15 @@
+database_url: "sqlite+aiosqlite:///astrafeed.db"
+language: "en"
+poll_seconds: 300
+api_host: "127.0.0.1"
+api_port: 8000
+backfill_hours: 24
+channels:
+  - "@cointelegraph"
+  - "@The_blockchain"
+interests:
+  - "SOL"
+  - "OKB"
+llm_daily_budget_usd: 5.0
+llm_reservation_usd: 0.5
+llm_max_tokens: 8192
