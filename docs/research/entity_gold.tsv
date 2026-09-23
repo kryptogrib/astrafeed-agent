@@ -1,0 +1,42 @@
+# Hand-checked sample for entity_eval.py. Small on purpose: every row was read in astrafeed.db on 2026-09-23.
+# expect: mention     -> the document mentions the candidate (hit = confirmed, ambiguous = flagged, miss = absent)
+#         no_mention  -> the document must NOT be counted for the candidate (confirmed = false positive)
+#         no_alias    -> link column holds "a|b"; the pair must not be proposed as an alias
+#         alias       -> link column holds "a|b"; the pair should be proposed or reported as related
+link	candidate	expect	note
+https://t.me/rawa_imagination/21157?comment=344049	bitcoin	mention	"альтсезон и биток 1млн$"
+https://t.me/cryptonftded/3282?comment=187846	bitcoin	mention	"жди роста битка"
+https://t.me/cryptonftded/3264?comment=186668	bitcoin	mention	"с битком в руках"
+https://t.me/rawa_imagination/21073?comment=342708	ethereum	mention	"по эфиру на 2300 много ликвидаций"
+https://t.me/slavik_investor/2469?comment=284102	ethereum	mention	"До 3к эфир подарочно"
+https://t.me/don_invest/5296?comment=379891	ethereum	mention	"7 баксов в эфире сети robinhood" = ETH
+https://t.me/don_invest/5296?comment=379891	robinhood	mention	lowercase network name
+https://t.me/cryptonftded/3268?comment=187266	ton	mention	"Покупала тон по 8$"
+https://t.me/Slavik_investor_updates/6912?comment=138020	hyperliquid	mention	"у хайпера ... фри позицию"
+https://t.me/Slavik_investor_updates/6912?comment=138020	usdt	mention	"1к юсдт"
+https://t.me/WEB3_AGGREGATOR/423040	hyperliquid	mention	"слить на хайперликвиде"
+https://t.me/WEB3_AGGREGATOR/423040	treadfi	mention	lowercase project name, first word
+https://t.me/whitelist1/7149	zcash	mention	"NFT на Zcash"
+https://t.me/whitelist1/7149	zec	mention	"Цена 0.02 ZEC"
+https://t.me/cryptonftded/3270	clarity act	mention	"Clarity Act НЕ набрал 60 голосов"
+https://t.me/cryptonftded/3270	ton	mention	"TON $1.31"
+https://t.me/markettwits/384979	nvidia	mention	"CEO Nvidia Дженсен Хуан"
+https://t.me/markettwits/384979	трамп	mention	"обеду Трампа"
+https://t.me/crypto_hd/31558	circle	mention	"инвестирует $100m в Circle (WSJ)"
+https://t.me/crypto_hd/31558	binance	mention	"Binance инвестирует"
+https://t.me/WEB3_AGGREGATOR/423200	nvidia	mention	"- CEO Nvidia Дженсен Хуанг"
+https://t.me/WEB3_AGGREGATOR/423200	openai	mention	"Финансовый директор OpenAI"
+https://t.me/markettwits/384393	ethereum	no_mention	"прямой эфир с CEO JetLend"
+https://t.me/markettwits/385554	ethereum	no_mention	"заявил в эфире CNN"
+https://t.me/markettwits/384654	ethereum	no_mention	"в эфире Радио РБК"
+https://t.me/WEB3_AGGREGATOR/423200	ton	no_mention	"чисто чтобы задать тон"
+https://t.me/rawa_imagination/21080	ton	no_mention	"регулятор смягчит тон"
+https://t.me/markettwits/384979	ceo	no_mention	role, not an entity
+https://t.me/WEB3_AGGREGATOR/423200	ceo	no_mention	role, not an entity
+https://t.me/markettwits/384393	ceo	no_mention	role, not an entity
+https://t.me/cryptoattack24/96762	time	no_mention	"Time (UTC): 15:54" is a timestamp label
+time|utc	-	no_alias	"Time (UTC)"
+circle|wsj	-	no_alias	"Circle (WSJ)": WSJ is the source
+ceo nvidia|ceo	-	no_alias	role phrase
+zcash|zec	-	alias	network and its asset
+ethereum|eth	-	alias	network and its asset

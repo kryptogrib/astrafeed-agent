@@ -1,0 +1,24 @@
+# Context exclusions for entity_candidates.py. Kept apart from entity_aliases.tsv:
+# an alias row says "this spelling names X"; a row here says "in THIS context this token is not a name".
+# Nothing is excluded globally: a row applies only when its context regex matches around the token,
+# and only to the weak shape rules listed in `rules`. A mention with any other rule (e.g. $MLN as a
+# cashtag) keeps that rule and stays confirmed. Excluded detections are stored with status=excluded.
+#
+# Columns (tab-separated):
+#   surface   token after NFKC+casefold, whole word
+#   rules     comma-separated rules this row may suppress (caps, title_name, camel_name, phrase_head, bracket_symbol)
+#   context   regex checked in a +-60 char window; {w} stands for the token itself (case-insensitive)
+#   reason    short class: unit / timezone / month / report_label / auction_verb
+#   basis     where it was seen in this snapshot
+surface	rules	context	reason	basis
+mln	caps	\d[\d.,]*\s*\$?\s*{w}\b	unit: amount next to a number	https://t.me/marketfeed (S&P 500: -44.1 MLN)
+bln	caps	\d[\d.,]*\s*\$?\s*{w}\b	unit: amount next to a number	https://t.me/marketfeed (SELLS $13 BLN)
+sells	caps	\b{w}\s+\$?\s*\d[\d.,]*\s*(bln|mln|bn)\b	auction_verb: treasury auction headline	https://t.me/marketfeed (US SELLS $90 BLN)
+est	caps,phrase_head	\d{1,2}:\d{2}[^\n]{0,12}\b{w}\b|\b20\d\d\s+{w}\b|\d\s*(am|pm)\s+{w}\b|[(\[][^)\]\n]{0,30}\b{w}\b[^)\]\n]{0,4}[)\]]|\b{w}\.?\s+\$?\d	timezone or "estimate" label in a report line	https://t.me/marketfeed ([Sep 15, 2026 07:00-16:30 EST]; EPS: $1.19 (EST $1.28))
+utc	caps	\d{1,2}:\d{2}[^\n]{0,12}\b{w}\b|\({w}\)|\b{w}\s*[+-]\s*\d	timezone	https://t.me/cryptoattack24/96762 (Time (UTC): 15:54)
+gmt	caps	\d{1,2}:\d{2}[^\n]{0,6}\b{w}\b|\({w}\)|\b{w}\s*[+-]\s*\d	timezone	corpus (20:00 GMT+3)
+sep	caps,title_name	\b{w}\s+\d{1,2}\b|\b\d{1,2}\s+{w}\b	month abbreviation next to a day	https://t.me/marketfeed (decision to Sep 23)
+prev	caps	\b{w}\.?\s*[-+]?\d	report_label: previous value	https://t.me/marketfeed (PREV. 0.2%)
+exp	caps	\b{w}\.?\s*[-+]?\d	report_label: expected value	https://t.me/marketfeed (EXP. 0.2%)
+mom	camel_name,bracket_symbol	\({w}\)|\d\S*\s+{w}\b	report_label: month over month	corpus (PPI (MoM) (Aug))
+yoy	camel_name,bracket_symbol	\({w}\)|\d\S*\s+{w}\b	report_label: year over year	corpus (¥47.8T YoY)
