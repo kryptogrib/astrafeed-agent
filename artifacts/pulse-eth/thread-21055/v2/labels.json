@@ -1,0 +1,594 @@
+[
+ {
+  "id": "342461",
+  "entity": "bitcoin",
+  "topic_relation": "unrelated",
+  "mention": null,
+  "subject": "bitcoin sideways move",
+  "aspect": null,
+  "claim": null,
+  "stance": "unclear",
+  "evidence_ids": []
+ },
+ {
+  "id": "342462",
+  "entity": "ethereum",
+  "topic_relation": "direct",
+  "mention": "эфира",
+  "subject": "liquidation of shorts above ETH",
+  "aspect": "market",
+  "claim": null,
+  "stance": "unclear",
+  "evidence_ids": [
+   "342462"
+  ]
+ },
+ {
+  "id": "342463",
+  "entity": "bitcoin",
+  "topic_relation": "unrelated",
+  "mention": null,
+  "subject": "bitcoin's role in altseason",
+  "aspect": null,
+  "claim": "Bitcoin's job in altseason is just not to fall.",
+  "stance": "support",
+  "evidence_ids": []
+ },
+ {
+  "id": "342464",
+  "entity": "other",
+  "topic_relation": "unrelated",
+  "mention": null,
+  "subject": "closing short position",
+  "aspect": null,
+  "claim": null,
+  "stance": "unclear",
+  "evidence_ids": []
+ },
+ {
+  "id": "342465",
+  "entity": "other",
+  "topic_relation": "unrelated",
+  "mention": null,
+  "subject": "altcoin vs bitcoin performance",
+  "aspect": null,
+  "claim": "Bitcoin can grow and alts grow much more.",
+  "stance": "support",
+  "evidence_ids": []
+ },
+ {
+  "id": "342466",
+  "entity": "ethereum",
+  "topic_relation": "contextual",
+  "mention": null,
+  "subject": "source of volumes on ETH",
+  "aspect": "market",
+  "claim": null,
+  "stance": "unclear",
+  "evidence_ids": [
+   "post"
+  ]
+ },
+ {
+  "id": "342467",
+  "entity": "frs",
+  "topic_relation": "unrelated",
+  "mention": null,
+  "subject": "Fed rate cut effect",
+  "aspect": null,
+  "claim": "If the Fed cuts rates by 2%, altseason can happen.",
+  "stance": "support",
+  "evidence_ids": []
+ },
+ {
+  "id": "342468",
+  "entity": "ethereum",
+  "topic_relation": "direct",
+  "mention": "это",
+  "subject": "nature of volume on ETH",
+  "aspect": "market",
+  "claim": "The volume is spot.",
+  "stance": "support",
+  "evidence_ids": [
+   "342468"
+  ]
+ },
+ {
+  "id": "342469",
+  "entity": "other",
+  "topic_relation": "unrelated",
+  "mention": null,
+  "subject": "addressee correction",
+  "aspect": null,
+  "claim": null,
+  "stance": "unclear",
+  "evidence_ids": []
+ },
+ {
+  "id": "342470",
+  "entity": "bitcoin",
+  "topic_relation": "unrelated",
+  "mention": null,
+  "subject": "bitcoin in altseason",
+  "aspect": null,
+  "claim": null,
+  "stance": "unclear",
+  "evidence_ids": []
+ },
+ {
+  "id": "342471",
+  "entity": "other",
+  "topic_relation": "unrelated",
+  "mention": null,
+  "subject": "spot accumulation of altcoins",
+  "aspect": null,
+  "claim": null,
+  "stance": "unclear",
+  "evidence_ids": []
+ },
+ {
+  "id": "342472",
+  "entity": "other",
+  "topic_relation": "unrelated",
+  "mention": null,
+  "subject": "greeting",
+  "aspect": null,
+  "claim": null,
+  "stance": "unclear",
+  "evidence_ids": []
+ },
+ {
+  "id": "342473",
+  "entity": "ethereum",
+  "topic_relation": "contextual",
+  "mention": null,
+  "subject": "altseason declaration",
+  "aspect": "market",
+  "claim": null,
+  "stance": "unclear",
+  "evidence_ids": [
+   "post"
+  ]
+ },
+ {
+  "id": "342474",
+  "entity": "ethereum",
+  "topic_relation": "contextual",
+  "mention": null,
+  "subject": "timing of altseason",
+  "aspect": "market",
+  "claim": "It's too early for altseason.",
+  "stance": "oppose",
+  "evidence_ids": [
+   "post",
+   "342473"
+  ]
+ },
+ {
+  "id": "342476",
+  "entity": "other",
+  "topic_relation": "unrelated",
+  "mention": null,
+  "subject": "altseason timing analysis",
+  "aspect": null,
+  "claim": "Altseason possible from now to January, but careful around Oct 17 to mid-Nov.",
+  "stance": "support",
+  "evidence_ids": []
+ },
+ {
+  "id": "342477",
+  "entity": "other",
+  "topic_relation": "unrelated",
+  "mention": null,
+  "subject": "altseason duration",
+  "aspect": null,
+  "claim": "A month is too little for altseason.",
+  "stance": "oppose",
+  "evidence_ids": []
+ },
+ {
+  "id": "342478",
+  "entity": "other",
+  "topic_relation": "unrelated",
+  "mention": null,
+  "subject": "useless altcoins",
+  "aspect": null,
+  "claim": "Useless altcoins won't have another altseason without helicopter money.",
+  "stance": "support",
+  "evidence_ids": []
+ },
+ {
+  "id": "342479",
+  "entity": "ethereum",
+  "topic_relation": "contextual",
+  "mention": null,
+  "subject": "L2 and DOT as investments",
+  "aspect": "technology",
+  "claim": null,
+  "stance": "unclear",
+  "evidence_ids": [
+   "post"
+  ]
+ },
+ {
+  "id": "342482",
+  "entity": "ethereum",
+  "topic_relation": "direct",
+  "mention": "эфир",
+  "subject": "L2 vs Ethereum technology",
+  "aspect": "technology",
+  "claim": "L2s are questionable because Ethereum already does what they do.",
+  "stance": "oppose",
+  "evidence_ids": [
+   "342482"
+  ]
+ },
+ {
+  "id": "342483",
+  "entity": "other",
+  "topic_relation": "unrelated",
+  "mention": null,
+  "subject": "personal trading plan",
+  "aspect": null,
+  "claim": null,
+  "stance": "unclear",
+  "evidence_ids": []
+ },
+ {
+  "id": "342484",
+  "entity": "ethereum",
+  "topic_relation": "direct",
+  "mention": "эфир",
+  "subject": "ETH price target",
+  "aspect": "market",
+  "claim": "I'd be fine with ETH at 10k.",
+  "stance": "support",
+  "evidence_ids": [
+   "342484"
+  ]
+ },
+ {
+  "id": "342485",
+  "entity": "ethereum",
+  "topic_relation": "contextual",
+  "mention": null,
+  "subject": "timeline for ETH 10k",
+  "aspect": "market",
+  "claim": "ETH 10k possible in 2 years after Bitcoin 300k.",
+  "stance": "support",
+  "evidence_ids": [
+   "342484"
+  ]
+ },
+ {
+  "id": "342486",
+  "entity": "ethereum",
+  "topic_relation": "contextual",
+  "mention": null,
+  "subject": "requirement for altseason",
+  "aspect": "market",
+  "claim": "You said Bitcoin just needs to not fall, but now you need it at 300k.",
+  "stance": "oppose",
+  "evidence_ids": [
+   "342485",
+   "342470"
+  ]
+ },
+ {
+  "id": "342487",
+  "entity": "ethereum",
+  "topic_relation": "contextual",
+  "mention": null,
+  "subject": "long wait for price target",
+  "aspect": "market",
+  "claim": null,
+  "stance": "unclear",
+  "evidence_ids": [
+   "342485"
+  ]
+ },
+ {
+  "id": "342488",
+  "entity": "ethereum",
+  "topic_relation": "contextual",
+  "mention": null,
+  "subject": "primary altseason expectations",
+  "aspect": "market",
+  "claim": "Primary altseason is not the final cycle blow-off; it's more modest.",
+  "stance": "support",
+  "evidence_ids": [
+   "post"
+  ]
+ },
+ {
+  "id": "342489",
+  "entity": "ethereum",
+  "topic_relation": "contextual",
+  "mention": null,
+  "subject": "ETH price in this phase",
+  "aspect": "market",
+  "claim": null,
+  "stance": "unclear",
+  "evidence_ids": [
+   "post",
+   "342488"
+  ]
+ },
+ {
+  "id": "342490",
+  "entity": "ethereum",
+  "topic_relation": "direct",
+  "mention": "эфир",
+  "subject": "ETH price target in this phase",
+  "aspect": "market",
+  "claim": "ETH reaching 4k in this phase would be good.",
+  "stance": "support",
+  "evidence_ids": [
+   "342490"
+  ]
+ },
+ {
+  "id": "342491",
+  "entity": "bitcoin",
+  "topic_relation": "unrelated",
+  "mention": null,
+  "subject": "Bitcoin 300k stage",
+  "aspect": null,
+  "claim": null,
+  "stance": "unclear",
+  "evidence_ids": []
+ },
+ {
+  "id": "342492",
+  "entity": "bitcoin",
+  "topic_relation": "unrelated",
+  "mention": null,
+  "subject": "Bitcoin only with Saylor",
+  "aspect": null,
+  "claim": null,
+  "stance": "unclear",
+  "evidence_ids": []
+ },
+ {
+  "id": "342497",
+  "entity": "cpi",
+  "topic_relation": "unrelated",
+  "mention": null,
+  "subject": "waiting for CPI and FOMC",
+  "aspect": null,
+  "claim": "Need to wait for CPI and Fed meeting to know market direction.",
+  "stance": "support",
+  "evidence_ids": []
+ },
+ {
+  "id": "342498",
+  "entity": "ethereum",
+  "topic_relation": "contextual",
+  "mention": null,
+  "subject": "ETH chart pattern",
+  "aspect": "market",
+  "claim": "ETH will paint a Bart Simpson head on 4h.",
+  "stance": "support",
+  "evidence_ids": [
+   "post"
+  ]
+ },
+ {
+  "id": "342507",
+  "entity": "ethereum",
+  "topic_relation": "direct",
+  "mention": "ETH",
+  "subject": "ETH price target for recommendation",
+  "aspect": "market",
+  "claim": "I will recommend ETH to friends only after it exceeds $5k.",
+  "stance": "support",
+  "evidence_ids": [
+   "342507"
+  ]
+ },
+ {
+  "id": "342508",
+  "entity": "витальевич",
+  "topic_relation": "direct",
+  "mention": "Даня",
+  "subject": "reaction to joke",
+  "aspect": "other",
+  "claim": null,
+  "stance": "unclear",
+  "evidence_ids": [
+   "342508"
+  ]
+ },
+ {
+  "id": "342510",
+  "entity": "other",
+  "topic_relation": "unrelated",
+  "mention": null,
+  "subject": "tennis semifinal",
+  "aspect": null,
+  "claim": null,
+  "stance": "unclear",
+  "evidence_ids": []
+ },
+ {
+  "id": "342511",
+  "entity": "other",
+  "topic_relation": "unrelated",
+  "mention": null,
+  "subject": "tennis gender",
+  "aspect": null,
+  "claim": null,
+  "stance": "unclear",
+  "evidence_ids": []
+ },
+ {
+  "id": "342512",
+  "entity": "other",
+  "topic_relation": "unrelated",
+  "mention": null,
+  "subject": "interest in women's tennis",
+  "aspect": null,
+  "claim": "Women's tennis is not interesting to watch.",
+  "stance": "support",
+  "evidence_ids": []
+ },
+ {
+  "id": "342514",
+  "entity": "other",
+  "topic_relation": "unrelated",
+  "mention": null,
+  "subject": "reason to watch women's tennis",
+  "aspect": null,
+  "claim": null,
+  "stance": "unclear",
+  "evidence_ids": []
+ },
+ {
+  "id": "342516",
+  "entity": "other",
+  "topic_relation": "unrelated",
+  "mention": null,
+  "subject": "suggestion for entertainment",
+  "aspect": null,
+  "claim": null,
+  "stance": "unclear",
+  "evidence_ids": []
+ },
+ {
+  "id": "342518",
+  "entity": "кристина",
+  "topic_relation": "direct",
+  "mention": "Кристина",
+  "subject": "permission from Kristina",
+  "aspect": "other",
+  "claim": null,
+  "stance": "unclear",
+  "evidence_ids": [
+   "342518"
+  ]
+ },
+ {
+  "id": "342520",
+  "entity": "other",
+  "topic_relation": "unrelated",
+  "mention": null,
+  "subject": "indifference to tennis",
+  "aspect": null,
+  "claim": null,
+  "stance": "unclear",
+  "evidence_ids": []
+ },
+ {
+  "id": "342521",
+  "entity": "кристина",
+  "topic_relation": "direct",
+  "mention": "Кристина",
+  "subject": "comparison of tennis players to Kristina",
+  "aspect": "other",
+  "claim": null,
+  "stance": "unclear",
+  "evidence_ids": [
+   "342521"
+  ]
+ },
+ {
+  "id": "342522",
+  "entity": "кристину",
+  "topic_relation": "direct",
+  "mention": "Кристину",
+  "subject": "physical appearance",
+  "aspect": "other",
+  "claim": null,
+  "stance": "unclear",
+  "evidence_ids": [
+   "342522"
+  ]
+ },
+ {
+  "id": "342526",
+  "entity": "ethereum",
+  "topic_relation": "contextual",
+  "mention": null,
+  "subject": "ETH support level",
+  "aspect": "market",
+  "claim": "2500 must hold on daily?",
+  "stance": "unclear",
+  "evidence_ids": [
+   "post"
+  ]
+ },
+ {
+  "id": "342528",
+  "entity": "other",
+  "topic_relation": "unrelated",
+  "mention": null,
+  "subject": "life values",
+  "aspect": null,
+  "claim": "Money is not the main thing in life.",
+  "stance": "support",
+  "evidence_ids": []
+ },
+ {
+  "id": "342529",
+  "entity": "other",
+  "topic_relation": "unrelated",
+  "mention": null,
+  "subject": "nature of money",
+  "aspect": null,
+  "claim": "Money is just colored paper.",
+  "stance": "support",
+  "evidence_ids": []
+ },
+ {
+  "id": "342531",
+  "entity": "other",
+  "topic_relation": "unrelated",
+  "mention": null,
+  "subject": "digital money",
+  "aspect": null,
+  "claim": null,
+  "stance": "unclear",
+  "evidence_ids": []
+ },
+ {
+  "id": "342537",
+  "entity": "ethereum",
+  "topic_relation": "contextual",
+  "mention": null,
+  "subject": "confirmation of support",
+  "aspect": "market",
+  "claim": "Yes, 2500 must hold.",
+  "stance": "support",
+  "evidence_ids": [
+   "post",
+   "342526"
+  ]
+ },
+ {
+  "id": "342557",
+  "entity": "ethereum",
+  "topic_relation": "direct",
+  "mention": "это",
+  "subject": "price action analysis",
+  "aspect": "market",
+  "claim": "The current move is a liquidity grab, not a breakout.",
+  "stance": "oppose",
+  "evidence_ids": [
+   "342557"
+  ]
+ },
+ {
+  "id": "342558",
+  "entity": "ethereum",
+  "topic_relation": "contextual",
+  "mention": null,
+  "subject": "chart pattern analysis",
+  "aspect": "market",
+  "claim": "We might be forming a Wyckoff accumulation.",
+  "stance": "support",
+  "evidence_ids": [
+   "post",
+   "342557"
+  ]
+ }
+]

@@ -1,0 +1,467 @@
+[
+ {
+  "id": "342461",
+  "relevance": "unrelated",
+  "aspect": null,
+  "kind": "opinion",
+  "summary": null,
+  "quote": null,
+  "context_ids": []
+ },
+ {
+  "id": "342462",
+  "relevance": "relevant",
+  "aspect": "market",
+  "kind": "experience",
+  "summary": "Говорит, что утром видел много шортов на ликвидацию вверху эфира.",
+  "quote": "вверху эфира очень много шортов на ликвидацию было",
+  "context_ids": [
+   "post"
+  ]
+ },
+ {
+  "id": "342463",
+  "relevance": "unrelated",
+  "aspect": null,
+  "kind": "opinion",
+  "summary": null,
+  "quote": null,
+  "context_ids": []
+ },
+ {
+  "id": "342464",
+  "relevance": "unrelated",
+  "aspect": null,
+  "kind": "experience",
+  "summary": null,
+  "quote": null,
+  "context_ids": []
+ },
+ {
+  "id": "342465",
+  "relevance": "unrelated",
+  "aspect": null,
+  "kind": "question",
+  "summary": null,
+  "quote": null,
+  "context_ids": []
+ },
+ {
+  "id": "342466",
+  "relevance": "relevant",
+  "aspect": "market",
+  "kind": "question",
+  "summary": "Спрашивает, откуда взялись эти объемы.",
+  "quote": "откудова эти объемы",
+  "context_ids": [
+   "post"
+  ]
+ },
+ {
+  "id": "342467",
+  "relevance": "unrelated",
+  "aspect": null,
+  "kind": "opinion",
+  "summary": null,
+  "quote": null,
+  "context_ids": []
+ },
+ {
+  "id": "342468",
+  "relevance": "relevant",
+  "aspect": "market",
+  "kind": "experience",
+  "summary": "Отвечает, что это спот.",
+  "quote": "это спот",
+  "context_ids": [
+   "342466"
+  ]
+ },
+ {
+  "id": "342469",
+  "relevance": "unrelated",
+  "aspect": null,
+  "kind": "other",
+  "summary": null,
+  "quote": null,
+  "context_ids": []
+ },
+ {
+  "id": "342470",
+  "relevance": "unrelated",
+  "aspect": null,
+  "kind": "opinion",
+  "summary": null,
+  "quote": null,
+  "context_ids": []
+ },
+ {
+  "id": "342471",
+  "relevance": "unrelated",
+  "aspect": null,
+  "kind": "experience",
+  "summary": null,
+  "quote": null,
+  "context_ids": []
+ },
+ {
+  "id": "342472",
+  "relevance": "unrelated",
+  "aspect": null,
+  "kind": "other",
+  "summary": null,
+  "quote": null,
+  "context_ids": []
+ },
+ {
+  "id": "342473",
+  "relevance": "unrelated",
+  "aspect": null,
+  "kind": "opinion",
+  "summary": null,
+  "quote": null,
+  "context_ids": []
+ },
+ {
+  "id": "342474",
+  "relevance": "unrelated",
+  "aspect": null,
+  "kind": "opinion",
+  "summary": null,
+  "quote": null,
+  "context_ids": []
+ },
+ {
+  "id": "342476",
+  "relevance": "unrelated",
+  "aspect": null,
+  "kind": "opinion",
+  "summary": null,
+  "quote": null,
+  "context_ids": []
+ },
+ {
+  "id": "342477",
+  "relevance": "unrelated",
+  "aspect": null,
+  "kind": "opinion",
+  "summary": null,
+  "quote": null,
+  "context_ids": []
+ },
+ {
+  "id": "342478",
+  "relevance": "unrelated",
+  "aspect": null,
+  "kind": "opinion",
+  "summary": null,
+  "quote": null,
+  "context_ids": []
+ },
+ {
+  "id": "342479",
+  "relevance": "unrelated",
+  "aspect": null,
+  "kind": "opinion",
+  "summary": null,
+  "quote": null,
+  "context_ids": []
+ },
+ {
+  "id": "342482",
+  "relevance": "relevant",
+  "aspect": "technology",
+  "kind": "opinion",
+  "summary": "Считает, что L2 и Dot — сомнительные технологии, так как эфир делает то же самое.",
+  "quote": "сомнительные технологии после того как эфир делает то же самое, что они",
+  "context_ids": [
+   "342479"
+  ]
+ },
+ {
+  "id": "342483",
+  "relevance": "unrelated",
+  "aspect": null,
+  "kind": "opinion",
+  "summary": null,
+  "quote": null,
+  "context_ids": []
+ },
+ {
+  "id": "342484",
+  "relevance": "relevant",
+  "aspect": "market",
+  "kind": "opinion",
+  "summary": "Говорит, что его бы устроил эфир по 10 тысяч.",
+  "quote": "эфир по 10кило меня бы тоже устроил",
+  "context_ids": [
+   "342482"
+  ]
+ },
+ {
+  "id": "342485",
+  "relevance": "relevant",
+  "aspect": "market",
+  "kind": "opinion",
+  "summary": "Считает, что эфир по 10 тысяч возможно, но не на этом этапе, а через 2 года после битка по 300к+.",
+  "quote": "а вот это возможно, но может быть не на этом этапе, а года через 2, после битка по 300к+",
+  "context_ids": [
+   "342484"
+  ]
+ },
+ {
+  "id": "342486",
+  "relevance": "unrelated",
+  "aspect": null,
+  "kind": "opinion",
+  "summary": null,
+  "quote": null,
+  "context_ids": []
+ },
+ {
+  "id": "342487",
+  "relevance": "unrelated",
+  "aspect": null,
+  "kind": "opinion",
+  "summary": null,
+  "quote": null,
+  "context_ids": []
+ },
+ {
+  "id": "342488",
+  "relevance": "unrelated",
+  "aspect": null,
+  "kind": "opinion",
+  "summary": null,
+  "quote": null,
+  "context_ids": []
+ },
+ {
+  "id": "342489",
+  "relevance": "relevant",
+  "aspect": "market",
+  "kind": "question",
+  "summary": "Спрашивает, где видят эфир в рамках этого этапа.",
+  "quote": "и где вы видите эфир в рамках этого этапа?",
+  "context_ids": [
+   "342488"
+  ]
+ },
+ {
+  "id": "342490",
+  "relevance": "relevant",
+  "aspect": "market",
+  "kind": "opinion",
+  "summary": "Отвечает, что эфир дотянется до 4 тысяч — будет уже хорошо.",
+  "quote": "до 4к дотянется - будет уже хорошо,",
+  "context_ids": [
+   "342489"
+  ]
+ },
+ {
+  "id": "342491",
+  "relevance": "unrelated",
+  "aspect": null,
+  "kind": "question",
+  "summary": null,
+  "quote": null,
+  "context_ids": []
+ },
+ {
+  "id": "342492",
+  "relevance": "unrelated",
+  "aspect": null,
+  "kind": "opinion",
+  "summary": null,
+  "quote": null,
+  "context_ids": []
+ },
+ {
+  "id": "342497",
+  "relevance": "unrelated",
+  "aspect": null,
+  "kind": "other",
+  "summary": null,
+  "quote": null,
+  "context_ids": []
+ },
+ {
+  "id": "342498",
+  "relevance": "unrelated",
+  "aspect": null,
+  "kind": "opinion",
+  "summary": null,
+  "quote": null,
+  "context_ids": []
+ },
+ {
+  "id": "342507",
+  "relevance": "relevant",
+  "aspect": "market",
+  "kind": "opinion",
+  "summary": "Иронично говорит, что ждет, когда ETH перевалит за 5 тысяч, чтобы рекомендовать его к покупке.",
+  "quote": "Жду не дождусь, когда ETH перевалит за отметку в $5 тысяч, чтобы я мог рекомендовать его к покупке своим друзьям и знакомым.",
+  "context_ids": [
+   "post"
+  ]
+ },
+ {
+  "id": "342508",
+  "relevance": "unrelated",
+  "aspect": null,
+  "kind": "opinion",
+  "summary": null,
+  "quote": null,
+  "context_ids": []
+ },
+ {
+  "id": "342510",
+  "relevance": "unrelated",
+  "aspect": null,
+  "kind": "other",
+  "summary": null,
+  "quote": null,
+  "context_ids": []
+ },
+ {
+  "id": "342511",
+  "relevance": "unrelated",
+  "aspect": null,
+  "kind": "question",
+  "summary": null,
+  "quote": null,
+  "context_ids": []
+ },
+ {
+  "id": "342512",
+  "relevance": "unrelated",
+  "aspect": null,
+  "kind": "opinion",
+  "summary": null,
+  "quote": null,
+  "context_ids": []
+ },
+ {
+  "id": "342514",
+  "relevance": "unrelated",
+  "aspect": null,
+  "kind": "opinion",
+  "summary": null,
+  "quote": null,
+  "context_ids": []
+ },
+ {
+  "id": "342516",
+  "relevance": "unrelated",
+  "aspect": null,
+  "kind": "opinion",
+  "summary": null,
+  "quote": null,
+  "context_ids": []
+ },
+ {
+  "id": "342518",
+  "relevance": "unrelated",
+  "aspect": null,
+  "kind": "other",
+  "summary": null,
+  "quote": null,
+  "context_ids": []
+ },
+ {
+  "id": "342520",
+  "relevance": "unrelated",
+  "aspect": null,
+  "kind": "opinion",
+  "summary": null,
+  "quote": null,
+  "context_ids": []
+ },
+ {
+  "id": "342521",
+  "relevance": "unrelated",
+  "aspect": null,
+  "kind": "question",
+  "summary": null,
+  "quote": null,
+  "context_ids": []
+ },
+ {
+  "id": "342522",
+  "relevance": "unrelated",
+  "aspect": null,
+  "kind": "opinion",
+  "summary": null,
+  "quote": null,
+  "context_ids": []
+ },
+ {
+  "id": "342526",
+  "relevance": "relevant",
+  "aspect": "market",
+  "kind": "question",
+  "summary": "Спрашивает, должен ли уровень 2500 быть удержан на дневке.",
+  "quote": "2500 должен быть удержан на дневке?",
+  "context_ids": [
+   "post"
+  ]
+ },
+ {
+  "id": "342528",
+  "relevance": "unrelated",
+  "aspect": null,
+  "kind": "opinion",
+  "summary": null,
+  "quote": null,
+  "context_ids": []
+ },
+ {
+  "id": "342529",
+  "relevance": "unrelated",
+  "aspect": null,
+  "kind": "opinion",
+  "summary": null,
+  "quote": null,
+  "context_ids": []
+ },
+ {
+  "id": "342531",
+  "relevance": "unrelated",
+  "aspect": null,
+  "kind": "opinion",
+  "summary": null,
+  "quote": null,
+  "context_ids": []
+ },
+ {
+  "id": "342537",
+  "relevance": "relevant",
+  "aspect": "market",
+  "kind": "experience",
+  "summary": "Отвечает утвердительно: да.",
+  "quote": "да",
+  "context_ids": [
+   "342526"
+  ]
+ },
+ {
+  "id": "342557",
+  "relevance": "relevant",
+  "aspect": "market",
+  "kind": "opinion",
+  "summary": "Считает, что это не пробой вверх, а забор ликвидности, но возможно нарисуют вайкоффа, и если так, то формация ростовая.",
+  "quote": "судя по всему хер это, а не пробой вверх. забор ликвидности это. но возможно здесь вайкоффа нарисуют. если это оно, то первым был забор ликвиды вверх, значит формация ростовая, а не распределение",
+  "context_ids": [
+   "post"
+  ]
+ },
+ {
+  "id": "342558",
+  "relevance": "unclear",
+  "aspect": null,
+  "kind": "other",
+  "summary": null,
+  "quote": null,
+  "context_ids": []
+ }
+]

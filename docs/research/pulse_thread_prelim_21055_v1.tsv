@@ -1,0 +1,57 @@
+# Manual labels for https://t.me/rawa_imagination/21055 (post: ETH breakout after two-month consolidation,
+# "first stage of altseason if 2500 holds"). Written BEFORE seeing any model output, by the agent that
+# also wrote the prompt -> not an independent annotator; disputed rows need a human check.
+# topic = ETH. direct: the reply is about ETH (by name or "эфир"). contextual: about ETH or the post's
+# thesis (breakout / altseason / 2500) through the post or a parent, without naming it. unrelated: other
+# subject. unclear: cannot tell from text + parents. stance is toward the entity in `entity`.
+# borderline=1 marks rows where another reasonable reader could label differently.
+comment_id	entity	topic_relation	aspect	stance	borderline	note
+342461	bitcoin	contextual	market	oppose	1	"А биток жует сопли": contrasts BTC with the post's ETH move
+342462	ethereum	direct	market	support	0	many shorts above ETH to be liquidated
+342463	altseason	contextual	market	support	0	in altseason BTC only needs not to fall
+342464	unknown	unclear	market	unclear	0	own short closed by stop; asset not named
+342465	altseason	contextual	market	unclear	0	question: can BTC rise and alts rise more
+342466	ethereum	contextual	market	unclear	0	"откудова эти объемы" -> the post's "колоссальный объем"
+342467	altseason	contextual	market	mixed	0	only if the Fed cuts by 2%
+342468	ethereum	contextual	market	support	1	"это спот": the volume is spot (real demand)
+342469	other	unrelated	other	unclear	0	banter
+342470	altseason	contextual	market	support	0	enough for BTC to stand still
+342471	altseason	contextual	market	support	1	alt dips were bought on spot (ONDO, NEAR, ZEN)
+342472	other	unrelated	other	unclear	0	banter
+342473	altseason	contextual	market	support	0	"Объявляйте альтсезон!"
+342474	altseason	contextual	market	oppose	0	"Рано"
+342476	altseason	contextual	market	mixed	0	possible now..January; careful Oct 17..mid-Nov; options strikes to Jan 15
+342477	altseason	contextual	market	mixed	1	a month is too little for 15-20x
+342478	altseason	contextual	market	oppose	0	no altseason for useless coins without helicopter money
+342479	other	contextual	market	unclear	1	names L2 / DOT as candidates
+342482	ethereum	direct	technology	support	0	L2 / DOT dubious since ETH does the same
+342483	altseason	contextual	market	unclear	0	personal plan: watch, prefer indicators to timing
+342484	ethereum	direct	market	support	0	ETH at 10k would suit me
+342485	ethereum	contextual	market	mixed	0	ETH 10k possible, but in ~2 years after BTC 300k+ (parent 342484)
+342486	altseason	contextual	market	unclear	1	complaint: "you said BTC not falling is enough"
+342487	ethereum	contextual	market	unclear	1	"как же долго ждать" (to 342485)
+342488	altseason	contextual	market	mixed	0	primary altseason is modest, not the cycle's final burst
+342489	ethereum	direct	market	oppose	1	"где вы видите эфир в рамках этого этапа?" doubts ETH's place
+342490	ethereum	contextual	market	support	0	"до 4к дотянется - будет уже хорошо" (parent 342489 asks about ETH)
+342491	bitcoin	unrelated	market	unclear	1	at which stage is BTC 300k
+342492	bitcoin	unrelated	other	unclear	0	joke about Saylor
+342497	other	unrelated	market	unclear	1	mocks analysts who wait for CPI / Fed without positions
+342498	ethereum	contextual	market	oppose	1	"голову барта симпсона рисовать на 4ч" -> pump-and-dump shape on the post's chart
+342507	ethereum	direct	market	unclear	1	sarcasm: will recommend ETH when above $5k
+342508	other	unrelated	other	unclear	0	reaction to the joke
+342510	other	unrelated	other	unclear	0	tennis
+342511	other	unrelated	other	unclear	0	tennis
+342512	other	unrelated	other	unclear	0	tennis
+342514	other	unrelated	other	unclear	0	tennis
+342516	other	unrelated	other	unclear	0	tennis
+342518	other	unrelated	other	unclear	0	tennis
+342520	other	unrelated	other	unclear	0	tennis
+342521	other	unrelated	other	unclear	0	tennis
+342522	other	unrelated	other	unclear	0	tennis
+342526	ethereum	contextual	market	unclear	0	"2500 должен быть удержан на дневке?" -> the post's condition
+342528	other	unrelated	other	unclear	0	banter (reply to 342526 but off-topic)
+342529	other	unrelated	other	unclear	0	banter
+342531	other	unrelated	other	unclear	0	banter
+342537	ethereum	contextual	market	unclear	0	"да" to 342526: confirms the 2500-daily condition
+342557	ethereum	contextual	market	mixed	0	not a breakout but a liquidity grab; maybe Wyckoff accumulation
+342558	ethereum	unclear	market	unclear	0	media only: "предположительно мы здесь" (image not available)
