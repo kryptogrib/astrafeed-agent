@@ -1,0 +1,77 @@
+{
+ "source": "artifacts/pulse-eth/personal-review-v3/comparison.tsv",
+ "reviewer": "агентская проверка 2026-09-24, не человеческая",
+ "note": "Исправления для демо. labels.json модели не меняется; применяет docs/research/pulse_publish.py.",
+ "corrections": [
+  {
+   "id": "379796",
+   "changes": {
+    "aspect": {
+     "model": "market",
+     "corrected": "usage"
+    },
+    "kind": {
+     "model": "experience",
+     "corrected": "other"
+    },
+    "summary": {
+     "model": "Сообщает, что цена минта составляет 0.148 eth.",
+     "corrected": "Называет сумму 0.148 ETH; назначение неизвестно, родителя нет в базе."
+    }
+   },
+   "reason": "Добавлено назначение суммы: родитель 379793 отсутствует. Исправить: «Указана сумма 0.148 ETH». usage вероятен по NFT-посту, но назначение суммы неизвестно."
+  },
+  {
+   "id": "379891",
+   "changes": {
+    "summary": {
+     "model": "Уточняет, что на кошельке 7 долларов в эфире сети Robinhood.",
+     "corrected": "Сообщает о балансе в эфире на 7 баксов в сети Robinhood."
+    },
+    "context_ids": {
+     "model": [
+      "379890"
+     ],
+     "corrected": []
+    }
+   },
+   "reason": "Пересказ верен, но context_ids=[379890] незаконен: сосед не предок. Собственный текст достаточен; context_ids=[]."
+  },
+  {
+   "id": "379897",
+   "changes": {
+    "aspect": {
+     "model": "market",
+     "corrected": "usage"
+    },
+    "kind": {
+     "model": "experience",
+     "corrected": "opinion"
+    },
+    "summary": {
+     "model": "Объясняет, что цена минта 0.16 eth, поэтому 55 долларов мало.",
+     "corrected": "Указывает цену минта около 0,16 ETH и считает 55$ недостаточными."
+    }
+   },
+   "reason": "Опущено «примерно» перед 0.16 ETH. Вернуть приближение, aspect=usage."
+  },
+  {
+   "id": "379909",
+   "changes": {
+    "aspect": {
+     "model": "market",
+     "corrected": "usage"
+    },
+    "kind": {
+     "model": "experience",
+     "corrected": "opinion"
+    },
+    "summary": {
+     "model": "Сообщает, что NFT уже 5732 штуки, самая дешёвая стоила около 0.16 eth, сейчас опустилась к 0.14.",
+     "corrected": "Сомневается в лёгкости продажи NFT с прибылью: сообщает о снижении минимальной цены с примерно 0.16 ETH до 0.14."
+    }
+   },
+   "reason": "модель исключила контекстный ответ про ETH"
+  }
+ ]
+}

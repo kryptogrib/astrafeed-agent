@@ -1,0 +1,279 @@
+{
+ "link": "https://t.me/don_invest/5296",
+ "model_labels": "artifacts/pulse-eth/thread-5296/v3/labels.json",
+ "corrections": "artifacts/pulse-eth/thread-5296/v3/demo/corrections.json",
+ "reviewer": "агентская проверка 2026-09-24, не человеческая",
+ "published": [
+  {
+   "id": "379796",
+   "relevance": "relevant",
+   "aspect": "usage",
+   "kind": "other",
+   "summary": "Называет сумму 0.148 ETH; назначение неизвестно, родителя нет в базе.",
+   "quote": "0.148 eth",
+   "context_ids": [],
+   "link": "https://t.me/don_invest/5296?comment=379796",
+   "corrected": true,
+   "borderline": false
+  },
+  {
+   "id": "379890",
+   "relevance": "relevant",
+   "aspect": "usage",
+   "kind": "experience",
+   "summary": "Сообщает, что намайнил, но не может отправить из-за нехватки ether для цены и газа.",
+   "quote": "Not sent Not enough ether for the price and the gas",
+   "context_ids": [],
+   "link": "https://t.me/don_invest/5296?comment=379890",
+   "corrected": false,
+   "borderline": false
+  },
+  {
+   "id": "379891",
+   "relevance": "relevant",
+   "aspect": "usage",
+   "kind": "experience",
+   "summary": "Сообщает о балансе в эфире на 7 баксов в сети Robinhood.",
+   "quote": "на кошеле 7 баксов в эфире сети robinhood",
+   "context_ids": [],
+   "link": "https://t.me/don_invest/5296?comment=379891",
+   "corrected": true,
+   "borderline": false
+  },
+  {
+   "id": "379892",
+   "relevance": "relevant",
+   "aspect": "usage",
+   "kind": "other",
+   "summary": "Советует посмотреть цену минта.",
+   "quote": "Так ты глянь цену минта",
+   "context_ids": [
+    "379891"
+   ],
+   "link": "https://t.me/don_invest/5296?comment=379892",
+   "corrected": false,
+   "borderline": false
+  },
+  {
+   "id": "379895",
+   "relevance": "relevant",
+   "aspect": "usage",
+   "kind": "experience",
+   "summary": "Сообщает, что у него та же проблема: 55 долларов в сети не хватило.",
+   "quote": "Такой же вопрос, 55$ в сети тоже не хватило",
+   "context_ids": [
+    "379890"
+   ],
+   "link": "https://t.me/don_invest/5296?comment=379895",
+   "corrected": false,
+   "borderline": false
+  },
+  {
+   "id": "379897",
+   "relevance": "relevant",
+   "aspect": "usage",
+   "kind": "opinion",
+   "summary": "Указывает цену минта около 0,16 ETH и считает 55$ недостаточными.",
+   "quote": "Дак там же написано цена минта 0,16 eth примерно, 55$ маловато будет.",
+   "context_ids": [],
+   "link": "https://t.me/don_invest/5296?comment=379897",
+   "corrected": true,
+   "borderline": false
+  },
+  {
+   "id": "379909",
+   "relevance": "relevant",
+   "aspect": "usage",
+   "kind": "opinion",
+   "summary": "Сомневается в лёгкости продажи NFT с прибылью: сообщает о снижении минимальной цены с примерно 0.16 ETH до 0.14.",
+   "quote": "цена самой дёшевой была около 0.16 eth, сейчас опустилась к 0.14 уже",
+   "context_ids": [
+    "379908"
+   ],
+   "link": "https://t.me/don_invest/5296?comment=379909",
+   "corrected": true,
+   "borderline": false
+  }
+ ],
+ "held_for_review": {
+  "reason": "relevant_not_grounded на метках модели",
+  "labels": [
+   {
+    "id": "379899",
+    "relevance": "relevant",
+    "aspect": "usage",
+    "kind": "experience",
+    "summary": "Сообщает, что закинул 500 долларов, но всё равно не получается заминтить — ошибка при переводе.",
+    "quote": "Да уже закинул 500 все равно не получается заминтить, ошибка при переводе…",
+    "context_ids": [
+     "379898"
+    ],
+    "link": "https://t.me/don_invest/5296?comment=379899",
+    "text": "Да уже закинул 500 все равно не получается заминтить, ошибка при переводе…"
+   },
+   {
+    "id": "379908",
+    "relevance": "relevant",
+    "aspect": "usage",
+    "kind": "experience",
+    "summary": "Сообщает, что заминтил — проблема была в MetaMask, осталось продать.",
+    "quote": "Короче заминтил, это метамаск мозг делал, осталось продать в профит…",
+    "context_ids": [],
+    "link": "https://t.me/don_invest/5296?comment=379908",
+    "text": "Короче заминтил, это метамаск мозг делал, осталось продать в профит…"
+   },
+   {
+    "id": "379911",
+    "relevance": "relevant",
+    "aspect": "usage",
+    "kind": "question",
+    "summary": "Спрашивает, сколько отдал за минт и на какой карте замайнил.",
+    "quote": "Сколько за минт отдал? На какой карте замайнил?",
+    "context_ids": [
+     "379908"
+    ],
+    "link": "https://t.me/don_invest/5296?comment=379911",
+    "text": "Сколько за минт отдал? На какой карте замайнил?"
+   },
+   {
+    "id": "379912",
+    "relevance": "relevant",
+    "aspect": "market",
+    "kind": "opinion",
+    "summary": "Считает, что майнится любой картой, но цена минта от 0.16+ — уже невыгодно, обманули.",
+    "quote": "Цена за минт от 0.16+ начинается уже. Всё не выгодно уже. Обманули как обычно😂",
+    "context_ids": [],
+    "link": "https://t.me/don_invest/5296?comment=379912",
+    "text": "Да они сейчас любой картой майнится быстро. Цена за минт от 0.16+ начинается уже. Всё не выгодно уже. Обманули как обычно😂"
+   },
+   {
+    "id": "379913",
+    "relevance": "relevant",
+    "aspect": "usage",
+    "kind": "experience",
+    "summary": "Отвечает, что на 3070 замайнил уже штук 10, проблема была в MetaMask.",
+    "quote": "3070 да я из уже штук 10 замайнил не мог просто метамаск отработать",
+    "context_ids": [
+     "379911"
+    ],
+    "link": "https://t.me/don_invest/5296?comment=379913",
+    "text": "3070 да я из уже штук 10 замайнил не мог просто метамаск отработать"
+   },
+   {
+    "id": "379914",
+    "relevance": "relevant",
+    "aspect": "usage",
+    "kind": "experience",
+    "summary": "Соглашается, что так и есть, но упоминает возможность сжечь за 1000 их крипты.",
+    "quote": "Да, так и есть походу. Но вроде можно сжечь за 1000 их крипты бля пздц",
+    "context_ids": [
+     "379912"
+    ],
+    "link": "https://t.me/don_invest/5296?comment=379914",
+    "text": "Да, так и есть походу. Но вроде можно сжечь за 1000 их крипты бля пздц"
+   },
+   {
+    "id": "379927",
+    "relevance": "relevant",
+    "aspect": "market",
+    "kind": "question",
+    "summary": "Риторически спрашивает, кто мешал посмотреть стоимость флора и минта.",
+    "quote": "кто тебе мешал посмотреть стоимость флора и стоимость минта ?)",
+    "context_ids": [
+     "379914"
+    ],
+    "link": "https://t.me/don_invest/5296?comment=379927",
+    "text": "кто тебе мешал посмотреть стоимость флора и стоимость минта ?)"
+   },
+   {
+    "id": "379928",
+    "relevance": "relevant",
+    "aspect": "other",
+    "kind": "experience",
+    "summary": "Отвечает, что хотелось победить сам процесс.",
+    "quote": "Вроде никто, хотелось победить сам процесс",
+    "context_ids": [
+     "379927"
+    ],
+    "link": "https://t.me/don_invest/5296?comment=379928",
+    "text": "Вроде никто, хотелось победить сам процесс"
+   },
+   {
+    "id": "379929",
+    "relevance": "relevant",
+    "aspect": "other",
+    "kind": "opinion",
+    "summary": "Выражает сожаление: печально.",
+    "quote": "Печально конечно",
+    "context_ids": [
+     "379914"
+    ],
+    "link": "https://t.me/don_invest/5296?comment=379929",
+    "text": "Печально конечно"
+   },
+   {
+    "id": "379931",
+    "relevance": "relevant",
+    "aspect": "usage",
+    "kind": "question",
+    "summary": "Спрашивает, сколько вышло.",
+    "quote": "Это скок вышло",
+    "context_ids": [
+     "379914"
+    ],
+    "link": "https://t.me/don_invest/5296?comment=379931",
+    "text": "Это скок вышло"
+   },
+   {
+    "id": "379937",
+    "relevance": "relevant",
+    "aspect": "usage",
+    "kind": "experience",
+    "summary": "Сообщает, что на 1070 Ti почти сразу дало сминтить, но нет денег.",
+    "quote": "Запустил на 1070 Ti, почти сразу дало сминтить, но у меня бабок нет)",
+    "context_ids": [],
+    "link": "https://t.me/don_invest/5296?comment=379937",
+    "text": "Запустил на 1070 Ti, почти сразу дало сминтить, но у меня бабок нет)"
+   },
+   {
+    "id": "379938",
+    "relevance": "relevant",
+    "aspect": "market",
+    "kind": "opinion",
+    "summary": "Объясняет, что потому что 0 конкуренции в сети.",
+    "quote": "потому что 0 конкуренции в сети",
+    "context_ids": [
+     "379937"
+    ],
+    "link": "https://t.me/don_invest/5296?comment=379938",
+    "text": "потому что 0 конкуренции в сети"
+   },
+   {
+    "id": "379939",
+    "relevance": "relevant",
+    "aspect": "market",
+    "kind": "experience",
+    "summary": "Сообщает, что цена на минт уже такая же, как флор на OpenSea.",
+    "quote": "Там уже и цена на минт такая же как флор на опенси",
+    "context_ids": [
+     "379938"
+    ],
+    "link": "https://t.me/don_invest/5296?comment=379939",
+    "text": "Там уже и цена на минт такая же как флор на опенси"
+   },
+   {
+    "id": "379940",
+    "relevance": "relevant",
+    "aspect": "market",
+    "kind": "opinion",
+    "summary": "Поправляет, что выше.",
+    "quote": "выше",
+    "context_ids": [
+     "379939"
+    ],
+    "link": "https://t.me/don_invest/5296?comment=379940",
+    "text": "выше"
+   }
+  ]
+ }
+}

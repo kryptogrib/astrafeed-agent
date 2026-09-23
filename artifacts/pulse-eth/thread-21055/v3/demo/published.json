@@ -1,0 +1,211 @@
+{
+ "link": "https://t.me/rawa_imagination/21055",
+ "model_labels": "artifacts/pulse-eth/thread-21055/v3/labels.json",
+ "corrections": "artifacts/pulse-eth/thread-21055/v3/demo/corrections.json",
+ "reviewer": "агентская проверка 2026-09-24, не человеческая",
+ "published": [
+  {
+   "id": "342462",
+   "relevance": "relevant",
+   "aspect": "market",
+   "kind": "experience",
+   "summary": "Говорит, что утром видел много шортов на ликвидацию вверху эфира.",
+   "quote": "вверху эфира очень много шортов на ликвидацию было",
+   "context_ids": [
+    "post"
+   ],
+   "link": "https://t.me/rawa_imagination/21055?comment=342462",
+   "corrected": false,
+   "borderline": false
+  },
+  {
+   "id": "342466",
+   "relevance": "relevant",
+   "aspect": "market",
+   "kind": "question",
+   "summary": "Спрашивает, откуда взялись эти объемы.",
+   "quote": "откудова эти объемы",
+   "context_ids": [
+    "post"
+   ],
+   "link": "https://t.me/rawa_imagination/21055?comment=342466",
+   "corrected": false,
+   "borderline": false
+  },
+  {
+   "id": "342468",
+   "relevance": "relevant",
+   "aspect": "market",
+   "kind": "other",
+   "summary": "Называет упомянутые объёмы спотовыми.",
+   "quote": "это спот",
+   "context_ids": [
+    "342466",
+    "post"
+   ],
+   "link": "https://t.me/rawa_imagination/21055?comment=342468",
+   "corrected": true,
+   "borderline": false
+  },
+  {
+   "id": "342482",
+   "relevance": "relevant",
+   "aspect": "technology",
+   "kind": "opinion",
+   "summary": "Считает, что L2 и Dot — сомнительные технологии, так как эфир делает то же самое.",
+   "quote": "сомнительные технологии после того как эфир делает то же самое, что они",
+   "context_ids": [
+    "342479"
+   ],
+   "link": "https://t.me/rawa_imagination/21055?comment=342482",
+   "corrected": false,
+   "borderline": false
+  },
+  {
+   "id": "342484",
+   "relevance": "relevant",
+   "aspect": "market",
+   "kind": "opinion",
+   "summary": "Говорит, что его бы устроил эфир по 10 тысяч.",
+   "quote": "эфир по 10кило меня бы тоже устроил",
+   "context_ids": [
+    "342482"
+   ],
+   "link": "https://t.me/rawa_imagination/21055?comment=342484",
+   "corrected": false,
+   "borderline": false
+  },
+  {
+   "id": "342485",
+   "relevance": "relevant",
+   "aspect": "market",
+   "kind": "opinion",
+   "summary": "Допускает ETH по 10 тысяч, но не на этом этапе, а «года через 2, после битка по 300к+».",
+   "quote": "а вот это возможно, но может быть не на этом этапе, а года через 2, после битка по 300к+",
+   "context_ids": [
+    "342484"
+   ],
+   "link": "https://t.me/rawa_imagination/21055?comment=342485",
+   "corrected": true,
+   "borderline": false
+  },
+  {
+   "id": "342487",
+   "relevance": "relevant",
+   "aspect": "market",
+   "kind": "opinion",
+   "summary": "Выражает недовольство длительностью ожидания обсуждаемого роста ETH.",
+   "quote": "как же долго ждать((",
+   "context_ids": [
+    "342485",
+    "342484"
+   ],
+   "link": "https://t.me/rawa_imagination/21055?comment=342487",
+   "corrected": true,
+   "borderline": false
+  },
+  {
+   "id": "342489",
+   "relevance": "relevant",
+   "aspect": "market",
+   "kind": "question",
+   "summary": "Спрашивает, где видят эфир в рамках этого этапа.",
+   "quote": "и где вы видите эфир в рамках этого этапа?",
+   "context_ids": [
+    "342488"
+   ],
+   "link": "https://t.me/rawa_imagination/21055?comment=342489",
+   "corrected": false,
+   "borderline": false
+  },
+  {
+   "id": "342490",
+   "relevance": "relevant",
+   "aspect": "market",
+   "kind": "opinion",
+   "summary": "Считает, что достижение ETH уровня 4 тысяч на этом этапе уже было бы хорошим результатом.",
+   "quote": "до 4к дотянется - будет уже хорошо,",
+   "context_ids": [
+    "342489"
+   ],
+   "link": "https://t.me/rawa_imagination/21055?comment=342490",
+   "corrected": true,
+   "borderline": false
+  },
+  {
+   "id": "342498",
+   "relevance": "relevant",
+   "aspect": "market",
+   "kind": "opinion",
+   "summary": "Предполагает появление на четырёхчасовом графике ETH фигуры «голова Барта».",
+   "quote": "Как будто бы вкатывает и пойдет голову барта симпсона рисовать на 4ч",
+   "context_ids": [
+    "post"
+   ],
+   "link": "https://t.me/rawa_imagination/21055?comment=342498",
+   "corrected": true,
+   "borderline": true
+  },
+  {
+   "id": "342507",
+   "relevance": "relevant",
+   "aspect": "market",
+   "kind": "opinion",
+   "summary": "Иронично говорит, что ждет, когда ETH перевалит за 5 тысяч, чтобы рекомендовать его к покупке.",
+   "quote": "Жду не дождусь, когда ETH перевалит за отметку в $5 тысяч, чтобы я мог рекомендовать его к покупке своим друзьям и знакомым.",
+   "context_ids": [
+    "post"
+   ],
+   "link": "https://t.me/rawa_imagination/21055?comment=342507",
+   "corrected": false,
+   "borderline": false
+  },
+  {
+   "id": "342526",
+   "relevance": "relevant",
+   "aspect": "market",
+   "kind": "question",
+   "summary": "Спрашивает, должен ли уровень 2500 быть удержан на дневке.",
+   "quote": "2500 должен быть удержан на дневке?",
+   "context_ids": [
+    "post"
+   ],
+   "link": "https://t.me/rawa_imagination/21055?comment=342526",
+   "corrected": false,
+   "borderline": false
+  },
+  {
+   "id": "342537",
+   "relevance": "relevant",
+   "aspect": "market",
+   "kind": "other",
+   "summary": "Подтверждает, что 2500 нужно удержать на дневке.",
+   "quote": "да",
+   "context_ids": [
+    "342526",
+    "post"
+   ],
+   "link": "https://t.me/rawa_imagination/21055?comment=342537",
+   "corrected": true,
+   "borderline": false
+  },
+  {
+   "id": "342557",
+   "relevance": "relevant",
+   "aspect": "market",
+   "kind": "opinion",
+   "summary": "Считает, что это не пробой вверх, а забор ликвидности, но возможно нарисуют вайкоффа, и если так, то формация ростовая.",
+   "quote": "судя по всему хер это, а не пробой вверх. забор ликвидности это. но возможно здесь вайкоффа нарисуют. если это оно, то первым был забор ликвиды вверх, значит формация ростовая, а не распределение",
+   "context_ids": [
+    "post"
+   ],
+   "link": "https://t.me/rawa_imagination/21055?comment=342557",
+   "corrected": false,
+   "borderline": false
+  }
+ ],
+ "held_for_review": {
+  "reason": "relevant_not_grounded на метках модели",
+  "labels": []
+ }
+}
