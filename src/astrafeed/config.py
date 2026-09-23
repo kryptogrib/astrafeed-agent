@@ -10,6 +10,22 @@ import yaml
 from pydantic import BaseModel, Field
 
 
+def load_dotenv(path: Path) -> None:
+    """Fill os.environ from a KEY=VALUE file; real environment variables win.
+
+    Deliberately minimal (no interpolation, no export keyword) so `make login`,
+    which writes TELEGRAM_SESSION into .env, works without extra dependencies.
+    """
+    if not path.exists():
+        return
+    for line in path.read_text(encoding="utf-8").splitlines():
+        line = line.strip()
+        if not line or line.startswith("#") or "=" not in line:
+            continue
+        key, value = line.split("=", 1)
+        os.environ.setdefault(key.strip(), value.strip().strip("'\""))
+
+
 class TelegramCfg(BaseModel):
     api_id: int = 0
     api_hash: str = ""
@@ -65,12 +81,15 @@ class Settings(BaseModel):
     openrouter: OpenRouterCfg = Field(default_factory=OpenRouterCfg)
     prefilter: PrefilterCfg = Field(default_factory=PrefilterCfg)
     channels: list[str] = Field(default_factory=list)
+    # Public channels without comments: posts only, used as the "news" side of Pulse.
+    news_channels: list[str] = Field(default_factory=list)
     interests: list[str] = Field(default_factory=lambda: ["crypto markets"])
     audit: AuditSettings = Field(default_factory=AuditSettings)
 
     @classmethod
     def load(cls, path: str | Path = "config.yaml") -> Settings:
         config_path = Path(path)
+        load_dotenv(config_path.parent / ".env")
         values = yaml.safe_load(config_path.read_text()) if config_path.exists() else {}
         values = values or {}
         # Environment variables take precedence over the YAML file.

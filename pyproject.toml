@@ -22,6 +22,7 @@ dependencies = [
 [project.scripts]
 astrafeed-serve = "astrafeed.cli:serve"
 astrafeed-brief = "astrafeed.cli:brief"
+astrafeed-pulse = "astrafeed.cli:pulse"
 
 [build-system]
 requires = ["hatchling"]

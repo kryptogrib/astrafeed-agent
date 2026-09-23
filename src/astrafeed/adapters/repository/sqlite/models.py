@@ -69,3 +69,33 @@ class SpendReservationRow(Base):
     day: Mapped[str] = mapped_column(String)
     amount_micros: Mapped[int]
     settled: Mapped[bool] = mapped_column(default=False)
+
+
+class CommentRow(Base):
+    __tablename__ = "comment"
+    comment_key: Mapped[str] = mapped_column(String, primary_key=True)
+    source_id: Mapped[int] = mapped_column(ForeignKey("source.id"), index=True)
+    post_id: Mapped[str]
+    comment_id: Mapped[str]
+    parent_comment_id: Mapped[str | None] = mapped_column(default=None)
+    ts: Mapped[datetime] = mapped_column(UtcDateTime(), index=True)
+    edited_at: Mapped[datetime | None] = mapped_column(UtcDateTime(), default=None)
+    text: Mapped[str]
+    link: Mapped[str]
+    author_key: Mapped[str | None] = mapped_column(default=None)
+    has_media: Mapped[bool] = mapped_column(default=False)
+    # Flipped by the classifier; a re-fetched comment whose text changed is reset.
+    classified: Mapped[bool] = mapped_column(default=False, index=True)
+
+
+class ThreadStateRow(Base):
+    __tablename__ = "thread_state"
+    source_id: Mapped[int] = mapped_column(ForeignKey("source.id"), primary_key=True)
+    post_id: Mapped[str] = mapped_column(String, primary_key=True)
+    status: Mapped[str]
+    reply_counter: Mapped[int | None] = mapped_column(default=None)
+    comments_stored: Mapped[int] = mapped_column(default=0)
+    possibly_truncated: Mapped[bool] = mapped_column(default=False)
+    context_incomplete: Mapped[bool] = mapped_column(default=False)
+    reason: Mapped[str] = mapped_column(default="")
+    last_scan_at: Mapped[datetime] = mapped_column(UtcDateTime())

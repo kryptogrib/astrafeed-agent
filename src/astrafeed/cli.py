@@ -20,11 +20,17 @@ from astrafeed.adapters.llm.openrouter import OpenRouterLLMClient
 from astrafeed.adapters.llm.stub import StubLLMClient
 from astrafeed.adapters.repository.sqlite.ingestion import SqliteIngestionStore
 from astrafeed.adapters.repository.sqlite.models import Base
+from astrafeed.adapters.repository.sqlite.pulse import SqliteCommentStore
 from astrafeed.adapters.repository.sqlite.spend_budget import SqliteSpendBudget
 from astrafeed.adapters.source.fake import FakeSource
 from astrafeed.adapters.source.telegram import TelegramSource
 from astrafeed.application.brief import build_brief
-from astrafeed.application.ingestion import IngestionCoordinator, limits_from_settings
+from astrafeed.application.ingestion import (
+    IngestionCoordinator,
+    IngestionLimits,
+    limits_from_settings,
+)
+from astrafeed.application.pulse_ingest import CommentCollector
 from astrafeed.config import Settings
 from astrafeed.logging_cfg import configure_logging
 
@@ -199,3 +205,116 @@ def serve() -> None:
     parser = argparse.ArgumentParser(prog="astrafeed-serve")
     parser.add_argument("--config", default="config.yaml")
     asyncio.run(_serve(parser.parse_args().config))
+
+
+async def _backfill_posts(args: argparse.Namespace) -> None:
+    """Read every configured channel over the whole window and report per-channel counts.
+
+    Limits are raised well above the polling defaults: a multi-day backfill of an
+    active channel easily exceeds 200 posts, and a capped read would leave the
+    window incomplete. Safe to re-run: covered intervals are skipped.
+    """
+    cfg = Settings.load(args.config)
+    configure_logging("INFO", None)
+    refs = list(dict.fromkeys([*cfg.channels, *cfg.news_channels]))
+    if not refs:
+        raise SystemExit("config.yaml has no channels: run scripts/channels.py --write")
+    now = datetime.now(UTC)
+    start = now - args.window
+    client = _telegram(cfg)
+    await _ensure_connected(client)
+    engine, session = await _storage(cfg)
+    try:
+        store = SqliteIngestionStore(session)
+        reader = TelegramSource(client, backfill_window=args.window)
+        coordinator = IngestionCoordinator(
+            store,
+            reader,
+            resolver=reader,
+            limits=IngestionLimits(
+                max_channels_first_run=cfg.ingestion_max_channels_first_run,
+                max_posts_per_channel=args.max_posts,
+                max_posts_per_run=args.max_posts * len(refs),
+            ),
+        )
+        resolved: dict[int, str] = {}
+        failed: dict[str, str] = {}
+        for ref in refs:
+            try:
+                resolved[(await coordinator.resolve_public_ref(ref)).id] = ref
+            except Exception as e:  # noqa: BLE001 - report every bad ref, keep going
+                failed[ref] = str(e)
+        result = await coordinator.ensure_window(list(resolved), start, now)
+        print(f"\n{'channel':<32} {'posts':>6}  status")
+        total = 0
+        for sid, ref in resolved.items():
+            posts = len(await store.read_window(sid, start, now))
+            total += posts
+            status = "ok" if result[sid].complete else f"INCOMPLETE {result.errors.get(sid, '')}"
+            print(f"{ref:<32} {posts:>6}  {status}")
+        for ref, reason in failed.items():
+            print(f"{ref:<32} {'-':>6}  UNRESOLVED {reason}")
+        print(f"\nTotal posts in [{start:%Y-%m-%d %H:%M}, {now:%Y-%m-%d %H:%M}] UTC: {total}")
+    finally:
+        await client.disconnect()
+        await engine.dispose()
+
+
+async def _backfill_comments(args: argparse.Namespace) -> None:
+    """Read discussion threads of stored posts in the window; safe to re-run.
+
+    Posts must be downloaded first (backfill-posts): the collector walks the
+    raw cache, so a missing post means its thread is never read.
+    """
+    cfg = Settings.load(args.config)
+    configure_logging("INFO", None)
+    if not cfg.channels:
+        raise SystemExit("config.yaml has no channels: run scripts/channels.py --write")
+    now = datetime.now(UTC)
+    start = now - args.window
+    client = _telegram(cfg)
+    await _ensure_connected(client)
+    engine, session = await _storage(cfg)
+    try:
+        posts = SqliteIngestionStore(session)
+        comments = SqliteCommentStore(session)
+        # Reading never needs a join: every configured discussion is readable as is.
+        reader = TelegramSource(client, discussion_join_limit_per_run=0)
+        sources: list[tuple[int, str]] = []
+        for ref in cfg.channels:
+            try:
+                telegram_id = await reader.resolve_public_ref(ref)
+                sources.append(((await posts.upsert_source(telegram_id)).id, ref))
+            except Exception as e:  # noqa: BLE001 - report every bad ref, keep going
+                print(f"{ref:<28} UNRESOLVED {e}")
+        reports = await CommentCollector(posts, comments, reader).collect(sources, start, now)
+        head = f"{'channel':<28} {'posts':>5} {'w/cmt':>5} {'read':>5} {'skip':>5}"
+        print(f"\n{head} {'fail':>4} {'trunc':>5} {'comments':>8}  status")
+        for r in reports:
+            status = f"ERROR {r.error}" if r.error else "ok"
+            print(
+                f"{r.ref:<28} {r.posts:>5} {r.with_comments:>5} {r.scanned:>5} {r.skipped:>5}"
+                f" {r.failed:>4} {r.truncated:>5} {r.comments:>8}  {status}"
+            )
+        total = sum(r.comments for r in reports)
+        span = f"[{start:%Y-%m-%d %H:%M}, {now:%Y-%m-%d %H:%M}] UTC"
+        print(f"\nComments on posts from {span}: {total}")
+    finally:
+        await client.disconnect()
+        await engine.dispose()
+
+
+def pulse() -> None:
+    parser = argparse.ArgumentParser(prog="astrafeed-pulse", description="Community Pulse")
+    parser.add_argument("--config", default="config.yaml")
+    sub = parser.add_subparsers(dest="command", required=True)
+    posts = sub.add_parser("backfill-posts", help="Download channel posts for the window")
+    posts.add_argument("--window", type=_window, default=timedelta(days=8))
+    posts.add_argument("--max-posts", type=int, default=3000, help="Per-channel post cap")
+    comments = sub.add_parser("backfill-comments", help="Read comment threads of stored posts")
+    comments.add_argument("--window", type=_window, default=timedelta(hours=48))
+    args = parser.parse_args()
+    if args.command == "backfill-posts":
+        asyncio.run(_backfill_posts(args))
+    elif args.command == "backfill-comments":
+        asyncio.run(_backfill_comments(args))
