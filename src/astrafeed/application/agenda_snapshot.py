@@ -17,6 +17,7 @@ from astrafeed.domain.agenda import (
     PublicationVersion,
     SearchDoc,
     Snapshot,
+    Story,
     StoryCard,
     StoryDetail,
     StoryLink,
@@ -71,6 +72,44 @@ def _snapshot_id(t: datetime) -> str:
     return "snap-" + t.strftime("%Y%m%dT%H%M%SZ")
 
 
+def _display_title(
+    story: Story, links: list[StoryLink], entities: dict[str, Entity]
+) -> tuple[str, str]:
+    key = story.key_entity.casefold()
+    primary = next(
+        (
+            entity
+            for entity in entities.values()
+            if entity.status == "confirmed" and entity.canonical_name.casefold() == key
+        ),
+        None,
+    )
+    title = story.title_ru.strip()
+    if _PROFANITY.search(title):
+        title = next(
+            (
+                value
+                for link in links
+                for value in (link.paraphrase_ru, link.quote)
+                if value and not _PROFANITY.search(value)
+                and numbers_are_grounded(value, [link.quote])
+            ),
+            "Сюжет",
+        )
+    if primary is None:
+        return title, ""
+    names = (primary.canonical_name, *primary.aliases)
+    if any(name.casefold() in title.casefold() for name in names if len(name) >= 3):
+        return title, key
+    if any(
+        name.casefold() in link.quote.casefold()
+        for name in names if len(name) >= 3
+        for link in links
+    ):
+        return f"{primary.canonical_name}: {title}", key
+    return title, key
+
+
 def _votes(
     links: list[StoryLink],
     publications: dict[str, PublicationVersion],
@@ -78,15 +117,17 @@ def _votes(
     allowed: set[int] | None,
 ) -> list[PublicationVersion]:
     found: list[PublicationVersion] = []
-    seen_channels: set[int] = set()
+    seen_publications: set[str] = set()
     for link in links:
         pub = publications.get(link.publication_id)
         if pub is None or not in_window(pub.published_at, window):
             continue
         if allowed is not None and pub.source_id not in allowed:
             continue
+        if pub.publication_id in seen_publications:
+            continue
         found.append(pub)
-        seen_channels.add(pub.source_id)
+        seen_publications.add(pub.publication_id)
     return found
 
 
@@ -100,9 +141,9 @@ def _hashes(pubs: list[PublicationVersion]) -> list[str]:
 
 def _explanation(claims: list[ClaimCard], title: str) -> str:
     for claim in claims:
-        text = claim.paraphrase_ru or claim.quote
-        if text and not _PROFANITY.search(text) and numbers_are_grounded(text, [claim.quote]):
-            return text
+        for text in (claim.paraphrase_ru, claim.quote):
+            if text and not _PROFANITY.search(text) and numbers_are_grounded(text, [claim.quote]):
+                return text
     return title
 
 
@@ -217,7 +258,8 @@ async def build_snapshot(
         )
         hashes = _hashes(current_all)
         exact_repeats = max(0, len(hashes) - len(set(hashes)))
-        claim_cards = _claim_cards(links, by_id, current, story.title_ru)
+        title, primary_entity = _display_title(story, links, entities)
+        claim_cards = _claim_cards(links, by_id, current, title)
         entity_names = []
         for link in links:
             for entity_id in link.entity_ids:
@@ -253,7 +295,7 @@ async def build_snapshot(
         ]
         card = StoryCard(
             story_id=story.story_id,
-            title=story.title_ru,
+            title=title,
             entities=tuple(entity_names),
             current_channels=current_channels,
             previous_channels=previous_channels if len(comparable) >= 2 else None,
@@ -261,7 +303,7 @@ async def build_snapshot(
             growth_null_reason=reason,
             first_seen=story.first_seen,
             freshness=freshness,
-            explanation=_explanation(claim_cards, story.title_ru),
+            explanation=_explanation(claim_cards, title),
             claims=tuple(claim_cards),
             publications=len(current_all),
             exact_repeats=exact_repeats,
@@ -290,10 +332,10 @@ async def build_snapshot(
                 "current_channels": card.current_channels,
                 "previous_channels": card.previous_channels,
                 "freshness": card.freshness,
-                "eligible": story.title_ru.strip().casefold() not in {"", "сюжет"}
-                and not _PROFANITY.search(story.title_ru)
-                and numbers_are_grounded(story.title_ru, [claim.quote for claim in claim_cards]),
-                "primary_entity": (story.key_entity or "").casefold(),
+                "eligible": title.casefold() not in {"", "сюжет"}
+                and not _PROFANITY.search(title)
+                and numbers_are_grounded(title, [claim.quote for claim in claim_cards]),
+                "primary_entity": primary_entity,
                 "card": card,
             }
         )

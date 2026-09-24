@@ -9,6 +9,7 @@ from astrafeed.application.agenda_extract import verify_fragment
 from astrafeed.application.agenda_snapshot import build_snapshot
 from astrafeed.domain.agenda import (
     Claim,
+    Entity,
     ExtractionResult,
     Fragment,
     PublicationVersion,
@@ -252,3 +253,22 @@ async def test_lit_fdv_does_not_vote_for_polymarket_story():
         await _link(store, "poly", pub, quote, quote)
     snapshot = await build_snapshot(store, now, _coverage(), collected_at=now, analyzed_at=now)
     assert snapshot.stories["poly"].card.current_channels == 1
+
+
+@pytest.mark.asyncio
+async def test_confirmed_project_is_named_and_profane_paraphrase_is_not_explanation():
+    store = InMemoryAgendaStore()
+    now = datetime(2026, 9, 24, 12, tzinfo=UTC)
+    await store.save_entity(Entity("variational", "Variational"))
+    await store.save_story(
+        Story("points", "Программа поинтов продлена до TGE", "", now, key_entity="variational")
+    )
+    quote = "Variational продлили программу поинтов до TGE."
+    for source_id in (1, 2):
+        pub = _publication(source_id, str(source_id), quote, now - timedelta(hours=1))
+        await store.record_publication(pub)
+        await _link(store, "points", pub, quote, "нас наебали с поинтами")
+    snapshot = await build_snapshot(store, now, _coverage(), collected_at=now, analyzed_at=now)
+    card = snapshot.agenda[0]
+    assert card.title.startswith("Variational:")
+    assert card.explanation == quote
