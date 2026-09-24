@@ -164,10 +164,11 @@ async def run_cycle(
         raise ValueError("max_posts_per_cycle must be positive")
     cycle_started = perf_counter()
     state = await store.get_cycle_state()
+    as_of = now if ingest else state.last_collect_at or now
     state.phase = "collect"
     state.budget_blocked = False
     await store.set_cycle_state(state)
-    start = now - collection_window
+    start = as_of - collection_window
     source_set = set(source_ids)
     try:
         if collect is not None:
@@ -185,12 +186,12 @@ async def run_cycle(
         queued = set(await store.queued_ids())
         pending = [
             pub
-            for pub in await store.publications_in(datetime.min.replace(tzinfo=UTC), now)
+            for pub in await store.publications_in(datetime.min.replace(tzinfo=UTC), as_of)
             if pub.publication_id in queued and pub.source_id in source_set
         ]
         if max_posts_per_cycle is not None:
-            current_start = now - timedelta(hours=24)
-            previous_start = now - LOOKBACK
+            current_start = as_of - timedelta(hours=24)
+            previous_start = as_of - LOOKBACK
             pending.sort(
                 key=lambda pub: (
                     0
@@ -284,18 +285,21 @@ async def run_cycle(
                         or perf_counter() - last_partial_time >= partial_snapshot_seconds
                     ):
                         partial_time = now + timedelta(seconds=perf_counter() - cycle_started)
-                        coverage = await _coverage_states(store, reader, source_ids, now)
+                        coverage = await _coverage_states(store, reader, source_ids, as_of)
                         partial = await build_snapshot(
                             store,
-                            now,
+                            as_of,
                             coverage,
                             collected_at=state.last_collect_at or now,
                             analyzed_at=partial_time,
                         )
                         limitation = "processing_in_progress"
+                        partial_id = f"{partial.snapshot_id}-p{processed}"
+                        if max_posts_per_cycle is not None:
+                            partial_id += f"-{partial_time.strftime('%H%M%S%f')}"
                         partial = replace(
                             partial,
-                            snapshot_id=f"{partial.snapshot_id}-p{processed}",
+                            snapshot_id=partial_id,
                             published_at=partial_time,
                             limitations=(*partial.limitations, limitation),
                             coverage=replace(
@@ -347,10 +351,10 @@ async def run_cycle(
         state.last_analyze_at = finished_at
         state.phase = "snapshot"
         await store.set_cycle_state(state)
-        coverage = await _coverage_states(store, reader, source_ids, now)
+        coverage = await _coverage_states(store, reader, source_ids, as_of)
         snapshot = await build_snapshot(
             store,
-            now,
+            as_of,
             coverage,
             collected_at=state.last_collect_at or now,
             analyzed_at=finished_at,
@@ -359,7 +363,10 @@ async def run_cycle(
         if remaining_backfill:
             snapshot = replace(
                 snapshot,
-                snapshot_id=f"{snapshot.snapshot_id}-p{len(pending)}",
+                snapshot_id=(
+                    f"{snapshot.snapshot_id}-p{len(pending)}-"
+                    f"{finished_at.strftime('%H%M%S%f')}"
+                ),
                 limitations=(*snapshot.limitations, "processing_in_progress"),
                 coverage=replace(
                     snapshot.coverage,
