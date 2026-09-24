@@ -1,0 +1,17 @@
+{
+ "segments": [
+  {
+   "id": "telegram:10:841#s9",
+   "text": "• Тут список того, что поделать в Zcash\n",
+   "mentions": [
+    {
+     "text": "Zcash",
+     "status": "confirmed"
+    }
+   ],
+   "kind_hint": "post",
+   "url": "https://t.me/maxshitpostit/841",
+   "time": "2026-09-16T18:45:25+00:00"
+  }
+ ]
+}

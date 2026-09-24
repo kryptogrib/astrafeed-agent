@@ -1,0 +1,17 @@
+{
+ "segments": [
+  {
+   "id": "telegram:7:962#s8",
+   "text": "⚪️Bitcoin Bancorp выкупила 2547 банкоматов Bitcoin Depot.\n⚪️BitMine довела долю в Ethereum до 5%.\n⚪️Nu запустил мультивалютные счета в США на USDC и EURC.\n⚪️Revolut слил данные клиентов.\n⚪️Strive докупила 496 BTC (всего на балансе 25 000 BTC).\n⚪️Трамп поддержал Clarity Act и снятие ограничений для ИИ.\n⚪️ЦБ РФ внес крипту и стейблкоины в список финрисков .\n⚪️ЕС обязал разработчиков ПО сообщать о взломах.\n⚪️ОАЭ интегрируют Avalanche в систему госидентификации.\n⚪️Отток из спотовых Bitcoin ETF за неделю составил $463 млн.\n\n",
+   "mentions": [
+    {
+     "text": "Ethereum",
+     "status": "confirmed"
+    }
+   ],
+   "kind_hint": "post",
+   "url": "https://t.me/cryptomokakke/962",
+   "time": "2026-09-15T07:59:02+00:00"
+  }
+ ]
+}

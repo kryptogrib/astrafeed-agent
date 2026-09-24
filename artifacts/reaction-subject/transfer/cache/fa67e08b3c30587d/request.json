@@ -1,0 +1,17 @@
+{
+ "segments": [
+  {
+   "id": "telegram:7:961#s22",
+   "text": "🟠Потенциальные ставки на Arc\n",
+   "mentions": [
+    {
+     "text": "Arc",
+     "status": "confirmed"
+    }
+   ],
+   "kind_hint": "post",
+   "url": "https://t.me/cryptomokakke/961",
+   "time": "2026-09-14T06:32:01+00:00"
+  }
+ ]
+}

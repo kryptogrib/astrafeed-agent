@@ -1,0 +1,17 @@
+{
+ "segments": [
+  {
+   "id": "telegram:7:962#s15",
+   "text": "🟠По Arc\n",
+   "mentions": [
+    {
+     "text": "Arc",
+     "status": "confirmed"
+    }
+   ],
+   "kind_hint": "post",
+   "url": "https://t.me/cryptomokakke/962",
+   "time": "2026-09-15T07:59:02+00:00"
+  }
+ ]
+}

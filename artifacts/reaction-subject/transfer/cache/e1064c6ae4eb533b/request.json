@@ -1,0 +1,17 @@
+{
+ "segments": [
+  {
+   "id": "telegram:1:4550#s0",
+   "text": "SUI пробует оседлать нарратив конфиденциальности вслед за ZEC, ZAMA и NEAR\n\n",
+   "mentions": [
+    {
+     "text": "ZEC",
+     "status": "confirmed"
+    }
+   ],
+   "kind_hint": "post",
+   "url": "https://t.me/CoinMetrika/4550",
+   "time": "2026-09-21T10:09:10+00:00"
+  }
+ ]
+}

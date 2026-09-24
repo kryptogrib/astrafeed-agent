@@ -1,0 +1,17 @@
+{
+ "segments": [
+  {
+   "id": "telegram:15:4137:c:230889#s0",
+   "text": "tempo\nrobinhood\narc? \nlitvm?",
+   "mentions": [
+    {
+     "text": "arc",
+     "status": "confirmed"
+    }
+   ],
+   "kind_hint": "comment",
+   "url": "https://t.me/tradeinvestAndCat/4137?comment=230889",
+   "time": "2026-09-17T08:18:22+00:00"
+  }
+ ]
+}

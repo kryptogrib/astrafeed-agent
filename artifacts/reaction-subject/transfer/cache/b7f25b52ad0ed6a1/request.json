@@ -1,0 +1,25 @@
+{
+ "segments": [
+  {
+   "id": "telegram:10:833#s4",
+   "text": "> https://petal.exchange/api/rpc?chain=5042\n> https://rpc.arc-scan.org\n> https://arc-mainnet.infura.io/v3/b6bf7d3508c941499b10025c0776eaf8\n> https://arc-mainnet-rpc.baracat.meme\n> https://ac-rpc.theleak.cx\n\n",
+   "mentions": [
+    {
+     "text": "arc",
+     "status": "confirmed"
+    },
+    {
+     "text": "arc",
+     "status": "confirmed"
+    },
+    {
+     "text": "arc",
+     "status": "confirmed"
+    }
+   ],
+   "kind_hint": "post",
+   "url": "https://t.me/maxshitpostit/833",
+   "time": "2026-09-08T18:47:53+00:00"
+  }
+ ]
+}

@@ -1,0 +1,32 @@
+{
+ "choices": [
+  {
+   "message": {
+    "content": "{\"labels\": [{\"id\": \"telegram:10:837#s0\", \"kind\": \"event\", \"actor\": null, \"action\": \"announcement\", \"object\": \"potential bets on Arc\", \"qualifiers\": {}, \"origin\": \"own\", \"source_role\": \"author\", \"verification_status\": \"unverified\", \"topic_role\": \"subject\", \"quote\": \"Потенциальные ставки на Arc\", \"span\": [0, 25]}]}"
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 2039,
+  "completion_tokens": 1822,
+  "total_tokens": 3861,
+  "cost": 0.00077523,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.00077523,
+   "upstream_inference_prompt_cost": 0.00026507,
+   "upstream_inference_completions_cost": 0.00051016
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

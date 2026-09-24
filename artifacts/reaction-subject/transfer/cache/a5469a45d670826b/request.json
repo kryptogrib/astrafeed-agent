@@ -1,0 +1,22 @@
+{
+ "a": {
+  "quote": "Институционалы заходят активнее — мейннет Circle Arc собрал $370 млн USDC за два часа, Deutsche Bank начал хранение крипты для институционалов, X добавил быструю торговлю акциями и криптой из Cashtag. Из рисков — трейдер потерял $600 000 через фишинговую капчу. Биткоин всё ещё занимает лишь 0.5% мировых финансовых активов.",
+  "actor": "Circle",
+  "action": "launch mainnet",
+  "object": "Arc",
+  "qualifiers": {
+   "event_date": "2026-09-17",
+   "place": "mainnet",
+   "counterparty": "Deutsche Bank"
+  },
+  "url": "https://t.me/cryptomokakke/964"
+ },
+ "b": {
+  "quote": "1) Arc - запустили майнет",
+  "actor": null,
+  "action": "launch mainnet",
+  "object": "Arc",
+  "qualifiers": {},
+  "url": "https://t.me/workIncrypts/12747"
+ }
+}

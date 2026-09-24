@@ -1,0 +1,17 @@
+{
+ "segments": [
+  {
+   "id": "telegram:7:957#s8",
+   "text": "⚪️Circle за $400 млн покупает платежный сервис Tazapay.\n⚪️David Sacks обвинил Бутерина в раздувании вокруг ИИ.\n⚪️Ethereum установил дедлайн по квантовой защите.\n⚪️Strategy докупила свои бумаги STRC на $176 млн.\n⚪️Tether представил децентрализованный P2P-поисковик.\n⚪️Краткосрочные BTC-киты сидят на $9 млрд прибыли.\n\n",
+   "mentions": [
+    {
+     "text": "Ethereum",
+     "status": "confirmed"
+    }
+   ],
+   "kind_hint": "post",
+   "url": "https://t.me/cryptomokakke/957",
+   "time": "2026-09-09T09:07:01+00:00"
+  }
+ ]
+}

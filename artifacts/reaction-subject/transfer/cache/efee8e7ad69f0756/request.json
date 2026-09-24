@@ -1,0 +1,22 @@
+{
+ "a": {
+  "quote": "Если что - Opensea тоже поддерживает Arc с первого дня маиннета, как и Fomo. На завтра надо тебе 20-30 NFT коллекций или в рот оно ебись, лучше на Байдене будешь ректоваться? Не забудь аппрув заранее включить на его контракт. Дай знать в комментах энивэй, нужен тебе список NFT или нет",
+  "actor": "Opensea",
+  "action": "supports",
+  "object": "Arc",
+  "qualifiers": {
+   "event_date": "from first day of mainnet"
+  },
+  "url": "https://t.me/maxshitpostit/833"
+ },
+ "b": {
+  "quote": "🟠Arc mainnet через неделю",
+  "actor": null,
+  "action": "announcement",
+  "object": "Arc mainnet launch",
+  "qualifiers": {
+   "event_date": "in a week"
+  },
+  "url": "https://t.me/cryptomokakke/957"
+ }
+}

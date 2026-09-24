@@ -1,0 +1,20 @@
+{
+ "a": {
+  "quote": "🟠Arc запущен",
+  "actor": null,
+  "action": "launch",
+  "object": "Arc",
+  "qualifiers": {},
+  "url": "https://t.me/cryptomokakke/964"
+ },
+ "b": {
+  "quote": "🟣Первый день мэйннета ARC",
+  "actor": null,
+  "action": "launch mainnet",
+  "object": "ARC",
+  "qualifiers": {
+   "event_date": "2026-09-17"
+  },
+  "url": "https://t.me/cryptomokakke/964"
+ }
+}

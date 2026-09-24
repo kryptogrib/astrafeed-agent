@@ -1,0 +1,32 @@
+{
+ "choices": [
+  {
+   "message": {
+    "content": "{\"labels\": [{\"id\": \"telegram:12:273#s21\", \"kind\": \"event\", \"actor\": null, \"action\": \"attend event\", \"object\": \"Arc launch event\", \"qualifiers\": {}, \"origin\": \"own\", \"source_role\": \"participant\", \"verification_status\": \"unverified\", \"topic_role\": \"context\", \"quote\": \"Выступали на мероприятии в честь запуска Arc. Само мероприятие не дало большого количества новостей, но вот для AAVE, читая между строк, навалили плотно булла.\", \"span\": [0, 155]}]}"
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 2031,
+  "completion_tokens": 1790,
+  "total_tokens": 3821,
+  "cost": 0.000510601,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.000510601,
+   "upstream_inference_prompt_cost": 0.000184821,
+   "upstream_inference_completions_cost": 0.00032578
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}
