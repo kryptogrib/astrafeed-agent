@@ -5,6 +5,7 @@ from typing import Any, Literal
 from fastapi import FastAPI, HTTPException, Request
 from fastapi.responses import JSONResponse, PlainTextResponse
 
+from astrafeed.adapters.http.a2mcp import mount_a2mcp
 from astrafeed.application.agenda_query import AgendaNotFound, AgendaPreparing
 
 PulseFn = Callable[[str, str | None], dict[str, Any]]
@@ -156,5 +157,8 @@ def create_app(
             if format == "md":
                 return _markdown(result["brief_markdown"])
             return result
+
+    if agenda is not None and stories_search is not None and story is not None:
+        mount_a2mcp(app, _call_async, agenda, stories_search, story)
 
     return app
