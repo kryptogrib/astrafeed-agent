@@ -114,7 +114,7 @@ async def test_agenda_search_story_share_one_snapshot():
     md = await _get(app, "/agenda?format=md")
     assert md.headers["content-type"].startswith("text/markdown")
     assert "Потоки ETH ETF" in md.text
-    assert "**2 channels** · ↑ +2 in 24h" in md.text
+    assert "**2 sources** · ↑ +2 in 24h" in md.text
     assert "Covered by: [@alpha](https://t.me/alpha/10)" in md.text
     # Without a translation the original quote is shown as is.
     assert "> “Отток ETH ETF составил 120 млн.” — [@alpha](https://t.me/alpha/10)" in md.text
@@ -360,14 +360,85 @@ def test_agenda_markdown_ends_with_a_measured_trust_line():
     md = render_agenda_md(payload)
     assert "1 displayed quote passed the span check" in md
     assert "162s collect→publish" in md
-    assert "37 channels, 2481/2518 posts" in md
+    assert "37 sources, 2481/2518 posts" in md
 
 
 def test_growth_text_explains_incomplete_channel():
     assert (
         _growth_text({"growth": 5, "current_channels": 6, "previous_channels": 0})
-        == "↑ +5 in 24h on comparable channels (6 observed)"
+        == "↑ +5 in 24h on comparable sources (6 observed)"
     )
     assert _growth_text({"growth": 2, "current_channels": 2, "previous_channels": 0}) == (
         "↑ +2 in 24h"
     )
+
+
+def test_html_groups_source_links_and_labels_snapshot_coverage():
+    from astrafeed.application.agenda_query import render_agenda_html
+
+    card = {
+        "story_id": "mixed",
+        "title": "Mixed-source story",
+        "entities": [],
+        "current_channels": 3,
+        "previous_channels": 0,
+        "growth": 3,
+        "first_seen": "2026-09-25T10:00:00+00:00",
+        "explanation": "Covered by several sources",
+        "claims": [],
+        "signals": {
+            "sources": [
+                {
+                    "channel": "@alpha",
+                    "link": "https://t.me/alpha/1",
+                    "minutes_after_first": 0,
+                    "echo_of": None,
+                },
+                {
+                    "channel": "r/Bitcoin",
+                    "link": "https://www.reddit.com/r/Bitcoin/comments/abc",
+                    "minutes_after_first": 4,
+                    "echo_of": None,
+                },
+                {
+                    "channel": "protos.com",
+                    "link": "https://protos.com/news/abc",
+                    "minutes_after_first": 8,
+                    "echo_of": None,
+                },
+            ],
+            "spread_minutes": None,
+            "confirmation": "rumor",
+            "attributed_to": [],
+            "figures_conflict": False,
+            "figures": [],
+            "echo_channels": 0,
+            "price": None,
+        },
+    }
+    payload = {
+        "snapshot_id": "snap-old",
+        "t": "2026-09-25T12:00:00+00:00",
+        "published_at": "2026-09-25T12:02:00+00:00",
+        "stale": True,
+        "limitations": [],
+        "coverage": {
+            "channels_ok": 37,
+            "channels_failed": 0,
+            "publications_total": 2530,
+            "publications_processed": 2493,
+        },
+        "stories": [card],
+    }
+
+    page = render_agenda_html(payload)
+
+    assert "Coverage in this snapshot: 37 sources, 2493 of 2530 posts analyzed" in page
+    assert "Last published snapshot: Sep 25, 12:02 UTC" in page
+    assert "Newer collection is not included in these counts" in page
+    assert "<span>Telegram</span>" in page
+    assert "<span>Reddit</span>" in page
+    assert "<span>News sites</span>" in page
+    assert '<a href="https://t.me/alpha/1">@alpha</a>' in page
+    assert '<a href="https://www.reddit.com/r/Bitcoin/comments/abc">r/Bitcoin</a>' in page
+    assert '<a href="https://protos.com/news/abc">protos.com</a>' in page
