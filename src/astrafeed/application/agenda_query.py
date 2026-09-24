@@ -469,7 +469,9 @@ def _md_discussion(card: dict, *, full: bool) -> list[str]:
     # Snapshots published before facts-only comments carry opinion points.
     lines += [f"- {point}" for point in discussion["points"]]
     for fact, comment in facts:
-        source = f" — [discussion in {comment['channel']}]({comment['link']})" if comment else ""
+        source = (
+            f" — [comments under {comment['channel']} post]({comment['link']})" if comment else ""
+        )
         lines.append(f"- {fact}{source}")
         if full and comment:
             lines.append(f"  > “{_english(comment, 'text')}”")

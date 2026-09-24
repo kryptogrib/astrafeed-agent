@@ -308,7 +308,7 @@ def test_discussion_is_rendered_in_markdown_and_html_and_escaped():
     md = render_agenda_md(payload)
     assert "💬 **From reader comments** (214 comments, unverified):" in md
     assert (
-        "- A reader says <b>withdrawals</b> are stuck — [discussion in @a](https://t.me/a/1?comment=5)"
+        "- A reader says <b>withdrawals</b> are stuck — [comments under @a post](https://t.me/a/1?comment=5)"
     ) in md
     # The agenda keeps facts short; the comment text is on the story page.
     assert "withdrew everything yesterday" not in md and "вывел" not in md

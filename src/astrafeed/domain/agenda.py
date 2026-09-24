@@ -157,6 +157,33 @@ def rank_agenda_stories(stories: list[dict[str, Any]]) -> list[dict[str, Any]]:
     return sorted(eligible, key=agenda_rank_key)
 
 
+def _near_duplicate_event(left: dict[str, Any], right: dict[str, Any]) -> bool:
+    """Avoid showing two retellings of one event in the short agenda."""
+    left_entities = {str(value).casefold() for value in left.get("entities", ())}
+    right_entities = {str(value).casefold() for value in right.get("entities", ())}
+    if len(left_entities & right_entities) < 2:
+        return False
+    left_seen, right_seen = left.get("first_seen"), right.get("first_seen")
+    if not isinstance(left_seen, datetime) or not isinstance(right_seen, datetime):
+        return False
+    if abs((left_seen - right_seen).total_seconds()) > 6 * 3600:
+        return False
+    entity_words = {
+        word.casefold()
+        for entity in left_entities | right_entities
+        for word in re.findall(r"[\w]+", entity)
+    }
+
+    def subject_words(item: dict[str, Any]) -> set[str]:
+        return {
+            word[:7]
+            for word in re.findall(r"[\w]+", str(item.get("title") or "").casefold())
+            if len(word) >= 7 and word not in entity_words
+        }
+
+    return bool(subject_words(left) & subject_words(right))
+
+
 def select_agenda(
     cards: list[dict[str, Any]], comparable_count: int
 ) -> tuple[list[dict[str, Any]], str]:
@@ -182,6 +209,8 @@ def select_agenda(
                 continue
             signature = tuple(item.get("source_signature") or ())
             if len(signature) >= 2 and source_counts.get(signature, 0) >= 1:
+                continue
+            if any(_near_duplicate_event(item, prior) for prior in selected):
                 continue
             selected.append(item)
             if entity:

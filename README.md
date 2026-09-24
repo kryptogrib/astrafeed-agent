@@ -4,7 +4,7 @@
 
 **What changed in crypto Telegram, who said it first, and where is the evidence?**
 
-AstraFeed turns posts from 38 selected public channels into a live agenda for humans and AI agents. It groups posts into stories, compares the last 24 hours with the previous 24, and links every displayed claim to its original Telegram post. The same published snapshot is available as a readable page, JSON, Markdown, and an OKX.AI A2MCP service.
+AstraFeed turns posts from 38 curated public Telegram channels and configured RSS and Reddit sources into a live agenda for humans and AI agents. It groups posts into stories, compares the last 24 hours with the previous 24, and links every displayed claim to its original source. The same published snapshot is available as a readable page, JSON, Markdown, and an OKX.AI A2MCP service.
 
 **[Open the live agenda](https://cutememe.lol/agenda?format=html)** · **[Watch the 2:56 demo](docs/submission/astrafeed-demo.mp4)** · [Check the live service](https://cutememe.lol/healthz)
 
@@ -109,7 +109,7 @@ The response has `service`, `action` (`agenda`, `search`, or `story`), and `resu
 | `coverage`, `stale`, `limitations` | What was collected and processed, and what the snapshot cannot support. |
 | `price.verdict` | Code label from OKX spot: did the market move in the hour **before** the first observed post, after it, both, or neither. Context, not causation. |
 
-The watched channels are a curated Russian-language Telegram folder, not a representative sample of the whole market. Quotes in the English report may be machine-translated; JSON retains the original. Reader comments are unverified and shown as takeaways only when the quoted comment explicitly names a story entity; silence does not mean agreement. No sentiment score or trading recommendation is produced.
+The watched channels are a curated Russian-language Telegram folder, not a representative sample of the whole market. Quotes in the English report may be machine-translated; JSON retains the original. Search also covers archive stories in their source language; displayed agenda titles are English. Reader comments are unverified and shown as takeaways only when the quoted comment explicitly names a story entity. A comment link opens its parent post or thread when Telegram has no direct comment URL. Silence does not mean agreement. No sentiment score or trading recommendation is produced.
 
 ## Poll for changes
 
