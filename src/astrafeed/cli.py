@@ -306,7 +306,10 @@ async def _agenda_poll(
             source_ids = []
             if cfg.channels or cfg.news_channels:
                 try:
-                    async with asyncio.timeout(10):
+                    # Resolving 38 channels checks both identity and read access
+                    # sequentially. A cold Telegram session can take longer than
+                    # ten seconds even when every source is available.
+                    async with asyncio.timeout(120):
                         await _ensure_connected(client)
                         source_ids = await _resolve_union(
                             coordinator, [*cfg.channels, *cfg.news_channels]
