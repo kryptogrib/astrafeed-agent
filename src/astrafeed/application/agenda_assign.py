@@ -28,6 +28,7 @@ from astrafeed.domain.agenda import (
     embedding_cache_key,
     embedding_input,
     lexical_tokens,
+    numbers_are_grounded,
 )
 from astrafeed.domain.spend_budget import BudgetExceeded
 from astrafeed.ports.agenda import AgendaStore, Embedder, StoryAssigner
@@ -335,7 +336,9 @@ async def _apply_decision(
     assignment: object,
     story_override: Story | None = None,
 ) -> AssignmentEffect:
-    story = story_override or _resolve_story(assignment, list(context.stories), publication)
+    story = story_override or _resolve_story(
+        assignment, list(context.stories), publication, fragment
+    )
     if story is None:
         if getattr(assignment, "story_decision", None) != "ambiguous":
             await store.enqueue(publication.publication_id, "assign_error")
@@ -696,7 +699,7 @@ async def assign_speculative_batch(
 
 
 def _resolve_story(
-    assignment, stories: list[Story], publication: PublicationVersion
+    assignment, stories: list[Story], publication: PublicationVersion, fragment: Fragment
 ) -> Story | None:
     if assignment.story_decision == "ambiguous":
         return None
@@ -705,6 +708,9 @@ def _resolve_story(
             if story.story_id == assignment.story_id:
                 return story
     title = assignment.title_ru.strip()
+    quotes = [claim.quote for claim in fragment.claims]
+    if not numbers_are_grounded(title, quotes) and quotes:
+        title = quotes[0].splitlines()[0].strip(" •▫️.\n")
     if title.casefold() in {"", "сюжет"}:
         return None
     story_id = assignment.story_id or _stable_id("st", title)

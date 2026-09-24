@@ -117,6 +117,26 @@ def test_embedding_input_uses_fragment_and_entities_not_digest():
     assert digest not in embedding_input(fragment, ["ETH ETF"])
 
 
+def test_new_story_does_not_invent_calendar_date_from_relative_quote():
+    from astrafeed.adapters.llm.agenda import Assignment
+
+    now = datetime(2026, 9, 22, tzinfo=UTC)
+    quote = "Финпотоки крипто-ETF за вчерашний день.\n#BTC = +$998,950,000."
+    fragment = Fragment(
+        text=quote,
+        start=0,
+        end=len(quote),
+        claims=(Claim(kind="event", speaker="author", quote=quote, start=0, end=len(quote)),),
+    )
+    assignment = Assignment(
+        (), "new", None, "Финпотоки ETF за 21 сентября 2026", "", "separate", None
+    )
+    pub = _pub(quote, 1, "1", "@a", now)
+    story = agenda_assign._resolve_story(assignment, [], pub, fragment)
+    assert story is not None
+    assert story.title_ru == "Финпотоки крипто-ETF за вчерашний день"
+
+
 def test_assignment_context_contains_only_candidate_stories_and_matching_entities():
     now = datetime(2026, 9, 24, tzinfo=UTC)
     fragment = IndexedFragment(
