@@ -41,6 +41,10 @@ _VAGUE_STORY = re.compile(r"\b(?:новые детали|вся картина|�
 _FUTURE_SECTION = re.compile(r"(?:что ожидается|планируется|upcoming)[^\n]{0,70}", re.I)
 _PENDING = re.compile(r"\b(?:рассматрива\w*|ожида\w*|слушани\w*)\b", re.I)
 _RESOLVED = re.compile(r"\b(?:отменил\w*|заблокировал\w*|orders?.{0,40}restore|blocking)\b", re.I)
+_TALKS = re.compile(
+    r"\b(?:переговор\w*|встре(?:т|ч)\w*|обсуд\w*|talks?|negotiat\w*|meet\w*|discuss\w*)\b",
+    re.I,
+)
 
 
 def _mentions(text: str, name: str) -> bool:
@@ -81,6 +85,8 @@ def _supported_link(
         and re.match(r"^(?:запуск|завершение|расширение)\b", title, re.I)):
         return False
     if _PENDING.search(title) and _RESOLVED.search(quote):
+        return False
+    if re.search(r"\bпереговор\w*\b", title, re.I) and not _TALKS.search(quote):
         return False
     title_tickers = _TICKER.findall(title)
     if title_tickers and not any(_mentions(quote, ticker) for ticker in title_tickers):

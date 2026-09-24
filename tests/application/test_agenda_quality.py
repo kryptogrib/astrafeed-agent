@@ -163,6 +163,25 @@ async def test_unnamed_project_title_stays_searchable_but_off_top_agenda():
 
 
 @pytest.mark.asyncio
+async def test_arrival_alone_does_not_vote_for_negotiations():
+    store = InMemoryAgendaStore()
+    now = datetime(2026, 9, 24, 12, tzinfo=UTC)
+    await store.save_story(Story("talks", "Си прибыл на переговоры с Трампом", "", now))
+    for source_id, quote in (
+        (1, "Си прибыл в Вашингтон на переговоры с Трампом."),
+        (2, "Сегодня Си прибыл в Вашингтон."),
+    ):
+        pub = _publication(source_id, str(source_id), quote, now)
+        await store.record_publication(pub)
+        await _link(store, "talks", pub, quote, quote)
+
+    snapshot = await build_snapshot(store, now + timedelta(minutes=1), _coverage(),
+                                    collected_at=now, analyzed_at=now)
+    assert snapshot.stories["talks"].card.current_channels == 1
+    assert snapshot.agenda == ()
+
+
+@pytest.mark.asyncio
 async def test_navigation_claim_does_not_create_a_second_channel_vote():
     store = InMemoryAgendaStore()
     now = datetime(2026, 9, 24, 12, tzinfo=UTC)
