@@ -63,10 +63,20 @@ def _partial_is_publishable(partial: Snapshot, previous: Snapshot | None) -> boo
         return False
     partial_time = getattr(partial, "t", None)
     previous_time = getattr(previous, "t", None)
+    analyzed_at = getattr(partial, "analyzed_at", None)
+    previous_analyzed_at = getattr(previous, "analyzed_at", None)
     return (
         partial_time is not None
         and previous_time is not None
-        and partial_time > previous_time
+        and (
+            partial_time > previous_time
+            or (
+                partial_time == previous_time
+                and analyzed_at is not None
+                and previous_analyzed_at is not None
+                and analyzed_at > previous_analyzed_at
+            )
+        )
     ) or len(partial.agenda) >= len(previous.agenda)
 
 
