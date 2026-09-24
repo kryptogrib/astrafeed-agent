@@ -211,4 +211,44 @@ async def test_ungrounded_numeric_title_is_not_published_in_agenda():
     snapshot = await build_snapshot(store, now, _coverage(), collected_at=now, analyzed_at=now)
 
     assert snapshot.agenda == ()
-    assert snapshot.stories["otc"].card.current_channels == 2
+    assert "otc" not in snapshot.stories
+
+
+@pytest.mark.asyncio
+async def test_unrelated_link_never_votes_or_appears_in_story_detail():
+    store = InMemoryAgendaStore()
+    now = datetime(2026, 9, 24, 12, tzinfo=UTC)
+    await store.save_story(
+        Story("round", "infiniFi привлекли $3 млн", "", now, key_entity="infinifi")
+    )
+    for source_id, quote in (
+        (1, "infiniFi привлекли $3 млн от Electric Capital."),
+        (2, "тге в q4 анонсировали"),
+    ):
+        pub = _publication(source_id, str(source_id), quote, now - timedelta(hours=1))
+        await store.record_publication(pub)
+        await _link(store, "round", pub, quote, quote)
+    snapshot = await build_snapshot(store, now, _coverage(), collected_at=now, analyzed_at=now)
+    detail = snapshot.stories["round"]
+    assert detail.card.current_channels == 1
+    assert [claim.quote for claim in detail.card.claims] == [
+        "infiniFi привлекли $3 млн от Electric Capital."
+    ]
+    assert len(detail.publications) == 1
+    assert snapshot.agenda == ()
+
+
+@pytest.mark.asyncio
+async def test_lit_fdv_does_not_vote_for_polymarket_story():
+    store = InMemoryAgendaStore()
+    now = datetime(2026, 9, 24, 12, tzinfo=UTC)
+    await store.save_story(Story("poly", "Polymarket оценивает FDV $1-2 млрд", "", now))
+    for source_id, quote in (
+        (1, "На Polymarket оценивают токен по $1-2 млрд FDV."),
+        (2, "$LIT 5.3b FDV"),
+    ):
+        pub = _publication(source_id, str(source_id), quote, now - timedelta(hours=1))
+        await store.record_publication(pub)
+        await _link(store, "poly", pub, quote, quote)
+    snapshot = await build_snapshot(store, now, _coverage(), collected_at=now, analyzed_at=now)
+    assert snapshot.stories["poly"].card.current_channels == 1

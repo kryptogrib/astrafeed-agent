@@ -10,6 +10,7 @@ from astrafeed.application.agenda_extract import claim_is_noise
 from astrafeed.domain.agenda import (
     ClaimCard,
     CoverageInfo,
+    Entity,
     EventCard,
     PositionCard,
     PublicationRef,
@@ -27,6 +28,43 @@ from astrafeed.domain.agenda import (
     windows_at,
 )
 from astrafeed.ports.agenda import AgendaStore
+
+_NUMBER = re.compile(r"\d+(?:[.,]\d+)?")
+_PROFANITY = re.compile(r"(?:на[её]б|за[её]б|[её]бан|\bбля|\bхуй|\bху[её]в|\bпизд)", re.I)
+
+
+def _supported_link(
+    link: StoryLink,
+    pub: PublicationVersion,
+    title: str,
+    key_entity: str,
+    entities: dict[str, Entity],
+) -> bool:
+    """Only evidence that visibly names the subject can contribute a channel vote.
+
+    This is deliberately conservative for old speculative assignments: a
+    correct entity label or similar embedding cannot repair an unrelated quote.
+    """
+    quote = link.quote.strip()
+    if not quote or quote not in pub.text:
+        return False
+    if key_entity and len(key_entity) >= 3:
+        entity = next(
+            (
+                item
+                for item in entities.values()
+                if item.status == "confirmed"
+                and item.canonical_name.casefold() == key_entity.casefold()
+            ),
+            None,
+        )
+        names = (key_entity, *(entity.aliases if entity else ()))
+        if (key_entity.casefold() in title.casefold() or entity is not None) and not any(
+            len(name) >= 3 and name.casefold() in quote.casefold() for name in names
+        ):
+            return False
+    title_numbers = set(_NUMBER.findall(title))
+    return not title_numbers or bool(title_numbers.intersection(_NUMBER.findall(quote)))
 
 
 def _snapshot_id(t: datetime) -> str:
@@ -63,7 +101,7 @@ def _hashes(pubs: list[PublicationVersion]) -> list[str]:
 def _explanation(claims: list[ClaimCard], title: str) -> str:
     for claim in claims:
         text = claim.paraphrase_ru or claim.quote
-        if text and numbers_are_grounded(text, [claim.quote]):
+        if text and not _PROFANITY.search(text) and numbers_are_grounded(text, [claim.quote]):
             return text
     return title
 
@@ -154,7 +192,10 @@ async def build_snapshot(
     all_links = await store.links_for_publications(set(by_id))
     links_by_story: dict[str, list[StoryLink]] = defaultdict(list)
     for link in all_links:
-        if not claim_is_noise(link.quote):
+        story = stories.get(link.story_id)
+        pub = by_id.get(link.publication_id)
+        if (story is not None and pub is not None and not claim_is_noise(link.quote)
+            and _supported_link(link, pub, story.title_ru, story.key_entity or "", entities)):
             links_by_story[link.story_id].append(link)
     comparable = comparable_channel_ids(coverage_states)
     details: dict[str, StoryDetail] = {}
@@ -250,7 +291,9 @@ async def build_snapshot(
                 "previous_channels": card.previous_channels,
                 "freshness": card.freshness,
                 "eligible": story.title_ru.strip().casefold() not in {"", "сюжет"}
+                and not _PROFANITY.search(story.title_ru)
                 and numbers_are_grounded(story.title_ru, [claim.quote for claim in claim_cards]),
+                "primary_entity": (story.key_entity or "").casefold(),
                 "card": card,
             }
         )
