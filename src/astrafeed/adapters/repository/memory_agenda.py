@@ -20,6 +20,7 @@ class InMemoryAgendaStore:
         self._versions: dict[str, list[PublicationVersion]] = {}
         self._extractions: dict[str, ExtractionResult] = {}
         self._embeddings: dict[str, list[float]] = {}
+        self._evidence: dict[str, bool] = {}
         self._queue: dict[str, str] = {}
         self._entities: dict[str, Entity] = {}
         self._stories: dict[str, Story] = {}
@@ -111,6 +112,12 @@ class InMemoryAgendaStore:
             for publication_id, reason in self._queue.items()
             if queue_reason_retryable(reason)
         ]
+
+    async def get_evidence_verdict(self, key: str) -> bool | None:
+        return self._evidence.get(key)
+
+    async def save_evidence_verdict(self, key: str, supported: bool) -> None:
+        self._evidence[key] = supported
 
     async def save_entity(self, entity: Entity) -> None:
         self._entities[entity.entity_id] = entity

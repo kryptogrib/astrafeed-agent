@@ -263,6 +263,12 @@ class SqliteAgendaStore:
                 if queue_reason_retryable(row.reason)
             ]
 
+    async def get_evidence_verdict(self, key: str) -> bool | None:
+        return await self._get_json("evidence", key)
+
+    async def save_evidence_verdict(self, key: str, supported: bool) -> None:
+        await self._put_json("evidence", key, supported)
+
     async def save_entity(self, entity: Entity) -> None:
         await self._put_json("entity", entity.entity_id, entity)
 

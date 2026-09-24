@@ -41,6 +41,10 @@ class AssignmentDraft(Protocol):
     """Structural result of story assignment; concrete type lives in adapters."""
 
 
+class EvidenceVerifier(Protocol):
+    async def verify(self, story: Story, quotes: Sequence[str]) -> list[bool]: ...
+
+
 class AgendaStore(Protocol):
     async def record_publication(
         self, version: PublicationVersion
@@ -67,6 +71,10 @@ class AgendaStore(Protocol):
     async def queued_ids(self) -> list[str]: ...
 
     async def retryable_ids(self) -> list[str]: ...
+
+    async def get_evidence_verdict(self, key: str) -> bool | None: ...
+
+    async def save_evidence_verdict(self, key: str, supported: bool) -> None: ...
 
     async def save_entity(self, entity: Entity) -> None: ...
 

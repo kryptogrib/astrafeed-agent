@@ -30,7 +30,13 @@ from astrafeed.domain.agenda import (
 )
 from astrafeed.domain.models import Item
 from astrafeed.domain.spend_budget import BudgetExceeded
-from astrafeed.ports.agenda import AgendaStore, Embedder, OpenExtractor, StoryAssigner
+from astrafeed.ports.agenda import (
+    AgendaStore,
+    Embedder,
+    EvidenceVerifier,
+    OpenExtractor,
+    StoryAssigner,
+)
 
 CollectFn = Callable[[datetime, datetime], Awaitable[None]]
 _log = logging.getLogger(__name__)
@@ -145,6 +151,7 @@ async def run_cycle(
     extractor: OpenExtractor,
     embedder: Embedder,
     assigner: StoryAssigner,
+    evidence_verifier: EvidenceVerifier | None = None,
     now: datetime,
     collect: CollectFn | None = None,
     extract_concurrency: int = 12,
@@ -304,6 +311,7 @@ async def run_cycle(
                             coverage,
                             collected_at=state.last_collect_at or now,
                             analyzed_at=partial_time,
+                            verifier=evidence_verifier,
                         )
                         limitation = "processing_in_progress"
                         partial_id = f"{partial.snapshot_id}-p{processed}"
@@ -371,6 +379,7 @@ async def run_cycle(
             coverage,
             collected_at=state.last_collect_at or now,
             analyzed_at=finished_at,
+            verifier=evidence_verifier,
         )
         snapshot = replace(snapshot, published_at=finished_at)
         if remaining_backfill:

@@ -47,6 +47,7 @@ async def _link(
     quote: str,
     paraphrase: str,
     claim_index: int = 0,
+    entity_ids: tuple[str, ...] = (),
 ) -> None:
     await store.save_link(
         StoryLink(
@@ -55,6 +56,7 @@ async def _link(
             version=publication.version,
             fragment_index=0,
             claim_index=claim_index,
+            entity_ids=entity_ids,
             quote=quote,
             paraphrase_ru=paraphrase,
         )
@@ -193,7 +195,7 @@ async def test_payy_card_uses_one_relevant_summary_and_quotes_from_both_sources(
 
     assert len(snapshot.agenda) == 1
     card = snapshot.agenda[0]
-    assert card.explanation == "Payy взломан на $1,83 млн"
+    assert card.explanation == payy
     assert all("Duelbits" not in claim.quote for claim in card.claims)
     assert {claim.channel_ref for claim in card.claims} == {"@channel1", "@channel2"}
 
@@ -267,8 +269,62 @@ async def test_confirmed_project_is_named_and_profane_paraphrase_is_not_explanat
     for source_id in (1, 2):
         pub = _publication(source_id, str(source_id), quote, now - timedelta(hours=1))
         await store.record_publication(pub)
-        await _link(store, "points", pub, quote, "нас наебали с поинтами")
+        await _link(
+            store, "points", pub, quote, "нас наебали с поинтами",
+            entity_ids=("variational",),
+        )
     snapshot = await build_snapshot(store, now, _coverage(), collected_at=now, analyzed_at=now)
     card = snapshot.agenda[0]
     assert card.title.startswith("Variational:")
     assert card.explanation == quote
+
+
+@pytest.mark.asyncio
+async def test_story_evidence_verification_removes_false_channel_vote():
+    store = InMemoryAgendaStore()
+    now = datetime(2026, 9, 24, 12, tzinfo=UTC)
+    await store.save_story(Story("hormuz", "Десять судов прошли Ормузский пролив", "", now))
+    quotes = (
+        "Десять судов прошли Ормузский пролив в среду.",
+        "Катар увеличил поток танкеров через Ормузский пролив.",
+    )
+    for source_id, quote in enumerate(quotes, 1):
+        pub = _publication(source_id, str(source_id), quote, now - timedelta(hours=1))
+        await store.record_publication(pub)
+        await _link(store, "hormuz", pub, quote, quote)
+
+    class Verifier:
+        calls = 0
+
+        async def verify(self, story, quotes):
+            self.calls += 1
+            return [quote.startswith("Десять") for quote in quotes]
+
+    verifier = Verifier()
+    first = await build_snapshot(
+        store, now, _coverage(), collected_at=now, analyzed_at=now, verifier=verifier
+    )
+    second = await build_snapshot(
+        store, now, _coverage(), collected_at=now, analyzed_at=now, verifier=verifier
+    )
+    assert first.stories["hormuz"].card.current_channels == 1
+    assert first.stories["hormuz"].card.growth == 1
+    assert first.agenda == ()
+    assert second.stories["hormuz"].card.current_channels == 1
+    assert verifier.calls == 1
+
+
+@pytest.mark.asyncio
+async def test_subjectless_excerpt_cannot_vote_for_named_project():
+    store = InMemoryAgendaStore()
+    now = datetime(2026, 9, 24, 12, tzinfo=UTC)
+    await store.save_entity(Entity("variational", "Variational"))
+    await store.save_story(Story("beta", "Завершение закрытого бета-тестирования", "", now))
+    for source_id in (1, 2):
+        quote = "Завершение закрытого бета-тестирования"
+        pub = _publication(source_id, str(source_id), "Variational: " + quote, now)
+        await store.record_publication(pub)
+        await _link(store, "beta", pub, quote, quote)
+    snapshot = await build_snapshot(store, now + timedelta(minutes=1), _coverage(),
+                                    collected_at=now, analyzed_at=now)
+    assert "beta" not in snapshot.stories

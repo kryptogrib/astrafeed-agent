@@ -2,6 +2,8 @@
 
 from __future__ import annotations
 
+import asyncio
+import hashlib
 import re
 from collections import defaultdict
 from datetime import datetime
@@ -28,10 +30,13 @@ from astrafeed.domain.agenda import (
     select_agenda,
     windows_at,
 )
-from astrafeed.ports.agenda import AgendaStore
+from astrafeed.domain.spend_budget import BudgetExceeded
+from astrafeed.ports.agenda import AgendaStore, EvidenceVerifier
 
 _NUMBER = re.compile(r"\d+(?:[.,]\d+)?")
+_TICKER = re.compile(r"\$[A-Za-z][A-Za-z0-9]{1,}")
 _PROFANITY = re.compile(r"(?:на[её]б|за[её]б|[её]бан|\bбля|\bхуй|\bху[её]в|\bпизд)", re.I)
+_GENERIC_ENTITIES = {"tge", "fdv", "q3", "q4", "points", "поинты", "airdrop"}
 
 
 def _mentions(text: str, name: str) -> bool:
@@ -54,6 +59,26 @@ def _supported_link(
     quote = link.quote.strip()
     if not quote or quote not in pub.text:
         return False
+    title_tickers = _TICKER.findall(title)
+    if title_tickers and not any(_mentions(quote, ticker) for ticker in title_tickers):
+        return False
+    # A clipped digest bullet can be verbatim yet omit its subject. The
+    # publication's surrounding text must not lend that bullet a channel vote.
+    named_entities = [
+        entity for entity in entities.values()
+        if entity.status == "confirmed"
+        and entity.canonical_name.casefold().lstrip("$#") not in _GENERIC_ENTITIES
+        and (
+            entity.entity_id in link.entity_ids
+            or any(_mentions(title, name) for name in (entity.canonical_name, *entity.aliases))
+        )
+    ]
+    if entities and not any(
+        _mentions(quote, name)
+        for entity in named_entities
+        for name in (entity.canonical_name, *entity.aliases)
+    ):
+        return False
     if key_entity and len(key_entity) >= 3:
         entity = next(
             (
@@ -75,6 +100,28 @@ def _supported_link(
 
 def _snapshot_id(t: datetime) -> str:
     return "snap-" + t.strftime("%Y%m%dT%H%M%SZ")
+
+
+def _evidence_key(story: Story, quote: str) -> str:
+    raw = "\n".join(("story-evidence/v1", story.title_ru, story.boundary, quote))
+    return hashlib.sha256(raw.encode("utf-8")).hexdigest()
+
+
+async def _verify_story_links(
+    store: AgendaStore, verifier: EvidenceVerifier, story: Story, links: list[StoryLink]
+) -> list[StoryLink]:
+    by_key = {_evidence_key(story, link.quote): link.quote for link in links}
+    verdicts = {key: await store.get_evidence_verdict(key) for key in by_key}
+    missing = [(key, quote) for key, quote in by_key.items() if verdicts[key] is None]
+    for offset in range(0, len(missing), 12):
+        batch = missing[offset : offset + 12]
+        results = await verifier.verify(story, [quote for _, quote in batch])
+        if len(results) != len(batch) or not all(type(value) is bool for value in results):
+            raise ValueError("Evidence verifier returned incomplete verdicts")
+        for (key, _), supported in zip(batch, results, strict=True):
+            verdicts[key] = supported
+            await store.save_evidence_verdict(key, supported)
+    return [link for link in links if verdicts[_evidence_key(story, link.quote)]]
 
 
 def _display_title(
@@ -146,7 +193,13 @@ def _hashes(pubs: list[PublicationVersion]) -> list[str]:
 
 def _explanation(claims: list[ClaimCard], title: str) -> str:
     for claim in claims:
-        for text in (claim.paraphrase_ru, claim.quote):
+        # A source excerpt retains modality (planned, possible, completed).
+        # Prefer it to a fluent paraphrase that may silently change the tense.
+        if re.search(r"[А-Яа-яЁё]", claim.quote):
+            candidates = (claim.quote, claim.paraphrase_ru)
+        else:
+            candidates = (claim.paraphrase_ru, claim.quote)
+        for text in candidates:
             if text and not _PROFANITY.search(text) and numbers_are_grounded(text, [claim.quote]):
                 return text
     return title
@@ -224,6 +277,7 @@ async def build_snapshot(
     collected_at: datetime,
     analyzed_at: datetime,
     failed_channels: int = 0,
+    verifier: EvidenceVerifier | None = None,
 ) -> Snapshot:
     current, previous = windows_at(t)
     pubs = [
@@ -243,6 +297,37 @@ async def build_snapshot(
         if (story is not None and pub is not None and not claim_is_noise(link.quote)
             and _supported_link(link, pub, story.title_ru, story.key_entity or "", entities)):
             links_by_story[link.story_id].append(link)
+    verification_failed = False
+    if verifier is not None:
+        semaphore = asyncio.Semaphore(8)
+
+        async def verify_one(story_id: str, links: list[StoryLink]):
+            async with semaphore:
+                return await _verify_story_links(store, verifier, stories[story_id], links)
+
+        candidates = [
+            (story_id, links)
+            for story_id, links in links_by_story.items()
+            if len({
+                by_id[link.publication_id].source_id
+                for link in links
+                if in_window(by_id[link.publication_id].published_at, current)
+            }) >= 2
+        ]
+        results = await asyncio.gather(
+            *(verify_one(story_id, links) for story_id, links in candidates),
+            return_exceptions=True,
+        )
+        for (story_id, _), result in zip(candidates, results, strict=True):
+            if isinstance(result, BudgetExceeded):
+                raise result
+            if isinstance(result, asyncio.CancelledError):
+                raise result
+            if isinstance(result, BaseException):
+                links_by_story[story_id] = []
+                verification_failed = True
+            else:
+                links_by_story[story_id] = result
     comparable = comparable_channel_ids(coverage_states)
     details: dict[str, StoryDetail] = {}
     cards: list[dict] = []
@@ -370,6 +455,7 @@ async def build_snapshot(
                     break
     processed = {pub.publication_id for pub in pubs}
     queued = set(await store.queued_ids()) & processed
+    limitations = () if not verification_failed else ("evidence_verification_failed",)
     coverage = CoverageInfo(
         channels_ok=sum(1 for state in coverage_states.values() if state.get("processed")),
         channels_failed=failed_channels,
@@ -387,9 +473,9 @@ async def build_snapshot(
         publications_queued=len(queued),
         publications_failed=sum(1 for pid in queued if True),
         comparable_channels=len(comparable),
-        limitations=()
+        limitations=limitations
         if mode == "full"
-        else (
+        else limitations + (
             ("too_few_comparable_channels",)
             if mode == "limited_no_growth_claim"
             else ("no_new_or_growing_stories",)

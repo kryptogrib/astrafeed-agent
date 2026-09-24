@@ -21,6 +21,7 @@ from astrafeed.adapters.http.app import create_app
 from astrafeed.adapters.llm.agenda import (
     OpenRouterAssigner,
     OpenRouterEmbedder,
+    OpenRouterEvidenceVerifier,
     OpenRouterExtractor,
 )
 from astrafeed.adapters.llm.budgeted_client import BudgetedClient
@@ -217,6 +218,7 @@ async def _agenda_poll(
     extractor: OpenRouterExtractor,
     embedder: OpenRouterEmbedder,
     assigner: OpenRouterAssigner,
+    evidence_verifier: OpenRouterEvidenceVerifier,
 ) -> None:
     collection_window = max(LOOKBACK, timedelta(hours=cfg.backfill_hours))
     reader = TelegramSource(client, backfill_window=collection_window)
@@ -266,6 +268,7 @@ async def _agenda_poll(
                 extractor=extractor,
                 embedder=embedder,
                 assigner=assigner,
+                evidence_verifier=evidence_verifier,
                 now=now,
                 collect=collect if collect_due else None,
                 ingest=collect_due,
@@ -319,6 +322,7 @@ def _agenda_llm(cfg: Settings, session):
         OpenRouterExtractor(client, model),
         OpenRouterEmbedder(client, cfg.openrouter.embedding_model or EMBEDDING_MODEL),
         OpenRouterAssigner(client, model),
+        OpenRouterEvidenceVerifier(client, model),
     )
 
 
@@ -331,7 +335,7 @@ async def _serve(config_path: str) -> None:
     posts = SqliteIngestionStore(session)
     agenda = SqliteAgendaStore(session)
     await agenda.ensure_search()
-    extractor, embedder, assigner = _agenda_llm(cfg, session)
+    extractor, embedder, assigner, evidence_verifier = _agenda_llm(cfg, session)
     commit = git_commit()
 
     async def agenda_http(snapshot_id: str | None = None) -> dict:
@@ -363,7 +367,7 @@ async def _serve(config_path: str) -> None:
         uvicorn.Config(app, host=cfg.api_host, port=cfg.api_port, log_config=None)
     )
     poll_task = asyncio.create_task(
-        _agenda_poll(cfg, client, posts, agenda, extractor, embedder, assigner),
+        _agenda_poll(cfg, client, posts, agenda, extractor, embedder, assigner, evidence_verifier),
         name="agenda-cycle",
     )
     try:
