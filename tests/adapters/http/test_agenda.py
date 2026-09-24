@@ -197,7 +197,12 @@ def test_agenda_page_escapes_text_and_drops_unsafe_links():
 
 
 def test_discussion_is_rendered_in_markdown_and_html_and_escaped():
-    from astrafeed.application.agenda_query import render_agenda_html, render_agenda_md
+    from astrafeed.application.agenda_query import (
+        render_agenda_html,
+        render_agenda_md,
+        render_story_html,
+        render_story_md,
+    )
 
     card = {
         "story_id": "s1",
@@ -211,8 +216,8 @@ def test_discussion_is_rendered_in_markdown_and_html_and_escaped():
         "discussion": {
             "comment_count": 214,
             "read_count": 80,
-            "points": ["Many <b>doubt</b> the hack"],
-            "highlights": ["A reader says withdrawals are stuck since Monday"],
+            "points": [],
+            "highlights": ["A reader says <b>withdrawals</b> are stuck", "Second fact"],
             "quotes": [
                 {
                     "text": "вывел всё вчера",
@@ -239,17 +244,21 @@ def test_discussion_is_rendered_in_markdown_and_html_and_escaped():
     }
 
     md = render_agenda_md(payload)
-    assert "💬 **Reader comments** (214):" in md
-    assert "- Many <b>doubt</b> the hack" in md
-    assert "- 🔎 **Notable:** A reader says withdrawals are stuck since Monday" in md
-    assert "> “withdrew everything yesterday” — [comment in @a](https://t.me/a/1?comment=5)" in md
-    # The report is English: the original stays in JSON and in the HTML details only.
-    assert "вывел" not in md
-    # The agenda card shows one comment; the story page shows them all.
-    assert "второй" not in md
+    assert "💬 **From reader comments** (214 comments, unverified):" in md
+    assert (
+        "- A reader says <b>withdrawals</b> are stuck — [comment in @a](https://t.me/a/1?comment=5)"
+    ) in md
+    # The agenda keeps facts short; the comment text is on the story page.
+    assert "withdrew everything yesterday" not in md and "вывел" not in md
 
     page = render_agenda_html(payload)
-    assert "Many &lt;b&gt;doubt&lt;/b&gt; the hack" in page
-    assert "(214)" in page and "withdrew everything yesterday" in page
-    assert "<summary>original</summary>вывел всё вчера" in page
-    assert "Notable:</b> A reader says" in page
+    assert "A reader says &lt;b&gt;withdrawals&lt;/b&gt; are stuck" in page
+    assert "javascript:" not in page and "(214 comments, unverified)" in page
+
+    story = render_story_md({**payload, "story": card})
+    assert "  > “withdrew everything yesterday”" in story and "вывел" not in story
+    story_page = render_story_html({**payload, "story": card})
+    assert "<summary>original</summary>вывел всё вчера" in story_page
+
+    silent = {**card, "discussion": {**card["discussion"], "highlights": [], "quotes": []}}
+    assert "reader comments" not in render_agenda_md({**payload, "stories": [silent]})

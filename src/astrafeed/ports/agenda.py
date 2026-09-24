@@ -54,7 +54,9 @@ class CommentReader(Protocol):
 
 
 class DiscussionSummarizer(Protocol):
-    async def summarize(self, title: str, comments: Sequence[str]) -> DiscussionDigest: ...
+    async def summarize(
+        self, title: str, posts: Sequence[str], comments: Sequence[str]
+    ) -> DiscussionDigest: ...
 
 
 class Translator(Protocol):

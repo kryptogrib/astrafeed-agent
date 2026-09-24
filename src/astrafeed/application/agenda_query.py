@@ -216,19 +216,30 @@ def _md_card_head(card: dict, heading: str) -> list[str]:
     return lines
 
 
+def _comment_facts(discussion: dict) -> list[tuple[str, dict | None]]:
+    """Reader facts paired with the comment that states each one."""
+    quotes = discussion["quotes"]
+    highlights = discussion.get("highlights", [])
+    paired = len(quotes) == len(highlights)
+    return [(fact, quotes[k] if paired else None) for k, fact in enumerate(highlights)]
+
+
 def _md_discussion(card: dict, *, full: bool) -> list[str]:
     discussion = card.get("discussion")
-    if not discussion:
+    facts = _comment_facts(discussion) if discussion else []
+    if not facts and not (discussion and discussion["points"]):
         return []
-    lines = ["", f"💬 **Reader comments** ({discussion['comment_count']}):"]
+    lines = [
+        "",
+        f"💬 **From reader comments** ({discussion['comment_count']} comments, unverified):",
+    ]
+    # Snapshots published before facts-only comments carry opinion points.
     lines += [f"- {point}" for point in discussion["points"]]
-    lines += [f"- 🔎 **Notable:** {item}" for item in discussion.get("highlights", [])]
-    for comment in discussion["quotes"][: None if full else 1]:
-        lines += [
-            "",
-            f"> “{_english(comment, 'text')}” — "
-            f"[comment in {comment['channel']}]({comment['link']})",
-        ]
+    for fact, comment in facts:
+        source = f" — [comment in {comment['channel']}]({comment['link']})" if comment else ""
+        lines.append(f"- {fact}{source}")
+        if full and comment:
+            lines.append(f"  > “{_english(comment, 'text')}”")
     return lines
 
 
@@ -347,22 +358,25 @@ def _html_card_head(card: dict, title_html: str) -> str:
 
 def _html_discussion(card: dict, *, full: bool) -> str:
     discussion = card.get("discussion")
-    if not discussion:
+    facts = _comment_facts(discussion) if discussion else []
+    if not facts and not (discussion and discussion["points"]):
         return ""
-    points = "".join(f"<li>{escape(point)}</li>" for point in discussion["points"])
-    points += "".join(
-        f'<li class="hl">🔎 <b>Notable:</b> {escape(item)}</li>'
-        for item in discussion.get("highlights", [])
-    )
-    quotes = "".join(
-        f"<blockquote>“{escape(_english(comment, 'text'))}”<cite>— "
-        f'<a href="{_url(comment["link"])}">comment in {escape(comment["channel"])}</a>'
-        f"</cite>{_html_original(comment, 'text')}</blockquote>"
-        for comment in discussion["quotes"][: None if full else 1]
-    )
+    items = "".join(f"<li>{escape(point)}</li>" for point in discussion["points"])
+    for fact, comment in facts:
+        source = quote_html = ""
+        if comment:
+            source = (
+                f' — <a href="{_url(comment["link"])}">comment in {escape(comment["channel"])}</a>'
+            )
+            if full:
+                quote_html = (
+                    f"<blockquote>“{escape(_english(comment, 'text'))}”"
+                    f"{_html_original(comment, 'text')}</blockquote>"
+                )
+        items += f"<li>{escape(fact)}{source}{quote_html}</li>"
     return (
-        f'<div class="talk"><p><b>💬 Reader comments</b> ({discussion["comment_count"]})</p>'
-        f"{f'<ul>{points}</ul>' if points else ''}{quotes}</div>"
+        f'<div class="talk"><p><b>💬 From reader comments</b> '
+        f"({discussion['comment_count']} comments, unverified)</p><ul>{items}</ul></div>"
     )
 
 

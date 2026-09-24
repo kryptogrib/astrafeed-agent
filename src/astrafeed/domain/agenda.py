@@ -375,8 +375,9 @@ class Discussion:
     read_count: int
     points: tuple[str, ...] = ()
     quotes: tuple[CommentQuote, ...] = ()
-    # Details readers add that the posts do not state: facts, first-hand
-    # experience, corrections. Unverified reader claims, shown as such.
+    # Facts readers add that the posts do not state: numbers, first-hand
+    # reports, corrections. Unverified reader claims; highlights[k] is stated
+    # by quotes[k] when both are present.
     highlights: tuple[str, ...] = ()
 
 

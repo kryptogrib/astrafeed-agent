@@ -85,12 +85,14 @@ class Summarizer:
     def __init__(self) -> None:
         self.calls: list[list[str]] = []
 
-    async def summarize(self, title, comments):
+    async def summarize(self, title, posts, comments):
         self.calls.append(list(comments))
+        self.posts = list(posts)
+        # Facts pair with comment indices; blank or out-of-range ones are dropped.
         return DiscussionDigest(
-            points=("Многие не верят во взлом", " "),
-            quote_indices=(1, 1, 99, 0),
-            highlights=(" ", "A reader says funds are stuck", "b", "c"),
+            points=(),
+            quote_indices=(0, 1, 99, 3, 4, 5),
+            highlights=(" ", "A reader reports withdrawals stuck", "x", "c", "d", "e"),
         )
 
 
@@ -115,10 +117,10 @@ async def test_discussion_is_attached_to_cards_and_details_without_touching_coun
     # Short and case-duplicate comments are dropped before the model sees them.
     assert summarizer.calls[0] == COMMENTS[:6]
     assert discussion.read_count == 6
-    assert discussion.points == ("Многие не верят во взлом",)
-    assert discussion.highlights == ("A reader says funds are stuck", "b")
-    # Duplicate and out-of-range indices from the model are ignored.
-    assert [q.text for q in discussion.quotes] == [COMMENTS[1], COMMENTS[0]]
+    assert discussion.points == ()
+    # At most three facts, each with the comment that states it.
+    assert discussion.highlights == ("A reader reports withdrawals stuck", "c", "d")
+    assert [q.text for q in discussion.quotes] == [COMMENTS[1], COMMENTS[3], COMMENTS[4]]
     assert discussion.quotes[0].link == "https://t.me/b/s2?c=1"
     # Busiest thread is read first.
     assert reader.fetched[0] == "@b/s2"
@@ -136,7 +138,7 @@ async def test_only_top_stories_are_summarized_and_quiet_threads_are_skipped():
     )
 
     top, second, quiet = snapshot.agenda
-    assert top.discussion is not None and top.discussion.points
+    assert top.discussion is not None and top.discussion.highlights
     assert second.discussion is not None
     assert second.discussion.comment_count == 7 and second.discussion.points == ()
     assert quiet.discussion is None
@@ -162,7 +164,7 @@ async def test_cached_until_ttl_or_count_change():
 @pytest.mark.asyncio
 async def test_failures_degrade_to_counts_or_plain_snapshot():
     class BrokenSummarizer:
-        async def summarize(self, title, comments):
+        async def summarize(self, title, posts, comments):
             raise RuntimeError("model down")
 
     reader = Reader({"@a": {"s1": 12}}, COMMENTS)
@@ -180,15 +182,17 @@ async def test_failures_degrade_to_counts_or_plain_snapshot():
 
 
 @pytest.mark.asyncio
-async def test_few_comments_are_counted_but_not_summarized():
+async def test_even_few_comments_are_checked_for_facts_and_opinions_are_not_shown():
     reader = Reader({"@a": {"s1": 3}}, COMMENTS[:3])
-    summarizer = Summarizer()
 
-    snapshot = await DiscussionEnricher(reader, summarizer).enrich(_snapshot("s"), T)
+    class NoFacts:
+        async def summarize(self, title, posts, comments):
+            return DiscussionDigest(points=())
 
-    assert summarizer.calls == []
+    snapshot = await DiscussionEnricher(reader, NoFacts()).enrich(_snapshot("s"), T)
+
     discussion = snapshot.agenda[0].discussion
     assert discussion.read_count == 3
-    assert discussion.points == ()
-    assert {q.text for q in discussion.quotes} == set(COMMENTS[:3])
+    # No facts means no quotes either: comments are not shown just for being there.
+    assert discussion.highlights == () and discussion.quotes == ()
     assert replace(snapshot.agenda[0], discussion=None) == _snapshot("s").agenda[0]

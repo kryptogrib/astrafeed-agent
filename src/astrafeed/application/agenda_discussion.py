@@ -25,7 +25,7 @@ from astrafeed.ports.agenda import CommentReader, DiscussionSummarizer
 _log = logging.getLogger(__name__)
 
 MIN_COMMENT_CHARS = 15
-MIN_COMMENTS_TO_SUMMARIZE = 5
+MAX_FACTS = 3
 
 
 @dataclass(frozen=True)
@@ -142,20 +142,23 @@ class DiscussionEnricher:
                 seen.add(text.casefold())
                 comments.append(CommentQuote(text[:500], comment.link or pub.link, pub.channel_ref))
         comments = comments[: self._max_comments]
-        if len(comments) < MIN_COMMENTS_TO_SUMMARIZE:
-            # Too few to summarize: let the longest comments speak for themselves.
-            longest = sorted(comments, key=lambda c: len(c.text), reverse=True)[:3]
-            return Discussion(comment_count=total, read_count=len(comments), quotes=tuple(longest))
-        digest = await self._summarizer.summarize(card.title, [c.text for c in comments])
-        quotes = tuple(
-            comments[i] for i in dict.fromkeys(digest.quote_indices) if 0 <= i < len(comments)
-        )[:3]
+        if not comments:
+            return Discussion(comment_count=total, read_count=0)
+        # The model sees what the posts say, so it keeps only what comments add.
+        posts = [claim.quote for claim in card.claims]
+        digest = await self._summarizer.summarize(card.title, posts, [c.text for c in comments])
+        # Each fact keeps the comment that states it; a fact without a valid
+        # source comment is dropped rather than shown unsourced.
+        facts: list[tuple[str, CommentQuote]] = []
+        for text, index in zip(digest.highlights, digest.quote_indices, strict=False):
+            if text.strip() and 0 <= index < len(comments):
+                facts.append((text.strip(), comments[index]))
+        facts = facts[:MAX_FACTS]
         return Discussion(
             comment_count=total,
             read_count=len(comments),
-            points=tuple(point.strip() for point in digest.points if point.strip())[:4],
-            quotes=quotes,
-            highlights=tuple(item.strip() for item in digest.highlights if item.strip())[:2],
+            quotes=tuple(quote for _, quote in facts),
+            highlights=tuple(text for text, _ in facts),
         )
 
 
