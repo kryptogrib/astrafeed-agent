@@ -349,7 +349,14 @@ async def build_snapshot(
         for claim in detail.card.claims:
             docs.append(SearchDoc(detail.card.story_id, "claim", claim.quote))
         for pub in detail.publications:
-            docs.append(SearchDoc(detail.card.story_id, "publication", pub.quote or pub.link))
+            source = by_id.get(pub.publication_id)
+            docs.append(
+                SearchDoc(
+                    detail.card.story_id,
+                    "publication",
+                    source.text if source is not None else pub.quote,
+                )
+            )
     for entity in entities.values():
         for alias in entity.aliases:
             for detail in details.values():

@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import re
 from datetime import datetime
 
 from astrafeed.domain.agenda import (
@@ -153,22 +154,46 @@ def search_in_snapshot(
     if not q:
         return [], 0
     needle = q.casefold()
-    exact: list[SearchHit] = []
+    query_terms = {_search_term(token) for token in re.findall(r"[\w]+", needle)}
+    query_terms.discard("")
+    if not query_terms:
+        return [], 0
     scored: list[SearchHit] = []
     docs_by_story: dict[str, list] = {}
     for doc in snapshot.search_docs:
         docs_by_story.setdefault(doc.story_id, []).append(doc)
     for story_id, docs in docs_by_story.items():
         title = next((doc.text for doc in docs if doc.kind == "title"), story_id)
-        if title.casefold() == needle:
-            exact.append(SearchHit(story_id, title, (title,), 1.0))
+        matches = []
+        found: set[str] = set()
+        score = 0.0
+        for doc in docs:
+            terms = {_search_term(token) for token in re.findall(r"[\w]+", doc.text.casefold())}
+            overlap = terms & query_terms
+            if overlap:
+                found.update(overlap)
+                weight = {"title": 10.0, "entity": 4.0, "alias": 3.0,
+                          "claim": 2.0, "publication": 1.0}[doc.kind]
+                score += weight * len(overlap)
+                if len(matches) < 3:
+                    matches.append(doc.text[:250])
+        if len(found) < min(2, len(query_terms)):
             continue
-        matched = tuple(doc.text for doc in docs if needle in doc.text.casefold())
-        if matched:
-            scored.append(SearchHit(story_id, title, matched[:3], float(len(matched))))
+        score += 100.0 * len(found) / len(query_terms)
+        if title.casefold() == needle:
+            score += 1000.0
+        elif needle in title.casefold():
+            score += 20.0
+        scored.append(SearchHit(story_id, title, tuple(matches), score))
     scored.sort(key=lambda hit: (-hit.score, hit.story_id))
-    hits = exact + scored
-    return hits[offset : offset + limit], len(hits)
+    return scored[offset : offset + limit], len(scored)
+
+
+def _search_term(token: str) -> str:
+    """Small deterministic Russian inflection fold for evidence search."""
+    if re.fullmatch(r"[а-яё]+", token):
+        return token[:4] if len(token) >= 5 else token
+    return token
 
 
 async def load_snapshot(store: AgendaStore, snapshot_id: str | None) -> Snapshot:
