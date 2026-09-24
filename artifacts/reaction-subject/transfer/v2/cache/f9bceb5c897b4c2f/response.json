@@ -1,0 +1,46 @@
+{
+ "id": "gen-1790251669-i5WWGrbcA10YjxZy0tHb",
+ "object": "chat.completion",
+ "created": 1790251669,
+ "model": "deepseek/deepseek-v4-flash",
+ "provider": "Venice",
+ "system_fingerprint": null,
+ "service_tier": "default",
+ "choices": [
+  {
+   "index": 0,
+   "logprobs": null,
+   "finish_reason": "stop",
+   "native_finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "content": "{\"target\": \"other_subject\", \"target_id\": null, \"comment_fragment\": \"А че со звуком, на максимальной громкости ели слышно\", \"context_fragment\": \"\", \"why\": \"Comment complains about audio quality, not about Zcash or post content.\"}",
+    "refusal": null,
+    "reasoning": null
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 873,
+  "completion_tokens": 64,
+  "total_tokens": 937,
+  "cost": 7.69398e-05,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 256,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 7.69398e-05,
+   "upstream_inference_prompt_cost": 6.46198e-05,
+   "upstream_inference_completions_cost": 1.232e-05
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

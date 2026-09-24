@@ -1,0 +1,46 @@
+{
+ "id": "gen-1790251443-FJATGGdF4XtzhgjKF3Zc",
+ "object": "chat.completion",
+ "created": 1790251443,
+ "model": "deepseek/deepseek-v4-flash",
+ "provider": "DeepInfra",
+ "system_fingerprint": null,
+ "service_tier": "default",
+ "choices": [
+  {
+   "index": 0,
+   "logprobs": null,
+   "finish_reason": "stop",
+   "native_finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "content": "{\"target\": \"other_subject\", \"target_id\": null, \"comment_fragment\": \"Факич за речью не следит своей, такой себе пример\", \"context_fragment\": \"Факич сумки затарил, включая Arbitrum\", \"why\": \"Comment criticizes a person mentioned in the post, not the topic Ethereum.\"}",
+    "refusal": null,
+    "reasoning": null
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 1112,
+  "completion_tokens": 80,
+  "total_tokens": 1192,
+  "cost": 9.6048e-05,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 256,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 9.6048e-05,
+   "upstream_inference_prompt_cost": 8.1648e-05,
+   "upstream_inference_completions_cost": 1.44e-05
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

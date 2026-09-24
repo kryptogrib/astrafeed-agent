@@ -238,14 +238,14 @@ def comments(rows: list[dict]):
                 yield th, c
 
 
-def run_llm(db: str, *, pay: bool, max_usd: float) -> None:
+def run_llm(db: str, *, pay: bool, max_usd: float, src: Path = OUT, dst: Path = OUT2) -> None:
     from news_pulse_load import db_md5
 
-    rows = _read(OUT / "threads.jsonl")
+    rows = _read(src / "threads.jsonl")
     for th, c in comments(rows):
         bad = leaks(th, c, context_for(th, c))
         assert not bad, (c["id"], bad)
-    caller = Caller(db_md5(db), pay=pay, max_usd=max_usd, cache=OUT2 / "cache")
+    caller = Caller(db_md5(db), pay=pay, max_usd=max_usd, cache=dst / "cache")
     first, second = [], []
     t0 = time.time()
     for th, c in comments(rows):
@@ -264,9 +264,9 @@ def run_llm(db: str, *, pay: bool, max_usd: float) -> None:
             second.append(
                 {"id": c["id"], "verdict": verdict, "cache_miss": vgot is None, "raw": vgot}
             )
-    OUT2.mkdir(parents=True, exist_ok=True)
-    _jsonl(OUT2 / "llm.jsonl", first)
-    _jsonl(OUT2 / "verify.jsonl", second)
+    dst.mkdir(parents=True, exist_ok=True)
+    _jsonl(dst / "llm.jsonl", first)
+    _jsonl(dst / "verify.jsonl", second)
     run = {
         "model": caller.model,
         "schemas": [SCHEMA, VERIFY_SCHEMA],
@@ -279,15 +279,15 @@ def run_llm(db: str, *, pay: bool, max_usd: float) -> None:
         "missing_estimate_usd": round(sum(m["usd"] for m in caller.misses), 5),
         "note": "verify misses appear only after the first pass for that comment is cached",
     }
-    (OUT2 / "run.json").write_text(
+    (dst / "run.json").write_text(
         json.dumps(run, ensure_ascii=False, indent=1) + "\n", encoding="utf-8"
     )
     print(run)
 
 
-def estimate() -> None:
+def estimate(src: Path = OUT) -> None:
     """Upper bound: first pass for every comment, verifier for every comment."""
-    rows = _read(OUT / "threads.jsonl")
+    rows = _read(src / "threads.jsonl")
     n = n_in = v_in = 0
     for th, c in comments(rows):
         p = context_for(th, c)
@@ -303,9 +303,9 @@ def estimate() -> None:
     )
 
 
-def v2_arms() -> dict[str, dict[str, dict]]:
-    first = {r["id"]: r for r in _read(OUT2 / "llm.jsonl")}
-    verdicts = {r["id"]: r["verdict"] for r in _read(OUT2 / "verify.jsonl")}
+def v2_arms(dst: Path = OUT2) -> dict[str, dict[str, dict]]:
+    first = {r["id"]: r for r in _read(dst / "llm.jsonl")}
+    verdicts = {r["id"]: r["verdict"] for r in _read(dst / "verify.jsonl")}
     ctx = first
     with_id = {cid: id_contract(r) for cid, r in ctx.items()}
     # the id contract comes first: only links naming an event of this post reach the verifier

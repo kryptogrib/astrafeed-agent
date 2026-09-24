@@ -4,9 +4,13 @@ The snapshot is described by artifacts/reaction-subject/transfer/snapshot.json (
 window, cutoff, coverage). Every thread here is test: nothing from these channels tunes anything.
 
     python3 docs/research/reaction_subject_transfer.py sample --db astrafeed-transfer.db
-    python3 docs/research/reaction_subject_v2.py estimate --set transfer
-    python3 docs/research/reaction_subject_v2.py llm --set transfer --db astrafeed-transfer.db --pay
-    python3 docs/research/reaction_subject_v2.py eval --set transfer
+    python3 docs/research/reaction_subject_transfer.py estimate
+    python3 docs/research/reaction_subject_transfer.py llm --db astrafeed-transfer.db [--pay --max-usd X]
+    python3 docs/research/reaction_subject_transfer.py eval
+
+llm and eval run reaction_subject_v2 unchanged (prompt, id contract, verifier) on this sample and
+write to artifacts/reaction-subject/transfer/v2. Labels are preliminary: disputed ones and cut chains
+are reported as separate slices.
 
 The sample reuses v1's selection unchanged (MAX_PER_THREAD comments by url hash, one topic per post).
 Per example it records `missing_parent` (a reply whose parent is not in the thread, so its chain is
@@ -39,6 +43,7 @@ from reaction_subject import (  # noqa: E402
 )
 
 OUT_T = OUT / "transfer"
+OUT_TV2 = OUT_T / "v2"
 MANIFEST = OUT_T / "snapshot.json"
 MIN_DUP_CHARS = 30
 DUP_JACCARD = 0.8
@@ -255,14 +260,139 @@ def sample(db: str) -> None:
     print(json.dumps(summary, ensure_ascii=False))
 
 
+SLICES = {
+    "all": lambda g: True,
+    "undisputed": lambda g: not g["disputed"],
+    "disputed": lambda g: g["disputed"],
+    "chain_complete": lambda g: not g["missing_parent"] and not g["nontext_parent"],
+    "missing_parent": lambda g: g["missing_parent"],
+    "nontext_parent": lambda g: g["nontext_parent"],
+    "news": lambda g: g["kind"] == "news",
+    "topic_shift": lambda g: g["kind"] == "topic_shift",
+}
+COLS = [
+    "n",
+    "answered",
+    "cache_miss",
+    "unprocessed",
+    "claimed",
+    "claim_correct",
+    "claim_wrong",
+    "false_event",
+    "abstained",
+    "status_no_id",
+    "status_rejected",
+    "coverage",
+    "recall",
+]
+
+
+def evaluate() -> None:
+    from reaction_subject_v2 import score, v2_arms
+
+    labels = [r for r in _read(OUT_T / "labels.jsonl") if r["target"] != "skip"]
+    arms = {"baseline": {r["id"]: {**r, "status": "ok"} for r in _read(OUT_T / "baseline.jsonl")}, **v2_arms(OUT_TV2)}
+    result = {
+        part: {name: {"n": len(gold), **score(p, gold)} for name, p in arms.items()}
+        for part, keep in SLICES.items()
+        for gold in [[g for g in labels if keep(g)]]
+    }
+    gold_n = Counter(g["target"] for g in labels)
+    lines = [
+        "# Reaction subject v2 on transfer channels — generated tables",
+        "",
+        "New channels, never used for dev or prompts. Labels are preliminary and not human-checked;",
+        f"{sum(g['disputed'] for g in labels)} of {len(labels)} are disputed. Gold targets: {dict(gold_n)}.",
+        "",
+    ]
+    for part in SLICES:
+        lines += [f"## {part}", "", "| arm | " + " | ".join(COLS) + " |", "|---" * (len(COLS) + 1) + "|"]
+        lines += [f"| {a} | " + " | ".join(str(sc.get(c, 0)) for c in COLS) + " |" for a, sc in result[part].items()]
+        lines.append("")
+    # event and thesis apart: an event link needs an id of this post, a thesis here has no id (none extracted)
+    lines += [
+        "## event и thesis отдельно (all)",
+        "",
+        "| arm | event: верно / заявлено | event: найдено / в эталоне | ложных event | thesis: класс заявлен / в эталоне |",
+        "|---|---|---|---|---|",
+    ]
+    for a, sc in result["all"].items():
+        lines.append(
+            f"| {a} | {sc.get('pred_event_ok', 0)}/{sc.get('pred_event', 0)} | "
+            f"{sc.get('gold_event_found', 0)}/{sc.get('gold_event', 0)} | {sc.get('false_event', 0)} | "
+            f"{sc.get('thesis_class_found', 0)}/{sc.get('gold_author_thesis', 0)} |"
+        )
+    lines.append("")
+    lines += _availability(arms, labels)
+    run = json.loads((OUT_TV2 / "run.json").read_text()) if (OUT_TV2 / "run.json").exists() else {}
+    lines += [f"Run: {run}", ""]
+    (OUT_TV2 / "eval.json").write_text(json.dumps(result, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+    (OUT_TV2 / "eval.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
+    print("\n".join(lines))
+
+
+def _availability(arms: dict[str, dict[str, dict]], labels: list[dict]) -> list[str]:
+    """Separates a missing candidate (extraction) from a wrong link (linker) and gives end-to-end recall."""
+    groups = {
+        "event, id есть в посте": lambda g: g["target"] == "event" and g["target_id"],
+        "event, событие не извлечено": lambda g: g["target"] == "event" and not g["target_id"],
+        "thesis, тезис не извлечён": lambda g: g["target"] == "author_thesis" and not g["target_id"],
+    }
+    lines = [
+        "## Доступность цели и качество связи",
+        "",
+        "Без извлечённого id связь по контракту невозможна: для таких меток верный ответ системы — "
+        "воздержание (unclear/no_id), а промах — это пробел извлечения, не связывателя.",
+        "",
+        "| arm | группа | в эталоне | связано верно | связано с другой целью | воздержание | прочие статусы |",
+        "|---|---|---|---|---|---|---|",
+    ]
+    for name, preds in arms.items():
+        for label, keep in groups.items():
+            gold = [g for g in labels if keep(g)]
+            c: Counter = Counter()
+            for g in gold:
+                pr = preds.get(g["id"]) or {"target": None, "status": "cache_miss"}
+                if pr.get("status", "ok") not in ("ok", "no_id", "rejected"):
+                    c["other"] += 1
+                elif pr["target"] in (None, "unclear"):
+                    c["abstain"] += 1
+                elif pr["target"] == g["target"] and pr.get("target_id") == g["target_id"]:
+                    c["ok"] += 1
+                else:
+                    c["wrong"] += 1
+            lines.append(
+                f"| {name} | {label} | {len(gold)} | {c['ok']} | {c['wrong']} | {c['abstain']} | {c['other']} |"
+            )
+    lines.append("")
+    return lines
+
+
 def main() -> None:
     ap = argparse.ArgumentParser()
     sub = ap.add_subparsers(dest="cmd", required=True)
     s = sub.add_parser("sample")
     s.add_argument("--db", default="astrafeed-transfer.db")
+    sub.add_parser("estimate")
+    r = sub.add_parser("llm")
+    r.add_argument("--db", default="astrafeed-transfer.db")
+    r.add_argument("--pay", action="store_true", help="allow paid calls on cache miss (needs user approval)")
+    r.add_argument("--max-usd", type=float, default=0.10)
+    sub.add_parser("eval")
     args = ap.parse_args()
     if args.cmd == "sample":
         sample(args.db)
+    elif args.cmd == "estimate":
+        from reaction_subject_v2 import estimate
+
+        estimate(OUT_T)
+    elif args.cmd == "llm":
+        from reaction_subject_v2 import run_llm
+
+        manifest(args.db)
+        run_llm(args.db, pay=args.pay, max_usd=args.max_usd, src=OUT_T, dst=OUT_TV2)
+    elif args.cmd == "eval":
+        evaluate()
 
 
 if __name__ == "__main__":

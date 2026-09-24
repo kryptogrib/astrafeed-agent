@@ -1,0 +1,46 @@
+{
+ "id": "gen-1790251496-I3fGLykm8ADVxe67eeC5",
+ "object": "chat.completion",
+ "created": 1790251496,
+ "model": "deepseek/deepseek-v4-flash",
+ "provider": "SiliconFlow",
+ "system_fingerprint": null,
+ "service_tier": null,
+ "choices": [
+  {
+   "index": 0,
+   "logprobs": null,
+   "finish_reason": "stop",
+   "native_finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "content": "{\"target\": \"other_subject\", \"target_id\": null, \"comment_fragment\": \"jumper токеномикой поделился\", \"context_fragment\": \"\", \"why\": \"Comment discusses Jumper tokenomics, unrelated to Pendle post or Ethereum topic.\"}",
+    "refusal": null,
+    "reasoning": null
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 1576,
+  "completion_tokens": 57,
+  "total_tokens": 1633,
+  "cost": 0.00022084,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.00022084,
+   "upstream_inference_prompt_cost": 0.00020488,
+   "upstream_inference_completions_cost": 1.596e-05
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

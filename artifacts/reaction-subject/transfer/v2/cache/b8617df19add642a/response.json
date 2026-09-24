@@ -1,0 +1,46 @@
+{
+ "id": "gen-1790251505-AhFNYZTbqWu1fLlHM2vL",
+ "object": "chat.completion",
+ "created": 1790251505,
+ "model": "deepseek/deepseek-v4-flash",
+ "provider": "Venice",
+ "system_fingerprint": null,
+ "service_tier": "default",
+ "choices": [
+  {
+   "index": 0,
+   "logprobs": null,
+   "finish_reason": "stop",
+   "native_finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "content": "{\"target\": \"other_subject\", \"target_id\": null, \"comment_fragment\": \"Какой ланчпад ожидаем основным?\", \"context_fragment\": \"\", \"why\": \"Comment asks about a launchpad, not about the mainnet launch or a specific event.\"}",
+    "refusal": null,
+    "reasoning": null
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 1651,
+  "completion_tokens": 62,
+  "total_tokens": 1713,
+  "cost": 0.0001517096,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 256,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.0001517096,
+   "upstream_inference_prompt_cost": 0.0001397746,
+   "upstream_inference_completions_cost": 1.1935e-05
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

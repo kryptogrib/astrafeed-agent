@@ -1,0 +1,46 @@
+{
+ "id": "gen-1790251614-XWNVVewt1ByLfdJWSVPC",
+ "object": "chat.completion",
+ "created": 1790251614,
+ "model": "deepseek/deepseek-v4-flash",
+ "provider": "DeepInfra",
+ "system_fingerprint": null,
+ "service_tier": "default",
+ "choices": [
+  {
+   "index": 0,
+   "logprobs": null,
+   "finish_reason": "stop",
+   "native_finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "content": "{\"target\": \"other_subject\", \"target_id\": null, \"comment_fragment\": \"просто удалили посты старые в твиттере\", \"context_fragment\": \"\", \"why\": \"Comment refers to Twitter post deletion, not post content.\"}",
+    "refusal": null,
+    "reasoning": null
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 1543,
+  "completion_tokens": 60,
+  "total_tokens": 1603,
+  "cost": 0.000131238,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 256,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.000131238,
+   "upstream_inference_prompt_cost": 0.000120438,
+   "upstream_inference_completions_cost": 1.08e-05
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}
