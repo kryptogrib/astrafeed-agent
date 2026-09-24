@@ -41,7 +41,7 @@ class DiscussionEnricher:
         reader: CommentReader,
         summarizer: DiscussionSummarizer,
         *,
-        summarize_top: int = 5,
+        summarize_top: int = 10,
         threads_per_story: int = 3,
         comments_per_thread: int = 40,
         max_comments: int = 80,
