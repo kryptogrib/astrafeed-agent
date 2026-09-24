@@ -254,3 +254,33 @@ def test_agenda_shows_one_retelling_of_same_entity_pair_and_event():
     ]
     selected, _ = select_agenda(cards, comparable_count=4)
     assert [item["story_id"] for item in selected] == ["portfolios", "different-event"]
+
+
+def test_agenda_hides_overlapping_publication_for_same_close_entity_pair():
+    from astrafeed.domain.agenda import select_agenda
+
+    first = datetime(2026, 9, 24, 14, 19, tzinfo=UTC)
+    cards = [
+        {
+            "story_id": "lawsuit",
+            "title": "Штат Нью-Йорк подал иск против Polymarket",
+            "entities": ("New York State", "Polymarket", "Bloomberg"),
+            "first_seen": first,
+            "source_signature": ("18:96927", "17:386238"),
+            "growth": 3,
+            "current_channels": 3,
+            "eligible": True,
+        },
+        {
+            "story_id": "illegal-gambling",
+            "title": "Нью-Йорк подал в суд на Polymarket за незаконную игорную деятельность",
+            "entities": ("New York State", "Polymarket", "Bloomberg"),
+            "first_seen": first + timedelta(minutes=1),
+            "source_signature": ("18:96927", "16:1044989"),
+            "growth": 2,
+            "current_channels": 2,
+            "eligible": True,
+        },
+    ]
+    selected, _ = select_agenda(cards, comparable_count=4)
+    assert [item["story_id"] for item in selected] == ["lawsuit"]
