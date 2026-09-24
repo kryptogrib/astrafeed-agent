@@ -249,7 +249,8 @@ async def build_snapshot(
                 "current_channels": card.current_channels,
                 "previous_channels": card.previous_channels,
                 "freshness": card.freshness,
-                "eligible": story.title_ru.strip().casefold() not in {"", "сюжет"},
+                "eligible": story.title_ru.strip().casefold() not in {"", "сюжет"}
+                and numbers_are_grounded(story.title_ru, [claim.quote for claim in claim_cards]),
                 "card": card,
             }
         )

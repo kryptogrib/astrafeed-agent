@@ -11,7 +11,7 @@ from collections.abc import Awaitable, Callable, Sequence
 from dataclasses import replace
 from datetime import UTC, datetime, timedelta
 from time import perf_counter
-from typing import Protocol
+from typing import Literal, Protocol
 
 from astrafeed.application.agenda_assign import assign_speculative_batch
 from astrafeed.application.agenda_extract import analyze_publication
@@ -114,6 +114,8 @@ async def run_cycle(
     collect: CollectFn | None = None,
     extract_concurrency: int = 12,
     assign_concurrency: int = 16,
+    assignment_mode: Literal["auto", "strict", "relaxed"] = "auto",
+    merge_cosine_threshold: float = 0.92,
     collection_window: timedelta = LOOKBACK,
     partial_snapshot_every: int = 200,
     partial_snapshot_seconds: float = 600.0,
@@ -122,6 +124,8 @@ async def run_cycle(
         raise ValueError("extract_concurrency must be positive")
     if assign_concurrency < 1:
         raise ValueError("assign_concurrency must be positive")
+    if assignment_mode not in {"auto", "strict", "relaxed"}:
+        raise ValueError("invalid assignment_mode")
     if collection_window < LOOKBACK:
         raise ValueError("collection_window must cover both comparison windows")
     if partial_snapshot_every < 1 or partial_snapshot_seconds <= 0:
@@ -149,6 +153,9 @@ async def run_cycle(
             if pub.publication_id in queued and pub.source_id in source_set
         ]
         pending.sort(key=lambda pub: (pub.published_at, pub.publication_id))
+        strict_assignment = assignment_mode == "strict" or (
+            assignment_mode == "auto" and len(pending) < 128
+        )
         semaphore = asyncio.Semaphore(extract_concurrency)
         reuse_locks: dict[str, asyncio.Lock] = {}
         extract_seconds = 0.0
@@ -194,6 +201,8 @@ async def run_cycle(
                             assigner,
                             jobs,
                             concurrency=assign_concurrency,
+                            strict=strict_assignment,
+                            merge_cosine_threshold=merge_cosine_threshold,
                         )
                         speculative_reused += reused
                         speculative_retried += retried
@@ -255,7 +264,7 @@ async def run_cycle(
             _log.info(
                 "agenda analyze posts=%d extract_seconds=%.1f assign_seconds=%.1f "
                 "wall_seconds=%.1f extract_concurrency=%d assign_concurrency=%d "
-                "reused=%d retried=%d",
+                "reused=%d retried=%d mode=%s",
                 len(pending),
                 extract_seconds,
                 assign_seconds,
@@ -264,6 +273,7 @@ async def run_cycle(
                 assign_concurrency,
                 speculative_reused,
                 speculative_retried,
+                "strict" if strict_assignment else "relaxed",
             )
 
         finished_at = now + timedelta(seconds=perf_counter() - cycle_started)

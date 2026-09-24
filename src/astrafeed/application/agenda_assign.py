@@ -6,7 +6,7 @@ import asyncio
 import hashlib
 import logging
 from collections.abc import Sequence
-from dataclasses import dataclass
+from dataclasses import dataclass, replace
 from time import perf_counter
 from typing import Literal
 
@@ -166,6 +166,7 @@ class PreparedFragment:
     indexed: IndexedFragment
     context: AssignmentContext
     assignment: object | None
+    deferred: bool = False
 
 
 @dataclass(frozen=True)
@@ -270,13 +271,18 @@ async def _apply_decision(
     indexed: IndexedFragment,
     context: AssignmentContext,
     assignment: object,
+    story_override: Story | None = None,
 ) -> AssignmentEffect:
-    story = _resolve_story(assignment, list(context.stories), publication)
+    story = story_override or _resolve_story(assignment, list(context.stories), publication)
     if story is None:
         if getattr(assignment, "story_decision", None) != "ambiguous":
             await store.enqueue(publication.publication_id, "assign_error")
             return AssignmentEffect((), None, None, (), None, valid=False)
         return AssignmentEffect((), None, None, (), None)
+    if not story.key_entity:
+        key_entity = _assignment_entity_key(assignment, indexed, context.entities)
+        if key_entity:
+            story = replace(story, key_entity=key_entity)
     chosen_entities = _apply_entities(list(context.entities), assignment)
     for entity in chosen_entities:
         await store.save_entity(entity)
@@ -308,6 +314,22 @@ async def _apply_decision(
         await store.save_link(link)
     await store.index_fragment(indexed)
     return AssignmentEffect(tuple(chosen_entities), story, event, new_links, indexed)
+
+
+def _assignment_entity_key(
+    assignment: object, indexed: IndexedFragment, entities: Sequence[Entity]
+) -> str | None:
+    by_id = {entity.entity_id: entity.canonical_name for entity in entities}
+    names = {
+        (by_id.get(entity_id) or canonical or surface).strip().casefold()
+        for surface, _, entity_id, canonical in getattr(assignment, "entity_decisions", ())
+        if surface.strip() or canonical.strip()
+    }
+    if not names:
+        names = {
+            surface.strip().casefold() for surface in indexed.entity_surfaces if surface.strip()
+        }
+    return next(iter(names)) if len(names) == 1 else None
 
 
 async def assign_publication(
@@ -346,6 +368,8 @@ async def assign_speculative_batch(
     jobs: Sequence[tuple[PublicationVersion, ExtractionResult]],
     *,
     concurrency: int = 16,
+    strict: bool = True,
+    merge_cosine_threshold: float = 0.92,
 ) -> tuple[int, int]:
     """Overlap independent model calls, then validate and commit in time order.
 
@@ -356,6 +380,8 @@ async def assign_speculative_batch(
         return 0, 0
     if concurrency < 1:
         raise ValueError("concurrency must be positive")
+    if not 0 <= merge_cosine_threshold <= 1:
+        raise ValueError("merge_cosine_threshold must be in [0, 1]")
     batch_started = perf_counter()
     embed_seconds = 0.0
     context_seconds = 0.0
@@ -373,23 +399,91 @@ async def assign_speculative_batch(
     frozen_entities = tuple(entities)
     frozen_stories = tuple(stories)
     frozen_events = tuple(events)
+    indexed_by_key = {(item.publication_id, item.fragment_index): item for item in pool}
+    entity_names = {entity.entity_id: entity.canonical_name.casefold() for entity in entities}
+    story_keys: dict[str, set[str]] = {
+        story.story_id: {story.key_entity} for story in stories if story.key_entity
+    }
+    story_vector_sums: dict[str, list[float]] = {}
+    seen_story_fragments: set[tuple[str, str, int]] = set()
+    for link in links:
+        link_keys = {entity_names[eid] for eid in link.entity_ids if eid in entity_names}
+        if len(link_keys) == 1:
+            story_keys.setdefault(link.story_id, set()).update(link_keys)
+        link_key = (link.story_id, link.publication_id, link.fragment_index)
+        indexed = indexed_by_key.get((link.publication_id, link.fragment_index))
+        if indexed is not None and indexed.vector and link_key not in seen_story_fragments:
+            vector_sum = story_vector_sums.setdefault(link.story_id, [0.0] * len(indexed.vector))
+            if len(vector_sum) == len(indexed.vector):
+                for offset, vector_value in enumerate(indexed.vector):
+                    vector_sum[offset] += vector_value
+            seen_story_fragments.add(link_key)
     semaphore = asyncio.Semaphore(concurrency)
-    embedding_locks: dict[str, asyncio.Lock] = {}
-
-    async def prepare(
-        publication: PublicationVersion, extraction: ExtractionResult
-    ) -> list[PreparedFragment]:
-        nonlocal embed_seconds, context_seconds, model_seconds
-        prepared: list[PreparedFragment] = []
+    embed_started = perf_counter()
+    inputs: dict[str, str] = {}
+    for _, extraction in jobs:
+        for fragment in extraction.fragments:
+            if fragment.claims:
+                surfaces = [entity.surface for entity in fragment.entities]
+                value = embedding_input(fragment.text, surfaces)
+                inputs.setdefault(embedding_cache_key(value), value)
+    vectors: dict[str, list[float]] = {}
+    missing: list[tuple[str, str]] = []
+    for key, value in inputs.items():
+        cached = await store.get_embedding(key)
+        if cached is None:
+            missing.append((key, value))
+        else:
+            vectors[key] = cached
+    for offset in range(0, len(missing), 64):
+        chunk = missing[offset : offset + 64]
+        try:
+            embedded = await embedder.embed([value for _, value in chunk])
+            if len(embedded) != len(chunk):
+                raise ValueError("Embedding response did not cover the batch")
+        except BudgetExceeded:
+            raise
+        except Exception:
+            for publication, _ in jobs:
+                await store.enqueue(publication.publication_id, "embed_error")
+            raise
+        for (key, _), vector in zip(chunk, embedded, strict=True):
+            vectors[key] = list(vector)
+            await store.save_embedding(key, vectors[key])
+    indexed_jobs: list[list[tuple[int, Fragment, IndexedFragment]]] = []
+    for publication, extraction in jobs:
+        indexed_fragments = []
         for index, fragment in enumerate(extraction.fragments):
             if not fragment.claims:
                 continue
             surfaces = [entity.surface for entity in fragment.entities]
             key = embedding_cache_key(embedding_input(fragment.text, surfaces))
-            started = perf_counter()
-            async with embedding_locks.setdefault(key, asyncio.Lock()), semaphore:
-                indexed = await _indexed_for(store, embedder, publication, index, fragment)
-            embed_seconds += perf_counter() - started
+            indexed_fragments.append(
+                (
+                    index,
+                    fragment,
+                    IndexedFragment(
+                        publication_id=publication.publication_id,
+                        published_at=publication.published_at,
+                        fragment_index=index,
+                        text=fragment.text,
+                        entity_surfaces=tuple(surfaces),
+                        claim_text=_claim_text(fragment),
+                        vector=vectors[key],
+                    ),
+                )
+            )
+        indexed_jobs.append(indexed_fragments)
+    embed_seconds = perf_counter() - embed_started
+
+    async def prepare(
+        indexed_fragments: list[tuple[int, Fragment, IndexedFragment]],
+        prior: tuple[IndexedFragment, ...],
+    ) -> list[PreparedFragment]:
+        nonlocal context_seconds, model_seconds
+        prepared: list[PreparedFragment] = []
+        prior_surfaces = {surface.casefold() for item in prior for surface in item.entity_surfaces}
+        for index, fragment, indexed in indexed_fragments:
             started = perf_counter()
             context = _context_from_state(
                 indexed,
@@ -399,7 +493,27 @@ async def assign_speculative_batch(
                 frozen_stories,
                 frozen_events,
             )
+            possible = (
+                _context_from_state(
+                    indexed,
+                    (*frozen_pool, *prior),
+                    frozen_links,
+                    frozen_entities,
+                    frozen_stories,
+                    frozen_events,
+                )
+                if strict
+                else context
+            )
             context_seconds += perf_counter() - started
+            if strict and (
+                possible.candidates != context.candidates
+                or prior_surfaces.intersection(
+                    surface.casefold() for surface in indexed.entity_surfaces
+                )
+            ):
+                prepared.append(PreparedFragment(index, fragment, indexed, context, None, True))
+                continue
             started = perf_counter()
             try:
                 async with semaphore:
@@ -415,26 +529,38 @@ async def assign_speculative_batch(
                 break
         return prepared
 
-    tasks = [asyncio.create_task(prepare(pub, extraction)) for pub, extraction in jobs]
+    prior: list[IndexedFragment] = []
+    decision_tasks = []
+    for indexed_fragments in indexed_jobs:
+        decision_tasks.append(asyncio.create_task(prepare(indexed_fragments, tuple(prior))))
+        prior.extend(indexed for _, _, indexed in indexed_fragments)
     try:
-        proposals = await asyncio.gather(*tasks)
+        proposals = await asyncio.gather(*decision_tasks)
     finally:
-        for task in tasks:
-            if not task.done():
-                task.cancel()
-        await asyncio.gather(*tasks, return_exceptions=True)
+        for decision_task in decision_tasks:
+            if not decision_task.done():
+                decision_task.cancel()
+        await asyncio.gather(*decision_tasks, return_exceptions=True)
 
     reused = 0
     retried = 0
+    deferred = 0
     for (publication, _), prepared in zip(jobs, proposals, strict=True):
         failed = False
         for proposal in prepared:
             started = perf_counter()
-            context = _context_from_state(proposal.indexed, pool, links, entities, stories, events)
+            context = (
+                _context_from_state(proposal.indexed, pool, links, entities, stories, events)
+                if strict
+                else proposal.context
+            )
             context_seconds += perf_counter() - started
             assignment = proposal.assignment
-            if context != proposal.context:
-                retried += 1
+            if strict and (proposal.deferred or context != proposal.context):
+                if proposal.deferred:
+                    deferred += 1
+                else:
+                    retried += 1
                 started = perf_counter()
                 try:
                     assignment = await _decide(assigner, proposal.indexed, context)
@@ -450,6 +576,33 @@ async def assign_speculative_batch(
                 await store.enqueue(publication.publication_id, "assign_error")
                 failed = True
                 break
+            key_entity = _assignment_entity_key(assignment, proposal.indexed, entities)
+            story_override = None
+            if not strict and getattr(assignment, "story_decision", None) == "new":
+                title = getattr(assignment, "title_ru", "").strip()
+                if title and title.casefold() != "сюжет":
+                    story_override = next(
+                        (story for story in stories if story.story_id == _stable_id("st", title)),
+                        None,
+                    )
+            if (
+                not strict
+                and getattr(assignment, "story_decision", None) == "new"
+                and story_override is None
+                and key_entity
+                and proposal.indexed.vector
+            ):
+                matched = [
+                    (cosine_similarity(proposal.indexed.vector, centroid_sum), story)
+                    for story in stories
+                    if story_keys.get(story.story_id) == {key_entity}
+                    and (centroid_sum := story_vector_sums.get(story.story_id))
+                ]
+                matched = [pair for pair in matched if pair[0] >= merge_cosine_threshold]
+                if matched:
+                    story_override = sorted(matched, key=lambda pair: (-pair[0], pair[1].story_id))[
+                        0
+                    ][1]
             started = perf_counter()
             effect = await _apply_decision(
                 store,
@@ -459,6 +612,7 @@ async def assign_speculative_batch(
                 proposal.indexed,
                 context,
                 assignment,
+                story_override,
             )
             commit_seconds += perf_counter() - started
             if not effect.valid:
@@ -470,6 +624,15 @@ async def assign_speculative_batch(
             if effect.story is not None:
                 stories = [item for item in stories if item.story_id != effect.story.story_id]
                 stories.append(effect.story)
+                if key_entity:
+                    story_keys.setdefault(effect.story.story_id, set()).add(key_entity)
+                if proposal.indexed.vector:
+                    vector_sum = story_vector_sums.setdefault(
+                        effect.story.story_id, [0.0] * len(proposal.indexed.vector)
+                    )
+                    if len(vector_sum) == len(proposal.indexed.vector):
+                        for offset, vector_value in enumerate(proposal.indexed.vector):
+                            vector_sum[offset] += vector_value
             if effect.event is not None:
                 events = [item for item in events if item.event_id != effect.event.event_id]
                 events.append(effect.event)
@@ -479,12 +642,15 @@ async def assign_speculative_batch(
         if not failed:
             await store.mark_processed(publication.publication_id)
     _log.info(
-        "agenda assign batch posts=%d reused=%d retried=%d load_seconds=%.1f "
+        "agenda assign batch mode=%s posts=%d reused=%d retried=%d deferred=%d "
+        "load_seconds=%.1f "
         "embed_seconds=%.1f context_seconds=%.1f model_seconds=%.1f "
         "commit_seconds=%.1f wall_seconds=%.1f",
+        "strict" if strict else "relaxed",
         len(jobs),
         reused,
         retried,
+        deferred,
         load_seconds,
         embed_seconds,
         context_seconds,
@@ -508,6 +674,9 @@ def _resolve_story(
     if title.casefold() in {"", "сюжет"}:
         return None
     story_id = assignment.story_id or _stable_id("st", title)
+    for story in stories:
+        if story.story_id == story_id:
+            return story
     return Story(
         story_id=story_id,
         title_ru=title,

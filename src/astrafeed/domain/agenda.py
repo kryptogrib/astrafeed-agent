@@ -270,6 +270,7 @@ class Story:
     title_ru: str
     boundary: str
     first_seen: datetime
+    key_entity: str = ""
 
 
 @dataclass(frozen=True)

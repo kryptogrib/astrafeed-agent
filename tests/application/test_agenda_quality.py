@@ -181,3 +181,20 @@ async def test_payy_card_uses_one_relevant_summary_and_quotes_from_both_sources(
     assert card.explanation == "Payy взломан на $1,83 млн"
     assert all("Duelbits" not in claim.quote for claim in card.claims)
     assert {claim.channel_ref for claim in card.claims} == {"@channel1", "@channel2"}
+
+
+@pytest.mark.asyncio
+async def test_ungrounded_numeric_title_is_not_published_in_agenda():
+    store = InMemoryAgendaStore()
+    now = datetime(2026, 9, 24, 12, tzinfo=UTC)
+    await store.save_story(Story("otc", "ОТС-кит купил 15 000 ETH", "ETH", now))
+    quote = "ОТС-кит продал 42 005 ETH и оставил 9 996 ETH."
+    for source_id in (1, 2):
+        pub = _publication(source_id, str(source_id), quote, now - timedelta(hours=1))
+        await store.record_publication(pub)
+        await _link(store, "otc", pub, quote, quote)
+
+    snapshot = await build_snapshot(store, now, _coverage(), collected_at=now, analyzed_at=now)
+
+    assert snapshot.agenda == ()
+    assert snapshot.stories["otc"].card.current_channels == 2

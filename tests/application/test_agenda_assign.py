@@ -273,12 +273,160 @@ async def test_speculative_assignment_revalidates_changed_story_context():
         concurrency=2,
     )
 
-    assert assigner.maximum == 2
-    assert (reused, retried) == (1, 1)
-    assert assigner.calls == 3
+    assert assigner.maximum == 1
+    assert (reused, retried) == (1, 0)
+    assert assigner.calls == 2
+    assert embedder.calls == 1
     links = await store.links_for_publications({first.publication_id, second.publication_id})
     assert len({link.story_id for link in links}) == 1
     assert await store.queue_depth() == 0
+
+
+@pytest.mark.asyncio
+async def test_independent_same_time_assignments_overlap():
+    from astrafeed.adapters.llm.agenda import Assignment
+
+    store = InMemoryAgendaStore()
+    now = datetime(2026, 9, 24, 12, tzinfo=UTC)
+    texts = ("Отток ETH ETF составил 120 млн сегодня.", "Рост SOL составил 15 процентов сегодня.")
+    pubs = [
+        _pub(text, index + 1, str(index), f"@channel{index}", now)
+        for index, text in enumerate(texts)
+    ]
+    for pub in pubs:
+        await store.record_publication(pub)
+
+    class ConcurrentAssigner:
+        active = 0
+        maximum = 0
+
+        async def assign(self, **kwargs):
+            self.active += 1
+            self.maximum = max(self.maximum, self.active)
+            await asyncio.sleep(0.01)
+            self.active -= 1
+            entity = kwargs["fragment"].entity_surfaces[0]
+            return Assignment((), "new", None, f"Новость {entity}", entity, "separate", None)
+
+    assigner = ConcurrentAssigner()
+    vectors = {
+        embedding_input(text, [entity]): [1.0, 0.0]
+        for text, entity in zip(texts, ("ETH", "SOL"), strict=True)
+    }
+    reused, retried = await assign_speculative_batch(
+        store,
+        Embedder(vectors),
+        assigner,
+        [
+            (pub, _event_result(pub.text, pub.text, entity))
+            for pub, entity in zip(pubs, ("ETH", "SOL"), strict=True)
+        ],
+        concurrency=2,
+    )
+
+    assert assigner.maximum == 2
+    assert (reused, retried) == (2, 0)
+    assert len(await store.list_stories()) == 2
+
+
+@pytest.mark.asyncio
+async def test_relaxed_backfill_merges_only_same_entity_and_similar_vectors():
+    from astrafeed.adapters.llm.agenda import Assignment
+
+    store = InMemoryAgendaStore()
+    now = datetime(2026, 9, 24, 12, tzinfo=UTC)
+    texts = (
+        "Отток ETH ETF составил 120 млн сегодня.",
+        "BlackRock сообщил об оттоке ETH ETF сегодня.",
+        "Цена ETH выросла на 15 процентов сегодня.",
+    )
+    pubs = [
+        _pub(text, index + 1, str(index), f"@channel{index}", now - timedelta(hours=3 - index))
+        for index, text in enumerate(texts)
+    ]
+    for pub in pubs:
+        await store.record_publication(pub)
+
+    class NewStoryAssigner:
+        active = 0
+        maximum = 0
+        calls = 0
+
+        async def assign(self, **kwargs):
+            self.active += 1
+            self.maximum = max(self.maximum, self.active)
+            self.calls += 1
+            await asyncio.sleep(0.01)
+            self.active -= 1
+            fragment_text = kwargs["fragment"].text
+            if fragment_text.startswith("BlackRock"):
+                title = "Отток средств из ETH ETF"
+            elif "ETF" in fragment_text:
+                title = "Потоки ETH ETF"
+            else:
+                title = "Цена ETH"
+            return Assignment((), "new", None, title, title, "separate", None)
+
+    assigner = NewStoryAssigner()
+    embedder = Embedder(
+        {
+            embedding_input(text, ["ETH"]): [0.0, 1.0] if "Цена" in text else [1.0, 0.0]
+            for text in texts
+        }
+    )
+    reused, retried = await assign_speculative_batch(
+        store,
+        embedder,
+        assigner,
+        [(pub, _event_result(pub.text, pub.text, "ETH")) for pub in pubs],
+        concurrency=3,
+        strict=False,
+    )
+
+    links = await store.links_for_publications({pub.publication_id for pub in pubs})
+    assert assigner.maximum == 3
+    assert assigner.calls == 3
+    assert embedder.calls == 1
+    assert (reused, retried) == (3, 0)
+    assert links[0].story_id == links[1].story_id
+    assert links[2].story_id != links[0].story_id
+
+
+@pytest.mark.asyncio
+async def test_relaxed_merge_key_persists_across_batches_without_entity_decisions():
+    from astrafeed.adapters.llm.agenda import Assignment
+
+    store = InMemoryAgendaStore()
+    now = datetime(2026, 9, 24, 12, tzinfo=UTC)
+    first = _pub("Отток ETH ETF составил 120 млн сегодня.", 1, "1", "@a", now)
+    second = _pub(
+        "BlackRock сообщил об оттоке ETH ETF сегодня.", 2, "2", "@b", now + timedelta(hours=1)
+    )
+    for pub in (first, second):
+        await store.record_publication(pub)
+
+    class NewStoryAssigner:
+        async def assign(self, **kwargs):
+            title = (
+                "Потоки ETH ETF"
+                if kwargs["fragment"].publication_id == first.publication_id
+                else "Отток из ETH ETF"
+            )
+            return Assignment((), "new", None, title, title, "separate", None)
+
+    embedder = Embedder({embedding_input(pub.text, ["ETH"]): [1.0, 0.0] for pub in (first, second)})
+    for pub in (first, second):
+        await assign_speculative_batch(
+            store,
+            embedder,
+            NewStoryAssigner(),
+            [(pub, _event_result(pub.text, pub.text, "ETH"))],
+            strict=False,
+        )
+
+    links = await store.links_for_publications({first.publication_id, second.publication_id})
+    assert len({link.story_id for link in links}) == 1
+    assert (await store.list_stories())[0].key_entity == "eth"
 
 
 @pytest.mark.asyncio
