@@ -5,7 +5,7 @@ from __future__ import annotations
 import re
 from datetime import datetime
 from html import escape
-from urllib.parse import quote
+from urllib.parse import quote, urlsplit
 
 from astrafeed.application.agenda_changes import compare_snapshots, comparison_lines
 from astrafeed.domain.agenda import (
@@ -203,14 +203,14 @@ def _detail_payload(detail: StoryDetail) -> dict:
 _LIMITATION_TEXT = {
     "processing_in_progress": "processing is still running, some posts are not counted yet",
     "evidence_verification_failed": "quote verification did not run, stories are unverified",
-    "too_few_comparable_channels": "too few channels to compare with yesterday, no growth",
+    "too_few_comparable_channels": "too few sources to compare with yesterday, no growth",
     "no_new_or_growing_stories": "no new or growing stories",
 }
 _CARD_QUOTES = 3
 
 
 def _channels(n: int) -> str:
-    return f"{n} channel" if n == 1 else f"{n} channels"
+    return f"{n} source" if n == 1 else f"{n} sources"
 
 
 def _when(iso: str) -> str:
@@ -230,7 +230,7 @@ def _growth_text(card: dict) -> str:
     current = card.get("current_channels")
     previous = card.get("previous_channels") or 0
     if isinstance(current, int) and current != previous + growth:
-        text += f" on comparable channels ({current} observed)"
+        text += f" on comparable sources ({current} observed)"
     return text
 
 
@@ -256,6 +256,17 @@ def _channel_links(card: dict) -> list[tuple[str, str, str]]:
     for claim in card["claims"]:
         seen.setdefault(claim["channel"], claim["link"])
     return [(name, link, "") for name, link in seen.items()]
+
+
+def _source_group(name: str, link: str) -> str:
+    host = (urlsplit(link).hostname or "").lower()
+    if host in {"t.me", "telegram.me"}:
+        return "Telegram"
+    if host in {"reddit.com", "www.reddit.com", "old.reddit.com", "redd.it"} or name.startswith(
+        "r/"
+    ):
+        return "Reddit"
+    return "News sites" if host else "Other sources"
 
 
 def _head_start(lead: dict) -> str:
@@ -466,17 +477,17 @@ def _md_discussion(card: dict, *, full: bool) -> list[str]:
 
 
 _LEAD = (
-    "AstraFeed · OKX.AI A2MCP. Stories that appeared or gained channels "
+    "AstraFeed · OKX.AI A2MCP. Stories that appeared or gained sources "
     "over the last 24 hours compared with the previous 24 hours. "
-    "Growth counts only channels complete in both windows."
+    "Growth counts only sources complete in both windows."
 )
-_EMPTY = "No new or growing stories across comparable channels."
+_EMPTY = "No new or growing stories across comparable sources."
 
 
 def render_agenda_md(payload: dict) -> str:
     delta = payload.get("response_mode") == "delta"
     lines = [
-        f"# Crypto Telegram agenda · {_when(payload['t'])}",
+        f"# Crypto agenda · {_when(payload['t'])}",
         "",
         "New and updated cards relative to the requested snapshot." if delta else _LEAD,
         "",
@@ -509,7 +520,7 @@ def _md_footer(payload: dict) -> list[str]:
         "---",
         "",
         "_Quotes from non-English posts and comments are machine-translated. "
-        "Copies are posts that repeat an earlier channel's text near-verbatim; "
+        "Copies are posts that repeat an earlier source's text near-verbatim; "
         "they add reach, not confirmation. Prices are context, not cause._",
     ]
     trust = _trust_line(payload)
@@ -539,7 +550,7 @@ def render_story_md(payload: dict) -> str:
     card = payload["story"]
     lines = _md_card_head(card, f"# {card['title']}")
     if card["claims"]:
-        lines += ["", "## What channels say"]
+        lines += ["", "## What sources say"]
         for claim in card["claims"]:
             lines += _md_quote(claim)
     lines += _md_discussion(card, full=True)
@@ -587,6 +598,8 @@ details{color:var(--muted);font-size:.85rem}summary{cursor:pointer}
 background:var(--accent)}.tl a.echo{background:var(--card);border:2px solid var(--muted)}
 .tl span{position:absolute;top:8px;font-size:.75rem;color:var(--muted);white-space:nowrap}
 .src .echo{color:var(--muted)}
+.source-group{display:flex;gap:10px;margin:4px 0}.source-group>span{min-width:85px;
+color:var(--muted);font-weight:600}.source-group>div{flex:1}
 """
 
 
@@ -658,18 +671,22 @@ def _html_card_head(card: dict, title_html: str) -> str:
             "</cite></blockquote></div>"
         )
     parts.append(_html_timeline(card))
-    channels = _channel_links(card)
-    if channels:
-        links = " · ".join(
-            f'<a href="{_url(link)}">{escape(name)}</a>'
-            + (
-                f' <span class="{"echo" if "copy" in note else "meta"}">({escape(note)})</span>'
-                if note
-                else ""
-            )
-            for name, link, note in channels
+    sources = _channel_links(card)
+    if sources:
+        groups: dict[str, list[str]] = {}
+        for name, link, note in sources:
+            item = f'<a href="{_url(link)}">{escape(name)}</a>'
+            if note:
+                item += (
+                    f' <span class="{"echo" if "copy" in note else "meta"}">({escape(note)})</span>'
+                )
+            groups.setdefault(_source_group(name, link), []).append(item)
+        sections = "".join(
+            f'<div class="source-group"><span>{label}</span><div>{" · ".join(items)}</div></div>'
+            for label in ("Telegram", "Reddit", "News sites", "Other sources")
+            if (items := groups.get(label))
         )
-        parts.append(f'<p class="src">Covered by: {links}</p>')
+        parts.append(f'<div class="src"><b>Sources</b>{sections}</div>')
     return "".join(parts)
 
 
@@ -686,7 +703,7 @@ def _html_discussion(card: dict, *, full: bool) -> str:
         if comment:
             source = (
                 f' — <a href="{_url(comment["link"])}">'
-                f"discussion in {escape(comment['channel'])}</a>"
+                f"comments under {escape(comment['channel'])} post</a>"
             )
             if full:
                 quote_html = (
@@ -715,7 +732,15 @@ def _html_page(title: str, body: str) -> str:
 def _html_status(payload: dict) -> str:
     notes = _limitation_notes(payload)
     note = f'<p class="note">⚠️ {escape("; ".join(notes))}.</p>' if notes else ""
-    return f'<p class="meta">Coverage: {escape(_coverage_text(payload))}.</p>{note}'
+    published = payload.get("published_at")
+    snapshot_time = (
+        f"Last published snapshot: {_when(published)}. " if published and payload["stale"] else ""
+    )
+    excluded = "Newer collection is not included in these counts. " if payload["stale"] else ""
+    return (
+        f'<p class="meta">Coverage in this snapshot: {escape(_coverage_text(payload))}. '
+        f"{escape(snapshot_time + excluded)}</p>{note}"
+    )
 
 
 def render_agenda_html(payload: dict) -> str:
@@ -723,7 +748,7 @@ def render_agenda_html(payload: dict) -> str:
     delta = payload.get("response_mode") == "delta"
     lead = "New and updated cards relative to the requested snapshot." if delta else _LEAD
     body = [
-        f"<h1>AstraFeed · Crypto Telegram agenda · {escape(_when(payload['t']))}</h1>",
+        f"<h1>AstraFeed · Crypto agenda · {escape(_when(payload['t']))}</h1>",
         f'<p class="lead">{lead} Same snapshot: <code>POST /a2mcp/astrafeed</code>.</p>',
         _html_status(payload),
     ]
@@ -760,7 +785,7 @@ def render_agenda_html(payload: dict) -> str:
     trust = _trust_line(payload)
     trust_html = f"<br>{escape(trust)}" if trust else ""
     body.append(
-        "<footer>Copies repeat an earlier channel's text near-verbatim: reach, not confirmation. "
+        "<footer>Copies repeat an earlier source's text near-verbatim: reach, not confirmation. "
         "Prices are OKX spot context, not cause. "
         "Quotes from non-English posts and comments are machine-translated. "
         f"Snapshot {escape(payload['snapshot_id'])} · "
@@ -768,7 +793,7 @@ def render_agenda_html(payload: dict) -> str:
         f'<a href="/agenda?snapshot_id={snapshot}{baseline_query}">JSON</a>'
         f"{trust_html}</footer>"
     )
-    return _html_page("AstraFeed · Crypto Telegram agenda", "".join(body))
+    return _html_page("AstraFeed · Crypto agenda", "".join(body))
 
 
 def render_story_html(payload: dict) -> str:
@@ -780,7 +805,7 @@ def render_story_html(payload: dict) -> str:
         f"<article>{_html_card_head(card, f'<h1>{escape(card["title"])}</h1>')}</article>",
     ]
     if card["claims"]:
-        body.append("<h2>What channels say</h2>" + "".join(_html_quote(c) for c in card["claims"]))
+        body.append("<h2>What sources say</h2>" + "".join(_html_quote(c) for c in card["claims"]))
     body.append(_html_discussion(card, full=True))
     if card.get("positions"):
         body.append("<h2>Author opinions</h2>" + "".join(_html_quote(p) for p in card["positions"]))
