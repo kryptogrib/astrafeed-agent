@@ -334,7 +334,7 @@ async def test_independent_same_time_assignments_overlap():
 
 
 @pytest.mark.asyncio
-async def test_relaxed_backfill_merges_only_same_entity_and_similar_vectors():
+async def test_relaxed_backfill_keeps_distinct_story_decisions_even_with_same_entity_and_vector():
     from astrafeed.adapters.llm.agenda import Assignment
 
     store = InMemoryAgendaStore()
@@ -392,12 +392,12 @@ async def test_relaxed_backfill_merges_only_same_entity_and_similar_vectors():
     assert assigner.calls == 3
     assert embedder.calls == 1
     assert (reused, retried) == (3, 0)
-    assert links[0].story_id == links[1].story_id
+    assert links[0].story_id != links[1].story_id
     assert links[2].story_id != links[0].story_id
 
 
 @pytest.mark.asyncio
-async def test_relaxed_merge_key_persists_across_batches_without_entity_decisions():
+async def test_relaxed_backfill_keeps_distinct_decisions_across_batches():
     from astrafeed.adapters.llm.agenda import Assignment
 
     store = InMemoryAgendaStore()
@@ -429,7 +429,7 @@ async def test_relaxed_merge_key_persists_across_batches_without_entity_decision
         )
 
     links = await store.links_for_publications({first.publication_id, second.publication_id})
-    assert len({link.story_id for link in links}) == 1
+    assert len({link.story_id for link in links}) == 2
     assert (await store.list_stories())[0].key_entity == "eth"
 
 

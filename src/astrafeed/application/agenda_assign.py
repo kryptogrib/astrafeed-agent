@@ -462,25 +462,6 @@ async def assign_speculative_batch(
     frozen_stories = tuple(stories)
     frozen_events = tuple(events)
     frozen_candidate_index = CandidateIndex(frozen_pool) if not strict else None
-    indexed_by_key = {(item.publication_id, item.fragment_index): item for item in pool}
-    entity_names = {entity.entity_id: entity.canonical_name.casefold() for entity in entities}
-    story_keys: dict[str, set[str]] = {
-        story.story_id: {story.key_entity} for story in stories if story.key_entity
-    }
-    story_vector_sums: dict[str, list[float]] = {}
-    seen_story_fragments: set[tuple[str, str, int]] = set()
-    for link in links:
-        link_keys = {entity_names[eid] for eid in link.entity_ids if eid in entity_names}
-        if len(link_keys) == 1:
-            story_keys.setdefault(link.story_id, set()).update(link_keys)
-        link_key = (link.story_id, link.publication_id, link.fragment_index)
-        indexed = indexed_by_key.get((link.publication_id, link.fragment_index))
-        if indexed is not None and indexed.vector and link_key not in seen_story_fragments:
-            vector_sum = story_vector_sums.setdefault(link.story_id, [0.0] * len(indexed.vector))
-            if len(vector_sum) == len(indexed.vector):
-                for offset, vector_value in enumerate(indexed.vector):
-                    vector_sum[offset] += vector_value
-            seen_story_fragments.add(link_key)
     semaphore = asyncio.Semaphore(concurrency)
     embed_started = perf_counter()
     inputs: dict[str, str] = {}
@@ -657,7 +638,6 @@ async def assign_speculative_batch(
                 await store.enqueue(publication.publication_id, "assign_error")
                 failed = True
                 break
-            key_entity = _assignment_entity_key(assignment, proposal.indexed, entities)
             story_override = None
             if not strict and getattr(assignment, "story_decision", None) == "new":
                 title = getattr(assignment, "title_ru", "").strip()
@@ -666,24 +646,6 @@ async def assign_speculative_batch(
                         (story for story in stories if story.story_id == _stable_id("st", title)),
                         None,
                     )
-            if (
-                not strict
-                and getattr(assignment, "story_decision", None) == "new"
-                and story_override is None
-                and key_entity
-                and proposal.indexed.vector
-            ):
-                matched = [
-                    (cosine_similarity(proposal.indexed.vector, centroid_sum), story)
-                    for story in stories
-                    if story_keys.get(story.story_id) == {key_entity}
-                    and (centroid_sum := story_vector_sums.get(story.story_id))
-                ]
-                matched = [pair for pair in matched if pair[0] >= merge_cosine_threshold]
-                if matched:
-                    story_override = sorted(matched, key=lambda pair: (-pair[0], pair[1].story_id))[
-                        0
-                    ][1]
             started = perf_counter()
             effect = await _apply_decision(
                 store,
@@ -705,15 +667,6 @@ async def assign_speculative_batch(
             if effect.story is not None:
                 stories = [item for item in stories if item.story_id != effect.story.story_id]
                 stories.append(effect.story)
-                if key_entity:
-                    story_keys.setdefault(effect.story.story_id, set()).add(key_entity)
-                if proposal.indexed.vector:
-                    vector_sum = story_vector_sums.setdefault(
-                        effect.story.story_id, [0.0] * len(proposal.indexed.vector)
-                    )
-                    if len(vector_sum) == len(proposal.indexed.vector):
-                        for offset, vector_value in enumerate(proposal.indexed.vector):
-                            vector_sum[offset] += vector_value
             if effect.event is not None:
                 events = [item for item in events if item.event_id != effect.event.event_id]
                 events.append(effect.event)
