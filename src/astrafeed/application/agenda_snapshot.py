@@ -45,6 +45,10 @@ _TALKS = re.compile(
     r"\b(?:переговор\w*|встре(?:т|ч)\w*|обсуд\w*|talks?|negotiat\w*|meet\w*|discuss\w*)\b",
     re.I,
 )
+_HACK_EVIDENCE = re.compile(
+    r"\b(?:взлом\w*|хак\w*|hack\w*|stolen|steal\w*|украл\w*|похит\w*|эксплойт\w*|exploit\w*)\b",
+    re.I,
+)
 
 
 def _mentions(text: str, name: str) -> bool:
@@ -87,6 +91,8 @@ def _supported_link(
     if _PENDING.search(title) and _RESOLVED.search(quote):
         return False
     if re.search(r"\bпереговор\w*\b", title, re.I) and not _TALKS.search(quote):
+        return False
+    if re.search(r"\bвзлом\w*\b", title, re.I) and not _HACK_EVIDENCE.search(quote):
         return False
     title_tickers = _TICKER.findall(title)
     if title_tickers and not any(_mentions(quote, ticker) for ticker in title_tickers):
@@ -184,6 +190,9 @@ def _display_title(
             None,
         )
     title = story.title_ru.strip()
+    user_hack = re.match(r"^Пользователь подозревает взлом ([\w$#-]+)\b", title, re.I)
+    if user_hack and any(_mentions(link.quote, user_hack.group(1)) for link in links):
+        title = f"Сообщения о возможном взломе {user_hack.group(1)}"
     if _PROFANITY.search(title):
         title = next(
             (

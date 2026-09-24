@@ -182,6 +182,34 @@ async def test_arrival_alone_does_not_vote_for_negotiations():
 
 
 @pytest.mark.asyncio
+async def test_hack_story_does_not_count_withdrawal_only_quote_or_keep_user_title():
+    store = InMemoryAgendaStore()
+    now = datetime(2026, 9, 24, 12, tzinfo=UTC)
+    await store.save_entity(Entity("bitget", "Bitget"))
+    await store.save_story(Story(
+        "hack", "Пользователь подозревает взлом Bitget и выводит средства", "", now,
+        key_entity="Bitget",
+    ))
+    quotes = (
+        "Биржу Bitget, вероятно, взломали.",
+        "Bitget potentially hacked for over $100m.",
+        "Люди выводят средства с Bitget после задержек выплат.",
+    )
+    for source_id, quote in enumerate(quotes, start=1):
+        pub = _publication(source_id, str(source_id), quote, now)
+        await store.record_publication(pub)
+        await _link(store, "hack", pub, quote, quote, entity_ids=("bitget",))
+
+    coverage = {source_id: {"current_complete": True, "previous_complete": True,
+                            "processed": True} for source_id in (1, 2, 3)}
+    snapshot = await build_snapshot(store, now + timedelta(minutes=1), coverage,
+                                    collected_at=now, analyzed_at=now)
+    card = snapshot.agenda[0]
+    assert card.current_channels == 2
+    assert card.title == "Сообщения о возможном взломе Bitget"
+
+
+@pytest.mark.asyncio
 async def test_navigation_claim_does_not_create_a_second_channel_vote():
     store = InMemoryAgendaStore()
     now = datetime(2026, 9, 24, 12, tzinfo=UTC)
