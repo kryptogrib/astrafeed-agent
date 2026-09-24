@@ -44,8 +44,19 @@ _RESOLVED = re.compile(r"\b(?:отменил\w*|заблокировал\w*|orde
 
 
 def _mentions(text: str, name: str) -> bool:
-    value = name.strip().lstrip("$#")
-    return len(value) >= 3 and bool(re.search(rf"(?<!\w){re.escape(value)}(?!\w)", text, re.I))
+    value = name.strip().lstrip("$#").casefold()
+    if len(value) < 3:
+        return False
+    source = text.casefold()
+    start = 0
+    while (index := source.find(value, start)) >= 0:
+        end = index + len(value)
+        before = source[index - 1] if index else ""
+        after = source[end] if end < len(source) else ""
+        if not (before.isalnum() or before == "_") and not (after.isalnum() or after == "_"):
+            return True
+        start = index + 1
+    return False
 
 
 def _supported_link(
@@ -76,12 +87,17 @@ def _supported_link(
         return False
     # A clipped digest bullet can be verbatim yet omit its subject. The
     # publication's surrounding text must not lend that bullet a channel vote.
+    candidates = (
+        (entities.get(entity_id) for entity_id in link.entity_ids)
+        if link.entity_ids else entities.values()
+    )
     named_entities = [
-        entity for entity in entities.values()
-        if entity.status == "confirmed"
+        entity for entity in candidates
+        if entity is not None
+        and entity.status == "confirmed"
         and entity.canonical_name.casefold().lstrip("$#") not in _GENERIC_ENTITIES
         and (
-            entity.entity_id in link.entity_ids
+            bool(link.entity_ids)
             or any(_mentions(title, name) for name in (entity.canonical_name, *entity.aliases))
         )
     ]
