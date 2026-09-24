@@ -24,6 +24,7 @@ from astrafeed.adapters.llm.agenda import (
     OpenRouterEmbedder,
     OpenRouterEvidenceVerifier,
     OpenRouterExtractor,
+    OpenRouterTranslator,
 )
 from astrafeed.adapters.llm.budgeted_client import BudgetedClient
 from astrafeed.adapters.llm.openrouter import OpenRouterLLMClient
@@ -40,6 +41,7 @@ from astrafeed.adapters.source.fake import FakeSource
 from astrafeed.adapters.source.telegram import TelegramSource
 from astrafeed.application.agenda_cycle import run_cycle
 from astrafeed.application.agenda_discussion import DiscussionEnricher
+from astrafeed.application.agenda_localize import EnglishLocalizer
 from astrafeed.application.agenda_query import (
     agenda_payload,
     health_payload,
@@ -54,7 +56,7 @@ from astrafeed.application.ingestion import (
 )
 from astrafeed.application.pulse_ingest import CommentCollector
 from astrafeed.config import Settings
-from astrafeed.domain.agenda import EMBEDDING_MODEL, LOOKBACK
+from astrafeed.domain.agenda import EMBEDDING_MODEL, LOOKBACK, Snapshot
 from astrafeed.logging_cfg import configure_logging
 
 _log = logging.getLogger(__name__)
@@ -260,6 +262,7 @@ async def _agenda_poll(
     assigner: OpenRouterAssigner,
     evidence_verifier: OpenRouterEvidenceVerifier,
     summarizer: OpenRouterDiscussionSummarizer,
+    translator: OpenRouterTranslator,
 ) -> None:
     collection_window = max(LOOKBACK, timedelta(hours=cfg.backfill_hours))
     reader = TelegramSource(client, backfill_window=collection_window)
@@ -268,6 +271,12 @@ async def _agenda_poll(
     discussions = DiscussionEnricher(
         TelegramSource(client, discussion_join_limit_per_run=0), summarizer
     )
+    english = EnglishLocalizer(translator)
+
+    async def discuss_in_english(snapshot: Snapshot, now: datetime) -> Snapshot:
+        # Translate after comments are attached so their quotes are covered too.
+        return await english.localize(await discussions.enrich(snapshot, now))
+
     coordinator = IngestionCoordinator(
         posts, reader, resolver=reader, limits=limits_from_settings(cfg)
     )
@@ -327,7 +336,7 @@ async def _agenda_poll(
                 merge_cosine_threshold=cfg.agenda.merge_cosine_threshold,
                 collection_window=collection_window,
                 max_posts_per_cycle=cfg.agenda.cycle_post_limit,
-                discuss=discussions.enrich,
+                discuss=discuss_in_english,
             )
             if snapshot is None:
                 _log.warning("agenda cycle did not publish (budget or incomplete)")
@@ -374,6 +383,7 @@ def _agenda_llm(cfg: Settings, session):
         OpenRouterAssigner(client, model),
         OpenRouterEvidenceVerifier(client, model),
         OpenRouterDiscussionSummarizer(client, model),
+        OpenRouterTranslator(client, model),
     )
 
 
@@ -386,7 +396,9 @@ async def _serve(config_path: str) -> None:
     posts = SqliteIngestionStore(session)
     agenda = SqliteAgendaStore(session)
     await agenda.ensure_search()
-    extractor, embedder, assigner, evidence_verifier, summarizer = _agenda_llm(cfg, session)
+    extractor, embedder, assigner, evidence_verifier, summarizer, translator = _agenda_llm(
+        cfg, session
+    )
     commit = git_commit()
 
     async def agenda_http(snapshot_id: str | None = None) -> dict:
@@ -419,7 +431,16 @@ async def _serve(config_path: str) -> None:
     )
     poll_task = asyncio.create_task(
         _agenda_poll(
-            cfg, client, posts, agenda, extractor, embedder, assigner, evidence_verifier, summarizer
+            cfg,
+            client,
+            posts,
+            agenda,
+            extractor,
+            embedder,
+            assigner,
+            evidence_verifier,
+            summarizer,
+            translator,
         ),
         name="agenda-cycle",
     )

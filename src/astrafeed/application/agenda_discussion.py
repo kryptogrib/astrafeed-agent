@@ -155,6 +155,7 @@ class DiscussionEnricher:
             read_count=len(comments),
             points=tuple(point.strip() for point in digest.points if point.strip())[:4],
             quotes=quotes,
+            highlights=tuple(item.strip() for item in digest.highlights if item.strip())[:2],
         )
 
 

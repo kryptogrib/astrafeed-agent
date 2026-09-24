@@ -37,6 +37,8 @@ _NUMBER = re.compile(r"\d+(?:[.,]\d+)?")
 _TICKER = re.compile(r"\$[A-Za-z][A-Za-z0-9]{1,}")
 _PROFANITY = re.compile(r"(?:на[её]б|за[её]б|[её]бан|\bбля|\bхуй|\bху[её]в|\bпизд)", re.I)
 _GENERIC_ENTITIES = {"tge", "fdv", "q3", "q4", "points", "поинты", "airdrop"}
+# Titles that name no project: "Проект продвигает…", "A project promoted by…".
+_UNNAMED_PROJECT = re.compile(r"^(?:Проект [а-яё]|(?:An? |Unnamed |An unnamed )?project [a-z])")
 _VAGUE_STORY = re.compile(r"\b(?:новые детали|вся картина|подробности появились)\b", re.I)
 _FUTURE_SECTION = re.compile(r"(?:что ожидается|планируется|upcoming)[^\n]{0,70}", re.I)
 _PENDING = re.compile(r"\b(?:рассматрива\w*|ожида\w*|слушани\w*)\b", re.I)
@@ -190,9 +192,13 @@ def _display_title(
             None,
         )
     title = story.title_ru.strip()
-    user_hack = re.match(r"^Пользователь подозревает взлом ([\w$#-]+)\b", title, re.I)
+    user_hack = re.match(
+        r"^(?:Пользователь подозревает взлом|(?:A )?user suspects (?:a )?hack of) ([\w$#-]+)\b",
+        title,
+        re.I,
+    )
     if user_hack and any(_mentions(link.quote, user_hack.group(1)) for link in links):
-        title = f"Сообщения о возможном взломе {user_hack.group(1)}"
+        title = f"Reports of a possible {user_hack.group(1)} hack"
     if _PROFANITY.search(title):
         title = next(
             (
@@ -202,7 +208,7 @@ def _display_title(
                 if value and not _PROFANITY.search(value)
                 and numbers_are_grounded(value, [link.quote])
             ),
-            "Сюжет",
+            "Story",
         )
     if primary is None:
         return title, ""
@@ -477,9 +483,8 @@ async def build_snapshot(
                 "current_channels": card.current_channels,
                 "previous_channels": card.previous_channels,
                 "freshness": card.freshness,
-                "eligible": title.casefold() not in {"", "сюжет"}
-                and not (not primary_entity and title.startswith("Проект ")
-                         and title[len("Проект "):len("Проект ") + 1].islower())
+                "eligible": title.casefold() not in {"", "сюжет", "story"}
+                and not (not primary_entity and _UNNAMED_PROJECT.match(title))
                 and not _PROFANITY.search(title)
                 and numbers_are_grounded(title, [claim.quote for claim in claim_cards]),
                 "primary_entity": primary_entity,

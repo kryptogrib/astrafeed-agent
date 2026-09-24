@@ -355,6 +355,8 @@ class ClaimCard:
     link: str
     channel_ref: str
     published_at: datetime
+    # English rendering of a non-English quote; the quote stays the evidence.
+    translation: str = ""
 
 
 @dataclass(frozen=True)
@@ -362,6 +364,7 @@ class CommentQuote:
     text: str
     link: str
     channel_ref: str
+    translation: str = ""
 
 
 @dataclass(frozen=True)
@@ -372,14 +375,18 @@ class Discussion:
     read_count: int
     points: tuple[str, ...] = ()
     quotes: tuple[CommentQuote, ...] = ()
+    # Details readers add that the posts do not state: facts, first-hand
+    # experience, corrections. Unverified reader claims, shown as such.
+    highlights: tuple[str, ...] = ()
 
 
 @dataclass(frozen=True)
 class DiscussionDigest:
-    """Summarizer output: Russian takeaways and indices of representative comments."""
+    """Summarizer output: English takeaways and indices of representative comments."""
 
     points: tuple[str, ...]
     quote_indices: tuple[int, ...] = ()
+    highlights: tuple[str, ...] = ()
 
 
 @dataclass(frozen=True)
@@ -419,6 +426,7 @@ class PositionCard:
     quote: str
     paraphrase_ru: str
     link: str
+    translation: str = ""
 
 
 @dataclass(frozen=True)

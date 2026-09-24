@@ -206,7 +206,7 @@ async def test_hack_story_does_not_count_withdrawal_only_quote_or_keep_user_titl
                                     collected_at=now, analyzed_at=now)
     card = snapshot.agenda[0]
     assert card.current_channels == 2
-    assert card.title == "Сообщения о возможном взломе Bitget"
+    assert card.title == "Reports of a possible Bitget hack"
 
 
 @pytest.mark.asyncio

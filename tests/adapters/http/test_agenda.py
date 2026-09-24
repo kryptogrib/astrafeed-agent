@@ -113,9 +113,10 @@ async def test_agenda_search_story_share_one_snapshot():
     md = await _get(app, "/agenda?format=md")
     assert md.headers["content-type"].startswith("text/markdown")
     assert "Потоки ETH ETF" in md.text
-    assert "**2 канала** · ↑ +2 за сутки" in md.text
-    assert "Пишут: [@alpha](https://t.me/alpha/10)" in md.text
-    assert "> «Отток ETH ETF составил 120 млн.» — [@alpha](https://t.me/alpha/10)" in md.text
+    assert "**2 channels** · ↑ +2 in 24h" in md.text
+    assert "Covered by: [@alpha](https://t.me/alpha/10)" in md.text
+    # Without a translation the original quote is shown as is.
+    assert "> “Отток ETH ETF составил 120 млн.” — [@alpha](https://t.me/alpha/10)" in md.text
 
     page = await _get(app, "/agenda?format=html")
     assert page.headers["content-type"].startswith("text/html")
@@ -124,9 +125,9 @@ async def test_agenda_search_story_share_one_snapshot():
 
     story_page = await _get(app, "/stories/st-eth?format=html")
     assert "<h1>Потоки ETH ETF</h1>" in story_page.text
-    assert "Посты" in story_page.text
+    assert "Posts" in story_page.text
     story_md = await _get(app, "/stories/st-eth?format=md")
-    assert "## Посты" in story_md.text
+    assert "## Posts" in story_md.text
 
     found = await _get(app, "/stories/search?q=Потоки%20ETH%20ETF")
     assert found.json()["hits"][0]["story_id"] == "st-eth"
@@ -191,8 +192,8 @@ def test_agenda_page_escapes_text_and_drops_unsafe_links():
     assert "<script>x" not in page and "&lt;script&gt;x" in page
     assert "a &amp; b" in page and "&lt;/blockquote&gt;" in page
     assert "javascript:" not in page
-    assert "снимок устарел; обработка ещё идёт" in page
-    assert "рост н/д" in page and "впервые 25.09 09:14 UTC" in page
+    assert "snapshot is stale; processing is still running" in page
+    assert "growth n/a" in page and "first seen Sep 25, 09:14 UTC" in page
 
 
 def test_discussion_is_rendered_in_markdown_and_html_and_escaped():
@@ -210,9 +211,15 @@ def test_discussion_is_rendered_in_markdown_and_html_and_escaped():
         "discussion": {
             "comment_count": 214,
             "read_count": 80,
-            "points": ["Многие <b>не верят</b> во взлом"],
+            "points": ["Many <b>doubt</b> the hack"],
+            "highlights": ["A reader says withdrawals are stuck since Monday"],
             "quotes": [
-                {"text": "вывел всё вчера", "link": "https://t.me/a/1?comment=5", "channel": "@a"},
+                {
+                    "text": "вывел всё вчера",
+                    "translation": "withdrew everything yesterday",
+                    "link": "https://t.me/a/1?comment=5",
+                    "channel": "@a",
+                },
                 {"text": "второй", "link": "javascript:alert(1)", "channel": "@b"},
             ],
         },
@@ -232,12 +239,17 @@ def test_discussion_is_rendered_in_markdown_and_html_and_escaped():
     }
 
     md = render_agenda_md(payload)
-    assert "💬 **В комментариях** (214):" in md
-    assert "- Многие <b>не верят</b> во взлом" in md
-    assert "> «вывел всё вчера» — [комментарий в @a](https://t.me/a/1?comment=5)" in md
+    assert "💬 **Reader comments** (214):" in md
+    assert "- Many <b>doubt</b> the hack" in md
+    assert "- 🔎 **Notable:** A reader says withdrawals are stuck since Monday" in md
+    assert "> “withdrew everything yesterday” — [comment in @a](https://t.me/a/1?comment=5)" in md
+    # The report is English: the original stays in JSON and in the HTML details only.
+    assert "вывел" not in md
     # The agenda card shows one comment; the story page shows them all.
     assert "второй" not in md
 
     page = render_agenda_html(payload)
-    assert "Многие &lt;b&gt;не верят&lt;/b&gt; во взлом" in page
-    assert "(214)" in page and "вывел всё вчера" in page
+    assert "Many &lt;b&gt;doubt&lt;/b&gt; the hack" in page
+    assert "(214)" in page and "withdrew everything yesterday" in page
+    assert "<summary>original</summary>вывел всё вчера" in page
+    assert "Notable:</b> A reader says" in page

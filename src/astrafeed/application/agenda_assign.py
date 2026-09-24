@@ -736,7 +736,7 @@ async def assign_speculative_batch(
             story_override = None
             if not strict and getattr(assignment, "story_decision", None) == "new":
                 title = getattr(assignment, "title_ru", "").strip()
-                if title and title.casefold() != "сюжет":
+                if title and title.casefold() not in {"сюжет", "story"}:
                     story_override = next(
                         (story for story in stories if story.story_id == _stable_id("st", title)),
                         None,
@@ -804,7 +804,7 @@ def _resolve_story(
     quotes = [claim.quote for claim in fragment.claims]
     if not numbers_are_grounded(title, quotes) and quotes:
         title = quotes[0].splitlines()[0].strip(" •▫️.\n")
-    if title.casefold() in {"", "сюжет"}:
+    if title.casefold() in {"", "сюжет", "story"}:
         return None
     story_id = assignment.story_id or _stable_id("st", title)
     for story in stories:

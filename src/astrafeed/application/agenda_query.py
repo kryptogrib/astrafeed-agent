@@ -68,6 +68,7 @@ def _card_payload(card: StoryCard) -> dict:
                 "speaker": claim.speaker,
                 "quote": claim.quote,
                 "paraphrase_ru": claim.paraphrase_ru,
+                "translation": claim.translation,
                 "link": claim.link,
                 "channel": claim.channel_ref,
             }
@@ -85,8 +86,14 @@ def _discussion_payload(card: StoryCard) -> dict | None:
         "comment_count": discussion.comment_count,
         "read_count": discussion.read_count,
         "points": list(discussion.points),
+        "highlights": list(discussion.highlights),
         "quotes": [
-            {"text": quote.text, "link": quote.link, "channel": quote.channel_ref}
+            {
+                "text": quote.text,
+                "translation": quote.translation,
+                "link": quote.link,
+                "channel": quote.channel_ref,
+            }
             for quote in discussion.quotes
         ],
     }
@@ -111,6 +118,7 @@ def _detail_payload(detail: StoryDetail) -> dict:
                     "channel": position.channel_ref,
                     "quote": position.quote,
                     "paraphrase_ru": position.paraphrase_ru,
+                    "translation": position.translation,
                     "link": position.link,
                 }
                 for position in detail.positions
@@ -131,37 +139,33 @@ def _detail_payload(detail: StoryDetail) -> dict:
 
 
 _LIMITATION_TEXT = {
-    "processing_in_progress": "обработка ещё идёт, часть постов не учтена",
-    "evidence_verification_failed": "проверка цитат не выполнилась, сюжеты не проверены",
-    "too_few_comparable_channels": "мало каналов для сравнения со вчера, рост не считаем",
-    "no_new_or_growing_stories": "новых или растущих сюжетов нет",
+    "processing_in_progress": "processing is still running, some posts are not counted yet",
+    "evidence_verification_failed": "quote verification did not run, stories are unverified",
+    "too_few_comparable_channels": "too few channels to compare with yesterday, no growth",
+    "no_new_or_growing_stories": "no new or growing stories",
 }
 _CARD_QUOTES = 3
 
 
 def _channels(n: int) -> str:
-    if n % 10 == 1 and n % 100 != 11:
-        return f"{n} канал"
-    if 2 <= n % 10 <= 4 and not 12 <= n % 100 <= 14:
-        return f"{n} канала"
-    return f"{n} каналов"
+    return f"{n} channel" if n == 1 else f"{n} channels"
 
 
 def _when(iso: str) -> str:
-    return datetime.fromisoformat(iso).strftime("%d.%m %H:%M UTC")
+    return datetime.fromisoformat(iso).strftime("%b %d, %H:%M UTC")
 
 
 def _growth_text(card: dict) -> str:
     growth = card["growth"]
     if not isinstance(growth, int):
-        return "рост н/д"
+        return "growth n/a"
     if growth > 0:
-        return f"↑ +{growth} за сутки"
-    return f"↓ {growth} за сутки" if growth < 0 else "без изменений за сутки"
+        return f"↑ +{growth} in 24h"
+    return f"↓ {growth} in 24h" if growth < 0 else "no change in 24h"
 
 
 def _meta_text(card: dict) -> str:
-    return " · ".join([*card["entities"][:5], f"впервые {_when(card['first_seen'])}"])
+    return " · ".join([*card["entities"][:5], f"first seen {_when(card['first_seen'])}"])
 
 
 def _channel_links(card: dict) -> list[tuple[str, str]]:
@@ -175,21 +179,26 @@ def _channel_links(card: dict) -> list[tuple[str, str]]:
 def _coverage_text(payload: dict) -> str:
     cov = payload["coverage"]
     text = (
-        f"{_channels(cov['channels_ok'])}, разобрано {cov['publications_processed']} "
-        f"из {cov['publications_total']} постов"
+        f"{_channels(cov['channels_ok'])}, {cov['publications_processed']} "
+        f"of {cov['publications_total']} posts analyzed"
     )
     if cov["channels_failed"]:
-        text += f", недоступно каналов: {cov['channels_failed']}"
+        text += f", {cov['channels_failed']} unavailable"
     return text
 
 
 def _limitation_notes(payload: dict) -> list[str]:
     notes = [_LIMITATION_TEXT.get(code, code) for code in payload["limitations"]]
-    return ["снимок устарел", *notes] if payload["stale"] else notes
+    return ["snapshot is stale", *notes] if payload["stale"] else notes
+
+
+def _english(item: dict, key: str = "quote") -> str:
+    """Quote text for the report: the translation when the original is not English."""
+    return item.get("translation") or item[key]
 
 
 def _md_quote(item: dict) -> list[str]:
-    return ["", f"> «{item['quote']}» — [{item['channel']}]({item['link']})"]
+    return ["", f"> “{_english(item)}” — [{item['channel']}]({item['link']})"]
 
 
 def _md_card_head(card: dict, heading: str) -> list[str]:
@@ -203,7 +212,7 @@ def _md_card_head(card: dict, heading: str) -> list[str]:
     ]
     channels = _channel_links(card)
     if channels:
-        lines += ["", "Пишут: " + " · ".join(f"[{name}]({link})" for name, link in channels)]
+        lines += ["", "Covered by: " + " · ".join(f"[{name}]({link})" for name, link in channels)]
     return lines
 
 
@@ -211,30 +220,38 @@ def _md_discussion(card: dict, *, full: bool) -> list[str]:
     discussion = card.get("discussion")
     if not discussion:
         return []
-    lines = ["", f"💬 **В комментариях** ({discussion['comment_count']}):"]
+    lines = ["", f"💬 **Reader comments** ({discussion['comment_count']}):"]
     lines += [f"- {point}" for point in discussion["points"]]
+    lines += [f"- 🔎 **Notable:** {item}" for item in discussion.get("highlights", [])]
     for comment in discussion["quotes"][: None if full else 1]:
         lines += [
             "",
-            f"> «{comment['text']}» — [комментарий в {comment['channel']}]({comment['link']})",
+            f"> “{_english(comment, 'text')}” — "
+            f"[comment in {comment['channel']}]({comment['link']})",
         ]
     return lines
 
 
+_LEAD = (
+    "Stories that appeared or gained channels over the last 24 hours "
+    "compared with the previous 24 hours."
+)
+_EMPTY = "No new or growing stories across comparable channels."
+
+
 def render_agenda_md(payload: dict) -> str:
     lines = [
-        f"# Повестка крипто-Telegram · {_when(payload['t'])}",
+        f"# Crypto Telegram agenda · {_when(payload['t'])}",
         "",
-        "Сюжеты, которые за последние 24 часа появились или набрали каналы "
-        "по сравнению с предыдущими сутками.",
+        _LEAD,
         "",
-        f"Охват: {_coverage_text(payload)}. Снимок `{payload['snapshot_id']}`.",
+        f"Coverage: {_coverage_text(payload)}. Snapshot `{payload['snapshot_id']}`.",
     ]
     notes = _limitation_notes(payload)
     if notes:
         lines += ["", "⚠️ " + "; ".join(notes) + "."]
     if not payload["stories"]:
-        lines += ["", "Нет новых или растущих сюжетов на сопоставимом наборе каналов."]
+        lines += ["", _EMPTY]
         return "\n".join(lines) + "\n"
     for index, card in enumerate(payload["stories"], 1):
         lines += ["", "---", ""]
@@ -242,6 +259,7 @@ def render_agenda_md(payload: dict) -> str:
         for claim in card["claims"][:_CARD_QUOTES]:
             lines += _md_quote(claim)
         lines += _md_discussion(card, full=False)
+    lines += ["", "---", "", "_Quotes from non-English posts and comments are machine-translated._"]
     return "\n".join(lines) + "\n"
 
 
@@ -249,21 +267,21 @@ def render_story_md(payload: dict) -> str:
     card = payload["story"]
     lines = _md_card_head(card, f"# {card['title']}")
     if card["claims"]:
-        lines += ["", "## Что пишут"]
+        lines += ["", "## What channels say"]
         for claim in card["claims"]:
             lines += _md_quote(claim)
     lines += _md_discussion(card, full=True)
     if card.get("positions"):
-        lines += ["", "## Мнения авторов"]
+        lines += ["", "## Author opinions"]
         for position in card["positions"]:
             lines += _md_quote(position)
     if card.get("publications"):
-        lines += ["", "## Посты"]
+        lines += ["", "## Posts"]
         lines += [
             f"- {_when(pub['published_at'])} [{pub['channel']}]({pub['link']})"
             for pub in card["publications"]
         ]
-    lines += ["", f"Снимок `{payload['snapshot_id']}` · {_coverage_text(payload)}."]
+    lines += ["", f"Snapshot `{payload['snapshot_id']}` · {_coverage_text(payload)}."]
     return "\n".join(lines) + "\n"
 
 
@@ -289,6 +307,7 @@ blockquote cite{display:block;font-style:normal;color:var(--muted);font-size:.9r
 ul{padding-left:20px}footer{font-size:.85rem;margin-top:24px}
 .talk{border-top:1px dashed var(--line);margin-top:12px;padding-top:8px}
 .talk ul{margin:4px 0}
+details{color:var(--muted);font-size:.85rem}summary{cursor:pointer}
 """
 
 
@@ -296,10 +315,17 @@ def _url(link: str) -> str:
     return escape(link) if link.startswith(("https://", "http://")) else "#"
 
 
+def _html_original(item: dict, key: str = "quote") -> str:
+    if not item.get("translation"):
+        return ""
+    return f"<details><summary>original</summary>{escape(item[key])}</details>"
+
+
 def _html_quote(item: dict) -> str:
     return (
-        f"<blockquote>«{escape(item['quote'])}»<cite>— "
-        f'<a href="{_url(item["link"])}">{escape(item["channel"])}</a></cite></blockquote>'
+        f"<blockquote>“{escape(_english(item))}”<cite>— "
+        f'<a href="{_url(item["link"])}">{escape(item["channel"])}</a></cite>'
+        f"{_html_original(item)}</blockquote>"
     )
 
 
@@ -315,7 +341,7 @@ def _html_card_head(card: dict, title_html: str) -> str:
     channels = _channel_links(card)
     if channels:
         links = " · ".join(f'<a href="{_url(link)}">{escape(name)}</a>' for name, link in channels)
-        parts.append(f"<p>Пишут: {links}</p>")
+        parts.append(f"<p>Covered by: {links}</p>")
     return "".join(parts)
 
 
@@ -324,21 +350,25 @@ def _html_discussion(card: dict, *, full: bool) -> str:
     if not discussion:
         return ""
     points = "".join(f"<li>{escape(point)}</li>" for point in discussion["points"])
+    points += "".join(
+        f'<li class="hl">🔎 <b>Notable:</b> {escape(item)}</li>'
+        for item in discussion.get("highlights", [])
+    )
     quotes = "".join(
-        f"<blockquote>«{escape(comment['text'])}»<cite>— "
-        f'<a href="{_url(comment["link"])}">комментарий в {escape(comment["channel"])}</a>'
-        "</cite></blockquote>"
+        f"<blockquote>“{escape(_english(comment, 'text'))}”<cite>— "
+        f'<a href="{_url(comment["link"])}">comment in {escape(comment["channel"])}</a>'
+        f"</cite>{_html_original(comment, 'text')}</blockquote>"
         for comment in discussion["quotes"][: None if full else 1]
     )
     return (
-        f'<div class="talk"><p><b>💬 В комментариях</b> ({discussion["comment_count"]})</p>'
+        f'<div class="talk"><p><b>💬 Reader comments</b> ({discussion["comment_count"]})</p>'
         f"{f'<ul>{points}</ul>' if points else ''}{quotes}</div>"
     )
 
 
 def _html_page(title: str, body: str) -> str:
     return (
-        '<!doctype html><html lang="ru"><head><meta charset="utf-8">'
+        '<!doctype html><html lang="en"><head><meta charset="utf-8">'
         '<meta name="viewport" content="width=device-width,initial-scale=1">'
         f"<title>{escape(title)}</title><style>{_PAGE_CSS}</style></head>"
         f"<body><main>{body}</main></body></html>"
@@ -348,19 +378,18 @@ def _html_page(title: str, body: str) -> str:
 def _html_status(payload: dict) -> str:
     notes = _limitation_notes(payload)
     note = f'<p class="note">⚠️ {escape("; ".join(notes))}.</p>' if notes else ""
-    return f'<p class="meta">Охват: {escape(_coverage_text(payload))}.</p>{note}'
+    return f'<p class="meta">Coverage: {escape(_coverage_text(payload))}.</p>{note}'
 
 
 def render_agenda_html(payload: dict) -> str:
     snapshot = quote(payload["snapshot_id"])
     body = [
-        f"<h1>Повестка крипто-Telegram · {escape(_when(payload['t']))}</h1>",
-        '<p class="lead">Сюжеты, которые за последние 24 часа появились или набрали '
-        "каналы по сравнению с предыдущими сутками.</p>",
+        f"<h1>Crypto Telegram agenda · {escape(_when(payload['t']))}</h1>",
+        f'<p class="lead">{_LEAD}</p>',
         _html_status(payload),
     ]
     if not payload["stories"]:
-        body.append("<p>Нет новых или растущих сюжетов на сопоставимом наборе каналов.</p>")
+        body.append(f"<p>{_EMPTY}</p>")
     for index, card in enumerate(payload["stories"], 1):
         href = f"/stories/{quote(card['story_id'])}?format=html&amp;snapshot_id={snapshot}"
         title = f'<h2><a href="{href}">{index}. {escape(card["title"])}</a></h2>'
@@ -368,11 +397,12 @@ def render_agenda_html(payload: dict) -> str:
         talk = _html_discussion(card, full=False)
         body.append(f"<article>{_html_card_head(card, title)}{quotes}{talk}</article>")
     body.append(
-        f"<footer>Снимок {escape(payload['snapshot_id'])} · "
+        "<footer>Quotes from non-English posts and comments are machine-translated. "
+        f"Snapshot {escape(payload['snapshot_id'])} · "
         f'<a href="/agenda?format=md&amp;snapshot_id={snapshot}">Markdown</a> · '
         f'<a href="/agenda?snapshot_id={snapshot}">JSON</a></footer>'
     )
-    return _html_page("Повестка крипто-Telegram", "".join(body))
+    return _html_page("Crypto Telegram agenda", "".join(body))
 
 
 def render_story_html(payload: dict) -> str:
@@ -380,22 +410,24 @@ def render_story_html(payload: dict) -> str:
     snapshot = quote(payload["snapshot_id"])
     body = [
         f'<p class="meta"><a href="/agenda?format=html&amp;snapshot_id={snapshot}">'
-        "← Повестка</a></p>",
+        "← Agenda</a></p>",
         f"<article>{_html_card_head(card, f'<h1>{escape(card["title"])}</h1>')}</article>",
     ]
     if card["claims"]:
-        body.append("<h2>Что пишут</h2>" + "".join(_html_quote(c) for c in card["claims"]))
+        body.append("<h2>What channels say</h2>" + "".join(_html_quote(c) for c in card["claims"]))
     body.append(_html_discussion(card, full=True))
     if card.get("positions"):
-        body.append("<h2>Мнения авторов</h2>" + "".join(_html_quote(p) for p in card["positions"]))
+        body.append("<h2>Author opinions</h2>" + "".join(_html_quote(p) for p in card["positions"]))
     if card.get("publications"):
         items = "".join(
             f"<li>{escape(_when(pub['published_at']))} "
             f'<a href="{_url(pub["link"])}">{escape(pub["channel"])}</a></li>'
             for pub in card["publications"]
         )
-        body.append(f"<h2>Посты</h2><ul>{items}</ul>")
-    body.append(f"<footer>{_html_status(payload)}Снимок {escape(payload['snapshot_id'])}</footer>")
+        body.append(f"<h2>Posts</h2><ul>{items}</ul>")
+    body.append(
+        f"<footer>{_html_status(payload)}Snapshot {escape(payload['snapshot_id'])}</footer>"
+    )
     return _html_page(card["title"], "".join(body))
 
 

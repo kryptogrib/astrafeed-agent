@@ -57,6 +57,10 @@ class DiscussionSummarizer(Protocol):
     async def summarize(self, title: str, comments: Sequence[str]) -> DiscussionDigest: ...
 
 
+class Translator(Protocol):
+    async def to_english(self, texts: Sequence[str]) -> list[str]: ...
+
+
 class AgendaStore(Protocol):
     async def record_publication(
         self, version: PublicationVersion

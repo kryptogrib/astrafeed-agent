@@ -88,7 +88,9 @@ class Summarizer:
     async def summarize(self, title, comments):
         self.calls.append(list(comments))
         return DiscussionDigest(
-            points=("Многие не верят во взлом", " "), quote_indices=(1, 1, 99, 0)
+            points=("Многие не верят во взлом", " "),
+            quote_indices=(1, 1, 99, 0),
+            highlights=(" ", "A reader says funds are stuck", "b", "c"),
         )
 
 
@@ -114,6 +116,7 @@ async def test_discussion_is_attached_to_cards_and_details_without_touching_coun
     assert summarizer.calls[0] == COMMENTS[:6]
     assert discussion.read_count == 6
     assert discussion.points == ("Многие не верят во взлом",)
+    assert discussion.highlights == ("A reader says funds are stuck", "b")
     # Duplicate and out-of-range indices from the model are ignored.
     assert [q.text for q in discussion.quotes] == [COMMENTS[1], COMMENTS[0]]
     assert discussion.quotes[0].link == "https://t.me/b/s2?c=1"
