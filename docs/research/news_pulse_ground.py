@@ -24,7 +24,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from news_pulse_build import NO_REACTION, render_markdown  # noqa: E402
-from news_pulse_link import BASES, _event_blob, _overlap  # noqa: E402
+from news_pulse_link import BASES, _event_blob, _overlap, replies_to_event  # noqa: E402
 
 NUMBER = re.compile(r"\d+(?:[.,]\d+)?")
 
@@ -101,7 +101,7 @@ def _link_claims(pulse: dict, texts: dict[str, str], parents: dict[str, str]) ->
     """A comment link is a claim too. Its basis must be one the linker emits for that target, a
     named target must exist in this run, and the predicate behind the basis is recomputed from
     the source: a repeated wording must really overlap the event, a reply to the post's event
-    must sit under a member post, a thesis must overlap the comment or its reply chain.
+    must sit under the post of exactly that one event and be about its subject, a thesis must overlap the comment or its reply chain.
     Abstentions (topic_level, project, other_subject) name no event and are checked structurally."""
     events = {ev.get("event_id"): ev for ev in pulse.get("events") or []}
     theses = {pos.get("obs_id"): pos for pos in pulse.get("distribution_and_positions") or []}
@@ -113,13 +113,15 @@ def _link_claims(pulse: dict, texts: dict[str, str], parents: dict[str, str]) ->
         target, target_id, basis = row.get("target"), row.get("target_id"), row.get("basis") or ""
         ok = BASES.get(basis) == target
         text = texts.get(url, "")
-        if ok and target == "event" and target_id is not None:
-            event = events.get(target_id)
+        if ok and target == "event":
+            event = events.get(target_id) if target_id is not None else None
             ok = event is not None
             if ok and basis == "комментарий повторяет формулировку события":
                 ok = _overlap(text, _event_blob(event))
             elif ok and basis == "реплика к посту с одним событием по теме и тому же предмету":
-                ok = url.split("?")[0] in {m.get("url") for m in event.get("members") or []}
+                post = url.split("?")[0]
+                under = [eid for eid, ev in events.items() if post in {m.get("url") for m in ev.get("members") or []}]
+                ok = under == [target_id] and replies_to_event(text, event)
         elif ok and target == "author_thesis":
             thesis = theses.get(target_id)
             ok = thesis is not None and any(

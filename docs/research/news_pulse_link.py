@@ -15,7 +15,6 @@ BASES: dict[str, str] = {
     "реплика опирается на формулировку авторского тезиса": "author_thesis",
     "жалоба на сторонний сервис экосистемы, не на событие поста": "other_subject",
     "реплика к посту с одним событием по теме и тому же предмету": "event",
-    "реплика по предмету единственного события родительского сегмента": "event",
     "вопрос или оценка по проекту в целом, не по конкретной новости": "project",
     "совпадение темы недостаточно, связь со событием не установлена": "topic_level",
 }
@@ -82,6 +81,13 @@ def _about_event_subject(text: str, event: dict[str, Any]) -> bool:
     if PRICE_REACTION.search(text) and re.search(r"(?i)\$|\d{3,}|цена|1400|zec|eth", blob):
         return True
     return False
+
+
+def replies_to_event(text: str, event: dict[str, Any]) -> bool:
+    """The predicate behind "реплика к посту с одним событием": grounding recomputes it."""
+    return _about_event_subject(text, event) or bool(
+        DEICTIC.search(text) and PRICE_REACTION.search(text) and not SERVICE_COMPLAINT.search(text)
+    )
 
 
 def _row(target: str, comment: Publication, *, target_id: str | None = None, basis: str) -> dict[str, Any]:
@@ -157,9 +163,7 @@ def link_comment(
         ev = parent_events[0]
         if SERVICE_COMPLAINT.search(text) and not _about_event_subject(text, ev):
             return _row("other_subject", comment, basis="жалоба на сторонний сервис экосистемы, не на событие поста")
-        if _about_event_subject(text, ev) or (
-            DEICTIC.search(text) and PRICE_REACTION.search(text) and not SERVICE_COMPLAINT.search(text)
-        ):
+        if replies_to_event(text, ev):
             return _row(
                 "event",
                 comment,
@@ -167,15 +171,7 @@ def link_comment(
                 basis="реплика к посту с одним событием по теме и тому же предмету",
             )
 
-    post_events = [o for o in topic_post_obs if o.get("kind") == "event"]
-    if len(parent_events) == 0 and len(post_events) == 1 and _about_event_subject(text, {"headline": post_events[0].get("quote"), "object": post_events[0].get("object"), "members": [post_events[0]]}):
-        return _row(
-            "event",
-            comment,
-            target_id=None,
-            basis="реплика по предмету единственного события родительского сегмента",
-        )
-
+    # an event link must name an event of this run; a segment outside the events stays in doubt
     if PROJECT_HINT.search(text) and not SERVICE_COMPLAINT.search(text):
         return _row("project", comment, basis="вопрос или оценка по проекту в целом, не по конкретной новости")
 

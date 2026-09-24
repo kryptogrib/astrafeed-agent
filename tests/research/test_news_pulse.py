@@ -2127,17 +2127,31 @@ def test_grounding_checks_short_observations_and_discussion_basis(tmp_path):
     )
     assert any(f["kind"] == "discussion_basis" for f in run_of(repeats)["failures"])
 
+    no_id = json.loads(json.dumps(repeats))
+    no_id["discussion"][0].update(target_id=None, text="Фонд привлёк $12 млн.")
+    texts[curl] = "Фонд привлёк $12 млн."
+    assert any(f["kind"] == "discussion_basis" for f in run_of(no_id)["failures"])
+
+    # under the post, but "Не понимаю, зачем это нужно" is not about the raise
     under_post = json.loads(json.dumps(pulse))
     under_post["discussion"][0].update(
         target="event",
         target_id="e1",
         basis="реплика к посту с одним событием по теме и тому же предмету",
     )
+    texts[curl] = comment
+    assert any(f["kind"] == "discussion_basis" for f in run_of(under_post)["failures"])
+    about = "Фонд теперь купит, цена пойдёт вверх"
+    texts[curl] = about
+    under_post["discussion"][0].update(text=about, quote=about)
     assert not run_of(under_post)["failures"]
     elsewhere = json.loads(json.dumps(under_post))
     elsewhere["discussion"][0]["url"] = "https://t.me/other/7?comment=2"
-    texts["https://t.me/other/7?comment=2"] = comment
+    texts["https://t.me/other/7?comment=2"] = about
     assert any(f["kind"] == "discussion_basis" for f in run_of(elsewhere)["failures"])
+    two = json.loads(json.dumps(under_post))
+    two["events"].append(dict(two["events"][0], event_id="e2"))
+    assert any(f["kind"] == "discussion_basis" for f in run_of(two)["failures"])
 
 
 def test_long_comment_is_clipped_without_splitting_numbers():
