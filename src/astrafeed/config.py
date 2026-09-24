@@ -98,6 +98,7 @@ class Settings(BaseModel):
     news_channels: list[str] = Field(default_factory=list)
     rss_feeds: list[str] = Field(default_factory=list)
     reddit_feeds: list[str] = Field(default_factory=list)
+    xpoz_accounts: list[str] = Field(default_factory=list)
     interests: list[str] = Field(default_factory=lambda: ["crypto markets"])
     audit: AuditSettings = Field(default_factory=AuditSettings)
     agenda: AgendaSettings = Field(default_factory=AgendaSettings)

@@ -17,6 +17,7 @@ from sqlalchemy.exc import OperationalError
 from sqlalchemy.ext.asyncio import async_sessionmaker, create_async_engine
 from telethon import TelegramClient
 from telethon.sessions import StringSession
+from xpoz import AsyncXpozClient
 
 from astrafeed.adapters.http.app import create_app
 from astrafeed.adapters.http.okx_market import OkxMarket
@@ -39,9 +40,11 @@ from astrafeed.adapters.repository.sqlite.spend_budget import (
     SqliteSpendBudget,
     migrate_spend_reservations,
 )
+from astrafeed.adapters.repository.sqlite.xpoz import SqliteXpozThreads
 from astrafeed.adapters.source.fake import FakeSource
 from astrafeed.adapters.source.rss import RssReader
 from astrafeed.adapters.source.telegram import TelegramSource
+from astrafeed.adapters.source.xpoz import XpozReader
 from astrafeed.application.agenda_cycle import run_cycle
 from astrafeed.application.agenda_discussion import DiscussionEnricher
 from astrafeed.application.agenda_localize import EnglishLocalizer
@@ -61,6 +64,13 @@ from astrafeed.application.ingestion import (
 from astrafeed.application.pulse_ingest import CommentCollector
 from astrafeed.application.reddit_ingest import collect_reddit_feeds, resolve_reddit_feeds
 from astrafeed.application.rss_ingest import collect_feeds, resolve_feeds
+from astrafeed.application.xpoz_discussion import CompositeComments, XpozComments
+from astrafeed.application.xpoz_ingest import (
+    collect_xpoz_accounts,
+    collect_xpoz_search,
+    resolve_xpoz_accounts,
+    resolve_xpoz_search,
+)
 from astrafeed.config import Settings
 from astrafeed.domain.agenda import EMBEDDING_MODEL, LOOKBACK, Snapshot
 from astrafeed.logging_cfg import configure_logging
@@ -86,7 +96,7 @@ async def _refresh_displayed_posts(snapshot, posts, reader: TelegramSource) -> i
         async with semaphore:
             try:
                 source = await posts.get_source(source_id)
-                if source is None or source.telegram_id is None:
+                if source is None or source.telegram_id is None or source.telegram_id < 0:
                     return 0
                 items = await reader.read_posts(source.telegram_id, sorted(ids))
                 if items:
@@ -271,6 +281,8 @@ async def _agenda_poll(
     evidence_verifier: OpenRouterEvidenceVerifier,
     summarizer: OpenRouterDiscussionSummarizer,
     translator: OpenRouterTranslator,
+    xpoz_reader: XpozReader | None = None,
+    xpoz_threads: SqliteXpozThreads | None = None,
 ) -> None:
     collection_window = max(LOOKBACK, timedelta(hours=cfg.backfill_hours))
     reader = TelegramSource(client, backfill_window=collection_window)
@@ -279,7 +291,12 @@ async def _agenda_poll(
     comment_source = TelegramSource(
         client, discussion_join_limit_per_run=cfg.agenda.discussion_joins_per_cycle
     )
-    discussions = DiscussionEnricher(comment_source, summarizer)
+    discussion_reader = (
+        CompositeComments(comment_source, XpozComments(xpoz_reader, xpoz_threads))
+        if xpoz_reader is not None and xpoz_threads is not None
+        else comment_source
+    )
+    discussions = DiscussionEnricher(discussion_reader, summarizer)
     english = EnglishLocalizer(translator)
     market = OkxMarket()
 
@@ -295,6 +312,8 @@ async def _agenda_poll(
     source_ids: list[int] = []
     rss_feeds: dict[int, str] = {}
     reddit_feeds: dict[int, str] = {}
+    xpoz_accounts: dict[int, str] = {}
+    xpoz_search_id: int | None = None
     while True:
         now = datetime.now(UTC)
         cycle_state = await agenda.get_cycle_state()
@@ -328,6 +347,16 @@ async def _agenda_poll(
             except Exception as exc:
                 _log.error("agenda Reddit source resolution failed: %s", type(exc).__name__)
                 reddit_feeds = {}
+            if cfg.xpoz_accounts:
+                try:
+                    xpoz_accounts = await resolve_xpoz_accounts(posts, cfg.xpoz_accounts)
+                    source_ids.extend(xpoz_accounts)
+                    xpoz_search_id = await resolve_xpoz_search(posts)
+                    source_ids.append(xpoz_search_id)
+                except Exception as exc:
+                    _log.error("agenda Xpoz source resolution failed: %s", type(exc).__name__)
+                    xpoz_accounts = {}
+                    xpoz_search_id = None
             if not source_ids:
                 cycle_state.last_error = "source_unavailable"
                 cycle_state.phase = "idle"
@@ -341,9 +370,18 @@ async def _agenda_poll(
             ids: list[int] = source_ids,
             feeds: dict[int, str] = rss_feeds,
             subreddits: dict[int, str] = reddit_feeds,
+            x_accounts: dict[int, str] = xpoz_accounts,
+            x_search_id: int | None = xpoz_search_id,
         ) -> None:
             if ids:
-                telegram_ids = [sid for sid in ids if sid not in feeds and sid not in subreddits]
+                telegram_ids = [
+                    sid
+                    for sid in ids
+                    if sid not in feeds
+                    and sid not in subreddits
+                    and sid not in x_accounts
+                    and sid != x_search_id
+                ]
                 result = await coordinator.ensure_window(telegram_ids, start, end)
                 async with httpx.AsyncClient(
                     timeout=15,
@@ -354,13 +392,32 @@ async def _agenda_poll(
                     reddit_errors = await collect_reddit_feeds(
                         posts, RssReader(http), subreddits, start, end
                     )
+                xpoz_errors: dict[int, str] = {}
+                if xpoz_reader is not None and x_search_id is not None:
+                    search_error = await collect_xpoz_search(
+                        posts,
+                        xpoz_reader,
+                        x_search_id,
+                        x_accounts,
+                        start,
+                        end,
+                        threads=xpoz_threads,
+                    )
+                    if search_error:
+                        xpoz_errors[x_search_id] = search_error
+                    xpoz_errors.update(
+                        await collect_xpoz_accounts(
+                            posts, xpoz_reader, x_accounts, start, end, threads=xpoz_threads
+                        )
+                    )
                 _log.info(
                     "agenda collect sources=%d incomplete=%d errors=%d",
                     len(ids),
                     sum(not coverage.complete for coverage in result.values())
                     + len(rss_errors)
-                    + len(reddit_errors),
-                    len(result.errors) + len(rss_errors) + len(reddit_errors),
+                    + len(reddit_errors)
+                    + len(xpoz_errors),
+                    len(result.errors) + len(rss_errors) + len(reddit_errors) + len(xpoz_errors),
                 )
                 previous_snapshot = await agenda.get_snapshot(None)
                 if previous_snapshot is not None:
@@ -445,6 +502,21 @@ async def _serve(config_path: str) -> None:
     engine, session = await _storage(cfg)
     posts = SqliteIngestionStore(session)
     agenda = SqliteAgendaStore(session)
+    xpoz_threads = SqliteXpozThreads(session)
+    xpoz_client: AsyncXpozClient | None = None
+    xpoz_reader: XpozReader | None = None
+    if cfg.xpoz_accounts and os.environ.get("XPOZ_API_KEY"):
+        try:
+            xpoz_client = AsyncXpozClient(
+                api_key=os.environ["XPOZ_API_KEY"], check_update=False, timeout=30
+            )
+            xpoz_reader = XpozReader(xpoz_client)
+            _log.info("Xpoz source enabled for %d configured accounts", len(cfg.xpoz_accounts))
+        except Exception as exc:
+            _log.error("Xpoz setup unavailable: %s", type(exc).__name__)
+            if xpoz_client is not None:
+                await xpoz_client.close()
+            xpoz_client = None
     await agenda.ensure_search()
     extractor, embedder, assigner, evidence_verifier, summarizer, translator = _agenda_llm(
         cfg, session
@@ -498,6 +570,8 @@ async def _serve(config_path: str) -> None:
             evidence_verifier,
             summarizer,
             translator,
+            xpoz_reader,
+            xpoz_threads,
         ),
         name="agenda-cycle",
     )
@@ -507,6 +581,8 @@ async def _serve(config_path: str) -> None:
         poll_task.cancel()
         await asyncio.gather(poll_task, return_exceptions=True)
         await client.disconnect()
+        if xpoz_client is not None:
+            await xpoz_client.close()
         await engine.dispose()
 
 

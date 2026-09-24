@@ -262,6 +262,8 @@ def _source_group(name: str, link: str) -> str:
     host = (urlsplit(link).hostname or "").lower()
     if host in {"t.me", "telegram.me"}:
         return "Telegram"
+    if host in {"x.com", "www.x.com", "twitter.com", "www.twitter.com"}:
+        return "X"
     if host in {"reddit.com", "www.reddit.com", "old.reddit.com", "redd.it"} or name.startswith(
         "r/"
     ):
@@ -373,6 +375,8 @@ def _coverage_text(payload: dict) -> str:
     )
     if cov["channels_failed"]:
         text += f", {cov['channels_failed']} unavailable"
+    if cov.get("channels_incomplete", 0):
+        text += f", {cov['channels_incomplete']} incompletely sampled"
     return text
 
 
@@ -684,9 +688,9 @@ def _html_card_head(card: dict, title_html: str) -> str:
                 )
             groups.setdefault(_source_group(name, link), []).append(item)
         sections = "".join(
-            f'<div class="source-group"><span>{label}</span><div>{" · ".join(items)}</div></div>'
-            for label in ("Telegram", "Reddit", "News sites", "Other sources")
-            if (items := groups.get(label))
+            f'<div class="source-group"><span>{label}</span><div>{" · ".join(group)}</div></div>'
+            for label in ("Telegram", "X", "Reddit", "News sites", "Other sources")
+            if (group := groups.get(label))
         )
         parts.append(f'<div class="src"><b>Sources</b>{sections}</div>')
     return "".join(parts)
