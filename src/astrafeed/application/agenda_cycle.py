@@ -156,19 +156,34 @@ async def run_cycle(
                     extract_seconds += perf_counter() - started
 
         tasks = [asyncio.create_task(extract_one(pub)) for pub in pending]
+        _log.info(
+            "agenda analyze started posts=%d concurrency=%d", len(pending), extract_concurrency
+        )
         try:
-            for publication, task in zip(pending, tasks, strict=True):
-                extraction = await task
-                if extraction.status == "error":
-                    continue
-                if extraction.status == "empty":
-                    await store.mark_processed(publication.publication_id)
-                    continue
-                started = perf_counter()
+            for processed, (publication, task) in enumerate(zip(pending, tasks, strict=True), 1):
                 try:
-                    await assign_publication(store, embedder, assigner, publication, extraction)
+                    extraction = await task
+                    if extraction.status == "error":
+                        continue
+                    if extraction.status == "empty":
+                        await store.mark_processed(publication.publication_id)
+                        continue
+                    started = perf_counter()
+                    try:
+                        await assign_publication(store, embedder, assigner, publication, extraction)
+                    finally:
+                        assign_seconds += perf_counter() - started
                 finally:
-                    assign_seconds += perf_counter() - started
+                    if processed % 25 == 0:
+                        _log.info(
+                            "agenda analyze progress=%d/%d extract_seconds=%.1f "
+                            "assign_seconds=%.1f wall_seconds=%.1f",
+                            processed,
+                            len(pending),
+                            extract_seconds,
+                            assign_seconds,
+                            perf_counter() - pipeline_started,
+                        )
         finally:
             for task in tasks:
                 if not task.done():
