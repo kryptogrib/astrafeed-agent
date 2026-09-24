@@ -4,8 +4,10 @@ from __future__ import annotations
 
 import asyncio
 import hashlib
+import logging
 from collections.abc import Sequence
 from dataclasses import dataclass
+from time import perf_counter
 from typing import Literal
 
 from astrafeed.domain.agenda import (
@@ -27,6 +29,8 @@ from astrafeed.domain.agenda import (
 )
 from astrafeed.domain.spend_budget import BudgetExceeded
 from astrafeed.ports.agenda import AgendaStore, Embedder, StoryAssigner
+
+_log = logging.getLogger(__name__)
 
 
 def _stable_id(prefix: str, *parts: str) -> str:
@@ -352,12 +356,18 @@ async def assign_speculative_batch(
         return 0, 0
     if concurrency < 1:
         raise ValueError("concurrency must be positive")
+    batch_started = perf_counter()
+    embed_seconds = 0.0
+    context_seconds = 0.0
+    model_seconds = 0.0
+    commit_seconds = 0.0
     start = min(pub.published_at for pub, _ in jobs) - LOOKBACK
     pool = await store.fragments_since(start)
     links = await store.links_for_publications({item.publication_id for item in pool})
     entities = await store.list_entities()
     stories = await store.list_stories()
     events = await store.list_events()
+    load_seconds = perf_counter() - batch_started
     frozen_pool = tuple(pool)
     frozen_links = tuple(links)
     frozen_entities = tuple(entities)
@@ -369,14 +379,18 @@ async def assign_speculative_batch(
     async def prepare(
         publication: PublicationVersion, extraction: ExtractionResult
     ) -> list[PreparedFragment]:
+        nonlocal embed_seconds, context_seconds, model_seconds
         prepared: list[PreparedFragment] = []
         for index, fragment in enumerate(extraction.fragments):
             if not fragment.claims:
                 continue
             surfaces = [entity.surface for entity in fragment.entities]
             key = embedding_cache_key(embedding_input(fragment.text, surfaces))
+            started = perf_counter()
             async with embedding_locks.setdefault(key, asyncio.Lock()), semaphore:
                 indexed = await _indexed_for(store, embedder, publication, index, fragment)
+            embed_seconds += perf_counter() - started
+            started = perf_counter()
             context = _context_from_state(
                 indexed,
                 frozen_pool,
@@ -385,6 +399,8 @@ async def assign_speculative_batch(
                 frozen_stories,
                 frozen_events,
             )
+            context_seconds += perf_counter() - started
+            started = perf_counter()
             try:
                 async with semaphore:
                     assignment = await _decide(assigner, indexed, context)
@@ -392,6 +408,8 @@ async def assign_speculative_batch(
                 raise
             except Exception:
                 assignment = None
+            finally:
+                model_seconds += perf_counter() - started
             prepared.append(PreparedFragment(index, fragment, indexed, context, assignment))
             if assignment is None:
                 break
@@ -411,22 +429,28 @@ async def assign_speculative_batch(
     for (publication, _), prepared in zip(jobs, proposals, strict=True):
         failed = False
         for proposal in prepared:
+            started = perf_counter()
             context = _context_from_state(proposal.indexed, pool, links, entities, stories, events)
+            context_seconds += perf_counter() - started
             assignment = proposal.assignment
             if context != proposal.context:
                 retried += 1
+                started = perf_counter()
                 try:
                     assignment = await _decide(assigner, proposal.indexed, context)
                 except BudgetExceeded:
                     raise
                 except Exception:
                     assignment = None
+                finally:
+                    model_seconds += perf_counter() - started
             else:
                 reused += 1
             if assignment is None:
                 await store.enqueue(publication.publication_id, "assign_error")
                 failed = True
                 break
+            started = perf_counter()
             effect = await _apply_decision(
                 store,
                 publication,
@@ -436,6 +460,7 @@ async def assign_speculative_batch(
                 context,
                 assignment,
             )
+            commit_seconds += perf_counter() - started
             if not effect.valid:
                 failed = True
                 break
@@ -453,6 +478,20 @@ async def assign_speculative_batch(
                 pool.append(effect.indexed)
         if not failed:
             await store.mark_processed(publication.publication_id)
+    _log.info(
+        "agenda assign batch posts=%d reused=%d retried=%d load_seconds=%.1f "
+        "embed_seconds=%.1f context_seconds=%.1f model_seconds=%.1f "
+        "commit_seconds=%.1f wall_seconds=%.1f",
+        len(jobs),
+        reused,
+        retried,
+        load_seconds,
+        embed_seconds,
+        context_seconds,
+        model_seconds,
+        commit_seconds,
+        perf_counter() - batch_started,
+    )
     return reused, retried
 
 
