@@ -391,6 +391,67 @@ class DiscussionDigest:
 
 
 @dataclass(frozen=True)
+class SourceNode:
+    """One channel's first post on a story, in spread order."""
+
+    channel_ref: str
+    link: str
+    published_at: datetime
+    minutes_after_first: int
+    # Channel whose earlier post this one copies near-verbatim; "" for an original.
+    echo_of: str = ""
+    # Strongest sourcing marker in this post: official, attributed, rumor or unmarked.
+    sourcing: str = "unmarked"
+
+
+@dataclass(frozen=True)
+class FigureGroup:
+    """One amount as stated by one or more channels, with the quoted wording."""
+
+    text: str
+    usd: float
+    channels: tuple[str, ...]
+
+
+@dataclass(frozen=True)
+class PriceMove:
+    """Market price since the story was first seen in the observed channels."""
+
+    inst_id: str
+    since: datetime
+    price_then: float
+    price_now: float
+    change_pct: float
+    measured_at: datetime
+
+
+@dataclass(frozen=True)
+class StorySignals:
+    """Code-computed evidence about how a story spread; no model involved."""
+
+    sources: tuple[SourceNode, ...] = ()
+    independent_channels: int = 0
+    echo_channels: int = 0
+    spread_minutes: int | None = None
+    confirmation: str = "unmarked"
+    attributed_to: tuple[str, ...] = ()
+    figures: tuple[FigureGroup, ...] = ()
+    figures_conflict: bool = False
+    tickers: tuple[str, ...] = ()
+    scheduled: bool = False
+    price: PriceMove | None = None
+
+
+@dataclass(frozen=True)
+class ChannelLead:
+    """How often a channel posted a displayed story before any other channel."""
+
+    channel_ref: str
+    stories_first: int
+    median_lead_minutes: int
+
+
+@dataclass(frozen=True)
 class StoryCard:
     story_id: str
     title: str
@@ -409,6 +470,7 @@ class StoryCard:
     event_count: int = 0
     position_count: int = 0
     discussion: Discussion | None = None
+    signals: StorySignals | None = None
 
 
 @dataclass(frozen=True)
@@ -476,6 +538,9 @@ class Snapshot:
     agenda_mode: str
     stories: dict[str, StoryDetail] = field(default_factory=dict)
     search_docs: tuple[SearchDoc, ...] = ()
+    # Calendar items (scheduled data releases) kept out of the growth agenda.
+    upcoming: tuple[StoryCard, ...] = ()
+    lead_channels: tuple[ChannelLead, ...] = ()
 
 
 @dataclass

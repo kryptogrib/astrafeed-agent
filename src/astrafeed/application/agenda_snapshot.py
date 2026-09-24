@@ -6,9 +6,11 @@ import asyncio
 import hashlib
 import re
 from collections import defaultdict
+from dataclasses import replace
 from datetime import datetime
 
 from astrafeed.application.agenda_extract import claim_is_noise
+from astrafeed.application.agenda_signals import lead_channels, story_signals
 from astrafeed.domain.agenda import (
     ClaimCard,
     CoverageInfo,
@@ -462,6 +464,17 @@ async def build_snapshot(
             event_count=len(story_events),
             position_count=len(positions),
         )
+        signals = story_signals(
+            card,
+            current_all,
+            [
+                (by_id[link.publication_id].channel_ref, link.quote)
+                for link in links
+                if link.publication_id in by_id
+                and in_window(by_id[link.publication_id].published_at, current)
+            ],
+        )
+        card = replace(card, signals=signals)
         details[story.story_id] = StoryDetail(
             card=card,
             events=tuple(
@@ -483,7 +496,9 @@ async def build_snapshot(
                 "current_channels": card.current_channels,
                 "previous_channels": card.previous_channels,
                 "freshness": card.freshness,
-                "eligible": title.casefold() not in {"", "сюжет", "story"}
+                "scheduled": signals.scheduled,
+                "eligible": not signals.scheduled
+                and title.casefold() not in {"", "сюжет", "story"}
                 and not (not primary_entity and _UNNAMED_PROJECT.match(title))
                 and not _PROFANITY.search(title)
                 and numbers_are_grounded(title, [claim.quote for claim in claim_cards]),
@@ -494,6 +509,13 @@ async def build_snapshot(
         )
     selected, mode = select_agenda(cards, len(comparable))
     agenda = tuple(item["card"] for item in selected)
+    upcoming = tuple(
+        item["card"]
+        for item in sorted(
+            (item for item in cards if item["scheduled"] and item["current_channels"] >= 2),
+            key=lambda item: (-item["current_channels"], item["story_id"]),
+        )[:5]
+    )
     docs: list[SearchDoc] = []
     for detail in details.values():
         docs.append(SearchDoc(detail.card.story_id, "title", detail.card.title))
@@ -557,6 +579,8 @@ async def build_snapshot(
         agenda_mode=mode,
         stories=details,
         search_docs=tuple(docs),
+        upcoming=upcoming,
+        lead_channels=lead_channels(agenda),
     )
 
 

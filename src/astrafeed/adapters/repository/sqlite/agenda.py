@@ -42,6 +42,11 @@ from astrafeed.domain.agenda import (
     StoryCard,
     StoryDetail,
     StoryLink,
+    SourceNode,
+    FigureGroup,
+    PriceMove,
+    StorySignals,
+    ChannelLead,
     queue_reason_retryable,
 )
 
@@ -71,6 +76,11 @@ _TYPES = {
         StoryCard,
         StoryDetail,
         StoryLink,
+        SourceNode,
+        FigureGroup,
+        PriceMove,
+        StorySignals,
+        ChannelLead,
     )
 }
 

@@ -42,6 +42,8 @@ from astrafeed.adapters.source.telegram import TelegramSource
 from astrafeed.application.agenda_cycle import run_cycle
 from astrafeed.application.agenda_discussion import DiscussionEnricher
 from astrafeed.application.agenda_localize import EnglishLocalizer
+from astrafeed.application.agenda_signals import add_price_moves
+from astrafeed.adapters.http.okx_market import OkxMarket
 from astrafeed.application.agenda_query import (
     agenda_payload,
     health_payload,
@@ -272,10 +274,12 @@ async def _agenda_poll(
         TelegramSource(client, discussion_join_limit_per_run=0), summarizer
     )
     english = EnglishLocalizer(translator)
+    market = OkxMarket()
 
     async def discuss_in_english(snapshot: Snapshot, now: datetime) -> Snapshot:
         # Translate after comments are attached so their quotes are covered too.
-        return await english.localize(await discussions.enrich(snapshot, now))
+        snapshot = await english.localize(await discussions.enrich(snapshot, now))
+        return await add_price_moves(snapshot, market, now)
 
     coordinator = IngestionCoordinator(
         posts, reader, resolver=reader, limits=limits_from_settings(cfg)

@@ -75,6 +75,49 @@ def _card_payload(card: StoryCard) -> dict:
             for claim in card.claims
         ],
         "discussion": _discussion_payload(card),
+        "signals": _signals_payload(card),
+    }
+
+
+def _signals_payload(card: StoryCard) -> dict | None:
+    signals = card.signals
+    if signals is None:
+        return None
+    price = signals.price
+    return {
+        "independent_channels": signals.independent_channels,
+        "echo_channels": signals.echo_channels,
+        "spread_minutes": signals.spread_minutes,
+        "confirmation": signals.confirmation,
+        "attributed_to": list(signals.attributed_to),
+        "figures": [
+            {"text": figure.text, "usd": figure.usd, "channels": list(figure.channels)}
+            for figure in signals.figures
+        ],
+        "figures_conflict": signals.figures_conflict,
+        "tickers": list(signals.tickers),
+        "sources": [
+            {
+                "channel": node.channel_ref,
+                "link": node.link,
+                "published_at": node.published_at.isoformat(),
+                "minutes_after_first": node.minutes_after_first,
+                "echo_of": node.echo_of or None,
+                "sourcing": node.sourcing,
+            }
+            for node in signals.sources
+        ],
+        "price": None
+        if price is None
+        else {
+            "inst_id": price.inst_id,
+            "since": price.since.isoformat(),
+            "price_then": price.price_then,
+            "price_now": price.price_now,
+            "change_pct": price.change_pct,
+            "measured_at": price.measured_at.isoformat(),
+            "source": "OKX spot",
+        },
     }
 
 
@@ -168,12 +211,94 @@ def _meta_text(card: dict) -> str:
     return " · ".join([*card["entities"][:5], f"first seen {_when(card['first_seen'])}"])
 
 
-def _channel_links(card: dict) -> list[tuple[str, str]]:
-    """One (channel, post link) pair per channel, in claim order."""
+def _channel_links(card: dict) -> list[tuple[str, str, str]]:
+    """(channel, first post link, note) per channel in spread order; note marks copies."""
+    signals = card.get("signals")
+    if signals and signals["sources"]:
+        result = []
+        for index, node in enumerate(signals["sources"]):
+            minutes = node["minutes_after_first"]
+            note = f"+{_duration(minutes)}" if minutes else ("first" if index == 0 else "same minute")
+            if node["echo_of"]:
+                note = f"copy of {node['echo_of']}, {note}"
+            result.append((node["channel"], node["link"], note))
+        return result
     seen: dict[str, str] = {}
     for claim in card["claims"]:
         seen.setdefault(claim["channel"], claim["link"])
-    return list(seen.items())
+    return [(name, link, "") for name, link in seen.items()]
+
+
+def _head_start(lead: dict) -> str:
+    minutes = lead["median_lead_minutes"]
+    return f"median head start {_duration(minutes)}" if minutes else "tied with another channel"
+
+
+def _duration(minutes: int) -> str:
+    if minutes < 60:
+        return f"{minutes}m"
+    hours, rest = divmod(minutes, 60)
+    return f"{hours}h {rest:02d}m" if rest else f"{hours}h"
+
+
+_CONFIRMATION = {
+    "official": "✅ cites an official statement",
+    "attributed": "🟡 attributed",
+    "rumor": "🔴 unconfirmed / rumor",
+}
+
+
+def _usd(value: float) -> str:
+    for size, suffix in ((1e9, "B"), (1e6, "M"), (1e3, "K")):
+        if value >= size:
+            return f"${value / size:.3g}{suffix}"
+    return f"${value:,.0f}"
+
+
+def _signal_lines(card: dict) -> list[str]:
+    """Evidence lines computed by code: independence, sourcing, spread, figures, price."""
+    signals = card.get("signals")
+    if not signals:
+        return []
+    lines: list[str] = []
+    sourcing = _CONFIRMATION.get(signals["confirmation"], "")
+    if sourcing and signals["confirmation"] == "attributed" and signals["attributed_to"]:
+        sourcing += ": " + ", ".join(signals["attributed_to"])
+    if sourcing:
+        lines.append(f"Sourcing: {sourcing}")
+    sources = signals["sources"]
+    if len(sources) >= 2 and signals["spread_minutes"] is not None:
+        first = sources[0]
+        lines.append(
+            f"⏱ First: {first['channel']} at {_clock(first['published_at'])} → "
+            f"{_channels(len(sources))} in {_duration(signals['spread_minutes'])}"
+        )
+    if signals["figures_conflict"]:
+        parts = [
+            f"{_usd(f['usd'])} ({_channels(len(f['channels']))}: {', '.join(f['channels'])})"
+            for f in signals["figures"]
+        ]
+        lines.append("⚠️ Figures differ: " + " vs ".join(parts))
+    price = signals.get("price")
+    if price:
+        arrow = "📈" if price["change_pct"] >= 0 else "📉"
+        lines.append(
+            f"{arrow} {price['inst_id'].split('-')[0]} {price['change_pct']:+.2f}% since first post "
+            f"({price['price_then']:g} → {price['price_now']:g} USDT, OKX spot; not causal)"
+        )
+    return lines
+
+
+def _clock(iso: str) -> str:
+    return datetime.fromisoformat(iso).strftime("%H:%M UTC")
+
+
+def _count_text(card: dict) -> str:
+    text = _channels(card["current_channels"])
+    signals = card.get("signals")
+    if signals and signals["echo_channels"]:
+        text += f" ({signals['independent_channels']} independent, {signals['echo_channels']} {'copy' if signals['echo_channels'] == 1 else 'copies'})"
+    return text
 
 
 def _coverage_text(payload: dict) -> str:
@@ -205,14 +330,23 @@ def _md_card_head(card: dict, heading: str) -> list[str]:
     lines = [
         heading,
         "",
-        f"**{_channels(card['current_channels'])}** · {_growth_text(card)}  ",
+        f"**{_count_text(card)}** · {_growth_text(card)}  ",
         _meta_text(card),
         "",
         card["explanation"],
     ]
+    signal_lines = _signal_lines(card)
+    if signal_lines:
+        lines += [""] + [f"{line}  " for line in signal_lines]
     channels = _channel_links(card)
     if channels:
-        lines += ["", "Covered by: " + " · ".join(f"[{name}]({link})" for name, link in channels)]
+        lines += [
+            "",
+            "Covered by: "
+            + " · ".join(
+                f"[{name}]({link})" + (f" ({note})" if note else "") for name, link, note in channels
+            ),
+        ]
     return lines
 
 
@@ -270,8 +404,33 @@ def render_agenda_md(payload: dict) -> str:
         for claim in card["claims"][:_CARD_QUOTES]:
             lines += _md_quote(claim)
         lines += _md_discussion(card, full=False)
-    lines += ["", "---", "", "_Quotes from non-English posts and comments are machine-translated._"]
+    lines += _md_extras(payload)
+    lines += [
+        "",
+        "---",
+        "",
+        "_Quotes from non-English posts and comments are machine-translated. "
+        "Copies are posts that repeat an earlier channel's text near-verbatim; "
+        "they add reach, not confirmation. Prices are context, not cause._",
+    ]
     return "\n".join(lines) + "\n"
+
+
+def _md_extras(payload: dict) -> list[str]:
+    lines: list[str] = []
+    leads = payload.get("lead_channels") or []
+    if leads:
+        lines += ["", "---", "", "## ⚡ First to report"]
+        lines += [
+            f"- **{lead['channel']}** — first on {lead['stories_first']} "
+            f"{'story' if lead['stories_first'] == 1 else 'stories'}, {_head_start(lead)}"
+            for lead in leads
+        ]
+    upcoming = payload.get("upcoming") or []
+    if upcoming:
+        lines += ["", "## 📅 On the calendar"]
+        lines += [f"- {card['title']} ({_channels(card['current_channels'])})" for card in upcoming]
+    return lines
 
 
 def render_story_md(payload: dict) -> str:
@@ -319,6 +478,13 @@ ul{padding-left:20px}footer{font-size:.85rem;margin-top:24px}
 .talk{border-top:1px dashed var(--line);margin-top:12px;padding-top:8px}
 .talk ul{margin:4px 0}
 details{color:var(--muted);font-size:.85rem}summary{cursor:pointer}
+.sig{font-size:.92rem;margin:8px 0;padding:0;list-style:none}.sig li{margin:2px 0}
+.conflict{background:var(--warn);border-radius:6px;padding:2px 6px}
+.tl{position:relative;height:30px;margin:10px 4px 2px;border-top:2px solid var(--line)}
+.tl a{position:absolute;top:-7px;width:12px;height:12px;margin-left:-6px;border-radius:50%;
+background:var(--accent)}.tl a.echo{background:var(--card);border:2px solid var(--muted)}
+.tl span{position:absolute;top:8px;font-size:.75rem;color:var(--muted);white-space:nowrap}
+.src .echo{color:var(--muted)}
 """
 
 
@@ -340,19 +506,51 @@ def _html_quote(item: dict) -> str:
     )
 
 
+def _html_timeline(card: dict) -> str:
+    """Dots along the spread window: filled for originals, hollow for copies."""
+    signals = card.get("signals")
+    if not signals or len(signals["sources"]) < 2 or not signals["spread_minutes"]:
+        return ""
+    span = signals["spread_minutes"]
+    dots = "".join(
+        f'<a class="{"echo" if node["echo_of"] else ""}" style="left:{node["minutes_after_first"] / span * 100:.1f}%" '
+        f'href="{_url(node["link"])}" title="{escape(node["channel"])} '
+        f'{escape(_clock(node["published_at"]))}"></a>'
+        for node in signals["sources"]
+    )
+    first = signals["sources"][0]
+    labels = (
+        f'<span style="left:0">{escape(_clock(first["published_at"]))}</span>'
+        f'<span style="right:0">+{escape(_duration(span))}</span>'
+    )
+    return f'<div class="tl" aria-label="spread timeline">{dots}{labels}</div>'
+
+
 def _html_card_head(card: dict, title_html: str) -> str:
     growth_class = ' class="up"' if isinstance(card["growth"], int) and card["growth"] > 0 else ""
     parts = [
         title_html,
-        f'<p><span class="stat">{_channels(card["current_channels"])}</span> · '
+        f'<p><span class="stat">{escape(_count_text(card))}</span> · '
         f"<span{growth_class}>{escape(_growth_text(card))}</span><br>"
         f'<span class="meta">{escape(_meta_text(card))}</span></p>',
         f"<p>{escape(card['explanation'])}</p>",
     ]
+    signal_lines = _signal_lines(card)
+    if signal_lines:
+        items = "".join(
+            f'<li{" class=conflict" if line.startswith("⚠️") else ""}>{escape(line)}</li>'
+            for line in signal_lines
+        )
+        parts.append(f'<ul class="sig">{items}</ul>')
+    parts.append(_html_timeline(card))
     channels = _channel_links(card)
     if channels:
-        links = " · ".join(f'<a href="{_url(link)}">{escape(name)}</a>' for name, link in channels)
-        parts.append(f"<p>Covered by: {links}</p>")
+        links = " · ".join(
+            f'<a href="{_url(link)}">{escape(name)}</a>'
+            + (f' <span class="{"echo" if "copy" in note else "meta"}">({escape(note)})</span>' if note else "")
+            for name, link, note in channels
+        )
+        parts.append(f'<p class="src">Covered by: {links}</p>')
     return "".join(parts)
 
 
@@ -366,7 +564,8 @@ def _html_discussion(card: dict, *, full: bool) -> str:
         source = quote_html = ""
         if comment:
             source = (
-                f' — <a href="{_url(comment["link"])}">comment in {escape(comment["channel"])}</a>'
+                f' — <a href="{_url(comment["link"])}">comment in '
+                f"{escape(comment['channel'])}</a>"
             )
             if full:
                 quote_html = (
@@ -410,8 +609,26 @@ def render_agenda_html(payload: dict) -> str:
         quotes = "".join(_html_quote(claim) for claim in card["claims"][:_CARD_QUOTES])
         talk = _html_discussion(card, full=False)
         body.append(f"<article>{_html_card_head(card, title)}{quotes}{talk}</article>")
+    leads = payload.get("lead_channels") or []
+    if leads:
+        items = "".join(
+            f"<li><b>{escape(lead['channel'])}</b> — first on {lead['stories_first']} "
+            f"{'story' if lead['stories_first'] == 1 else 'stories'}, "
+            f"{escape(_head_start(lead))}</li>"
+            for lead in leads
+        )
+        body.append(f"<h2>⚡ First to report</h2><ul>{items}</ul>")
+    upcoming = payload.get("upcoming") or []
+    if upcoming:
+        items = "".join(
+            f"<li>{escape(card['title'])} ({_channels(card['current_channels'])})</li>"
+            for card in upcoming
+        )
+        body.append(f"<h2>📅 On the calendar</h2><ul>{items}</ul>")
     body.append(
-        "<footer>Quotes from non-English posts and comments are machine-translated. "
+        "<footer>Copies repeat an earlier channel's text near-verbatim: reach, not confirmation. "
+        "Prices are OKX spot context, not cause. "
+        "Quotes from non-English posts and comments are machine-translated. "
         f"Snapshot {escape(payload['snapshot_id'])} · "
         f'<a href="/agenda?format=md&amp;snapshot_id={snapshot}">Markdown</a> · '
         f'<a href="/agenda?snapshot_id={snapshot}">JSON</a></footer>'
@@ -514,6 +731,15 @@ async def agenda_payload(store: AgendaStore, *, snapshot_id: str | None, now: da
     snapshot = await load_snapshot(store, snapshot_id)
     payload = _status(snapshot, now)
     payload["stories"] = [_card_payload(card) for card in snapshot.agenda]
+    payload["upcoming"] = [_card_payload(card) for card in snapshot.upcoming]
+    payload["lead_channels"] = [
+        {
+            "channel": lead.channel_ref,
+            "stories_first": lead.stories_first,
+            "median_lead_minutes": lead.median_lead_minutes,
+        }
+        for lead in snapshot.lead_channels
+    ]
     payload["brief_markdown"] = render_agenda_md(payload)
     return payload
 
