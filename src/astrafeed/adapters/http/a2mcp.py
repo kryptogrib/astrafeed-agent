@@ -99,7 +99,7 @@ def _landing_html(result: dict[str, Any]) -> str:
         "<link rel='icon' href='/favicon.ico' type='image/x-icon'>"
         "<title>AstraFeed</title></head><body>"
         "<h1>AstraFeed</h1>"
-        "<p>Live crypto Telegram agenda. POST this URL; an empty body returns JSON.</p>"
+        "<p>Live crypto agenda. POST this URL; an empty body returns JSON.</p>"
         f"<pre>curl -sS -X POST https://cutememe.lol{A2MCP_PATH} "
         "-H 'content-type: application/json' -d '{}'</pre>"
         f"<p>Now: {snapshot}</p><ol>{items}</ol>"

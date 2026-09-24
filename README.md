@@ -2,7 +2,7 @@
 
 [![check](https://github.com/kryptogrib/astrafeed-agent/actions/workflows/check.yml/badge.svg)](https://github.com/kryptogrib/astrafeed-agent/actions/workflows/check.yml)
 
-**What changed in crypto Telegram, who said it first, and where is the evidence?**
+**What changed across crypto sources, who said it first, and where is the evidence?**
 
 AstraFeed turns posts from 38 curated public Telegram channels, RSS and Reddit feeds, and selected X accounts into a live agenda for humans and AI agents. It groups posts into stories, compares the last 24 hours with the previous 24, and links every displayed claim to its original source. The same published snapshot is available as a readable page, JSON, Markdown, and an OKX.AI A2MCP service.
 
