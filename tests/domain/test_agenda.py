@@ -217,3 +217,40 @@ def test_agenda_limits_stories_from_identical_publication_sets():
     selected, _ = select_agenda(cards, comparable_count=4)
     assert [item["story_id"] for item in selected] == ["digest-0", "independent"]
     assert len(cards) == 5
+
+
+def test_agenda_shows_one_retelling_of_same_entity_pair_and_event():
+    from astrafeed.domain.agenda import select_agenda
+
+    first = datetime(2026, 9, 24, 12, 5, tzinfo=UTC)
+    cards = [
+        {
+            "story_id": "portfolios",
+            "title": "BlackRock и Ondo Finance запускают токенизированные инвестпортфели",
+            "entities": ("BlackRock", "Ondo Finance"),
+            "first_seen": first,
+            "growth": 5,
+            "current_channels": 5,
+            "eligible": True,
+        },
+        {
+            "story_id": "partnership",
+            "title": "ONDO объявляет о партнерстве с BlackRock по токенизации",
+            "entities": ("Ondo Finance", "BlackRock"),
+            "first_seen": first + timedelta(minutes=2),
+            "growth": 2,
+            "current_channels": 2,
+            "eligible": True,
+        },
+        {
+            "story_id": "different-event",
+            "title": "BlackRock and Ondo report quarterly earnings",
+            "entities": ("Ondo Finance", "BlackRock"),
+            "first_seen": first + timedelta(hours=1),
+            "growth": 1,
+            "current_channels": 2,
+            "eligible": True,
+        },
+    ]
+    selected, _ = select_agenda(cards, comparable_count=4)
+    assert [item["story_id"] for item in selected] == ["portfolios", "different-event"]
