@@ -191,3 +191,31 @@ def test_agenda_limits_each_confirmed_primary_entity_to_two_without_losing_stori
     selected, _ = select_agenda(cards, comparable_count=4)
     assert [item["story_id"] for item in selected] == ["var-0", "var-1", "other"]
     assert len(cards) == 5
+
+
+def test_agenda_limits_stories_from_identical_publication_sets():
+    from astrafeed.domain.agenda import select_agenda
+
+    cards = [
+        {
+            "story_id": f"digest-{index}",
+            "growth": 10 - index,
+            "current_channels": 2,
+            "eligible": True,
+            "source_signature": ("channel-a:1", "channel-b:2"),
+        }
+        for index in range(4)
+    ] + [
+        {
+            "story_id": "independent",
+            "growth": 2,
+            "current_channels": 2,
+            "eligible": True,
+            "source_signature": ("channel-c:3", "channel-d:4"),
+        }
+    ]
+    selected, _ = select_agenda(cards, comparable_count=4)
+    assert [item["story_id"] for item in selected] == [
+        "digest-0", "digest-1", "independent"
+    ]
+    assert len(cards) == 5

@@ -466,6 +466,7 @@ async def build_snapshot(
                 and not _PROFANITY.search(title)
                 and numbers_are_grounded(title, [claim.quote for claim in claim_cards]),
                 "primary_entity": primary_entity,
+                "source_signature": tuple(sorted(pub.publication_id for pub in current_all)),
                 "card": card,
             }
         )

@@ -174,13 +174,19 @@ def select_agenda(
     def limit_entities(items: list[dict[str, Any]]) -> list[dict[str, Any]]:
         selected: list[dict[str, Any]] = []
         counts: dict[str, int] = {}
+        source_counts: dict[tuple[str, ...], int] = {}
         for item in items:
             entity = str(item.get("primary_entity") or "").casefold()
             if entity and counts.get(entity, 0) >= 2:
                 continue
+            signature = tuple(item.get("source_signature") or ())
+            if len(signature) >= 2 and source_counts.get(signature, 0) >= 2:
+                continue
             selected.append(item)
             if entity:
                 counts[entity] = counts.get(entity, 0) + 1
+            if len(signature) >= 2:
+                source_counts[signature] = source_counts.get(signature, 0) + 1
             if len(selected) == AGENDA_LIMIT:
                 break
         return selected
