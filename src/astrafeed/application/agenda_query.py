@@ -682,9 +682,10 @@ def _html_card_head(card: dict, title_html: str) -> str:
                 )
             groups.setdefault(_source_group(name, link), []).append(item)
         sections = "".join(
-            f'<div class="source-group"><span>{label}</span><div>{" · ".join(items)}</div></div>'
+            f'<div class="source-group"><span>{label}</span>'
+            f"<div>{' · '.join(groups[label])}</div></div>"
             for label in ("Telegram", "Reddit", "News sites", "Other sources")
-            if (items := groups.get(label))
+            if label in groups
         )
         parts.append(f'<div class="src"><b>Sources</b>{sections}</div>')
     return "".join(parts)
