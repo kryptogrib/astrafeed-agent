@@ -464,8 +464,14 @@ def evaluate() -> None:
         "|---" * (len(TARGETS) + 4) + "|",
     ]
     for name, sc in result["test"].items():
+        # an abstention is not a claim: no precision for unclear, only how many and which were right
         cells = [
-            f"{sc.get(f'pred_{t}_ok', 0)}/{sc.get(f'pred_{t}', 0)}; {sc.get(f'gold_{t}_found', 0)}/{sc.get(f'gold_{t}', 0)}"
+            (
+                f"н/п ({sc.get('pred_unclear', 0)} воздержаний)"
+                if t == "unclear"
+                else f"{sc.get(f'pred_{t}_ok', 0)}/{sc.get(f'pred_{t}', 0)}"
+            )
+            + f"; {sc.get(f'gold_{t}_found', 0)}/{sc.get(f'gold_{t}', 0)}"
             for t in TARGETS
         ]
         cells += [
