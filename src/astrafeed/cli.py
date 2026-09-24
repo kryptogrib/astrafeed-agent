@@ -12,6 +12,7 @@ from datetime import UTC, datetime, timedelta
 
 import uvicorn
 from openai import AsyncOpenAI
+from sqlalchemy.exc import OperationalError
 from sqlalchemy.ext.asyncio import async_sessionmaker, create_async_engine
 from telethon import TelegramClient
 from telethon.sessions import StringSession
@@ -250,6 +251,8 @@ async def _agenda_poll(
                     len(snapshot.agenda),
                     snapshot.queue_depth,
                 )
+        except OperationalError as exc:
+            _log.error("agenda sqlite error: %s", str(exc.orig)[:160])
         except Exception as exc:
             _log.error("agenda cycle failed: %s", type(exc).__name__)
         await asyncio.sleep(cfg.poll_seconds)

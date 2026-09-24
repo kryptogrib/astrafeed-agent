@@ -9,7 +9,7 @@ import asyncio
 import logging
 from collections.abc import Awaitable, Callable, Sequence
 from dataclasses import replace
-from datetime import datetime, timedelta
+from datetime import UTC, datetime, timedelta
 from time import perf_counter
 from typing import Protocol
 
@@ -142,11 +142,12 @@ async def run_cycle(
         state.phase = "analyze"
         await store.set_cycle_state(state)
 
-        pending: list[PublicationVersion] = []
-        for publication_id_ in await store.queued_ids():
-            latest = await store.latest_publication(publication_id_)
-            if latest is not None and latest.source_id in source_set:
-                pending.append(latest)
+        queued = set(await store.queued_ids())
+        pending = [
+            pub
+            for pub in await store.publications_in(datetime.min.replace(tzinfo=UTC), now)
+            if pub.publication_id in queued and pub.source_id in source_set
+        ]
         pending.sort(key=lambda pub: (pub.published_at, pub.publication_id))
         semaphore = asyncio.Semaphore(extract_concurrency)
         reuse_locks: dict[str, asyncio.Lock] = {}
