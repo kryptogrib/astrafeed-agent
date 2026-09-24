@@ -568,7 +568,11 @@ async def assign_speculative_batch(
                     assignment = await _decide(assigner, indexed, context)
             except BudgetExceeded:
                 raise
-            except Exception:
+            except Exception as exc:
+                _log.warning(
+                    "agenda assignment failed publication=%s fragment=%d error=%s",
+                    indexed.publication_id, index, type(exc).__name__,
+                )
                 assignment = None
             finally:
                 model_seconds += perf_counter() - started
