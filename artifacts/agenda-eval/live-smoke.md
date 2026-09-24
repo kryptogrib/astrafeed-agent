@@ -56,6 +56,20 @@ Runtime commit: `438b81e6b9b119add27e000618d20940d5a195bd`. Local ignored `confi
 
 This proves the first live publish and read path, including source linkage and one exact quote. The two-channel sample produced no agenda card, so growth/card acceptance and the 60-post human review remain open. The backlog from previously configured channels remains persisted but is excluded from this snapshot's coverage.
 
+## Full news bootstrap: 2026-09-24 16:39 UTC
+
+Configured local channels: `@cryptonftded`, `@whitelist1`, `@crypto_hd`, `@cryptoattack24`. The 48-hour backlog was processed in chronological order. A partial assignment failure exposed that extraction had been removing queue entries too early; fix `38d395a` retains them until assignment completes. Three partially assigned posts were restored to the queue before this run.
+
+- `GET /healthz`: HTTP 200, `status=ok`, commit `1081a855b97a7556c320837fafade7e131340a8a`, last snapshot `snap-20260924T163926Z`, `stale=false`, no budget block.
+- `GET /agenda`: HTTP 200, `agenda_mode=full`, 10 growing cards, 4 comparable channels, 102/102 configured publications processed, 0 queued in this snapshot. The global SQLite queue still contains publications from previously configured channels; it is excluded from these coverage figures.
+- `GET /agenda?format=md`: same snapshot ID as JSON.
+- Public `GET https://cutememe.lol/agenda`: HTTP 200, same snapshot ID.
+- Public `GET /stories/search?q=Payy`, `GET /stories/st-73928c3e4a74afa4`, and `GET /agenda?format=md`: HTTP 200; all refer to `snap-20260924T163926Z`. The detail exposes four linked publications.
+- Public `POST https://cutememe.lol/a2mcp/astrafeed` with `{}`: HTTP 200; `result.snapshot_id` matches and `result.stories` has 10 cards. The endpoint was renamed from `/a2mcp/crowd-pulse` in commit `1081a85`.
+- Checked all 27 displayed claims in the 10 agenda cards against their linked original texts stored in SQLite: 0 missing quotes. Checked numbers in every card explanation and claim paraphrase with `numbers_are_grounded`: 0 failures. These are code checks, not an independent truth check of the posts.
+
+Examples of growth in the published snapshot: Payy, Binance HYPE listing, and CFTC crypto market rules each have two current channels, zero previous channels, and `growth=2`. Human judgment of story merging, quote usefulness, and the frozen 60-post evaluation is still pending.
+
 ## Progress recheck: 2026-09-24 14:52 UTC
 
 The same container is still healthy and in `analyze`; no `last_error`, budget block, successful cycle, or snapshot is recorded. Queue depth is now 491 of 528 publications. `GET /agenda` and `GET /stories/search?q=ETH` still return HTTP 503 with `{"status":"preparing"}`. This confirms that the original bootstrap continues to make slow progress, but the live API acceptance remains incomplete.
