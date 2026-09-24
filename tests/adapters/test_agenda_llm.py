@@ -62,6 +62,29 @@ async def test_agenda_chat_calls_disable_hidden_reasoning(monkeypatch):
 
 
 @pytest.mark.asyncio
+async def test_agenda_chat_calls_are_deterministic_and_fence_the_post(monkeypatch):
+    monkeypatch.setattr(agenda_llm, "_wrap_with_instructor", lambda client: client)
+    extraction_call = AsyncMock(return_value=agenda_llm.ExtractionSchema())
+    assignment_call = AsyncMock(
+        return_value=agenda_llm.AssignmentSchema(story_decision="ambiguous")
+    )
+    evidence_call = AsyncMock(return_value=agenda_llm.EvidenceSchema(supported=[True]))
+
+    def client(call):
+        return SimpleNamespace(chat=SimpleNamespace(completions=SimpleNamespace(create=call)))
+
+    await agenda_llm.OpenRouterExtractor(client(extraction_call), "m").extract("Короткий пост")
+    await agenda_llm.OpenRouterAssigner(client(assignment_call), "m").assign(fragment="пост")
+    story = SimpleNamespace(title_ru="Сюжет", boundary="граница")
+    await agenda_llm.OpenRouterEvidenceVerifier(client(evidence_call), "m").verify(story, ["q"])
+
+    for call in (extraction_call, assignment_call, evidence_call):
+        assert call.await_args.kwargs["temperature"] == 0
+    user = extraction_call.await_args.kwargs["messages"][1]["content"]
+    assert user == "<post>\nКороткий пост\n</post>"
+
+
+@pytest.mark.asyncio
 async def test_batched_embeddings_follow_input_indices():
     create = AsyncMock(
         return_value=SimpleNamespace(
