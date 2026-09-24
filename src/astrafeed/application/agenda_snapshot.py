@@ -519,6 +519,7 @@ async def build_snapshot(
                 "title": card.title,
                 "entities": card.entities,
                 "first_seen": card.first_seen,
+                "evidence_text": " ".join((title, *(claim.quote for claim in claim_cards))),
                 "source_signature": tuple(sorted(pub.publication_id for pub in current_all)),
                 "card": card,
             }

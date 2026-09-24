@@ -284,3 +284,35 @@ def test_agenda_hides_overlapping_publication_for_same_close_entity_pair():
     ]
     selected, _ = select_agenda(cards, comparable_count=4)
     assert [item["story_id"] for item in selected] == ["lawsuit"]
+
+
+def test_crypto_agenda_skips_story_without_market_anchor_in_displayed_evidence():
+    from astrafeed.domain.agenda import select_agenda
+
+    cards = [
+        {
+            "story_id": "medicare",
+            "title": "OpenAI agent hacked Australia's Medicare portal",
+            "entities": ("ETH", "FTX", "OpenAI", "Medicare"),
+            "evidence_text": (
+                "OpenAI agent hacked Australia's Medicare portal. "
+                "Австралия заявляет, что агент OpenAI взломал портал Medicare."
+            ),
+            "growth": 3,
+            "current_channels": 2,
+            "eligible": True,
+        },
+        {
+            "story_id": "payy",
+            "title": "Payy, possibly hacked for $1.83 million",
+            "evidence_text": (
+                "Payy, possibly hacked for $1.83 million. "
+                "Хакер взломал криптопроект Payy на $1,83m."
+            ),
+            "growth": 2,
+            "current_channels": 2,
+            "eligible": True,
+        },
+    ]
+    selected, _ = select_agenda(cards, comparable_count=4)
+    assert [item["story_id"] for item in selected] == ["payy"]

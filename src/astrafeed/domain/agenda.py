@@ -34,6 +34,15 @@ CyclePhase = Literal["idle", "collect", "analyze", "snapshot", "blocked"]
 _NUMBER = re.compile(r"\d+(?:[.,]\d+)?")
 _TODAY = re.compile(r"\bсегодня\b", re.IGNORECASE)
 _YESTERDAY = re.compile(r"\bвчера\b", re.IGNORECASE)
+_CRYPTO_CONTEXT = re.compile(
+    r"\$[A-Z]{2,}\b|\b(?:crypto\w*|крипт\w*|bitcoin|биткоин\w*|ethereum|эфир\w*|"
+    r"blockchain|блокчейн\w*|token\w*|токен\w*|defi|web3|nft|dex|exchange|бирж\w*|"
+    r"wallet|кошел\w*|binance|bitget|polymarket|ondo|stablecoin\w*|стейблкоин\w*|"
+    r"cftc|etf|onchain|ончейн\w*|leverage|плеч\w*|tge|airdrop|листинг\w*|listing|"
+    r"staking|стейкинг\w*|perp\w*|swap|своп\w*|trading|трейд\w*|usdt|eth|hype|"
+    r"sol|btc)\b",
+    re.IGNORECASE,
+)
 
 
 def text_hash(text: str) -> str:
@@ -199,7 +208,11 @@ def select_agenda(
     multi = [
         c
         for c in cards
-        if c.get("eligible", True) and int(c.get("current_channels") or 0) >= MIN_CHANNELS
+        if c.get("eligible", True)
+        and int(c.get("current_channels") or 0) >= MIN_CHANNELS
+        and (
+            c.get("evidence_text") is None or bool(_CRYPTO_CONTEXT.search(str(c["evidence_text"])))
+        )
     ]
     ranked = rank_agenda_stories([{**c, "eligible": True} for c in multi])
 
