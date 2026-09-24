@@ -460,6 +460,27 @@ class TelegramSource:
 
         return await self._with_reconnect(_run)
 
+    async def read_posts(self, telegram_id: int, ids: Sequence[int]) -> list[Item]:
+        """Refresh already published posts so edits can invalidate stale quotes."""
+        if not ids:
+            return []
+
+        async def _run() -> list[Item]:
+            entity = await self._client.get_entity(_entity_ref(f"id:{telegram_id}"))
+            username = public_username(entity)
+            if not username:
+                return []
+            messages = await self._client.get_messages(entity, ids=list(ids))
+            return [
+                message_to_item(
+                    msg, channel_ref=f"@{username}", channel_username=username
+                )
+                for msg in messages
+                if msg is not None and getattr(msg, "date", None) is not None
+            ]
+
+        return await self._with_reconnect(_run)
+
     async def list_subscribed_channels(self) -> list[Subscription]:
         async def _run() -> list[Subscription]:
             subs: list[Subscription] = []

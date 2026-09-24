@@ -20,6 +20,7 @@ from telethon.sessions import StringSession
 from astrafeed.adapters.http.app import create_app
 from astrafeed.adapters.llm.agenda import (
     OpenRouterAssigner,
+    OpenRouterDiscussionSummarizer,
     OpenRouterEmbedder,
     OpenRouterEvidenceVerifier,
     OpenRouterExtractor,
@@ -38,6 +39,7 @@ from astrafeed.adapters.repository.sqlite.spend_budget import (
 from astrafeed.adapters.source.fake import FakeSource
 from astrafeed.adapters.source.telegram import TelegramSource
 from astrafeed.application.agenda_cycle import run_cycle
+from astrafeed.application.agenda_discussion import DiscussionEnricher
 from astrafeed.application.agenda_query import (
     agenda_payload,
     health_payload,
@@ -56,6 +58,44 @@ from astrafeed.domain.agenda import EMBEDDING_MODEL, LOOKBACK
 from astrafeed.logging_cfg import configure_logging
 
 _log = logging.getLogger(__name__)
+
+
+async def _refresh_displayed_posts(snapshot, posts, reader: TelegramSource) -> int:
+    """Reread the published top's source IDs without scanning channel history."""
+    by_source: dict[int, set[int]] = {}
+    for card in snapshot.agenda:
+        detail = snapshot.stories.get(card.story_id)
+        if detail is None:
+            continue
+        for pub in detail.publications:
+            source, _, external = pub.publication_id.partition(":")
+            if source.isdecimal() and external.isdecimal():
+                by_source.setdefault(int(source), set()).add(int(external))
+
+    semaphore = asyncio.Semaphore(4)
+
+    async def refresh(source_id: int, ids: set[int]) -> int:
+        async with semaphore:
+            try:
+                source = await posts.get_source(source_id)
+                if source is None:
+                    return 0
+                items = await reader.read_posts(source.telegram_id, sorted(ids))
+                if items:
+                    await posts.store_items(source_id, items)
+                return len(items)
+            except Exception as exc:
+                _log.warning(
+                    "agenda source refresh failed source=%d error=%s",
+                    source_id,
+                    type(exc).__name__,
+                )
+                return 0
+
+    counts = await asyncio.gather(
+        *(refresh(source_id, ids) for source_id, ids in by_source.items())
+    )
+    return sum(counts)
 
 
 def git_commit() -> str:
@@ -219,9 +259,15 @@ async def _agenda_poll(
     embedder: OpenRouterEmbedder,
     assigner: OpenRouterAssigner,
     evidence_verifier: OpenRouterEvidenceVerifier,
+    summarizer: OpenRouterDiscussionSummarizer,
 ) -> None:
     collection_window = max(LOOKBACK, timedelta(hours=cfg.backfill_hours))
     reader = TelegramSource(client, backfill_window=collection_window)
+    # Read-only: comments come from public discussion threads; the agenda never
+    # makes the account join discussion groups.
+    discussions = DiscussionEnricher(
+        TelegramSource(client, discussion_join_limit_per_run=0), summarizer
+    )
     coordinator = IngestionCoordinator(
         posts, reader, resolver=reader, limits=limits_from_settings(cfg)
     )
@@ -236,9 +282,7 @@ async def _agenda_poll(
         if collect_due or not source_ids:
             try:
                 await _ensure_connected(client)
-                source_ids = await _resolve_union(
-                    coordinator, [*cfg.channels, *cfg.news_channels]
-                )
+                source_ids = await _resolve_union(coordinator, [*cfg.channels, *cfg.news_channels])
             except Exception as exc:
                 _log.error("agenda source resolution failed: %s", type(exc).__name__)
                 source_ids = []
@@ -258,6 +302,10 @@ async def _agenda_poll(
                     sum(not coverage.complete for coverage in result.values()),
                     len(result.errors),
                 )
+                previous_snapshot = await agenda.get_snapshot(None)
+                if previous_snapshot is not None:
+                    refreshed = await _refresh_displayed_posts(previous_snapshot, posts, reader)
+                    _log.info("agenda refreshed displayed posts=%d", refreshed)
 
         snapshot = None
         try:
@@ -279,6 +327,7 @@ async def _agenda_poll(
                 merge_cosine_threshold=cfg.agenda.merge_cosine_threshold,
                 collection_window=collection_window,
                 max_posts_per_cycle=cfg.agenda.cycle_post_limit,
+                discuss=discussions.enrich,
             )
             if snapshot is None:
                 _log.warning("agenda cycle did not publish (budget or incomplete)")
@@ -301,8 +350,9 @@ async def _agenda_poll(
             remaining = (
                 cfg.poll_seconds
                 if latest_collect is None
-                else (latest_collect + timedelta(seconds=cfg.poll_seconds) - datetime.now(UTC))
-                .total_seconds()
+                else (
+                    latest_collect + timedelta(seconds=cfg.poll_seconds) - datetime.now(UTC)
+                ).total_seconds()
             )
             await asyncio.sleep(max(1, remaining))
 
@@ -323,6 +373,7 @@ def _agenda_llm(cfg: Settings, session):
         OpenRouterEmbedder(client, cfg.openrouter.embedding_model or EMBEDDING_MODEL),
         OpenRouterAssigner(client, model),
         OpenRouterEvidenceVerifier(client, model),
+        OpenRouterDiscussionSummarizer(client, model),
     )
 
 
@@ -335,7 +386,7 @@ async def _serve(config_path: str) -> None:
     posts = SqliteIngestionStore(session)
     agenda = SqliteAgendaStore(session)
     await agenda.ensure_search()
-    extractor, embedder, assigner, evidence_verifier = _agenda_llm(cfg, session)
+    extractor, embedder, assigner, evidence_verifier, summarizer = _agenda_llm(cfg, session)
     commit = git_commit()
 
     async def agenda_http(snapshot_id: str | None = None) -> dict:
@@ -367,7 +418,9 @@ async def _serve(config_path: str) -> None:
         uvicorn.Config(app, host=cfg.api_host, port=cfg.api_port, log_config=None)
     )
     poll_task = asyncio.create_task(
-        _agenda_poll(cfg, client, posts, agenda, extractor, embedder, assigner, evidence_verifier),
+        _agenda_poll(
+            cfg, client, posts, agenda, extractor, embedder, assigner, evidence_verifier, summarizer
+        ),
         name="agenda-cycle",
     )
     try:
