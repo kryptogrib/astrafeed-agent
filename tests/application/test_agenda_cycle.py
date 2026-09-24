@@ -365,7 +365,6 @@ async def test_long_cycle_publishes_explicit_partial_snapshot_before_final():
         assigner=Assigner(),
         now=t,
         extract_concurrency=2,
-        partial_snapshot_every=2,
     )
 
     assert snapshot is not None

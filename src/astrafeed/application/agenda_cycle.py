@@ -211,7 +211,8 @@ async def run_cycle(
                     )
                     processed = offset + len(batch)
                     if processed < len(pending) and (
-                        processed - last_partial_count >= partial_snapshot_every
+                        last_partial_count == 0
+                        or processed - last_partial_count >= partial_snapshot_every
                         or perf_counter() - last_partial_time >= partial_snapshot_seconds
                     ):
                         partial_time = now + timedelta(seconds=perf_counter() - cycle_started)
