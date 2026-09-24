@@ -17,6 +17,45 @@ from astrafeed.domain.agenda import (
 )
 
 
+def test_digest_claims_with_different_projects_become_separate_fragments():
+    from astrafeed.application.agenda_extract import split_independent_claims
+    from astrafeed.domain.agenda import Claim, Fragment, MentionedEntity
+
+    text = "Plasma открыл тест. CypherSquad объявил минт."
+    claims = (
+        Claim("event", "author", "Plasma открыл тест.", 0, 19),
+        Claim("event", "author", "CypherSquad объявил минт.", 20, len(text)),
+    )
+    fragment = Fragment(
+        text=text,
+        start=0,
+        end=len(text),
+        entities=(MentionedEntity("Plasma", ""), MentionedEntity("CypherSquad", "")),
+        claims=claims,
+    )
+    pieces = split_independent_claims(fragment)
+    assert len(pieces) == 2
+    assert [piece.entities[0].surface for piece in pieces] == ["Plasma", "CypherSquad"]
+
+
+def test_financial_flow_table_remains_one_fragment():
+    from astrafeed.application.agenda_extract import split_independent_claims
+    from astrafeed.domain.agenda import Claim, Fragment, MentionedEntity
+
+    text = "Финпотоки ETF за вчера:\nBTC = +$100.\nETH = +$50."
+    claims = (
+        Claim("event", "author", "BTC = +$100.", 26, 38),
+        Claim("event", "author", "ETH = +$50.", 39, 50),
+    )
+    fragment = Fragment(
+        text=text,
+        start=0,
+        end=len(text),
+        entities=(MentionedEntity("BTC", ""), MentionedEntity("ETH", "")),
+        claims=claims,
+    )
+    assert split_independent_claims(fragment) == (fragment,)
+
 class RecordingExtractor:
     def __init__(self, draft: ExtractionResult | Exception) -> None:
         self.draft = draft

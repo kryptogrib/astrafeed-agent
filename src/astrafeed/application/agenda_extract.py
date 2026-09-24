@@ -63,6 +63,43 @@ def verify_fragment(text: str, fragment: Fragment) -> Fragment:
     )
 
 
+def split_independent_claims(fragment: Fragment) -> tuple[Fragment, ...]:
+    """Keep a digest's unrelated projects out of one story assignment."""
+    if len(fragment.claims) < 2:
+        return (fragment,)
+    heading = fragment.text[:160].casefold()
+    if any(term in heading for term in ("финпоток", "etf flows", "inflows", "outflows")):
+        return (fragment,)
+
+    def mentioned_entities(quote: str):
+        return tuple(
+            entity
+            for entity in fragment.entities
+            if len(entity.surface.strip("$#")) >= 3
+            and re.search(
+                rf"(?<!\w){re.escape(entity.surface.strip('$#'))}(?!\w)", quote, re.I
+            )
+        )
+
+    groups = [mentioned_entities(claim.quote) for claim in fragment.claims]
+    named_groups = {
+        tuple(entity.surface.casefold() for entity in group) for group in groups if group
+    }
+    if len(named_groups) < 2:
+        return (fragment,)
+    return tuple(
+        Fragment(
+            text=claim.quote,
+            start=claim.start,
+            end=claim.end,
+            is_ad=fragment.is_ad,
+            entities=entities,
+            claims=(claim,),
+        )
+        for claim, entities in zip(fragment.claims, groups, strict=True)
+    )
+
+
 def resolve_instance(result: ExtractionResult, published_at) -> ExtractionResult:
     fragments = []
     for fragment in result.fragments:
@@ -139,7 +176,11 @@ async def analyze_publication(
             )
             await store.enqueue(publication.publication_id, "extract_error")
             return failed
-        verified = tuple(verify_fragment(publication.text, fragment) for fragment in raw.fragments)
+        verified = tuple(
+            piece
+            for fragment in raw.fragments
+            for piece in split_independent_claims(verify_fragment(publication.text, fragment))
+        )
         stored = _with_verified_status(raw, verified)
         stored = ExtractionResult(
             reuse_key=reuse_key,
