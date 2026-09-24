@@ -144,6 +144,25 @@ async def test_generic_story_title_is_not_published_in_agenda():
 
 
 @pytest.mark.asyncio
+async def test_unnamed_project_title_stays_searchable_but_off_top_agenda():
+    store = InMemoryAgendaStore()
+    now = datetime(2026, 9, 24, 12, tzinfo=UTC)
+    title = "Проект продвигает Ансем с попаданиями в HYPE, VVV и ZEC"
+    await store.save_story(Story("unnamed", title, "", now))
+    for source_id in (1, 2):
+        quote = title
+        pub = _publication(source_id, str(source_id), quote, now)
+        await store.record_publication(pub)
+        await _link(store, "unnamed", pub, quote, quote)
+
+    snapshot = await build_snapshot(store, now + timedelta(minutes=1), _coverage(),
+                                    collected_at=now, analyzed_at=now)
+    assert snapshot.agenda == ()
+    assert "unnamed" in snapshot.stories
+    assert any(doc.story_id == "unnamed" for doc in snapshot.search_docs)
+
+
+@pytest.mark.asyncio
 async def test_navigation_claim_does_not_create_a_second_channel_vote():
     store = InMemoryAgendaStore()
     now = datetime(2026, 9, 24, 12, tzinfo=UTC)

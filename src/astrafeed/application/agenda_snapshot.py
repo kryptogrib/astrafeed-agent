@@ -463,6 +463,8 @@ async def build_snapshot(
                 "previous_channels": card.previous_channels,
                 "freshness": card.freshness,
                 "eligible": title.casefold() not in {"", "сюжет"}
+                and not (not primary_entity and title.startswith("Проект ")
+                         and title[len("Проект "):len("Проект ") + 1].islower())
                 and not _PROFANITY.search(title)
                 and numbers_are_grounded(title, [claim.quote for claim in claim_cards]),
                 "primary_entity": primary_entity,
