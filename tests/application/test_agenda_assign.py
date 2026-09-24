@@ -1,10 +1,15 @@
+import asyncio
 from datetime import UTC, datetime, timedelta
 
 import pytest
 
 from astrafeed.adapters.repository.memory_agenda import InMemoryAgendaStore
-from astrafeed.application.agenda_assign import assign_publication, find_candidates
 from astrafeed.application import agenda_assign
+from astrafeed.application.agenda_assign import (
+    assign_publication,
+    assign_speculative_batch,
+    find_candidates,
+)
 from astrafeed.application.agenda_extract import analyze_publication
 from astrafeed.application.agenda_snapshot import build_snapshot, publish_snapshot
 from astrafeed.domain.agenda import (
@@ -162,10 +167,8 @@ def test_assignment_context_contains_only_candidate_stories_and_matching_entitie
         agenda_assign.Event("event-unrelated", "unrelated", "2026-09-23"),
     ]
 
-    selected_entities, selected_stories, selected_events = (
-        agenda_assign.select_assignment_context(
-            fragment, [candidate], [linked, unrelated], entities, stories, events
-        )
+    selected_entities, selected_stories, selected_events = agenda_assign.select_assignment_context(
+        fragment, [candidate], [linked, unrelated], entities, stories, events
     )
 
     assert [entity.entity_id for entity in selected_entities] == ["entity-relevant"]
@@ -215,6 +218,67 @@ def test_candidates_are_union_of_semantic_and_lexical_top_ten():
     assert any(i.startswith("lex-") for i in ids)
     assert len(found) <= 20
     assert "q" not in ids
+
+
+@pytest.mark.asyncio
+async def test_speculative_assignment_revalidates_changed_story_context():
+    from astrafeed.adapters.llm.agenda import Assignment
+
+    store = InMemoryAgendaStore()
+    now = datetime(2026, 9, 24, 12, tzinfo=UTC)
+    first_text = "Отток ETH ETF составил 120 млн сегодня."
+    second_text = "BlackRock сообщил об оттоке ETH ETF сегодня."
+    first = _pub(first_text, 1, "1", "@a", now - timedelta(hours=2))
+    second = _pub(second_text, 2, "2", "@b", now - timedelta(hours=1))
+    for pub in (first, second):
+        await store.record_publication(pub)
+
+    class ConcurrentAssigner:
+        active = 0
+        maximum = 0
+        calls = 0
+
+        async def assign(self, **kwargs):
+            self.active += 1
+            self.maximum = max(self.maximum, self.active)
+            self.calls += 1
+            await asyncio.sleep(0.01)
+            self.active -= 1
+            stories = kwargs["stories"]
+            return Assignment(
+                entity_decisions=(),
+                story_decision="existing" if stories else "new",
+                story_id=stories[0].story_id if stories else None,
+                title_ru="Потоки ETH ETF",
+                boundary="ETH ETF",
+                event_decision="separate",
+                event_id=None,
+            )
+
+    assigner = ConcurrentAssigner()
+    embedder = Embedder(
+        {
+            embedding_input(first_text, ["ETH"]): [1.0, 0.0],
+            embedding_input(second_text, ["ETH"]): [1.0, 0.0],
+        }
+    )
+    reused, retried = await assign_speculative_batch(
+        store,
+        embedder,
+        assigner,
+        [
+            (first, _event_result(first_text, first_text, "ETH")),
+            (second, _event_result(second_text, second_text, "ETH")),
+        ],
+        concurrency=2,
+    )
+
+    assert assigner.maximum == 2
+    assert (reused, retried) == (1, 1)
+    assert assigner.calls == 3
+    links = await store.links_for_publications({first.publication_id, second.publication_id})
+    assert len({link.story_id for link in links}) == 1
+    assert await store.queue_depth() == 0
 
 
 @pytest.mark.asyncio

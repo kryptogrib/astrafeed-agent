@@ -63,6 +63,7 @@ class AuditSettings(BaseModel):
 
 class AgendaSettings(BaseModel):
     extract_concurrency: int = Field(default=12, ge=1, le=32)
+    assign_concurrency: int = Field(default=16, ge=1, le=32)
 
 
 class Settings(BaseModel):

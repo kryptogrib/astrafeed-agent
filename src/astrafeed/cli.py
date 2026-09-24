@@ -238,6 +238,7 @@ async def _agenda_poll(
                 now=now,
                 collect=collect,
                 extract_concurrency=cfg.agenda.extract_concurrency,
+                assign_concurrency=cfg.agenda.assign_concurrency,
                 collection_window=collection_window,
             )
             if snapshot is None:

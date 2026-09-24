@@ -8,11 +8,12 @@ from __future__ import annotations
 import asyncio
 import logging
 from collections.abc import Awaitable, Callable, Sequence
+from dataclasses import replace
 from datetime import datetime, timedelta
 from time import perf_counter
 from typing import Protocol
 
-from astrafeed.application.agenda_assign import assign_publication
+from astrafeed.application.agenda_assign import assign_speculative_batch
 from astrafeed.application.agenda_extract import analyze_publication
 from astrafeed.application.agenda_query import health_payload
 from astrafeed.application.agenda_snapshot import build_snapshot, publish_snapshot
@@ -112,12 +113,20 @@ async def run_cycle(
     now: datetime,
     collect: CollectFn | None = None,
     extract_concurrency: int = 12,
+    assign_concurrency: int = 16,
     collection_window: timedelta = LOOKBACK,
+    partial_snapshot_every: int = 200,
+    partial_snapshot_seconds: float = 600.0,
 ) -> Snapshot | None:
     if extract_concurrency < 1:
         raise ValueError("extract_concurrency must be positive")
+    if assign_concurrency < 1:
+        raise ValueError("assign_concurrency must be positive")
     if collection_window < LOOKBACK:
         raise ValueError("collection_window must cover both comparison windows")
+    if partial_snapshot_every < 1 or partial_snapshot_seconds <= 0:
+        raise ValueError("partial snapshot thresholds must be positive")
+    cycle_started = perf_counter()
     state = await store.get_cycle_state()
     state.phase = "collect"
     state.budget_blocked = False
@@ -143,7 +152,11 @@ async def run_cycle(
         reuse_locks: dict[str, asyncio.Lock] = {}
         extract_seconds = 0.0
         assign_seconds = 0.0
+        speculative_reused = 0
+        speculative_retried = 0
         pipeline_started = perf_counter()
+        last_partial_count = 0
+        last_partial_time = pipeline_started
 
         async def extract_one(publication: PublicationVersion) -> ExtractionResult:
             nonlocal extract_seconds
@@ -163,34 +176,74 @@ async def run_cycle(
                 batch = pending[offset : offset + extract_concurrency]
                 tasks = [asyncio.create_task(extract_one(pub)) for pub in batch]
                 try:
-                    for processed, (publication, task) in enumerate(
-                        zip(batch, tasks, strict=True), offset + 1
+                    jobs = []
+                    for publication, task in zip(batch, tasks, strict=True):
+                        extraction = await task
+                        if extraction.status == "error":
+                            continue
+                        if extraction.status == "empty":
+                            await store.mark_processed(publication.publication_id)
+                            continue
+                        jobs.append((publication, extraction))
+                    started = perf_counter()
+                    try:
+                        reused, retried = await assign_speculative_batch(
+                            store,
+                            embedder,
+                            assigner,
+                            jobs,
+                            concurrency=assign_concurrency,
+                        )
+                        speculative_reused += reused
+                        speculative_retried += retried
+                    finally:
+                        assign_seconds += perf_counter() - started
+                    _log.info(
+                        "agenda analyze progress=%d/%d extract_seconds=%.1f "
+                        "assign_seconds=%.1f wall_seconds=%.1f reused=%d retried=%d",
+                        offset + len(batch),
+                        len(pending),
+                        extract_seconds,
+                        assign_seconds,
+                        perf_counter() - pipeline_started,
+                        speculative_reused,
+                        speculative_retried,
+                    )
+                    processed = offset + len(batch)
+                    if processed < len(pending) and (
+                        processed - last_partial_count >= partial_snapshot_every
+                        or perf_counter() - last_partial_time >= partial_snapshot_seconds
                     ):
-                        try:
-                            extraction = await task
-                            if extraction.status == "error":
-                                continue
-                            if extraction.status == "empty":
-                                await store.mark_processed(publication.publication_id)
-                                continue
-                            started = perf_counter()
-                            try:
-                                await assign_publication(
-                                    store, embedder, assigner, publication, extraction
-                                )
-                            finally:
-                                assign_seconds += perf_counter() - started
-                        finally:
-                            if processed % 25 == 0:
-                                _log.info(
-                                    "agenda analyze progress=%d/%d extract_seconds=%.1f "
-                                    "assign_seconds=%.1f wall_seconds=%.1f",
-                                    processed,
-                                    len(pending),
-                                    extract_seconds,
-                                    assign_seconds,
-                                    perf_counter() - pipeline_started,
-                                )
+                        partial_time = now + timedelta(seconds=perf_counter() - cycle_started)
+                        coverage = await _coverage_states(store, reader, source_ids, now)
+                        partial = await build_snapshot(
+                            store,
+                            now,
+                            coverage,
+                            collected_at=state.last_collect_at or now,
+                            analyzed_at=partial_time,
+                        )
+                        limitation = "processing_in_progress"
+                        partial = replace(
+                            partial,
+                            snapshot_id=f"{partial.snapshot_id}-p{processed}",
+                            published_at=partial_time,
+                            limitations=(*partial.limitations, limitation),
+                            coverage=replace(
+                                partial.coverage,
+                                limitations=(*partial.coverage.limitations, limitation),
+                            ),
+                        )
+                        await publish_snapshot(store, partial)
+                        state.queue_depth = await store.queue_depth()
+                        await store.set_cycle_state(state)
+                        _log.info(
+                            "agenda partial snapshot %s queue=%d",
+                            partial.snapshot_id,
+                            partial.queue_depth,
+                        )
+                        last_partial_count = processed
+                        last_partial_time = perf_counter()
                 finally:
                     for task in tasks:
                         if not task.done():
@@ -199,15 +252,20 @@ async def run_cycle(
         finally:
             _log.info(
                 "agenda analyze posts=%d extract_seconds=%.1f assign_seconds=%.1f "
-                "wall_seconds=%.1f concurrency=%d",
+                "wall_seconds=%.1f extract_concurrency=%d assign_concurrency=%d "
+                "reused=%d retried=%d",
                 len(pending),
                 extract_seconds,
                 assign_seconds,
                 perf_counter() - pipeline_started,
                 extract_concurrency,
+                assign_concurrency,
+                speculative_reused,
+                speculative_retried,
             )
 
-        state.last_analyze_at = now
+        finished_at = now + timedelta(seconds=perf_counter() - cycle_started)
+        state.last_analyze_at = finished_at
         state.phase = "snapshot"
         await store.set_cycle_state(state)
         coverage = await _coverage_states(store, reader, source_ids, now)
@@ -216,11 +274,12 @@ async def run_cycle(
             now,
             coverage,
             collected_at=state.last_collect_at or now,
-            analyzed_at=state.last_analyze_at or now,
+            analyzed_at=finished_at,
         )
+        snapshot = replace(snapshot, published_at=finished_at)
         await publish_snapshot(store, snapshot)
         state.phase = "idle"
-        state.last_success_at = now
+        state.last_success_at = finished_at
         state.last_error = ""
         state.queue_depth = await store.queue_depth()
         await store.set_cycle_state(state)

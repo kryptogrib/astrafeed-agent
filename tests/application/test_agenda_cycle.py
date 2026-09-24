@@ -178,7 +178,10 @@ async def test_extraction_overlaps_but_assignment_stays_chronological():
     )
 
     assert extractor.maximum == 2
-    assert assigner.order == texts
+    assert [
+        fragment.text for fragment in await store.fragments_since(t - timedelta(hours=4))
+    ] == texts
+    assert assigner.order[:2] == texts[:2]
 
 
 @pytest.mark.asyncio
@@ -335,6 +338,43 @@ async def test_collection_can_cover_72_hours_without_changing_comparison_windows
     assert collected == [(t - timedelta(hours=72), t)]
     assert await store.latest_publication("1:1") is not None
     assert snapshot.coverage.publications_total == 1
+
+
+@pytest.mark.asyncio
+async def test_long_cycle_publishes_explicit_partial_snapshot_before_final():
+    store = InMemoryAgendaStore()
+    t = datetime(2026, 9, 24, 12, tzinfo=UTC)
+    snapshot = await run_cycle(
+        store,
+        reader=Reader(
+            {
+                1: [
+                    _item(
+                        "@a",
+                        str(index),
+                        f"Отток ETH ETF номер {index} сегодня.",
+                        t - timedelta(hours=3 - index),
+                    )
+                    for index in range(3)
+                ]
+            }
+        ),
+        source_ids=[1],
+        extractor=Extractor(),
+        embedder=Embedder(),
+        assigner=Assigner(),
+        now=t,
+        extract_concurrency=2,
+        partial_snapshot_every=2,
+    )
+
+    assert snapshot is not None
+    assert snapshot.published_at > t
+    partial = await store.get_snapshot("snap-20260924T120000Z-p2")
+    assert partial is not None
+    assert partial.queue_depth == 1
+    assert "processing_in_progress" in partial.limitations
+    assert (await store.get_snapshot(None)).snapshot_id == snapshot.snapshot_id
 
 
 @pytest.mark.asyncio

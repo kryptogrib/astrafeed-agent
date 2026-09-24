@@ -2,8 +2,10 @@
 
 from __future__ import annotations
 
+import asyncio
 import hashlib
 from collections.abc import Sequence
+from dataclasses import dataclass
 from typing import Literal
 
 from astrafeed.domain.agenda import (
@@ -145,6 +147,165 @@ def _apply_entities(existing: list[Entity], assignment) -> list[Entity]:
     return chosen
 
 
+@dataclass(frozen=True)
+class AssignmentContext:
+    candidates: tuple[IndexedFragment, ...]
+    entities: tuple[Entity, ...]
+    stories: tuple[Story, ...]
+    events: tuple[Event, ...]
+
+
+@dataclass(frozen=True)
+class PreparedFragment:
+    index: int
+    fragment: Fragment
+    indexed: IndexedFragment
+    context: AssignmentContext
+    assignment: object | None
+
+
+@dataclass(frozen=True)
+class AssignmentEffect:
+    entities: tuple[Entity, ...]
+    story: Story | None
+    event: Event | None
+    links: tuple[StoryLink, ...]
+    indexed: IndexedFragment | None
+    valid: bool = True
+
+
+def _context_from_state(
+    indexed: IndexedFragment,
+    pool: Sequence[IndexedFragment],
+    links: Sequence[StoryLink],
+    entities: Sequence[Entity],
+    stories: Sequence[Story],
+    events: Sequence[Event],
+) -> AssignmentContext:
+    earlier = [
+        item
+        for item in pool
+        if indexed.published_at - LOOKBACK <= item.published_at < indexed.published_at
+    ]
+    candidates = find_candidates(indexed, earlier)
+    selected_entities, selected_stories, selected_events = select_assignment_context(
+        indexed, candidates, links, entities, stories, events
+    )
+    return AssignmentContext(
+        tuple(candidates),
+        tuple(selected_entities),
+        tuple(selected_stories),
+        tuple(selected_events),
+    )
+
+
+async def _context_from_store(store: AgendaStore, indexed: IndexedFragment) -> AssignmentContext:
+    pool = await store.fragments_since(indexed.published_at - LOOKBACK)
+    candidates = find_candidates(
+        indexed, [item for item in pool if item.published_at < indexed.published_at]
+    )
+    links = await store.links_for_publications({item.publication_id for item in candidates})
+    selected_entities, selected_stories, selected_events = select_assignment_context(
+        indexed,
+        candidates,
+        links,
+        await store.list_entities(),
+        await store.list_stories(),
+        await store.list_events(),
+    )
+    return AssignmentContext(
+        tuple(candidates),
+        tuple(selected_entities),
+        tuple(selected_stories),
+        tuple(selected_events),
+    )
+
+
+async def _indexed_for(
+    store: AgendaStore,
+    embedder: Embedder,
+    publication: PublicationVersion,
+    index: int,
+    fragment: Fragment,
+) -> IndexedFragment:
+    surfaces = [entity.surface for entity in fragment.entities]
+    text = embedding_input(fragment.text, surfaces)
+    try:
+        vector = await _vector_for(store, embedder, text)
+    except BudgetExceeded:
+        raise
+    except Exception:
+        await store.enqueue(publication.publication_id, "embed_error")
+        raise
+    return IndexedFragment(
+        publication_id=publication.publication_id,
+        published_at=publication.published_at,
+        fragment_index=index,
+        text=fragment.text,
+        entity_surfaces=tuple(surfaces),
+        claim_text=_claim_text(fragment),
+        vector=vector,
+    )
+
+
+async def _decide(assigner: StoryAssigner, indexed: IndexedFragment, context: AssignmentContext):
+    return await assigner.assign(
+        fragment=indexed,
+        entities=context.entities,
+        stories=context.stories,
+        events=context.events,
+        candidates=context.candidates,
+    )
+
+
+async def _apply_decision(
+    store: AgendaStore,
+    publication: PublicationVersion,
+    index: int,
+    fragment: Fragment,
+    indexed: IndexedFragment,
+    context: AssignmentContext,
+    assignment: object,
+) -> AssignmentEffect:
+    story = _resolve_story(assignment, list(context.stories), publication)
+    if story is None:
+        if getattr(assignment, "story_decision", None) != "ambiguous":
+            await store.enqueue(publication.publication_id, "assign_error")
+            return AssignmentEffect((), None, None, (), None, valid=False)
+        return AssignmentEffect((), None, None, (), None)
+    chosen_entities = _apply_entities(list(context.entities), assignment)
+    for entity in chosen_entities:
+        await store.save_entity(entity)
+    await store.save_story(story)
+    event_id = _resolve_event(assignment, story.story_id, list(context.events))
+    event = None
+    if event_id:
+        event = Event(
+            event_id=event_id,
+            story_id=story.story_id,
+            when=getattr(assignment, "event_when", ""),
+            amount=getattr(assignment, "event_amount", ""),
+        )
+        await store.save_event(event)
+    new_links = tuple(
+        _link(
+            story.story_id,
+            publication,
+            index,
+            claim_index,
+            claim,
+            chosen_entities,
+            event_id,
+            getattr(assignment, "paraphrase_ru", ""),
+        )
+        for claim_index, claim in enumerate(fragment.claims)
+    )
+    for link in new_links:
+        await store.save_link(link)
+    await store.index_fragment(indexed)
+    return AssignmentEffect(tuple(chosen_entities), story, event, new_links, indexed)
+
+
 async def assign_publication(
     store: AgendaStore,
     embedder: Embedder,
@@ -157,89 +318,142 @@ async def assign_publication(
     for index, fragment in enumerate(extraction.fragments):
         if not fragment.claims:
             continue
-        surfaces = [entity.surface for entity in fragment.entities]
-        text = embedding_input(fragment.text, surfaces)
+        indexed = await _indexed_for(store, embedder, publication, index, fragment)
+        context = await _context_from_store(store, indexed)
         try:
-            vector = await _vector_for(store, embedder, text)
-        except BudgetExceeded:
-            raise
-        except Exception:
-            await store.enqueue(publication.publication_id, "embed_error")
-            raise
-        indexed = IndexedFragment(
-            publication_id=publication.publication_id,
-            published_at=publication.published_at,
-            fragment_index=index,
-            text=fragment.text,
-            entity_surfaces=tuple(surfaces),
-            claim_text=_claim_text(fragment),
-            vector=vector,
-        )
-        pool = [
-            item
-            for item in await store.fragments_since(publication.published_at - LOOKBACK)
-            if item.published_at < publication.published_at
-        ]
-        candidates = find_candidates(indexed, pool)
-        links = await store.links_for_publications(
-            {candidate.publication_id for candidate in candidates}
-        )
-        entities, stories, events = select_assignment_context(
-            indexed,
-            candidates,
-            links,
-            await store.list_entities(),
-            await store.list_stories(),
-            await store.list_events(),
-        )
-        try:
-            assignment = await assigner.assign(
-                fragment=indexed,
-                entities=entities,
-                stories=stories,
-                events=events,
-                candidates=candidates,
-            )
+            assignment = await _decide(assigner, indexed, context)
         except BudgetExceeded:
             raise
         except Exception:
             await store.enqueue(publication.publication_id, "assign_error")
             return
-        story = _resolve_story(assignment, stories, publication)
-        if story is None:
-            if getattr(assignment, "story_decision", None) != "ambiguous":
-                await store.enqueue(publication.publication_id, "assign_error")
-                return
-            continue
-        chosen_entities = _apply_entities(entities, assignment)
-        for entity in chosen_entities:
-            await store.save_entity(entity)
-        await store.save_story(story)
-        event_id = _resolve_event(assignment, story.story_id, events)
-        if event_id:
-            await store.save_event(
-                Event(
-                    event_id=event_id,
-                    story_id=story.story_id,
-                    when=getattr(assignment, "event_when", ""),
-                    amount=getattr(assignment, "event_amount", ""),
-                )
-            )
-        for claim_index, claim in enumerate(fragment.claims):
-            await store.save_link(
-                _link(
-                    story.story_id,
-                    publication,
-                    index,
-                    claim_index,
-                    claim,
-                    chosen_entities,
-                    event_id,
-                    getattr(assignment, "paraphrase_ru", ""),
-                )
-            )
-        await store.index_fragment(indexed)
+        effect = await _apply_decision(
+            store, publication, index, fragment, indexed, context, assignment
+        )
+        if not effect.valid:
+            return
     await store.mark_processed(publication.publication_id)
+
+
+async def assign_speculative_batch(
+    store: AgendaStore,
+    embedder: Embedder,
+    assigner: StoryAssigner,
+    jobs: Sequence[tuple[PublicationVersion, ExtractionResult]],
+    *,
+    concurrency: int = 16,
+) -> tuple[int, int]:
+    """Overlap independent model calls, then validate and commit in time order.
+
+    A proposal is reused only when its complete candidate context still equals
+    the context a sequential assignment would see at commit time.
+    """
+    if not jobs:
+        return 0, 0
+    if concurrency < 1:
+        raise ValueError("concurrency must be positive")
+    start = min(pub.published_at for pub, _ in jobs) - LOOKBACK
+    pool = await store.fragments_since(start)
+    links = await store.links_for_publications({item.publication_id for item in pool})
+    entities = await store.list_entities()
+    stories = await store.list_stories()
+    events = await store.list_events()
+    frozen_pool = tuple(pool)
+    frozen_links = tuple(links)
+    frozen_entities = tuple(entities)
+    frozen_stories = tuple(stories)
+    frozen_events = tuple(events)
+    semaphore = asyncio.Semaphore(concurrency)
+    embedding_locks: dict[str, asyncio.Lock] = {}
+
+    async def prepare(
+        publication: PublicationVersion, extraction: ExtractionResult
+    ) -> list[PreparedFragment]:
+        prepared: list[PreparedFragment] = []
+        for index, fragment in enumerate(extraction.fragments):
+            if not fragment.claims:
+                continue
+            surfaces = [entity.surface for entity in fragment.entities]
+            key = embedding_cache_key(embedding_input(fragment.text, surfaces))
+            async with embedding_locks.setdefault(key, asyncio.Lock()), semaphore:
+                indexed = await _indexed_for(store, embedder, publication, index, fragment)
+            context = _context_from_state(
+                indexed,
+                frozen_pool,
+                frozen_links,
+                frozen_entities,
+                frozen_stories,
+                frozen_events,
+            )
+            try:
+                async with semaphore:
+                    assignment = await _decide(assigner, indexed, context)
+            except BudgetExceeded:
+                raise
+            except Exception:
+                assignment = None
+            prepared.append(PreparedFragment(index, fragment, indexed, context, assignment))
+            if assignment is None:
+                break
+        return prepared
+
+    tasks = [asyncio.create_task(prepare(pub, extraction)) for pub, extraction in jobs]
+    try:
+        proposals = await asyncio.gather(*tasks)
+    finally:
+        for task in tasks:
+            if not task.done():
+                task.cancel()
+        await asyncio.gather(*tasks, return_exceptions=True)
+
+    reused = 0
+    retried = 0
+    for (publication, _), prepared in zip(jobs, proposals, strict=True):
+        failed = False
+        for proposal in prepared:
+            context = _context_from_state(proposal.indexed, pool, links, entities, stories, events)
+            assignment = proposal.assignment
+            if context != proposal.context:
+                retried += 1
+                try:
+                    assignment = await _decide(assigner, proposal.indexed, context)
+                except BudgetExceeded:
+                    raise
+                except Exception:
+                    assignment = None
+            else:
+                reused += 1
+            if assignment is None:
+                await store.enqueue(publication.publication_id, "assign_error")
+                failed = True
+                break
+            effect = await _apply_decision(
+                store,
+                publication,
+                proposal.index,
+                proposal.fragment,
+                proposal.indexed,
+                context,
+                assignment,
+            )
+            if not effect.valid:
+                failed = True
+                break
+            for entity in effect.entities:
+                entities = [item for item in entities if item.entity_id != entity.entity_id]
+                entities.append(entity)
+            if effect.story is not None:
+                stories = [item for item in stories if item.story_id != effect.story.story_id]
+                stories.append(effect.story)
+            if effect.event is not None:
+                events = [item for item in events if item.event_id != effect.event.event_id]
+                events.append(effect.event)
+            links.extend(effect.links)
+            if effect.indexed is not None:
+                pool.append(effect.indexed)
+        if not failed:
+            await store.mark_processed(publication.publication_id)
+    return reused, retried
 
 
 def _resolve_story(
