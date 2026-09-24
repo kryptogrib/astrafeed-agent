@@ -40,7 +40,7 @@ FIGURE_TOLERANCE = 0.1
 _URL = re.compile(r"https?://\S+|t\.me/\S+|@\w+")
 _NON_WORD = re.compile(r"[^\w$%.,]+", re.UNICODE)
 _UNCERTAINTY = re.compile(
-    r"\b(?:potentially|possibly|allegedly|unconfirmed|rumou?red?|возможно|вероятно|предположительно|якобы)\b",
+    r"\b(?:potentially|possibly|allegedly|unconfirmed|rumou?r(?:ed)?|возможно|вероятно|предположительно|якобы)\b",
     re.I,
 )
 _SENTENCE = re.compile(r"(?<=[.!?])\s+|\n+")
