@@ -32,7 +32,7 @@ def test_same_text_reuses_extraction_across_publications():
     a = analysis_reuse_key(h, CLASSIFIER_VERSION)
     b = analysis_reuse_key(text_hash("один и тот же текст"), CLASSIFIER_VERSION)
     assert a == b
-    assert analysis_reuse_key(h, "open-extract/v3") != a
+    assert analysis_reuse_key(h, "open-extract/v4") != a
 
 
 def test_windows_are_half_open_24h_pairs():
