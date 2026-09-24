@@ -169,6 +169,9 @@ class InMemoryAgendaStore:
         return [f for f in self._fragments if f.published_at >= start]
 
     async def publish_snapshot(self, snapshot: Snapshot) -> None:
+        existing = self._snapshots.get(snapshot.snapshot_id)
+        if existing is not None and existing != snapshot:
+            raise ValueError("snapshot_id is immutable")
         self._snapshots[snapshot.snapshot_id] = snapshot
         self._published_id = snapshot.snapshot_id
 

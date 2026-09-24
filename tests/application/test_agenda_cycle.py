@@ -178,6 +178,20 @@ async def test_cycle_publishes_snapshot_and_restart_does_not_duplicate():
     links = await store.links_for_publications({"1:1", "2:2"})
     assert len(links) == 2
 
+    reanalysis = await run_cycle(
+        store,
+        reader=reader,
+        source_ids=[1, 2],
+        extractor=Extractor(),
+        embedder=Embedder(),
+        assigner=Assigner(),
+        now=t + timedelta(minutes=6),
+        ingest=False,
+    )
+    assert reanalysis is not None
+    assert reanalysis.snapshot_id != again.snapshot_id
+    assert await store.get_snapshot(again.snapshot_id) == again
+
 
 @pytest.mark.asyncio
 async def test_empty_partial_restores_latest_nonempty_snapshot():

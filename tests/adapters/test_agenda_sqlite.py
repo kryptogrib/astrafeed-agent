@@ -145,6 +145,13 @@ async def test_sqlite_finds_latest_nonempty_snapshot(tmp_path):
     try:
         await store.publish_snapshot(useful)
         assert await store.get_snapshot(None) is useful
+        reopened = SqliteAgendaStore(async_sessionmaker(engine, expire_on_commit=False))
+        pinned = await reopened.get_snapshot(useful.snapshot_id)
+        assert pinned is not None
+        await reopened.publish_snapshot(pinned)
+        with pytest.raises(ValueError, match="immutable"):
+            await store.publish_snapshot(replace(useful, agenda=()))
+        assert await store.get_snapshot(useful.snapshot_id) == useful
         await store.publish_snapshot(
             replace(useful, snapshot_id="snap-20260924T130000Z-p128", agenda=())
         )

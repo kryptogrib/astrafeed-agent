@@ -381,7 +381,15 @@ async def run_cycle(
             analyzed_at=finished_at,
             verifier=evidence_verifier,
         )
-        snapshot = replace(snapshot, published_at=finished_at)
+        snapshot = replace(
+            snapshot,
+            published_at=finished_at,
+            snapshot_id=(
+                snapshot.snapshot_id
+                if remaining_backfill
+                else f"{snapshot.snapshot_id}-r{finished_at.strftime('%Y%m%dT%H%M%S%fZ')}"
+            ),
+        )
         if discuss is not None and snapshot.agenda:
             snapshot = await discuss(snapshot, finished_at)
         if remaining_backfill:

@@ -328,7 +328,8 @@ class SqliteAgendaStore:
                     )
                 )
             else:
-                row.payload = payload
+                if row.payload != payload:
+                    raise ValueError("snapshot_id is immutable")
                 row.published = True
             others = (
                 await session.scalars(
