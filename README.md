@@ -63,6 +63,16 @@ The response has `service`, `action` (`agenda`, `search`, or `story`), and `resu
 
 The watched channels are a curated Russian-language Telegram folder, not a representative sample of the whole market. Quotes in the English report may be machine-translated; JSON retains the original. Reader comments, when shown, are marked unverified. No sentiment score or trading recommendation is produced.
 
+## Poll for changes
+
+An agent saves the returned `snapshot_id`, then requests
+`GET /agenda?since_snapshot_id=snap-...` or posts
+`{"since_snapshot_id":"snap-..."}` to `/a2mcp/astrafeed`.
+The delta contains new/updated cards and changes in sources, quotes and sourcing
+labels. An unavailable baseline returns the full agenda with
+`baseline_unavailable`. `snapshot_id` can still pin the target of the comparison.
+[Response fields, examples and limits](docs/snapshot-changes.md).
+
 ## How it works
 
 ```mermaid

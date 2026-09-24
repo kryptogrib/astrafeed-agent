@@ -20,9 +20,7 @@ async def test_refresh_displayed_posts_rereads_only_visible_publications():
                     SimpleNamespace(publication_id="3:20"),
                 )
             ),
-            "hidden": SimpleNamespace(
-                publications=(SimpleNamespace(publication_id="4:30"),)
-            ),
+            "hidden": SimpleNamespace(publications=(SimpleNamespace(publication_id="4:30"),)),
         },
     )
 

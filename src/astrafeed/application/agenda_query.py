@@ -7,6 +7,7 @@ from datetime import datetime
 from html import escape
 from urllib.parse import quote
 
+from astrafeed.application.agenda_changes import compare_snapshots, comparison_lines
 from astrafeed.domain.agenda import (
     SEARCH_DEFAULT_LIMIT,
     SEARCH_MAX_LIMIT,
@@ -218,7 +219,9 @@ def _channel_links(card: dict) -> list[tuple[str, str, str]]:
         result = []
         for index, node in enumerate(signals["sources"]):
             minutes = node["minutes_after_first"]
-            note = f"+{_duration(minutes)}" if minutes else ("first" if index == 0 else "same minute")
+            note = (
+                f"+{_duration(minutes)}" if minutes else ("first" if index == 0 else "same minute")
+            )
             if node["echo_of"]:
                 note = f"copy of {node['echo_of']}, {note}"
             result.append((node["channel"], node["link"], note))
@@ -283,7 +286,8 @@ def _signal_lines(card: dict) -> list[str]:
     if price:
         arrow = "📈" if price["change_pct"] >= 0 else "📉"
         lines.append(
-            f"{arrow} {price['inst_id'].split('-')[0]} {price['change_pct']:+.2f}% since first post "
+            f"{arrow} {price['inst_id'].split('-')[0]} "
+            f"{price['change_pct']:+.2f}% since first post "
             f"({price['price_then']:g} → {price['price_now']:g} USDT, OKX spot; not causal)"
         )
     return lines
@@ -297,7 +301,10 @@ def _count_text(card: dict) -> str:
     text = _channels(card["current_channels"])
     signals = card.get("signals")
     if signals and signals["echo_channels"]:
-        text += f" ({signals['independent_channels']} independent, {signals['echo_channels']} {'copy' if signals['echo_channels'] == 1 else 'copies'})"
+        text += (
+            f" ({signals['independent_channels']} independent, {signals['echo_channels']} "
+            f"{'copy' if signals['echo_channels'] == 1 else 'copies'})"
+        )
     return text
 
 
@@ -344,7 +351,8 @@ def _md_card_head(card: dict, heading: str) -> list[str]:
             "",
             "Covered by: "
             + " · ".join(
-                f"[{name}]({link})" + (f" ({note})" if note else "") for name, link, note in channels
+                f"[{name}]({link})" + (f" ({note})" if note else "")
+                for name, link, note in channels
             ),
         ]
     return lines
@@ -360,8 +368,10 @@ def _comment_facts(discussion: dict) -> list[tuple[str, dict | None]]:
 
 def _md_discussion(card: dict, *, full: bool) -> list[str]:
     discussion = card.get("discussion")
-    facts = _comment_facts(discussion) if discussion else []
-    if not facts and not (discussion and discussion["points"]):
+    if not discussion:
+        return []
+    facts = _comment_facts(discussion)
+    if not facts and not discussion["points"]:
         return []
     lines = [
         "",
@@ -385,18 +395,22 @@ _EMPTY = "No new or growing stories across comparable channels."
 
 
 def render_agenda_md(payload: dict) -> str:
+    delta = payload.get("response_mode") == "delta"
     lines = [
         f"# Crypto Telegram agenda · {_when(payload['t'])}",
         "",
-        _LEAD,
+        "New and updated cards relative to the requested snapshot." if delta else _LEAD,
         "",
         f"Coverage: {_coverage_text(payload)}. Snapshot `{payload['snapshot_id']}`.",
     ]
     notes = _limitation_notes(payload)
     if notes:
         lines += ["", "⚠️ " + "; ".join(notes) + "."]
+    lines += ["", *comparison_lines(payload)]
     if not payload["stories"]:
-        lines += ["", _EMPTY]
+        if not delta:
+            lines += ["", _EMPTY]
+        lines += _md_extras(payload)
         return "\n".join(lines) + "\n"
     for index, card in enumerate(payload["stories"], 1):
         lines += ["", "---", ""]
@@ -513,7 +527,8 @@ def _html_timeline(card: dict) -> str:
         return ""
     span = signals["spread_minutes"]
     dots = "".join(
-        f'<a class="{"echo" if node["echo_of"] else ""}" style="left:{node["minutes_after_first"] / span * 100:.1f}%" '
+        f'<a class="{"echo" if node["echo_of"] else ""}" '
+        f'style="left:{node["minutes_after_first"] / span * 100:.1f}%" '
         f'href="{_url(node["link"])}" title="{escape(node["channel"])} '
         f'{escape(_clock(node["published_at"]))}"></a>'
         for node in signals["sources"]
@@ -538,7 +553,7 @@ def _html_card_head(card: dict, title_html: str) -> str:
     signal_lines = _signal_lines(card)
     if signal_lines:
         items = "".join(
-            f'<li{" class=conflict" if line.startswith("⚠️") else ""}>{escape(line)}</li>'
+            f"<li{' class=conflict' if line.startswith('⚠️') else ''}>{escape(line)}</li>"
             for line in signal_lines
         )
         parts.append(f'<ul class="sig">{items}</ul>')
@@ -547,7 +562,11 @@ def _html_card_head(card: dict, title_html: str) -> str:
     if channels:
         links = " · ".join(
             f'<a href="{_url(link)}">{escape(name)}</a>'
-            + (f' <span class="{"echo" if "copy" in note else "meta"}">({escape(note)})</span>' if note else "")
+            + (
+                f' <span class="{"echo" if "copy" in note else "meta"}">({escape(note)})</span>'
+                if note
+                else ""
+            )
             for name, link, note in channels
         )
         parts.append(f'<p class="src">Covered by: {links}</p>')
@@ -556,16 +575,17 @@ def _html_card_head(card: dict, title_html: str) -> str:
 
 def _html_discussion(card: dict, *, full: bool) -> str:
     discussion = card.get("discussion")
-    facts = _comment_facts(discussion) if discussion else []
-    if not facts and not (discussion and discussion["points"]):
+    if not discussion:
+        return ""
+    facts = _comment_facts(discussion)
+    if not facts and not discussion["points"]:
         return ""
     items = "".join(f"<li>{escape(point)}</li>" for point in discussion["points"])
     for fact, comment in facts:
         source = quote_html = ""
         if comment:
             source = (
-                f' — <a href="{_url(comment["link"])}">comment in '
-                f"{escape(comment['channel'])}</a>"
+                f' — <a href="{_url(comment["link"])}">comment in {escape(comment["channel"])}</a>'
             )
             if full:
                 quote_html = (
@@ -596,12 +616,15 @@ def _html_status(payload: dict) -> str:
 
 def render_agenda_html(payload: dict) -> str:
     snapshot = quote(payload["snapshot_id"])
+    delta = payload.get("response_mode") == "delta"
+    lead = "New and updated cards relative to the requested snapshot." if delta else _LEAD
     body = [
         f"<h1>Crypto Telegram agenda · {escape(_when(payload['t']))}</h1>",
-        f'<p class="lead">{_LEAD}</p>',
+        f'<p class="lead">{lead}</p>',
         _html_status(payload),
     ]
-    if not payload["stories"]:
+    body.extend(f'<p class="note">{escape(line)}</p>' for line in comparison_lines(payload))
+    if not payload["stories"] and not delta:
         body.append(f"<p>{_EMPTY}</p>")
     for index, card in enumerate(payload["stories"], 1):
         href = f"/stories/{quote(card['story_id'])}?format=html&amp;snapshot_id={snapshot}"
@@ -625,13 +648,18 @@ def render_agenda_html(payload: dict) -> str:
             for card in upcoming
         )
         body.append(f"<h2>📅 On the calendar</h2><ul>{items}</ul>")
+    baseline_query = (
+        f"&amp;since_snapshot_id={quote(payload['since_snapshot_id'], safe='')}"
+        if "since_snapshot_id" in payload
+        else ""
+    )
     body.append(
         "<footer>Copies repeat an earlier channel's text near-verbatim: reach, not confirmation. "
         "Prices are OKX spot context, not cause. "
         "Quotes from non-English posts and comments are machine-translated. "
         f"Snapshot {escape(payload['snapshot_id'])} · "
-        f'<a href="/agenda?format=md&amp;snapshot_id={snapshot}">Markdown</a> · '
-        f'<a href="/agenda?snapshot_id={snapshot}">JSON</a></footer>'
+        f'<a href="/agenda?format=md&amp;snapshot_id={snapshot}{baseline_query}">Markdown</a> · '
+        f'<a href="/agenda?snapshot_id={snapshot}{baseline_query}">JSON</a></footer>'
     )
     return _html_page("Crypto Telegram agenda", "".join(body))
 
@@ -681,7 +709,7 @@ def search_in_snapshot(
         docs_by_story.setdefault(doc.story_id, []).append(doc)
     for story_id, docs in docs_by_story.items():
         title = next((doc.text for doc in docs if doc.kind == "title"), story_id)
-        matches = []
+        matches: list[str] = []
         found: set[str] = set()
         score = 0.0
         for doc in docs:
@@ -727,7 +755,15 @@ async def load_snapshot(store: AgendaStore, snapshot_id: str | None) -> Snapshot
     return snapshot
 
 
-async def agenda_payload(store: AgendaStore, *, snapshot_id: str | None, now: datetime) -> dict:
+async def agenda_payload(
+    store: AgendaStore,
+    *,
+    snapshot_id: str | None,
+    now: datetime,
+    since_snapshot_id: str | None = None,
+) -> dict:
+    if since_snapshot_id is not None and not since_snapshot_id.strip():
+        raise ValueError("since_snapshot_id must not be blank")
     snapshot = await load_snapshot(store, snapshot_id)
     payload = _status(snapshot, now)
     payload["stories"] = [_card_payload(card) for card in snapshot.agenda]
@@ -740,6 +776,50 @@ async def agenda_payload(store: AgendaStore, *, snapshot_id: str | None, now: da
         }
         for lead in snapshot.lead_channels
     ]
+    if since_snapshot_id is not None:
+        # Resolve the target once. A concurrent publication must not move it
+        # while we load the agent's chosen baseline.
+        baseline = (
+            snapshot
+            if since_snapshot_id == snapshot.snapshot_id
+            else await store.get_snapshot(since_snapshot_id)
+        )
+        payload.update(
+            {
+                "since_snapshot_id": since_snapshot_id,
+                "compared_to": baseline.snapshot_id if baseline else None,
+                "comparison_status": "ok" if baseline else "baseline_unavailable",
+                "response_mode": "delta" if baseline else "full",
+                "baseline_coverage": _status(baseline, now)["coverage"] if baseline else None,
+                "baseline_limitations": list(baseline.limitations) if baseline else None,
+                "changes": None,
+                "agenda_story_ids": [card.story_id for card in snapshot.agenda],
+                "upcoming_story_ids": [card.story_id for card in snapshot.upcoming],
+            }
+        )
+        if baseline is not None:
+            shared = {card.story_id for card in (*snapshot.agenda, *snapshot.upcoming)} & {
+                card.story_id for card in (*baseline.agenda, *baseline.upcoming)
+            }
+            payload["comparison_limitations"] = (
+                ["publication_details_unavailable"]
+                if any(sid not in snapshot.stories or sid not in baseline.stories for sid in shared)
+                else []
+            )
+            changes = compare_snapshots(snapshot, baseline)
+            payload["changes"] = changes
+            changed_ids = {
+                change["story_id"]
+                for change in (*changes["new_stories"], *changes["updated_stories"])
+            }
+            payload["stories"] = [
+                card for card in payload["stories"] if card["story_id"] in changed_ids
+            ]
+            payload["upcoming"] = [
+                card for card in payload["upcoming"] if card["story_id"] in changed_ids
+            ]
+            # This ranking is snapshot context, not a change in story evidence.
+            payload["lead_channels"] = []
     payload["brief_markdown"] = render_agenda_md(payload)
     return payload
 
@@ -791,6 +871,7 @@ async def health_payload(store: AgendaStore, *, now: datetime, commit: str) -> d
     state: CycleState = await store.get_cycle_state()
     snapshot = await store.get_snapshot(None)
     queue_depth = await store.queue_depth()
+    last_full_success_at = state.last_full_success_at or state.last_success_at
     if snapshot is None:
         status = "preparing"
     elif state.budget_blocked or state.last_error or is_stale(snapshot.published_at, now):
@@ -807,9 +888,7 @@ async def health_payload(store: AgendaStore, *, now: datetime, commit: str) -> d
             "last_collect_at": state.last_collect_at.isoformat() if state.last_collect_at else None,
             "last_partial_at": state.last_partial_at.isoformat() if state.last_partial_at else None,
             "last_full_success_at": (
-                (state.last_full_success_at or state.last_success_at).isoformat()
-                if state.last_full_success_at or state.last_success_at
-                else None
+                last_full_success_at.isoformat() if last_full_success_at else None
             ),
             "queue_depth": queue_depth,
         },

@@ -571,7 +571,9 @@ async def assign_speculative_batch(
             except Exception as exc:
                 _log.warning(
                     "agenda assignment failed publication=%s fragment=%d error=%s",
-                    indexed.publication_id, index, type(exc).__name__,
+                    indexed.publication_id,
+                    index,
+                    type(exc).__name__,
                 )
                 assignment = None
             finally:
@@ -652,8 +654,8 @@ async def assign_speculative_batch(
                 assignment = proposal.assignment
                 if assignment is None or getattr(assignment, "story_decision", None) != "new":
                     continue
-                key = _assignment_entity_key(assignment, proposal.indexed, frozen_entities)
-                if not key:
+                entity_key = _assignment_entity_key(assignment, proposal.indexed, frozen_entities)
+                if not entity_key:
                     continue
                 matches = sorted(
                     (
@@ -665,9 +667,10 @@ async def assign_speculative_batch(
                             story,
                         )
                         for item, story, prior_key in prior_new
-                        if prior_key == key
+                        if prior_key == entity_key
                         and item.indexed.publication_id != proposal.indexed.publication_id
-                        and proposal.indexed.published_at - LOOKBACK <= item.indexed.published_at
+                        and proposal.indexed.published_at - LOOKBACK
+                        <= item.indexed.published_at
                         < proposal.indexed.published_at
                     ),
                     key=lambda pair: -pair[0],
@@ -687,7 +690,7 @@ async def assign_speculative_batch(
                     )
                 story = _resolve_story(assignment, [], publication, proposal.fragment)
                 if story is not None:
-                    prior_new.append((proposal, story, key))
+                    prior_new.append((proposal, story, entity_key))
         try:
             for job_index, proposal_index, task in reconsiderations:
                 proposals[job_index][proposal_index] = await task
@@ -695,9 +698,7 @@ async def assign_speculative_batch(
             for _, _, task in reconsiderations:
                 if not task.done():
                     task.cancel()
-            await asyncio.gather(
-                *(task for _, _, task in reconsiderations), return_exceptions=True
-            )
+            await asyncio.gather(*(task for _, _, task in reconsiderations), return_exceptions=True)
 
     reused = 0
     retried = 0

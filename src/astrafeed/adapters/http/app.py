@@ -123,8 +123,12 @@ def create_app(
         async def get_agenda(
             format: Literal["json", "md", "html"] = "json",
             snapshot_id: str | None = None,
+            since_snapshot_id: str | None = None,
         ) -> dict[str, Any] | PlainTextResponse | HTMLResponse:
-            result = await _call_async(agenda, snapshot_id=snapshot_id)
+            kwargs = {"snapshot_id": snapshot_id}
+            if since_snapshot_id is not None:
+                kwargs["since_snapshot_id"] = since_snapshot_id
+            result = await _call_async(agenda, **kwargs)
             if format == "html":
                 return HTMLResponse(render_agenda_html(result))
             if format == "md":

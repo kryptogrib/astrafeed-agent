@@ -18,6 +18,7 @@ from telethon import TelegramClient
 from telethon.sessions import StringSession
 
 from astrafeed.adapters.http.app import create_app
+from astrafeed.adapters.http.okx_market import OkxMarket
 from astrafeed.adapters.llm.agenda import (
     OpenRouterAssigner,
     OpenRouterDiscussionSummarizer,
@@ -42,14 +43,13 @@ from astrafeed.adapters.source.telegram import TelegramSource
 from astrafeed.application.agenda_cycle import run_cycle
 from astrafeed.application.agenda_discussion import DiscussionEnricher
 from astrafeed.application.agenda_localize import EnglishLocalizer
-from astrafeed.application.agenda_signals import add_price_moves
-from astrafeed.adapters.http.okx_market import OkxMarket
 from astrafeed.application.agenda_query import (
     agenda_payload,
     health_payload,
     search_payload,
     story_payload,
 )
+from astrafeed.application.agenda_signals import add_price_moves
 from astrafeed.application.brief import build_brief
 from astrafeed.application.ingestion import (
     IngestionCoordinator,
@@ -407,8 +407,15 @@ async def _serve(config_path: str) -> None:
     )
     commit = git_commit()
 
-    async def agenda_http(snapshot_id: str | None = None) -> dict:
-        return await agenda_payload(agenda, snapshot_id=snapshot_id, now=datetime.now(UTC))
+    async def agenda_http(
+        snapshot_id: str | None = None, since_snapshot_id: str | None = None
+    ) -> dict:
+        return await agenda_payload(
+            agenda,
+            snapshot_id=snapshot_id,
+            since_snapshot_id=since_snapshot_id,
+            now=datetime.now(UTC),
+        )
 
     async def search_http(
         q: str, snapshot_id: str | None = None, limit: int = 10, offset: int = 0

@@ -77,7 +77,17 @@ def test_unique_verbatim_quote_repairs_a_wrong_span_ambiguous_stays_rejected():
     assert post2.count(twice) > 1
     dropped = accept_theses(
         th2,
-        {"theses": [{"quote": twice, "start": 0, "end": 3, "kind": "evaluation", "topic_role": "subject"}]},
+        {
+            "theses": [
+                {
+                    "quote": twice,
+                    "start": 0,
+                    "end": 3,
+                    "kind": "evaluation",
+                    "topic_role": "subject",
+                }
+            ]
+        },
     )
     assert dropped["theses"] == []
     assert any("span" in x for x in dropped["rejected"])
@@ -106,7 +116,16 @@ def test_quote_must_equal_post_slice_wrong_or_ambiguous_spans_are_dropped():
     assert ok["theses"][0]["thesis_id"] == stable_thesis_id(THREAD["thread"], quote)
 
     for raw in (
-        {"theses": [{"quote": "ETH goes to 4k", "start": start, "end": start + 14, "kind": "forecast"}]},
+        {
+            "theses": [
+                {
+                    "quote": "ETH goes to 4k",
+                    "start": start,
+                    "end": start + 14,
+                    "kind": "forecast",
+                }
+            ]
+        },
         {"theses": "not-a-list"},
         None,
     ):

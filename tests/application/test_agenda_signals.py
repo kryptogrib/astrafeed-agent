@@ -179,8 +179,11 @@ def test_unrelated_update_amount_does_not_create_conflict() -> None:
 
 
 def test_entities_alone_do_not_add_a_ticker() -> None:
-    assert tickers(
-        "Australia says an OpenAI agent hacked the Medicare portal",
-        ["OpenAI", "ETH", "FTX"],
-        ["Австралия заявляет, что агент OpenAI взломал портал Medicare"],
-    ) == ()
+    assert (
+        tickers(
+            "Australia says an OpenAI agent hacked the Medicare portal",
+            ["OpenAI", "ETH", "FTX"],
+            ["Австралия заявляет, что агент OpenAI взломал портал Medicare"],
+        )
+        == ()
+    )

@@ -76,6 +76,7 @@ def test_single_claim_with_two_project_sentences_is_split():
         "ZecVisions закрыла whitelist.",
     ]
 
+
 class RecordingExtractor:
     def __init__(self, draft: ExtractionResult | Exception) -> None:
         self.draft = draft

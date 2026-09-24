@@ -73,8 +73,10 @@ class BudgetedClient:
 
     async def _record_failure(self, reservation: str, exc: BaseException) -> None:
         outcome = (
-            "cancelled" if isinstance(exc, asyncio.CancelledError)
-            else "timeout" if isinstance(exc, TimeoutError)
+            "cancelled"
+            if isinstance(exc, asyncio.CancelledError)
+            else "timeout"
+            if isinstance(exc, TimeoutError)
             else "error"
         )
         with suppress(Exception):

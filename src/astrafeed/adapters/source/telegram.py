@@ -472,9 +472,7 @@ class TelegramSource:
                 return []
             messages = await self._client.get_messages(entity, ids=list(ids))
             return [
-                message_to_item(
-                    msg, channel_ref=f"@{username}", channel_username=username
-                )
+                message_to_item(msg, channel_ref=f"@{username}", channel_username=username)
                 for msg in messages
                 if msg is not None and getattr(msg, "date", None) is not None
             ]

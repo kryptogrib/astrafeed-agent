@@ -1,6 +1,5 @@
-from pathlib import Path
-
 import sys
+from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "docs" / "research"))
 
@@ -35,5 +34,13 @@ def test_overlap_match_does_not_use_the_model_id():
             "origin": "author",
         }
     ]
-    extracted = [{"thesis_id": "th-stable", "quote": "I ETH to 3k now", "start": 0, "end": 15, "thread": "u"}]
+    extracted = [
+        {
+            "thesis_id": "th-stable",
+            "quote": "I ETH to 3k now",
+            "start": 0,
+            "end": 15,
+            "thread": "u",
+        }
+    ]
     assert match_gold_to_extracted(gold, extracted)["gold:x:1"] == "th-stable"

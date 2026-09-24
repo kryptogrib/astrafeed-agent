@@ -11,9 +11,9 @@ import asyncio
 import logging
 import re
 from collections.abc import Iterable
+from dataclasses import replace
 from datetime import datetime
 from difflib import SequenceMatcher
-from dataclasses import replace
 from statistics import median
 from typing import Protocol
 
@@ -50,16 +50,40 @@ _ATTRIBUTED = re.compile(
     re.I,
 )
 _RUMOR = re.compile(
-    r"слух\w*|вероятно|возможно|предположительно|якобы|не подтвержд\w*|инсайд\w*|в твиттер\w* (?:пишут|сообщают)"
-    r"|\bpotentially\b|\breportedly\b|\bunconfirmed\b|\brumou?r\w*\b|\ballegedly\b|\bpossibl[ey]\b",
+    r"слух\w*|вероятно|возможно|предположительно|якобы|не подтвержд\w*"
+    r"|инсайд\w*|в твиттер\w* (?:пишут|сообщают)"
+    r"|\bpotentially\b|\breportedly\b|\bunconfirmed\b|\brumou?r\w*\b"
+    r"|\ballegedly\b|\bpossibl[ey]\b",
     re.I,
 )
 # On-chain analysts and wires often named as the origin of a figure.
 _NAMED_SOURCES = (
-    "Arkham", "Lookonchain", "PeckShield", "CertiK", "ZachXBT", "Cyvers", "SlowMist",
-    "Whale Alert", "Glassnode", "CryptoQuant", "Santiment", "Farside", "SoSoValue",
-    "Coinglass", "CoinGlass", "Nansen", "DefiLlama", "Bloomberg", "Reuters", "CoinDesk",
-    "The Block", "Wu Blockchain", "WSJ", "Financial Times", "SEC", "Polymarket",
+    "Arkham",
+    "Lookonchain",
+    "PeckShield",
+    "CertiK",
+    "ZachXBT",
+    "Cyvers",
+    "SlowMist",
+    "Whale Alert",
+    "Glassnode",
+    "CryptoQuant",
+    "Santiment",
+    "Farside",
+    "SoSoValue",
+    "Coinglass",
+    "CoinGlass",
+    "Nansen",
+    "DefiLlama",
+    "Bloomberg",
+    "Reuters",
+    "CoinDesk",
+    "The Block",
+    "Wu Blockchain",
+    "WSJ",
+    "Financial Times",
+    "SEC",
+    "Polymarket",
 )
 
 _SCHEDULED = re.compile(
@@ -70,9 +94,18 @@ _SCHEDULED = re.compile(
 )
 
 _MULT = {
-    "k": 1e3, "тыс": 1e3, "thousand": 1e3,
-    "m": 1e6, "mn": 1e6, "mln": 1e6, "млн": 1e6, "million": 1e6,
-    "b": 1e9, "bn": 1e9, "млрд": 1e9, "billion": 1e9,
+    "k": 1e3,
+    "тыс": 1e3,
+    "thousand": 1e3,
+    "m": 1e6,
+    "mn": 1e6,
+    "mln": 1e6,
+    "млн": 1e6,
+    "million": 1e6,
+    "b": 1e9,
+    "bn": 1e9,
+    "млрд": 1e9,
+    "billion": 1e9,
 }
 _AMOUNT = re.compile(
     r"(?P<pre>\$\s?)?(?P<num>\d{1,3}(?:[ ,]\d{3})+|\d+(?:[.,]\d+)?)\s?"
@@ -81,15 +114,38 @@ _AMOUNT = re.compile(
 )
 _TICKER = re.compile(r"(?:\$([A-Z][A-Z0-9]{1,9})\b|\(([A-Z][A-Z0-9]{1,9})\))")
 _NAME_TICKERS = {
-    "bitcoin": "BTC", "биткоин": "BTC", "биткойн": "BTC", "btc": "BTC",
-    "ethereum": "ETH", "эфир": "ETH", "эфириум": "ETH", "eth": "ETH",
-    "solana": "SOL", "солана": "SOL", "sol": "SOL",
-    "hyperliquid": "HYPE", "hype": "HYPE",
-    "bitget": "BGB", "binance": "BNB", "bnb": "BNB",
-    "xrp": "XRP", "ripple": "XRP", "toncoin": "TON", "ton": "TON",
-    "dogecoin": "DOGE", "doge": "DOGE", "ondo": "ONDO", "tron": "TRX",
-    "chainlink": "LINK", "avalanche": "AVAX", "sui": "SUI", "aptos": "APT",
-    "zcash": "ZEC", "zec": "ZEC", "okb": "OKB", "pepe": "PEPE",
+    "bitcoin": "BTC",
+    "биткоин": "BTC",
+    "биткойн": "BTC",
+    "btc": "BTC",
+    "ethereum": "ETH",
+    "эфир": "ETH",
+    "эфириум": "ETH",
+    "eth": "ETH",
+    "solana": "SOL",
+    "солана": "SOL",
+    "sol": "SOL",
+    "hyperliquid": "HYPE",
+    "hype": "HYPE",
+    "bitget": "BGB",
+    "binance": "BNB",
+    "bnb": "BNB",
+    "xrp": "XRP",
+    "ripple": "XRP",
+    "toncoin": "TON",
+    "ton": "TON",
+    "dogecoin": "DOGE",
+    "doge": "DOGE",
+    "ondo": "ONDO",
+    "tron": "TRX",
+    "chainlink": "LINK",
+    "avalanche": "AVAX",
+    "sui": "SUI",
+    "aptos": "APT",
+    "zcash": "ZEC",
+    "zec": "ZEC",
+    "okb": "OKB",
+    "pepe": "PEPE",
 }
 # Tickers that are also common words or fiat; never priced.
 _NOT_TICKERS = {"USD", "USDT", "USDC", "EUR", "RUB", "CEO", "ETF", "SEC", "AI", "NFT", "TVL", "APY"}
@@ -137,7 +193,10 @@ def usd_amounts(text: str) -> list[tuple[str, float]]:
         if not mult_key:
             continue
         raw = match["num"].replace(" ", "")
-        raw = raw.replace(",", "") if re.fullmatch(r"\d{1,3}(?:,\d{3})+", raw) else raw.replace(",", ".")
+        if re.fullmatch(r"\d{1,3}(?:,\d{3})+", raw):
+            raw = raw.replace(",", "")
+        else:
+            raw = raw.replace(",", ".")
         try:
             value = float(raw) * _MULT[mult_key]
         except (ValueError, KeyError):
@@ -170,7 +229,9 @@ def _figure_groups(quotes: list[tuple[str, str]]) -> tuple[tuple[FigureGroup, ..
     per_channel: dict[str, tuple[str, float]] = {}
     for channel, amounts in stated.items():
         if amounts:
-            per_channel[channel] = max(amounts, key=lambda item: (support(channel, item[1]), item[1]))
+            per_channel[channel] = max(
+                amounts, key=lambda item: (support(channel, item[1]), item[1])
+            )
     groups: list[list] = []
     for channel, (wording, value) in per_channel.items():
         for group in groups:
@@ -276,11 +337,13 @@ def lead_channels(cards: Iterable[StoryCard], limit: int = 5) -> tuple[ChannelLe
         if len(originals) < 2:
             continue
         leads.setdefault(originals[0].channel_ref, []).append(originals[1].minutes_after_first)
-    ranked = sorted(
-        leads.items(), key=lambda item: (-len(item[1]), -median(item[1]), item[0])
-    )
+    ranked = sorted(leads.items(), key=lambda item: (-len(item[1]), -median(item[1]), item[0]))
     return tuple(
-        ChannelLead(channel_ref=channel, stories_first=len(gaps), median_lead_minutes=int(median(gaps)))
+        ChannelLead(
+            channel_ref=channel,
+            stories_first=len(gaps),
+            median_lead_minutes=int(median(gaps)),
+        )
         for channel, gaps in ranked[:limit]
     )
 
@@ -345,5 +408,7 @@ async def add_price_moves(
     for card in agenda:
         detail = stories.get(card.story_id)
         if detail is not None:
-            stories[card.story_id] = replace(detail, card=replace(detail.card, signals=card.signals))
+            stories[card.story_id] = replace(
+                detail, card=replace(detail.card, signals=card.signals)
+            )
     return replace(snapshot, agenda=agenda, stories=stories)

@@ -84,13 +84,21 @@ def _supported_link(
     correct entity label or similar embedding cannot repair an unrelated quote.
     """
     quote = link.quote.strip()
-    if (not quote or quote not in pub.text or _VAGUE_STORY.search(title)
-        or ";" in title or re.match(r"WATCH LIVE\b", quote, re.I)):
+    if (
+        not quote
+        or quote not in pub.text
+        or _VAGUE_STORY.search(title)
+        or ";" in title
+        or re.match(r"WATCH LIVE\b", quote, re.I)
+    ):
         return False
     before_quote = pub.text[: pub.text.index(quote)]
     # A bullet under a future-plan heading is not evidence of a completed launch.
-    if (_FUTURE_SECTION.search(before_quote[-350:]) and not _PENDING.search(title)
-        and re.match(r"^(?:запуск|завершение|расширение)\b", title, re.I)):
+    if (
+        _FUTURE_SECTION.search(before_quote[-350:])
+        and not _PENDING.search(title)
+        and re.match(r"^(?:запуск|завершение|расширение)\b", title, re.I)
+    ):
         return False
     if _PENDING.search(title) and _RESOLVED.search(quote):
         return False
@@ -105,10 +113,12 @@ def _supported_link(
     # publication's surrounding text must not lend that bullet a channel vote.
     candidates = (
         (entities.get(entity_id) for entity_id in link.entity_ids)
-        if link.entity_ids else entities.values()
+        if link.entity_ids
+        else entities.values()
     )
     named_entities = [
-        entity for entity in candidates
+        entity
+        for entity in candidates
         if entity is not None
         and entity.status == "confirmed"
         and entity.canonical_name.casefold().lstrip("$#") not in _GENERIC_ENTITIES
@@ -183,12 +193,11 @@ def _display_title(
     if primary is None:
         primary = next(
             (
-                entity for entity in entities.values()
+                entity
+                for entity in entities.values()
                 if entity.status == "confirmed"
                 and entity.canonical_name.casefold().lstrip("$#") not in _GENERIC_ENTITIES
-                and re.match(
-                    rf"^{re.escape(entity.canonical_name)}(?!\w)", story.title_ru, re.I
-                )
+                and re.match(rf"^{re.escape(entity.canonical_name)}(?!\w)", story.title_ru, re.I)
                 and any(_mentions(link.quote, entity.canonical_name) for link in links)
             ),
             None,
@@ -207,7 +216,8 @@ def _display_title(
                 value
                 for link in links
                 for value in (link.paraphrase_ru, link.quote)
-                if value and not _PROFANITY.search(value)
+                if value
+                and not _PROFANITY.search(value)
                 and numbers_are_grounded(value, [link.quote])
             ),
             "Story",
@@ -218,11 +228,7 @@ def _display_title(
     names = (primary.canonical_name, *primary.aliases)
     if any(_mentions(title, name) for name in names):
         return title, key
-    if any(
-        _mentions(link.quote, name)
-        for name in names
-        for link in links
-    ):
+    if any(_mentions(link.quote, name) for name in names for link in links):
         return f"{primary.canonical_name}: {title}", key
     return title, key
 
@@ -357,8 +363,12 @@ async def build_snapshot(
     for link in all_links:
         story = stories.get(link.story_id)
         pub = by_id.get(link.publication_id)
-        if (story is not None and pub is not None and not claim_is_noise(link.quote)
-            and _supported_link(link, pub, story.title_ru, story.key_entity or "", entities)):
+        if (
+            story is not None
+            and pub is not None
+            and not claim_is_noise(link.quote)
+            and _supported_link(link, pub, story.title_ru, story.key_entity or "", entities)
+        ):
             links_by_story[link.story_id].append(link)
     verification_failed = False
     if verifier is not None:
@@ -371,11 +381,14 @@ async def build_snapshot(
         candidates = [
             (story_id, links)
             for story_id, links in links_by_story.items()
-            if len({
-                by_id[link.publication_id].source_id
-                for link in links
-                if in_window(by_id[link.publication_id].published_at, current)
-            }) >= 2
+            if len(
+                {
+                    by_id[link.publication_id].source_id
+                    for link in links
+                    if in_window(by_id[link.publication_id].published_at, current)
+                }
+            )
+            >= 2
         ]
         results = await asyncio.gather(
             *(verify_one(story_id, links) for story_id, links in candidates),
@@ -523,13 +536,13 @@ async def build_snapshot(
             docs.append(SearchDoc(detail.card.story_id, "entity", name))
         for claim in detail.card.claims:
             docs.append(SearchDoc(detail.card.story_id, "claim", claim.quote))
-        for pub in detail.publications:
-            source = by_id.get(pub.publication_id)
+        for publication in detail.publications:
+            source = by_id.get(publication.publication_id)
             docs.append(
                 SearchDoc(
                     detail.card.story_id,
                     "publication",
-                    source.text if source is not None else pub.quote,
+                    source.text if source is not None else publication.quote,
                 )
             )
     for entity in entities.values():
@@ -560,7 +573,8 @@ async def build_snapshot(
         comparable_channels=len(comparable),
         limitations=limitations
         if mode == "full"
-        else limitations + (
+        else limitations
+        + (
             ("too_few_comparable_channels",)
             if mode == "limited_no_growth_claim"
             else ("no_new_or_growing_stories",)

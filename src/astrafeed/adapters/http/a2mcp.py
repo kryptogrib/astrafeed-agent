@@ -18,13 +18,20 @@ A2MCP_PATH = "/a2mcp/astrafeed"
 
 class AstraFeedRequest(BaseModel):
     query: str | None = Field(
-        None, description="Search stories by title, entity, alias or claim text."
+        default=None, description="Search stories by title, entity, alias or claim text."
     )
-    story_id: str | None = Field(None, description="Open one story card with its sources.")
+    story_id: str | None = Field(default=None, description="Open one story card with its sources.")
     snapshot_id: str | None = Field(
-        None, description="Pin the call to a snapshot returned by a previous call."
+        default=None, description="Pin the call to a snapshot returned by a previous call."
     )
-    limit: int = Field(10, ge=1, le=50)
+    since_snapshot_id: str | None = Field(
+        default=None,
+        description=(
+            "Agenda only: return new/updated cards and changes since this snapshot. "
+            "A missing baseline returns the full agenda with baseline_unavailable."
+        ),
+    )
+    limit: int = Field(default=10, ge=1, le=50)
     format: Literal["json", "md"] = "json"
 
 
@@ -44,6 +51,10 @@ def mount_a2mcp(
         req = req or AstraFeedRequest()
         if req.query and req.story_id:
             raise HTTPException(status_code=422, detail="pass query or story_id, not both")
+        if req.since_snapshot_id is not None and (req.query or req.story_id):
+            raise HTTPException(
+                status_code=422, detail="since_snapshot_id is supported only for agenda requests"
+            )
         if req.story_id:
             action = "story"
             result = await call(story, story_id=req.story_id, snapshot_id=req.snapshot_id)
@@ -58,7 +69,10 @@ def mount_a2mcp(
             )
         else:
             action = "agenda"
-            result = await call(agenda, snapshot_id=req.snapshot_id)
+            kwargs = {"snapshot_id": req.snapshot_id}
+            if req.since_snapshot_id is not None:
+                kwargs["since_snapshot_id"] = req.since_snapshot_id
+            result = await call(agenda, **kwargs)
         if req.format == "md":
             return PlainTextResponse(
                 result["brief_markdown"], media_type="text/markdown; charset=utf-8"

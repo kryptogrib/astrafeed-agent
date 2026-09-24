@@ -116,8 +116,10 @@ class SqliteSpendBudget:
                 )
             ).all()
         active = [
-            row for row in unsettled
-            if row.outcome == "active" and row.created_at is not None
+            row
+            for row in unsettled
+            if row.outcome == "active"
+            and row.created_at is not None
             and now - row.created_at < timedelta(minutes=5)
         ]
         return {

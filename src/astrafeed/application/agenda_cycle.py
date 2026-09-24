@@ -227,9 +227,7 @@ async def run_cycle(
         else:
             pending.sort(key=lambda pub: (pub.published_at, pub.publication_id))
         pending_count = len(pending)
-        remaining_backfill = (
-            max_posts_per_cycle is not None and pending_count > max_posts_per_cycle
-        )
+        remaining_backfill = max_posts_per_cycle is not None and pending_count > max_posts_per_cycle
         if max_posts_per_cycle is not None:
             pending = pending[:max_posts_per_cycle]
         strict_assignment = assignment_mode == "strict" or (
@@ -390,8 +388,7 @@ async def run_cycle(
             snapshot = replace(
                 snapshot,
                 snapshot_id=(
-                    f"{snapshot.snapshot_id}-p{len(pending)}-"
-                    f"{finished_at.strftime('%H%M%S%f')}"
+                    f"{snapshot.snapshot_id}-p{len(pending)}-{finished_at.strftime('%H%M%S%f')}"
                 ),
                 limitations=(*snapshot.limitations, "processing_in_progress"),
                 coverage=replace(

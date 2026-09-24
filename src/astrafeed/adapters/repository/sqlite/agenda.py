@@ -19,6 +19,7 @@ from astrafeed.adapters.repository.sqlite.models import (
     AgendaSnapshotRow,
 )
 from astrafeed.domain.agenda import (
+    ChannelLead,
     Claim,
     ClaimCard,
     CommentQuote,
@@ -30,23 +31,22 @@ from astrafeed.domain.agenda import (
     EventCard,
     ExtractedNumber,
     ExtractionResult,
+    FigureGroup,
     Fragment,
     IndexedFragment,
     MentionedEntity,
     PositionCard,
+    PriceMove,
     PublicationRef,
     PublicationVersion,
     SearchDoc,
     Snapshot,
+    SourceNode,
     Story,
     StoryCard,
     StoryDetail,
     StoryLink,
-    SourceNode,
-    FigureGroup,
-    PriceMove,
     StorySignals,
-    ChannelLead,
     queue_reason_retryable,
 )
 
@@ -272,11 +272,7 @@ class SqliteAgendaStore:
     async def retryable_ids(self) -> list[str]:
         async with self._session() as session:
             rows = (await session.scalars(select(AgendaQueueRow))).all()
-            return [
-                row.publication_id
-                for row in rows
-                if queue_reason_retryable(row.reason)
-            ]
+            return [row.publication_id for row in rows if queue_reason_retryable(row.reason)]
 
     async def get_evidence_verdict(self, key: str) -> bool | None:
         return await self._get_json("evidence", key)
@@ -375,13 +371,17 @@ class SqliteAgendaStore:
                 if published_id is None:
                     self._published_cache = None
                     return None
-                if (self._published_cache is not None
-                    and self._published_cache.snapshot_id == published_id):
+                if (
+                    self._published_cache is not None
+                    and self._published_cache.snapshot_id == published_id
+                ):
                     return self._published_cache
                 row = await session.get(AgendaSnapshotRow, published_id)
             else:
-                if (self._published_cache is not None
-                    and self._published_cache.snapshot_id == snapshot_id):
+                if (
+                    self._published_cache is not None
+                    and self._published_cache.snapshot_id == snapshot_id
+                ):
                     return self._published_cache
                 row = await session.get(AgendaSnapshotRow, snapshot_id)
             snapshot = None if row is None else loads(row.payload)

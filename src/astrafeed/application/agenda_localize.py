@@ -55,7 +55,11 @@ class EnglishLocalizer:
         shown = {card.story_id for card in snapshot.agenda}
         details = [snapshot.stories[sid] for sid in shown if sid in snapshot.stories]
         texts = [
-            *(text for card in (*snapshot.agenda, *snapshot.upcoming) for text in _card_texts(card)),
+            *(
+                text
+                for card in (*snapshot.agenda, *snapshot.upcoming)
+                for text in _card_texts(card)
+            ),
             *(text for detail in details for text in _detail_texts(detail)),
         ]
         missing = list(dict.fromkeys(t for t in texts if needs_translation(t)))

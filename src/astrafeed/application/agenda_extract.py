@@ -74,9 +74,7 @@ def split_independent_claims(fragment: Fragment) -> tuple[Fragment, ...]:
             entity
             for entity in fragment.entities
             if len(entity.surface.strip("$#")) >= 3
-            and re.search(
-                rf"(?<!\w){re.escape(entity.surface.strip('$#'))}(?!\w)", quote, re.I
-            )
+            and re.search(rf"(?<!\w){re.escape(entity.surface.strip('$#'))}(?!\w)", quote, re.I)
         )
 
     if len(fragment.claims) == 1:
