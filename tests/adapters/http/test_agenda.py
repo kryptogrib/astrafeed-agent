@@ -442,3 +442,27 @@ def test_html_groups_source_links_and_labels_snapshot_coverage():
     assert '<a href="https://t.me/alpha/1">@alpha</a>' in page
     assert '<a href="https://www.reddit.com/r/Bitcoin/comments/abc">r/Bitcoin</a>' in page
     assert '<a href="https://protos.com/news/abc">protos.com</a>' in page
+
+
+@pytest.mark.asyncio
+async def test_agenda_lists_configured_feeds_separately_from_story_evidence():
+    store = InMemoryAgendaStore()
+    t = datetime(2026, 9, 25, 12, tzinfo=UTC)
+    await publish_snapshot(store, _snapshot(t))
+
+    async def agenda(snapshot_id=None):
+        return await agenda_payload(store, snapshot_id=snapshot_id, now=t)
+
+    app = create_app(
+        agenda=agenda,
+        rss_feeds=["https://protos.com/feed"],
+        reddit_feeds=["https://www.reddit.com/r/Bitcoin/.rss"],
+    )
+    page = await _get(app, "/agenda?format=html")
+
+    assert "Monitored feeds" in page.text
+    assert '<a href="https://protos.com/">protos.com</a>' in page.text
+    assert '<a class="meta" href="https://protos.com/feed">RSS</a>' in page.text
+    assert '<a href="https://www.reddit.com/r/Bitcoin/">r/Bitcoin</a>' in page.text
+    assert "These feeds are not evidence for the stories above" in page.text
+    assert "reddit_feeds" not in (await _get(app, "/agenda")).json()

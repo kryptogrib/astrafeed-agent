@@ -482,6 +482,8 @@ async def _serve(config_path: str) -> None:
         story=story_http,
         health=health_http,
         info={"commit": commit},
+        rss_feeds=cfg.rss_feeds,
+        reddit_feeds=cfg.reddit_feeds,
     )
     server = uvicorn.Server(
         uvicorn.Config(app, host=cfg.api_host, port=cfg.api_port, log_config=None)

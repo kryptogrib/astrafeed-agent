@@ -73,6 +73,8 @@ def create_app(
     stories_search: SearchFn | None = None,
     story: StoryFn | None = None,
     health: HealthFn | None = None,
+    rss_feeds: list[str] | None = None,
+    reddit_feeds: list[str] | None = None,
 ) -> FastAPI:
     """info is added to /healthz as is (e.g. commit and data fingerprint of a demo run)."""
     app = FastAPI(title="AstraFeed")
@@ -130,7 +132,9 @@ def create_app(
                 kwargs["since_snapshot_id"] = since_snapshot_id
             result = await _call_async(agenda, **kwargs)
             if format == "html":
-                return HTMLResponse(render_agenda_html(result))
+                return HTMLResponse(
+                    render_agenda_html(result, rss_feeds=rss_feeds, reddit_feeds=reddit_feeds)
+                )
             if format == "md":
                 return _markdown(result["brief_markdown"])
             return result

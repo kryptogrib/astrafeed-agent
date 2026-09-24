@@ -5,7 +5,7 @@ from __future__ import annotations
 import re
 from datetime import datetime
 from html import escape
-from urllib.parse import quote, urlsplit
+from urllib.parse import quote, urlsplit, urlunsplit
 
 from astrafeed.application.agenda_changes import compare_snapshots, comparison_lines
 from astrafeed.domain.agenda import (
@@ -746,7 +746,45 @@ def _html_status(payload: dict) -> str:
     )
 
 
-def render_agenda_html(payload: dict) -> str:
+def _html_feed_directory(rss_feeds: list[str], reddit_feeds: list[str]) -> str:
+    if not rss_feeds and not reddit_feeds:
+        return ""
+    news_links = ""
+    for feed in rss_feeds:
+        parsed = urlsplit(feed)
+        host = parsed.hostname or ""
+        if host == "feeds.bloomberg.com":
+            site = "https://www.bloomberg.com/crypto"
+            label = "bloomberg.com"
+        else:
+            path = "/crypto" if host in {"ft.com", "www.ft.com"} else "/"
+            site = urlunsplit((parsed.scheme, parsed.netloc, path, "", ""))
+            label = host.removeprefix("www.")
+        news_links += (
+            f'<li><a href="{_url(site)}">{escape(label)}</a> '
+            f'<a class="meta" href="{_url(feed)}">RSS</a></li>'
+        )
+    reddit_links = ""
+    for feed in reddit_feeds:
+        parsed = urlsplit(feed)
+        subreddit = parsed.path.split("/")[2] if parsed.path.startswith("/r/") else feed
+        path = parsed.path.removesuffix(".rss")
+        link = urlunsplit((parsed.scheme, parsed.netloc, path, "", ""))
+        reddit_links += f'<li><a href="{_url(link)}">r/{escape(subreddit)}</a></li>'
+    news = f"<h3>News RSS</h3><ul>{news_links}</ul>" if news_links else ""
+    reddit = f"<h3>Reddit</h3><ul>{reddit_links}</ul>" if reddit_links else ""
+    return (
+        f'<details class="feed-directory"><summary>Monitored feeds · '
+        f"{len(rss_feeds)} news RSS · {len(reddit_feeds)} Reddit</summary>"
+        "<p>These feeds are not evidence for the stories above. "
+        "Story links point to the specific posts and articles used there.</p>"
+        f"{news}{reddit}</details>"
+    )
+
+
+def render_agenda_html(
+    payload: dict, *, rss_feeds: list[str] | None = None, reddit_feeds: list[str] | None = None
+) -> str:
     snapshot = quote(payload["snapshot_id"])
     delta = payload.get("response_mode") == "delta"
     lead = "New and updated cards relative to the requested snapshot." if delta else _LEAD
@@ -754,6 +792,7 @@ def render_agenda_html(payload: dict) -> str:
         f"<h1>AstraFeed · Crypto agenda · {escape(_when(payload['t']))}</h1>",
         f'<p class="lead">{lead} Same snapshot: <code>POST /a2mcp/astrafeed</code>.</p>',
         _html_status(payload),
+        _html_feed_directory(rss_feeds or [], reddit_feeds or []),
     ]
     body.extend(f'<p class="note">{escape(line)}</p>' for line in comparison_lines(payload))
     if not payload["stories"] and not delta:
