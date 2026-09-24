@@ -1,92 +1,97 @@
 # AstraFeed
 
-**Live agenda of crypto Telegram channels for AI agents, published as an OKX.AI A2MCP service.**
+**What changed in crypto Telegram, who said it first, and where is the evidence?**
 
-AstraFeed reads public Telegram channels, groups posts into stories, and every cycle publishes a snapshot: which stories are new or growing over the last 24 hours compared with the previous 24 hours, what the channels claim, and links to the original posts. An agent calls one endpoint and gets a verifiable answer. It gets no sentiment score and no trading advice.
+AstraFeed turns posts from 38 selected public channels into a live agenda for humans and AI agents. It groups posts into stories, compares the last 24 hours with the previous 24, and links every displayed claim to its original Telegram post. The same published snapshot is available as a readable page, JSON, Markdown, and an OKX.AI A2MCP service.
 
-Submitted to **OKX Dev Day 2026, track "Build a Company" (OKX AI)**.
+**[Open the live agenda](https://cutememe.lol/agenda?format=html)** · **[Check the live service](https://cutememe.lol/healthz)** · [Source code](https://github.com/kryptogrib/astrafeed-agent)
 
-| | |
+Built for **OKX Dev Day 2026 · Build a Company / OKX AI**. A2MCP endpoint: `POST https://cutememe.lol/a2mcp/astrafeed`.
+
+## The detail that matters: an evidence trail
+
+“Six channels reported this” sounds persuasive, but one may have copied another. AstraFeed shows **the order of posts, near-verbatim echoes, sourcing labels, conflicting quoted figures, and links**. A channel count describes reach; it does not prove six independent confirmations.
+
+Here is a real, pinned [HYPE listing story](https://cutememe.lol/stories/st-e5cf2256e3f917de?format=html&snapshot_id=snap-20260924T221840Z) from the **24 Sep 2026, 22:18 UTC** snapshot:
+
+| Observed in our channels | Source |
 |---|---|
-| Live endpoint | `POST https://cutememe.lol/a2mcp/astrafeed` |
-| Health | `GET https://cutememe.lol/healthz` |
-| Source code | https://github.com/kryptogrib/astrafeed-agent |
-| OKX.AI listing | _pending review_ (agent ID 13877, service "AstraFeed Crypto Agenda") |
-| Demo video | _link_ |
+| 07:30 UTC · first observed post | [@cryptoattack24](https://t.me/cryptoattack24/96920) |
+| +2 min · another post | [@Defiscamcheck](https://t.me/Defiscamcheck/4879) |
+| +179 min · near-verbatim echo of @Defiscamcheck | [@WEB3_AGGREGATOR](https://t.me/WEB3_AGGREGATOR/423706) |
 
-## Try it
+The card records **6 channels, including 1 detected echo**, and shows the [exact quoted announcement](https://t.me/marketfeed/1044681). “First” means first among channels AstraFeed observed, based on post time. An echo is a text-similarity finding, not proof of coordination. The story also carries an OKX spot price change since the first post; that is market context, **not a claim that the post moved the price**. The example is a historical snapshot, so its figures do not silently change with the live feed.
+
+The same trail flags disagreements when quoted amounts differ. It keeps the original wording and source links so a reader can decide what to trust. AstraFeed reports what channels **said**, not whether the underlying event is true.
+
+## See it in 60 seconds
+
+1. Open the [live agenda](https://cutememe.lol/agenda?format=html). Each card shows its sources, growth, and any available evidence signals.
+2. Open a card, follow a Telegram link, and check the quote against the post.
+3. For a stable example, open the [pinned HYPE card](https://cutememe.lol/stories/st-e5cf2256e3f917de?format=html&snapshot_id=snap-20260924T221840Z).
+
+For an agent, an **empty POST returns the agenda**:
 
 ```sh
-# Agenda of the current snapshot (the empty body is also what the OKX review sends)
-curl -X POST https://cutememe.lol/a2mcp/astrafeed
-
-# Search stories, then open one card on the same snapshot
-curl -X POST https://cutememe.lol/a2mcp/astrafeed \
-  -H 'content-type: application/json' -d '{"query": "ETH"}'
-curl -X POST https://cutememe.lol/a2mcp/astrafeed \
-  -H 'content-type: application/json' \
-  -d '{"story_id": "st-...", "snapshot_id": "snap-..."}'
-
-# Human-readable Markdown brief instead of JSON
-curl -X POST https://cutememe.lol/a2mcp/astrafeed \
-  -H 'content-type: application/json' -d '{"format": "md"}'
+curl -sS -X POST https://cutememe.lol/a2mcp/astrafeed \
+  -H 'content-type: application/json' -d '{}'
 ```
 
-Request fields, all optional:
+Search, then open a card using the `story_id` and `snapshot_id` in the response:
+
+```sh
+curl -sS -X POST https://cutememe.lol/a2mcp/astrafeed \
+  -H 'content-type: application/json' -d '{"query":"HYPE"}'
+
+curl -sS -X POST https://cutememe.lol/a2mcp/astrafeed \
+  -H 'content-type: application/json' \
+  -d '{"story_id":"st-e5cf2256e3f917de","snapshot_id":"snap-20260924T221840Z"}'
+```
+
+The response has `service`, `action` (`agenda`, `search`, or `story`), and `result`. Use `"format":"md"` for a short Markdown brief. The REST views are `GET /agenda`, `GET /stories/search?q=HYPE`, and `GET /stories/{id}`; the agenda and story card also accept `?format=html` or `?format=md`. `GET /healthz` exposes the running commit, cycle state, and latest snapshot. Before the first snapshot, agenda calls return `503 {"status":"preparing"}`.
+
+## What the numbers mean
 
 | Field | Meaning |
 |---|---|
-| `query` | Search by story title, entity, alias or claim text |
-| `story_id` | Open one story card with its claims and source posts |
-| `snapshot_id` | Pin follow-up calls to the snapshot returned earlier |
-| `limit` | Search results, 1–50 (default 10) |
-| `format` | `json` (default) or `md` |
+| `current_channels` | Observed channels with a story post in the latest 24-hour window. |
+| `growth` | Change against the preceding 24 hours on channels complete and processed in **both** windows. Uncomparable data gets `null`, never a fabricated zero. |
+| `independent_channels` / `echo_channels` | A text-similarity split of observed posts. “Independent” means *no near-verbatim copy detected*, not independent verification. |
+| `first_seen` | First matching post time in the observed channels, not the first report anywhere. |
+| `confirmation` | A label inferred from wording and attribution in posts; inspect the linked source before relying on it. |
+| `coverage`, `stale`, `limitations` | What was collected and processed, and what the snapshot cannot support. |
 
-The response is `{"service": "astrafeed", "action": "agenda" | "search" | "story", "result": {...}}`. Before the first snapshot the service answers `503 {"status": "preparing"}`. Plain REST mirrors of the same data are `GET /agenda`, `GET /stories/search?q=` and `GET /stories/{id}`.
+The watched channels are a curated Russian-language Telegram folder, not a representative sample of the whole market. Quotes in the English report may be machine-translated; JSON retains the original. Reader comments, when shown, are marked unverified. No sentiment score or trading recommendation is produced.
 
 ## How it works
 
+```mermaid
+flowchart LR
+    A[Public Telegram posts] --> B[Collect and deduplicate]
+    B --> C[Extract claims and group stories]
+    C --> D[Check quotes, coverage and 24h growth]
+    D --> E[Publish one atomic snapshot]
+    E --> F[HTML / Markdown / REST / A2MCP]
 ```
-Telegram channels ──collect──▶ SQLite queue ──LLM extract + assign──▶ stories
-                                                                        │
-                        snapshot (atomic, per cycle) ◀── growth vs previous 24h
-                                  │
-             /a2mcp/astrafeed · /agenda · /stories  (read-only, no LLM on request)
-```
 
-- **Verifiable output.** Every quoted claim is an exact substring of the stored post (`text[start:end]`), and every story links to its `t.me` sources. A quote shows that a channel said something. It does not show that the event happened. The channel count measures spread, not independent confirmation.
-- **Honest coverage.** Growth is shown only for channels that were fully collected and processed in both windows. A failed or queued channel never counts as zero activity. If nothing is comparable, the agenda says so and does not invent a trend.
-- **Cheap requests.** The LLM (via OpenRouter) runs only in the background cycle and has a daily budget cap. HTTP requests read the published snapshot.
-- **Layout.** Hexagonal: `domain/`, `application/`, `ports/`, `adapters/` (Telegram, SQLite, OpenRouter, HTTP). The OKX endpoint lives in [`src/astrafeed/adapters/http/a2mcp.py`](src/astrafeed/adapters/http/a2mcp.py).
+Collection and analysis run in the background. Read requests use the published snapshot and do not call the LLM. A `snapshot_id` pins follow-up searches and cards to one consistent view. Extraction uses OpenRouter under a daily spend cap; source and snapshot data live in SQLite. See the [live smoke record](artifacts/agenda-eval/live-smoke.md) and [manual quality audit](artifacts/agenda-eval/quality-2026-09-25.md) for concrete checks and known errors.
 
-**Channel selection.** The live demo watches 38 public Russian-language crypto channels: news aggregators, market feeds and analysts from one curated Telegram folder. It reads the last 72 hours, and growth compares the last 24 hours with the 24 hours before. The exact list is in the snapshot's coverage block. The list is not a sample of "the market", and answers describe only these sources.
+## Run locally
 
-## Monetization on OKX.AI
-
-The service is listed free first so that the review can call it. The next step is a paid tier through the OKX Payment SDK (`okxweb3-app-x402`): the same endpoint answers `402` with an x402 `PAYMENT-REQUIRED` header and is settled in USDT0 on X Layer. The agenda stays free, and search and story cards become paid calls.
-
-## Run it yourself
+Requires Docker, a Telegram reader account, and an OpenRouter API key.
 
 ```sh
-cp .env.example .env            # TELEGRAM_API_ID/HASH, OPENROUTER_API_KEY
+cp .env.example .env            # set TELEGRAM_API_ID/HASH and OPENROUTER_API_KEY
 cp config.example.yaml config.yaml
-make install && make login      # creates the Telegram reader session
-docker compose up -d --build    # app on :8000, data in the astrafeed-data volume
-
-# Optional public HTTPS through a named Cloudflare Tunnel
-# (CLOUDFLARE_TUNNEL_TOKEN in .env, public hostname → http://app:8000)
-docker compose -f docker-compose.yml -f docker-compose.tunnel.yml up -d
+make install && make login      # create the Telegram reader session
+docker compose up -d --build    # API at http://localhost:8000
+curl http://localhost:8000/healthz
 ```
 
-`make check` runs lint, type checks and tests.
+The first analysis can take time; `/healthz` shows progress and `/agenda` becomes available after a snapshot is published. `make check` runs lint, types, and tests. For a public HTTPS deployment, see `docker-compose.tunnel.yml` and set `CLOUDFLARE_TUNNEL_TOKEN` in `.env`.
 
-## Built during the hackathon
+## Hackathon scope
 
-The collection engine (Telegram ingestion, filtering, dedup) comes from the earlier AstraFeed Token Brief project; see [PROVENANCE.md](PROVENANCE.md). The work for this hackathon starts after commit `aa9a275` and is visible in `git log aa9a275..HEAD`:
+The earlier [AstraFeed Token Brief](PROVENANCE.md) supplied the Telegram ingestion, filtering, and deduplication engine. This hackathon added live story extraction and assignment, comparable growth, quote and coverage checks, immutable snapshots, the read API, the evidence signals, and the A2MCP endpoint. Changes since the starting commit are visible with `git log aa9a275..HEAD`.
 
-- the live agenda cycle: story extraction and assignment, 24h-vs-24h growth, atomic snapshots;
-- quote grounding and the coverage rules;
-- the read API (`/agenda`, `/stories`), the live Docker deployment and the smoke logs in [`artifacts/agenda-eval/live-smoke.md`](artifacts/agenda-eval/live-smoke.md);
-- the OKX.AI A2MCP endpoint and public tunnel.
-
-Product scope: [docs/product.md](docs/product.md). Plan: [docs/plans/community-pulse-mvp.md](docs/plans/community-pulse-mvp.md).
+The OKX.AI service is intended to be free during review; a paid x402 tier is a future plan, not part of the live demo. The [product brief](docs/product.md) defines the current scope; the [MVP plan](docs/plans/community-pulse-mvp.md) records the contracts and earlier experiments.
