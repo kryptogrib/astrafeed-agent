@@ -1,0 +1,967 @@
+[
+  {
+    "raw_id": 899,
+    "source_id": 10,
+    "external_id": "385693",
+    "ts": "2026-09-22 04:46:09.000000",
+    "channel": "@markettwits",
+    "link": "https://t.me/markettwits/385693",
+    "window": "curr",
+    "flags": [
+      "etf"
+    ],
+    "nchars": 160
+  },
+  {
+    "raw_id": 5985,
+    "source_id": 9,
+    "external_id": "1042962",
+    "ts": "2026-09-22 05:20:59.000000",
+    "channel": "@marketfeed",
+    "link": "https://t.me/marketfeed/1042962",
+    "window": "curr",
+    "flags": [
+      "other"
+    ],
+    "nchars": 75
+  },
+  {
+    "raw_id": 12900,
+    "source_id": 18,
+    "external_id": "31550",
+    "ts": "2026-09-22 05:26:50.000000",
+    "channel": "@crypto_hd",
+    "link": "https://t.me/crypto_hd/31550",
+    "window": "curr",
+    "flags": [
+      "digest"
+    ],
+    "nchars": 2344
+  },
+  {
+    "raw_id": 916,
+    "source_id": 10,
+    "external_id": "385710",
+    "ts": "2026-09-22 06:14:25.000000",
+    "channel": "@markettwits",
+    "link": "https://t.me/markettwits/385710",
+    "window": "curr",
+    "flags": [
+      "retell"
+    ],
+    "nchars": 309
+  },
+  {
+    "raw_id": 16,
+    "source_id": 1,
+    "external_id": "7152",
+    "ts": "2026-09-22 07:01:03.000000",
+    "channel": "@whitelist1",
+    "link": "https://t.me/whitelist1/7152",
+    "window": "curr",
+    "flags": [
+      "digest",
+      "zec",
+      "eth"
+    ],
+    "nchars": 975
+  },
+  {
+    "raw_id": 13933,
+    "source_id": 21,
+    "external_id": "21149",
+    "ts": "2026-09-22 08:11:26.000000",
+    "channel": "@rawa_imagination",
+    "link": "https://t.me/rawa_imagination/21149",
+    "window": "curr",
+    "flags": [
+      "digest",
+      "opinion",
+      "eth",
+      "sol"
+    ],
+    "nchars": 1897
+  },
+  {
+    "raw_id": 938,
+    "source_id": 10,
+    "external_id": "385732",
+    "ts": "2026-09-22 08:33:07.000000",
+    "channel": "@markettwits",
+    "link": "https://t.me/markettwits/385732",
+    "window": "curr",
+    "flags": [
+      "other"
+    ],
+    "nchars": 290
+  },
+  {
+    "raw_id": 943,
+    "source_id": 10,
+    "external_id": "385737",
+    "ts": "2026-09-22 08:51:40.000000",
+    "channel": "@markettwits",
+    "link": "https://t.me/markettwits/385737",
+    "window": "curr",
+    "flags": [
+      "retell"
+    ],
+    "nchars": 91
+  },
+  {
+    "raw_id": 948,
+    "source_id": 10,
+    "external_id": "385742",
+    "ts": "2026-09-22 09:24:30.000000",
+    "channel": "@markettwits",
+    "link": "https://t.me/markettwits/385742",
+    "window": "curr",
+    "flags": [
+      "opinion"
+    ],
+    "nchars": 168
+  },
+  {
+    "raw_id": 7957,
+    "source_id": 15,
+    "external_id": "423549",
+    "ts": "2026-09-22 09:38:30.000000",
+    "channel": "@WEB3_AGGREGATOR",
+    "link": "https://t.me/WEB3_AGGREGATOR/423549",
+    "window": "curr",
+    "flags": [
+      "ad",
+      "digest",
+      "retell"
+    ],
+    "nchars": 3904
+  },
+  {
+    "raw_id": 7959,
+    "source_id": 15,
+    "external_id": "423551",
+    "ts": "2026-09-22 09:38:52.000000",
+    "channel": "@WEB3_AGGREGATOR",
+    "link": "https://t.me/WEB3_AGGREGATOR/423551",
+    "window": "curr",
+    "flags": [
+      "ad",
+      "digest"
+    ],
+    "nchars": 473
+  },
+  {
+    "raw_id": 7965,
+    "source_id": 15,
+    "external_id": "423557",
+    "ts": "2026-09-22 09:39:28.000000",
+    "channel": "@WEB3_AGGREGATOR",
+    "link": "https://t.me/WEB3_AGGREGATOR/423557",
+    "window": "curr",
+    "flags": [
+      "etf"
+    ],
+    "nchars": 164
+  },
+  {
+    "raw_id": 7966,
+    "source_id": 15,
+    "external_id": "423558",
+    "ts": "2026-09-22 09:40:14.000000",
+    "channel": "@WEB3_AGGREGATOR",
+    "link": "https://t.me/WEB3_AGGREGATOR/423558",
+    "window": "curr",
+    "flags": [
+      "ad",
+      "digest"
+    ],
+    "nchars": 1029
+  },
+  {
+    "raw_id": 955,
+    "source_id": 10,
+    "external_id": "385749",
+    "ts": "2026-09-22 09:57:23.000000",
+    "channel": "@markettwits",
+    "link": "https://t.me/markettwits/385749",
+    "window": "curr",
+    "flags": [
+      "digest",
+      "retell"
+    ],
+    "nchars": 313
+  },
+  {
+    "raw_id": 7975,
+    "source_id": 15,
+    "external_id": "423567",
+    "ts": "2026-09-22 10:17:48.000000",
+    "channel": "@WEB3_AGGREGATOR",
+    "link": "https://t.me/WEB3_AGGREGATOR/423567",
+    "window": "curr",
+    "flags": [
+      "retell"
+    ],
+    "nchars": 363
+  },
+  {
+    "raw_id": 959,
+    "source_id": 10,
+    "external_id": "385753",
+    "ts": "2026-09-22 10:33:19.000000",
+    "channel": "@markettwits",
+    "link": "https://t.me/markettwits/385753",
+    "window": "curr",
+    "flags": [
+      "other"
+    ],
+    "nchars": 193
+  },
+  {
+    "raw_id": 6104,
+    "source_id": 9,
+    "external_id": "1043081",
+    "ts": "2026-09-22 11:01:45.000000",
+    "channel": "@marketfeed",
+    "link": "https://t.me/marketfeed/1043081",
+    "window": "curr",
+    "flags": [
+      "digest",
+      "etf"
+    ],
+    "nchars": 2904
+  },
+  {
+    "raw_id": 7977,
+    "source_id": 15,
+    "external_id": "423569",
+    "ts": "2026-09-22 12:01:15.000000",
+    "channel": "@WEB3_AGGREGATOR",
+    "link": "https://t.me/WEB3_AGGREGATOR/423569",
+    "window": "curr",
+    "flags": [
+      "ad",
+      "digest",
+      "eth"
+    ],
+    "nchars": 1770
+  },
+  {
+    "raw_id": 7987,
+    "source_id": 15,
+    "external_id": "423580",
+    "ts": "2026-09-22 12:09:13.000000",
+    "channel": "@WEB3_AGGREGATOR",
+    "link": "https://t.me/WEB3_AGGREGATOR/423580",
+    "window": "curr",
+    "flags": [
+      "digest",
+      "zec",
+      "eth"
+    ],
+    "nchars": 362
+  },
+  {
+    "raw_id": 984,
+    "source_id": 10,
+    "external_id": "385778",
+    "ts": "2026-09-22 12:47:04.000000",
+    "channel": "@markettwits",
+    "link": "https://t.me/markettwits/385778",
+    "window": "curr",
+    "flags": [
+      "retell"
+    ],
+    "nchars": 668
+  },
+  {
+    "raw_id": 12911,
+    "source_id": 18,
+    "external_id": "31561",
+    "ts": "2026-09-22 13:10:11.000000",
+    "channel": "@crypto_hd",
+    "link": "https://t.me/crypto_hd/31561",
+    "window": "curr",
+    "flags": [
+      "digest",
+      "etf",
+      "zec",
+      "eth",
+      "sol"
+    ],
+    "nchars": 371
+  },
+  {
+    "raw_id": 7991,
+    "source_id": 15,
+    "external_id": "423584",
+    "ts": "2026-09-22 13:48:14.000000",
+    "channel": "@WEB3_AGGREGATOR",
+    "link": "https://t.me/WEB3_AGGREGATOR/423584",
+    "window": "curr",
+    "flags": [
+      "digest"
+    ],
+    "nchars": 606
+  },
+  {
+    "raw_id": 42,
+    "source_id": 3,
+    "external_id": "6936",
+    "ts": "2026-09-22 14:04:14.000000",
+    "channel": "@Slavik_investor_updates",
+    "link": "https://t.me/Slavik_investor_updates/6936",
+    "window": "curr",
+    "flags": [
+      "digest",
+      "sol"
+    ],
+    "nchars": 994
+  },
+  {
+    "raw_id": 1021,
+    "source_id": 10,
+    "external_id": "385815",
+    "ts": "2026-09-22 14:48:01.000000",
+    "channel": "@markettwits",
+    "link": "https://t.me/markettwits/385815",
+    "window": "curr",
+    "flags": [
+      "digest",
+      "opinion"
+    ],
+    "nchars": 281
+  },
+  {
+    "raw_id": 6302,
+    "source_id": 9,
+    "external_id": "1043279",
+    "ts": "2026-09-22 14:50:19.000000",
+    "channel": "@marketfeed",
+    "link": "https://t.me/marketfeed/1043279",
+    "window": "curr",
+    "flags": [
+      "eth"
+    ],
+    "nchars": 129
+  },
+  {
+    "raw_id": 1027,
+    "source_id": 10,
+    "external_id": "385821",
+    "ts": "2026-09-22 15:06:44.000000",
+    "channel": "@markettwits",
+    "link": "https://t.me/markettwits/385821",
+    "window": "curr",
+    "flags": [
+      "digest"
+    ],
+    "nchars": 128
+  },
+  {
+    "raw_id": 1031,
+    "source_id": 10,
+    "external_id": "385825",
+    "ts": "2026-09-22 15:14:41.000000",
+    "channel": "@markettwits",
+    "link": "https://t.me/markettwits/385825",
+    "window": "curr",
+    "flags": [
+      "ad",
+      "digest"
+    ],
+    "nchars": 122
+  },
+  {
+    "raw_id": 1039,
+    "source_id": 10,
+    "external_id": "385833",
+    "ts": "2026-09-22 16:05:14.000000",
+    "channel": "@markettwits",
+    "link": "https://t.me/markettwits/385833",
+    "window": "curr",
+    "flags": [
+      "retell"
+    ],
+    "nchars": 162
+  },
+  {
+    "raw_id": 8001,
+    "source_id": 15,
+    "external_id": "423596",
+    "ts": "2026-09-22 16:06:21.000000",
+    "channel": "@WEB3_AGGREGATOR",
+    "link": "https://t.me/WEB3_AGGREGATOR/423596",
+    "window": "curr",
+    "flags": [
+      "digest",
+      "etf"
+    ],
+    "nchars": 2140
+  },
+  {
+    "raw_id": 1043,
+    "source_id": 10,
+    "external_id": "385837",
+    "ts": "2026-09-22 16:45:57.000000",
+    "channel": "@markettwits",
+    "link": "https://t.me/markettwits/385837",
+    "window": "curr",
+    "flags": [
+      "etf"
+    ],
+    "nchars": 198
+  },
+  {
+    "raw_id": 12916,
+    "source_id": 18,
+    "external_id": "31566",
+    "ts": "2026-09-22 17:10:07.000000",
+    "channel": "@crypto_hd",
+    "link": "https://t.me/crypto_hd/31566",
+    "window": "curr",
+    "flags": [
+      "digest"
+    ],
+    "nchars": 605
+  },
+  {
+    "raw_id": 6447,
+    "source_id": 9,
+    "external_id": "1043424",
+    "ts": "2026-09-22 17:47:41.000000",
+    "channel": "@marketfeed",
+    "link": "https://t.me/marketfeed/1043424",
+    "window": "curr",
+    "flags": [
+      "other"
+    ],
+    "nchars": 127
+  },
+  {
+    "raw_id": 6476,
+    "source_id": 9,
+    "external_id": "1043453",
+    "ts": "2026-09-22 17:55:57.000000",
+    "channel": "@marketfeed",
+    "link": "https://t.me/marketfeed/1043453",
+    "window": "curr",
+    "flags": [
+      "other"
+    ],
+    "nchars": 110
+  },
+  {
+    "raw_id": 7049,
+    "source_id": 14,
+    "external_id": "8127",
+    "ts": "2026-09-22 18:18:18.000000",
+    "channel": "@icryptocom",
+    "link": "https://t.me/icryptocom/8127",
+    "window": "curr",
+    "flags": [
+      "other"
+    ],
+    "nchars": 77
+  },
+  {
+    "raw_id": 1058,
+    "source_id": 10,
+    "external_id": "385852",
+    "ts": "2026-09-22 18:21:41.000000",
+    "channel": "@markettwits",
+    "link": "https://t.me/markettwits/385852",
+    "window": "curr",
+    "flags": [
+      "sol"
+    ],
+    "nchars": 214
+  },
+  {
+    "raw_id": 13777,
+    "source_id": 20,
+    "external_id": "49224",
+    "ts": "2026-09-22 20:09:02.000000",
+    "channel": "@PowsGemCalls",
+    "link": "https://t.me/PowsGemCalls/49224",
+    "window": "curr",
+    "flags": [
+      "digest",
+      "eth",
+      "sol"
+    ],
+    "nchars": 409
+  },
+  {
+    "raw_id": 8024,
+    "source_id": 15,
+    "external_id": "423619",
+    "ts": "2026-09-22 20:52:45.000000",
+    "channel": "@WEB3_AGGREGATOR",
+    "link": "https://t.me/WEB3_AGGREGATOR/423619",
+    "window": "curr",
+    "flags": [
+      "digest",
+      "zec"
+    ],
+    "nchars": 822
+  },
+  {
+    "raw_id": 12922,
+    "source_id": 18,
+    "external_id": "31572",
+    "ts": "2026-09-22 22:30:11.000000",
+    "channel": "@crypto_hd",
+    "link": "https://t.me/crypto_hd/31572",
+    "window": "curr",
+    "flags": [
+      "digest",
+      "opinion"
+    ],
+    "nchars": 531
+  },
+  {
+    "raw_id": 6665,
+    "source_id": 9,
+    "external_id": "1043642",
+    "ts": "2026-09-22 23:05:52.000000",
+    "channel": "@marketfeed",
+    "link": "https://t.me/marketfeed/1043642",
+    "window": "curr",
+    "flags": [
+      "sol"
+    ],
+    "nchars": 192
+  },
+  {
+    "raw_id": 5103,
+    "source_id": 9,
+    "external_id": "1042080",
+    "ts": "2026-09-21 00:28:28.000000",
+    "channel": "@marketfeed",
+    "link": "https://t.me/marketfeed/1042080",
+    "window": "prev",
+    "flags": [
+      "other"
+    ],
+    "nchars": 52
+  },
+  {
+    "raw_id": 5116,
+    "source_id": 9,
+    "external_id": "1042093",
+    "ts": "2026-09-21 01:15:59.000000",
+    "channel": "@marketfeed",
+    "link": "https://t.me/marketfeed/1042093",
+    "window": "prev",
+    "flags": [
+      "other"
+    ],
+    "nchars": 51
+  },
+  {
+    "raw_id": 4282,
+    "source_id": 11,
+    "external_id": "96838",
+    "ts": "2026-09-21 04:05:02.000000",
+    "channel": "@cryptoattack24",
+    "link": "https://t.me/cryptoattack24/96838",
+    "window": "prev",
+    "flags": [
+      "zec",
+      "eth"
+    ],
+    "nchars": 541
+  },
+  {
+    "raw_id": 12872,
+    "source_id": 18,
+    "external_id": "31522",
+    "ts": "2026-09-21 04:27:18.000000",
+    "channel": "@crypto_hd",
+    "link": "https://t.me/crypto_hd/31522",
+    "window": "prev",
+    "flags": [
+      "digest",
+      "retell"
+    ],
+    "nchars": 460
+  },
+  {
+    "raw_id": 747,
+    "source_id": 10,
+    "external_id": "385540",
+    "ts": "2026-09-21 06:21:30.000000",
+    "channel": "@markettwits",
+    "link": "https://t.me/markettwits/385540",
+    "window": "prev",
+    "flags": [
+      "digest",
+      "retell"
+    ],
+    "nchars": 516
+  },
+  {
+    "raw_id": 13223,
+    "source_id": 19,
+    "external_id": "19161",
+    "ts": "2026-09-21 06:56:30.000000",
+    "channel": "@spidersjournal",
+    "link": "https://t.me/spidersjournal/19161",
+    "window": "prev",
+    "flags": [
+      "ad",
+      "digest"
+    ],
+    "nchars": 1397
+  },
+  {
+    "raw_id": 12875,
+    "source_id": 18,
+    "external_id": "31525",
+    "ts": "2026-09-21 07:02:37.000000",
+    "channel": "@crypto_hd",
+    "link": "https://t.me/crypto_hd/31525",
+    "window": "prev",
+    "flags": [
+      "digest",
+      "sol"
+    ],
+    "nchars": 385
+  },
+  {
+    "raw_id": 14,
+    "source_id": 1,
+    "external_id": "7150",
+    "ts": "2026-09-21 07:03:43.000000",
+    "channel": "@whitelist1",
+    "link": "https://t.me/whitelist1/7150",
+    "window": "prev",
+    "flags": [
+      "digest",
+      "zec",
+      "sol"
+    ],
+    "nchars": 940
+  },
+  {
+    "raw_id": 12876,
+    "source_id": 18,
+    "external_id": "31526",
+    "ts": "2026-09-21 07:25:11.000000",
+    "channel": "@crypto_hd",
+    "link": "https://t.me/crypto_hd/31526",
+    "window": "prev",
+    "flags": [
+      "digest",
+      "opinion"
+    ],
+    "nchars": 1052
+  },
+  {
+    "raw_id": 769,
+    "source_id": 10,
+    "external_id": "385562",
+    "ts": "2026-09-21 08:31:31.000000",
+    "channel": "@markettwits",
+    "link": "https://t.me/markettwits/385562",
+    "window": "prev",
+    "flags": [
+      "ad"
+    ],
+    "nchars": 405
+  },
+  {
+    "raw_id": 12878,
+    "source_id": 18,
+    "external_id": "31528",
+    "ts": "2026-09-21 08:39:54.000000",
+    "channel": "@crypto_hd",
+    "link": "https://t.me/crypto_hd/31528",
+    "window": "prev",
+    "flags": [
+      "digest",
+      "eth"
+    ],
+    "nchars": 182
+  },
+  {
+    "raw_id": 7872,
+    "source_id": 15,
+    "external_id": "423461",
+    "ts": "2026-09-21 09:47:41.000000",
+    "channel": "@WEB3_AGGREGATOR",
+    "link": "https://t.me/WEB3_AGGREGATOR/423461",
+    "window": "prev",
+    "flags": [
+      "digest",
+      "retell",
+      "etf",
+      "zec"
+    ],
+    "nchars": 2112
+  },
+  {
+    "raw_id": 5275,
+    "source_id": 9,
+    "external_id": "1042252",
+    "ts": "2026-09-21 10:02:15.000000",
+    "channel": "@marketfeed",
+    "link": "https://t.me/marketfeed/1042252",
+    "window": "prev",
+    "flags": [
+      "other"
+    ],
+    "nchars": 130
+  },
+  {
+    "raw_id": 39,
+    "source_id": 3,
+    "external_id": "6933",
+    "ts": "2026-09-21 11:48:20.000000",
+    "channel": "@Slavik_investor_updates",
+    "link": "https://t.me/Slavik_investor_updates/6933",
+    "window": "prev",
+    "flags": [
+      "digest"
+    ],
+    "nchars": 1124
+  },
+  {
+    "raw_id": 5316,
+    "source_id": 9,
+    "external_id": "1042293",
+    "ts": "2026-09-21 11:50:19.000000",
+    "channel": "@marketfeed",
+    "link": "https://t.me/marketfeed/1042293",
+    "window": "prev",
+    "flags": [
+      "digest",
+      "etf",
+      "eth"
+    ],
+    "nchars": 510
+  },
+  {
+    "raw_id": 5324,
+    "source_id": 9,
+    "external_id": "1042301",
+    "ts": "2026-09-21 11:55:34.000000",
+    "channel": "@marketfeed",
+    "link": "https://t.me/marketfeed/1042301",
+    "window": "prev",
+    "flags": [
+      "digest"
+    ],
+    "nchars": 334
+  },
+  {
+    "raw_id": 5415,
+    "source_id": 9,
+    "external_id": "1042392",
+    "ts": "2026-09-21 12:37:20.000000",
+    "channel": "@marketfeed",
+    "link": "https://t.me/marketfeed/1042392",
+    "window": "prev",
+    "flags": [
+      "eth"
+    ],
+    "nchars": 96
+  },
+  {
+    "raw_id": 12885,
+    "source_id": 18,
+    "external_id": "31535",
+    "ts": "2026-09-21 12:45:05.000000",
+    "channel": "@crypto_hd",
+    "link": "https://t.me/crypto_hd/31535",
+    "window": "prev",
+    "flags": [
+      "opinion",
+      "eth"
+    ],
+    "nchars": 140
+  },
+  {
+    "raw_id": 7896,
+    "source_id": 15,
+    "external_id": "423486",
+    "ts": "2026-09-21 13:35:06.000000",
+    "channel": "@WEB3_AGGREGATOR",
+    "link": "https://t.me/WEB3_AGGREGATOR/423486",
+    "window": "prev",
+    "flags": [
+      "digest",
+      "opinion",
+      "zec",
+      "eth"
+    ],
+    "nchars": 3045
+  },
+  {
+    "raw_id": 7903,
+    "source_id": 15,
+    "external_id": "423493",
+    "ts": "2026-09-21 13:36:43.000000",
+    "channel": "@WEB3_AGGREGATOR",
+    "link": "https://t.me/WEB3_AGGREGATOR/423493",
+    "window": "prev",
+    "flags": [
+      "digest"
+    ],
+    "nchars": 1927
+  },
+  {
+    "raw_id": 5479,
+    "source_id": 9,
+    "external_id": "1042456",
+    "ts": "2026-09-21 13:59:37.000000",
+    "channel": "@marketfeed",
+    "link": "https://t.me/marketfeed/1042456",
+    "window": "prev",
+    "flags": [
+      "sol"
+    ],
+    "nchars": 91
+  },
+  {
+    "raw_id": 848,
+    "source_id": 10,
+    "external_id": "385641",
+    "ts": "2026-09-21 15:04:12.000000",
+    "channel": "@markettwits",
+    "link": "https://t.me/markettwits/385641",
+    "window": "prev",
+    "flags": [
+      "ad"
+    ],
+    "nchars": 66
+  },
+  {
+    "raw_id": 861,
+    "source_id": 10,
+    "external_id": "385654",
+    "ts": "2026-09-21 15:54:06.000000",
+    "channel": "@markettwits",
+    "link": "https://t.me/markettwits/385654",
+    "window": "prev",
+    "flags": [
+      "other"
+    ],
+    "nchars": 151
+  },
+  {
+    "raw_id": 7919,
+    "source_id": 15,
+    "external_id": "423509",
+    "ts": "2026-09-21 16:05:35.000000",
+    "channel": "@WEB3_AGGREGATOR",
+    "link": "https://t.me/WEB3_AGGREGATOR/423509",
+    "window": "prev",
+    "flags": [
+      "ad",
+      "digest",
+      "eth"
+    ],
+    "nchars": 829
+  },
+  {
+    "raw_id": 5633,
+    "source_id": 9,
+    "external_id": "1042610",
+    "ts": "2026-09-21 16:23:29.000000",
+    "channel": "@marketfeed",
+    "link": "https://t.me/marketfeed/1042610",
+    "window": "prev",
+    "flags": [
+      "other"
+    ],
+    "nchars": 278
+  },
+  {
+    "raw_id": 7922,
+    "source_id": 15,
+    "external_id": "423512",
+    "ts": "2026-09-21 16:29:49.000000",
+    "channel": "@WEB3_AGGREGATOR",
+    "link": "https://t.me/WEB3_AGGREGATOR/423512",
+    "window": "prev",
+    "flags": [
+      "digest",
+      "retell"
+    ],
+    "nchars": 2706
+  },
+  {
+    "raw_id": 5649,
+    "source_id": 9,
+    "external_id": "1042626",
+    "ts": "2026-09-21 16:52:30.000000",
+    "channel": "@marketfeed",
+    "link": "https://t.me/marketfeed/1042626",
+    "window": "prev",
+    "flags": [
+      "other"
+    ],
+    "nchars": 95
+  },
+  {
+    "raw_id": 13249,
+    "source_id": 19,
+    "external_id": "19193",
+    "ts": "2026-09-21 19:05:25.000000",
+    "channel": "@spidersjournal",
+    "link": "https://t.me/spidersjournal/19193",
+    "window": "prev",
+    "flags": [
+      "ad"
+    ],
+    "nchars": 130
+  },
+  {
+    "raw_id": 7935,
+    "source_id": 15,
+    "external_id": "423526",
+    "ts": "2026-09-21 20:27:42.000000",
+    "channel": "@WEB3_AGGREGATOR",
+    "link": "https://t.me/WEB3_AGGREGATOR/423526",
+    "window": "prev",
+    "flags": [
+      "digest",
+      "opinion",
+      "eth"
+    ],
+    "nchars": 1686
+  },
+  {
+    "raw_id": 7941,
+    "source_id": 15,
+    "external_id": "423532",
+    "ts": "2026-09-21 20:45:51.000000",
+    "channel": "@WEB3_AGGREGATOR",
+    "link": "https://t.me/WEB3_AGGREGATOR/423532",
+    "window": "prev",
+    "flags": [
+      "digest",
+      "opinion"
+    ],
+    "nchars": 2611
+  },
+  {
+    "raw_id": 7942,
+    "source_id": 15,
+    "external_id": "423533",
+    "ts": "2026-09-21 20:47:03.000000",
+    "channel": "@WEB3_AGGREGATOR",
+    "link": "https://t.me/WEB3_AGGREGATOR/423533",
+    "window": "prev",
+    "flags": [
+      "digest",
+      "etf",
+      "zec",
+      "eth",
+      "sol"
+    ],
+    "nchars": 2441
+  }
+]
