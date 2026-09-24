@@ -15,6 +15,9 @@ import httpx
 from astrafeed.domain.models import Item
 
 MAX_FEED_BYTES = 2_000_000
+REDDIT_USER_AGENT = (
+    "Mozilla/5.0 (compatible; AstraFeed/0.1; +https://github.com/kryptogrib/astrafeed-agent)"
+)
 _TAGS = re.compile(r"<[^>]+>")
 _SPACES = re.compile(r"\s+")
 
@@ -109,7 +112,12 @@ class RssReader:
     async def read(self, url: str) -> list[Item]:
         if urlparse(url).scheme != "https":
             raise ValueError("RSS feed URL must use HTTPS")
-        async with self._client.stream("GET", url) as response:
+        headers = (
+            {"User-Agent": REDDIT_USER_AGENT}
+            if urlparse(url).hostname in {"reddit.com", "www.reddit.com"}
+            else None
+        )
+        async with self._client.stream("GET", url, headers=headers) as response:
             response.raise_for_status()
             chunks: list[bytes] = []
             size = 0

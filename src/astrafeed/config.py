@@ -97,6 +97,7 @@ class Settings(BaseModel):
     # Public channels without comments: posts only, used as the "news" side of Pulse.
     news_channels: list[str] = Field(default_factory=list)
     rss_feeds: list[str] = Field(default_factory=list)
+    reddit_feeds: list[str] = Field(default_factory=list)
     interests: list[str] = Field(default_factory=lambda: ["crypto markets"])
     audit: AuditSettings = Field(default_factory=AuditSettings)
     agenda: AgendaSettings = Field(default_factory=AgendaSettings)

@@ -14,3 +14,14 @@ recorded as incomplete coverage for that feed. Articles already returned are
 kept, but incomplete history cannot contribute to comparable growth. The
 original article URL remains the evidence link; summaries are inputs to story
 extraction, not full-text copies of articles.
+
+## Reddit
+
+`reddit_feeds` contains individual subreddit RSS URLs. The collector combines
+them into one `/new/.rss?limit=100` request per cycle because Reddit throttles
+rapid requests for separate feeds. Each returned post is stored under its own
+subreddit source row and displayed as `r/<subreddit>`; a story's source count
+therefore does not collapse all of Reddit into one source. This feed is limited
+to recent posts and does not include comments. If its oldest entry does not
+reach the comparison window start, all Reddit sources report incomplete
+coverage. A busy combined feed can omit posts beyond its 100-entry tail.

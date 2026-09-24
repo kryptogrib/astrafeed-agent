@@ -10,18 +10,18 @@ AstraFeed turns posts from 38 selected public channels into a live agenda for hu
 
 Built for **OKX Dev Day 2026 · Build a Company / OKX AI**. A2MCP endpoint: `POST https://cutememe.lol/a2mcp/astrafeed`. OKX.AI agent **#13877** has a free service submitted; its marketplace listing is **under review as of 25 Sep 2026**.
 
-| Reviewer link | Status |
+| Link | Notes |
 |---|---|
 | [Live agenda](https://cutememe.lol/agenda?format=html) | Public HTTPS |
-| [A2MCP](https://cutememe.lol/a2mcp/astrafeed) | Empty `POST` returns the agenda |
-| [OKX.AI listing #13877](https://www.okx.ai/agents/13877) | Submitted; **pending OKX review**, not in the marketplace yet |
-| Demo video | Recording tomorrow; this README is the walkthrough until then |
+| [A2MCP](https://cutememe.lol/a2mcp/astrafeed) | Empty `POST` returns the agenda; open the URL in a browser for the curl |
+| [OKX.AI #13877](https://www.okx.ai/agents/13877) | Free service submitted; marketplace card still in review |
+| Demo video | Coming next; the live agenda is the walkthrough until then |
 
-Do not treat the listing page as a live marketplace discovery until OKX approves it. The working integration is the HTTPS endpoint.
+The callable integration is the HTTPS endpoint. The marketplace card is the same service after OKX publishes it.
 
-## Reviewer guide
+## Start here
 
-Start with these six files. The earlier Token Brief engine is documented in [PROVENANCE.md](PROVENANCE.md); frozen research runs are under `artifacts/`.
+The live service and these six files are the product. The earlier Token Brief engine is documented in [PROVENANCE.md](PROVENANCE.md); frozen research runs are under `artifacts/`.
 
 1. [docs/product.md](docs/product.md) — what the product promises
 2. [src/astrafeed/domain/agenda.py](src/astrafeed/domain/agenda.py) — quote spans, windows, growth rules
@@ -139,6 +139,15 @@ only recent entries; the response keeps incomplete history visible in coverage
 and does not count it as zero activity. Publisher rate limits or feed errors
 affect that feed only. This configuration changes future local snapshots;
 historical snapshots and the hosted demo above are unchanged.
+
+Set `reddit_feeds` to individual subreddit RSS URLs to include Reddit posts.
+The sample configuration includes 20 crypto communities, including
+`r/CryptoCurrency`, `r/Bitcoin`, `r/ethereum`, `r/solana`, and `r/defi`. They
+are fetched as one combined newest-post feed to respect Reddit's RSS request
+limit, while each post retains its own subreddit and permalink. Reddit RSS
+does not supply thread comments; the combined feed exposes at most 100 recent
+posts, so a busy interval may have incomplete coverage. The configured
+`https://protos.com/feed` remains in the news RSS list.
 
 ```mermaid
 flowchart LR
