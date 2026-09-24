@@ -26,7 +26,7 @@ def _snapshot() -> Snapshot:
     card = StoryCard(
         story_id="s",
         title="Потоки ETH ETF",
-        entities=("Ethereum",),
+        entities=("Ethereum", "Нью-Йорк", "New York"),
         current_channels=2,
         previous_channels=0,
         growth=2,
@@ -77,6 +77,7 @@ class Translator:
             raise RuntimeError("model down")
         table = {
             "Потоки ETH ETF": "ETH ETF flows",
+            "Нью-Йорк": "New York",
             QUOTE: "ETH ETF outflow was 120M.",
             "вывел всё вчера": "withdrew everything yesterday",
             "Я думаю, это дно": "Я думаю",  # still Russian: rejected
@@ -92,6 +93,8 @@ async def test_shown_stories_are_translated_and_originals_kept():
     card = snapshot.agenda[0]
     assert card.title == "ETH ETF flows"
     assert card.explanation == "ETH ETF outflow was 120M."
+    # Translated names that duplicate an English one collapse.
+    assert card.entities == ("Ethereum", "New York")
     assert card.claims[0].quote == QUOTE
     assert card.claims[0].translation == "ETH ETF outflow was 120M."
     # English text is neither sent nor given a translation.
@@ -120,3 +123,23 @@ async def test_translations_are_cached_and_failures_keep_originals():
     broken = await EnglishLocalizer(Translator(fail=True)).localize(_snapshot())
     assert broken.agenda[0].title == "Потоки ETH ETF"
     assert broken.agenda[0].claims[0].translation == ""
+
+
+@pytest.mark.asyncio
+async def test_translated_headline_and_explanation_cannot_invent_numbers():
+    class FabricatingTranslator:
+        async def to_english(self, texts):
+            return [
+                "ETH ETF flows of 999M"
+                if text == "Потоки ETH ETF"
+                else "ETH ETF outflow was 999M."
+                if text == QUOTE
+                else ""
+                for text in texts
+            ]
+
+    result = await EnglishLocalizer(FabricatingTranslator()).localize(_snapshot())
+    card = result.agenda[0]
+    assert card.title == "Потоки ETH ETF"
+    assert card.explanation == QUOTE
+    assert card.claims[0].translation == ""

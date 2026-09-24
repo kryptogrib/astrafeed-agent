@@ -87,6 +87,7 @@ class EnglishLocalizer:
         return replace(
             card,
             title=self._english(card.title) or card.title,
+            entities=tuple(dict.fromkeys(self._english(e) or e for e in card.entities)),
             explanation=self._english(card.explanation) or card.explanation,
             claims=tuple(
                 replace(claim, translation=self._english(claim.quote)) for claim in card.claims
@@ -115,7 +116,12 @@ class EnglishLocalizer:
 
 
 def _card_texts(card: StoryCard) -> list[str]:
-    texts = [card.title, card.explanation, *(claim.quote for claim in card.claims)]
+    texts = [
+        card.title,
+        card.explanation,
+        *card.entities,
+        *(claim.quote for claim in card.claims),
+    ]
     if card.discussion is not None:
         texts += [comment.text for comment in card.discussion.quotes]
     return texts
