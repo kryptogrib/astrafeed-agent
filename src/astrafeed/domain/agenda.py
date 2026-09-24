@@ -168,6 +168,10 @@ def _near_duplicate_event(left: dict[str, Any], right: dict[str, Any]) -> bool:
         return False
     if abs((left_seen - right_seen).total_seconds()) > 6 * 3600:
         return False
+    left_posts = set(left.get("source_signature") or ())
+    right_posts = set(right.get("source_signature") or ())
+    if left_posts & right_posts:
+        return True
     entity_words = {
         word.casefold()
         for entity in left_entities | right_entities
