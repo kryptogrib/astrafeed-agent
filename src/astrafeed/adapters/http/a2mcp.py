@@ -96,6 +96,7 @@ def _landing_html(result: dict[str, Any]) -> str:
     return (
         "<!doctype html><html lang='en'><head><meta charset='utf-8'>"
         "<meta name='viewport' content='width=device-width,initial-scale=1'>"
+        "<link rel='icon' href='/favicon.ico' type='image/x-icon'>"
         "<title>AstraFeed</title></head><body>"
         "<h1>AstraFeed</h1>"
         "<p>Live crypto Telegram agenda. POST this URL; an empty body returns JSON.</p>"

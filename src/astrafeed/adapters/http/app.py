@@ -1,9 +1,10 @@
 import inspect
 from collections.abc import Awaitable, Callable
+from pathlib import Path
 from typing import Any, Literal
 
 from fastapi import FastAPI, HTTPException, Request
-from fastapi.responses import HTMLResponse, JSONResponse, PlainTextResponse
+from fastapi.responses import FileResponse, HTMLResponse, JSONResponse, PlainTextResponse
 
 from astrafeed.adapters.http.a2mcp import mount_a2mcp
 from astrafeed.application.agenda_query import (
@@ -12,6 +13,8 @@ from astrafeed.application.agenda_query import (
     render_agenda_html,
     render_story_html,
 )
+
+_FAVICON = Path(__file__).with_name("static") / "favicon.ico"
 
 PulseFn = Callable[[str, str | None], dict[str, Any]]
 """Pulse(topic, window) -> payload.
@@ -80,6 +83,10 @@ def create_app(
     @app.exception_handler(AgendaPreparing)
     async def preparing_handler(_request: Request, _exc: AgendaPreparing) -> JSONResponse:
         return JSONResponse({"status": "preparing"}, status_code=503)
+
+    @app.get("/favicon.ico", include_in_schema=False)
+    def favicon() -> FileResponse:
+        return FileResponse(_FAVICON, media_type="image/x-icon")
 
     @app.get("/healthz")
     async def healthz() -> dict[str, Any]:
