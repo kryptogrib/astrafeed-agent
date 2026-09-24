@@ -65,6 +65,7 @@ class AgendaSettings(BaseModel):
     extract_concurrency: int = Field(default=12, ge=1, le=32)
     assign_concurrency: int = Field(default=16, ge=1, le=32)
     backfill_batch_size: int = Field(default=128, ge=1, le=256)
+    cycle_post_limit: int = Field(default=128, ge=1, le=256)
     assignment_mode: Literal["auto", "strict", "relaxed"] = "auto"
     merge_cosine_threshold: float = Field(default=0.92, ge=0, le=1)
 

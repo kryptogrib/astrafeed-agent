@@ -57,7 +57,17 @@ def _publication(source_id: int, item: Item, detected_at: datetime) -> Publicati
 
 
 def _partial_is_publishable(partial: Snapshot, previous: Snapshot | None) -> bool:
-    return previous is None or not previous.agenda or len(partial.agenda) >= len(previous.agenda)
+    if previous is None or not previous.agenda:
+        return True
+    if not partial.agenda:
+        return False
+    partial_time = getattr(partial, "t", None)
+    previous_time = getattr(previous, "t", None)
+    return (
+        partial_time is not None
+        and previous_time is not None
+        and partial_time > previous_time
+    ) or len(partial.agenda) >= len(previous.agenda)
 
 
 async def restore_useful_snapshot(store: AgendaStore) -> bool:
@@ -135,6 +145,8 @@ async def run_cycle(
     collection_window: timedelta = LOOKBACK,
     partial_snapshot_every: int = 200,
     partial_snapshot_seconds: float = 600.0,
+    max_posts_per_cycle: int | None = None,
+    ingest: bool = True,
 ) -> Snapshot | None:
     if extract_concurrency < 1:
         raise ValueError("extract_concurrency must be positive")
@@ -148,6 +160,8 @@ async def run_cycle(
         raise ValueError("collection_window must cover both comparison windows")
     if partial_snapshot_every < 1 or partial_snapshot_seconds <= 0:
         raise ValueError("partial snapshot thresholds must be positive")
+    if max_posts_per_cycle is not None and max_posts_per_cycle < 1:
+        raise ValueError("max_posts_per_cycle must be positive")
     cycle_started = perf_counter()
     state = await store.get_cycle_state()
     state.phase = "collect"
@@ -158,11 +172,13 @@ async def run_cycle(
     try:
         if collect is not None:
             await collect(start, now)
-        await ingest_publications(store, reader, source_ids, start, now, now)
+        if ingest:
+            await ingest_publications(store, reader, source_ids, start, now, now)
         if await restore_useful_snapshot(store):
             _log.info("agenda restored previous nonempty snapshot during backfill")
-        state.last_collect_at = now
-        state.first_collect_done = True
+        if ingest:
+            state.last_collect_at = now
+            state.first_collect_done = True
         state.phase = "analyze"
         await store.set_cycle_state(state)
 
@@ -172,9 +188,30 @@ async def run_cycle(
             for pub in await store.publications_in(datetime.min.replace(tzinfo=UTC), now)
             if pub.publication_id in queued and pub.source_id in source_set
         ]
-        pending.sort(key=lambda pub: (pub.published_at, pub.publication_id))
+        if max_posts_per_cycle is not None:
+            current_start = now - timedelta(hours=24)
+            previous_start = now - LOOKBACK
+            pending.sort(
+                key=lambda pub: (
+                    0
+                    if pub.published_at >= current_start
+                    else 1
+                    if pub.published_at >= previous_start
+                    else 2,
+                    pub.published_at,
+                    pub.publication_id,
+                )
+            )
+        else:
+            pending.sort(key=lambda pub: (pub.published_at, pub.publication_id))
+        pending_count = len(pending)
+        remaining_backfill = (
+            max_posts_per_cycle is not None and pending_count > max_posts_per_cycle
+        )
+        if max_posts_per_cycle is not None:
+            pending = pending[:max_posts_per_cycle]
         strict_assignment = assignment_mode == "strict" or (
-            assignment_mode == "auto" and len(pending) < 128
+            assignment_mode == "auto" and pending_count < 128
         )
         batch_size = extract_concurrency if strict_assignment else backfill_batch_size
         semaphore = asyncio.Semaphore(extract_concurrency)
@@ -319,9 +356,24 @@ async def run_cycle(
             analyzed_at=finished_at,
         )
         snapshot = replace(snapshot, published_at=finished_at)
-        await publish_snapshot(store, snapshot)
+        if remaining_backfill:
+            snapshot = replace(
+                snapshot,
+                snapshot_id=f"{snapshot.snapshot_id}-p{len(pending)}",
+                limitations=(*snapshot.limitations, "processing_in_progress"),
+                coverage=replace(
+                    snapshot.coverage,
+                    limitations=(*snapshot.coverage.limitations, "processing_in_progress"),
+                ),
+            )
+            previous = await store.get_snapshot(None)
+            if _partial_is_publishable(snapshot, previous):
+                await publish_snapshot(store, snapshot)
+        else:
+            await publish_snapshot(store, snapshot)
         state.phase = "idle"
-        state.last_success_at = finished_at
+        if not remaining_backfill:
+            state.last_success_at = finished_at
         state.last_error = ""
         state.queue_depth = await store.queue_depth()
         await store.set_cycle_state(state)

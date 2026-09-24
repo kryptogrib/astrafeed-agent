@@ -219,10 +219,17 @@ async def _agenda_poll(
     coordinator = IngestionCoordinator(
         posts, reader, resolver=reader, limits=limits_from_settings(cfg)
     )
+    source_ids: list[int] = []
     while True:
-        await _ensure_connected(client)
         now = datetime.now(UTC)
-        source_ids = await _resolve_union(coordinator, [*cfg.channels, *cfg.news_channels])
+        cycle_state = await agenda.get_cycle_state()
+        collect_due = (
+            cycle_state.last_collect_at is None
+            or now - cycle_state.last_collect_at >= timedelta(seconds=cfg.poll_seconds)
+        )
+        if collect_due or not source_ids:
+            await _ensure_connected(client)
+            source_ids = await _resolve_union(coordinator, [*cfg.channels, *cfg.news_channels])
 
         async def collect(start: datetime, end: datetime, ids: list[int] = source_ids) -> None:
             if ids:
@@ -234,6 +241,7 @@ async def _agenda_poll(
                     len(result.errors),
                 )
 
+        snapshot = None
         try:
             snapshot = await run_cycle(
                 agenda,
@@ -243,28 +251,41 @@ async def _agenda_poll(
                 embedder=embedder,
                 assigner=assigner,
                 now=now,
-                collect=collect,
+                collect=collect if collect_due else None,
+                ingest=collect_due,
                 extract_concurrency=cfg.agenda.extract_concurrency,
                 assign_concurrency=cfg.agenda.assign_concurrency,
                 backfill_batch_size=cfg.agenda.backfill_batch_size,
                 assignment_mode=cfg.agenda.assignment_mode,
                 merge_cosine_threshold=cfg.agenda.merge_cosine_threshold,
                 collection_window=collection_window,
+                max_posts_per_cycle=cfg.agenda.cycle_post_limit,
             )
             if snapshot is None:
                 _log.warning("agenda cycle did not publish (budget or incomplete)")
             else:
                 _log.info(
-                    "agenda snapshot %s stories=%d queue=%d",
+                    "agenda batch %s stories=%d queue=%d processing=%s",
                     snapshot.snapshot_id,
                     len(snapshot.agenda),
                     snapshot.queue_depth,
+                    "processing_in_progress" in snapshot.limitations,
                 )
         except OperationalError as exc:
             _log.error("agenda sqlite error: %s", str(exc.orig)[:160])
         except Exception as exc:
             _log.error("agenda cycle failed: %s", type(exc).__name__)
-        await asyncio.sleep(cfg.poll_seconds)
+        if snapshot is not None and "processing_in_progress" in snapshot.limitations:
+            await asyncio.sleep(0)
+        else:
+            latest_collect = (await agenda.get_cycle_state()).last_collect_at
+            remaining = (
+                cfg.poll_seconds
+                if latest_collect is None
+                else (latest_collect + timedelta(seconds=cfg.poll_seconds) - datetime.now(UTC))
+                .total_seconds()
+            )
+            await asyncio.sleep(max(1, remaining))
 
 
 def _agenda_llm(cfg: Settings, session):
