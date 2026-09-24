@@ -7,16 +7,18 @@ expects 200. So an empty body answers with the agenda, `query` searches and
 """
 
 from collections.abc import Awaitable, Callable
+from html import escape
 from typing import Annotated, Any, Literal
 
 from fastapi import Body, FastAPI, HTTPException
-from fastapi.responses import PlainTextResponse
+from fastapi.responses import HTMLResponse, PlainTextResponse
 from pydantic import BaseModel, Field
 
 A2MCP_PATH = "/a2mcp/astrafeed"
 
 # Empty POST must stay HTTP 200 + agenda for the OKX listing self-check.
-# `usage` is for a reviewer or agent that did not open the README.
+# `usage` and `preview` sit above `result` so a glance at the first kilobyte
+# is enough to call the next action without opening a README.
 A2MCP_USAGE = {
     "actions": {
         "agenda": "Empty body. Optional: snapshot_id, since_snapshot_id, format=json|md",
@@ -28,8 +30,6 @@ A2MCP_USAGE = {
         "since_snapshot_id is agenda-only; a missing baseline returns the full agenda",
         "Read-only: the call never runs the collector or the LLM",
     ],
-    "listing": "https://www.okx.ai/agents/13877",
-    "listing_status": "submitted, pending OKX review",
 }
 
 
@@ -52,6 +52,61 @@ class AstraFeedRequest(BaseModel):
     format: Literal["json", "md"] = "json"
 
 
+def _preview(action: str, result: dict[str, Any]) -> dict[str, Any]:
+    if action == "agenda":
+        return {
+            "snapshot_id": result.get("snapshot_id"),
+            "stories": [
+                {
+                    "story_id": card.get("story_id"),
+                    "title": card.get("title"),
+                    "current_channels": card.get("current_channels"),
+                    "growth": card.get("growth"),
+                }
+                for card in (result.get("stories") or [])[:3]
+            ],
+        }
+    if action == "search":
+        return {
+            "snapshot_id": result.get("snapshot_id"),
+            "query": result.get("query"),
+            "hits": [
+                {"story_id": hit.get("story_id"), "title": hit.get("title")}
+                for hit in (result.get("hits") or [])[:3]
+            ],
+        }
+    story = result.get("story") or {}
+    return {
+        "snapshot_id": result.get("snapshot_id"),
+        "story_id": story.get("story_id"),
+        "title": story.get("title"),
+    }
+
+
+def _landing_html(result: dict[str, Any]) -> str:
+    items = (
+        "".join(
+            f"<li><b>{escape(str(card.get('title') or ''))}</b> — "
+            f"{escape(str(card.get('current_channels') or 0))} channels</li>"
+            for card in (result.get("stories") or [])[:3]
+        )
+        or "<li>No stories in this snapshot.</li>"
+    )
+    snapshot = escape(str(result.get("snapshot_id") or ""))
+    return (
+        "<!doctype html><html lang='en'><head><meta charset='utf-8'>"
+        "<meta name='viewport' content='width=device-width,initial-scale=1'>"
+        "<title>AstraFeed</title></head><body>"
+        "<h1>AstraFeed</h1>"
+        "<p>Live crypto Telegram agenda. POST this URL; an empty body returns JSON.</p>"
+        f"<pre>curl -sS -X POST https://cutememe.lol{A2MCP_PATH} "
+        "-H 'content-type: application/json' -d '{}'</pre>"
+        f"<p>Now: {snapshot}</p><ol>{items}</ol>"
+        "<p><a href='/agenda?format=html'>Readable agenda</a></p>"
+        "</body></html>"
+    )
+
+
 def mount_a2mcp(
     app: FastAPI,
     call: Callable[..., Awaitable[dict[str, Any]]],
@@ -60,6 +115,12 @@ def mount_a2mcp(
     story: Callable[..., Any],
 ) -> None:
     """`call` is app.py's _call_async, so errors map to the same HTTP codes as REST."""
+
+    @app.get(A2MCP_PATH, response_class=HTMLResponse)
+    async def astrafeed_open() -> HTMLResponse:
+        """Browser hit of the tool URL: show how to call it, not a 405."""
+        result = await call(agenda)
+        return HTMLResponse(_landing_html(result))
 
     @app.post(A2MCP_PATH, response_model=None)
     async def astrafeed(
@@ -99,5 +160,6 @@ def mount_a2mcp(
             "service": "astrafeed",
             "action": action,
             "usage": A2MCP_USAGE,
+            "preview": _preview(action, result),
             "result": result,
         }

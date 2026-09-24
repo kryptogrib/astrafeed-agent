@@ -48,9 +48,21 @@ async def test_bare_post_returns_agenda_for_okx_self_check():
     body = r.json()
     assert body["action"] == "agenda"
     assert body["usage"]["actions"]["agenda"].startswith("Empty body")
-    assert body["usage"]["listing"] == "https://www.okx.ai/agents/13877"
+    assert "listing_status" not in body["usage"]
+    assert body["preview"]["snapshot_id"] == "snap-demo"
+    assert body["preview"]["stories"][0]["title"] == "Потоки ETH ETF"
     assert body["result"]["snapshot_id"] == "snap-demo"
     assert body["result"]["stories"][0]["title"] == "Потоки ETH ETF"
+
+
+async def test_get_tool_url_is_a_landing_page_not_405():
+    transport = httpx.ASGITransport(app=await _app())
+    async with httpx.AsyncClient(transport=transport, base_url="http://test") as client:
+        page = await client.get("/a2mcp/astrafeed")
+    assert page.status_code == 200
+    assert "text/html" in page.headers["content-type"]
+    assert "POST this URL" in page.text
+    assert "Потоки ETH ETF" in page.text
 
 
 async def test_search_then_story_on_the_same_snapshot():

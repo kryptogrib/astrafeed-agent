@@ -59,6 +59,7 @@ from astrafeed.application.ingestion import (
     limits_from_settings,
 )
 from astrafeed.application.pulse_ingest import CommentCollector
+from astrafeed.application.reddit_ingest import collect_reddit_feeds, resolve_reddit_feeds
 from astrafeed.application.rss_ingest import collect_feeds, resolve_feeds
 from astrafeed.config import Settings
 from astrafeed.domain.agenda import EMBEDDING_MODEL, LOOKBACK, Snapshot
@@ -293,6 +294,7 @@ async def _agenda_poll(
     )
     source_ids: list[int] = []
     rss_feeds: dict[int, str] = {}
+    reddit_feeds: dict[int, str] = {}
     while True:
         now = datetime.now(UTC)
         cycle_state = await agenda.get_cycle_state()
@@ -317,6 +319,12 @@ async def _agenda_poll(
             except Exception as exc:
                 _log.error("agenda RSS source resolution failed: %s", type(exc).__name__)
                 rss_feeds = {}
+            try:
+                reddit_feeds = await resolve_reddit_feeds(posts, cfg.reddit_feeds)
+                source_ids.extend(reddit_feeds)
+            except Exception as exc:
+                _log.error("agenda Reddit source resolution failed: %s", type(exc).__name__)
+                reddit_feeds = {}
             if not source_ids:
                 cycle_state.last_error = "source_unavailable"
                 cycle_state.phase = "idle"
@@ -329,9 +337,10 @@ async def _agenda_poll(
             end: datetime,
             ids: list[int] = source_ids,
             feeds: dict[int, str] = rss_feeds,
+            subreddits: dict[int, str] = reddit_feeds,
         ) -> None:
             if ids:
-                telegram_ids = [sid for sid in ids if sid not in feeds]
+                telegram_ids = [sid for sid in ids if sid not in feeds and sid not in subreddits]
                 result = await coordinator.ensure_window(telegram_ids, start, end)
                 async with httpx.AsyncClient(
                     timeout=15,
@@ -339,11 +348,16 @@ async def _agenda_poll(
                     headers={"User-Agent": "AstraFeed/0.1 RSS reader"},
                 ) as http:
                     rss_errors = await collect_feeds(posts, RssReader(http), feeds, start, end)
+                    reddit_errors = await collect_reddit_feeds(
+                        posts, RssReader(http), subreddits, start, end
+                    )
                 _log.info(
                     "agenda collect sources=%d incomplete=%d errors=%d",
                     len(ids),
-                    sum(not coverage.complete for coverage in result.values()) + len(rss_errors),
-                    len(result.errors) + len(rss_errors),
+                    sum(not coverage.complete for coverage in result.values())
+                    + len(rss_errors)
+                    + len(reddit_errors),
+                    len(result.errors) + len(rss_errors) + len(reddit_errors),
                 )
                 previous_snapshot = await agenda.get_snapshot(None)
                 if previous_snapshot is not None:
@@ -509,8 +523,8 @@ async def _backfill_posts(args: argparse.Namespace) -> None:
     cfg = Settings.load(args.config)
     configure_logging("INFO", None)
     refs = list(dict.fromkeys([*cfg.channels, *cfg.news_channels]))
-    if not refs and not cfg.rss_feeds:
-        raise SystemExit("config.yaml has no channels or rss_feeds")
+    if not refs and not cfg.rss_feeds and not cfg.reddit_feeds:
+        raise SystemExit("config.yaml has no channels, rss_feeds or reddit_feeds")
     now = datetime.now(UTC)
     start = now - args.window
     client = _telegram(cfg)
@@ -539,12 +553,16 @@ async def _backfill_posts(args: argparse.Namespace) -> None:
                 failed[ref] = str(e)
         result = await coordinator.ensure_window(list(resolved), start, now)
         rss_feeds = await resolve_feeds(store, cfg.rss_feeds)
+        reddit_feeds = await resolve_reddit_feeds(store, cfg.reddit_feeds)
         async with httpx.AsyncClient(
             timeout=15,
             follow_redirects=True,
             headers={"User-Agent": "AstraFeed/0.1 RSS reader"},
         ) as http:
             rss_errors = await collect_feeds(store, RssReader(http), rss_feeds, start, now)
+            reddit_errors = await collect_reddit_feeds(
+                store, RssReader(http), reddit_feeds, start, now
+            )
         print(f"\n{'channel':<32} {'posts':>6}  status")
         total = 0
         for sid, ref in resolved.items():
@@ -559,6 +577,11 @@ async def _backfill_posts(args: argparse.Namespace) -> None:
             total += articles
             status = "ok" if sid not in rss_errors else f"INCOMPLETE {rss_errors[sid]}"
             print(f"{url:<32} {articles:>6}  {status}")
+        for sid, subreddit in reddit_feeds.items():
+            posts = len(await store.read_window(sid, start, now))
+            total += posts
+            status = "ok" if sid not in reddit_errors else f"INCOMPLETE {reddit_errors[sid]}"
+            print(f"{'r/' + subreddit:<32} {posts:>6}  {status}")
         print(f"\nTotal posts in [{start:%Y-%m-%d %H:%M}, {now:%Y-%m-%d %H:%M}] UTC: {total}")
     finally:
         await client.disconnect()

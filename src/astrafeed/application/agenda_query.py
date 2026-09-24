@@ -704,6 +704,9 @@ def _html_page(title: str, body: str) -> str:
     return (
         '<!doctype html><html lang="en"><head><meta charset="utf-8">'
         '<meta name="viewport" content="width=device-width,initial-scale=1">'
+        '<meta name="description" content="Live crypto agenda with source links.">'
+        f'<meta property="og:title" content="{escape(title)}">'
+        '<meta property="og:description" content="Crypto stories with source quotes and links.">'
         f"<title>{escape(title)}</title><style>{_PAGE_CSS}</style></head>"
         f"<body><main>{body}</main></body></html>"
     )
