@@ -5,8 +5,8 @@
 - Arc запущен
 - 🔴Arc сминтили 10 млрд токенов $ARC в Mainnet. Сама же команда пишет, что это техническая необходимость, а не подготовка к дропу. При этом, в X сами байтят холдеров Architect ролей.
 - кстати мейннет Arc, можно будет бриджить через Jumper
+- Сегодня, 16 сентября, Circle запустила мейннет Arc и сразу подключила его к Agent Stack, набору инструментов, который с 11 мая дает ИИ-агенту собственный кошелек.
 - Circle's Arc Stablecoin L1 Goes Live on Mainnet
-- Arc arrives as a full-stack financial platform rather than a bare chain, shipping assets, applications, interoperability, and Circle platform services from day one.
 
 ## События и заявления
 
@@ -16,18 +16,14 @@
   - https://t.me/WEB3_AGGREGATOR/423100: «Arc, the stablecoin-native Layer-1 built by Circle, launched its public mainnet, positioning itself as an "Economic OS for the internet" with USDC as the native»
   - https://t.me/WEB3_AGGREGATOR/423143: «🪙 Circle запустила мейннет Arc — сеть уже принимает транзакции, а за первые два часа в неё завели более $370 млн USDC.»
 - **Circle's Arc Stablecoin L1 Goes Live on Mainnet**
-  публикации 2, каналы 1, известные авторы 0, первоисточники 2, перепечатки 0, неизвестное происхождение 0.
+  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.
   - https://t.me/WEB3_AGGREGATOR/423100: «Circle's Arc Stablecoin L1 Goes Live on Mainnet»
-  - https://t.me/WEB3_AGGREGATOR/423153: «Первый день мэйннета ARC»
-- **Arc arrives as a full-stack financial platform rather than a bare chain, shipping assets, applications, interoperability, and Circle platform services from day one.**
-  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.
   - https://t.me/WEB3_AGGREGATOR/423100: «Arc arrives as a full-stack financial platform rather than a bare chain, shipping assets, applications, interoperability, and Circle platform services from day »
-- **More than 190 institutional and ecosystem teams are already building on Arc, one of the most institutionally backed genesis cohorts the industry has seen, as Circle pushes…**
-  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.
   - https://t.me/WEB3_AGGREGATOR/423100: «More than 190 institutional and ecosystem teams are already building on Arc, one of the most institutionally backed genesis cohorts the industry has seen, as Ci»
 - **Сегодня, 16 сентября, Circle запустила мейннет Arc и сразу подключила его к Agent Stack, набору инструментов, который с 11 мая дает ИИ-агенту собственный кошелек.**
-  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.
+  публикации 2, каналы 1, известные авторы 0, первоисточники 2, перепечатки 0, неизвестное происхождение 0.
   - https://t.me/WEB3_AGGREGATOR/423105: «Сегодня, 16 сентября, Circle запустила мейннет Arc и сразу подключила его к Agent Stack, набору инструментов, который с 11 мая дает ИИ-агенту собственный кошеле»
+  - https://t.me/WEB3_AGGREGATOR/423153: «Первый день мэйннета ARC»
 - **Основная сеть Arc запустилась. Arc и OpenSea запустили бесплатный минт NFT:**
   публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.
   - https://t.me/WEB3_AGGREGATOR/423117: «Основная сеть Arc запустилась. Arc и OpenSea запустили бесплатный минт NFT:»
@@ -277,7 +273,7 @@
 
 ## Изменения относительно предыдущего периода
 
-- Появившиеся события: 20.
+- Появившиеся события: 18.
 - Исчезнувшие события: 6.
 - Изменение охвата источников: +0 / −4 каналов.
 - Комментарии по теме: 54 в текущем окне, 29 в предыдущем.
@@ -296,10 +292,10 @@
 - https://t.me/WEB3_AGGREGATOR/423100: «Arc, the stablecoin-native Layer-1 built by Circle, launched its public mainnet, positioning itself as an "Economic OS for the internet" with USDC as the native»
 - https://t.me/WEB3_AGGREGATOR/423143: «🪙 Circle запустила мейннет Arc — сеть уже принимает транзакции, а за первые два часа в неё завели более $370 млн USDC.»
 - https://t.me/WEB3_AGGREGATOR/423100: «Circle's Arc Stablecoin L1 Goes Live on Mainnet»
-- https://t.me/WEB3_AGGREGATOR/423153: «Первый день мэйннета ARC»
 - https://t.me/WEB3_AGGREGATOR/423100: «Arc arrives as a full-stack financial platform rather than a bare chain, shipping assets, applications, interoperability, and Circle platform services from day »
 - https://t.me/WEB3_AGGREGATOR/423100: «More than 190 institutional and ecosystem teams are already building on Arc, one of the most institutionally backed genesis cohorts the industry has seen, as Ci»
 - https://t.me/WEB3_AGGREGATOR/423105: «Сегодня, 16 сентября, Circle запустила мейннет Arc и сразу подключила его к Agent Stack, набору инструментов, который с 11 мая дает ИИ-агенту собственный кошеле»
+- https://t.me/WEB3_AGGREGATOR/423153: «Первый день мэйннета ARC»
 - https://t.me/WEB3_AGGREGATOR/423117: «Основная сеть Arc запустилась. Arc и OpenSea запустили бесплатный минт NFT:»
 - https://t.me/krasnovcrypto/3754: «📟Arc | фармим раннюю активность в mainnet»
 - https://t.me/krasnovcrypto/3754: «Arc запустил публичный mainnet и уже сейчас мы можем делать быстрые активности.»

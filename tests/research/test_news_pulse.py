@@ -1916,6 +1916,136 @@ def test_same_action_object_with_different_actors_stays_apart():
     assert len(group_events([binance, coinbase])) == 2
 
 
+@pytest.mark.parametrize(("amount_a", "amount_b"), [("$100M", "$100M"), ("$143.7M", "$144M")])
+def test_explicit_different_days_stay_apart_even_with_equal_or_rounded_amounts(amount_a, amount_b):
+    a = _obs(
+        "a",
+        actor=None,
+        action="inflow",
+        object="ETH ETF",
+        qualifiers={"event_date": "2026-09-21"},
+        quote=f"ETH ETF 21 сентября: приток {amount_a}",
+        ts="2026-09-22T09:00:00",
+    )
+    b = _obs(
+        "b",
+        actor=None,
+        action="inflow",
+        object="ETH ETF",
+        qualifiers={"event_date": "2026-09-22"},
+        quote=f"ETH ETF 22 сентября: приток {amount_b}",
+        ts="2026-09-23T09:00:00",
+        pub_id="tg:2:1",
+        source_id=2,
+    )
+    assert len(group_events([a, b])) == 2
+
+
+def test_classifier_dates_that_are_not_publication_days_are_explicit():
+    # neither date equals its publication day, so both are event dates, not report days
+    a = _obs(
+        "a",
+        actor=None,
+        action="inflow",
+        object="ETH ETF",
+        qualifiers={"event_date": "2026-09-21"},
+        quote="ETH ETF: приток $100M",
+    )
+    b = _obs(
+        "b",
+        actor=None,
+        action="inflow",
+        object="ETH ETF",
+        qualifiers={"event_date": "2026-09-22"},
+        quote="ETH ETF: приток $100M",
+        pub_id="tg:2:1",
+        source_id=2,
+    )
+    assert len(group_events([a, b])) == 2
+
+
+def test_different_actors_stay_apart_when_objects_are_aliases():
+    binance = _obs(
+        "a", actor="Binance", action="listing", object="ZEC", quote="Binance listing ZEC"
+    )
+    coinbase = _obs(
+        "b",
+        actor="Coinbase",
+        action="listing",
+        object="Zcash",
+        quote="Coinbase listing Zcash",
+        pub_id="tg:2:1",
+        source_id=2,
+    )
+    assert len(group_events([binance, coinbase])) == 2
+
+
+def test_different_actors_go_to_the_judge_not_to_a_veto():
+    binance = _obs(
+        "a", actor="Binance", action="listing", object="ZEC", quote="Binance listing ZEC"
+    )
+    coinbase = _obs(
+        "b",
+        actor="Coinbase",
+        action="listing",
+        object="Zcash",
+        quote="Coinbase listing Zcash",
+        pub_id="tg:2:1",
+        source_id=2,
+    )
+    company = _obs(
+        "c",
+        actor="BitMine",
+        action="acquire",
+        object="ETH",
+        quote="BitMine bought ETH",
+    )
+    ticker = _obs(
+        "d",
+        actor="$BMNR",
+        action="acquire",
+        object="$ETH",
+        quote="$BMNR bought $ETH",
+        pub_id="tg:2:1",
+        source_id=2,
+    )
+    asked = []
+
+    def judge(a, b):
+        asked.append({a.obs_id, b.obs_id})
+        return "same" if {a.obs_id, b.obs_id} == {"c", "d"} else "different"
+
+    assert len(group_events([binance, coinbase], judge=judge)) == 2
+    assert len(group_events([company, ticker], judge=judge)) == 1
+    assert {"c", "d"} in asked
+
+
+def test_digest_items_with_different_actors_stay_apart():
+    wizards = _obs(
+        "a",
+        actor="Shielded Wizards",
+        action="mint",
+        object="ZEC",
+        quote="• Shielded Wizards: 2,100 · 0.001 ZEC · 21 сен 20:00 МСК",
+    )
+    bitfoots = _obs(
+        "b",
+        actor="BITFOOTS",
+        action="mint",
+        object="ZEC",
+        quote="• BITFOOTS: 303 1/1 · $5 в ZEC · заявки до 21 сен 17:00 МСК",
+    )
+    assert len(group_events([wizards, bitfoots])) == 2
+
+
+def test_same_short_quote_from_different_actors_is_not_one_event():
+    bet = _obs("a", actor="гигачад", action="сделал ставки", object="ZEC", quote="ZEC")
+    lost = _obs(
+        "b", actor="Я", action="не шарю", object="ZEC", quote="ZEC", pub_id="tg:2:1", source_id=2
+    )
+    assert len(group_events([bet, lost])) == 2
+
+
 def test_grounding_checks_short_observations_and_discussion_basis(tmp_path):
     from news_pulse_ground import check_run
 
@@ -1989,6 +2119,25 @@ def test_grounding_checks_short_observations_and_discussion_basis(tmp_path):
     target = json.loads(json.dumps(pulse))
     target["discussion"][0].update(target="event", target_id="e404")
     assert any(f["kind"] == "discussion_basis" for f in run_of(target)["failures"])
+
+    # the basis is re-derived from the source, not only matched against the template list
+    repeats = json.loads(json.dumps(pulse))
+    repeats["discussion"][0].update(
+        target="event", target_id="e1", basis="комментарий повторяет формулировку события"
+    )
+    assert any(f["kind"] == "discussion_basis" for f in run_of(repeats)["failures"])
+
+    under_post = json.loads(json.dumps(pulse))
+    under_post["discussion"][0].update(
+        target="event",
+        target_id="e1",
+        basis="реплика к посту с одним событием по теме и тому же предмету",
+    )
+    assert not run_of(under_post)["failures"]
+    elsewhere = json.loads(json.dumps(under_post))
+    elsewhere["discussion"][0]["url"] = "https://t.me/other/7?comment=2"
+    texts["https://t.me/other/7?comment=2"] = comment
+    assert any(f["kind"] == "discussion_basis" for f in run_of(elsewhere)["failures"])
 
 
 def test_long_comment_is_clipped_without_splitting_numbers():

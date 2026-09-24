@@ -237,6 +237,11 @@ def extract_key_quals(obs: EventObservation) -> dict[str, str]:
         resolved = resolve_date(obs.quote or "", obs.published_at)
         if resolved:
             out["event_date"] = resolved
+    if "event_date" in out and obs.published_at is not None:
+        # a date the quote does not state and that equals the publication day may be just the
+        # publication day filled in by the classifier, not the day of the event
+        stated = resolve_date(obs.quote or "", obs.published_at) is not None
+        out["date_from_pub"] = str(not stated and out["event_date"] == obs.published_at.date().isoformat())
     amount = parse_amount_musd(obs.quote or "")
     if amount is None:
         amount = parse_amount_musd(str((obs.qualifiers or {}).get("amount") or ""))
@@ -246,17 +251,20 @@ def extract_key_quals(obs: EventObservation) -> dict[str, str]:
 
 
 def _dates_compatible(qa: dict[str, str], qb: dict[str, str]) -> bool:
-    """Equal ISO dates; a one-day gap is allowed only when one amount is the other rounded
-    (a daily report posted the next morning vs. the flow date). Close but different amounts
-    on neighbouring days are two daily flows."""
+    """Equal ISO dates. Two explicit different dates are two events whatever the amounts.
+    The only exception is a next-day report whose date is merely its publication day: it may
+    match the explicit flow date one day earlier when one amount is the other rounded."""
     da, db = qa.get("event_date"), qb.get("event_date")
     if not da or not db or da == db:
         return True
+    if (qa.get("date_from_pub") == "True") == (qb.get("date_from_pub") == "True"):
+        return False
+    stated, pub = (da, db) if qb.get("date_from_pub") == "True" else (db, da)
     try:
-        gap = abs((datetime.fromisoformat(da) - datetime.fromisoformat(db)).days)
+        gap = (datetime.fromisoformat(pub) - datetime.fromisoformat(stated)).days
     except ValueError:
         return False
-    if gap <= 1 and "amount" in qa and "amount" in qb:
+    if gap == 1 and "amount" in qa and "amount" in qb:
         return _amounts_same_rounded(qa["amount"], qb["amount"])
     return False
 
@@ -377,11 +385,13 @@ def conflicting(a: EventObservation, b: EventObservation) -> bool:
     sa, sb = subject_key(a), subject_key(b)
     if sa[1] and sb[1] and sa[1] != sb[1] and {sa[1], sb[1]} == {"vote", "upgrade"}:
         return True
-    return _actors_conflict(sa, sb)
+    return False
 
 
-def _actors_conflict(sa: tuple, sb: tuple) -> bool:
-    """Two named actors with no shared word are two events (Binance vs Coinbase listing).
+def _actors_differ(sa: tuple, sb: tuple) -> bool:
+    """Two named actors with no shared word: Binance vs Coinbase listing, but also hackers vs
+    attackers or Мосбиржа vs Moscow Exchange. The strings cannot tell a second actor from a
+    synonym, so this is not a conflict; it only stops a merge without the judge.
     Fund flows are exempt: their actor is whoever reported the table, not who acted."""
     if sa[2].endswith("etf") or sb[2].endswith("etf"):
         return False
@@ -394,11 +404,18 @@ def same_event_deterministic(a: EventObservation, b: EventObservation) -> bool:
     # identical wording is not identity: "Today ... $100M" on two days is two flows
     if conflicting(a, b):
         return False
+    # a bare "ZEC" quote hashes the same for "гигачад сделал ставки" and "я не шарю"
+    if _actors_differ(subject_key(a), subject_key(b)):
+        return False
+    return _same_apart_from_actors(a, b)
+
+
+def _same_apart_from_actors(a: EventObservation, b: EventObservation) -> bool:
+    sa, sb = subject_key(a), subject_key(b)
     if a.text_hash and a.text_hash == b.text_hash:
         return True
     if ticker_only(a, b):
         return False
-    sa, sb = subject_key(a), subject_key(b)
     qa, qb = extract_key_quals(a), extract_key_quals(b)
     if sa[1] and sa[1] == sb[1] and sa[2] and sa[2] == sb[2]:
         shared = set(qa) & set(qb) & {"duration_s", "version", "event_date"}
@@ -445,6 +462,9 @@ def candidate_pair(a: EventObservation, b: EventObservation, horizon: timedelta 
     """Strong judge filter: shared specific entity plus action/object/qualifier overlap, ±72h."""
     if ticker_only(a, b) or conflicting(a, b):
         return False
+    # BitMine vs $BMNR: everything matches but the actor, and only the judge knows the alias
+    if _actors_differ(subject_key(a), subject_key(b)) and _same_apart_from_actors(a, b):
+        return True
     if a.text_hash == b.text_hash:
         return True
     ua, ub = _url_key(a.url), _url_key(b.url)

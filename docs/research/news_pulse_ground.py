@@ -24,7 +24,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from news_pulse_build import NO_REACTION, render_markdown  # noqa: E402
-from news_pulse_link import BASES  # noqa: E402
+from news_pulse_link import BASES, _event_blob, _overlap  # noqa: E402
 
 NUMBER = re.compile(r"\d+(?:[.,]\d+)?")
 
@@ -57,6 +57,16 @@ def load_texts(db: Path) -> dict[str, str]:
     return out
 
 
+def load_parents(db: Path) -> dict[str, str]:
+    """Comment link -> link of the comment it replies to, read-only; the reply chain of a link."""
+    con = sqlite3.connect(f"file:{db}?mode=ro", uri=True)
+    try:
+        rows = con.execute("SELECT link, parent_comment_id FROM comment WHERE parent_comment_id IS NOT NULL").fetchall()
+    finally:
+        con.close()
+    return {link: f"{link.split('?')[0]}?comment={parent}" for link, parent in rows if link}
+
+
 def _ws(text: str) -> str:
     return " ".join((text or "").split())
 
@@ -87,20 +97,48 @@ def _structural(kind: str, where: str, text: str, ok: bool) -> dict:
             "verbatim": ok, "numbers_from_source": True, "grounded": ok}
 
 
-def _link_claims(pulse: dict) -> list[dict]:
-    """A comment link is a claim too: its basis must be one the linker emits for that target,
-    and a named target must exist in this run."""
-    event_ids = {ev.get("event_id") for ev in pulse.get("events") or []}
+def _link_claims(pulse: dict, texts: dict[str, str], parents: dict[str, str]) -> list[dict]:
+    """A comment link is a claim too. Its basis must be one the linker emits for that target, a
+    named target must exist in this run, and the predicate behind the basis is recomputed from
+    the source: a repeated wording must really overlap the event, a reply to the post's event
+    must sit under a member post, a thesis must overlap the comment or its reply chain.
+    Abstentions (topic_level, project, other_subject) name no event and are checked structurally."""
+    events = {ev.get("event_id"): ev for ev in pulse.get("events") or []}
+    theses = {pos.get("obs_id"): pos for pos in pulse.get("distribution_and_positions") or []}
     out = []
     for row in pulse.get("discussion") or []:
-        if not row.get("url"):
+        url = row.get("url")
+        if not url:
             continue  # the "no reaction found" placeholder
-        target, target_id = row.get("target"), row.get("target_id")
-        ok = BASES.get(row.get("basis") or "") == target
-        if target == "event" and target_id is not None:
-            ok = ok and target_id in event_ids
-        out.append(_structural("discussion_basis", row["url"], f"{target}: {row.get('basis')}", ok))
+        target, target_id, basis = row.get("target"), row.get("target_id"), row.get("basis") or ""
+        ok = BASES.get(basis) == target
+        text = texts.get(url, "")
+        if ok and target == "event" and target_id is not None:
+            event = events.get(target_id)
+            ok = event is not None
+            if ok and basis == "комментарий повторяет формулировку события":
+                ok = _overlap(text, _event_blob(event))
+            elif ok and basis == "реплика к посту с одним событием по теме и тому же предмету":
+                ok = url.split("?")[0] in {m.get("url") for m in event.get("members") or []}
+        elif ok and target == "author_thesis":
+            thesis = theses.get(target_id)
+            ok = thesis is not None and any(
+                _overlap(chunk, str(thesis.get("quote") or thesis.get("text") or ""))
+                for chunk in _chain_texts(url, texts, parents)
+            )
+        out.append(_structural("discussion_basis", url, f"{target}: {basis}", ok))
     return out
+
+
+def _chain_texts(url: str, texts: dict[str, str], parents: dict[str, str]) -> list[str]:
+    chain, seen = [texts.get(url, "")], {url}
+    for _ in range(8):
+        url = parents.get(url, "")
+        if not url or url in seen:
+            break
+        seen.add(url)
+        chain.append(texts.get(url, ""))
+    return [chain[0], "\n".join(chain)]
 
 
 def _short_claims(pulse: dict) -> list[dict]:
@@ -113,7 +151,7 @@ def _short_claims(pulse: dict) -> list[dict]:
     ]
 
 
-def check_run(run: Path, texts: dict[str, str]) -> dict:
+def check_run(run: Path, texts: dict[str, str], parents: dict[str, str] | None = None) -> dict:
     pulse = json.loads((run / "pulse.json").read_text(encoding="utf-8"))
     brief = (run / "brief.md").read_text(encoding="utf-8")
     decisions_path = run / "decisions.json"
@@ -168,7 +206,7 @@ def check_run(run: Path, texts: dict[str, str]) -> dict:
             text = row.get(field) or ""
             if text and text != NO_REACTION:
                 claims.append(_claim(f"discussion_{field}", text, [texts.get(row["url"], "")], row["url"]))
-    claims += _link_claims(pulse)
+    claims += _link_claims(pulse, texts, parents or {})
     claims += _short_claims(pulse)
     for pos in pulse.get("distribution_and_positions") or []:
         for field in ("text", "quote"):
@@ -200,8 +238,8 @@ def main(argv: list[str] | None = None) -> int:
     args = ap.parse_args(argv)
     db = Path(args.db)
     before = md5(db)
-    texts = load_texts(db)
-    reports = [check_run(Path(r), texts) for r in args.runs if (Path(r) / "pulse.json").exists()]
+    texts, parents = load_texts(db), load_parents(db)
+    reports = [check_run(Path(r), texts, parents) for r in args.runs if (Path(r) / "pulse.json").exists()]
     after = md5(db)
     total = sum(r["claims"] for r in reports)
     grounded = sum(r["grounded"] for r in reports)

@@ -10247,13 +10247,29 @@
   "model": "deepseek/deepseek-v4-flash",
   "llm": {
     "calls": 0,
-    "cache_hits": 303,
+    "cache_hits": 312,
     "spent_usd": 0.0,
     "errors": [
+      "cache_miss:news-pulse-judge/v2:ec3b6d3a05d2ce4e",
+      "cache_miss:news-pulse-judge/v2:82c69c0d4235787c",
+      "cache_miss:news-pulse-judge/v2:a82bd2c2078723e7",
+      "cache_miss:news-pulse-judge/v2:8f3d321e97e2458e",
+      "cache_miss:news-pulse-judge/v2:6d9ff7180a3e8596",
+      "cache_miss:news-pulse-judge/v2:d8f86298f6b39311",
+      "cache_miss:news-pulse-judge/v2:97b9742b06138c92",
+      "cache_miss:news-pulse-judge/v2:1922e4543462704e",
       "cache_miss:news-pulse-judge/v2:c5aaf3a95ef65587",
+      "cache_miss:news-pulse-judge/v2:fe7b8763852030e9",
       "cache_miss:news-pulse-judge/v2:fb1df5844ef889df",
+      "cache_miss:news-pulse-judge/v2:f7bf81e86120a638",
+      "cache_miss:news-pulse-judge/v2:eca1561fbf39348d",
       "cache_miss:news-pulse-judge/v2:74f33becf3e05ebd",
-      "cache_miss:news-pulse-judge/v2:505b5a98ac2d6a5d"
+      "cache_miss:news-pulse-judge/v2:7fcc4ce7df0a9f04",
+      "cache_miss:news-pulse-judge/v2:4bfd645be3a16310",
+      "cache_miss:news-pulse-judge/v2:b05ba5f062e27ece",
+      "cache_miss:news-pulse-judge/v2:b5b83bf91a4813ed",
+      "cache_miss:news-pulse-judge/v2:49ce73fe60856ca1",
+      "cache_miss:news-pulse-judge/v2:e7434af19636eb53"
     ]
   }
 }

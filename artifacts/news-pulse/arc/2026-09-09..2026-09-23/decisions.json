@@ -1493,9 +1493,8 @@
       ],
       "event_ids": [
         "e3-e183a9539dc7838b",
-        "e28-8a75dfb4c419fe87",
-        "e29-8a766f54fba274d1",
-        "e30-f6f1e759519a5cbd"
+        "e24-b79a9c89ea4254a0",
+        "e28-8a766f54fba274d1"
       ],
       "origin": "own",
       "source_role": "editorial",
@@ -1670,9 +1669,9 @@
       ],
       "event_ids": [
         "e22-51767aa7a816c2cb",
-        "e31-c9826d15d0d75d44",
-        "e32-af16fdc54e5e1347",
-        "e33-f5dee91bb2f52cb4"
+        "e29-c9826d15d0d75d44",
+        "e30-af16fdc54e5e1347",
+        "e31-f5dee91bb2f52cb4"
       ],
       "origin": "own",
       "source_role": "editorial",
@@ -1749,7 +1748,7 @@
         }
       ],
       "event_ids": [
-        "e34-bc95ef671dc0981f"
+        "e32-bc95ef671dc0981f"
       ],
       "origin": "own",
       "source_role": "editorial",
@@ -1793,7 +1792,7 @@
         }
       ],
       "event_ids": [
-        "e35-c5cc91bc0559fb7d"
+        "e33-c5cc91bc0559fb7d"
       ],
       "origin": "own",
       "source_role": "editorial",
@@ -1998,7 +1997,7 @@
         }
       ],
       "event_ids": [
-        "e36-525acbc9683eaa9d"
+        "e34-525acbc9683eaa9d"
       ],
       "origin": "own",
       "source_role": "author",
@@ -2027,7 +2026,7 @@
         }
       ],
       "event_ids": [
-        "e37-fc76b3cacccdad42"
+        "e35-fc76b3cacccdad42"
       ],
       "origin": "own",
       "source_role": "author",
@@ -2102,9 +2101,9 @@
       ],
       "event_ids": [
         "e24-b79a9c89ea4254a0",
-        "e38-aae72a40fa53caf6",
-        "e39-4d7ac3720cf84b0f",
-        "e40-419ffa3f9fce6606"
+        "e36-aae72a40fa53caf6",
+        "e37-4d7ac3720cf84b0f",
+        "e38-419ffa3f9fce6606"
       ],
       "origin": "own",
       "source_role": "editorial",
@@ -2127,7 +2126,7 @@
         }
       ],
       "event_ids": [
-        "e41-ed48c18aa3328218"
+        "e39-ed48c18aa3328218"
       ],
       "origin": "own",
       "source_role": "editorial",
@@ -2171,7 +2170,7 @@
         }
       ],
       "event_ids": [
-        "e36-525acbc9683eaa9d"
+        "e34-525acbc9683eaa9d"
       ],
       "origin": "own",
       "source_role": "editorial",
@@ -2194,7 +2193,7 @@
         }
       ],
       "event_ids": [
-        "e36-525acbc9683eaa9d"
+        "e34-525acbc9683eaa9d"
       ],
       "origin": "own",
       "source_role": "editorial",
@@ -2244,8 +2243,8 @@
         }
       ],
       "event_ids": [
-        "e42-c813add0d14f4b10",
-        "e43-286906c4a81433de"
+        "e40-c813add0d14f4b10",
+        "e41-286906c4a81433de"
       ],
       "origin": "own",
       "source_role": "editorial",
@@ -2315,7 +2314,7 @@
         }
       ],
       "event_ids": [
-        "e42-c813add0d14f4b10"
+        "e40-c813add0d14f4b10"
       ],
       "origin": "retelling",
       "source_role": "author",
@@ -2407,8 +2406,8 @@
         }
       ],
       "event_ids": [
-        "e44-87ae8cd422225c43",
-        "e45-3990ecb6b139df7e"
+        "e42-87ae8cd422225c43",
+        "e43-3990ecb6b139df7e"
       ],
       "origin": "retelling",
       "source_role": "editorial",
@@ -2443,8 +2442,8 @@
         }
       ],
       "event_ids": [
-        "e46-c1676a8140da42ff",
-        "e47-3c833e3982a20e38"
+        "e44-c1676a8140da42ff",
+        "e45-3c833e3982a20e38"
       ],
       "origin": "retelling",
       "source_role": "author",
@@ -2479,7 +2478,7 @@
         }
       ],
       "event_ids": [
-        "e48-71403fc329aa2e81"
+        "e46-71403fc329aa2e81"
       ],
       "origin": "unknown",
       "source_role": "editorial",
@@ -2532,8 +2531,8 @@
         }
       ],
       "event_ids": [
-        "e49-8908ac0e481a6ee3",
-        "e50-8512d43c5e51018a"
+        "e47-8908ac0e481a6ee3",
+        "e48-8512d43c5e51018a"
       ],
       "origin": "unknown",
       "source_role": "editorial",
@@ -2592,11 +2591,10 @@
         }
       ],
       "event_ids": [
-        "e51-8f04af3be10dd5e7",
-        "e52-ecd403b16bce7bc5",
-        "e53-675b636d5e15e03c",
-        "e54-9d3b16af13a3f5c8",
-        "e55-79fafd51b8992714"
+        "e49-8f04af3be10dd5e7",
+        "e50-675b636d5e15e03c",
+        "e51-9d3b16af13a3f5c8",
+        "e52-79fafd51b8992714"
       ],
       "origin": "unknown",
       "source_role": "editorial",
@@ -2631,8 +2629,8 @@
         }
       ],
       "event_ids": [
-        "e56-47c4ef28758dec5b",
-        "e57-0fea3d7cdaa532bf"
+        "e53-47c4ef28758dec5b",
+        "e54-0fea3d7cdaa532bf"
       ],
       "origin": "retelling",
       "source_role": "editorial",
@@ -2661,7 +2659,7 @@
         }
       ],
       "event_ids": [
-        "e58-1b1b8d85d0809f34"
+        "e55-1b1b8d85d0809f34"
       ],
       "origin": "retelling",
       "source_role": "editorial",
@@ -2690,8 +2688,8 @@
         }
       ],
       "event_ids": [
-        "e42-c813add0d14f4b10",
-        "e59-d1cfe16486fc9379"
+        "e40-c813add0d14f4b10",
+        "e56-d1cfe16486fc9379"
       ],
       "origin": "retelling",
       "source_role": "editorial",
@@ -2791,7 +2789,7 @@
         }
       ],
       "event_ids": [
-        "e36-525acbc9683eaa9d"
+        "e34-525acbc9683eaa9d"
       ],
       "origin": "retelling",
       "source_role": "editorial",
@@ -2814,7 +2812,7 @@
         }
       ],
       "event_ids": [
-        "e36-525acbc9683eaa9d"
+        "e34-525acbc9683eaa9d"
       ],
       "origin": "retelling",
       "source_role": "editorial",
@@ -2843,8 +2841,8 @@
         }
       ],
       "event_ids": [
-        "e60-54d455f671306106",
-        "e61-65015e516e5828da"
+        "e57-54d455f671306106",
+        "e58-65015e516e5828da"
       ],
       "origin": "own",
       "source_role": "official",
@@ -15035,13 +15033,15 @@
       "publications": [
         "https://t.me/PowsGemCalls/48975",
         "https://t.me/whitelist1/7138",
+        "https://t.me/WEB3_AGGREGATOR/423100",
         "https://t.me/WEB3_AGGREGATOR/423153"
       ],
-      "n_publications": 3,
+      "n_publications": 4,
       "n_channels": 3,
       "n_known_authors": 0,
       "found_origins": [
         "https://t.me/PowsGemCalls/48975",
+        "https://t.me/WEB3_AGGREGATOR/423100",
         "https://t.me/WEB3_AGGREGATOR/423153"
       ],
       "n_reprints": 1,
@@ -15091,7 +15091,7 @@
       "n_unknown_origin": 0
     },
     {
-      "event_id": "e28-8a75dfb4c419fe87",
+      "event_id": "e28-8a766f54fba274d1",
       "publications": [
         "https://t.me/WEB3_AGGREGATOR/423100"
       ],
@@ -15105,35 +15105,7 @@
       "n_unknown_origin": 0
     },
     {
-      "event_id": "e29-8a766f54fba274d1",
-      "publications": [
-        "https://t.me/WEB3_AGGREGATOR/423100"
-      ],
-      "n_publications": 1,
-      "n_channels": 1,
-      "n_known_authors": 0,
-      "found_origins": [
-        "https://t.me/WEB3_AGGREGATOR/423100"
-      ],
-      "n_reprints": 0,
-      "n_unknown_origin": 0
-    },
-    {
-      "event_id": "e30-f6f1e759519a5cbd",
-      "publications": [
-        "https://t.me/WEB3_AGGREGATOR/423100"
-      ],
-      "n_publications": 1,
-      "n_channels": 1,
-      "n_known_authors": 0,
-      "found_origins": [
-        "https://t.me/WEB3_AGGREGATOR/423100"
-      ],
-      "n_reprints": 0,
-      "n_unknown_origin": 0
-    },
-    {
-      "event_id": "e31-c9826d15d0d75d44",
+      "event_id": "e29-c9826d15d0d75d44",
       "publications": [
         "https://t.me/krasnovcrypto/3754"
       ],
@@ -15147,7 +15119,7 @@
       "n_unknown_origin": 0
     },
     {
-      "event_id": "e32-af16fdc54e5e1347",
+      "event_id": "e30-af16fdc54e5e1347",
       "publications": [
         "https://t.me/krasnovcrypto/3754"
       ],
@@ -15161,7 +15133,7 @@
       "n_unknown_origin": 0
     },
     {
-      "event_id": "e33-f5dee91bb2f52cb4",
+      "event_id": "e31-f5dee91bb2f52cb4",
       "publications": [
         "https://t.me/krasnovcrypto/3754"
       ],
@@ -15175,7 +15147,7 @@
       "n_unknown_origin": 0
     },
     {
-      "event_id": "e34-bc95ef671dc0981f",
+      "event_id": "e32-bc95ef671dc0981f",
       "publications": [
         "https://t.me/WEB3_AGGREGATOR/423121"
       ],
@@ -15189,7 +15161,7 @@
       "n_unknown_origin": 0
     },
     {
-      "event_id": "e35-c5cc91bc0559fb7d",
+      "event_id": "e33-c5cc91bc0559fb7d",
       "publications": [
         "https://t.me/WEB3_AGGREGATOR/423128"
       ],
@@ -15203,7 +15175,7 @@
       "n_unknown_origin": 0
     },
     {
-      "event_id": "e36-525acbc9683eaa9d",
+      "event_id": "e34-525acbc9683eaa9d",
       "publications": [
         "https://t.me/WEB3_AGGREGATOR/423150",
         "https://t.me/crypto_hd/31472",
@@ -15223,7 +15195,7 @@
       "n_unknown_origin": 0
     },
     {
-      "event_id": "e37-fc76b3cacccdad42",
+      "event_id": "e35-fc76b3cacccdad42",
       "publications": [
         "https://t.me/WEB3_AGGREGATOR/423151"
       ],
@@ -15237,7 +15209,7 @@
       "n_unknown_origin": 0
     },
     {
-      "event_id": "e38-aae72a40fa53caf6",
+      "event_id": "e36-aae72a40fa53caf6",
       "publications": [
         "https://t.me/WEB3_AGGREGATOR/423153"
       ],
@@ -15251,7 +15223,7 @@
       "n_unknown_origin": 0
     },
     {
-      "event_id": "e39-4d7ac3720cf84b0f",
+      "event_id": "e37-4d7ac3720cf84b0f",
       "publications": [
         "https://t.me/WEB3_AGGREGATOR/423153"
       ],
@@ -15265,7 +15237,7 @@
       "n_unknown_origin": 0
     },
     {
-      "event_id": "e40-419ffa3f9fce6606",
+      "event_id": "e38-419ffa3f9fce6606",
       "publications": [
         "https://t.me/WEB3_AGGREGATOR/423153"
       ],
@@ -15279,7 +15251,7 @@
       "n_unknown_origin": 0
     },
     {
-      "event_id": "e41-ed48c18aa3328218",
+      "event_id": "e39-ed48c18aa3328218",
       "publications": [
         "https://t.me/WEB3_AGGREGATOR/423161"
       ],
@@ -15293,7 +15265,7 @@
       "n_unknown_origin": 0
     },
     {
-      "event_id": "e42-c813add0d14f4b10",
+      "event_id": "e40-c813add0d14f4b10",
       "publications": [
         "https://t.me/whitelist1/7141",
         "https://t.me/WEB3_AGGREGATOR/423182",
@@ -15309,7 +15281,7 @@
       "n_unknown_origin": 0
     },
     {
-      "event_id": "e43-286906c4a81433de",
+      "event_id": "e41-286906c4a81433de",
       "publications": [
         "https://t.me/whitelist1/7141"
       ],
@@ -15323,7 +15295,7 @@
       "n_unknown_origin": 0
     },
     {
-      "event_id": "e44-87ae8cd422225c43",
+      "event_id": "e42-87ae8cd422225c43",
       "publications": [
         "https://t.me/WEB3_AGGREGATOR/423197"
       ],
@@ -15335,7 +15307,7 @@
       "n_unknown_origin": 0
     },
     {
-      "event_id": "e45-3990ecb6b139df7e",
+      "event_id": "e43-3990ecb6b139df7e",
       "publications": [
         "https://t.me/WEB3_AGGREGATOR/423197"
       ],
@@ -15347,7 +15319,7 @@
       "n_unknown_origin": 0
     },
     {
-      "event_id": "e46-c1676a8140da42ff",
+      "event_id": "e44-c1676a8140da42ff",
       "publications": [
         "https://t.me/WEB3_AGGREGATOR/423206"
       ],
@@ -15359,7 +15331,7 @@
       "n_unknown_origin": 0
     },
     {
-      "event_id": "e47-3c833e3982a20e38",
+      "event_id": "e45-3c833e3982a20e38",
       "publications": [
         "https://t.me/WEB3_AGGREGATOR/423206"
       ],
@@ -15371,7 +15343,7 @@
       "n_unknown_origin": 0
     },
     {
-      "event_id": "e48-71403fc329aa2e81",
+      "event_id": "e46-71403fc329aa2e81",
       "publications": [
         "https://t.me/whitelist1/7143"
       ],
@@ -15383,7 +15355,7 @@
       "n_unknown_origin": 1
     },
     {
-      "event_id": "e49-8908ac0e481a6ee3",
+      "event_id": "e47-8908ac0e481a6ee3",
       "publications": [
         "https://t.me/WEB3_AGGREGATOR/423219"
       ],
@@ -15395,7 +15367,7 @@
       "n_unknown_origin": 1
     },
     {
-      "event_id": "e50-8512d43c5e51018a",
+      "event_id": "e48-8512d43c5e51018a",
       "publications": [
         "https://t.me/WEB3_AGGREGATOR/423219"
       ],
@@ -15407,7 +15379,7 @@
       "n_unknown_origin": 1
     },
     {
-      "event_id": "e51-8f04af3be10dd5e7",
+      "event_id": "e49-8f04af3be10dd5e7",
       "publications": [
         "https://t.me/WEB3_AGGREGATOR/423227"
       ],
@@ -15419,7 +15391,7 @@
       "n_unknown_origin": 1
     },
     {
-      "event_id": "e52-ecd403b16bce7bc5",
+      "event_id": "e50-675b636d5e15e03c",
       "publications": [
         "https://t.me/WEB3_AGGREGATOR/423227"
       ],
@@ -15431,7 +15403,7 @@
       "n_unknown_origin": 1
     },
     {
-      "event_id": "e53-675b636d5e15e03c",
+      "event_id": "e51-9d3b16af13a3f5c8",
       "publications": [
         "https://t.me/WEB3_AGGREGATOR/423227"
       ],
@@ -15443,7 +15415,7 @@
       "n_unknown_origin": 1
     },
     {
-      "event_id": "e54-9d3b16af13a3f5c8",
+      "event_id": "e52-79fafd51b8992714",
       "publications": [
         "https://t.me/WEB3_AGGREGATOR/423227"
       ],
@@ -15455,19 +15427,7 @@
       "n_unknown_origin": 1
     },
     {
-      "event_id": "e55-79fafd51b8992714",
-      "publications": [
-        "https://t.me/WEB3_AGGREGATOR/423227"
-      ],
-      "n_publications": 1,
-      "n_channels": 1,
-      "n_known_authors": 0,
-      "found_origins": [],
-      "n_reprints": 0,
-      "n_unknown_origin": 1
-    },
-    {
-      "event_id": "e56-47c4ef28758dec5b",
+      "event_id": "e53-47c4ef28758dec5b",
       "publications": [
         "https://t.me/WEB3_AGGREGATOR/423244"
       ],
@@ -15479,7 +15439,7 @@
       "n_unknown_origin": 0
     },
     {
-      "event_id": "e57-0fea3d7cdaa532bf",
+      "event_id": "e54-0fea3d7cdaa532bf",
       "publications": [
         "https://t.me/WEB3_AGGREGATOR/423244"
       ],
@@ -15491,7 +15451,7 @@
       "n_unknown_origin": 0
     },
     {
-      "event_id": "e58-1b1b8d85d0809f34",
+      "event_id": "e55-1b1b8d85d0809f34",
       "publications": [
         "https://t.me/WEB3_AGGREGATOR/423249"
       ],
@@ -15503,7 +15463,7 @@
       "n_unknown_origin": 0
     },
     {
-      "event_id": "e59-d1cfe16486fc9379",
+      "event_id": "e56-d1cfe16486fc9379",
       "publications": [
         "https://t.me/WEB3_AGGREGATOR/423252"
       ],
@@ -15515,7 +15475,7 @@
       "n_unknown_origin": 0
     },
     {
-      "event_id": "e60-54d455f671306106",
+      "event_id": "e57-54d455f671306106",
       "publications": [
         "https://t.me/whitelist1/7153"
       ],
@@ -15529,7 +15489,7 @@
       "n_unknown_origin": 0
     },
     {
-      "event_id": "e61-65015e516e5828da",
+      "event_id": "e58-65015e516e5828da",
       "publications": [
         "https://t.me/whitelist1/7153"
       ],

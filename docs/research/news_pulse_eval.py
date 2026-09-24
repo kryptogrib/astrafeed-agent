@@ -293,9 +293,20 @@ def event_signature(event):
     return "|".join(str(event.get(k) or "") for k in ("actor", "action", "object", "headline"))
 
 
-def check_changes(pulse, posts, start, end, compare, metric, path):
-    """Every number of «Изменения» is recomputed: channels from the DB, event deltas as set
-    arithmetic over this run's events and the listed previous ones, topic comments from discussion."""
+def previous_run(run, runs):
+    """The run of the same topic over the window just before this one, if it was built."""
+    start, end = ts(run["window"]["start"]), ts(run["window"]["end"])
+    want = dict(start=(start - (end - start)).isoformat(), end=start.isoformat())
+    for other in runs:
+        if other is not run and other.get("topic") == run.get("topic") and "pulse" in other and same_window(other["window"], want):
+            return other
+    return None
+
+
+def check_changes(pulse, posts, start, end, compare, metric, path, previous=None, prev_metric=None):
+    """Every number of «Изменения» is recomputed. Channels come from the DB. What describes the
+    previous window (its events, its topic comments and the deltas against them) is checked
+    only against a run built for that window; without one it stays unverified, not pass."""
     changes = pulse.get("changes")
     if not changes:
         metric.missing.append(dict(run=path, reason="Нет changes в pulse.json"))
@@ -308,15 +319,28 @@ def check_changes(pulse, posts, start, end, compare, metric, path):
     compare("changes.source_coverage.removed_channels", coverage.get("removed_channels"), sorted(prev_ch - cur_ch))
     compare("changes.source_coverage.current_channels", coverage.get("current_channels"), len(cur_ch))
     compare("changes.source_coverage.previous_channels", coverage.get("previous_channels"), len(prev_ch))
-    cur_ev = {event_signature(e) for e in pulse.get("events") or []}
-    prev_ev = set(changes.get("previous_events") or [])
-    compare("changes.events_appeared", changes.get("events_appeared"), sorted(cur_ev - prev_ev))
-    compare("changes.events_gone", changes.get("events_gone"), sorted(prev_ev - cur_ev))
     topic_rows = sum(1 for row in pulse.get("discussion") or [] if row.get("url"))
     compare("changes.topic_comments", changes.get("topic_comments"), topic_rows)
+    if prev_metric is None:
+        return
+    if previous is None:
+        prev_metric.missing.append(dict(run=path, reason=f"Нет прогона за предыдущее окно [{previous_start.isoformat()}, {start.isoformat()})"))
+        return
+    prev_pulse = previous["pulse"]
+
+    def compare_prev(key, actual, expected):
+        prev_metric.add(actual == expected, run=path, path=key, actual=actual, expected=expected, links=[previous["path"]])
+
+    cur_ev = {event_signature(e) for e in pulse.get("events") or []}
+    prev_ev = {event_signature(e) for e in prev_pulse.get("events") or []}
+    compare_prev("changes.previous_events", changes.get("previous_events"), sorted(prev_ev))
+    compare_prev("changes.events_appeared", changes.get("events_appeared"), sorted(cur_ev - prev_ev))
+    compare_prev("changes.events_gone", changes.get("events_gone"), sorted(prev_ev - cur_ev))
+    prev_rows = sum(1 for row in prev_pulse.get("discussion") or [] if row.get("url"))
+    compare_prev("changes.previous_topic_comments", changes.get("previous_topic_comments"), prev_rows)
 
 
-def check_aggregates(run, posts, comments, metric):
+def check_aggregates(run, posts, comments, metric, previous=None, prev_metric=None):
     start, end = ts(run["window"]["start"]), ts(run["window"]["end"])
     dbposts = {p["link"]: p for p in posts}
     window_posts = [p for p in posts if start <= ts(p["published_at"]) < end]
@@ -334,7 +358,7 @@ def check_aggregates(run, posts, comments, metric):
     coverage = pulse.get("coverage", {})
     for key, expected in (("publications", len(window_posts)), ("channels", len({p["source_id"] for p in window_posts})), ("comments", len(window_comments))):
         compare("coverage." + key, coverage.get(key), expected)
-    check_changes(pulse, posts, start, end, compare, metric, run["path"])
+    check_changes(pulse, posts, start, end, compare, metric, run["path"], previous, prev_metric)
     if decisions is None:
         metric.missing.append(dict(run=run["path"], reason="Без decisions нельзя пересчитать отбор и группы"))
         return
@@ -377,10 +401,10 @@ def check_grounding(runs, db_path, grounding, fabrications):
     import sys
 
     sys.path.insert(0, str(Path(__file__).resolve().parent))
-    from news_pulse_ground import check_run, load_texts
+    from news_pulse_ground import check_run, load_parents, load_texts
 
     try:
-        texts = load_texts(Path(db_path))
+        texts, parents = load_texts(Path(db_path)), load_parents(Path(db_path))
     except sqlite3.OperationalError as exc:
         grounding.missing.append(f"В БД нет текстов для проверки: {exc}")
         fabrications.missing.append(f"В БД нет текстов для проверки: {exc}")
@@ -390,7 +414,7 @@ def check_grounding(runs, db_path, grounding, fabrications):
         if not (folder / "pulse.json").exists() or not (folder / "brief.md").exists():
             grounding.missing.append(f"Нет pulse.json/brief.md: {folder}")
             continue
-        report = check_run(folder, texts)
+        report = check_run(folder, texts, parents)
         for claim in report["failures"]:
             grounding.add(False, run=str(folder), kind=claim["kind"], where=claim["where"], text=claim["text"][:200])
             fabrications.add(claim["numbers_from_source"], run=str(folder), where=claim["where"], text=claim["text"][:200])
@@ -415,6 +439,7 @@ def evaluate(sample_dir, runs_dir, db_path):
         "future_leakage": Metric("Записи и ссылки вне окна", 0, zero=True, note="Числитель — нарушения; знаменатель — проверенные вхождения времени/ссылок. Включает время < start; явная предыстория отдельно."),
         "boundary": Metric("Граничные пробы [start,end)", 1),
         "numeric_aggregates": Metric("Правильность числовых агрегатов", 1),
+        "previous_window": Metric("«Изменения» относительно предыдущего окна", 1, note="События и комментарии предыдущего окна и разницы с ним сверяются с прогоном, построенным за это окно; без такого прогона — unverified."),
         "brief_grounding": Metric("Подтверждённость фактов брифа", .95, note="news_pulse_ground.py: brief.md = рендер pulse.json; цитаты, заголовки, реплики и основания дословно есть в источнике БД; счётчики пересчитываются по участникам."),
         "fabrications": Metric("Выдуманные цены, даты, авторство, официальное подтверждение", 0, zero=True, note="Число в утверждении брифа, которого нет в связанном источнике. Бриф извлекающий: авторство и подтверждение не генерируются."),
         **{k: Metric(title, note="Информативно, без порога; segments — точное совпадение множества классов поста, без оценки границ.") for k, title in (("segments", "Согласие сегментных классов"), ("origin", "Согласие происхождения"), ("source_role", "Согласие роли источника"))},
@@ -424,7 +449,7 @@ def evaluate(sample_dir, runs_dir, db_path):
     history = []
     for run in runs:
         check_temporal(run, posts + comments, metrics["future_leakage"], history)
-        check_aggregates(run, posts, comments, metrics["numeric_aggregates"])
+        check_aggregates(run, posts, comments, metrics["numeric_aggregates"], previous_run(run, runs), metrics["previous_window"])
     check_grounding(runs, db_path, metrics["brief_grounding"], metrics["fabrications"])
     for key in ("future_leakage", "numeric_aggregates"):
         metrics[key].missing.extend(missing)

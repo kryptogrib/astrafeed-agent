@@ -7000,6 +7000,15 @@
     "calls": 0,
     "cache_hits": 193,
     "spent_usd": 0.0,
-    "errors": []
+    "errors": [
+      "cache_miss:news-pulse-judge/v2:ec3b6d3a05d2ce4e",
+      "cache_miss:news-pulse-judge/v2:82c69c0d4235787c",
+      "cache_miss:news-pulse-judge/v2:a82bd2c2078723e7",
+      "cache_miss:news-pulse-judge/v2:8f3d321e97e2458e",
+      "cache_miss:news-pulse-judge/v2:6d9ff7180a3e8596",
+      "cache_miss:news-pulse-judge/v2:d8f86298f6b39311",
+      "cache_miss:news-pulse-judge/v2:97b9742b06138c92",
+      "cache_miss:news-pulse-judge/v2:1922e4543462704e"
+    ]
   }
 }

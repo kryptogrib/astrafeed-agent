@@ -360,7 +360,7 @@
         }
       ],
       "event_ids": [
-        "e12-4ccd67da7ccced2e"
+        "e3-e183a9539dc7838b"
       ],
       "origin": "own",
       "source_role": "author",
@@ -404,7 +404,7 @@
         "e9-88ea007f27d183a2",
         "e10-301f9b1929d31676",
         "e11-27797c93814b6ecc",
-        "e13-3b0186787cefa063"
+        "e12-3b0186787cefa063"
       ],
       "origin": "own",
       "source_role": "author",
@@ -433,7 +433,7 @@
         }
       ],
       "event_ids": [
-        "e12-4ccd67da7ccced2e"
+        "e3-e183a9539dc7838b"
       ],
       "origin": "own",
       "source_role": "author",
@@ -456,7 +456,7 @@
         }
       ],
       "event_ids": [
-        "e14-8d5566ec05b28c6c"
+        "e13-8d5566ec05b28c6c"
       ],
       "origin": "own",
       "source_role": "author",
@@ -506,7 +506,7 @@
         }
       ],
       "event_ids": [
-        "e12-4ccd67da7ccced2e"
+        "e14-8059fb6dbdd8f9e3"
       ],
       "origin": "own",
       "source_role": "author",
@@ -6431,13 +6431,17 @@
       "event_id": "e3-e183a9539dc7838b",
       "publications": [
         "https://t.me/WEB3_AGGREGATOR/422853",
+        "https://t.me/WEB3_AGGREGATOR/422875",
+        "https://t.me/WEB3_AGGREGATOR/422890",
         "https://t.me/Slavik_investor_updates/6918"
       ],
-      "n_publications": 2,
+      "n_publications": 4,
       "n_channels": 2,
       "n_known_authors": 0,
       "found_origins": [
-        "https://t.me/WEB3_AGGREGATOR/422853"
+        "https://t.me/WEB3_AGGREGATOR/422853",
+        "https://t.me/WEB3_AGGREGATOR/422875",
+        "https://t.me/WEB3_AGGREGATOR/422890"
       ],
       "n_reprints": 1,
       "n_unknown_origin": 0
@@ -6562,25 +6566,7 @@
       "n_unknown_origin": 0
     },
     {
-      "event_id": "e12-4ccd67da7ccced2e",
-      "publications": [
-        "https://t.me/WEB3_AGGREGATOR/422875",
-        "https://t.me/WEB3_AGGREGATOR/422890",
-        "https://t.me/WEB3_AGGREGATOR/422903"
-      ],
-      "n_publications": 3,
-      "n_channels": 1,
-      "n_known_authors": 0,
-      "found_origins": [
-        "https://t.me/WEB3_AGGREGATOR/422875",
-        "https://t.me/WEB3_AGGREGATOR/422890",
-        "https://t.me/WEB3_AGGREGATOR/422903"
-      ],
-      "n_reprints": 0,
-      "n_unknown_origin": 0
-    },
-    {
-      "event_id": "e13-3b0186787cefa063",
+      "event_id": "e12-3b0186787cefa063",
       "publications": [
         "https://t.me/WEB3_AGGREGATOR/422881"
       ],
@@ -6594,7 +6580,7 @@
       "n_unknown_origin": 0
     },
     {
-      "event_id": "e14-8d5566ec05b28c6c",
+      "event_id": "e13-8d5566ec05b28c6c",
       "publications": [
         "https://t.me/WEB3_AGGREGATOR/422895"
       ],
@@ -6603,6 +6589,20 @@
       "n_known_authors": 0,
       "found_origins": [
         "https://t.me/WEB3_AGGREGATOR/422895"
+      ],
+      "n_reprints": 0,
+      "n_unknown_origin": 0
+    },
+    {
+      "event_id": "e14-8059fb6dbdd8f9e3",
+      "publications": [
+        "https://t.me/WEB3_AGGREGATOR/422903"
+      ],
+      "n_publications": 1,
+      "n_channels": 1,
+      "n_known_authors": 0,
+      "found_origins": [
+        "https://t.me/WEB3_AGGREGATOR/422903"
       ],
       "n_reprints": 0,
       "n_unknown_origin": 0

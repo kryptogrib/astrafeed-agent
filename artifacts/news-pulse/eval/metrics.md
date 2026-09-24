@@ -14,13 +14,14 @@ MD5 БД до/после: `8618099125a806df376354286ccd982e` / `8618099125a806df
 | Точность отбора новостей | 28 | 33 | 0.95 | fail |
 | Полнота отбора новостей | 28 | 31 | 0.9 | pass |
 | Ошибочное объединение отрицательных пар | 1 | 10 | = 0 ошибок | fail |
-| Полнота объединения положительных пар | 5 | 10 | 0.9 | fail |
+| Полнота объединения положительных пар | 4 | 10 | 0.9 | fail |
 | Правильность заявленных связей комментарий → событие | 0 | 4 | 0.9 | fail |
-| Записи и ссылки вне окна | 0 | 71903 | = 0 ошибок | unverified |
+| Записи и ссылки вне окна | 0 | 71904 | = 0 ошибок | unverified |
 | Граничные пробы [start,end) | 58 | 58 | 1 | pass |
-| Правильность числовых агрегатов | 25153 | 25153 | 1 | pass |
-| Подтверждённость фактов брифа | 17949 | 17949 | 0.95 | pass |
-| Выдуманные цены, даты, авторство, официальное подтверждение | 0 | 17949 | = 0 ошибок | pass |
+| Правильность числовых агрегатов | 25188 | 25188 | 1 | pass |
+| «Изменения» относительно предыдущего окна | 0 | 0 | 1 | unverified |
+| Подтверждённость фактов брифа | 17959 | 17959 | 0.95 | pass |
+| Выдуманные цены, даты, авторство, официальное подтверждение | 0 | 17959 | = 0 ошибок | pass |
 | Согласие сегментных классов | 9 | 43 | нет | unverified |
 | Согласие происхождения | 17 | 43 | нет | unverified |
 | Согласие роли источника | 26 | 43 | нет | unverified |
@@ -74,6 +75,7 @@ MD5 БД до/после: `8618099125a806df376354286ccd982e` / `8618099125a806df
 - Ошибка: {"pair": "pair-04", "topic": "zec", "links": ["https://t.me/marketfeed/1041046", "https://t.me/markettwits/385538"], "common_event_ids": []}
 - Ошибка: {"pair": "pair-08", "topic": "eth", "links": ["https://t.me/markettwits/384699", "https://t.me/WEB3_AGGREGATOR/422950"], "common_event_ids": []}
 - Ошибка: {"pair": "pair-09", "topic": "eth", "links": ["https://t.me/markettwits/384699", "https://t.me/rawa_imagination/21078"], "common_event_ids": []}
+- Ошибка: {"pair": "pair-10", "topic": "eth", "links": ["https://t.me/WEB3_AGGREGATOR/422950", "https://t.me/rawa_imagination/21078"], "common_event_ids": []}
 
 ## Правильность заявленных связей комментарий → событие
 
@@ -82,7 +84,7 @@ MD5 БД до/после: `8618099125a806df376354286ccd982e` / `8618099125a806df
 - Ошибка: {"topic": "zec", "links": ["https://t.me/icodrops_sergey/2426?comment=150547"], "expected": "author_thesis", "actual": "event:e37-9e94ec9cc7c059c8", "mapped_events": ["zec-rank9-0917"]}
 - Ошибка: {"topic": "zec", "links": ["https://t.me/icodrops_sergey/2426?comment=150550"], "expected": "author_thesis", "actual": "event:e37-9e94ec9cc7c059c8", "mapped_events": ["zec-rank9-0917"]}
 - Ошибка: {"topic": "zec", "links": ["https://t.me/icodrops_sergey/2426?comment=150552"], "expected": "project", "actual": "event:e37-9e94ec9cc7c059c8", "mapped_events": ["zec-rank9-0917"]}
-- Ошибка: {"topic": "eth", "links": ["https://t.me/rawa_imagination/21078?comment=342794"], "expected": "author_thesis", "actual": "event:e43-e81e760cff5cd185", "mapped_events": ["bitmine-buy-27180-0914"]}
+- Ошибка: {"topic": "eth", "links": ["https://t.me/rawa_imagination/21078?comment=342794"], "expected": "author_thesis", "actual": "event:e44-fce1985e6d4db8f9", "mapped_events": ["bitmine-buy-27180-0914"]}
 
 ## Записи и ссылки вне окна
 
@@ -124,6 +126,36 @@ MD5 БД до/после: `8618099125a806df376354286ccd982e` / `8618099125a806df
 Ошибки и непроверенные случаи:
 
 Ошибок не обнаружено.
+
+## «Изменения» относительно предыдущего окна
+
+События и комментарии предыдущего окна и разницы с ним сверяются с прогоном, построенным за это окно; без такого прогона — unverified.
+
+- Не проверено: {"run": "/Users/chelovek/orca/workspaces/AstraFeed-TokenBrief/hakaton/artifacts/news-pulse/aave/2026-09-09..2026-09-23", "reason": "Нет прогона за предыдущее окно [2026-08-25T00:00:00+00:00, 2026-09-09T00:00:00+00:00)"}
+- Не проверено: {"run": "/Users/chelovek/orca/workspaces/AstraFeed-TokenBrief/hakaton/artifacts/news-pulse/aave/2026-09-22..2026-09-23", "reason": "Нет прогона за предыдущее окно [2026-09-20T00:00:00+00:00, 2026-09-22T00:00:00+00:00)"}
+- Не проверено: {"run": "/Users/chelovek/orca/workspaces/AstraFeed-TokenBrief/hakaton/artifacts/news-pulse/arc/2026-09-09..2026-09-23", "reason": "Нет прогона за предыдущее окно [2026-08-25T00:00:00+00:00, 2026-09-09T00:00:00+00:00)"}
+- Не проверено: {"run": "/Users/chelovek/orca/workspaces/AstraFeed-TokenBrief/hakaton/artifacts/news-pulse/arc/2026-09-09T00-00-00-00-00..2026-09-16T11-01-00-00-00", "reason": "Нет прогона за предыдущее окно [2026-09-01T12:59:00+00:00, 2026-09-09T00:00:00+00:00)"}
+- Не проверено: {"run": "/Users/chelovek/orca/workspaces/AstraFeed-TokenBrief/hakaton/artifacts/news-pulse/arc/2026-09-09T00-00-00-00-00..2026-09-16T11-01-01-00-00", "reason": "Нет прогона за предыдущее окно [2026-09-01T12:58:59+00:00, 2026-09-09T00:00:00+00:00)"}
+- Не проверено: {"run": "/Users/chelovek/orca/workspaces/AstraFeed-TokenBrief/hakaton/artifacts/news-pulse/arc/2026-09-09T00-00-00-00-00..2026-09-16T11-01-02-00-00", "reason": "Нет прогона за предыдущее окно [2026-09-01T12:58:58+00:00, 2026-09-09T00:00:00+00:00)"}
+- Не проверено: {"run": "/Users/chelovek/orca/workspaces/AstraFeed-TokenBrief/hakaton/artifacts/news-pulse/arc/2026-09-16T11-01-01-00-00..2026-09-17T11-01-01-00-00", "reason": "Нет прогона за предыдущее окно [2026-09-15T11:01:01+00:00, 2026-09-16T11:01:01+00:00)"}
+- Не проверено: {"run": "/Users/chelovek/orca/workspaces/AstraFeed-TokenBrief/hakaton/artifacts/news-pulse/eth/2026-09-09..2026-09-23", "reason": "Нет прогона за предыдущее окно [2026-08-25T00:00:00+00:00, 2026-09-09T00:00:00+00:00)"}
+- Не проверено: {"run": "/Users/chelovek/orca/workspaces/AstraFeed-TokenBrief/hakaton/artifacts/news-pulse/eth/2026-09-09T00-00-00-00-00..2026-09-14T12-33-45-00-00", "reason": "Нет прогона за предыдущее окно [2026-09-03T11:26:15+00:00, 2026-09-09T00:00:00+00:00)"}
+- Не проверено: {"run": "/Users/chelovek/orca/workspaces/AstraFeed-TokenBrief/hakaton/artifacts/news-pulse/eth/2026-09-09T00-00-00-00-00..2026-09-14T12-33-46-00-00", "reason": "Нет прогона за предыдущее окно [2026-09-03T11:26:14+00:00, 2026-09-09T00:00:00+00:00)"}
+- Не проверено: {"run": "/Users/chelovek/orca/workspaces/AstraFeed-TokenBrief/hakaton/artifacts/news-pulse/eth/2026-09-09T00-00-00-00-00..2026-09-14T12-33-47-00-00", "reason": "Нет прогона за предыдущее окно [2026-09-03T11:26:13+00:00, 2026-09-09T00:00:00+00:00)"}
+- Не проверено: {"run": "/Users/chelovek/orca/workspaces/AstraFeed-TokenBrief/hakaton/artifacts/news-pulse/eth/2026-09-09T00-00-00-00-00..2026-09-21T12-44-53-00-00", "reason": "Нет прогона за предыдущее окно [2026-08-27T11:15:07+00:00, 2026-09-09T00:00:00+00:00)"}
+- Не проверено: {"run": "/Users/chelovek/orca/workspaces/AstraFeed-TokenBrief/hakaton/artifacts/news-pulse/eth/2026-09-09T00-00-00-00-00..2026-09-21T12-44-54-00-00", "reason": "Нет прогона за предыдущее окно [2026-08-27T11:15:06+00:00, 2026-09-09T00:00:00+00:00)"}
+- Не проверено: {"run": "/Users/chelovek/orca/workspaces/AstraFeed-TokenBrief/hakaton/artifacts/news-pulse/eth/2026-09-09T00-00-00-00-00..2026-09-21T12-44-55-00-00", "reason": "Нет прогона за предыдущее окно [2026-08-27T11:15:05+00:00, 2026-09-09T00:00:00+00:00)"}
+- Не проверено: {"run": "/Users/chelovek/orca/workspaces/AstraFeed-TokenBrief/hakaton/artifacts/news-pulse/eth/2026-09-14T12-33-46-00-00..2026-09-21T12-44-54-00-00", "reason": "Нет прогона за предыдущее окно [2026-09-07T12:22:38+00:00, 2026-09-14T12:33:46+00:00)"}
+- Не проверено: {"run": "/Users/chelovek/orca/workspaces/AstraFeed-TokenBrief/hakaton/artifacts/news-pulse/eth/2026-09-17..2026-09-19", "reason": "Нет прогона за предыдущее окно [2026-09-14T00:00:00+00:00, 2026-09-17T00:00:00+00:00)"}
+- Не проверено: {"run": "/Users/chelovek/orca/workspaces/AstraFeed-TokenBrief/hakaton/artifacts/news-pulse/zec/2026-09-09..2026-09-23", "reason": "Нет прогона за предыдущее окно [2026-08-25T00:00:00+00:00, 2026-09-09T00:00:00+00:00)"}
+- Не проверено: {"run": "/Users/chelovek/orca/workspaces/AstraFeed-TokenBrief/hakaton/artifacts/news-pulse/zec/2026-09-09T00-00-00-00-00..2026-09-16T06-10-18-00-00", "reason": "Нет прогона за предыдущее окно [2026-09-01T17:49:42+00:00, 2026-09-09T00:00:00+00:00)"}
+- Не проверено: {"run": "/Users/chelovek/orca/workspaces/AstraFeed-TokenBrief/hakaton/artifacts/news-pulse/zec/2026-09-09T00-00-00-00-00..2026-09-16T06-10-19-00-00", "reason": "Нет прогона за предыдущее окно [2026-09-01T17:49:41+00:00, 2026-09-09T00:00:00+00:00)"}
+- Не проверено: {"run": "/Users/chelovek/orca/workspaces/AstraFeed-TokenBrief/hakaton/artifacts/news-pulse/zec/2026-09-09T00-00-00-00-00..2026-09-16T06-10-20-00-00", "reason": "Нет прогона за предыдущее окно [2026-09-01T17:49:40+00:00, 2026-09-09T00:00:00+00:00)"}
+- Не проверено: {"run": "/Users/chelovek/orca/workspaces/AstraFeed-TokenBrief/hakaton/artifacts/news-pulse/zec/2026-09-09T00-00-00-00-00..2026-09-21T06-04-31-00-00", "reason": "Нет прогона за предыдущее окно [2026-08-27T17:55:29+00:00, 2026-09-09T00:00:00+00:00)"}
+- Не проверено: {"run": "/Users/chelovek/orca/workspaces/AstraFeed-TokenBrief/hakaton/artifacts/news-pulse/zec/2026-09-09T00-00-00-00-00..2026-09-21T06-04-32-00-00", "reason": "Нет прогона за предыдущее окно [2026-08-27T17:55:28+00:00, 2026-09-09T00:00:00+00:00)"}
+- Не проверено: {"run": "/Users/chelovek/orca/workspaces/AstraFeed-TokenBrief/hakaton/artifacts/news-pulse/zec/2026-09-09T00-00-00-00-00..2026-09-21T06-04-33-00-00", "reason": "Нет прогона за предыдущее окно [2026-08-27T17:55:27+00:00, 2026-09-09T00:00:00+00:00)"}
+- Не проверено: {"run": "/Users/chelovek/orca/workspaces/AstraFeed-TokenBrief/hakaton/artifacts/news-pulse/zec/2026-09-16T06-10-19-00-00..2026-09-21T06-04-32-00-00", "reason": "Нет прогона за предыдущее окно [2026-09-11T06:16:06+00:00, 2026-09-16T06:10:19+00:00)"}
+- Не проверено: {"run": "/Users/chelovek/orca/workspaces/AstraFeed-TokenBrief/hakaton/artifacts/news-pulse/zec/2026-09-17..2026-09-19", "reason": "Нет прогона за предыдущее окно [2026-09-14T00:00:00+00:00, 2026-09-17T00:00:00+00:00)"}
 
 ## Подтверждённость фактов брифа
 

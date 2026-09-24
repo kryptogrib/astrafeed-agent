@@ -112,7 +112,7 @@
         }
       ],
       "event_ids": [
-        "e5-e81e760cff5cd185"
+        "e6-fce1985e6d4db8f9"
       ],
       "origin": "own",
       "source_role": "author",
@@ -307,8 +307,8 @@
       ],
       "event_ids": [
         "e5-e81e760cff5cd185",
-        "e6-7178cba23a532b88",
-        "e7-42da26304b58b6a3"
+        "e7-7178cba23a532b88",
+        "e8-42da26304b58b6a3"
       ],
       "origin": "own",
       "source_role": "author",
@@ -338,7 +338,7 @@
       ],
       "event_ids": [
         "e5-e81e760cff5cd185",
-        "e8-52545d7b42da833f"
+        "e9-52545d7b42da833f"
       ],
       "origin": "own",
       "source_role": "author",
@@ -373,7 +373,7 @@
         }
       ],
       "event_ids": [
-        "e9-66c13803e6f5dcc6"
+        "e10-66c13803e6f5dcc6"
       ],
       "origin": "own",
       "source_role": "editorial",
@@ -396,7 +396,7 @@
         }
       ],
       "event_ids": [
-        "e10-24dde5ae7f9aa12d"
+        "e11-24dde5ae7f9aa12d"
       ],
       "origin": "retelling",
       "source_role": "author",
@@ -425,7 +425,7 @@
         }
       ],
       "event_ids": [
-        "e11-90969ddc8c457c04"
+        "e12-90969ddc8c457c04"
       ],
       "origin": "own",
       "source_role": "editorial",
@@ -546,7 +546,7 @@
         }
       ],
       "event_ids": [
-        "e12-3aa8a040db821cdc"
+        "e13-3aa8a040db821cdc"
       ],
       "origin": "retelling",
       "source_role": "editorial",
@@ -575,7 +575,7 @@
         }
       ],
       "event_ids": [
-        "e13-61fbafc9162ef06b"
+        "e14-61fbafc9162ef06b"
       ],
       "origin": "retelling",
       "source_role": "editorial",
@@ -625,8 +625,8 @@
         }
       ],
       "event_ids": [
-        "e14-53c812095b45cd17",
-        "e15-a9d6c371dcf01bf1"
+        "e15-53c812095b45cd17",
+        "e16-a9d6c371dcf01bf1"
       ],
       "origin": "retelling",
       "source_role": "editorial",
@@ -670,7 +670,7 @@
         }
       ],
       "event_ids": [
-        "e16-e39c73503bb601ea"
+        "e17-e39c73503bb601ea"
       ],
       "origin": "own",
       "source_role": "editorial",
@@ -768,7 +768,7 @@
         }
       ],
       "event_ids": [
-        "e17-24b88176c27be6ea"
+        "e18-24b88176c27be6ea"
       ],
       "origin": "own",
       "source_role": "editorial",
@@ -812,7 +812,7 @@
         }
       ],
       "event_ids": [
-        "e18-40b93cfd61d87abb"
+        "e19-40b93cfd61d87abb"
       ],
       "origin": "retelling",
       "source_role": "editorial",
@@ -889,8 +889,8 @@
         }
       ],
       "event_ids": [
-        "e13-61fbafc9162ef06b",
-        "e19-c802988a61f6019c"
+        "e14-61fbafc9162ef06b",
+        "e20-c802988a61f6019c"
       ],
       "origin": "own",
       "source_role": "editorial",
@@ -976,7 +976,7 @@
         }
       ],
       "event_ids": [
-        "e20-0f697b2de714f96b"
+        "e21-0f697b2de714f96b"
       ],
       "origin": "retelling",
       "source_role": "editorial",
@@ -1017,8 +1017,8 @@
         }
       ],
       "event_ids": [
-        "e21-774e20d7b28da2e4",
-        "e22-2207df8095f5a002"
+        "e22-774e20d7b28da2e4",
+        "e23-2207df8095f5a002"
       ],
       "origin": "retelling",
       "source_role": "editorial",
@@ -1200,7 +1200,7 @@
         }
       ],
       "event_ids": [
-        "e23-e71100bdb9703248"
+        "e24-e71100bdb9703248"
       ],
       "origin": "unknown",
       "source_role": "unknown",
@@ -1229,7 +1229,7 @@
         }
       ],
       "event_ids": [
-        "e24-3e03abb6d09dda13"
+        "e25-3e03abb6d09dda13"
       ],
       "origin": "unknown",
       "source_role": "unknown",
@@ -1252,7 +1252,7 @@
         }
       ],
       "event_ids": [
-        "e25-50e3765cff53dd49"
+        "e26-50e3765cff53dd49"
       ],
       "origin": "unknown",
       "source_role": "unknown",
@@ -1296,7 +1296,7 @@
         }
       ],
       "event_ids": [
-        "e26-83abb839a9692b5b"
+        "e27-83abb839a9692b5b"
       ],
       "origin": "own",
       "source_role": "editorial",
@@ -1319,7 +1319,7 @@
         }
       ],
       "event_ids": [
-        "e26-83abb839a9692b5b"
+        "e27-83abb839a9692b5b"
       ],
       "origin": "own",
       "source_role": "editorial",
@@ -1354,7 +1354,7 @@
         }
       ],
       "event_ids": [
-        "e27-447842c39e019d7f"
+        "e28-447842c39e019d7f"
       ],
       "origin": "own",
       "source_role": "editorial",
@@ -1377,7 +1377,7 @@
         }
       ],
       "event_ids": [
-        "e25-50e3765cff53dd49"
+        "e26-50e3765cff53dd49"
       ],
       "origin": "own",
       "source_role": "editorial",
@@ -1400,7 +1400,7 @@
         }
       ],
       "event_ids": [
-        "e28-214be4547341d5e8"
+        "e29-214be4547341d5e8"
       ],
       "origin": "own",
       "source_role": "editorial",
@@ -1423,7 +1423,7 @@
         }
       ],
       "event_ids": [
-        "e29-3cf823f4cf6a654e"
+        "e30-3cf823f4cf6a654e"
       ],
       "origin": "own",
       "source_role": "editorial",
@@ -1458,7 +1458,7 @@
         }
       ],
       "event_ids": [
-        "e24-3e03abb6d09dda13"
+        "e25-3e03abb6d09dda13"
       ],
       "origin": "unknown",
       "source_role": "unknown",
@@ -1523,7 +1523,7 @@
         }
       ],
       "event_ids": [
-        "e30-83ffb217d471760e"
+        "e31-83ffb217d471760e"
       ],
       "origin": "own",
       "source_role": "editorial",
@@ -1579,7 +1579,8 @@
         }
       ],
       "event_ids": [
-        "e31-082c10a3e41004ce"
+        "e32-082c10a3e41004ce",
+        "e33-adbc88cbc9d080ab"
       ],
       "origin": "retelling",
       "source_role": "author",
@@ -1644,7 +1645,7 @@
         }
       ],
       "event_ids": [
-        "e32-a4fe77a9c093b106"
+        "e34-a4fe77a9c093b106"
       ],
       "origin": "own",
       "source_role": "author",
@@ -1709,7 +1710,7 @@
         }
       ],
       "event_ids": [
-        "e33-2065cb84a9000001"
+        "e35-2065cb84a9000001"
       ],
       "origin": "retelling",
       "source_role": "author",
@@ -1753,7 +1754,7 @@
         }
       ],
       "event_ids": [
-        "e34-376101725588103a"
+        "e36-376101725588103a"
       ],
       "origin": "own",
       "source_role": "editorial",
@@ -1782,7 +1783,7 @@
         }
       ],
       "event_ids": [
-        "e35-1b98e70b7e1ada6b"
+        "e37-1b98e70b7e1ada6b"
       ],
       "origin": "retelling",
       "source_role": "author",
@@ -1844,8 +1845,8 @@
         }
       ],
       "event_ids": [
-        "e36-ec98efd39500ce4c",
-        "e37-fbc8cedab2aaaef9"
+        "e38-ec98efd39500ce4c",
+        "e39-fbc8cedab2aaaef9"
       ],
       "origin": "own",
       "source_role": "participant",
@@ -1874,8 +1875,8 @@
         }
       ],
       "event_ids": [
-        "e36-ec98efd39500ce4c",
-        "e38-73a28409f802189b"
+        "e38-ec98efd39500ce4c",
+        "e40-73a28409f802189b"
       ],
       "origin": "retelling",
       "source_role": "editorial",
@@ -1946,7 +1947,7 @@
         }
       ],
       "event_ids": [
-        "e35-1b98e70b7e1ada6b"
+        "e37-1b98e70b7e1ada6b"
       ],
       "origin": "own",
       "source_role": "editorial",
@@ -1983,7 +1984,7 @@
         }
       ],
       "event_ids": [
-        "e39-6a10d8c975578af1"
+        "e41-6a10d8c975578af1"
       ],
       "origin": "own",
       "source_role": "editorial",
@@ -2108,7 +2109,7 @@
         }
       ],
       "event_ids": [
-        "e40-0cbce6a16038085b"
+        "e42-0cbce6a16038085b"
       ],
       "origin": "retelling",
       "source_role": "editorial",
@@ -2131,7 +2132,7 @@
         }
       ],
       "event_ids": [
-        "e41-79ddbc00ba386cd5"
+        "e43-79ddbc00ba386cd5"
       ],
       "origin": "own",
       "source_role": "editorial",
@@ -2181,7 +2182,7 @@
         }
       ],
       "event_ids": [
-        "e42-25495bb8ed6c21b0"
+        "e44-25495bb8ed6c21b0"
       ],
       "origin": "retelling",
       "source_role": "editorial",
@@ -2210,7 +2211,7 @@
         }
       ],
       "event_ids": [
-        "e43-d57ff52e9ff96871"
+        "e45-d57ff52e9ff96871"
       ],
       "origin": "own",
       "source_role": "editorial",
@@ -2245,7 +2246,7 @@
         }
       ],
       "event_ids": [
-        "e44-5c0c02b4a45b50e5"
+        "e46-5c0c02b4a45b50e5"
       ],
       "origin": "own",
       "source_role": "editorial",
@@ -2289,7 +2290,7 @@
         }
       ],
       "event_ids": [
-        "e45-d94d5187156da12d"
+        "e47-d94d5187156da12d"
       ],
       "origin": "retelling",
       "source_role": "author",
@@ -2351,8 +2352,8 @@
         }
       ],
       "event_ids": [
-        "e43-d57ff52e9ff96871",
-        "e46-6f00f19e65b20c33"
+        "e45-d57ff52e9ff96871",
+        "e48-6f00f19e65b20c33"
       ],
       "origin": "unknown",
       "source_role": "unknown",
@@ -2393,10 +2394,10 @@
         }
       ],
       "event_ids": [
-        "e47-72ba3c573f7b8cd0",
-        "e48-21869d99515ccb24",
-        "e49-e7b0e741d1a92de8",
-        "e50-00c57e20e0576712"
+        "e49-72ba3c573f7b8cd0",
+        "e50-21869d99515ccb24",
+        "e51-e7b0e741d1a92de8",
+        "e52-00c57e20e0576712"
       ],
       "origin": "retelling",
       "source_role": "author",
@@ -2425,7 +2426,7 @@
         }
       ],
       "event_ids": [
-        "e51-c97d0c8cb7e8c107"
+        "e53-c97d0c8cb7e8c107"
       ],
       "origin": "retelling",
       "source_role": "author",
@@ -2469,7 +2470,7 @@
         }
       ],
       "event_ids": [
-        "e52-e5b6ccff9b088623"
+        "e54-e5b6ccff9b088623"
       ],
       "origin": "unknown",
       "source_role": "unknown",
@@ -2519,8 +2520,8 @@
         }
       ],
       "event_ids": [
-        "e53-a4f2adbf4b9d2794",
-        "e54-d5a5326d209f61fa"
+        "e55-a4f2adbf4b9d2794",
+        "e56-d5a5326d209f61fa"
       ],
       "origin": "own",
       "source_role": "editorial",
@@ -2570,7 +2571,7 @@
         }
       ],
       "event_ids": [
-        "e55-0485a411367d9252"
+        "e57-0485a411367d9252"
       ],
       "origin": "own",
       "source_role": "editorial",
@@ -2593,7 +2594,7 @@
         }
       ],
       "event_ids": [
-        "e56-94522467a1ad084d"
+        "e58-94522467a1ad084d"
       ],
       "origin": "own",
       "source_role": "editorial",
@@ -2616,7 +2617,7 @@
         }
       ],
       "event_ids": [
-        "e57-28d1b3f1a9ad545d"
+        "e59-28d1b3f1a9ad545d"
       ],
       "origin": "own",
       "source_role": "editorial",
@@ -2651,8 +2652,8 @@
         }
       ],
       "event_ids": [
-        "e55-0485a411367d9252",
-        "e58-3da122a196632c38"
+        "e57-0485a411367d9252",
+        "e60-3da122a196632c38"
       ],
       "origin": "own",
       "source_role": "editorial",
@@ -2675,7 +2676,7 @@
         }
       ],
       "event_ids": [
-        "e59-7e3a3f30e727aa81"
+        "e61-7e3a3f30e727aa81"
       ],
       "origin": "own",
       "source_role": "editorial",
@@ -2698,7 +2699,7 @@
         }
       ],
       "event_ids": [
-        "e60-39d34980417fb7cd"
+        "e62-39d34980417fb7cd"
       ],
       "origin": "own",
       "source_role": "editorial",
@@ -2763,7 +2764,7 @@
         }
       ],
       "event_ids": [
-        "e61-d8930c1560bb8ed1"
+        "e63-d8930c1560bb8ed1"
       ],
       "origin": "own",
       "source_role": "editorial",
@@ -2798,7 +2799,7 @@
         }
       ],
       "event_ids": [
-        "e62-eeb7d3e71bc57509"
+        "e64-eeb7d3e71bc57509"
       ],
       "origin": "retelling",
       "source_role": "editorial",
@@ -2848,8 +2849,8 @@
         }
       ],
       "event_ids": [
-        "e63-bac60b19c932c9f7",
-        "e64-efe773526e73e093"
+        "e65-bac60b19c932c9f7",
+        "e66-efe773526e73e093"
       ],
       "origin": "own",
       "source_role": "editorial",
@@ -2905,7 +2906,7 @@
         }
       ],
       "event_ids": [
-        "e55-0485a411367d9252"
+        "e57-0485a411367d9252"
       ],
       "origin": "own",
       "source_role": "editorial",
@@ -2928,7 +2929,7 @@
         }
       ],
       "event_ids": [
-        "e61-d8930c1560bb8ed1"
+        "e63-d8930c1560bb8ed1"
       ],
       "origin": "own",
       "source_role": "editorial",
@@ -2957,7 +2958,7 @@
         }
       ],
       "event_ids": [
-        "e65-1a5f2bc1cadd814d"
+        "e67-1a5f2bc1cadd814d"
       ],
       "origin": "own",
       "source_role": "editorial",
@@ -3022,7 +3023,7 @@
         }
       ],
       "event_ids": [
-        "e66-f54651253738ae06"
+        "e68-f54651253738ae06"
       ],
       "origin": "own",
       "source_role": "editorial",
@@ -3080,7 +3081,7 @@
         }
       ],
       "event_ids": [
-        "e67-f5200a99ddc2717f"
+        "e69-f5200a99ddc2717f"
       ],
       "origin": "own",
       "source_role": "editorial",
@@ -3103,7 +3104,7 @@
         }
       ],
       "event_ids": [
-        "e68-7740753e2bac6598"
+        "e70-7740753e2bac6598"
       ],
       "origin": "own",
       "source_role": "editorial",
@@ -3126,7 +3127,7 @@
         }
       ],
       "event_ids": [
-        "e69-f93cb27f88fb20d1"
+        "e71-f93cb27f88fb20d1"
       ],
       "origin": "own",
       "source_role": "editorial",
@@ -3155,8 +3156,8 @@
         }
       ],
       "event_ids": [
-        "e70-58c91916c0236925",
-        "e71-3a85e2c4b7a15060"
+        "e72-58c91916c0236925",
+        "e73-3a85e2c4b7a15060"
       ],
       "origin": "own",
       "source_role": "editorial",
@@ -3185,8 +3186,8 @@
         }
       ],
       "event_ids": [
-        "e72-a589f48ce438d957",
-        "e73-9adf56218ea55fcc"
+        "e74-a589f48ce438d957",
+        "e75-9adf56218ea55fcc"
       ],
       "origin": "own",
       "source_role": "editorial",
@@ -3215,7 +3216,7 @@
         }
       ],
       "event_ids": [
-        "e74-69728fbd1846f6ad"
+        "e76-69728fbd1846f6ad"
       ],
       "origin": "own",
       "source_role": "editorial",
@@ -3244,7 +3245,7 @@
         }
       ],
       "event_ids": [
-        "e75-906dcce30c65bf31"
+        "e77-906dcce30c65bf31"
       ],
       "origin": "own",
       "source_role": "editorial",
@@ -3351,7 +3352,7 @@
         }
       ],
       "event_ids": [
-        "e76-e90a9ab891272a7e"
+        "e78-e90a9ab891272a7e"
       ],
       "origin": "own",
       "source_role": "editorial",
@@ -3419,8 +3420,8 @@
         }
       ],
       "event_ids": [
-        "e58-3da122a196632c38",
-        "e77-da6128cf8ca77f09"
+        "e60-3da122a196632c38",
+        "e79-da6128cf8ca77f09"
       ],
       "origin": "own",
       "source_role": "editorial",
@@ -3518,7 +3519,7 @@
         }
       ],
       "event_ids": [
-        "e78-dffa7009818f8ab6"
+        "e80-dffa7009818f8ab6"
       ],
       "origin": "own",
       "source_role": "author",
@@ -3541,7 +3542,7 @@
         }
       ],
       "event_ids": [
-        "e79-f0455d463db9859f"
+        "e81-f0455d463db9859f"
       ],
       "origin": "own",
       "source_role": "author",
@@ -3574,7 +3575,7 @@
       "comment_key": "channel:1167285985:342794",
       "link": "https://t.me/rawa_imagination/21078?comment=342794",
       "published_at": "2026-09-14T12:56:39+00:00",
-      "link_target": "event:e5-e81e760cff5cd185",
+      "link_target": "event:e6-fce1985e6d4db8f9",
       "basis": "реплика к посту с одним событием по теме и тому же предмету"
     },
     {
@@ -9729,16 +9730,14 @@
       "event_id": "e5-e81e760cff5cd185",
       "publications": [
         "https://t.me/marketfeed/1037572",
-        "https://t.me/rawa_imagination/21078",
         "https://t.me/WEB3_AGGREGATOR/422949",
         "https://t.me/WEB3_AGGREGATOR/422950"
       ],
-      "n_publications": 4,
-      "n_channels": 3,
+      "n_publications": 3,
+      "n_channels": 2,
       "n_known_authors": 0,
       "found_origins": [
         "https://t.me/marketfeed/1037572",
-        "https://t.me/rawa_imagination/21078",
         "https://t.me/WEB3_AGGREGATOR/422949",
         "https://t.me/WEB3_AGGREGATOR/422950"
       ],
@@ -9746,7 +9745,21 @@
       "n_unknown_origin": 0
     },
     {
-      "event_id": "e6-7178cba23a532b88",
+      "event_id": "e6-fce1985e6d4db8f9",
+      "publications": [
+        "https://t.me/rawa_imagination/21078"
+      ],
+      "n_publications": 1,
+      "n_channels": 1,
+      "n_known_authors": 0,
+      "found_origins": [
+        "https://t.me/rawa_imagination/21078"
+      ],
+      "n_reprints": 0,
+      "n_unknown_origin": 0
+    },
+    {
+      "event_id": "e7-7178cba23a532b88",
       "publications": [
         "https://t.me/WEB3_AGGREGATOR/422949"
       ],
@@ -9760,7 +9773,7 @@
       "n_unknown_origin": 0
     },
     {
-      "event_id": "e7-42da26304b58b6a3",
+      "event_id": "e8-42da26304b58b6a3",
       "publications": [
         "https://t.me/WEB3_AGGREGATOR/422949"
       ],
@@ -9774,7 +9787,7 @@
       "n_unknown_origin": 0
     },
     {
-      "event_id": "e8-52545d7b42da833f",
+      "event_id": "e9-52545d7b42da833f",
       "publications": [
         "https://t.me/WEB3_AGGREGATOR/422950"
       ],
@@ -9788,7 +9801,7 @@
       "n_unknown_origin": 0
     },
     {
-      "event_id": "e9-66c13803e6f5dcc6",
+      "event_id": "e10-66c13803e6f5dcc6",
       "publications": [
         "https://t.me/WEB3_AGGREGATOR/422959"
       ],
@@ -9802,7 +9815,7 @@
       "n_unknown_origin": 0
     },
     {
-      "event_id": "e10-24dde5ae7f9aa12d",
+      "event_id": "e11-24dde5ae7f9aa12d",
       "publications": [
         "https://t.me/WEB3_AGGREGATOR/422965"
       ],
@@ -9814,7 +9827,7 @@
       "n_unknown_origin": 0
     },
     {
-      "event_id": "e11-90969ddc8c457c04",
+      "event_id": "e12-90969ddc8c457c04",
       "publications": [
         "https://t.me/markettwits/384763"
       ],
@@ -9828,7 +9841,7 @@
       "n_unknown_origin": 0
     },
     {
-      "event_id": "e12-3aa8a040db821cdc",
+      "event_id": "e13-3aa8a040db821cdc",
       "publications": [
         "https://t.me/cryptoattack24/96730"
       ],
@@ -9840,7 +9853,7 @@
       "n_unknown_origin": 0
     },
     {
-      "event_id": "e13-61fbafc9162ef06b",
+      "event_id": "e14-61fbafc9162ef06b",
       "publications": [
         "https://t.me/cryptoattack24/96732",
         "https://t.me/rawa_imagination/21088"
@@ -9855,7 +9868,7 @@
       "n_unknown_origin": 0
     },
     {
-      "event_id": "e14-53c812095b45cd17",
+      "event_id": "e15-53c812095b45cd17",
       "publications": [
         "https://t.me/cryptoattack24/96735"
       ],
@@ -9867,7 +9880,7 @@
       "n_unknown_origin": 0
     },
     {
-      "event_id": "e15-a9d6c371dcf01bf1",
+      "event_id": "e16-a9d6c371dcf01bf1",
       "publications": [
         "https://t.me/cryptoattack24/96735"
       ],
@@ -9879,7 +9892,7 @@
       "n_unknown_origin": 0
     },
     {
-      "event_id": "e16-e39c73503bb601ea",
+      "event_id": "e17-e39c73503bb601ea",
       "publications": [
         "https://t.me/marketfeed/1038133"
       ],
@@ -9893,7 +9906,7 @@
       "n_unknown_origin": 0
     },
     {
-      "event_id": "e17-24b88176c27be6ea",
+      "event_id": "e18-24b88176c27be6ea",
       "publications": [
         "https://t.me/WEB3_AGGREGATOR/422990"
       ],
@@ -9907,7 +9920,7 @@
       "n_unknown_origin": 0
     },
     {
-      "event_id": "e18-40b93cfd61d87abb",
+      "event_id": "e19-40b93cfd61d87abb",
       "publications": [
         "https://t.me/cryptoattack24/96738"
       ],
@@ -9919,7 +9932,7 @@
       "n_unknown_origin": 0
     },
     {
-      "event_id": "e19-c802988a61f6019c",
+      "event_id": "e20-c802988a61f6019c",
       "publications": [
         "https://t.me/rawa_imagination/21088"
       ],
@@ -9933,7 +9946,7 @@
       "n_unknown_origin": 0
     },
     {
-      "event_id": "e20-0f697b2de714f96b",
+      "event_id": "e21-0f697b2de714f96b",
       "publications": [
         "https://t.me/crypto_hd/31433"
       ],
@@ -9945,7 +9958,7 @@
       "n_unknown_origin": 0
     },
     {
-      "event_id": "e21-774e20d7b28da2e4",
+      "event_id": "e22-774e20d7b28da2e4",
       "publications": [
         "https://t.me/crypto_hd/31434"
       ],
@@ -9957,7 +9970,7 @@
       "n_unknown_origin": 0
     },
     {
-      "event_id": "e22-2207df8095f5a002",
+      "event_id": "e23-2207df8095f5a002",
       "publications": [
         "https://t.me/crypto_hd/31434"
       ],
@@ -9969,7 +9982,7 @@
       "n_unknown_origin": 0
     },
     {
-      "event_id": "e23-e71100bdb9703248",
+      "event_id": "e24-e71100bdb9703248",
       "publications": [
         "https://t.me/WEB3_AGGREGATOR/423064"
       ],
@@ -9981,7 +9994,7 @@
       "n_unknown_origin": 1
     },
     {
-      "event_id": "e24-3e03abb6d09dda13",
+      "event_id": "e25-3e03abb6d09dda13",
       "publications": [
         "https://t.me/cryptoattack24/96747",
         "https://t.me/rawa_imagination/21101"
@@ -9994,7 +10007,7 @@
       "n_unknown_origin": 2
     },
     {
-      "event_id": "e25-50e3765cff53dd49",
+      "event_id": "e26-50e3765cff53dd49",
       "publications": [
         "https://t.me/cryptoattack24/96749",
         "https://t.me/crypto_hd/31451"
@@ -10009,7 +10022,7 @@
       "n_unknown_origin": 1
     },
     {
-      "event_id": "e26-83abb839a9692b5b",
+      "event_id": "e27-83abb839a9692b5b",
       "publications": [
         "https://t.me/crypto_hd/31450",
         "https://t.me/cryptoattack24/96754"
@@ -10025,7 +10038,7 @@
       "n_unknown_origin": 0
     },
     {
-      "event_id": "e27-447842c39e019d7f",
+      "event_id": "e28-447842c39e019d7f",
       "publications": [
         "https://t.me/rawa_imagination/21099"
       ],
@@ -10039,7 +10052,7 @@
       "n_unknown_origin": 0
     },
     {
-      "event_id": "e28-214be4547341d5e8",
+      "event_id": "e29-214be4547341d5e8",
       "publications": [
         "https://t.me/cryptoattack24/96755"
       ],
@@ -10053,7 +10066,7 @@
       "n_unknown_origin": 0
     },
     {
-      "event_id": "e29-3cf823f4cf6a654e",
+      "event_id": "e30-3cf823f4cf6a654e",
       "publications": [
         "https://t.me/markettwits/385008"
       ],
@@ -10067,7 +10080,7 @@
       "n_unknown_origin": 0
     },
     {
-      "event_id": "e30-83ffb217d471760e",
+      "event_id": "e31-83ffb217d471760e",
       "publications": [
         "https://t.me/crypto_hd/31454"
       ],
@@ -10081,7 +10094,7 @@
       "n_unknown_origin": 0
     },
     {
-      "event_id": "e31-082c10a3e41004ce",
+      "event_id": "e32-082c10a3e41004ce",
       "publications": [
         "https://t.me/crypto_hd/31457"
       ],
@@ -10093,7 +10106,19 @@
       "n_unknown_origin": 0
     },
     {
-      "event_id": "e32-a4fe77a9c093b106",
+      "event_id": "e33-adbc88cbc9d080ab",
+      "publications": [
+        "https://t.me/crypto_hd/31457"
+      ],
+      "n_publications": 1,
+      "n_channels": 1,
+      "n_known_authors": 0,
+      "found_origins": [],
+      "n_reprints": 1,
+      "n_unknown_origin": 0
+    },
+    {
+      "event_id": "e34-a4fe77a9c093b106",
       "publications": [
         "https://t.me/WEB3_AGGREGATOR/423129"
       ],
@@ -10107,7 +10132,7 @@
       "n_unknown_origin": 0
     },
     {
-      "event_id": "e33-2065cb84a9000001",
+      "event_id": "e35-2065cb84a9000001",
       "publications": [
         "https://t.me/WEB3_AGGREGATOR/423158"
       ],
@@ -10119,7 +10144,7 @@
       "n_unknown_origin": 0
     },
     {
-      "event_id": "e34-376101725588103a",
+      "event_id": "e36-376101725588103a",
       "publications": [
         "https://t.me/crypto_hd/31472"
       ],
@@ -10133,7 +10158,7 @@
       "n_unknown_origin": 0
     },
     {
-      "event_id": "e35-1b98e70b7e1ada6b",
+      "event_id": "e37-1b98e70b7e1ada6b",
       "publications": [
         "https://t.me/cryptoattack24/96773",
         "https://t.me/rawa_imagination/21109"
@@ -10148,7 +10173,7 @@
       "n_unknown_origin": 0
     },
     {
-      "event_id": "e36-ec98efd39500ce4c",
+      "event_id": "e38-ec98efd39500ce4c",
       "publications": [
         "https://t.me/cryptoattack24/96776",
         "https://t.me/crypto_hd/31476"
@@ -10163,7 +10188,7 @@
       "n_unknown_origin": 0
     },
     {
-      "event_id": "e37-fbc8cedab2aaaef9",
+      "event_id": "e39-fbc8cedab2aaaef9",
       "publications": [
         "https://t.me/cryptoattack24/96776"
       ],
@@ -10177,7 +10202,7 @@
       "n_unknown_origin": 0
     },
     {
-      "event_id": "e38-73a28409f802189b",
+      "event_id": "e40-73a28409f802189b",
       "publications": [
         "https://t.me/crypto_hd/31476"
       ],
@@ -10189,7 +10214,7 @@
       "n_unknown_origin": 0
     },
     {
-      "event_id": "e39-6a10d8c975578af1",
+      "event_id": "e41-6a10d8c975578af1",
       "publications": [
         "https://t.me/markettwits/385211"
       ],
@@ -10203,7 +10228,7 @@
       "n_unknown_origin": 0
     },
     {
-      "event_id": "e40-0cbce6a16038085b",
+      "event_id": "e42-0cbce6a16038085b",
       "publications": [
         "https://t.me/markettwits/385262"
       ],
@@ -10215,7 +10240,7 @@
       "n_unknown_origin": 0
     },
     {
-      "event_id": "e41-79ddbc00ba386cd5",
+      "event_id": "e43-79ddbc00ba386cd5",
       "publications": [
         "https://t.me/crypto_hd/31491"
       ],
@@ -10229,7 +10254,7 @@
       "n_unknown_origin": 0
     },
     {
-      "event_id": "e42-25495bb8ed6c21b0",
+      "event_id": "e44-25495bb8ed6c21b0",
       "publications": [
         "https://t.me/WEB3_AGGREGATOR/423250"
       ],
@@ -10241,7 +10266,7 @@
       "n_unknown_origin": 0
     },
     {
-      "event_id": "e43-d57ff52e9ff96871",
+      "event_id": "e45-d57ff52e9ff96871",
       "publications": [
         "https://t.me/cryptoattack24/96795",
         "https://t.me/rawa_imagination/21117"
@@ -10256,7 +10281,7 @@
       "n_unknown_origin": 1
     },
     {
-      "event_id": "e44-5c0c02b4a45b50e5",
+      "event_id": "e46-5c0c02b4a45b50e5",
       "publications": [
         "https://t.me/crypto_hd/31498"
       ],
@@ -10270,7 +10295,7 @@
       "n_unknown_origin": 0
     },
     {
-      "event_id": "e45-d94d5187156da12d",
+      "event_id": "e47-d94d5187156da12d",
       "publications": [
         "https://t.me/WEB3_AGGREGATOR/423264"
       ],
@@ -10282,7 +10307,7 @@
       "n_unknown_origin": 0
     },
     {
-      "event_id": "e46-6f00f19e65b20c33",
+      "event_id": "e48-6f00f19e65b20c33",
       "publications": [
         "https://t.me/rawa_imagination/21117"
       ],
@@ -10294,7 +10319,7 @@
       "n_unknown_origin": 1
     },
     {
-      "event_id": "e47-72ba3c573f7b8cd0",
+      "event_id": "e49-72ba3c573f7b8cd0",
       "publications": [
         "https://t.me/crypto_hd/31503"
       ],
@@ -10306,7 +10331,7 @@
       "n_unknown_origin": 0
     },
     {
-      "event_id": "e48-21869d99515ccb24",
+      "event_id": "e50-21869d99515ccb24",
       "publications": [
         "https://t.me/crypto_hd/31503"
       ],
@@ -10318,7 +10343,7 @@
       "n_unknown_origin": 0
     },
     {
-      "event_id": "e49-e7b0e741d1a92de8",
+      "event_id": "e51-e7b0e741d1a92de8",
       "publications": [
         "https://t.me/crypto_hd/31503"
       ],
@@ -10330,7 +10355,7 @@
       "n_unknown_origin": 0
     },
     {
-      "event_id": "e50-00c57e20e0576712",
+      "event_id": "e52-00c57e20e0576712",
       "publications": [
         "https://t.me/crypto_hd/31503"
       ],
@@ -10342,7 +10367,7 @@
       "n_unknown_origin": 0
     },
     {
-      "event_id": "e51-c97d0c8cb7e8c107",
+      "event_id": "e53-c97d0c8cb7e8c107",
       "publications": [
         "https://t.me/crypto_hd/31504"
       ],
@@ -10354,7 +10379,7 @@
       "n_unknown_origin": 0
     },
     {
-      "event_id": "e52-e5b6ccff9b088623",
+      "event_id": "e54-e5b6ccff9b088623",
       "publications": [
         "https://t.me/WEB3_AGGREGATOR/423294"
       ],
@@ -10366,7 +10391,7 @@
       "n_unknown_origin": 1
     },
     {
-      "event_id": "e53-a4f2adbf4b9d2794",
+      "event_id": "e55-a4f2adbf4b9d2794",
       "publications": [
         "https://t.me/WEB3_AGGREGATOR/423312"
       ],
@@ -10380,7 +10405,7 @@
       "n_unknown_origin": 0
     },
     {
-      "event_id": "e54-d5a5326d209f61fa",
+      "event_id": "e56-d5a5326d209f61fa",
       "publications": [
         "https://t.me/WEB3_AGGREGATOR/423312"
       ],
@@ -10394,7 +10419,7 @@
       "n_unknown_origin": 0
     },
     {
-      "event_id": "e55-0485a411367d9252",
+      "event_id": "e57-0485a411367d9252",
       "publications": [
         "https://t.me/cryptoattack24/96819",
         "https://t.me/rawa_imagination/21121",
@@ -10412,7 +10437,7 @@
       "n_unknown_origin": 0
     },
     {
-      "event_id": "e56-94522467a1ad084d",
+      "event_id": "e58-94522467a1ad084d",
       "publications": [
         "https://t.me/cryptoattack24/96824"
       ],
@@ -10426,7 +10451,7 @@
       "n_unknown_origin": 0
     },
     {
-      "event_id": "e57-28d1b3f1a9ad545d",
+      "event_id": "e59-28d1b3f1a9ad545d",
       "publications": [
         "https://t.me/markettwits/385442"
       ],
@@ -10440,7 +10465,7 @@
       "n_unknown_origin": 0
     },
     {
-      "event_id": "e58-3da122a196632c38",
+      "event_id": "e60-3da122a196632c38",
       "publications": [
         "https://t.me/rawa_imagination/21121",
         "https://t.me/rawa_imagination/21137"
@@ -10456,7 +10481,7 @@
       "n_unknown_origin": 0
     },
     {
-      "event_id": "e59-7e3a3f30e727aa81",
+      "event_id": "e61-7e3a3f30e727aa81",
       "publications": [
         "https://t.me/marketfeed/1041526"
       ],
@@ -10470,7 +10495,7 @@
       "n_unknown_origin": 0
     },
     {
-      "event_id": "e60-39d34980417fb7cd",
+      "event_id": "e62-39d34980417fb7cd",
       "publications": [
         "https://t.me/marketfeed/1041542"
       ],
@@ -10484,7 +10509,7 @@
       "n_unknown_origin": 0
     },
     {
-      "event_id": "e61-d8930c1560bb8ed1",
+      "event_id": "e63-d8930c1560bb8ed1",
       "publications": [
         "https://t.me/cryptoattack24/96827",
         "https://t.me/WEB3_AGGREGATOR/423395"
@@ -10500,7 +10525,7 @@
       "n_unknown_origin": 0
     },
     {
-      "event_id": "e62-eeb7d3e71bc57509",
+      "event_id": "e64-eeb7d3e71bc57509",
       "publications": [
         "https://t.me/cryptoattack24/96830"
       ],
@@ -10512,7 +10537,7 @@
       "n_unknown_origin": 0
     },
     {
-      "event_id": "e63-bac60b19c932c9f7",
+      "event_id": "e65-bac60b19c932c9f7",
       "publications": [
         "https://t.me/rawa_imagination/21126"
       ],
@@ -10526,7 +10551,7 @@
       "n_unknown_origin": 0
     },
     {
-      "event_id": "e64-efe773526e73e093",
+      "event_id": "e66-efe773526e73e093",
       "publications": [
         "https://t.me/rawa_imagination/21126"
       ],
@@ -10540,7 +10565,7 @@
       "n_unknown_origin": 0
     },
     {
-      "event_id": "e65-1a5f2bc1cadd814d",
+      "event_id": "e67-1a5f2bc1cadd814d",
       "publications": [
         "https://t.me/WEB3_AGGREGATOR/423399"
       ],
@@ -10554,7 +10579,7 @@
       "n_unknown_origin": 0
     },
     {
-      "event_id": "e66-f54651253738ae06",
+      "event_id": "e68-f54651253738ae06",
       "publications": [
         "https://t.me/marketfeed/1041930"
       ],
@@ -10568,7 +10593,7 @@
       "n_unknown_origin": 0
     },
     {
-      "event_id": "e67-f5200a99ddc2717f",
+      "event_id": "e69-f5200a99ddc2717f",
       "publications": [
         "https://t.me/marketfeed/1041998"
       ],
@@ -10582,7 +10607,7 @@
       "n_unknown_origin": 0
     },
     {
-      "event_id": "e68-7740753e2bac6598",
+      "event_id": "e70-7740753e2bac6598",
       "publications": [
         "https://t.me/marketfeed/1042010"
       ],
@@ -10596,7 +10621,7 @@
       "n_unknown_origin": 0
     },
     {
-      "event_id": "e69-f93cb27f88fb20d1",
+      "event_id": "e71-f93cb27f88fb20d1",
       "publications": [
         "https://t.me/marketfeed/1042085"
       ],
@@ -10610,7 +10635,7 @@
       "n_unknown_origin": 0
     },
     {
-      "event_id": "e70-58c91916c0236925",
+      "event_id": "e72-58c91916c0236925",
       "publications": [
         "https://t.me/cryptoattack24/96837"
       ],
@@ -10624,7 +10649,7 @@
       "n_unknown_origin": 0
     },
     {
-      "event_id": "e71-3a85e2c4b7a15060",
+      "event_id": "e73-3a85e2c4b7a15060",
       "publications": [
         "https://t.me/cryptoattack24/96837"
       ],
@@ -10638,7 +10663,7 @@
       "n_unknown_origin": 0
     },
     {
-      "event_id": "e72-a589f48ce438d957",
+      "event_id": "e74-a589f48ce438d957",
       "publications": [
         "https://t.me/cryptoattack24/96838"
       ],
@@ -10652,7 +10677,7 @@
       "n_unknown_origin": 0
     },
     {
-      "event_id": "e73-9adf56218ea55fcc",
+      "event_id": "e75-9adf56218ea55fcc",
       "publications": [
         "https://t.me/cryptoattack24/96838"
       ],
@@ -10666,7 +10691,7 @@
       "n_unknown_origin": 0
     },
     {
-      "event_id": "e74-69728fbd1846f6ad",
+      "event_id": "e76-69728fbd1846f6ad",
       "publications": [
         "https://t.me/markettwits/385524"
       ],
@@ -10680,7 +10705,7 @@
       "n_unknown_origin": 0
     },
     {
-      "event_id": "e75-906dcce30c65bf31",
+      "event_id": "e77-906dcce30c65bf31",
       "publications": [
         "https://t.me/rawa_imagination/21135"
       ],
@@ -10694,7 +10719,7 @@
       "n_unknown_origin": 0
     },
     {
-      "event_id": "e76-e90a9ab891272a7e",
+      "event_id": "e78-e90a9ab891272a7e",
       "publications": [
         "https://t.me/WEB3_AGGREGATOR/423460"
       ],
@@ -10708,7 +10733,7 @@
       "n_unknown_origin": 0
     },
     {
-      "event_id": "e77-da6128cf8ca77f09",
+      "event_id": "e79-da6128cf8ca77f09",
       "publications": [
         "https://t.me/rawa_imagination/21137"
       ],
@@ -10722,7 +10747,7 @@
       "n_unknown_origin": 0
     },
     {
-      "event_id": "e78-dffa7009818f8ab6",
+      "event_id": "e80-dffa7009818f8ab6",
       "publications": [
         "https://t.me/cryptoattack24/96850"
       ],
@@ -10736,7 +10761,7 @@
       "n_unknown_origin": 0
     },
     {
-      "event_id": "e79-f0455d463db9859f",
+      "event_id": "e81-f0455d463db9859f",
       "publications": [
         "https://t.me/marketfeed/1042392"
       ],

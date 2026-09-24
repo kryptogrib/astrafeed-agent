@@ -246,8 +246,6 @@ class EvaluatorTests(unittest.TestCase):
 
     def test_forged_changes_fail_numeric_aggregates(self):
         for mutate in (
-            lambda c: c.update(events_appeared=["999 fake"]),
-            lambda c: c.update(events_gone=["999 fake"]),
             lambda c: c["source_coverage"].update(added_channels=["999"]),
             lambda c: c["source_coverage"].update(removed_channels=["999"]),
             lambda c: c.update(topic_comments=170),
@@ -256,6 +254,41 @@ class EvaluatorTests(unittest.TestCase):
             mutate(pulse["changes"])
             (self.folder / "pulse.json").write_text(json.dumps(pulse))
             self.assertEqual(self.result()["metrics"]["numeric_aggregates"]["status"], "fail")
+
+    def test_previous_window_without_its_run_is_unverified_not_pass(self):
+        pulse = json.loads(json.dumps(self.pulse))
+        pulse["changes"].update(
+            previous_topic_comments=987654321, previous_events=["FAKE"], events_gone=["FAKE"]
+        )
+        (self.folder / "pulse.json").write_text(json.dumps(pulse))
+        metric = self.result()["metrics"]["previous_window"]
+        self.assertEqual(metric["status"], "unverified")
+        self.assertEqual(metric["denominator"], 0)
+
+    def test_previous_window_is_checked_against_the_run_for_that_window(self):
+        previous = self.runs / "test" / "previous"
+        previous.mkdir()
+        (previous / "pulse.json").write_text(
+            json.dumps(
+                {
+                    "topic": "test",
+                    "window": {"start": "2026-09-08T00:00:00+00:00", "end": START},
+                    "events": [],
+                    "discussion": [],
+                }
+            )
+        )
+        metric = self.result()["metrics"]["previous_window"]
+        self.assertEqual((metric["errors"], metric["denominator"]), ([], 4))
+        for mutate in (
+            lambda c: c.update(previous_topic_comments=987654321),
+            lambda c: c.update(previous_events=["FAKE"], events_gone=["FAKE"]),
+            lambda c: c.update(events_appeared=["999 fake"]),
+        ):
+            pulse = json.loads(json.dumps(self.pulse))
+            mutate(pulse["changes"])
+            (self.folder / "pulse.json").write_text(json.dumps(pulse))
+            self.assertEqual(self.result()["metrics"]["previous_window"]["status"], "fail")
 
     def test_tamper_fails_before_evaluation(self):
         with (self.sample / "posts.jsonl").open("a") as f:

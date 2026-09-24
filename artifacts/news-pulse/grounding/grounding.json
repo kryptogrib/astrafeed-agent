@@ -1,8 +1,8 @@
 {
   "db_md5_before": "8618099125a806df376354286ccd982e",
   "db_md5_after": "8618099125a806df376354286ccd982e",
-  "claims": 17949,
-  "grounded": 17949,
+  "claims": 17959,
+  "grounded": 17959,
   "grounding_rate": 1.0,
   "fabricated_numbers": 0,
   "runs": [
@@ -22,8 +22,8 @@
     },
     {
       "run": "artifacts/news-pulse/arc/2026-09-09..2026-09-23",
-      "claims": 869,
-      "grounded": 869,
+      "claims": 863,
+      "grounded": 863,
       "fabricated_numbers": 0,
       "failures": []
     },
@@ -50,15 +50,15 @@
     },
     {
       "run": "artifacts/news-pulse/arc/2026-09-16T11-01-01-00-00..2026-09-17T11-01-01-00-00",
-      "claims": 333,
-      "grounded": 333,
+      "claims": 329,
+      "grounded": 329,
       "fabricated_numbers": 0,
       "failures": []
     },
     {
       "run": "artifacts/news-pulse/eth/2026-09-09..2026-09-23",
-      "claims": 1923,
-      "grounded": 1923,
+      "claims": 1927,
+      "grounded": 1927,
       "fabricated_numbers": 0,
       "failures": []
     },
@@ -85,29 +85,29 @@
     },
     {
       "run": "artifacts/news-pulse/eth/2026-09-09T00-00-00-00-00..2026-09-21T12-44-53-00-00",
-      "claims": 1500,
-      "grounded": 1500,
+      "claims": 1504,
+      "grounded": 1504,
       "fabricated_numbers": 0,
       "failures": []
     },
     {
       "run": "artifacts/news-pulse/eth/2026-09-09T00-00-00-00-00..2026-09-21T12-44-54-00-00",
-      "claims": 1500,
-      "grounded": 1500,
+      "claims": 1504,
+      "grounded": 1504,
       "fabricated_numbers": 0,
       "failures": []
     },
     {
       "run": "artifacts/news-pulse/eth/2026-09-09T00-00-00-00-00..2026-09-21T12-44-55-00-00",
-      "claims": 1510,
-      "grounded": 1510,
+      "claims": 1514,
+      "grounded": 1514,
       "fabricated_numbers": 0,
       "failures": []
     },
     {
       "run": "artifacts/news-pulse/eth/2026-09-14T12-33-46-00-00..2026-09-21T12-44-54-00-00",
-      "claims": 862,
-      "grounded": 862,
+      "claims": 866,
+      "grounded": 866,
       "fabricated_numbers": 0,
       "failures": []
     },

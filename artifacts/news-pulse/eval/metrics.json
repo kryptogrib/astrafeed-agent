@@ -169,9 +169,9 @@
     },
     "same_event_recall": {
       "title": "Полнота объединения положительных пар",
-      "numerator": 5,
+      "numerator": 4,
       "denominator": 10,
-      "value": 0.5,
+      "value": 0.4,
       "threshold": 0.9,
       "status": "fail",
       "errors": [
@@ -216,6 +216,15 @@
           "topic": "eth",
           "links": [
             "https://t.me/markettwits/384699",
+            "https://t.me/rawa_imagination/21078"
+          ],
+          "common_event_ids": []
+        },
+        {
+          "pair": "pair-10",
+          "topic": "eth",
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/422950",
             "https://t.me/rawa_imagination/21078"
           ],
           "common_event_ids": []
@@ -271,7 +280,7 @@
             "https://t.me/rawa_imagination/21078?comment=342794"
           ],
           "expected": "author_thesis",
-          "actual": "event:e43-e81e760cff5cd185",
+          "actual": "event:e44-fce1985e6d4db8f9",
           "mapped_events": [
             "bitmine-buy-27180-0914"
           ]
@@ -283,7 +292,7 @@
     "future_leakage": {
       "title": "Записи и ссылки вне окна",
       "numerator": 0,
-      "denominator": 71903,
+      "denominator": 71904,
       "value": 0.0,
       "threshold": "= 0 ошибок",
       "status": "unverified",
@@ -497,8 +506,8 @@
     },
     "numeric_aggregates": {
       "title": "Правильность числовых агрегатов",
-      "numerator": 25153,
-      "denominator": 25153,
+      "numerator": 25188,
+      "denominator": 25188,
       "value": 1.0,
       "threshold": 1,
       "status": "pass",
@@ -506,10 +515,122 @@
       "missing": [],
       "note": ""
     },
+    "previous_window": {
+      "title": "«Изменения» относительно предыдущего окна",
+      "numerator": 0,
+      "denominator": 0,
+      "value": null,
+      "threshold": 1,
+      "status": "unverified",
+      "errors": [],
+      "missing": [
+        {
+          "run": "/Users/chelovek/orca/workspaces/AstraFeed-TokenBrief/hakaton/artifacts/news-pulse/aave/2026-09-09..2026-09-23",
+          "reason": "Нет прогона за предыдущее окно [2026-08-25T00:00:00+00:00, 2026-09-09T00:00:00+00:00)"
+        },
+        {
+          "run": "/Users/chelovek/orca/workspaces/AstraFeed-TokenBrief/hakaton/artifacts/news-pulse/aave/2026-09-22..2026-09-23",
+          "reason": "Нет прогона за предыдущее окно [2026-09-20T00:00:00+00:00, 2026-09-22T00:00:00+00:00)"
+        },
+        {
+          "run": "/Users/chelovek/orca/workspaces/AstraFeed-TokenBrief/hakaton/artifacts/news-pulse/arc/2026-09-09..2026-09-23",
+          "reason": "Нет прогона за предыдущее окно [2026-08-25T00:00:00+00:00, 2026-09-09T00:00:00+00:00)"
+        },
+        {
+          "run": "/Users/chelovek/orca/workspaces/AstraFeed-TokenBrief/hakaton/artifacts/news-pulse/arc/2026-09-09T00-00-00-00-00..2026-09-16T11-01-00-00-00",
+          "reason": "Нет прогона за предыдущее окно [2026-09-01T12:59:00+00:00, 2026-09-09T00:00:00+00:00)"
+        },
+        {
+          "run": "/Users/chelovek/orca/workspaces/AstraFeed-TokenBrief/hakaton/artifacts/news-pulse/arc/2026-09-09T00-00-00-00-00..2026-09-16T11-01-01-00-00",
+          "reason": "Нет прогона за предыдущее окно [2026-09-01T12:58:59+00:00, 2026-09-09T00:00:00+00:00)"
+        },
+        {
+          "run": "/Users/chelovek/orca/workspaces/AstraFeed-TokenBrief/hakaton/artifacts/news-pulse/arc/2026-09-09T00-00-00-00-00..2026-09-16T11-01-02-00-00",
+          "reason": "Нет прогона за предыдущее окно [2026-09-01T12:58:58+00:00, 2026-09-09T00:00:00+00:00)"
+        },
+        {
+          "run": "/Users/chelovek/orca/workspaces/AstraFeed-TokenBrief/hakaton/artifacts/news-pulse/arc/2026-09-16T11-01-01-00-00..2026-09-17T11-01-01-00-00",
+          "reason": "Нет прогона за предыдущее окно [2026-09-15T11:01:01+00:00, 2026-09-16T11:01:01+00:00)"
+        },
+        {
+          "run": "/Users/chelovek/orca/workspaces/AstraFeed-TokenBrief/hakaton/artifacts/news-pulse/eth/2026-09-09..2026-09-23",
+          "reason": "Нет прогона за предыдущее окно [2026-08-25T00:00:00+00:00, 2026-09-09T00:00:00+00:00)"
+        },
+        {
+          "run": "/Users/chelovek/orca/workspaces/AstraFeed-TokenBrief/hakaton/artifacts/news-pulse/eth/2026-09-09T00-00-00-00-00..2026-09-14T12-33-45-00-00",
+          "reason": "Нет прогона за предыдущее окно [2026-09-03T11:26:15+00:00, 2026-09-09T00:00:00+00:00)"
+        },
+        {
+          "run": "/Users/chelovek/orca/workspaces/AstraFeed-TokenBrief/hakaton/artifacts/news-pulse/eth/2026-09-09T00-00-00-00-00..2026-09-14T12-33-46-00-00",
+          "reason": "Нет прогона за предыдущее окно [2026-09-03T11:26:14+00:00, 2026-09-09T00:00:00+00:00)"
+        },
+        {
+          "run": "/Users/chelovek/orca/workspaces/AstraFeed-TokenBrief/hakaton/artifacts/news-pulse/eth/2026-09-09T00-00-00-00-00..2026-09-14T12-33-47-00-00",
+          "reason": "Нет прогона за предыдущее окно [2026-09-03T11:26:13+00:00, 2026-09-09T00:00:00+00:00)"
+        },
+        {
+          "run": "/Users/chelovek/orca/workspaces/AstraFeed-TokenBrief/hakaton/artifacts/news-pulse/eth/2026-09-09T00-00-00-00-00..2026-09-21T12-44-53-00-00",
+          "reason": "Нет прогона за предыдущее окно [2026-08-27T11:15:07+00:00, 2026-09-09T00:00:00+00:00)"
+        },
+        {
+          "run": "/Users/chelovek/orca/workspaces/AstraFeed-TokenBrief/hakaton/artifacts/news-pulse/eth/2026-09-09T00-00-00-00-00..2026-09-21T12-44-54-00-00",
+          "reason": "Нет прогона за предыдущее окно [2026-08-27T11:15:06+00:00, 2026-09-09T00:00:00+00:00)"
+        },
+        {
+          "run": "/Users/chelovek/orca/workspaces/AstraFeed-TokenBrief/hakaton/artifacts/news-pulse/eth/2026-09-09T00-00-00-00-00..2026-09-21T12-44-55-00-00",
+          "reason": "Нет прогона за предыдущее окно [2026-08-27T11:15:05+00:00, 2026-09-09T00:00:00+00:00)"
+        },
+        {
+          "run": "/Users/chelovek/orca/workspaces/AstraFeed-TokenBrief/hakaton/artifacts/news-pulse/eth/2026-09-14T12-33-46-00-00..2026-09-21T12-44-54-00-00",
+          "reason": "Нет прогона за предыдущее окно [2026-09-07T12:22:38+00:00, 2026-09-14T12:33:46+00:00)"
+        },
+        {
+          "run": "/Users/chelovek/orca/workspaces/AstraFeed-TokenBrief/hakaton/artifacts/news-pulse/eth/2026-09-17..2026-09-19",
+          "reason": "Нет прогона за предыдущее окно [2026-09-14T00:00:00+00:00, 2026-09-17T00:00:00+00:00)"
+        },
+        {
+          "run": "/Users/chelovek/orca/workspaces/AstraFeed-TokenBrief/hakaton/artifacts/news-pulse/zec/2026-09-09..2026-09-23",
+          "reason": "Нет прогона за предыдущее окно [2026-08-25T00:00:00+00:00, 2026-09-09T00:00:00+00:00)"
+        },
+        {
+          "run": "/Users/chelovek/orca/workspaces/AstraFeed-TokenBrief/hakaton/artifacts/news-pulse/zec/2026-09-09T00-00-00-00-00..2026-09-16T06-10-18-00-00",
+          "reason": "Нет прогона за предыдущее окно [2026-09-01T17:49:42+00:00, 2026-09-09T00:00:00+00:00)"
+        },
+        {
+          "run": "/Users/chelovek/orca/workspaces/AstraFeed-TokenBrief/hakaton/artifacts/news-pulse/zec/2026-09-09T00-00-00-00-00..2026-09-16T06-10-19-00-00",
+          "reason": "Нет прогона за предыдущее окно [2026-09-01T17:49:41+00:00, 2026-09-09T00:00:00+00:00)"
+        },
+        {
+          "run": "/Users/chelovek/orca/workspaces/AstraFeed-TokenBrief/hakaton/artifacts/news-pulse/zec/2026-09-09T00-00-00-00-00..2026-09-16T06-10-20-00-00",
+          "reason": "Нет прогона за предыдущее окно [2026-09-01T17:49:40+00:00, 2026-09-09T00:00:00+00:00)"
+        },
+        {
+          "run": "/Users/chelovek/orca/workspaces/AstraFeed-TokenBrief/hakaton/artifacts/news-pulse/zec/2026-09-09T00-00-00-00-00..2026-09-21T06-04-31-00-00",
+          "reason": "Нет прогона за предыдущее окно [2026-08-27T17:55:29+00:00, 2026-09-09T00:00:00+00:00)"
+        },
+        {
+          "run": "/Users/chelovek/orca/workspaces/AstraFeed-TokenBrief/hakaton/artifacts/news-pulse/zec/2026-09-09T00-00-00-00-00..2026-09-21T06-04-32-00-00",
+          "reason": "Нет прогона за предыдущее окно [2026-08-27T17:55:28+00:00, 2026-09-09T00:00:00+00:00)"
+        },
+        {
+          "run": "/Users/chelovek/orca/workspaces/AstraFeed-TokenBrief/hakaton/artifacts/news-pulse/zec/2026-09-09T00-00-00-00-00..2026-09-21T06-04-33-00-00",
+          "reason": "Нет прогона за предыдущее окно [2026-08-27T17:55:27+00:00, 2026-09-09T00:00:00+00:00)"
+        },
+        {
+          "run": "/Users/chelovek/orca/workspaces/AstraFeed-TokenBrief/hakaton/artifacts/news-pulse/zec/2026-09-16T06-10-19-00-00..2026-09-21T06-04-32-00-00",
+          "reason": "Нет прогона за предыдущее окно [2026-09-11T06:16:06+00:00, 2026-09-16T06:10:19+00:00)"
+        },
+        {
+          "run": "/Users/chelovek/orca/workspaces/AstraFeed-TokenBrief/hakaton/artifacts/news-pulse/zec/2026-09-17..2026-09-19",
+          "reason": "Нет прогона за предыдущее окно [2026-09-14T00:00:00+00:00, 2026-09-17T00:00:00+00:00)"
+        }
+      ],
+      "note": "События и комментарии предыдущего окна и разницы с ним сверяются с прогоном, построенным за это окно; без такого прогона — unverified."
+    },
     "brief_grounding": {
       "title": "Подтверждённость фактов брифа",
-      "numerator": 17949,
-      "denominator": 17949,
+      "numerator": 17959,
+      "denominator": 17959,
       "value": 1.0,
       "threshold": 0.95,
       "status": "pass",
@@ -520,7 +641,7 @@
     "fabrications": {
       "title": "Выдуманные цены, даты, авторство, официальное подтверждение",
       "numerator": 0,
-      "denominator": 17949,
+      "denominator": 17959,
       "value": 0.0,
       "threshold": "= 0 ошибок",
       "status": "pass",

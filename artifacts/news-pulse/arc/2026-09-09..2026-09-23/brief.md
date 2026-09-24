@@ -93,10 +93,10 @@
   - https://t.me/crypto_hd/31448: «⚡ Компания Circle технически запустила майннет блокчейна Arc.»
   - https://t.me/markettwits/385037: «Circle запустила свой блокчейна Arc»
 - **Granted, yes there were people early new Arc 1-2 months before, today it begins "officially" via public (few hours basically only)**
-  публикации 3, каналы 3, известные авторы 0, первоисточники 2, перепечатки 1, неизвестное происхождение 0.
+  публикации 4, каналы 3, известные авторы 0, первоисточники 3, перепечатки 1, неизвестное происхождение 0.
   - https://t.me/PowsGemCalls/48975: «Granted, yes there were people early new Arc 1-2 months before, today it begins "officially" via public (few hours basically only)»
   - https://t.me/whitelist1/7138: «👍Напомним, что Arc выходит в Mainnet уже сегодня, а вместе с ним и многие NFT коллекции, сверяемся с постом.»
-  - https://t.me/WEB3_AGGREGATOR/423153: «Первый день мэйннета ARC»
+  - https://t.me/WEB3_AGGREGATOR/423100: «Circle's Arc Stablecoin L1 Goes Live on Mainnet»
 - **Официальная презентация запуска Arc начнется сегодня в 18:30 мск.**
   публикации 2, каналы 2, известные авторы 0, первоисточники 0, перепечатки 2, неизвестное происхождение 0.
   - https://t.me/crypto_hd/31448: «Официальная презентация запуска Arc начнется сегодня в 18:30 мск.»
@@ -110,14 +110,9 @@
   - https://t.me/marketfeed/1039167: «CIRCLE LAUNCHES ARC MAINNET WITH BLACKROCK AND VISA AMONG VALIDATORS, MINTS 10 BILLION ARC TOKENS ...»
   - https://t.me/marketfeed/1039182: «Circle launched Arc mainnet with BlackRock and Visa among validators; Zcash holders backed faster transactions and halving-style design»
   - https://t.me/WEB3_AGGREGATOR/423105: «Сегодня, 16 сентября, Circle запустила мейннет Arc и сразу подключила его к Agent Stack, набору инструментов, который с 11 мая дает ИИ-агенту собственный кошеле»
-- **Circle's Arc Stablecoin L1 Goes Live on Mainnet**
-  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.
-  - https://t.me/WEB3_AGGREGATOR/423100: «Circle's Arc Stablecoin L1 Goes Live on Mainnet»
 - **Arc arrives as a full-stack financial platform rather than a bare chain, shipping assets, applications, interoperability, and Circle platform services from day one.**
   публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.
   - https://t.me/WEB3_AGGREGATOR/423100: «Arc arrives as a full-stack financial platform rather than a bare chain, shipping assets, applications, interoperability, and Circle platform services from day »
-- **More than 190 institutional and ecosystem teams are already building on Arc, one of the most institutionally backed genesis cohorts the industry has seen, as Circle pushes…**
-  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.
   - https://t.me/WEB3_AGGREGATOR/423100: «More than 190 institutional and ecosystem teams are already building on Arc, one of the most institutionally backed genesis cohorts the industry has seen, as Ci»
 - **📟Arc | фармим раннюю активность в mainnet**
   публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.
@@ -189,8 +184,6 @@
   публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 0, неизвестное происхождение 1.
   - https://t.me/WEB3_AGGREGATOR/423227: «Вчера Circle, эмитент стейблкоина USDC, запустила мейннет Arc — собственный блокчейн (L1) под платежи и токенизированные активы.
 Глава компании Джереми Аллер на»
-- **Arc идёт тем же путём, только стартовал крупнее первого дня Robinhood в 720 раз.**
-  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 0, неизвестное происхождение 1.
   - https://t.me/WEB3_AGGREGATOR/423227: «Arc идёт тем же путём, только стартовал крупнее первого дня Robinhood в 720 раз.»
 - **82% в мемах — не ошибка инфраструктуры, а обычная спекуляция ритейла на старте. Институционалы ведь ставили валидаторы явно не для того, чтобы гонять мемасы (hope so 😋): слой…**
   публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 0, неизвестное происхождение 1.
@@ -728,7 +721,7 @@ Arc, HyperEVM, Monad и Cronos.
 
 ## Изменения относительно предыдущего периода
 
-- Появившиеся события: 61.
+- Появившиеся события: 58.
 - Исчезнувшие события: 0.
 - Изменение охвата источников: +20 / −0 каналов.
 - Комментарии по теме: 133 в текущем окне, 0 в предыдущем.
