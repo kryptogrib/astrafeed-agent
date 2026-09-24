@@ -409,7 +409,7 @@ async def test_relaxed_backfill_keeps_distinct_story_decisions_even_with_same_en
 
     links = await store.links_for_publications({pub.publication_id for pub in pubs})
     assert assigner.maximum == 3
-    assert assigner.calls == 3
+    assert assigner.calls == 4
     assert embedder.calls == 1
     assert (reused, retried) == (3, 0)
     assert links[0].story_id != links[1].story_id
@@ -451,6 +451,49 @@ async def test_relaxed_backfill_keeps_distinct_decisions_across_batches():
     links = await store.links_for_publications({first.publication_id, second.publication_id})
     assert len({link.story_id for link in links}) == 2
     assert (await store.list_stories())[0].key_entity == "eth"
+
+
+@pytest.mark.asyncio
+async def test_relaxed_backfill_asks_model_before_joining_same_entity_retellings():
+    from astrafeed.adapters.llm.agenda import Assignment
+
+    store = InMemoryAgendaStore()
+    now = datetime(2026, 9, 24, 12, tzinfo=UTC)
+    first = _pub("Payy, возможно, взломан на $1,83 млн.", 1, "1", "@a", now)
+    second = _pub("Хакер атаковал Payy на $1,83 млн.", 2, "2", "@b", now + timedelta(hours=1))
+    for pub in (first, second):
+        await store.record_publication(pub)
+
+    class Assigner:
+        calls = 0
+
+        async def assign(self, **kwargs):
+            self.calls += 1
+            stories = kwargs["stories"]
+            if stories:
+                return Assignment((), "existing", stories[0].story_id, "", "", "separate", None)
+            title = (
+                "Возможный взлом Payy"
+                if kwargs["fragment"].publication_id == first.publication_id
+                else "Атака на Payy"
+            )
+            return Assignment((), "new", None, title, title, "separate", None)
+
+    assigner = Assigner()
+    embedder = Embedder(
+        {embedding_input(pub.text, ["Payy"]): [1.0, 0.0] for pub in (first, second)}
+    )
+    await assign_speculative_batch(
+        store,
+        embedder,
+        assigner,
+        [(pub, _event_result(pub.text, pub.text, "Payy")) for pub in (first, second)],
+        strict=False,
+    )
+    links = await store.links_for_publications({first.publication_id, second.publication_id})
+    assert len({link.story_id for link in links}) == 1
+    assert assigner.calls == 3
+    assert (await store.list_stories())[0].key_entity == "payy"
 
 
 @pytest.mark.asyncio

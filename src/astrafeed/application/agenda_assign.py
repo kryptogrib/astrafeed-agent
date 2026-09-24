@@ -607,6 +607,94 @@ async def assign_speculative_batch(
                 decision_task.cancel()
         await asyncio.gather(*decision_tasks, return_exceptions=True)
 
+    if not strict:
+        # Speculative proposals cannot see stories created by other posts in
+        # this batch. Similarity only nominates candidates; the model makes
+        # a second, explicit story decision before any new link is committed.
+        prior_new: list[tuple[PreparedFragment, Story, str]] = []
+        reconsiderations: list[tuple[int, int, asyncio.Task]] = []
+
+        async def reconsider(
+            proposal: PreparedFragment, candidates: list[tuple[PreparedFragment, Story]]
+        ) -> PreparedFragment:
+            nonlocal model_seconds
+            context = replace(
+                proposal.context,
+                candidates=(
+                    *proposal.context.candidates,
+                    *(item.indexed for item, _ in candidates),
+                ),
+                stories=(*proposal.context.stories, *(story for _, story in candidates)),
+            )
+            started = perf_counter()
+            try:
+                async with semaphore:
+                    decision = await _decide(assigner, proposal.indexed, context)
+            except BudgetExceeded:
+                raise
+            except Exception:
+                return proposal
+            finally:
+                model_seconds += perf_counter() - started
+            story_ids = {story.story_id for _, story in candidates}
+            if getattr(decision, "story_decision", None) == "existing" and (
+                getattr(decision, "story_id", None) in story_ids
+            ):
+                return replace(proposal, context=context, assignment=decision)
+            return proposal
+
+        for job_index, ((publication, _), prepared) in enumerate(zip(jobs, proposals, strict=True)):
+            for proposal_index, proposal in enumerate(prepared):
+                assignment = proposal.assignment
+                if assignment is None or getattr(assignment, "story_decision", None) != "new":
+                    continue
+                key = _assignment_entity_key(assignment, proposal.indexed, frozen_entities)
+                if not key:
+                    continue
+                matches = sorted(
+                    (
+                        (
+                            cosine_similarity(
+                                proposal.indexed.vector or [], item.indexed.vector or []
+                            ),
+                            item,
+                            story,
+                        )
+                        for item, story, prior_key in prior_new
+                        if prior_key == key
+                        and item.indexed.publication_id != proposal.indexed.publication_id
+                        and proposal.indexed.published_at - LOOKBACK <= item.indexed.published_at
+                        < proposal.indexed.published_at
+                    ),
+                    key=lambda pair: -pair[0],
+                )
+                candidates = [
+                    (item, story)
+                    for score, item, story in matches[:3]
+                    if score >= merge_cosine_threshold
+                ]
+                if candidates:
+                    reconsiderations.append(
+                        (
+                            job_index,
+                            proposal_index,
+                            asyncio.create_task(reconsider(proposal, candidates)),
+                        )
+                    )
+                story = _resolve_story(assignment, [], publication, proposal.fragment)
+                if story is not None:
+                    prior_new.append((proposal, story, key))
+        try:
+            for job_index, proposal_index, task in reconsiderations:
+                proposals[job_index][proposal_index] = await task
+        finally:
+            for _, _, task in reconsiderations:
+                if not task.done():
+                    task.cancel()
+            await asyncio.gather(
+                *(task for _, _, task in reconsiderations), return_exceptions=True
+            )
+
     reused = 0
     retried = 0
     deferred = 0
@@ -680,7 +768,7 @@ async def assign_speculative_batch(
             await store.mark_processed(publication.publication_id)
     _log.info(
         "agenda assign batch mode=%s posts=%d reused=%d retried=%d deferred=%d "
-        "load_seconds=%.1f "
+        "reconsidered=%d load_seconds=%.1f "
         "embed_seconds=%.1f context_seconds=%.1f model_seconds=%.1f "
         "commit_seconds=%.1f wall_seconds=%.1f",
         "strict" if strict else "relaxed",
@@ -688,6 +776,7 @@ async def assign_speculative_batch(
         reused,
         retried,
         deferred,
+        len(reconsiderations) if not strict else 0,
         load_seconds,
         embed_seconds,
         context_seconds,
