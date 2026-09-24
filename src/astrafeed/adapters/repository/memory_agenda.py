@@ -159,6 +159,13 @@ class InMemoryAgendaStore:
             return self._snapshots[self._published_id]
         return self._snapshots.get(snapshot_id)
 
+    async def latest_nonempty_snapshot(self) -> Snapshot | None:
+        for snapshot_id in sorted(self._snapshots, reverse=True):
+            snapshot = self._snapshots[snapshot_id]
+            if snapshot.agenda:
+                return snapshot
+        return None
+
     async def set_cycle_state(self, state: CycleState) -> None:
         self._cycle = state
 

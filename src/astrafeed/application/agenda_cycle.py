@@ -60,6 +60,17 @@ def _partial_is_publishable(partial: Snapshot, previous: Snapshot | None) -> boo
     return previous is None or not previous.agenda or len(partial.agenda) >= len(previous.agenda)
 
 
+async def restore_useful_snapshot(store: AgendaStore) -> bool:
+    latest = await store.get_snapshot(None)
+    if latest is None or latest.agenda or "processing_in_progress" not in latest.limitations:
+        return False
+    useful = await store.latest_nonempty_snapshot()
+    if useful is None:
+        return False
+    await publish_snapshot(store, useful)
+    return True
+
+
 async def ingest_publications(
     store: AgendaStore,
     reader: WindowReader,
@@ -148,6 +159,8 @@ async def run_cycle(
         if collect is not None:
             await collect(start, now)
         await ingest_publications(store, reader, source_ids, start, now, now)
+        if await restore_useful_snapshot(store):
+            _log.info("agenda restored previous nonempty snapshot during backfill")
         state.last_collect_at = now
         state.first_collect_done = True
         state.phase = "analyze"

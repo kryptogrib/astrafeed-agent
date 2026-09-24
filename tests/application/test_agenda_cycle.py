@@ -1,4 +1,5 @@
 import asyncio
+from dataclasses import replace
 from datetime import UTC, datetime, timedelta
 from types import SimpleNamespace
 
@@ -6,7 +7,12 @@ import pytest
 
 from astrafeed.adapters.llm.agenda import Assignment
 from astrafeed.adapters.repository.memory_agenda import InMemoryAgendaStore
-from astrafeed.application.agenda_cycle import _partial_is_publishable, cycle_health, run_cycle
+from astrafeed.application.agenda_cycle import (
+    _partial_is_publishable,
+    cycle_health,
+    restore_useful_snapshot,
+    run_cycle,
+)
 from astrafeed.domain.agenda import (
     CLASSIFIER_VERSION,
     Claim,
@@ -141,6 +147,39 @@ async def test_cycle_publishes_snapshot_and_restart_does_not_duplicate():
     assert again.snapshot_id != first_id
     links = await store.links_for_publications({"1:1", "2:2"})
     assert len(links) == 2
+
+
+@pytest.mark.asyncio
+async def test_empty_partial_restores_latest_nonempty_snapshot():
+    store = InMemoryAgendaStore()
+    t = datetime(2026, 9, 24, 12, tzinfo=UTC)
+    useful = await run_cycle(
+        store,
+        reader=Reader(
+            {
+                1: [_item("@a", "1", "Отток ETH ETF 120 млн сегодня.", t - timedelta(hours=3))],
+                2: [_item("@b", "2", "BlackRock: отток ETH ETF 120 млн.", t - timedelta(hours=2))],
+            }
+        ),
+        source_ids=[1, 2],
+        extractor=Extractor(),
+        embedder=Embedder(),
+        assigner=Assigner(),
+        now=t,
+    )
+    assert useful is not None and useful.agenda
+    await store.publish_snapshot(
+        replace(
+            useful,
+            snapshot_id="snap-20260924T130000Z-p128",
+            agenda=(),
+            limitations=("processing_in_progress",),
+        )
+    )
+
+    assert await restore_useful_snapshot(store)
+    assert await store.get_snapshot(None) == useful
+    assert not await restore_useful_snapshot(store)
 
 
 @pytest.mark.asyncio

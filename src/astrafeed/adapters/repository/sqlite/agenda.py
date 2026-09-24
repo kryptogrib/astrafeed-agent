@@ -339,6 +339,19 @@ class SqliteAgendaStore:
                 row = await session.get(AgendaSnapshotRow, snapshot_id)
             return None if row is None else loads(row.payload)
 
+    async def latest_nonempty_snapshot(self) -> Snapshot | None:
+        async with self._session() as session:
+            rows = (
+                await session.scalars(
+                    select(AgendaSnapshotRow).order_by(AgendaSnapshotRow.snapshot_id.desc())
+                )
+            ).all()
+            for row in rows:
+                snapshot = loads(row.payload)
+                if snapshot.agenda:
+                    return snapshot
+        return None
+
     async def set_cycle_state(self, state: CycleState) -> None:
         async with self._session() as session, session.begin():
             row = await session.get(AgendaCycleRow, 1)

@@ -1,4 +1,5 @@
 import asyncio
+from dataclasses import replace
 from datetime import UTC, datetime
 
 import pytest
@@ -13,9 +14,12 @@ from astrafeed.config import Settings
 from astrafeed.domain.agenda import (
     CLASSIFIER_VERSION,
     Claim,
+    CoverageInfo,
     ExtractionResult,
     Fragment,
     PublicationVersion,
+    Snapshot,
+    StoryCard,
     analysis_reuse_key,
     publication_id,
     text_hash,
@@ -101,6 +105,49 @@ async def test_sqlite_accepts_concurrent_embedding_cache_writes(tmp_path):
             *(store.save_embedding(f"key-{index}", [float(index)]) for index in range(32))
         )
         assert await store.get_embedding("key-31") == [31.0]
+    finally:
+        await engine.dispose()
+
+
+@pytest.mark.asyncio
+async def test_sqlite_finds_latest_nonempty_snapshot(tmp_path):
+    engine = create_async_engine(f"sqlite+aiosqlite:///{tmp_path / 'snapshots.db'}")
+    async with engine.begin() as conn:
+        await conn.run_sync(Base.metadata.create_all)
+    store = SqliteAgendaStore(async_sessionmaker(engine, expire_on_commit=False))
+    t = datetime(2026, 9, 24, tzinfo=UTC)
+    useful = Snapshot(
+        snapshot_id="snap-20260924T120000Z-p32",
+        t=t,
+        collected_at=t,
+        analyzed_at=t,
+        published_at=t,
+        coverage=CoverageInfo(1, 0, 0, 1, 1, 0, 0, 1),
+        queue_depth=0,
+        limitations=(),
+        agenda=(
+            StoryCard(
+                story_id="story-1",
+                title="Потоки ETH ETF",
+                entities=("Ethereum",),
+                current_channels=1,
+                previous_channels=0,
+                growth=1,
+                growth_null_reason=None,
+                first_seen=t,
+                freshness=t,
+                explanation="Потоки ETH ETF",
+                claims=(),
+            ),
+        ),
+        agenda_mode="new_or_growing",
+    )
+    try:
+        await store.publish_snapshot(useful)
+        await store.publish_snapshot(
+            replace(useful, snapshot_id="snap-20260924T130000Z-p128", agenda=())
+        )
+        assert await store.latest_nonempty_snapshot() == useful
     finally:
         await engine.dispose()
 
