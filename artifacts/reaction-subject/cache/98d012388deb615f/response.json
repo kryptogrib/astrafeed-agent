@@ -1,0 +1,46 @@
+{
+ "id": "gen-1790247095-cJqb9YkfzhrLXFceNvnj",
+ "object": "chat.completion",
+ "created": 1790247095,
+ "model": "deepseek/deepseek-v4-flash",
+ "provider": "DigitalOcean",
+ "system_fingerprint": null,
+ "service_tier": null,
+ "choices": [
+  {
+   "index": 0,
+   "logprobs": null,
+   "finish_reason": "stop",
+   "native_finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "content": "{\n  \"items\": [\n    {\n      \"id\": \"arc|https://t.me/krasnovcrypto/3754?comment=284540\",\n      \"target\": \"other_subject\",\n      \"target_id\": null,\n      \"comment_fragment\": \"Вот правильный комментарий )\",\n      \"context_fragment\": \"вот бы сейчас пивка бахнуть\",\n      \"why\": \"Reacts to off-topic chain about drinking beer.\"\n    },\n    {\n      \"id\": \"arc|https://t.me/krasnovcrypto/3754?comment=284547\",\n      \"target\": \"project\",\n      \"target_id\": null,\n      \"comment_fragment\": \"5к транзакцій как монаде набивать не будем больше ?😁\",\n      \"context_fragment\": \"Наша цель сейчас просто сделать несколько транзакций\",\n      \"why\": \"Compares activity requirement to Monad, about project general farming.\"\n    },\n    {\n      \"id\": \"arc|https://t.me/krasnovcrypto/3754?comment=284548\",\n      \"target\": \"project\",\n      \"target_id\": null,\n      \"comment_fragment\": \"Можно и 10к набить 😅\",\n      \"context_fragment\": \"5к транзакцій как монаде набивать не будем больше ?😁\",\n      \"why\": \"Continues joke about transaction count for project.\"\n    },\n    {\n      \"id\": \"arc|https://t.me/krasnovcrypto/3754?comment=284549\",\n      \"target\": \"project\",\n      \"target_id\": null,\n      \"comment_fragment\": \"я там вообще нихера не набивал и не делал и дали дроп\",\n      \"context_fragment\": \"5к транзакцій как монаде набивать не будем больше ?😁\",\n      \"why\": \"Comments on Monad drop, contrasting with Arc farming.\"\n    },\n    {\n      \"id\": \"arc|https://t.me/krasnovcrypto/3754?comment=284550\",\n      \"target\": \"project\",\n      \"target_id\": null,\n      \"comment_fragment\": \"Так да, там же раздали за активности в других экосистемах )\",\n      \"context_fragment\": \"я там вообще нихера не набивал и не делал и дали дроп\",\n      \"why\": \"Explains Monad drop criteria, still about that project.\"\n    },\n    {\n      \"id\": \"arc|https://t.me/krasnovcrypto/3754?comment=284568\",\n      \"target\": \"project\",\n      \"target_id\": null,\n      \"comment_fragment\": \"забей хер на арк)\",\n      \"context_fragment\": \"5к транзакцій как монаде набивать не будем больше ?😁\",\n      \"why\": \"Advises to ignore Arc, directly about the project.\"\n    }\n  ]\n}",
+    "refusal": null,
+    "reasoning": null
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 1528,
+  "completion_tokens": 642,
+  "total_tokens": 2170,
+  "cost": 0.0002555056,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 256,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.0002555056,
+   "upstream_inference_prompt_cost": 0.0001296736,
+   "upstream_inference_completions_cost": 0.000125832
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

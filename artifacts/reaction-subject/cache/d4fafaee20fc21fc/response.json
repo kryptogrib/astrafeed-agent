@@ -1,0 +1,46 @@
+{
+ "id": "gen-1790247276-8MYucbeBaCeLGx6ttXN7",
+ "object": "chat.completion",
+ "created": 1790247276,
+ "model": "deepseek/deepseek-v4-flash",
+ "provider": "StreamLake",
+ "system_fingerprint": null,
+ "service_tier": null,
+ "choices": [
+  {
+   "index": 0,
+   "logprobs": null,
+   "finish_reason": "stop",
+   "native_finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "content": "{\n  \"items\": [\n    {\n      \"id\": \"zec|https://t.me/whitelist1/7146?comment=571876\",\n      \"target\": \"other_subject\",\n      \"target_id\": null,\n      \"comment_fragment\": \"Добро пожаловать в чат Whitelist Media\",\n      \"context_fragment\": \"\",\n      \"why\": \"Bot greeting, not reacting to post content.\"\n    },\n    {\n      \"id\": \"zec|https://t.me/whitelist1/7146?comment=571877\",\n      \"target\": \"event\",\n      \"target_id\": null,\n      \"comment_fragment\": \"Орнул с линеи\",\n      \"context_fragment\": \"🔴Linera не смогли собрать денег на сейле и решили закрыться.\",\n      \"why\": \"Reacts to Linera closure news in post.\"\n    },\n    {\n      \"id\": \"zec|https://t.me/whitelist1/7146?comment=571878\",\n      \"target\": \"event\",\n      \"target_id\": null,\n      \"comment_fragment\": \"Такие опездалы\",\n      \"context_fragment\": \"🔴Linera не смогли собрать денег на сейле и решили закрыться.\",\n      \"why\": \"Reacts to Linera closure news in post.\"\n    },\n    {\n      \"id\": \"zec|https://t.me/whitelist1/7146?comment=571879\",\n      \"target\": \"event\",\n      \"target_id\": null,\n      \"comment_fragment\": \"ахаха, линера днище. помню тот ажиотаж с ролями\",\n      \"context_fragment\": \"🔴Linera не смогли собрать денег на сейле и решили закрыться.\",\n      \"why\": \"Reacts to Linera closure news in post.\"\n    },\n    {\n      \"id\": \"zec|https://t.me/whitelist1/7146?comment=571881\",\n      \"target\": \"event\",\n      \"target_id\": null,\n      \"comment_fragment\": \"Так много где было\",\n      \"context_fragment\": \"ахаха, линера днище. помню тот ажиотаж с ролями\",\n      \"why\": \"Inherits subject from chain: Linera closure.\"\n    },\n    {\n      \"id\": \"zec|https://t.me/whitelist1/7146?comment=571887\",\n      \"target\": \"event\",\n      \"target_id\": null,\n      \"comment_fragment\": \"У меня было серебро, и я переживал что не успел докачать полтора уровня до золота.\",\n      \"context_fragment\": \"ахаха, линера днище. помню тот ажиотаж с ролями\",\n      \"why\": \"Inherits subject from chain: Linera closure.\"\n    }\n  ]\n}",
+    "refusal": null,
+    "reasoning": null
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 1589,
+  "completion_tokens": 641,
+  "total_tokens": 2230,
+  "cost": 0.000254387826,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.000254387826,
+   "upstream_inference_prompt_cost": 0.000140794934,
+   "upstream_inference_completions_cost": 0.000113592892
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

@@ -1,0 +1,46 @@
+{
+ "id": "gen-1790247205-LN5DAZ5hUkwHdiw5lfvG",
+ "object": "chat.completion",
+ "created": 1790247205,
+ "model": "deepseek/deepseek-v4-flash",
+ "provider": "NextBit",
+ "system_fingerprint": null,
+ "service_tier": null,
+ "choices": [
+  {
+   "index": 0,
+   "logprobs": null,
+   "finish_reason": "stop",
+   "native_finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "content": "{\n  \"items\": [\n    {\n      \"id\": \"arc|https://t.me/whitelist1/7135?comment=571394\",\n      \"target\": \"other_subject\",\n      \"target_id\": null,\n      \"comment_fragment\": \"Добро пожаловать в чат Whitelist Media\",\n      \"context_fragment\": \"\",\n      \"why\": \"Bot greeting, not reacting to post content.\"\n    },\n    {\n      \"id\": \"arc|https://t.me/whitelist1/7135?comment=571397\",\n      \"target\": \"project\",\n      \"target_id\": null,\n      \"comment_fragment\": \"готовы ректоваться?\",\n      \"context_fragment\": \"\",\n      \"why\": \"Joke about the whole Arc ecosystem launch.\"\n    },\n    {\n      \"id\": \"arc|https://t.me/whitelist1/7135?comment=571398\",\n      \"target\": \"unclear\",\n      \"target_id\": null,\n      \"comment_fragment\": \"\",\n      \"context_fragment\": \"\",\n      \"why\": \"Short emotion, digest post, subject unclear.\"\n    },\n    {\n      \"id\": \"arc|https://t.me/whitelist1/7135?comment=571402\",\n      \"target\": \"project\",\n      \"target_id\": null,\n      \"comment_fragment\": \"норм метод через эллипс: ликвы нет, цены ниже реальных. стартер пакт на рект\",\n      \"context_fragment\": \"\",\n      \"why\": \"Critique of Arc ecosystem's liquidity and pricing.\"\n    }\n  ]\n}",
+    "refusal": null,
+    "reasoning": null
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 1982,
+  "completion_tokens": 349,
+  "total_tokens": 2331,
+  "cost": 0.00034312,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 512,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.00034312,
+   "upstream_inference_prompt_cost": 0.00023842,
+   "upstream_inference_completions_cost": 0.0001047
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

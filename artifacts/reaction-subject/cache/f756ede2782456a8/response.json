@@ -1,0 +1,46 @@
+{
+ "id": "gen-1790247160-TwLJibAveCErGH1WRNr3",
+ "object": "chat.completion",
+ "created": 1790247160,
+ "model": "deepseek/deepseek-v4-flash",
+ "provider": "Novita",
+ "system_fingerprint": null,
+ "service_tier": null,
+ "choices": [
+  {
+   "index": 0,
+   "logprobs": null,
+   "finish_reason": "stop",
+   "native_finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "content": "{\"items\": [{\"id\": \"eth|https://t.me/rawa_imagination/21126?comment=343764\", \"verdict\": \"reject\", \"fragment\": \"На койнгеко написали что ключ украли\", \"why\": \"Comment adds external info, not reacting to the quoted uncertainty.\"}]}",
+    "refusal": null,
+    "reasoning": null
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 1085,
+  "completion_tokens": 75,
+  "total_tokens": 1160,
+  "cost": 0.0001729,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.0001729,
+   "upstream_inference_prompt_cost": 0.0001519,
+   "upstream_inference_completions_cost": 2.1e-05
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

@@ -1,0 +1,33 @@
+{
+ "prompt_sha256": "25b834fe5db8a64c",
+ "input_sha256": "dc022cf3fceb73fa",
+ "model": "deepseek/deepseek-v4-flash",
+ "schema": "reaction-subject/v1",
+ "db_md5": "8618099125a806df376354286ccd982e",
+ "provider_pinned": null,
+ "seconds": 6.7,
+ "provider_actual": "GMICloud",
+ "usage": {
+  "prompt_tokens": 906,
+  "completion_tokens": 438,
+  "total_tokens": 1344,
+  "cost": 0.000162162,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.000162162,
+   "upstream_inference_prompt_cost": 8.2446e-05,
+   "upstream_inference_completions_cost": 7.9716e-05
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}
