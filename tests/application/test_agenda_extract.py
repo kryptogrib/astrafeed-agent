@@ -56,6 +56,26 @@ def test_financial_flow_table_remains_one_fragment():
     )
     assert split_independent_claims(fragment) == (fragment,)
 
+
+def test_single_claim_with_two_project_sentences_is_split():
+    from astrafeed.application.agenda_extract import split_independent_claims
+    from astrafeed.domain.agenda import Claim, Fragment, MentionedEntity
+
+    text = "The Furnace запустил минт. ZecVisions закрыла whitelist."
+    fragment = Fragment(
+        text=text,
+        start=0,
+        end=len(text),
+        entities=(MentionedEntity("The Furnace", ""), MentionedEntity("ZecVisions", "")),
+        claims=(Claim("event", "author", text, 0, len(text)),),
+    )
+    pieces = split_independent_claims(fragment)
+    assert [piece.entities[0].surface for piece in pieces] == ["The Furnace", "ZecVisions"]
+    assert [piece.claims[0].quote for piece in pieces] == [
+        "The Furnace запустил минт.",
+        "ZecVisions закрыла whitelist.",
+    ]
+
 class RecordingExtractor:
     def __init__(self, draft: ExtractionResult | Exception) -> None:
         self.draft = draft

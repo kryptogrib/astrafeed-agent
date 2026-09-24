@@ -65,8 +65,6 @@ def verify_fragment(text: str, fragment: Fragment) -> Fragment:
 
 def split_independent_claims(fragment: Fragment) -> tuple[Fragment, ...]:
     """Keep a digest's unrelated projects out of one story assignment."""
-    if len(fragment.claims) < 2:
-        return (fragment,)
     heading = fragment.text[:160].casefold()
     if any(term in heading for term in ("финпоток", "etf flows", "inflows", "outflows")):
         return (fragment,)
@@ -80,6 +78,42 @@ def split_independent_claims(fragment: Fragment) -> tuple[Fragment, ...]:
                 rf"(?<!\w){re.escape(entity.surface.strip('$#'))}(?!\w)", quote, re.I
             )
         )
+
+    if len(fragment.claims) == 1:
+        claim = fragment.claims[0]
+        sentences = re.split(r"(?<=[.!?])\s+(?=[A-ZА-ЯЁ])", claim.quote)
+        groups = [mentioned_entities(sentence) for sentence in sentences]
+        named = {tuple(entity.surface.casefold() for entity in group) for group in groups if group}
+        if len(named) >= 2:
+            parts = []
+            cursor = 0
+            for sentence, entities in zip(sentences, groups, strict=True):
+                offset = claim.quote.find(sentence, cursor)
+                cursor = offset + len(sentence)
+                start = claim.start + offset
+                part_claim = Claim(
+                    kind=claim.kind,
+                    speaker=claim.speaker,
+                    quote=sentence,
+                    start=start,
+                    end=start + len(sentence),
+                    is_ad=claim.is_ad,
+                    dates=claim.dates,
+                    numbers=claim.numbers,
+                )
+                parts.append(
+                    Fragment(
+                        text=sentence,
+                        start=start,
+                        end=start + len(sentence),
+                        is_ad=fragment.is_ad,
+                        entities=entities,
+                        claims=(part_claim,),
+                    )
+                )
+            return tuple(parts)
+    if len(fragment.claims) < 2:
+        return (fragment,)
 
     groups = [mentioned_entities(claim.quote) for claim in fragment.claims]
     named_groups = {
