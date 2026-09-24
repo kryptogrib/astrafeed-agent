@@ -1,0 +1,46 @@
+{
+ "id": "gen-1790253902-16t4f5R1DjUtBTouNfuO",
+ "object": "chat.completion",
+ "created": 1790253902,
+ "model": "deepseek/deepseek-v4-flash",
+ "provider": "StreamLake",
+ "system_fingerprint": null,
+ "service_tier": null,
+ "choices": [
+  {
+   "index": 0,
+   "logprobs": null,
+   "finish_reason": "stop",
+   "native_finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "content": "{\n  \"target\": \"author_thesis\",\n  \"target_id\": \"th-c9b6d6bfd3b1b6bb\",\n  \"comment_fragment\": \"Почему\",\n  \"context_fragment\": \"$ETH looks like shit ☠️\",\n  \"why\": \"Comment asks why about author's thesis\"\n}",
+    "refusal": null,
+    "reasoning": null
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 580,
+  "completion_tokens": 73,
+  "total_tokens": 653,
+  "cost": 6.4327956e-05,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 6.4327956e-05,
+   "upstream_inference_prompt_cost": 5.139148e-05,
+   "upstream_inference_completions_cost": 1.2936476e-05
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

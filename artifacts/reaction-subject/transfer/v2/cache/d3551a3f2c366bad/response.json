@@ -1,0 +1,46 @@
+{
+ "id": "gen-1790254041-v2GFYZaZkde0ig9hLIv3",
+ "object": "chat.completion",
+ "created": 1790254041,
+ "model": "deepseek/deepseek-v4-flash",
+ "provider": "OpenInference",
+ "system_fingerprint": "vllm-dev-ep-17a051ab",
+ "service_tier": null,
+ "choices": [
+  {
+   "index": 0,
+   "logprobs": null,
+   "finish_reason": "stop",
+   "native_finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "content": "{\"target\": \"other_subject\", \"target_id\": null, \"comment_fragment\": \"Благодарю\", \"context_fragment\": \"\", \"why\": \"Комментарий — простая благодарность, не привязан к теме поста или цепочке; предмет неясен.\"}",
+    "refusal": null,
+    "reasoning": null
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 3637,
+  "completion_tokens": 67,
+  "total_tokens": 3704,
+  "cost": 0.00021596,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 3092,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.00021596,
+   "upstream_inference_prompt_cost": 0.00016906,
+   "upstream_inference_completions_cost": 4.69e-05
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

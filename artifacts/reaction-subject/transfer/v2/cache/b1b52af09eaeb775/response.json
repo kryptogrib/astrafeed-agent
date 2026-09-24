@@ -1,0 +1,46 @@
+{
+ "id": "gen-1790253984-rjeUtNoIfQDajckBok6e",
+ "object": "chat.completion",
+ "created": 1790253984,
+ "model": "deepseek/deepseek-v4-flash",
+ "provider": "GMICloud",
+ "system_fingerprint": null,
+ "service_tier": null,
+ "choices": [
+  {
+   "index": 0,
+   "logprobs": null,
+   "finish_reason": "stop",
+   "native_finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "content": "{\n  \"target\": \"author_thesis\",\n  \"target_id\": \"th-b1ab7f5c39f270af\",\n  \"comment_fragment\": \"Ну оно все уже не первой свежести. Мне только стандарт и нравится\",\n  \"context_fragment\": \"апсайд по росту еще есть - как минимум у нас еще не было меты, когда мы все дружно летим в пирамидки\",\n  \"why\": \"Comment disagrees with author's thesis about fresh upside; prefers only Standard.\"\n}",
+    "refusal": null,
+    "reasoning": null
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 1913,
+  "completion_tokens": 118,
+  "total_tokens": 2031,
+  "cost": 6.51014e-05,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 1792,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 6.51014e-05,
+   "upstream_inference_prompt_cost": 4.36254e-05,
+   "upstream_inference_completions_cost": 2.1476e-05
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

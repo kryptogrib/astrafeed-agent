@@ -1,0 +1,46 @@
+{
+ "id": "gen-1790253988-B1LYD3sfW15ewiO2zFzg",
+ "object": "chat.completion",
+ "created": 1790253988,
+ "model": "deepseek/deepseek-v4-flash",
+ "provider": "GMICloud",
+ "system_fingerprint": null,
+ "service_tier": null,
+ "choices": [
+  {
+   "index": 0,
+   "logprobs": null,
+   "finish_reason": "stop",
+   "native_finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "content": "{\"target\": \"other_subject\", \"target_id\": null, \"comment_fragment\": \"Я в котах, арт крутой, механика окэй, но сейчас уткнулись в то что коты 10ой эпохи не получают ренту а их большинство, поэтому невыгодно их майнить и на опенси они не продаются. Плюс спроса на токен hash нет ибо за него только условно косметику для кота можно делать, стейкинг там тоже много не приносит, флайвил застопорился. Может чего придумают я идей кидал им, но кто там дев неизвестно (кто-то из снг вероятно ибо нашли в коде комменты на русском). И еще ultrapara там держит почти пол супплая. Beeple два раза уже в картинки их вставлял, но масс адопшена пока нет, но небольшое коммьюнити уже имеется нужно билдить дальше, но интересно ли это девам или уже норм сумки хз. Майнить ща можно с любого пк, но не отобьешь\", \"context_fragment\": \"\", \"why\": \"Comment discusses HashCats project, not Ethereum or post's main thesis.\"}",
+    "refusal": null,
+    "reasoning": null
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 2122,
+  "completion_tokens": 295,
+  "total_tokens": 2417,
+  "cost": 0.0001163344,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 1792,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.0001163344,
+   "upstream_inference_prompt_cost": 6.26444e-05,
+   "upstream_inference_completions_cost": 5.369e-05
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

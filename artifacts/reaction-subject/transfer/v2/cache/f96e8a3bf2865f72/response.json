@@ -1,0 +1,46 @@
+{
+ "id": "gen-1790253954-gSwK3jOgsuzEa6NGhLU8",
+ "object": "chat.completion",
+ "created": 1790253954,
+ "model": "deepseek/deepseek-v4-flash",
+ "provider": "Azure",
+ "system_fingerprint": null,
+ "service_tier": null,
+ "choices": [
+  {
+   "index": 0,
+   "logprobs": null,
+   "finish_reason": "stop",
+   "native_finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "content": "{\n    \"target\": \"event\",\n    \"target_id\": \"e2-6725051e7f89c31d\",\n    \"comment_fragment\": \"кошель\",\n    \"context_fragment\": \"Кошелек - @zodl_app\",\n    \"why\": \"Comment asks about wallet extension, post mentions Zodl wallet.\"\n}",
+    "refusal": null,
+    "reasoning": null
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 2023,
+  "completion_tokens": 75,
+  "total_tokens": 2098,
+  "cost": 0.000146062,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 1792,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.000146062,
+   "upstream_inference_prompt_cost": 0.000104062,
+   "upstream_inference_completions_cost": 4.2e-05
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

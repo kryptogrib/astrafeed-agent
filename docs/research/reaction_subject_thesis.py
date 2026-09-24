@@ -244,7 +244,7 @@ def llm_b(db: str, *, pay: bool, max_usd: float) -> None:
         raise SystemExit("run build-b first")
     # Shared cache with transfer v2: identical payloads (no new theses) are hits,
     # a changed thesis list is a new identity and must be a new call.
-    run_llm(db, pay=pay, max_usd=max_usd, src=OUT_TH, dst=OUT_B)
+    run_llm(db, pay=pay, max_usd=max_usd, src=OUT_TH, dst=OUT_B, cache=OUT_T / "v2" / "cache")
     # run_llm reads src/threads.jsonl; copy B threads there only inside thesis/
     # so we write threads.jsonl next to threads-b for the caller.
     # If the user called us, we already need src/threads.jsonl == threads-b.

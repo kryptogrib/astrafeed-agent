@@ -1,0 +1,46 @@
+{
+ "id": "gen-1790254017-Jun6554rWqx38VjALHba",
+ "object": "chat.completion",
+ "created": 1790254017,
+ "model": "deepseek/deepseek-v4-flash",
+ "provider": "OpenInference",
+ "system_fingerprint": "vllm-dev-ep-17a051ab",
+ "service_tier": null,
+ "choices": [
+  {
+   "index": 0,
+   "logprobs": null,
+   "finish_reason": "stop",
+   "native_finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "content": "{\"target\": \"other_subject\", \"target_id\": null, \"comment_fragment\": \"Зимой-весной на шорте нефти х2 на депозит сделал\", \"context_fragment\": \"нефть это мясо хуже форекса. шортить такое надо стальные яйца\", \"why\": \"Комментарий обсуждает торговлю нефтью, а не Arc или тезисы поста.\"}",
+    "refusal": null,
+    "reasoning": null
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 3519,
+  "completion_tokens": 102,
+  "total_tokens": 3621,
+  "cost": 0.00023109,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 3027,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.00023109,
+   "upstream_inference_prompt_cost": 0.00015969,
+   "upstream_inference_completions_cost": 7.14e-05
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

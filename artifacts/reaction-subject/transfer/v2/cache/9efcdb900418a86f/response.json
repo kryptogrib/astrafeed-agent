@@ -1,0 +1,46 @@
+{
+ "id": "gen-1790253930-fMRDwKp8n4CDO7ACgagc",
+ "object": "chat.completion",
+ "created": 1790253930,
+ "model": "deepseek/deepseek-v4-flash",
+ "provider": "Venice",
+ "system_fingerprint": null,
+ "service_tier": "default",
+ "choices": [
+  {
+   "index": 0,
+   "logprobs": null,
+   "finish_reason": "stop",
+   "native_finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "content": "{\"target\": \"other_subject\", \"target_id\": null, \"comment_fragment\": \"Что ты считаешь дорого в хибачи, а что приемлемо?\", \"context_fragment\": \"🤪 https://hibachi.xyz/ - сам знаешь, кто это\", \"why\": \"Comment discusses Hibachi cost, not the main Arc topic.\"}",
+    "refusal": null,
+    "reasoning": null
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 1965,
+  "completion_tokens": 80,
+  "total_tokens": 2045,
+  "cost": 6.7235e-05,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 1792,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 6.7235e-05,
+   "upstream_inference_prompt_cost": 5.1835e-05,
+   "upstream_inference_completions_cost": 1.54e-05
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

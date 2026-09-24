@@ -1,0 +1,33 @@
+{
+ "prompt_sha256": "effdaf427b04cc5f",
+ "input_sha256": "502a12199aaaf1da",
+ "model": "deepseek/deepseek-v4-flash",
+ "schema": "author-thesis-extract/v1",
+ "db_md5": "1c714bad0d7dd7e07d1f2c5032fd8dce",
+ "provider_pinned": null,
+ "seconds": 6.4,
+ "provider_actual": "DigitalOcean",
+ "usage": {
+  "prompt_tokens": 379,
+  "completion_tokens": 17,
+  "total_tokens": 396,
+  "cost": 4.0474e-05,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 4.0474e-05,
+   "upstream_inference_prompt_cost": 3.7142e-05,
+   "upstream_inference_completions_cost": 3.332e-06
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

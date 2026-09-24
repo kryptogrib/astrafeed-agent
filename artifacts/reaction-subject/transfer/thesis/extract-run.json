@@ -1,0 +1,11 @@
+{
+ "model": "deepseek/deepseek-v4-flash",
+ "schema": "author-thesis-extract/v1",
+ "calls": 0,
+ "cache_hits": 26,
+ "cache_misses": 0,
+ "spent_usd": 0.00389,
+ "llm_seconds": 117.9,
+ "wall_seconds": 0.0,
+ "missing_estimate_usd": 0
+}

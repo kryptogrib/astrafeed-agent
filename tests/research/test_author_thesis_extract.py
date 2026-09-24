@@ -50,6 +50,39 @@ def test_extractor_input_is_only_the_post_and_requested_topic():
     assert any("comments" in p or "labels" in p or "fields" in p for p in problems)
 
 
+def test_unique_verbatim_quote_repairs_a_wrong_span_ambiguous_stays_rejected():
+    quote = "I think ETH goes to 3k."
+    got = accept_theses(
+        THREAD,
+        {
+            "theses": [
+                {
+                    "quote": quote,
+                    "start": 0,
+                    "end": 5,
+                    "kind": "forecast",
+                    "topic_role": "subject",
+                }
+            ]
+        },
+    )
+    assert len(got["theses"]) == 1
+    t = got["theses"][0]
+    assert t["quote"] == POST[t["start"] : t["end"]] == quote
+    assert t["span_repaired"] is True
+
+    twice = "Arc"
+    post2 = POST + " Arc again"
+    th2 = {**THREAD, "post": {**THREAD["post"], "text": post2}}
+    assert post2.count(twice) > 1
+    dropped = accept_theses(
+        th2,
+        {"theses": [{"quote": twice, "start": 0, "end": 3, "kind": "evaluation", "topic_role": "subject"}]},
+    )
+    assert dropped["theses"] == []
+    assert any("span" in x for x in dropped["rejected"])
+
+
 def test_quote_must_equal_post_slice_wrong_or_ambiguous_spans_are_dropped():
     quote = "I think ETH goes to 3k."
     start = POST.index(quote)
@@ -73,9 +106,7 @@ def test_quote_must_equal_post_slice_wrong_or_ambiguous_spans_are_dropped():
     assert ok["theses"][0]["thesis_id"] == stable_thesis_id(THREAD["thread"], quote)
 
     for raw in (
-        {"theses": [{"quote": quote, "start": start + 1, "end": start + len(quote), "kind": "forecast"}]},
         {"theses": [{"quote": "ETH goes to 4k", "start": start, "end": start + 14, "kind": "forecast"}]},
-        {"theses": [{"quote": quote, "start": None, "end": None, "kind": "forecast"}]},
         {"theses": "not-a-list"},
         None,
     ):

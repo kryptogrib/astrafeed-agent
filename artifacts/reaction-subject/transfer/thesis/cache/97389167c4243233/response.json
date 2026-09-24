@@ -1,0 +1,46 @@
+{
+ "id": "gen-1790253649-Lo2bnMX4UrpiHbEUl9la",
+ "object": "chat.completion",
+ "created": 1790253649,
+ "model": "deepseek/deepseek-v4-flash",
+ "provider": "GMICloud",
+ "system_fingerprint": null,
+ "service_tier": null,
+ "choices": [
+  {
+   "index": 0,
+   "logprobs": null,
+   "finish_reason": "stop",
+   "native_finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "content": "{\n  \"theses\": [\n    {\n      \"quote\": \"Fomo обещают поддерживать их с первого дня запуска. Прикол в том, что fomo и торговля в ончейне становится в какой-то степени более важным, чем даже листинги (хотя понятно, что листинг на спот Робингуда ничего не переплюнет. Но тем не менее), потому что откуп какой-то монеты себе в сумки и последующие тезисы например от Кайла и Юнипикса могут очень хорошо повлиять на динамику монеты\",\n      \"start\": 18,\n      \"end\": 370,\n      \"kind\": \"evaluation\",\n      \"topic_role\": \"context\",\n      \"why\": \"Author evaluates onchain trading as more important than listings.\"\n    },\n    {\n      \"quote\": \"Самое время напомнить, на что можно обратить внимание в Арке (пусть и проживет он всего пару дней)\",\n      \"start\": 372,\n      \"end\": 456,\n      \"kind\": \"forecast\",\n      \"topic_role\": \"subject\",\n      \"why\": \"Author forecasts Arc mainnet will live only a few days.\"\n    },\n    {\n      \"quote\": \"Честно говоря, тебе хватит просто @maestro и chart.zone (у меня такой набор лично). В маэстро можно и торговать, и бриджить уже сейчас (но пока только выводить из арка)\",\n      \"start\": 1317,\n      \"end\": 1466,\n      \"kind\": \"advice\",\n      \"topic_role\": \"subject\",\n      \"why\": \"Author advises using Maestro and chart.zone for Arc.\"\n    }\n  ],\n  \"truncated\": false\n}",
+    "refusal": null,
+    "reasoning": null
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 1320,
+  "completion_tokens": 387,
+  "total_tokens": 1707,
+  "cost": 0.0001719172,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 256,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.0001719172,
+   "upstream_inference_prompt_cost": 0.0001014832,
+   "upstream_inference_completions_cost": 7.0434e-05
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

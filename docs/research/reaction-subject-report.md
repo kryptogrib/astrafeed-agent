@@ -251,9 +251,19 @@ v2 (`reaction_subject_v2.py`) исправляет их на **той же** в�
 
 **Предлагаемый следующий шаг — извлечение тезисов автора.** Для постов с обсуждением выделять 0–3 тезиса автора: id, дословная цитата из поста, проверка, что цитата есть в тексте. Затем повторить этот же прогон на кэше. Без этого шага метка thesis не может получить id ни в одном примере. Сколько связей появится после извлечения, покажет только повторный прогон. Объединение событий и отбор новостей — после.
 
+## Извлечение тезисов на transfer (регрессия, не holdout)
+
+Отдельный извлекатель, вход только пост + тема. Предварительная разметка зафиксирована в `3a4c52a` до прогона. Старый `labels.jsonl` не менялся. Подробности: `artifacts/reaction-subject/transfer/thesis/report.md`.
+
+На 16 связываемых старых thesis-меток B дал **4 верные конкретные связи и 2 ложные**. A — 0. Нужный тезис оказался в контексте у 6 из 16; из этих 6 найдены 4. Извлечение: 10 верных из 41 ожидаемого, 14 лишних, 24 принятых цитаты (границы модели почти все были неверны и чинились, только если цитата в посте одна). Event на context+id+verify не сдвинулся (1/1 заявленных, 0 ложных). Новый расход $0.00993, серия $0.04426 из $1.
+
+Четыре верные связи — одна короткая ветка «$ETH looks like shit». Две ложные — вопрос про медвежий div, пришитый к прогнозу $2к, и «только стандарт» к тезису про пирамиды. Три реплики со старым target ≠ thesis тоже получили id (шаблон «вижу твой вопрос», фаундер ZEC, токен LONG).
+
+**Массово извлекатель не внедрять.** Он снимает потолок «нет id», но не доказывает, что список тезисов достаточно точен для панели: полнота 4/16, лишние цитаты дают лишние якоря.
+
 ## Рекомендация
 
-**Массово пока не внедрять.** Следующий шаг — конфигурация v2 context+id+verify, только для связей с событием или тезисом, у которых есть id. Всё остальное остаётся на уровне темы.
+**Массово пока не внедрять.** Рабочая конфигурация по-прежнему v2 context+id+verify, только для связей с событием или тезисом, у которых есть id. Всё остальное остаётся на уровне темы.
 
 - На test она не дала ни одной ложной event-связи. Найдено 8 из 13 реакций на событие и 3 из 3 проверяемых реакций на выделенный тезис. Цена — копейки.
 - Решения «project» и «other_subject» из модели в продукт не переносить: реплики остаются на уровне темы, иначе реакции пропадают из ответа.
@@ -288,4 +298,12 @@ python3 docs/research/reaction_subject_transfer.py sample --db astrafeed-transfe
 python3 docs/research/reaction_subject_transfer.py estimate
 python3 docs/research/reaction_subject_transfer.py llm --db astrafeed-transfer.db   # только кэш: 117 hits
 python3 docs/research/reaction_subject_transfer.py eval
+
+# извлечение тезисов на transfer (нужен тот же astrafeed-transfer.db)
+python3 docs/research/reaction_subject_thesis.py label
+python3 docs/research/author_thesis_extract.py extract --db astrafeed-transfer.db   # 26 hits
+python3 docs/research/reaction_subject_thesis.py build-b
+python3 docs/research/reaction_subject_thesis.py llm --db astrafeed-transfer.db     # 49 новых + 65 hits
+python3 docs/research/reaction_subject_thesis.py eval
+python3 docs/research/reaction_subject_thesis.py check
 ```

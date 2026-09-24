@@ -108,14 +108,17 @@ def stable_thesis_id(thread: str, quote: str) -> str:
     return f"th-{raw}"
 
 
-def _span_ok(post: str, quote: str, start: Any, end: Any) -> bool:
+def resolve_span(post: str, quote: str, start: Any, end: Any) -> tuple[int, int, bool] | None:
+    """Accept post[start:end]==quote, or a quote that occurs exactly once. Ambiguous spans stay rejected."""
     if not isinstance(quote, str) or not quote:
-        return False
-    if not isinstance(start, int) or not isinstance(end, int):
-        return False
-    if start < 0 or end > len(post) or start >= end:
-        return False
-    return post[start:end] == quote
+        return None
+    if isinstance(start, int) and isinstance(end, int) and 0 <= start < end <= len(post):
+        if post[start:end] == quote:
+            return start, end, False
+    first = post.find(quote)
+    if first < 0 or post.find(quote, first + 1) >= 0:
+        return None
+    return first, first + len(quote), True
 
 
 def accept_theses(th: dict, raw: Any) -> dict:
@@ -139,12 +142,13 @@ def accept_theses(th: dict, raw: Any) -> dict:
             rejected.append(f"{i}:not_object")
             continue
         quote = item.get("quote")
-        start, end = item.get("start"), item.get("end")
+        resolved = resolve_span(post, quote if isinstance(quote, str) else "", item.get("start"), item.get("end"))
         kind = item.get("kind")
         role = item.get("topic_role")
-        if not _span_ok(post, quote if isinstance(quote, str) else "", start, end):
+        if resolved is None:
             rejected.append(f"{i}:span")
             continue
+        start, end, repaired = resolved
         if kind not in KINDS:
             rejected.append(f"{i}:kind")
             continue
@@ -164,6 +168,7 @@ def accept_theses(th: dict, raw: Any) -> dict:
                 "end": end,
                 "kind": kind,
                 "topic_role": role,
+                "span_repaired": repaired,
                 "why": item.get("why") if isinstance(item.get("why"), str) else "",
             }
         )

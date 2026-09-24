@@ -238,14 +238,16 @@ def comments(rows: list[dict]):
                 yield th, c
 
 
-def run_llm(db: str, *, pay: bool, max_usd: float, src: Path = OUT, dst: Path = OUT2) -> None:
+def run_llm(
+    db: str, *, pay: bool, max_usd: float, src: Path = OUT, dst: Path = OUT2, cache: Path | None = None
+) -> None:
     from news_pulse_load import db_md5
 
     rows = _read(src / "threads.jsonl")
     for th, c in comments(rows):
         bad = leaks(th, c, context_for(th, c))
         assert not bad, (c["id"], bad)
-    caller = Caller(db_md5(db), pay=pay, max_usd=max_usd, cache=dst / "cache")
+    caller = Caller(db_md5(db), pay=pay, max_usd=max_usd, cache=cache or (dst / "cache"))
     first, second = [], []
     t0 = time.time()
     for th, c in comments(rows):
