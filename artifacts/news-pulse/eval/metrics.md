@@ -16,11 +16,11 @@ MD5 БД до/после: `8618099125a806df376354286ccd982e` / `8618099125a806df
 | Ошибочное объединение отрицательных пар | 1 | 10 | = 0 ошибок | fail |
 | Полнота объединения положительных пар | 5 | 10 | 0.9 | fail |
 | Правильность заявленных связей комментарий → событие | 0 | 4 | 0.9 | fail |
-| Записи и ссылки вне окна | 0 | 59815 | = 0 ошибок | pass |
+| Записи и ссылки вне окна | 0 | 71903 | = 0 ошибок | unverified |
 | Граничные пробы [start,end) | 58 | 58 | 1 | pass |
-| Правильность числовых агрегатов | 24506 | 24506 | 1 | pass |
-| Подтверждённость фактов брифа | 8840 | 8840 | 0.95 | pass |
-| Выдуманные цены, даты, авторство, официальное подтверждение | 0 | 8840 | = 0 ошибок | pass |
+| Правильность числовых агрегатов | 25153 | 25153 | 1 | pass |
+| Подтверждённость фактов брифа | 17949 | 17949 | 0.95 | pass |
+| Выдуманные цены, даты, авторство, официальное подтверждение | 0 | 17949 | = 0 ошибок | pass |
 | Согласие сегментных классов | 9 | 43 | нет | unverified |
 | Согласие происхождения | 17 | 43 | нет | unverified |
 | Согласие роли источника | 26 | 43 | нет | unverified |
@@ -79,16 +79,39 @@ MD5 БД до/после: `8618099125a806df376354286ccd982e` / `8618099125a806df
 
 Ошибки и непроверенные случаи:
 
-- Ошибка: {"topic": "zec", "links": ["https://t.me/icodrops_sergey/2426?comment=150547"], "expected": "author_thesis", "actual": "event:e36-9e94ec9cc7c059c8", "mapped_events": ["zec-rank9-0917"]}
-- Ошибка: {"topic": "zec", "links": ["https://t.me/icodrops_sergey/2426?comment=150550"], "expected": "author_thesis", "actual": "event:e36-9e94ec9cc7c059c8", "mapped_events": ["zec-rank9-0917"]}
-- Ошибка: {"topic": "zec", "links": ["https://t.me/icodrops_sergey/2426?comment=150552"], "expected": "project", "actual": "event:e36-9e94ec9cc7c059c8", "mapped_events": ["zec-rank9-0917"]}
+- Ошибка: {"topic": "zec", "links": ["https://t.me/icodrops_sergey/2426?comment=150547"], "expected": "author_thesis", "actual": "event:e37-9e94ec9cc7c059c8", "mapped_events": ["zec-rank9-0917"]}
+- Ошибка: {"topic": "zec", "links": ["https://t.me/icodrops_sergey/2426?comment=150550"], "expected": "author_thesis", "actual": "event:e37-9e94ec9cc7c059c8", "mapped_events": ["zec-rank9-0917"]}
+- Ошибка: {"topic": "zec", "links": ["https://t.me/icodrops_sergey/2426?comment=150552"], "expected": "project", "actual": "event:e37-9e94ec9cc7c059c8", "mapped_events": ["zec-rank9-0917"]}
 - Ошибка: {"topic": "eth", "links": ["https://t.me/rawa_imagination/21078?comment=342794"], "expected": "author_thesis", "actual": "event:e43-e81e760cff5cd185", "mapped_events": ["bitmine-buy-27180-0914"]}
 
 ## Записи и ссылки вне окна
 
 Числитель — нарушения; знаменатель — проверенные вхождения времени/ссылок. Включает время < start; явная предыстория отдельно.
 
-Ошибок не обнаружено.
+- Не проверено: {"run": "/Users/chelovek/orca/workspaces/AstraFeed-TokenBrief/hakaton/artifacts/news-pulse/zec/2026-09-09..2026-09-23", "path": "pulse.discussion[54].text", "links": ["https://t.me/icodrops_sergey/2105"], "reason": "В БД нет времени ссылки"}
+- Не проверено: {"run": "/Users/chelovek/orca/workspaces/AstraFeed-TokenBrief/hakaton/artifacts/news-pulse/zec/2026-09-09..2026-09-23", "path": "pulse.discussion[54].quote", "links": ["https://t.me/icodrops_sergey/2105"], "reason": "В БД нет времени ссылки"}
+- Не проверено: {"run": "/Users/chelovek/orca/workspaces/AstraFeed-TokenBrief/hakaton/artifacts/news-pulse/zec/2026-09-09..2026-09-23", "path": "pulse.evidence[261].quote", "links": ["https://t.me/icodrops_sergey/2105"], "reason": "В БД нет времени ссылки"}
+- Не проверено: {"run": "/Users/chelovek/orca/workspaces/AstraFeed-TokenBrief/hakaton/artifacts/news-pulse/zec/2026-09-09..2026-09-23", "path": "pulse.brief_markdown", "links": ["https://t.me/icodrops_sergey/2105"], "reason": "В БД нет времени ссылки"}
+- Не проверено: {"run": "/Users/chelovek/orca/workspaces/AstraFeed-TokenBrief/hakaton/artifacts/news-pulse/zec/2026-09-09T00-00-00-00-00..2026-09-21T06-04-31-00-00", "path": "pulse.discussion[54].text", "links": ["https://t.me/icodrops_sergey/2105"], "reason": "В БД нет времени ссылки"}
+- Не проверено: {"run": "/Users/chelovek/orca/workspaces/AstraFeed-TokenBrief/hakaton/artifacts/news-pulse/zec/2026-09-09T00-00-00-00-00..2026-09-21T06-04-31-00-00", "path": "pulse.discussion[54].quote", "links": ["https://t.me/icodrops_sergey/2105"], "reason": "В БД нет времени ссылки"}
+- Не проверено: {"run": "/Users/chelovek/orca/workspaces/AstraFeed-TokenBrief/hakaton/artifacts/news-pulse/zec/2026-09-09T00-00-00-00-00..2026-09-21T06-04-31-00-00", "path": "pulse.evidence[205].quote", "links": ["https://t.me/icodrops_sergey/2105"], "reason": "В БД нет времени ссылки"}
+- Не проверено: {"run": "/Users/chelovek/orca/workspaces/AstraFeed-TokenBrief/hakaton/artifacts/news-pulse/zec/2026-09-09T00-00-00-00-00..2026-09-21T06-04-31-00-00", "path": "pulse.brief_markdown", "links": ["https://t.me/icodrops_sergey/2105"], "reason": "В БД нет времени ссылки"}
+- Не проверено: {"run": "/Users/chelovek/orca/workspaces/AstraFeed-TokenBrief/hakaton/artifacts/news-pulse/zec/2026-09-09T00-00-00-00-00..2026-09-21T06-04-32-00-00", "path": "pulse.discussion[54].text", "links": ["https://t.me/icodrops_sergey/2105"], "reason": "В БД нет времени ссылки"}
+- Не проверено: {"run": "/Users/chelovek/orca/workspaces/AstraFeed-TokenBrief/hakaton/artifacts/news-pulse/zec/2026-09-09T00-00-00-00-00..2026-09-21T06-04-32-00-00", "path": "pulse.discussion[54].quote", "links": ["https://t.me/icodrops_sergey/2105"], "reason": "В БД нет времени ссылки"}
+- Не проверено: {"run": "/Users/chelovek/orca/workspaces/AstraFeed-TokenBrief/hakaton/artifacts/news-pulse/zec/2026-09-09T00-00-00-00-00..2026-09-21T06-04-32-00-00", "path": "pulse.evidence[205].quote", "links": ["https://t.me/icodrops_sergey/2105"], "reason": "В БД нет времени ссылки"}
+- Не проверено: {"run": "/Users/chelovek/orca/workspaces/AstraFeed-TokenBrief/hakaton/artifacts/news-pulse/zec/2026-09-09T00-00-00-00-00..2026-09-21T06-04-32-00-00", "path": "pulse.brief_markdown", "links": ["https://t.me/icodrops_sergey/2105"], "reason": "В БД нет времени ссылки"}
+- Не проверено: {"run": "/Users/chelovek/orca/workspaces/AstraFeed-TokenBrief/hakaton/artifacts/news-pulse/zec/2026-09-09T00-00-00-00-00..2026-09-21T06-04-33-00-00", "path": "pulse.discussion[54].text", "links": ["https://t.me/icodrops_sergey/2105"], "reason": "В БД нет времени ссылки"}
+- Не проверено: {"run": "/Users/chelovek/orca/workspaces/AstraFeed-TokenBrief/hakaton/artifacts/news-pulse/zec/2026-09-09T00-00-00-00-00..2026-09-21T06-04-33-00-00", "path": "pulse.discussion[54].quote", "links": ["https://t.me/icodrops_sergey/2105"], "reason": "В БД нет времени ссылки"}
+- Не проверено: {"run": "/Users/chelovek/orca/workspaces/AstraFeed-TokenBrief/hakaton/artifacts/news-pulse/zec/2026-09-09T00-00-00-00-00..2026-09-21T06-04-33-00-00", "path": "pulse.evidence[208].quote", "links": ["https://t.me/icodrops_sergey/2105"], "reason": "В БД нет времени ссылки"}
+- Не проверено: {"run": "/Users/chelovek/orca/workspaces/AstraFeed-TokenBrief/hakaton/artifacts/news-pulse/zec/2026-09-09T00-00-00-00-00..2026-09-21T06-04-33-00-00", "path": "pulse.brief_markdown", "links": ["https://t.me/icodrops_sergey/2105"], "reason": "В БД нет времени ссылки"}
+- Не проверено: {"run": "/Users/chelovek/orca/workspaces/AstraFeed-TokenBrief/hakaton/artifacts/news-pulse/zec/2026-09-16T06-10-19-00-00..2026-09-21T06-04-32-00-00", "path": "pulse.discussion[35].text", "links": ["https://t.me/icodrops_sergey/2105"], "reason": "В БД нет времени ссылки"}
+- Не проверено: {"run": "/Users/chelovek/orca/workspaces/AstraFeed-TokenBrief/hakaton/artifacts/news-pulse/zec/2026-09-16T06-10-19-00-00..2026-09-21T06-04-32-00-00", "path": "pulse.discussion[35].quote", "links": ["https://t.me/icodrops_sergey/2105"], "reason": "В БД нет времени ссылки"}
+- Не проверено: {"run": "/Users/chelovek/orca/workspaces/AstraFeed-TokenBrief/hakaton/artifacts/news-pulse/zec/2026-09-16T06-10-19-00-00..2026-09-21T06-04-32-00-00", "path": "pulse.evidence[156].quote", "links": ["https://t.me/icodrops_sergey/2105"], "reason": "В БД нет времени ссылки"}
+- Не проверено: {"run": "/Users/chelovek/orca/workspaces/AstraFeed-TokenBrief/hakaton/artifacts/news-pulse/zec/2026-09-16T06-10-19-00-00..2026-09-21T06-04-32-00-00", "path": "pulse.brief_markdown", "links": ["https://t.me/icodrops_sergey/2105"], "reason": "В БД нет времени ссылки"}
+- Не проверено: {"run": "/Users/chelovek/orca/workspaces/AstraFeed-TokenBrief/hakaton/artifacts/news-pulse/zec/2026-09-17..2026-09-19", "path": "pulse.discussion[35].text", "links": ["https://t.me/icodrops_sergey/2105"], "reason": "В БД нет времени ссылки"}
+- Не проверено: {"run": "/Users/chelovek/orca/workspaces/AstraFeed-TokenBrief/hakaton/artifacts/news-pulse/zec/2026-09-17..2026-09-19", "path": "pulse.discussion[35].quote", "links": ["https://t.me/icodrops_sergey/2105"], "reason": "В БД нет времени ссылки"}
+- Не проверено: {"run": "/Users/chelovek/orca/workspaces/AstraFeed-TokenBrief/hakaton/artifacts/news-pulse/zec/2026-09-17..2026-09-19", "path": "pulse.evidence[116].quote", "links": ["https://t.me/icodrops_sergey/2105"], "reason": "В БД нет времени ссылки"}
+- Не проверено: {"run": "/Users/chelovek/orca/workspaces/AstraFeed-TokenBrief/hakaton/artifacts/news-pulse/zec/2026-09-17..2026-09-19", "path": "pulse.brief_markdown", "links": ["https://t.me/icodrops_sergey/2105"], "reason": "В БД нет времени ссылки"}
 
 ## Граничные пробы [start,end)
 

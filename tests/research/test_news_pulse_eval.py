@@ -166,6 +166,20 @@ class EvaluatorTests(unittest.TestCase):
                     "members": [{"url": p["link"]} for p in self.posts[:2]],
                 }
             ],
+            "discussion": [{"url": self.comments[0]["link"], "target": "event", "target_id": "g"}],
+            "changes": {
+                "previous_events": [],
+                "events_appeared": ["|||"],
+                "events_gone": [],
+                "topic_comments": 1,
+                "previous_topic_comments": 0,
+                "source_coverage": {
+                    "added_channels": ["1", "2", "3"],
+                    "removed_channels": [],
+                    "current_channels": 3,
+                    "previous_channels": 0,
+                },
+            },
         }
         self.write_runs()
 
@@ -229,6 +243,19 @@ class EvaluatorTests(unittest.TestCase):
         with patch.object(eval.sqlite3, "connect", side_effect=capture):
             eval.load_db(self.db)
         self.assertEqual(calls, [(self.db.resolve().as_uri() + "?mode=ro", {"uri": True})])
+
+    def test_forged_changes_fail_numeric_aggregates(self):
+        for mutate in (
+            lambda c: c.update(events_appeared=["999 fake"]),
+            lambda c: c.update(events_gone=["999 fake"]),
+            lambda c: c["source_coverage"].update(added_channels=["999"]),
+            lambda c: c["source_coverage"].update(removed_channels=["999"]),
+            lambda c: c.update(topic_comments=170),
+        ):
+            pulse = json.loads(json.dumps(self.pulse))
+            mutate(pulse["changes"])
+            (self.folder / "pulse.json").write_text(json.dumps(pulse))
+            self.assertEqual(self.result()["metrics"]["numeric_aggregates"]["status"], "fail")
 
     def test_tamper_fails_before_evaluation(self):
         with (self.sample / "posts.jsonl").open("a") as f:

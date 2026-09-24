@@ -600,11 +600,11 @@
       "headline": "➤ Кит «t1JhvB» вывел с Binance, OKX и Kraken 15,300 ZEC ($17,9m).",
       "counts": {
         "events": 1,
-        "publications": 3,
-        "channels": 3,
+        "publications": 1,
+        "channels": 1,
         "known_authors": 0,
-        "unknown_authors": 3,
-        "found_origins": 2,
+        "unknown_authors": 1,
+        "found_origins": 0,
         "reprints": 1,
         "unknown_origin": 0
       },
@@ -632,34 +632,6 @@
           "span": [
             433,
             498
-          ],
-          "origin": "retelling"
-        },
-        {
-          "obs_id": "telegram:12:4873#s1",
-          "publication_id": "telegram:12:4873",
-          "source_id": 12,
-          "author_id": null,
-          "published_at": "2026-09-19T10:34:17+00:00",
-          "url": "https://t.me/Defiscamcheck/4873",
-          "quote": "Ранее он вывел 202К Zec и фактически его шорт является частично дельта нейтральным (размер спота в разы больше шорта)",
-          "span": [
-            91,
-            208
-          ],
-          "origin": "retelling"
-        },
-        {
-          "obs_id": "telegram:15:423360#s1",
-          "publication_id": "telegram:15:423360",
-          "source_id": 15,
-          "author_id": null,
-          "published_at": "2026-09-19T10:55:49+00:00",
-          "url": "https://t.me/WEB3_AGGREGATOR/423360",
-          "quote": "Ранее он вывел 202К Zec и фактически его шорт является частично дельта нейтральным (размер спота в разы больше шорта)",
-          "span": [
-            91,
-            208
           ],
           "origin": "retelling"
         }
@@ -2466,7 +2438,60 @@
       ]
     },
     {
-      "event_id": "e62-09cd8112a0429f71",
+      "event_id": "e62-02dc8518eb37a812",
+      "headline": "Ранее он вывел 202К Zec и фактически его шорт является частично дельта нейтральным (размер спота в разы больше шорта)",
+      "counts": {
+        "events": 1,
+        "publications": 2,
+        "channels": 2,
+        "known_authors": 0,
+        "unknown_authors": 2,
+        "found_origins": 2,
+        "reprints": 0,
+        "unknown_origin": 0
+      },
+      "actor": "Гарретт Буллиш",
+      "action": "вывел",
+      "object": "202К Zec",
+      "qualifiers": {
+        "version": null,
+        "event_date": null,
+        "place": null,
+        "counterparty": null
+      },
+      "members": [
+        {
+          "obs_id": "telegram:12:4873#s1",
+          "publication_id": "telegram:12:4873",
+          "source_id": 12,
+          "author_id": null,
+          "published_at": "2026-09-19T10:34:17+00:00",
+          "url": "https://t.me/Defiscamcheck/4873",
+          "quote": "Ранее он вывел 202К Zec и фактически его шорт является частично дельта нейтральным (размер спота в разы больше шорта)",
+          "span": [
+            91,
+            208
+          ],
+          "origin": "retelling"
+        },
+        {
+          "obs_id": "telegram:15:423360#s1",
+          "publication_id": "telegram:15:423360",
+          "source_id": 15,
+          "author_id": null,
+          "published_at": "2026-09-19T10:55:49+00:00",
+          "url": "https://t.me/WEB3_AGGREGATOR/423360",
+          "quote": "Ранее он вывел 202К Zec и фактически его шорт является частично дельта нейтральным (размер спота в разы больше шорта)",
+          "span": [
+            91,
+            208
+          ],
+          "origin": "retelling"
+        }
+      ]
+    },
+    {
+      "event_id": "e63-09cd8112a0429f71",
       "headline": "Zec адрес: t1gGCYpyURMo2FcYDSqeR8pgp2Kx9rnT72V",
       "counts": {
         "events": 1,
@@ -2519,7 +2544,7 @@
       ]
     },
     {
-      "event_id": "e63-9e44c58cc44b5092",
+      "event_id": "e64-9e44c58cc44b5092",
       "headline": "начались торги NFTшек zkSnarks на аукционе с бидами по 1.5 $ZEC, торги сейчас идут полным ходом, флур сейчас составляет 2.13 $ZEC.",
       "counts": {
         "events": 1,
@@ -2553,7 +2578,7 @@
       ]
     },
     {
-      "event_id": "e64-7d3090bc7b62ea03",
+      "event_id": "e65-7d3090bc7b62ea03",
       "headline": "BREAKING: DeGods переезжает на Zcash.",
       "counts": {
         "events": 1,
@@ -2587,7 +2612,7 @@
       ]
     },
     {
-      "event_id": "e65-edba3bda3aa9aec4",
+      "event_id": "e66-edba3bda3aa9aec4",
       "headline": "0.3 ZEC Puppets вышли",
       "counts": {
         "events": 1,
@@ -2621,7 +2646,7 @@
       ]
     },
     {
-      "event_id": "e66-97e4f3c40b51a2df",
+      "event_id": "e67-97e4f3c40b51a2df",
       "headline": "Пока ждем Zaddr и оцениваем дальнейшую мету ZEC NFT, выходят они 21 числа 13:00 UTC WL - инфа",
       "counts": {
         "events": 1,
@@ -2657,7 +2682,7 @@
       ]
     },
     {
-      "event_id": "e67-cd32165e63012a6c",
+      "event_id": "e68-cd32165e63012a6c",
       "headline": "ZecFrogs - NFT-коллекция в сети Zcash с сапплаем 6969 штук. Бесплатный минт пройдёт 21 сентября в 20:00 мск.",
       "counts": {
         "events": 1,
@@ -2693,7 +2718,7 @@
       ]
     },
     {
-      "event_id": "e68-f63a67a2b4b6ada0",
+      "event_id": "e69-f63a67a2b4b6ada0",
       "headline": "DeGods переезжают на на Zcash)",
       "counts": {
         "events": 1,
@@ -2727,7 +2752,7 @@
       ]
     },
     {
-      "event_id": "e69-435fba60799161c8",
+      "event_id": "e70-435fba60799161c8",
       "headline": "• 3 333 пиксельных кота на Zcash. Нужны X + t1-адрес. Цена TBA;",
       "counts": {
         "events": 1,
@@ -2761,7 +2786,7 @@
       ]
     },
     {
-      "event_id": "e70-179ad426693740bc",
+      "event_id": "e71-179ad426693740bc",
       "headline": "• 6969 пиксельных лягушек на ZEC, free mint. Минимум 0.007 ZEC на газ;",
       "counts": {
         "events": 1,
@@ -2798,7 +2823,7 @@
       ]
     },
     {
-      "event_id": "e71-ba084a73a4dbb006",
+      "event_id": "e72-ba084a73a4dbb006",
       "headline": "• Приватная коллекция на Zcash: арт публичный. Саплай/цена не раскрыты;",
       "counts": {
         "events": 1,
@@ -2835,7 +2860,7 @@
       ]
     },
     {
-      "event_id": "e72-f586d1361fa8019e",
+      "event_id": "e73-f586d1361fa8019e",
       "headline": "• 2,800 рукописных пиксельных NFT на Zcash. Цена 0.02 ZEC. WL: 1 на кошелек, public: 3 на кошелек;",
       "counts": {
         "events": 1,
@@ -2869,7 +2894,7 @@
       ]
     },
     {
-      "event_id": "e73-a457e10566e77596",
+      "event_id": "e74-a457e10566e77596",
       "headline": "• Токен-стандарт ZRC20 на Zcash, задания в X + ZEC-кошелек, заявки скоро закрывают;",
       "counts": {
         "events": 1,
@@ -2903,7 +2928,7 @@
       ]
     },
     {
-      "event_id": "e74-bde105958aa596a4",
+      "event_id": "e75-bde105958aa596a4",
       "headline": "$ZEC и вовсе живёт своей жизнью по $1 595 за монету (х3 за 30 дней)",
       "counts": {
         "events": 1,
@@ -2940,7 +2965,7 @@
       ]
     },
     {
-      "event_id": "e75-9de3fbff83a5004c",
+      "event_id": "e76-9de3fbff83a5004c",
       "headline": "ZEC уже улетел. Покупать монету после такого движения — догонять поезд.",
       "counts": {
         "events": 1,
@@ -2977,7 +3002,7 @@
       ]
     },
     {
-      "event_id": "e76-84f11861d1204916",
+      "event_id": "e77-84f11861d1204916",
       "headline": "3. Гаррет Джин, удерживавший крупнейший шорт #ZEC, закрыл его, зафиксировав убыток в $35,44 млн. Он всё ещё удерживает спот на 202 078 #ZEC ($309,25 млн) с прибылью $221 млн.",
       "counts": {
         "events": 1,
@@ -3066,12 +3091,52 @@
       "quote": "Я этого гандона хотел лонговать когда он был по 450... Похуй фомо недозаработал бы баксов 40-50 в любом случае"
     },
     {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "😝",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/icryptocom/8099?comment=188802",
+      "quote": "😝"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "Декстер Морган вечером в пятницу никого не убивал,а на бирже торговал",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/icryptocom/8099?comment=188803",
+      "quote": "Декстер Морган вечером в пятницу никого не убивал,а на бирже торговал"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "Звучит как прайс в дубае",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/icryptocom/8099?comment=188805",
+      "quote": "Звучит как прайс в дубае"
+    },
+    {
       "target": "event",
       "target_id": "e24-9e94ec9cc7c059c8",
       "text": "Фомо уже у всех, ждем отката )",
       "basis": "реплика к посту с одним событием по теме и тому же предмету",
       "url": "https://t.me/icodrops_sergey/2426?comment=150547",
       "quote": "Фомо уже у всех, ждем отката )"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "Нашёл когда загонять хомяков, на самом АТН, после х3",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/icodrops_sergey/2426?comment=150548",
+      "quote": "Нашёл когда загонять хомяков, на самом АТН, после х3"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "ХЕЙТЕРЫ УНИЧТОЖЕНЫ",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/icodrops_sergey/2426?comment=150549",
+      "quote": "ХЕЙТЕРЫ УНИЧТОЖЕНЫ"
     },
     {
       "target": "event",
@@ -3098,6 +3163,22 @@
       "quote": "Скоро шорт зека озолотит поколение.. 😂😂"
     },
     {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "все как в 2017 будет",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/icodrops_sergey/2426?comment=150554",
+      "quote": "все как в 2017 будет"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "Хейтеры сели на бутылку",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/icodrops_sergey/2426?comment=150555",
+      "quote": "Хейтеры сели на бутылку"
+    },
+    {
       "target": "project",
       "target_id": null,
       "text": "Серёга первый раз купил по 150 и он падал до 125",
@@ -3116,10 +3197,74 @@
     {
       "target": "topic_level",
       "target_id": null,
-      "text": "Тоже держу ниар. По структуре очень напоминает  zen, zec , ну, по моим параметрам.\n\nПо коинглас наблюдаю все это время. Даже на 15м почти не было продаж спота. Все покупали спот. Он пробил вверх дневные линейные регрессии 100 и 200. И главн",
+      "text": "Я не хейтер. Можно тоже сесть?",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/icodrops_sergey/2426?comment=150558",
+      "quote": "Я не хейтер. Можно тоже сесть?"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "Если нравится, то в чём проблема)",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/icodrops_sergey/2426?comment=150559",
+      "quote": "Если нравится, то в чём проблема)"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "да. уже по телеку показывают",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/icodrops_sergey/2426?comment=150560",
+      "quote": "да. уже по телеку показывают"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "Может и хейтерам нравится",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/icodrops_sergey/2426?comment=150561",
+      "quote": "Может и хейтерам нравится"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "20к мой прогноз, но не сразу, хотя зависит от обстоятельств",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/icodrops_sergey/2426?comment=150563",
+      "quote": "20к мой прогноз, но не сразу, хотя зависит от обстоятельств"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "Я думаю 70к вполне реально, за битком пойдем, но придется подождать конечно",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/icodrops_sergey/2426?comment=150564",
+      "quote": "Я думаю 70к вполне реально, за битком пойдем, но придется подождать конечно"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "Это если все начнут чейны закрывать и в приватность уйдут, а зек как ледокол всех за собой поведет.",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/icodrops_sergey/2426?comment=150566",
+      "quote": "Это если все начнут чейны закрывать и в приватность уйдут, а зек как ледокол всех за собой поведет."
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "Тоже держу ниар. По структуре очень напоминает  zen, zec , ну, по моим параметрам.\n\nПо коинглас наблюдаю все это время. Даже на 15м почти не было продаж спота. Все покупали спот. Он пробил вверх дневные линейные регрессии 100 и 200. И",
       "basis": "совпадение темы недостаточно, связь со событием не установлена",
       "url": "https://t.me/rawa_imagination/21112?comment=343092",
-      "quote": "Тоже держу ниар. По структуре очень напоминает  zen, zec , ну, по моим параметрам.\n\nПо коинглас наблюдаю все это время. Даже на 15м почти не было продаж спота. Все покупали спот. О"
+      "quote": "Тоже держу ниар. По структуре очень напоминает  zen, zec , ну, по моим параметрам.\n\nПо коинглас наблюдаю все это время. Даже на 15м почти не было продаж спота. Все покупали спот."
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "#мнекажетсявсемпохуй",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/icodrops_sergey/2426?comment=150567",
+      "quote": "#мнекажетсявсемпохуй"
     },
     {
       "target": "project",
@@ -3138,6 +3283,54 @@
       "quote": "Я думаю DASH  тоже себя ещё покажет как младший брат от ZEC"
     },
     {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "затаился в накоплении. не сейчас так через год 2 5 10. нк или сдохнет, тут 67 процентов",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/icodrops_sergey/2426?comment=150570",
+      "quote": "затаился в накоплении. не сейчас так через год 2 5 10. нк или сдохнет, тут 67 процентов"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "Раздутый мыльный пузырь",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/icodrops_sergey/2426?comment=150571",
+      "quote": "Раздутый мыльный пузырь"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "Дырявый ледокол на дно если только..",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/icodrops_sergey/2426?comment=150572",
+      "quote": "Дырявый ледокол на дно если только.."
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "Добро пожаловать в чат Whitelist Media 👍\n\nНаши ресурсы: \n👍Whitelist Database (гайд по инструменту);\n👍Blacklist by Bogdan;\n👍X (Twitter);\n👍Links.\n\nПолезные ссылки: \n👍ProxyWing (прокси): по коду whitelist скидка 10%;\n👍Чат взаимных подписок",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/whitelist1/7144?comment=571779",
+      "quote": "Добро пожаловать в чат Whitelist Media 👍\n\nНаши ресурсы: \n👍Whitelist Database (гайд по инструменту);\n👍Blacklist by Bogdan;\n👍X (Twitter);\n👍Links.\n\nПолезные ссылки: \n👍ProxyWing"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/whitelist1/7144?comment=571780",
+      "quote": ""
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "чувствую запах денег",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/whitelist1/7144?comment=571781",
+      "quote": "чувствую запах денег"
+    },
+    {
       "target": "event",
       "target_id": "e24-9e94ec9cc7c059c8",
       "text": "Нам то что с того. Покупать сейчас что бы сделать х2 на $100 ну даже х5 от текущих будет... Это что то поменяет",
@@ -3146,12 +3339,260 @@
       "quote": "Нам то что с того. Покупать сейчас что бы сделать х2 на $100 ну даже х5 от текущих будет... Это что то поменяет"
     },
     {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "утро надо начинать с большой кружки кофе и со сбора кукурузки",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/whitelist1/7144?comment=571784",
+      "quote": "утро надо начинать с большой кружки кофе и со сбора кукурузки"
+    },
+    {
       "target": "event",
       "target_id": "e24-9e94ec9cc7c059c8",
       "text": "С этой стороны конечно нет, Серёга просто флексит вином\n\nЯ ответил про фомо на 3 икса, когда их больше 10 уже",
       "basis": "реплика к посту с одним событием по теме и тому же предмету",
       "url": "https://t.me/icodrops_sergey/2426?comment=150574",
       "quote": "С этой стороны конечно нет, Серёга просто флексит вином\n\nЯ ответил про фомо на 3 икса, когда их больше 10 уже"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "Весь секрет в деньгах и связях. Если у команд/холдеров нет ни первого ни второго, то младший брат просто надузит в ползунки",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/icodrops_sergey/2426?comment=150575",
+      "quote": "Весь секрет в деньгах и связях. Если у команд/холдеров нет ни первого ни второго, то младший брат просто надузит в ползунки"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "сигнал был тут https://t.me/icodrops_sergey/2105",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/icodrops_sergey/2426?comment=150576",
+      "quote": "сигнал был тут https://t.me/icodrops_sergey/2105"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "Какие там затраты для топа?",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/whitelist1/7144?comment=571796",
+      "quote": "Какие там затраты для топа?"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "ты можешь зайти, бесплатные ключи потратить и надеяться на рафл",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/whitelist1/7144?comment=571797",
+      "quote": "ты можешь зайти, бесплатные ключи потратить и надеяться на рафл"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "Главный посыл обязательно к прочтению.",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/moni_talks/12227?comment=468762",
+      "quote": "Главный посыл обязательно к прочтению."
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "остряк",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/icodrops_sergey/2426?comment=150581",
+      "quote": "остряк"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "Арьитрус теперь по сути тоже кормушка же",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/icodrops_sergey/2431?comment=150597",
+      "quote": "Арьитрус теперь по сути тоже кормушка же"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "Деду больше не наливать.",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/icodrops_sergey/2431?comment=150598",
+      "quote": "Деду больше не наливать."
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "Да наступит тысячилетнии булран!",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/icodrops_sergey/2431?comment=150599",
+      "quote": "Да наступит тысячилетнии булран!"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/icodrops_sergey/2431?comment=150600",
+      "quote": ""
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "Да просто прими, что ты обосрался со своим Render-ом, вместо которого нужно было набирать TAO, или на крайний случай NEAR",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/icodrops_sergey/2431?comment=150601",
+      "quote": "Да просто прими, что ты обосрался со своим Render-ом, вместо которого нужно было набирать TAO, или на крайний случай NEAR"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "Вы с Брюсом Fomo активируйте лучше) ноль инфо шума по нему",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/icodrops_sergey/2431?comment=150604",
+      "quote": "Вы с Брюсом Fomo активируйте лучше) ноль инфо шума по нему"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "Добро пожаловать в чат Whitelist Media 👍\n\nНаши ресурсы: \n👍Whitelist Database (гайд по инструменту);\n👍Blacklist by Bogdan;\n👍X (Twitter);\n👍Links.\n\nПолезные ссылки: \n👍ProxyWing (прокси): по коду whitelist скидка 10%;\n👍Чат взаимных подписок",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/whitelist1/7146?comment=571876",
+      "quote": "Добро пожаловать в чат Whitelist Media 👍\n\nНаши ресурсы: \n👍Whitelist Database (гайд по инструменту);\n👍Blacklist by Bogdan;\n👍X (Twitter);\n👍Links.\n\nПолезные ссылки: \n👍ProxyWing"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "Орнул с линеи",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/whitelist1/7146?comment=571877",
+      "quote": "Орнул с линеи"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "Такие опездалы",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/whitelist1/7146?comment=571878",
+      "quote": "Такие опездалы"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "ахаха, линера днище. помню тот ажиотаж с ролями: \"у меня золото\", \" а у меня платина\"... хотя и сам был в той лодке))",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/whitelist1/7146?comment=571879",
+      "quote": "ахаха, линера днище. помню тот ажиотаж с ролями: \"у меня золото\", \" а у меня платина\"... хотя и сам был в той лодке))"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "Щас Кайл Самани стратег в бэкпаке движуху наведет и его тоже запишем в альфа активы",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/icodrops_sergey/2431?comment=150615",
+      "quote": "Щас Кайл Самани стратег в бэкпаке движуху наведет и его тоже запишем в альфа активы"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "Так много где было",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/whitelist1/7146?comment=571881",
+      "quote": "Так много где было"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "У меня было серебро, и я переживал что не успел докачать полтора уровня до золота. Выходит, зря переживал))",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/whitelist1/7146?comment=571887",
+      "quote": "У меня было серебро, и я переживал что не успел докачать полтора уровня до золота. Выходит, зря переживал))"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "Что там Л2 старк арбитрум газуют скоро и о них заговорят",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/icodrops_sergey/2431?comment=150621",
+      "quote": "Что там Л2 старк арбитрум газуют скоро и о них заговорят"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "Хорош",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/icodrops_sergey/2431?comment=150625",
+      "quote": "Хорош"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "Я тоже ничего, можешь посмотреть мой онлифанс",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/icodrops_sergey/2431?comment=150627",
+      "quote": "Я тоже ничего, можешь посмотреть мой онлифанс"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "Мужики, налетай!!",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/icodrops_sergey/2431?comment=150628",
+      "quote": "Мужики, налетай!!"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "Добро пожаловать в чат Whitelist Media 👍\n\nНаши ресурсы: \n👍Whitelist Database (гайд по инструменту);\n👍Blacklist by Bogdan;\n👍X (Twitter);\n👍Links.\n\nПолезные ссылки: \n👍ProxyWing (прокси): по коду whitelist скидка 10%;\n👍Чат взаимных подписок",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/whitelist1/7149?comment=571963",
+      "quote": "Добро пожаловать в чат Whitelist Media 👍\n\nНаши ресурсы: \n👍Whitelist Database (гайд по инструменту);\n👍Blacklist by Bogdan;\n👍X (Twitter);\n👍Links.\n\nПолезные ссылки: \n👍ProxyWing"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "прошел кто в лягух?",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/whitelist1/7149?comment=571964",
+      "quote": "прошел кто в лягух?"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "только чекер выкатили",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/whitelist1/7149?comment=571965",
+      "quote": "только чекер выкатили"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "чина, 8/10 аков прошли",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/whitelist1/7149?comment=571966",
+      "quote": "чина, 8/10 аков прошли"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "каждая по касику минимум",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/whitelist1/7149?comment=571968",
+      "quote": "каждая по касику минимум"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "Да вот х его з",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/whitelist1/7149?comment=571970",
+      "quote": "Да вот х его з"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "Та чето дорогое",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/whitelist1/7149?comment=571971",
+      "quote": "Та чето дорогое"
     },
     {
       "target": "topic_level",
@@ -3178,12 +3619,100 @@
       "quote": "Щас пока что зекбит только, и то с 2 коллекциями. Каждый на своем сайте торги ведет"
     },
     {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "Зафанался с этим WL, пойдет замес!",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/whitelist1/7149?comment=571981",
+      "quote": "Зафанался с этим WL, пойдет замес!"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "Слышь, говорят отнимают обратно 😄",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/whitelist1/7149?comment=571982",
+      "quote": "Слышь, говорят отнимают обратно 😄"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "Да ну?",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/whitelist1/7149?comment=571983",
+      "quote": "Да ну?"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "Некоторые уже жалуются",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/whitelist1/7149?comment=571984",
+      "quote": "Некоторые уже жалуются"
+    },
+    {
       "target": "other_subject",
       "target_id": null,
       "text": "скамят работяг???",
       "basis": "предмет реплики — сторонний сервис/коллекция экосистемы, не событие темы",
       "url": "https://t.me/whitelist1/7149?comment=571985",
       "quote": "скамят работяг???"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/whitelist1/7149?comment=571986",
+      "quote": ""
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/whitelist1/7149?comment=571987",
+      "quote": ""
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "жестко",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/whitelist1/7149?comment=571988",
+      "quote": "жестко"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/whitelist1/7149?comment=571991",
+      "quote": ""
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "Вот эти еще вроде как норм",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/whitelist1/7149?comment=571993",
+      "quote": "Вот эти еще вроде как норм"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "ахуй, гц",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/whitelist1/7149?comment=571994",
+      "quote": "ахуй, гц"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "это гарантированный вл? или нет?",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/whitelist1/7149?comment=571995",
+      "quote": "это гарантированный вл? или нет?"
     },
     {
       "target": "other_subject",
@@ -3196,10 +3725,122 @@
     {
       "target": "topic_level",
       "target_id": null,
+      "text": "у меня оказывается тоже",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/whitelist1/7149?comment=571998",
+      "quote": "у меня оказывается тоже"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "Пару дней назад еще",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/whitelist1/7149?comment=572000",
+      "quote": "Пару дней назад еще"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "Да хорош вам уже)))",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/whitelist1/7149?comment=572001",
+      "quote": "Да хорош вам уже)))"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "Так там нфт меньше, чем вл, наверное 😕",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/whitelist1/7149?comment=572002",
+      "quote": "Так там нфт меньше, чем вл, наверное 😕"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
       "text": "Как завести Zec на кошелек noir? Только с биржи?",
       "basis": "совпадение темы недостаточно, связь со событием не установлена",
       "url": "https://t.me/whitelist1/7149?comment=572005",
       "quote": "Как завести Zec на кошелек noir? Только с биржи?"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "кросчейн через бридж рубик можно",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/whitelist1/7149?comment=572006",
+      "quote": "кросчейн через бридж рубик можно"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "Ооо, точно, знаю такой. Спс",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/whitelist1/7149?comment=572008",
+      "quote": "Ооо, точно, знаю такой. Спс"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "Я прошел",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/whitelist1/7149?comment=572009",
+      "quote": "Я прошел"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "Гратц, надеюсь накорямт",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/whitelist1/7149?comment=572010",
+      "quote": "Гратц, надеюсь накорямт"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "Тоже очень надеюсь) 🤞",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/whitelist1/7149?comment=572011",
+      "quote": "Тоже очень надеюсь) 🤞"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "Комса у них чёт большая",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/whitelist1/7149?comment=572012",
+      "quote": "Комса у них чёт большая"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "Да, потратить 10-15 баксов норм",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/whitelist1/7149?comment=572013",
+      "quote": "Да, потратить 10-15 баксов норм"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "Ты тож прошел?",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/whitelist1/7149?comment=572021",
+      "quote": "Ты тож прошел?"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "Приватность нужно оплачивать)",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/whitelist1/7149?comment=572022",
+      "quote": "Приватность нужно оплачивать)"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/whitelist1/7149?comment=572023",
+      "quote": ""
     },
     {
       "target": "project",
@@ -3210,6 +3851,38 @@
       "quote": "у тебя на кошельке был зек? или прям нулевый?"
     },
     {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "только создал",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/whitelist1/7149?comment=572027",
+      "quote": "только создал"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "Вот сцуки, почему сбрили активных тогда, наверняка они акки в Х смотрели.",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/whitelist1/7149?comment=572028",
+      "quote": "Вот сцуки, почему сбрили активных тогда, наверняка они акки в Х смотрели."
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "наверно, у меня там не пусто)",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/whitelist1/7149?comment=572030",
+      "quote": "наверно, у меня там не пусто)"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "Какие критерии кто в курсе ?",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/whitelist1/7149?comment=572039",
+      "quote": "Какие критерии кто в курсе ?"
+    },
+    {
       "target": "other_subject",
       "target_id": null,
       "text": "Это скам",
@@ -3218,16 +3891,76 @@
       "quote": "Это скам"
     },
     {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "@NikitonNT",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/whitelist1/7149?comment=572041",
+      "quote": "@NikitonNT"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "И этого тож туда же",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/whitelist1/7149?comment=572042",
+      "quote": "И этого тож туда же"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "С хуяли ?",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/whitelist1/7149?comment=572043",
+      "quote": "С хуяли ?"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "Проверка)",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/whitelist1/7149?comment=572044",
+      "quote": "Проверка)"
+    },
+    {
       "target": "other_subject",
       "target_id": null,
       "text": "1) если в среднем 600 с кошелька, то почему с твоих 5 старых прокаченных вышло +-250 баксов\n2) старый кошель прокаченный как раз 600 бы и дал\n3) если давно в крипте, то че так мало кошельков?!?\n\nЗадолбали со своей скаминой лезть",
       "basis": "предмет реплики — сторонний сервис/коллекция экосистемы, не событие темы",
       "url": "https://t.me/whitelist1/7149?comment=572050",
       "quote": "1) если в среднем 600 с кошелька, то почему с твоих 5 старых прокаченных вышло +-250 баксов\n2) старый кошель прокаченный как раз 600 бы и дал\n3) если давно в крипте, то че так мало"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "братан тебе не похуй?",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/whitelist1/7149?comment=572051",
+      "quote": "братан тебе не похуй?"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "Да тупо отвлекся от работы)))",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/whitelist1/7149?comment=572052",
+      "quote": "Да тупо отвлекся от работы)))"
     }
   ],
   "changes": {
     "previous_window": "2026-09-11T06:16:06+00:00..2026-09-16T06:10:19+00:00",
+    "previous_events": [
+      "Zcash|завершит голосование по составу обновления сети NU7|обновление сети NU7|#ZEC Zcash завершит голосование по составу обновления сети NU7",
+      "|Freemint on ZEC 11 spots|ZEC|Freemint on ZEC 11 spots.",
+      "|Аукцион рассчитывается в ZEC, но через NEAR Intents можно зайти ETH, SOL, BTC, стейблами и другими активами - система сама конвертирует их в ZEC|ZEC|Аукцион рассчитывается в ZEC, но через NEAR Intents можно зайти ETH, SOL, BTC, стейблами и другими активами - система сама конвертирует их в ZEC.",
+      "|Про экосистему Zcash|Zcash|Про экосистему Zcash",
+      "|купил ZEC год назад на $1.000, то сейчас это было бы $60.000|ZEC|Если б ты купил ZEC год назад на $1.000, то сейчас это было бы $60.000",
+      "|минт панков на ZEC|ZEC|Сегодня еще минт панков на ZEC",
+      "|нужен кошелек ноир, ZEC, акцион 48 часов|ZEC|нужен кошелек ноир, ZEC, акцион 48 часов.",
+      "|откупается и начисляется|ZEC|ZEC-paired",
+      "|разгон нфт меты во круг zcash|zcash|Я прям делаю еще ставку на разгон нфт меты во круг zcash, там тож движ интересный начинается",
+      "|является стратегией|ZEC|ZEC"
+    ],
     "events_appeared": [
       "Bitcoin OG|увеличил шорт по ZEC|ZEC|➤ Bitcoin OG увеличил шорт по ZEC. Сейчас он шортит 37,760 ZEC ($51,5m) с нереализованным убытком $26m. Цена ликвидации = $2632.",
       "Bitx|заполнить WL-форму на дроп|ZEC кошелек|В Bitx на данный момент мы можем заполнить WL-форму на дроп. Переходим по ссылке, выполняем квесты и оставляем ZEC кошелек.",
@@ -3292,6 +4025,7 @@
       "|улетал вертикально на старте в 2016-м|$ZEC|Ровно также $ZEC улетал вертикально на старте в 2016-м: мало монет в обороте рисуют 🐂«up only» на пустом стакане.",
       "Ансем|попадание почти во все за последний год - VVV, ZEC, HYPE - все на ath|ZEC|🤪 $NET - По сути, казиныч, за который топит Ансем, а у него попадание почти во все за последний год - VVV, ZEC, HYPE - все на ath. Обещают сейчс за стейкинг $NET 10.000% apy",
       "Гаррет Джин|is in loss on short|ZEC|🙁 Инсайдер Гаррет Джин сейчас в минусе почти на -$30,000,000 по своему шорту с ZEC.",
+      "Гарретт Буллиш|вывел|202К Zec|Ранее он вывел 202К Zec и фактически его шорт является частично дельта нейтральным (размер спота в разы больше шорта)",
       "Гарретт Буллиш|показал свой спот адрес|Zec|Гарретт Буллиш (в убытке на $35М по шорту Zec на Hyperliquid) показал свой спот адрес Zec",
       "Кит «t1JhvB»|вывел с Binance, OKX и Kraken 15,300 ZEC|ZEC|➤ Кит «t1JhvB» вывел с Binance, OKX и Kraken 15,300 ZEC ($17,9m).",
       "Киты|активно накапливают ZEC|ZEC|➤ Киты активно накапливают ZEC. Четыре новых кошелька вывели с Binance и других бирж 32,293 ZEC (~$46,2m).",
@@ -3318,26 +4052,26 @@
       "|разгон нфт меты во круг zcash|zcash|Я прям делаю еще ставку на разгон нфт меты во круг zcash, там тож движ интересный начинается",
       "|является стратегией|ZEC|ZEC"
     ],
-    "discussion_comments": 596,
-    "previous_comments": 533,
+    "topic_comments": 108,
+    "previous_topic_comments": 19,
     "source_coverage": {
       "added_channels": [
-        "@CryptoEarnImp",
-        "@icodrops_sergey"
+        "16",
+        "6"
       ],
       "removed_channels": [
-        "@slavik_investor"
+        "8"
       ],
       "current_channels": 19,
       "previous_channels": 18
     }
   },
   "short_observations": [
-    "➤ Кит «t1JhvB» вывел с Binance, OKX и Kraken 15,300 ZEC ($17,9m).",
     "💰 #ZEC >1400$",
     "Он шортил ZEC еще в в начале лета, был в плюсе на $20М после слухов о уязвимости в системе шилдинга ZEC, но не зафиксировал прибыль, а удержал позицию.",
     "Сообщество Zcash поддержало сокращение времени формирования блока с 75 до 25 секунд.",
-    "🤔 #ZEC Управляющий партнер Dragonfly предложил свернуть деятельность фонда разработчиков Zcash, утверждая, что фонд достаточно велик, чтобы финансировать оставшуюся работу над…"
+    "🤔 #ZEC Управляющий партнер Dragonfly предложил свернуть деятельность фонда разработчиков Zcash, утверждая, что фонд достаточно велик, чтобы финансировать оставшуюся работу над…",
+    "Реально обновляют хаи те, кто показывают результаты деятельности, а не просто обещают (пластичные кормушки - HYPE, PUMP, LIGHTER, VENICE) и топы влияния - ZEC"
   ],
   "coverage": {
     "publications": 4655,
@@ -3534,26 +4268,6 @@
         498
       ],
       "publication_id": "telegram:18:31476"
-    },
-    {
-      "id": "telegram:12:4873#s1",
-      "url": "https://t.me/Defiscamcheck/4873",
-      "quote": "Ранее он вывел 202К Zec и фактически его шорт является частично дельта нейтральным (размер спота в разы больше шорта)",
-      "span": [
-        91,
-        208
-      ],
-      "publication_id": "telegram:12:4873"
-    },
-    {
-      "id": "telegram:15:423360#s1",
-      "url": "https://t.me/WEB3_AGGREGATOR/423360",
-      "quote": "Ранее он вывел 202К Zec и фактически его шорт является частично дельта нейтральным (размер спота в разы больше шорта)",
-      "span": [
-        91,
-        208
-      ],
-      "publication_id": "telegram:15:423360"
     },
     {
       "id": "telegram:15:423189#s0",
@@ -4106,6 +4820,26 @@
       "publication_id": "telegram:15:423360"
     },
     {
+      "id": "telegram:12:4873#s1",
+      "url": "https://t.me/Defiscamcheck/4873",
+      "quote": "Ранее он вывел 202К Zec и фактически его шорт является частично дельта нейтральным (размер спота в разы больше шорта)",
+      "span": [
+        91,
+        208
+      ],
+      "publication_id": "telegram:12:4873"
+    },
+    {
+      "id": "telegram:15:423360#s1",
+      "url": "https://t.me/WEB3_AGGREGATOR/423360",
+      "quote": "Ранее он вывел 202К Zec и фактически его шорт является частично дельта нейтральным (размер спота в разы больше шорта)",
+      "span": [
+        91,
+        208
+      ],
+      "publication_id": "telegram:15:423360"
+    },
+    {
       "id": "telegram:12:4873#s2",
       "url": "https://t.me/Defiscamcheck/4873",
       "quote": "Zec адрес: t1gGCYpyURMo2FcYDSqeR8pgp2Kx9rnT72V",
@@ -4581,9 +5315,34 @@
       "quote": "Я этого гандона хотел лонговать когда он был по 450... Похуй фомо недозаработал бы баксов 40-50 в любом случае"
     },
     {
+      "id": "https://t.me/icryptocom/8099?comment=188802",
+      "url": "https://t.me/icryptocom/8099?comment=188802",
+      "quote": "😝"
+    },
+    {
+      "id": "https://t.me/icryptocom/8099?comment=188803",
+      "url": "https://t.me/icryptocom/8099?comment=188803",
+      "quote": "Декстер Морган вечером в пятницу никого не убивал,а на бирже торговал"
+    },
+    {
+      "id": "https://t.me/icryptocom/8099?comment=188805",
+      "url": "https://t.me/icryptocom/8099?comment=188805",
+      "quote": "Звучит как прайс в дубае"
+    },
+    {
       "id": "https://t.me/icodrops_sergey/2426?comment=150547",
       "url": "https://t.me/icodrops_sergey/2426?comment=150547",
       "quote": "Фомо уже у всех, ждем отката )"
+    },
+    {
+      "id": "https://t.me/icodrops_sergey/2426?comment=150548",
+      "url": "https://t.me/icodrops_sergey/2426?comment=150548",
+      "quote": "Нашёл когда загонять хомяков, на самом АТН, после х3"
+    },
+    {
+      "id": "https://t.me/icodrops_sergey/2426?comment=150549",
+      "url": "https://t.me/icodrops_sergey/2426?comment=150549",
+      "quote": "ХЕЙТЕРЫ УНИЧТОЖЕНЫ"
     },
     {
       "id": "https://t.me/icodrops_sergey/2426?comment=150550",
@@ -4601,6 +5360,16 @@
       "quote": "Скоро шорт зека озолотит поколение.. 😂😂"
     },
     {
+      "id": "https://t.me/icodrops_sergey/2426?comment=150554",
+      "url": "https://t.me/icodrops_sergey/2426?comment=150554",
+      "quote": "все как в 2017 будет"
+    },
+    {
+      "id": "https://t.me/icodrops_sergey/2426?comment=150555",
+      "url": "https://t.me/icodrops_sergey/2426?comment=150555",
+      "quote": "Хейтеры сели на бутылку"
+    },
+    {
       "id": "https://t.me/icodrops_sergey/2426?comment=150556",
       "url": "https://t.me/icodrops_sergey/2426?comment=150556",
       "quote": "Серёга первый раз купил по 150 и он падал до 125"
@@ -4611,9 +5380,49 @@
       "quote": "12 иксов от дна"
     },
     {
+      "id": "https://t.me/icodrops_sergey/2426?comment=150558",
+      "url": "https://t.me/icodrops_sergey/2426?comment=150558",
+      "quote": "Я не хейтер. Можно тоже сесть?"
+    },
+    {
+      "id": "https://t.me/icodrops_sergey/2426?comment=150559",
+      "url": "https://t.me/icodrops_sergey/2426?comment=150559",
+      "quote": "Если нравится, то в чём проблема)"
+    },
+    {
+      "id": "https://t.me/icodrops_sergey/2426?comment=150560",
+      "url": "https://t.me/icodrops_sergey/2426?comment=150560",
+      "quote": "да. уже по телеку показывают"
+    },
+    {
+      "id": "https://t.me/icodrops_sergey/2426?comment=150561",
+      "url": "https://t.me/icodrops_sergey/2426?comment=150561",
+      "quote": "Может и хейтерам нравится"
+    },
+    {
+      "id": "https://t.me/icodrops_sergey/2426?comment=150563",
+      "url": "https://t.me/icodrops_sergey/2426?comment=150563",
+      "quote": "20к мой прогноз, но не сразу, хотя зависит от обстоятельств"
+    },
+    {
+      "id": "https://t.me/icodrops_sergey/2426?comment=150564",
+      "url": "https://t.me/icodrops_sergey/2426?comment=150564",
+      "quote": "Я думаю 70к вполне реально, за битком пойдем, но придется подождать конечно"
+    },
+    {
+      "id": "https://t.me/icodrops_sergey/2426?comment=150566",
+      "url": "https://t.me/icodrops_sergey/2426?comment=150566",
+      "quote": "Это если все начнут чейны закрывать и в приватность уйдут, а зек как ледокол всех за собой поведет."
+    },
+    {
       "id": "https://t.me/rawa_imagination/21112?comment=343092",
       "url": "https://t.me/rawa_imagination/21112?comment=343092",
-      "quote": "Тоже держу ниар. По структуре очень напоминает  zen, zec , ну, по моим параметрам.\n\nПо коинглас наблюдаю все это время. Даже на 15м почти не было продаж спота. Все покупали спот. О"
+      "quote": "Тоже держу ниар. По структуре очень напоминает  zen, zec , ну, по моим параметрам.\n\nПо коинглас наблюдаю все это время. Даже на 15м почти не было продаж спота. Все покупали спот."
+    },
+    {
+      "id": "https://t.me/icodrops_sergey/2426?comment=150567",
+      "url": "https://t.me/icodrops_sergey/2426?comment=150567",
+      "quote": "#мнекажетсявсемпохуй"
     },
     {
       "id": "https://t.me/icodrops_sergey/2426?comment=150568",
@@ -4626,14 +5435,189 @@
       "quote": "Я думаю DASH  тоже себя ещё покажет как младший брат от ZEC"
     },
     {
+      "id": "https://t.me/icodrops_sergey/2426?comment=150570",
+      "url": "https://t.me/icodrops_sergey/2426?comment=150570",
+      "quote": "затаился в накоплении. не сейчас так через год 2 5 10. нк или сдохнет, тут 67 процентов"
+    },
+    {
+      "id": "https://t.me/icodrops_sergey/2426?comment=150571",
+      "url": "https://t.me/icodrops_sergey/2426?comment=150571",
+      "quote": "Раздутый мыльный пузырь"
+    },
+    {
+      "id": "https://t.me/icodrops_sergey/2426?comment=150572",
+      "url": "https://t.me/icodrops_sergey/2426?comment=150572",
+      "quote": "Дырявый ледокол на дно если только.."
+    },
+    {
+      "id": "https://t.me/whitelist1/7144?comment=571779",
+      "url": "https://t.me/whitelist1/7144?comment=571779",
+      "quote": "Добро пожаловать в чат Whitelist Media 👍\n\nНаши ресурсы: \n👍Whitelist Database (гайд по инструменту);\n👍Blacklist by Bogdan;\n👍X (Twitter);\n👍Links.\n\nПолезные ссылки: \n👍ProxyWing"
+    },
+    {
+      "id": "https://t.me/whitelist1/7144?comment=571781",
+      "url": "https://t.me/whitelist1/7144?comment=571781",
+      "quote": "чувствую запах денег"
+    },
+    {
       "id": "https://t.me/icodrops_sergey/2426?comment=150573",
       "url": "https://t.me/icodrops_sergey/2426?comment=150573",
       "quote": "Нам то что с того. Покупать сейчас что бы сделать х2 на $100 ну даже х5 от текущих будет... Это что то поменяет"
     },
     {
+      "id": "https://t.me/whitelist1/7144?comment=571784",
+      "url": "https://t.me/whitelist1/7144?comment=571784",
+      "quote": "утро надо начинать с большой кружки кофе и со сбора кукурузки"
+    },
+    {
       "id": "https://t.me/icodrops_sergey/2426?comment=150574",
       "url": "https://t.me/icodrops_sergey/2426?comment=150574",
       "quote": "С этой стороны конечно нет, Серёга просто флексит вином\n\nЯ ответил про фомо на 3 икса, когда их больше 10 уже"
+    },
+    {
+      "id": "https://t.me/icodrops_sergey/2426?comment=150575",
+      "url": "https://t.me/icodrops_sergey/2426?comment=150575",
+      "quote": "Весь секрет в деньгах и связях. Если у команд/холдеров нет ни первого ни второго, то младший брат просто надузит в ползунки"
+    },
+    {
+      "id": "https://t.me/icodrops_sergey/2426?comment=150576",
+      "url": "https://t.me/icodrops_sergey/2426?comment=150576",
+      "quote": "сигнал был тут https://t.me/icodrops_sergey/2105"
+    },
+    {
+      "id": "https://t.me/whitelist1/7144?comment=571796",
+      "url": "https://t.me/whitelist1/7144?comment=571796",
+      "quote": "Какие там затраты для топа?"
+    },
+    {
+      "id": "https://t.me/whitelist1/7144?comment=571797",
+      "url": "https://t.me/whitelist1/7144?comment=571797",
+      "quote": "ты можешь зайти, бесплатные ключи потратить и надеяться на рафл"
+    },
+    {
+      "id": "https://t.me/moni_talks/12227?comment=468762",
+      "url": "https://t.me/moni_talks/12227?comment=468762",
+      "quote": "Главный посыл обязательно к прочтению."
+    },
+    {
+      "id": "https://t.me/icodrops_sergey/2426?comment=150581",
+      "url": "https://t.me/icodrops_sergey/2426?comment=150581",
+      "quote": "остряк"
+    },
+    {
+      "id": "https://t.me/icodrops_sergey/2431?comment=150597",
+      "url": "https://t.me/icodrops_sergey/2431?comment=150597",
+      "quote": "Арьитрус теперь по сути тоже кормушка же"
+    },
+    {
+      "id": "https://t.me/icodrops_sergey/2431?comment=150598",
+      "url": "https://t.me/icodrops_sergey/2431?comment=150598",
+      "quote": "Деду больше не наливать."
+    },
+    {
+      "id": "https://t.me/icodrops_sergey/2431?comment=150599",
+      "url": "https://t.me/icodrops_sergey/2431?comment=150599",
+      "quote": "Да наступит тысячилетнии булран!"
+    },
+    {
+      "id": "https://t.me/icodrops_sergey/2431?comment=150601",
+      "url": "https://t.me/icodrops_sergey/2431?comment=150601",
+      "quote": "Да просто прими, что ты обосрался со своим Render-ом, вместо которого нужно было набирать TAO, или на крайний случай NEAR"
+    },
+    {
+      "id": "https://t.me/icodrops_sergey/2431?comment=150604",
+      "url": "https://t.me/icodrops_sergey/2431?comment=150604",
+      "quote": "Вы с Брюсом Fomo активируйте лучше) ноль инфо шума по нему"
+    },
+    {
+      "id": "https://t.me/whitelist1/7146?comment=571876",
+      "url": "https://t.me/whitelist1/7146?comment=571876",
+      "quote": "Добро пожаловать в чат Whitelist Media 👍\n\nНаши ресурсы: \n👍Whitelist Database (гайд по инструменту);\n👍Blacklist by Bogdan;\n👍X (Twitter);\n👍Links.\n\nПолезные ссылки: \n👍ProxyWing"
+    },
+    {
+      "id": "https://t.me/whitelist1/7146?comment=571877",
+      "url": "https://t.me/whitelist1/7146?comment=571877",
+      "quote": "Орнул с линеи"
+    },
+    {
+      "id": "https://t.me/whitelist1/7146?comment=571878",
+      "url": "https://t.me/whitelist1/7146?comment=571878",
+      "quote": "Такие опездалы"
+    },
+    {
+      "id": "https://t.me/whitelist1/7146?comment=571879",
+      "url": "https://t.me/whitelist1/7146?comment=571879",
+      "quote": "ахаха, линера днище. помню тот ажиотаж с ролями: \"у меня золото\", \" а у меня платина\"... хотя и сам был в той лодке))"
+    },
+    {
+      "id": "https://t.me/icodrops_sergey/2431?comment=150615",
+      "url": "https://t.me/icodrops_sergey/2431?comment=150615",
+      "quote": "Щас Кайл Самани стратег в бэкпаке движуху наведет и его тоже запишем в альфа активы"
+    },
+    {
+      "id": "https://t.me/whitelist1/7146?comment=571881",
+      "url": "https://t.me/whitelist1/7146?comment=571881",
+      "quote": "Так много где было"
+    },
+    {
+      "id": "https://t.me/whitelist1/7146?comment=571887",
+      "url": "https://t.me/whitelist1/7146?comment=571887",
+      "quote": "У меня было серебро, и я переживал что не успел докачать полтора уровня до золота. Выходит, зря переживал))"
+    },
+    {
+      "id": "https://t.me/icodrops_sergey/2431?comment=150621",
+      "url": "https://t.me/icodrops_sergey/2431?comment=150621",
+      "quote": "Что там Л2 старк арбитрум газуют скоро и о них заговорят"
+    },
+    {
+      "id": "https://t.me/icodrops_sergey/2431?comment=150625",
+      "url": "https://t.me/icodrops_sergey/2431?comment=150625",
+      "quote": "Хорош"
+    },
+    {
+      "id": "https://t.me/icodrops_sergey/2431?comment=150627",
+      "url": "https://t.me/icodrops_sergey/2431?comment=150627",
+      "quote": "Я тоже ничего, можешь посмотреть мой онлифанс"
+    },
+    {
+      "id": "https://t.me/icodrops_sergey/2431?comment=150628",
+      "url": "https://t.me/icodrops_sergey/2431?comment=150628",
+      "quote": "Мужики, налетай!!"
+    },
+    {
+      "id": "https://t.me/whitelist1/7149?comment=571963",
+      "url": "https://t.me/whitelist1/7149?comment=571963",
+      "quote": "Добро пожаловать в чат Whitelist Media 👍\n\nНаши ресурсы: \n👍Whitelist Database (гайд по инструменту);\n👍Blacklist by Bogdan;\n👍X (Twitter);\n👍Links.\n\nПолезные ссылки: \n👍ProxyWing"
+    },
+    {
+      "id": "https://t.me/whitelist1/7149?comment=571964",
+      "url": "https://t.me/whitelist1/7149?comment=571964",
+      "quote": "прошел кто в лягух?"
+    },
+    {
+      "id": "https://t.me/whitelist1/7149?comment=571965",
+      "url": "https://t.me/whitelist1/7149?comment=571965",
+      "quote": "только чекер выкатили"
+    },
+    {
+      "id": "https://t.me/whitelist1/7149?comment=571966",
+      "url": "https://t.me/whitelist1/7149?comment=571966",
+      "quote": "чина, 8/10 аков прошли"
+    },
+    {
+      "id": "https://t.me/whitelist1/7149?comment=571968",
+      "url": "https://t.me/whitelist1/7149?comment=571968",
+      "quote": "каждая по касику минимум"
+    },
+    {
+      "id": "https://t.me/whitelist1/7149?comment=571970",
+      "url": "https://t.me/whitelist1/7149?comment=571970",
+      "quote": "Да вот х его з"
+    },
+    {
+      "id": "https://t.me/whitelist1/7149?comment=571971",
+      "url": "https://t.me/whitelist1/7149?comment=571971",
+      "quote": "Та чето дорогое"
     },
     {
       "id": "https://t.me/whitelist1/7149?comment=571974",
@@ -4651,9 +5635,49 @@
       "quote": "Щас пока что зекбит только, и то с 2 коллекциями. Каждый на своем сайте торги ведет"
     },
     {
+      "id": "https://t.me/whitelist1/7149?comment=571981",
+      "url": "https://t.me/whitelist1/7149?comment=571981",
+      "quote": "Зафанался с этим WL, пойдет замес!"
+    },
+    {
+      "id": "https://t.me/whitelist1/7149?comment=571982",
+      "url": "https://t.me/whitelist1/7149?comment=571982",
+      "quote": "Слышь, говорят отнимают обратно 😄"
+    },
+    {
+      "id": "https://t.me/whitelist1/7149?comment=571983",
+      "url": "https://t.me/whitelist1/7149?comment=571983",
+      "quote": "Да ну?"
+    },
+    {
+      "id": "https://t.me/whitelist1/7149?comment=571984",
+      "url": "https://t.me/whitelist1/7149?comment=571984",
+      "quote": "Некоторые уже жалуются"
+    },
+    {
       "id": "https://t.me/whitelist1/7149?comment=571985",
       "url": "https://t.me/whitelist1/7149?comment=571985",
       "quote": "скамят работяг???"
+    },
+    {
+      "id": "https://t.me/whitelist1/7149?comment=571988",
+      "url": "https://t.me/whitelist1/7149?comment=571988",
+      "quote": "жестко"
+    },
+    {
+      "id": "https://t.me/whitelist1/7149?comment=571993",
+      "url": "https://t.me/whitelist1/7149?comment=571993",
+      "quote": "Вот эти еще вроде как норм"
+    },
+    {
+      "id": "https://t.me/whitelist1/7149?comment=571994",
+      "url": "https://t.me/whitelist1/7149?comment=571994",
+      "quote": "ахуй, гц"
+    },
+    {
+      "id": "https://t.me/whitelist1/7149?comment=571995",
+      "url": "https://t.me/whitelist1/7149?comment=571995",
+      "quote": "это гарантированный вл? или нет?"
     },
     {
       "id": "https://t.me/whitelist1/7149?comment=571996",
@@ -4661,9 +5685,74 @@
       "quote": "zaddr уже перестали заявки принимать?"
     },
     {
+      "id": "https://t.me/whitelist1/7149?comment=571998",
+      "url": "https://t.me/whitelist1/7149?comment=571998",
+      "quote": "у меня оказывается тоже"
+    },
+    {
+      "id": "https://t.me/whitelist1/7149?comment=572000",
+      "url": "https://t.me/whitelist1/7149?comment=572000",
+      "quote": "Пару дней назад еще"
+    },
+    {
+      "id": "https://t.me/whitelist1/7149?comment=572001",
+      "url": "https://t.me/whitelist1/7149?comment=572001",
+      "quote": "Да хорош вам уже)))"
+    },
+    {
+      "id": "https://t.me/whitelist1/7149?comment=572002",
+      "url": "https://t.me/whitelist1/7149?comment=572002",
+      "quote": "Так там нфт меньше, чем вл, наверное 😕"
+    },
+    {
       "id": "https://t.me/whitelist1/7149?comment=572005",
       "url": "https://t.me/whitelist1/7149?comment=572005",
       "quote": "Как завести Zec на кошелек noir? Только с биржи?"
+    },
+    {
+      "id": "https://t.me/whitelist1/7149?comment=572006",
+      "url": "https://t.me/whitelist1/7149?comment=572006",
+      "quote": "кросчейн через бридж рубик можно"
+    },
+    {
+      "id": "https://t.me/whitelist1/7149?comment=572008",
+      "url": "https://t.me/whitelist1/7149?comment=572008",
+      "quote": "Ооо, точно, знаю такой. Спс"
+    },
+    {
+      "id": "https://t.me/whitelist1/7149?comment=572009",
+      "url": "https://t.me/whitelist1/7149?comment=572009",
+      "quote": "Я прошел"
+    },
+    {
+      "id": "https://t.me/whitelist1/7149?comment=572010",
+      "url": "https://t.me/whitelist1/7149?comment=572010",
+      "quote": "Гратц, надеюсь накорямт"
+    },
+    {
+      "id": "https://t.me/whitelist1/7149?comment=572011",
+      "url": "https://t.me/whitelist1/7149?comment=572011",
+      "quote": "Тоже очень надеюсь) 🤞"
+    },
+    {
+      "id": "https://t.me/whitelist1/7149?comment=572012",
+      "url": "https://t.me/whitelist1/7149?comment=572012",
+      "quote": "Комса у них чёт большая"
+    },
+    {
+      "id": "https://t.me/whitelist1/7149?comment=572013",
+      "url": "https://t.me/whitelist1/7149?comment=572013",
+      "quote": "Да, потратить 10-15 баксов норм"
+    },
+    {
+      "id": "https://t.me/whitelist1/7149?comment=572021",
+      "url": "https://t.me/whitelist1/7149?comment=572021",
+      "quote": "Ты тож прошел?"
+    },
+    {
+      "id": "https://t.me/whitelist1/7149?comment=572022",
+      "url": "https://t.me/whitelist1/7149?comment=572022",
+      "quote": "Приватность нужно оплачивать)"
     },
     {
       "id": "https://t.me/whitelist1/7149?comment=572024",
@@ -4671,19 +5760,69 @@
       "quote": "у тебя на кошельке был зек? или прям нулевый?"
     },
     {
+      "id": "https://t.me/whitelist1/7149?comment=572027",
+      "url": "https://t.me/whitelist1/7149?comment=572027",
+      "quote": "только создал"
+    },
+    {
+      "id": "https://t.me/whitelist1/7149?comment=572028",
+      "url": "https://t.me/whitelist1/7149?comment=572028",
+      "quote": "Вот сцуки, почему сбрили активных тогда, наверняка они акки в Х смотрели."
+    },
+    {
+      "id": "https://t.me/whitelist1/7149?comment=572030",
+      "url": "https://t.me/whitelist1/7149?comment=572030",
+      "quote": "наверно, у меня там не пусто)"
+    },
+    {
+      "id": "https://t.me/whitelist1/7149?comment=572039",
+      "url": "https://t.me/whitelist1/7149?comment=572039",
+      "quote": "Какие критерии кто в курсе ?"
+    },
+    {
       "id": "https://t.me/whitelist1/7149?comment=572040",
       "url": "https://t.me/whitelist1/7149?comment=572040",
       "quote": "Это скам"
     },
     {
+      "id": "https://t.me/whitelist1/7149?comment=572041",
+      "url": "https://t.me/whitelist1/7149?comment=572041",
+      "quote": "@NikitonNT"
+    },
+    {
+      "id": "https://t.me/whitelist1/7149?comment=572042",
+      "url": "https://t.me/whitelist1/7149?comment=572042",
+      "quote": "И этого тож туда же"
+    },
+    {
+      "id": "https://t.me/whitelist1/7149?comment=572043",
+      "url": "https://t.me/whitelist1/7149?comment=572043",
+      "quote": "С хуяли ?"
+    },
+    {
+      "id": "https://t.me/whitelist1/7149?comment=572044",
+      "url": "https://t.me/whitelist1/7149?comment=572044",
+      "quote": "Проверка)"
+    },
+    {
       "id": "https://t.me/whitelist1/7149?comment=572050",
       "url": "https://t.me/whitelist1/7149?comment=572050",
       "quote": "1) если в среднем 600 с кошелька, то почему с твоих 5 старых прокаченных вышло +-250 баксов\n2) старый кошель прокаченный как раз 600 бы и дал\n3) если давно в крипте, то че так мало"
+    },
+    {
+      "id": "https://t.me/whitelist1/7149?comment=572051",
+      "url": "https://t.me/whitelist1/7149?comment=572051",
+      "quote": "братан тебе не похуй?"
+    },
+    {
+      "id": "https://t.me/whitelist1/7149?comment=572052",
+      "url": "https://t.me/whitelist1/7149?comment=572052",
+      "quote": "Да тупо отвлекся от работы)))"
     }
   ],
   "spend_usd": 0.0,
   "numbers_by": "code",
-  "brief_markdown": "# Pulse (news-first): zec, окно 2026-09-16T06:10:19+00:00 – 2026-09-21T06:04:32+00:00\n\n## Коротко\n\n- ➤ Кит «t1JhvB» вывел с Binance, OKX и Kraken 15,300 ZEC ($17,9m).\n- 💰 #ZEC >1400$\n- Он шортил ZEC еще в в начале лета, был в плюсе на $20М после слухов о уязвимости в системе шилдинга ZEC, но не зафиксировал прибыль, а удержал позицию.\n- Сообщество Zcash поддержало сокращение времени формирования блока с 75 до 25 секунд.\n- 🤔 #ZEC Управляющий партнер Dragonfly предложил свернуть деятельность фонда разработчиков Zcash, утверждая, что фонд достаточно велик, чтобы финансировать оставшуюся работу над…\n\n## События и заявления\n\n- **ZCASH HOLDERS OVERWHELMINGLY BACK FASTER TRANSACTIONS AND BITCOIN-STYLE HALVINGS**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/marketfeed/1039055: «ZCASH HOLDERS OVERWHELMINGLY BACK FASTER TRANSACTIONS AND BITCOIN-STYLE HALVINGS»\n- **Zcash holders backed faster transactions and halving-style design**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/marketfeed/1039182: «Zcash holders backed faster transactions and halving-style design»\n- **ZEC**\n  публикации 2, каналы 1, известные авторы 0, первоисточники 2, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/423085: «ZEC»\n  - https://t.me/WEB3_AGGREGATOR/423102: «ZEC»\n- **Zcash**\n  публикации 2, каналы 1, известные авторы 0, первоисточники 2, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/423090: «Zcash»\n  - https://t.me/WEB3_AGGREGATOR/423090: «Zcash»\n  - https://t.me/WEB3_AGGREGATOR/423090: «Zcash»\n- **Тир-лист предстоящих проектов в экосистеме ZEC**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/423137: «Тир-лист предстоящих проектов в экосистеме ZEC»\n- **На самом деле сейчас несется че то очень интересное, потому что и на Robinhood и на Arc и на Zcash, стали выходить коллекции, причем не для виду, а реально с кучей иксов**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/423142: «На самом деле сейчас несется че то очень интересное, потому что и на Robinhood и на Arc и на Zcash, стали выходить коллекции, причем не для виду, а реально с ку»\n- **Мысль по Zcash экосистеме**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/423147: «Мысль по Zcash экосистеме»\n- **И пока этот круг не случится у нас будет разогрев всей экосистемы Zcash, а значит $ZEC продолжит расти, тот же ZCAT продолжит расти и так далее**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/423147: «И пока этот круг не случится у нас будет разогрев всей экосистемы Zcash, а значит $ZEC продолжит расти, тот же ZCAT продолжит расти и так далее»\n- **Тут список того, что поделать в Zcash**\n  публикации 2, каналы 1, известные авторы 0, первоисточники 2, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/423150: «Тут список того, что поделать в Zcash»\n  - https://t.me/WEB3_AGGREGATOR/423248: «Списочек NFT на $ZEC»\n- **Он шортил ZEC еще в в начале лета, был в плюсе на $20М после слухов о уязвимости в системе шилдинга ZEC, но не зафиксировал прибыль, а удержал позицию.**\n  публикации 2, каналы 2, известные авторы 0, первоисточники 0, перепечатки 2, неизвестное происхождение 0.\n  - https://t.me/Defiscamcheck/4871: «Он шортил ZEC еще в в начале лета, был в плюсе на $20М после слухов о уязвимости в системе шилдинга ZEC, но не зафиксировал прибыль, а удержал позицию.»\n  - https://t.me/WEB3_AGGREGATOR/423167: «Он шортил ZEC еще в в начале лета, был в плюсе на $20М после слухов о уязвимости в системе шилдинга ZEC, но не зафиксировал прибыль, а удержал позицию.»\n- **Популярнейший анонимный токен ZEC анонимного проекта ZCash с юридическим офисом в одном квартале от штаб-квартиры ЦРУ в США становится еще анонимнее при цене > $1300 — аналитики**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/markettwits/385132: «Популярнейший анонимный токен ZEC анонимного проекта ZCash с юридическим офисом в одном квартале от штаб-квартиры ЦРУ в США становится еще анонимнее при цене > »\n- **#zec = 1400$ say GM 🏆**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/icryptocom/8099: «#zec = 1400$ say GM 🏆»\n- **➤ Bitcoin OG увеличил шорт по ZEC. Сейчас он шортит 37,760 ZEC ($51,5m) с нереализованным убытком $26m. Цена ликвидации = $2632.**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/crypto_hd/31476: «➤ Bitcoin OG увеличил шорт по ZEC. Сейчас он шортит 37,760 ZEC ($51,5m) с нереализованным убытком $26m. Цена ликвидации = $2632.»\n- **➤ Кит «t1JhvB» вывел с Binance, OKX и Kraken 15,300 ZEC ($17,9m).**\n  публикации 3, каналы 3, известные авторы 0, первоисточники 2, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/crypto_hd/31476: «➤ Кит «t1JhvB» вывел с Binance, OKX и Kraken 15,300 ZEC ($17,9m).»\n  - https://t.me/Defiscamcheck/4873: «Ранее он вывел 202К Zec и фактически его шорт является частично дельта нейтральным (размер спота в разы больше шорта)»\n  - https://t.me/WEB3_AGGREGATOR/423360: «Ранее он вывел 202К Zec и фактически его шорт является частично дельта нейтральным (размер спота в разы больше шорта)»\n- **Хайп аукцион zkSNARKs на зкеше.**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/423189: «Хайп аукцион zkSNARKs на зкеше.»\n- **Автор ничего толкового давно не писал, но сегодня, вроде как, есть повод: весь твиттер гудит по поводу минта нфтшек на Zcash**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/423204: «Автор ничего толкового давно не писал, но сегодня, вроде как, есть повод: весь твиттер гудит по поводу минта нфтшек на Zcash»\n- **⚡️ Сеть Zcash собираются ускорить в 3 раза.**\n  публикации 2, каналы 1, известные авторы 0, первоисточники 1, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/crypto_hd/31484: «⚡️ Сеть Zcash собираются ускорить в 3 раза.»\n  - https://t.me/crypto_hd/31494: «Zcash ускорят в 3 раза (читать)»\n- **Сообщество Zcash поддержало сокращение времени формирования блока с 75 до 25 секунд.**\n  публикации 2, каналы 2, известные авторы 0, первоисточники 0, перепечатки 2, неизвестное происхождение 0.\n  - https://t.me/crypto_hd/31484: «Сообщество Zcash поддержало сокращение времени формирования блока с 75 до 25 секунд.»\n  - https://t.me/markettwits/385234: «Сообщество ZCash проголосовало за ускорение формирования блоков в сети в 3 раза -  до 25 сек!»\n- **Чтобы эмиссия ZEC не изменилась, при сокращении времени блока награду за каждый отдельный блок также уменьшат примерно в 3 раза. Изменения пока не запущены – их еще предстоит…**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/crypto_hd/31484: «Чтобы эмиссия ZEC не изменилась, при сокращении времени блока награду за каждый отдельный блок также уменьшат примерно в 3 раза. Изменения пока не запущены – их»\n- **💰 #ZEC >1400$**\n  публикации 3, каналы 3, известные авторы 0, первоисточники 0, перепечатки 3, неизвестное происхождение 0.\n  - https://t.me/cryptoattack24/96789: «💰 #ZEC >1400$»\n  - https://t.me/markettwits/385255: «💥✴️#ZEC > $1500»\n  - https://t.me/crypto_hd/31488: «😳 #ZEC в моменте > $1500.»\n- **👍 Курс Zcash обновил 10-летний максимум выше $1400.**\n  публикации 2, каналы 1, известные авторы 0, первоисточники 0, перепечатки 2, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/423225: «👍 Курс Zcash обновил 10-летний максимум выше $1400.»\n  - https://t.me/WEB3_AGGREGATOR/423243: «👍 Курс Zcash обновил 10-летний максимум выше $1400.»\n- **🙁 Инсайдер Гаррет Джин сейчас в минусе почти на -$30,000,000 по своему шорту с ZEC.**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/crypto_hd/31486: «🙁 Инсайдер Гаррет Джин сейчас в минусе почти на -$30,000,000 по своему шорту с ZEC.»\n- **А тут вдобавок еще $ZEC ATH пишет...**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/423236: «А тут вдобавок еще $ZEC ATH пишет...»\n- **ZEC уже 9 позиция в ТОПе крипты**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/icodrops_sergey/2426: «ZEC уже 9 позиция в ТОПе крипты»\n- **Leo is up 1.6m from his ZEC long and bought more of $worth and I know i sold the bottom like a chud so i reaped here**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/PowsGemCalls/49106: «Leo is up 1.6m from his ZEC long and bought more of $worth and I know i sold the bottom like a chud so i reaped here»\n- **Лудоманы с Polymarket ожидают #ZEC выше $2000 до конца 2026 года.**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/crypto_hd/31490: «Лудоманы с Polymarket ожидают #ZEC выше $2000 до конца 2026 года.»\n- **Памп #ZEC**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/423250: «Памп #ZEC»\n- **Идея с отработкой классической фигуры ТА «чашка с ручкой» на ZEC (с целью в $3100+).**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/crypto_hd/31493: «Идея с отработкой классической фигуры ТА «чашка с ручкой» на ZEC (с целью в $3100+).»\n- **Рост Zcash (читать)**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/crypto_hd/31494: «Рост Zcash (читать)»\n- **CEO StarkWare о ZEC (читать)**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/crypto_hd/31494: «CEO StarkWare о ZEC (читать)»\n- **Прогноз по ZEC (читать)**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/crypto_hd/31494: «Прогноз по ZEC (читать)»\n- **Влажные мечты - ZEC (читать)**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/crypto_hd/31494: «Влажные мечты - ZEC (читать)»\n- **Заполняем WL на дроп токена от проекта Bitx. Обещают чето типа стандарта brc-20 на битке только для ZEC и дроп токенов тем кто заполнил влку.**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/423256: «Заполняем WL на дроп токена от проекта Bitx. Обещают чето типа стандарта brc-20 на битке только для ZEC и дроп токенов тем кто заполнил влку.»\n- **Но шорт по #ZEC уничтожил всю его прибыль, и сейчас он находится на грани ликвидации.**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/cryptoattack24/96794: «Но шорт по #ZEC уничтожил всю его прибыль, и сейчас он находится на грани ликвидации.»\n- **Его шорт на 12 285 #ZEC ($18,31 млн) сейчас приносит убыток в размере $7,66 млн.**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/cryptoattack24/96794: «Его шорт на 12 285 #ZEC ($18,31 млн) сейчас приносит убыток в размере $7,66 млн.»\n- **🔍 Новые кошельки накапливают #ZEC:**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/cryptoattack24/96796: «🔍 Новые кошельки накапливают #ZEC:\n»\n- **1. t1UcyM вывел 15 860 #ZEC ($22,69 млн) с Binance;**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/cryptoattack24/96796: «1. t1UcyM вывел 15 860 #ZEC ($22,69 млн) с Binance;\n»\n- **2. За последние 2 дня t1fXjw вывел с бирж 7 081 #ZEC ($10,29 млн);**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/cryptoattack24/96796: «2. За последние 2 дня t1fXjw вывел с бирж 7 081 #ZEC ($10,29 млн);\n»\n- **3. t1YLeD вывел с бирж 5 818 #ZEC ($8,45 млн);**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/cryptoattack24/96796: «3. t1YLeD вывел с бирж 5 818 #ZEC ($8,45 млн);\n»\n- **🤔 #ZEC Управляющий партнер Dragonfly предложил свернуть деятельность фонда разработчиков Zcash, утверждая, что фонд достаточно велик, чтобы финансировать оставшуюся работу над…**\n  публикации 2, каналы 2, известные авторы 0, первоисточники 0, перепечатки 2, неизвестное происхождение 0.\n  - https://t.me/cryptoattack24/96809: «🤔 #ZEC Управляющий партнер Dragonfly предложил свернуть деятельность фонда разработчиков Zcash, утверждая, что фонд достаточно велик, чтобы финансировать оставш»\n  - https://t.me/WEB3_AGGREGATOR/423328: «👨‍💻 #ZEC Управляющий партнер Dragonfly предложил свернуть деятельность фонда разработчиков Zcash»\n- **➤ Киты активно накапливают ZEC. Четыре новых кошелька вывели с Binance и других бирж 32,293 ZEC (~$46,2m).**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/crypto_hd/31503: «➤ Киты активно накапливают ZEC. Четыре новых кошелька вывели с Binance и других бирж 32,293 ZEC (~$46,2m).\n\n»\n- **ZCASH TARGETS NOVEMBER UPGRADE TO MAKE PRIVATE PAYMENTS UP TO THREE TIMES FASTER ...**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/marketfeed/1041046: «ZCASH TARGETS NOVEMBER UPGRADE TO MAKE PRIVATE PAYMENTS UP TO THREE TIMES FASTER ...»\n- **3333 supply **\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 0, неизвестное происхождение 1.\n  - https://t.me/WEB3_AGGREGATOR/423299: «3333 supply \nZEC Blockchain\nMint price TBD»\n- **что-то мимо меня вчера инфа прошла, да и я чет ток в ZEC погрузился, но вот инфа -> ТЫК**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/423300: «что-то мимо меня вчера инфа прошла, да и я чет ток в ZEC погрузился, но вот инфа -> ТЫК»\n- **😐 В связи с большим количеством минтов на чейне Zcash, остро стал вопрос депа в саму сеть. Поэтому расписываю 1 раз, чтобы к этому не возвращаться ✏️**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/423315: «😐 В связи с большим количеством минтов на чейне Zcash, остро стал вопрос депа в саму сеть. Поэтому расписываю 1 раз, чтобы к этому не возвращаться ✏️»\n- **🔥 Zcash в ТОП-10: ренессанс приватности или сквиз шортистов?**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/423316: «🔥 Zcash в ТОП-10: ренессанс приватности или сквиз шортистов?»\n- **ZEC разогнался до ~$1463, влетел на #9 по капитализации (~$24.8 млрд) и пробивал $1500. За месяц +160%, за год почти в 26X (+~2500%).**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/423316: «ZEC разогнался до ~$1463, влетел на #9 по капитализации (~$24.8 млрд) и пробивал $1500. За месяц +160%, за год почти в 26X (+~2500%).»\n- **За сутки по ZEC ликвидировали позиций на >$55 млн, из них ~$49 млн — короткие. Самый громкий «погорелец» — кит Гаррет Джин, которого ончейн-детективы связывают с биржей BitForex…**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/423316: «За сутки по ZEC ликвидировали позиций на >$55 млн, из них ~$49 млн — короткие. Самый громкий «погорелец» — кит Гаррет Джин, которого ончейн-детективы связывают »\n- **Мэтт Хуанг, сооснователь фонда Paradigm, назвал Zec «приватным дополнением к BTC» и раскрыл, что фирма инвестировала в лабораторию разработки Zcash (ZODL) и держит $ZEC.**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/423316: «Мэтт Хуанг, сооснователь фонда Paradigm, назвал Zec «приватным дополнением к BTC» и раскрыл, что фирма инвестировала в лабораторию разработки Zcash (ZODL) и дер»\n- **Ровно также $ZEC улетал вертикально на старте в 2016-м: мало монет в обороте рисуют 🐂«up only» на пустом стакане.**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/423316: «Ровно также $ZEC улетал вертикально на старте в 2016-м: мало монет в обороте рисуют 🐂«up only» на пустом стакане.»\n- **В Bitx на данный момент мы можем заполнить WL-форму на дроп. Переходим по ссылке, выполняем квесты и оставляем ZEC кошелек.**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/423320: «В Bitx на данный момент мы можем заполнить WL-форму на дроп. Переходим по ссылке, выполняем квесты и оставляем ZEC кошелек.»\n- **DownOnly: 38 Обсуждаем ZEC-мету / WOW Forever**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/423323: «DownOnly: 38 Обсуждаем ZEC-мету / WOW Forever»\n- **В этот раз записали в нашем приватном Discord, так что были гости и пришел Костя с канала NFT Alerts с которым обсудили ZEC мету**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/423323: «В этот раз записали в нашем приватном Discord, так что были гости и пришел Костя с канала NFT Alerts с которым обсудили ZEC мету»\n- **Ранее: сделка по ZEC**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/crypto_hd/31511: «Ранее: сделка по ZEC»\n- **🤪 $NET - По сути, казиныч, за который топит Ансем, а у него попадание почти во все за последний год - VVV, ZEC, HYPE - все на ath. Обещают сейчс за стейкинг $NET 10.000% apy**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/423324: «🤪 $NET - По сути, казиныч, за который топит Ансем, а у него попадание почти во все за последний год - VVV, ZEC, HYPE - все на ath. Обещают сейчс за стейкинг $NE»\n- **• Binance / Zcash — WSJ said Lagarde helped block Binance’s Europe push; Zcash targets a November privacy-payments upgrade.**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/marketfeed/1041289: «• Binance / Zcash — WSJ said Lagarde helped block Binance’s Europe push; Zcash targets a November privacy-payments upgrade.»\n- **Реально обновляют хаи те, кто показывают результаты деятельности, а не просто обещают (пластичные кормушки - HYPE, PUMP, LIGHTER, VENICE) и топы влияния - ZEC**\n  публикации 2, каналы 2, известные авторы 0, первоисточники 2, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/icodrops_sergey/2431: «Реально обновляют хаи те, кто показывают результаты деятельности, а не просто обещают (пластичные кормушки - HYPE, PUMP, LIGHTER, VENICE) и топы влияния - ZEC»\n  - https://t.me/WEB3_AGGREGATOR/423344: «Реально обновляют хаи те, кто показывают результаты деятельности, а не просто обещают (пластичные кормушки - HYPE, PUMP, LIGHTER, VENICE) и топы влияния - ZEC»\n- **🔘Подаем заявку в WL новой коллекции Zaddr (необходимо подключить X). Минт уже 21 сентября, mint price: 0.02 zec, 2,800 NFTs.**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/whitelist1/7146: «🔘Подаем заявку в WL новой коллекции Zaddr (необходимо подключить X). Минт уже 21 сентября, mint price: 0.02 zec, 2,800 NFTs.»\n- **3 giveaways on X:**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/423337: «3 giveaways on X:\none on zec\ntwo\nthree»\n- **– крупный инвестор перевел #ZEC на сумму >362 млн $ спустя 10 месяцев бездействия (на тот момент стоимость токенов составляла ~163 млн $), после чего почти половину токенов перевёл…**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/cryptoattack24/96824: «– крупный инвестор перевел #ZEC на сумму >362 млн $ спустя 10 месяцев бездействия (на тот момент стоимость токенов составляла ~163 млн $), после чего почти поло»\n- **Гарретт Буллиш (в убытке на $35М по шорту Zec на Hyperliquid) показал свой спот адрес Zec**\n  публикации 2, каналы 2, известные авторы 0, первоисточники 2, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/Defiscamcheck/4873: «Гарретт Буллиш (в убытке на $35М по шорту Zec на Hyperliquid) показал свой спот адрес Zec»\n  - https://t.me/WEB3_AGGREGATOR/423360: «Гарретт Буллиш (в убытке на $35М по шорту Zec на Hyperliquid) показал свой спот адрес Zec»\n- **Zec адрес: t1gGCYpyURMo2FcYDSqeR8pgp2Kx9rnT72V**\n  публикации 2, каналы 2, известные авторы 0, первоисточники 2, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/Defiscamcheck/4873: «Zec адрес: t1gGCYpyURMo2FcYDSqeR8pgp2Kx9rnT72V»\n  - https://t.me/WEB3_AGGREGATOR/423360: «Zec адрес: t1gGCYpyURMo2FcYDSqeR8pgp2Kx9rnT72V»\n- **начались торги NFTшек zkSnarks на аукционе с бидами по 1.5 $ZEC, торги сейчас идут полным ходом, флур сейчас составляет 2.13 $ZEC.**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 0, неизвестное происхождение 1.\n  - https://t.me/WEB3_AGGREGATOR/423362: «начались торги NFTшек zkSnarks на аукционе с бидами по 1.5 $ZEC, торги сейчас идут полным ходом, флур сейчас составляет 2.13 $ZEC. \n\n»\n- **BREAKING: DeGods переезжает на Zcash.**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 0, неизвестное происхождение 1.\n  - https://t.me/WEB3_AGGREGATOR/423371: «BREAKING: DeGods переезжает на Zcash.\n\n»\n- **0.3 ZEC Puppets вышли**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 0, неизвестное происхождение 1.\n  - https://t.me/WEB3_AGGREGATOR/423375: «0.3 ZEC Puppets вышли\n\n»\n- **Пока ждем Zaddr и оцениваем дальнейшую мету ZEC NFT, выходят они 21 числа 13:00 UTC WL - инфа**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 0, неизвестное происхождение 1.\n  - https://t.me/WEB3_AGGREGATOR/423375: «Пока ждем Zaddr и оцениваем дальнейшую мету ZEC NFT, выходят они 21 числа 13:00 UTC WL - инфа\n\n»\n- **ZecFrogs - NFT-коллекция в сети Zcash с сапплаем 6969 штук. Бесплатный минт пройдёт 21 сентября в 20:00 мск.**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 0, неизвестное происхождение 1.\n  - https://t.me/WEB3_AGGREGATOR/423379: «ZecFrogs - NFT-коллекция в сети Zcash с сапплаем 6969 штук. Бесплатный минт пройдёт 21 сентября в 20:00 мск.\n\n»\n- **DeGods переезжают на на Zcash)**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/423398: «DeGods переезжают на на Zcash)\n\n»\n- **• 3 333 пиксельных кота на Zcash. Нужны X + t1-адрес. Цена TBA;**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 0, неизвестное происхождение 1.\n  - https://t.me/whitelist1/7149: «• 3 333 пиксельных кота на Zcash. Нужны X + t1-адрес. Цена TBA;\n»\n- **• 6969 пиксельных лягушек на ZEC, free mint. Минимум 0.007 ZEC на газ;**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 0, неизвестное происхождение 1.\n  - https://t.me/whitelist1/7149: «• 6969 пиксельных лягушек на ZEC, free mint. Минимум 0.007 ZEC на газ;»\n- **• Приватная коллекция на Zcash: арт публичный. Саплай/цена не раскрыты;**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 0, неизвестное происхождение 1.\n  - https://t.me/whitelist1/7149: «• Приватная коллекция на Zcash: арт публичный. Саплай/цена не раскрыты;»\n- **• 2,800 рукописных пиксельных NFT на Zcash. Цена 0.02 ZEC. WL: 1 на кошелек, public: 3 на кошелек;**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 0, неизвестное происхождение 1.\n  - https://t.me/whitelist1/7149: «• 2,800 рукописных пиксельных NFT на Zcash. Цена 0.02 ZEC. WL: 1 на кошелек, public: 3 на кошелек; \n»\n- **• Токен-стандарт ZRC20 на Zcash, задания в X + ZEC-кошелек, заявки скоро закрывают;**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 0, неизвестное происхождение 1.\n  - https://t.me/whitelist1/7149: «• Токен-стандарт ZRC20 на Zcash, задания в X + ZEC-кошелек, заявки скоро закрывают;  \n»\n- **$ZEC и вовсе живёт своей жизнью по $1 595 за монету (х3 за 30 дней)**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/423406: «$ZEC и вовсе живёт своей жизнью по $1 595 за монету (х3 за 30 дней)»\n- **ZEC уже улетел. Покупать монету после такого движения — догонять поезд.**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 0, неизвестное происхождение 1.\n  - https://t.me/WEB3_AGGREGATOR/423415: «ZEC уже улетел. Покупать монету после такого движения — догонять поезд.»\n- **3. Гаррет Джин, удерживавший крупнейший шорт #ZEC, закрыл его, зафиксировав убыток в $35,44 млн. Он всё ещё удерживает спот на 202 078 #ZEC ($309,25 млн) с прибылью $221 млн.**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/cryptoattack24/96838: «3. Гаррет Джин, удерживавший крупнейший шорт #ZEC, закрыл его, зафиксировав убыток в $35,44 млн. Он всё ещё удерживает спот на 202 078 #ZEC ($309,25 млн) с приб»\n\n## Кто распространяет информацию и какие позиции\n\n- Мне очень не нравится зкеш и его приколы с приватностью, нам не будет видно сколько всего депнули ончейн, и клиринг прайс мы узнаем только с их слов, все это будет в руках команды, фактически они могут сделать что угодно.\n  https://t.me/WEB3_AGGREGATOR/423189\n- - отсутствие понимания, как именно будут минтиться нфтшки, ведь на Zcash нет подобной ординалсам\\инскрипциям механики как на битке\n  https://t.me/WEB3_AGGREGATOR/423204\n- Часть роста ZEC, как я думаю, обусловлена страхом, что Биткоин стал слишком «закостенелым». Я говорю это как человек, который любит Биткоин.\n  https://t.me/crypto_hd/31487\n- $ZEC Альфа актив новая фин элита, крче defi развивается, nft развивается, бомжи уже не купят, ибо дорого, крч это бтс для молодых, плюс Уинклвосы, выкупают zec на компанию, как бит-майн баит эфирчик\n  https://t.me/WEB3_AGGREGATOR/423229\n\n## Вопросы, аргументы и опыт участников\n\n- Я этого гандона хотел лонговать когда он был по 450... Похуй фомо недозаработал бы баксов 40-50 в любом случае\n  основание: реплика к посту с одним событием по теме и тому же предмету\n  https://t.me/icryptocom/8099?comment=188801\n- Фомо уже у всех, ждем отката )\n  основание: реплика к посту с одним событием по теме и тому же предмету\n  https://t.me/icodrops_sergey/2426?comment=150547\n- Да какое фомо на около трех иксах. Если он будет 5к стоить, то тогда можно будет говорить о фомоебле\n  основание: реплика к посту с одним событием по теме и тому же предмету\n  https://t.me/icodrops_sergey/2426?comment=150550\n- время лонга с хорошим плечом\n  основание: реплика к посту с одним событием по теме и тому же предмету\n  https://t.me/icodrops_sergey/2426?comment=150551\n- Скоро шорт зека озолотит поколение.. 😂😂\n  основание: реплика к посту с одним событием по теме и тому же предмету\n  https://t.me/icodrops_sergey/2426?comment=150552\n- Серёга первый раз купил по 150 и он падал до 125\n  основание: вопрос или оценка по проекту в целом, не по конкретной новости\n  https://t.me/icodrops_sergey/2426?comment=150556\n- 12 иксов от дна\n  основание: вопрос или оценка по проекту в целом, не по конкретной новости\n  https://t.me/icodrops_sergey/2426?comment=150557\n- Тоже держу ниар. По структуре очень напоминает  zen, zec , ну, по моим параметрам.\n\nПо коинглас наблюдаю все это время. Даже на 15м почти не было продаж спота. Все покупали спот. Он пробил вверх дневные линейные регрессии 100 и 200. И главн\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/rawa_imagination/21112?comment=343092\n- пока всем похуи, есть потенциал на иксы с текуших\n  основание: вопрос или оценка по проекту в целом, не по конкретной новости\n  https://t.me/icodrops_sergey/2426?comment=150568\n- Я думаю DASH  тоже себя ещё покажет как младший брат от ZEC\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/icodrops_sergey/2426?comment=150569\n- Нам то что с того. Покупать сейчас что бы сделать х2 на $100 ну даже х5 от текущих будет... Это что то поменяет\n  основание: реплика к посту с одним событием по теме и тому же предмету\n  https://t.me/icodrops_sergey/2426?comment=150573\n- С этой стороны конечно нет, Серёга просто флексит вином\n\nЯ ответил про фомо на 3 икса, когда их больше 10 уже\n  основание: реплика к посту с одним событием по теме и тому же предмету\n  https://t.me/icodrops_sergey/2426?comment=150574\n- А на каком маркете торгуются нфт на Zcash ?\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7149?comment=571974\n- Основной https://zecbit.net/\n\nНо некоторые лаунчатся сами у себя\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7149?comment=571975\n- Щас пока что зекбит только, и то с 2 коллекциями. Каждый на своем сайте торги ведет\n  основание: предмет реплики — сторонний сервис/коллекция экосистемы, не событие темы\n  https://t.me/whitelist1/7149?comment=571976\n- скамят работяг???\n  основание: предмет реплики — сторонний сервис/коллекция экосистемы, не событие темы\n  https://t.me/whitelist1/7149?comment=571985\n- zaddr уже перестали заявки принимать?\n  основание: предмет реплики — сторонний сервис/коллекция экосистемы, не событие темы\n  https://t.me/whitelist1/7149?comment=571996\n- Как завести Zec на кошелек noir? Только с биржи?\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7149?comment=572005\n- у тебя на кошельке был зек? или прям нулевый?\n  основание: вопрос или оценка по проекту в целом, не по конкретной новости\n  https://t.me/whitelist1/7149?comment=572024\n- Это скам\n  основание: предмет реплики — сторонний сервис/коллекция экосистемы, не событие темы\n  https://t.me/whitelist1/7149?comment=572040\n- 1) если в среднем 600 с кошелька, то почему с твоих 5 старых прокаченных вышло +-250 баксов\n2) старый кошель прокаченный как раз 600 бы и дал\n3) если давно в крипте, то че так мало кошельков?!?\n\nЗадолбали со своей скаминой лезть\n  основание: предмет реплики — сторонний сервис/коллекция экосистемы, не событие темы\n  https://t.me/whitelist1/7149?comment=572050\n\n## Изменения относительно предыдущего периода\n\n- Появившиеся события: 76.\n- Исчезнувшие события: 10.\n- Изменение охвата источников: +2 / −1 каналов.\n- Комментарии в текущем окне: 596.\n\n## Охват и ограничения\n\n- Публикации 4655, комментарии 596, каналы 19.\n- Режим publication_replay: discovered_at в снимке отсутствует, «впервые системой» не заявляется.\n- Роль источника unknown: в базе нет редакционного реестра.\n- Неизвестные авторы не объединяются.\n- Отсечено после cutoff 2026-09-21T06:04:32+00:00: 3165.\n\n## Основания\n\n- https://t.me/marketfeed/1039055: «ZCASH HOLDERS OVERWHELMINGLY BACK FASTER TRANSACTIONS AND BITCOIN-STYLE HALVINGS»\n- https://t.me/marketfeed/1039182: «Zcash holders backed faster transactions and halving-style design»\n- https://t.me/WEB3_AGGREGATOR/423085: «ZEC»\n- https://t.me/WEB3_AGGREGATOR/423102: «ZEC»\n- https://t.me/WEB3_AGGREGATOR/423090: «Zcash»\n- https://t.me/WEB3_AGGREGATOR/423102: «Zcash»\n- https://t.me/WEB3_AGGREGATOR/423137: «Тир-лист предстоящих проектов в экосистеме ZEC»\n- https://t.me/WEB3_AGGREGATOR/423142: «На самом деле сейчас несется че то очень интересное, потому что и на Robinhood и на Arc и на Zcash, стали выходить коллекции, причем не для виду, а реально с ку»\n- https://t.me/WEB3_AGGREGATOR/423147: «Мысль по Zcash экосистеме»\n- https://t.me/WEB3_AGGREGATOR/423147: «И пока этот круг не случится у нас будет разогрев всей экосистемы Zcash, а значит $ZEC продолжит расти, тот же ZCAT продолжит расти и так далее»\n- https://t.me/WEB3_AGGREGATOR/423150: «Тут список того, что поделать в Zcash»\n- https://t.me/WEB3_AGGREGATOR/423248: «Списочек NFT на $ZEC»\n- https://t.me/Defiscamcheck/4871: «Он шортил ZEC еще в в начале лета, был в плюсе на $20М после слухов о уязвимости в системе шилдинга ZEC, но не зафиксировал прибыль, а удержал позицию.»\n- https://t.me/WEB3_AGGREGATOR/423167: «Он шортил ZEC еще в в начале лета, был в плюсе на $20М после слухов о уязвимости в системе шилдинга ZEC, но не зафиксировал прибыль, а удержал позицию.»\n- https://t.me/markettwits/385132: «Популярнейший анонимный токен ZEC анонимного проекта ZCash с юридическим офисом в одном квартале от штаб-квартиры ЦРУ в США становится еще анонимнее при цене > »\n- https://t.me/icryptocom/8099: «#zec = 1400$ say GM 🏆»\n- https://t.me/crypto_hd/31476: «➤ Bitcoin OG увеличил шорт по ZEC. Сейчас он шортит 37,760 ZEC ($51,5m) с нереализованным убытком $26m. Цена ликвидации = $2632.»\n- https://t.me/crypto_hd/31476: «➤ Кит «t1JhvB» вывел с Binance, OKX и Kraken 15,300 ZEC ($17,9m).»\n- https://t.me/Defiscamcheck/4873: «Ранее он вывел 202К Zec и фактически его шорт является частично дельта нейтральным (размер спота в разы больше шорта)»\n- https://t.me/WEB3_AGGREGATOR/423360: «Ранее он вывел 202К Zec и фактически его шорт является частично дельта нейтральным (размер спота в разы больше шорта)»\n",
+  "brief_markdown": "# Pulse (news-first): zec, окно 2026-09-16T06:10:19+00:00 – 2026-09-21T06:04:32+00:00\n\n## Коротко\n\n- 💰 #ZEC >1400$\n- Он шортил ZEC еще в в начале лета, был в плюсе на $20М после слухов о уязвимости в системе шилдинга ZEC, но не зафиксировал прибыль, а удержал позицию.\n- Сообщество Zcash поддержало сокращение времени формирования блока с 75 до 25 секунд.\n- 🤔 #ZEC Управляющий партнер Dragonfly предложил свернуть деятельность фонда разработчиков Zcash, утверждая, что фонд достаточно велик, чтобы финансировать оставшуюся работу над…\n- Реально обновляют хаи те, кто показывают результаты деятельности, а не просто обещают (пластичные кормушки - HYPE, PUMP, LIGHTER, VENICE) и топы влияния - ZEC\n\n## События и заявления\n\n- **ZCASH HOLDERS OVERWHELMINGLY BACK FASTER TRANSACTIONS AND BITCOIN-STYLE HALVINGS**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/marketfeed/1039055: «ZCASH HOLDERS OVERWHELMINGLY BACK FASTER TRANSACTIONS AND BITCOIN-STYLE HALVINGS»\n- **Zcash holders backed faster transactions and halving-style design**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/marketfeed/1039182: «Zcash holders backed faster transactions and halving-style design»\n- **ZEC**\n  публикации 2, каналы 1, известные авторы 0, первоисточники 2, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/423085: «ZEC»\n  - https://t.me/WEB3_AGGREGATOR/423102: «ZEC»\n- **Zcash**\n  публикации 2, каналы 1, известные авторы 0, первоисточники 2, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/423090: «Zcash»\n  - https://t.me/WEB3_AGGREGATOR/423090: «Zcash»\n  - https://t.me/WEB3_AGGREGATOR/423090: «Zcash»\n- **Тир-лист предстоящих проектов в экосистеме ZEC**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/423137: «Тир-лист предстоящих проектов в экосистеме ZEC»\n- **На самом деле сейчас несется че то очень интересное, потому что и на Robinhood и на Arc и на Zcash, стали выходить коллекции, причем не для виду, а реально с кучей иксов**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/423142: «На самом деле сейчас несется че то очень интересное, потому что и на Robinhood и на Arc и на Zcash, стали выходить коллекции, причем не для виду, а реально с ку»\n- **Мысль по Zcash экосистеме**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/423147: «Мысль по Zcash экосистеме»\n- **И пока этот круг не случится у нас будет разогрев всей экосистемы Zcash, а значит $ZEC продолжит расти, тот же ZCAT продолжит расти и так далее**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/423147: «И пока этот круг не случится у нас будет разогрев всей экосистемы Zcash, а значит $ZEC продолжит расти, тот же ZCAT продолжит расти и так далее»\n- **Тут список того, что поделать в Zcash**\n  публикации 2, каналы 1, известные авторы 0, первоисточники 2, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/423150: «Тут список того, что поделать в Zcash»\n  - https://t.me/WEB3_AGGREGATOR/423248: «Списочек NFT на $ZEC»\n- **Он шортил ZEC еще в в начале лета, был в плюсе на $20М после слухов о уязвимости в системе шилдинга ZEC, но не зафиксировал прибыль, а удержал позицию.**\n  публикации 2, каналы 2, известные авторы 0, первоисточники 0, перепечатки 2, неизвестное происхождение 0.\n  - https://t.me/Defiscamcheck/4871: «Он шортил ZEC еще в в начале лета, был в плюсе на $20М после слухов о уязвимости в системе шилдинга ZEC, но не зафиксировал прибыль, а удержал позицию.»\n  - https://t.me/WEB3_AGGREGATOR/423167: «Он шортил ZEC еще в в начале лета, был в плюсе на $20М после слухов о уязвимости в системе шилдинга ZEC, но не зафиксировал прибыль, а удержал позицию.»\n- **Популярнейший анонимный токен ZEC анонимного проекта ZCash с юридическим офисом в одном квартале от штаб-квартиры ЦРУ в США становится еще анонимнее при цене > $1300 — аналитики**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/markettwits/385132: «Популярнейший анонимный токен ZEC анонимного проекта ZCash с юридическим офисом в одном квартале от штаб-квартиры ЦРУ в США становится еще анонимнее при цене > »\n- **#zec = 1400$ say GM 🏆**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/icryptocom/8099: «#zec = 1400$ say GM 🏆»\n- **➤ Bitcoin OG увеличил шорт по ZEC. Сейчас он шортит 37,760 ZEC ($51,5m) с нереализованным убытком $26m. Цена ликвидации = $2632.**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/crypto_hd/31476: «➤ Bitcoin OG увеличил шорт по ZEC. Сейчас он шортит 37,760 ZEC ($51,5m) с нереализованным убытком $26m. Цена ликвидации = $2632.»\n- **➤ Кит «t1JhvB» вывел с Binance, OKX и Kraken 15,300 ZEC ($17,9m).**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/crypto_hd/31476: «➤ Кит «t1JhvB» вывел с Binance, OKX и Kraken 15,300 ZEC ($17,9m).»\n- **Хайп аукцион zkSNARKs на зкеше.**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/423189: «Хайп аукцион zkSNARKs на зкеше.»\n- **Автор ничего толкового давно не писал, но сегодня, вроде как, есть повод: весь твиттер гудит по поводу минта нфтшек на Zcash**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/423204: «Автор ничего толкового давно не писал, но сегодня, вроде как, есть повод: весь твиттер гудит по поводу минта нфтшек на Zcash»\n- **⚡️ Сеть Zcash собираются ускорить в 3 раза.**\n  публикации 2, каналы 1, известные авторы 0, первоисточники 1, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/crypto_hd/31484: «⚡️ Сеть Zcash собираются ускорить в 3 раза.»\n  - https://t.me/crypto_hd/31494: «Zcash ускорят в 3 раза (читать)»\n- **Сообщество Zcash поддержало сокращение времени формирования блока с 75 до 25 секунд.**\n  публикации 2, каналы 2, известные авторы 0, первоисточники 0, перепечатки 2, неизвестное происхождение 0.\n  - https://t.me/crypto_hd/31484: «Сообщество Zcash поддержало сокращение времени формирования блока с 75 до 25 секунд.»\n  - https://t.me/markettwits/385234: «Сообщество ZCash проголосовало за ускорение формирования блоков в сети в 3 раза -  до 25 сек!»\n- **Чтобы эмиссия ZEC не изменилась, при сокращении времени блока награду за каждый отдельный блок также уменьшат примерно в 3 раза. Изменения пока не запущены – их еще предстоит…**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/crypto_hd/31484: «Чтобы эмиссия ZEC не изменилась, при сокращении времени блока награду за каждый отдельный блок также уменьшат примерно в 3 раза. Изменения пока не запущены – их»\n- **💰 #ZEC >1400$**\n  публикации 3, каналы 3, известные авторы 0, первоисточники 0, перепечатки 3, неизвестное происхождение 0.\n  - https://t.me/cryptoattack24/96789: «💰 #ZEC >1400$»\n  - https://t.me/markettwits/385255: «💥✴️#ZEC > $1500»\n  - https://t.me/crypto_hd/31488: «😳 #ZEC в моменте > $1500.»\n- **👍 Курс Zcash обновил 10-летний максимум выше $1400.**\n  публикации 2, каналы 1, известные авторы 0, первоисточники 0, перепечатки 2, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/423225: «👍 Курс Zcash обновил 10-летний максимум выше $1400.»\n  - https://t.me/WEB3_AGGREGATOR/423243: «👍 Курс Zcash обновил 10-летний максимум выше $1400.»\n- **🙁 Инсайдер Гаррет Джин сейчас в минусе почти на -$30,000,000 по своему шорту с ZEC.**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/crypto_hd/31486: «🙁 Инсайдер Гаррет Джин сейчас в минусе почти на -$30,000,000 по своему шорту с ZEC.»\n- **А тут вдобавок еще $ZEC ATH пишет...**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/423236: «А тут вдобавок еще $ZEC ATH пишет...»\n- **ZEC уже 9 позиция в ТОПе крипты**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/icodrops_sergey/2426: «ZEC уже 9 позиция в ТОПе крипты»\n- **Leo is up 1.6m from his ZEC long and bought more of $worth and I know i sold the bottom like a chud so i reaped here**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/PowsGemCalls/49106: «Leo is up 1.6m from his ZEC long and bought more of $worth and I know i sold the bottom like a chud so i reaped here»\n- **Лудоманы с Polymarket ожидают #ZEC выше $2000 до конца 2026 года.**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/crypto_hd/31490: «Лудоманы с Polymarket ожидают #ZEC выше $2000 до конца 2026 года.»\n- **Памп #ZEC**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/423250: «Памп #ZEC»\n- **Идея с отработкой классической фигуры ТА «чашка с ручкой» на ZEC (с целью в $3100+).**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/crypto_hd/31493: «Идея с отработкой классической фигуры ТА «чашка с ручкой» на ZEC (с целью в $3100+).»\n- **Рост Zcash (читать)**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/crypto_hd/31494: «Рост Zcash (читать)»\n- **CEO StarkWare о ZEC (читать)**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/crypto_hd/31494: «CEO StarkWare о ZEC (читать)»\n- **Прогноз по ZEC (читать)**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/crypto_hd/31494: «Прогноз по ZEC (читать)»\n- **Влажные мечты - ZEC (читать)**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/crypto_hd/31494: «Влажные мечты - ZEC (читать)»\n- **Заполняем WL на дроп токена от проекта Bitx. Обещают чето типа стандарта brc-20 на битке только для ZEC и дроп токенов тем кто заполнил влку.**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/423256: «Заполняем WL на дроп токена от проекта Bitx. Обещают чето типа стандарта brc-20 на битке только для ZEC и дроп токенов тем кто заполнил влку.»\n- **Но шорт по #ZEC уничтожил всю его прибыль, и сейчас он находится на грани ликвидации.**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/cryptoattack24/96794: «Но шорт по #ZEC уничтожил всю его прибыль, и сейчас он находится на грани ликвидации.»\n- **Его шорт на 12 285 #ZEC ($18,31 млн) сейчас приносит убыток в размере $7,66 млн.**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/cryptoattack24/96794: «Его шорт на 12 285 #ZEC ($18,31 млн) сейчас приносит убыток в размере $7,66 млн.»\n- **🔍 Новые кошельки накапливают #ZEC:**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/cryptoattack24/96796: «🔍 Новые кошельки накапливают #ZEC:\n»\n- **1. t1UcyM вывел 15 860 #ZEC ($22,69 млн) с Binance;**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/cryptoattack24/96796: «1. t1UcyM вывел 15 860 #ZEC ($22,69 млн) с Binance;\n»\n- **2. За последние 2 дня t1fXjw вывел с бирж 7 081 #ZEC ($10,29 млн);**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/cryptoattack24/96796: «2. За последние 2 дня t1fXjw вывел с бирж 7 081 #ZEC ($10,29 млн);\n»\n- **3. t1YLeD вывел с бирж 5 818 #ZEC ($8,45 млн);**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/cryptoattack24/96796: «3. t1YLeD вывел с бирж 5 818 #ZEC ($8,45 млн);\n»\n- **🤔 #ZEC Управляющий партнер Dragonfly предложил свернуть деятельность фонда разработчиков Zcash, утверждая, что фонд достаточно велик, чтобы финансировать оставшуюся работу над…**\n  публикации 2, каналы 2, известные авторы 0, первоисточники 0, перепечатки 2, неизвестное происхождение 0.\n  - https://t.me/cryptoattack24/96809: «🤔 #ZEC Управляющий партнер Dragonfly предложил свернуть деятельность фонда разработчиков Zcash, утверждая, что фонд достаточно велик, чтобы финансировать оставш»\n  - https://t.me/WEB3_AGGREGATOR/423328: «👨‍💻 #ZEC Управляющий партнер Dragonfly предложил свернуть деятельность фонда разработчиков Zcash»\n- **➤ Киты активно накапливают ZEC. Четыре новых кошелька вывели с Binance и других бирж 32,293 ZEC (~$46,2m).**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/crypto_hd/31503: «➤ Киты активно накапливают ZEC. Четыре новых кошелька вывели с Binance и других бирж 32,293 ZEC (~$46,2m).\n\n»\n- **ZCASH TARGETS NOVEMBER UPGRADE TO MAKE PRIVATE PAYMENTS UP TO THREE TIMES FASTER ...**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/marketfeed/1041046: «ZCASH TARGETS NOVEMBER UPGRADE TO MAKE PRIVATE PAYMENTS UP TO THREE TIMES FASTER ...»\n- **3333 supply **\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 0, неизвестное происхождение 1.\n  - https://t.me/WEB3_AGGREGATOR/423299: «3333 supply \nZEC Blockchain\nMint price TBD»\n- **что-то мимо меня вчера инфа прошла, да и я чет ток в ZEC погрузился, но вот инфа -> ТЫК**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/423300: «что-то мимо меня вчера инфа прошла, да и я чет ток в ZEC погрузился, но вот инфа -> ТЫК»\n- **😐 В связи с большим количеством минтов на чейне Zcash, остро стал вопрос депа в саму сеть. Поэтому расписываю 1 раз, чтобы к этому не возвращаться ✏️**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/423315: «😐 В связи с большим количеством минтов на чейне Zcash, остро стал вопрос депа в саму сеть. Поэтому расписываю 1 раз, чтобы к этому не возвращаться ✏️»\n- **🔥 Zcash в ТОП-10: ренессанс приватности или сквиз шортистов?**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/423316: «🔥 Zcash в ТОП-10: ренессанс приватности или сквиз шортистов?»\n- **ZEC разогнался до ~$1463, влетел на #9 по капитализации (~$24.8 млрд) и пробивал $1500. За месяц +160%, за год почти в 26X (+~2500%).**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/423316: «ZEC разогнался до ~$1463, влетел на #9 по капитализации (~$24.8 млрд) и пробивал $1500. За месяц +160%, за год почти в 26X (+~2500%).»\n- **За сутки по ZEC ликвидировали позиций на >$55 млн, из них ~$49 млн — короткие. Самый громкий «погорелец» — кит Гаррет Джин, которого ончейн-детективы связывают с биржей BitForex…**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/423316: «За сутки по ZEC ликвидировали позиций на >$55 млн, из них ~$49 млн — короткие. Самый громкий «погорелец» — кит Гаррет Джин, которого ончейн-детективы связывают »\n- **Мэтт Хуанг, сооснователь фонда Paradigm, назвал Zec «приватным дополнением к BTC» и раскрыл, что фирма инвестировала в лабораторию разработки Zcash (ZODL) и держит $ZEC.**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/423316: «Мэтт Хуанг, сооснователь фонда Paradigm, назвал Zec «приватным дополнением к BTC» и раскрыл, что фирма инвестировала в лабораторию разработки Zcash (ZODL) и дер»\n- **Ровно также $ZEC улетал вертикально на старте в 2016-м: мало монет в обороте рисуют 🐂«up only» на пустом стакане.**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/423316: «Ровно также $ZEC улетал вертикально на старте в 2016-м: мало монет в обороте рисуют 🐂«up only» на пустом стакане.»\n- **В Bitx на данный момент мы можем заполнить WL-форму на дроп. Переходим по ссылке, выполняем квесты и оставляем ZEC кошелек.**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/423320: «В Bitx на данный момент мы можем заполнить WL-форму на дроп. Переходим по ссылке, выполняем квесты и оставляем ZEC кошелек.»\n- **DownOnly: 38 Обсуждаем ZEC-мету / WOW Forever**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/423323: «DownOnly: 38 Обсуждаем ZEC-мету / WOW Forever»\n- **В этот раз записали в нашем приватном Discord, так что были гости и пришел Костя с канала NFT Alerts с которым обсудили ZEC мету**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/423323: «В этот раз записали в нашем приватном Discord, так что были гости и пришел Костя с канала NFT Alerts с которым обсудили ZEC мету»\n- **Ранее: сделка по ZEC**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/crypto_hd/31511: «Ранее: сделка по ZEC»\n- **🤪 $NET - По сути, казиныч, за который топит Ансем, а у него попадание почти во все за последний год - VVV, ZEC, HYPE - все на ath. Обещают сейчс за стейкинг $NET 10.000% apy**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/423324: «🤪 $NET - По сути, казиныч, за который топит Ансем, а у него попадание почти во все за последний год - VVV, ZEC, HYPE - все на ath. Обещают сейчс за стейкинг $NE»\n- **• Binance / Zcash — WSJ said Lagarde helped block Binance’s Europe push; Zcash targets a November privacy-payments upgrade.**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/marketfeed/1041289: «• Binance / Zcash — WSJ said Lagarde helped block Binance’s Europe push; Zcash targets a November privacy-payments upgrade.»\n- **Реально обновляют хаи те, кто показывают результаты деятельности, а не просто обещают (пластичные кормушки - HYPE, PUMP, LIGHTER, VENICE) и топы влияния - ZEC**\n  публикации 2, каналы 2, известные авторы 0, первоисточники 2, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/icodrops_sergey/2431: «Реально обновляют хаи те, кто показывают результаты деятельности, а не просто обещают (пластичные кормушки - HYPE, PUMP, LIGHTER, VENICE) и топы влияния - ZEC»\n  - https://t.me/WEB3_AGGREGATOR/423344: «Реально обновляют хаи те, кто показывают результаты деятельности, а не просто обещают (пластичные кормушки - HYPE, PUMP, LIGHTER, VENICE) и топы влияния - ZEC»\n- **🔘Подаем заявку в WL новой коллекции Zaddr (необходимо подключить X). Минт уже 21 сентября, mint price: 0.02 zec, 2,800 NFTs.**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/whitelist1/7146: «🔘Подаем заявку в WL новой коллекции Zaddr (необходимо подключить X). Минт уже 21 сентября, mint price: 0.02 zec, 2,800 NFTs.»\n- **3 giveaways on X:**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/423337: «3 giveaways on X:\none on zec\ntwo\nthree»\n- **– крупный инвестор перевел #ZEC на сумму >362 млн $ спустя 10 месяцев бездействия (на тот момент стоимость токенов составляла ~163 млн $), после чего почти половину токенов перевёл…**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/cryptoattack24/96824: «– крупный инвестор перевел #ZEC на сумму >362 млн $ спустя 10 месяцев бездействия (на тот момент стоимость токенов составляла ~163 млн $), после чего почти поло»\n- **Гарретт Буллиш (в убытке на $35М по шорту Zec на Hyperliquid) показал свой спот адрес Zec**\n  публикации 2, каналы 2, известные авторы 0, первоисточники 2, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/Defiscamcheck/4873: «Гарретт Буллиш (в убытке на $35М по шорту Zec на Hyperliquid) показал свой спот адрес Zec»\n  - https://t.me/WEB3_AGGREGATOR/423360: «Гарретт Буллиш (в убытке на $35М по шорту Zec на Hyperliquid) показал свой спот адрес Zec»\n- **Ранее он вывел 202К Zec и фактически его шорт является частично дельта нейтральным (размер спота в разы больше шорта)**\n  публикации 2, каналы 2, известные авторы 0, первоисточники 2, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/Defiscamcheck/4873: «Ранее он вывел 202К Zec и фактически его шорт является частично дельта нейтральным (размер спота в разы больше шорта)»\n  - https://t.me/WEB3_AGGREGATOR/423360: «Ранее он вывел 202К Zec и фактически его шорт является частично дельта нейтральным (размер спота в разы больше шорта)»\n- **Zec адрес: t1gGCYpyURMo2FcYDSqeR8pgp2Kx9rnT72V**\n  публикации 2, каналы 2, известные авторы 0, первоисточники 2, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/Defiscamcheck/4873: «Zec адрес: t1gGCYpyURMo2FcYDSqeR8pgp2Kx9rnT72V»\n  - https://t.me/WEB3_AGGREGATOR/423360: «Zec адрес: t1gGCYpyURMo2FcYDSqeR8pgp2Kx9rnT72V»\n- **начались торги NFTшек zkSnarks на аукционе с бидами по 1.5 $ZEC, торги сейчас идут полным ходом, флур сейчас составляет 2.13 $ZEC.**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 0, неизвестное происхождение 1.\n  - https://t.me/WEB3_AGGREGATOR/423362: «начались торги NFTшек zkSnarks на аукционе с бидами по 1.5 $ZEC, торги сейчас идут полным ходом, флур сейчас составляет 2.13 $ZEC. \n\n»\n- **BREAKING: DeGods переезжает на Zcash.**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 0, неизвестное происхождение 1.\n  - https://t.me/WEB3_AGGREGATOR/423371: «BREAKING: DeGods переезжает на Zcash.\n\n»\n- **0.3 ZEC Puppets вышли**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 0, неизвестное происхождение 1.\n  - https://t.me/WEB3_AGGREGATOR/423375: «0.3 ZEC Puppets вышли\n\n»\n- **Пока ждем Zaddr и оцениваем дальнейшую мету ZEC NFT, выходят они 21 числа 13:00 UTC WL - инфа**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 0, неизвестное происхождение 1.\n  - https://t.me/WEB3_AGGREGATOR/423375: «Пока ждем Zaddr и оцениваем дальнейшую мету ZEC NFT, выходят они 21 числа 13:00 UTC WL - инфа\n\n»\n- **ZecFrogs - NFT-коллекция в сети Zcash с сапплаем 6969 штук. Бесплатный минт пройдёт 21 сентября в 20:00 мск.**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 0, неизвестное происхождение 1.\n  - https://t.me/WEB3_AGGREGATOR/423379: «ZecFrogs - NFT-коллекция в сети Zcash с сапплаем 6969 штук. Бесплатный минт пройдёт 21 сентября в 20:00 мск.\n\n»\n- **DeGods переезжают на на Zcash)**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/423398: «DeGods переезжают на на Zcash)\n\n»\n- **• 3 333 пиксельных кота на Zcash. Нужны X + t1-адрес. Цена TBA;**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 0, неизвестное происхождение 1.\n  - https://t.me/whitelist1/7149: «• 3 333 пиксельных кота на Zcash. Нужны X + t1-адрес. Цена TBA;\n»\n- **• 6969 пиксельных лягушек на ZEC, free mint. Минимум 0.007 ZEC на газ;**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 0, неизвестное происхождение 1.\n  - https://t.me/whitelist1/7149: «• 6969 пиксельных лягушек на ZEC, free mint. Минимум 0.007 ZEC на газ;»\n- **• Приватная коллекция на Zcash: арт публичный. Саплай/цена не раскрыты;**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 0, неизвестное происхождение 1.\n  - https://t.me/whitelist1/7149: «• Приватная коллекция на Zcash: арт публичный. Саплай/цена не раскрыты;»\n- **• 2,800 рукописных пиксельных NFT на Zcash. Цена 0.02 ZEC. WL: 1 на кошелек, public: 3 на кошелек;**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 0, неизвестное происхождение 1.\n  - https://t.me/whitelist1/7149: «• 2,800 рукописных пиксельных NFT на Zcash. Цена 0.02 ZEC. WL: 1 на кошелек, public: 3 на кошелек; \n»\n- **• Токен-стандарт ZRC20 на Zcash, задания в X + ZEC-кошелек, заявки скоро закрывают;**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 0, неизвестное происхождение 1.\n  - https://t.me/whitelist1/7149: «• Токен-стандарт ZRC20 на Zcash, задания в X + ZEC-кошелек, заявки скоро закрывают;  \n»\n- **$ZEC и вовсе живёт своей жизнью по $1 595 за монету (х3 за 30 дней)**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/423406: «$ZEC и вовсе живёт своей жизнью по $1 595 за монету (х3 за 30 дней)»\n- **ZEC уже улетел. Покупать монету после такого движения — догонять поезд.**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 0, неизвестное происхождение 1.\n  - https://t.me/WEB3_AGGREGATOR/423415: «ZEC уже улетел. Покупать монету после такого движения — догонять поезд.»\n- **3. Гаррет Джин, удерживавший крупнейший шорт #ZEC, закрыл его, зафиксировав убыток в $35,44 млн. Он всё ещё удерживает спот на 202 078 #ZEC ($309,25 млн) с прибылью $221 млн.**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/cryptoattack24/96838: «3. Гаррет Джин, удерживавший крупнейший шорт #ZEC, закрыл его, зафиксировав убыток в $35,44 млн. Он всё ещё удерживает спот на 202 078 #ZEC ($309,25 млн) с приб»\n\n## Кто распространяет информацию и какие позиции\n\n- Мне очень не нравится зкеш и его приколы с приватностью, нам не будет видно сколько всего депнули ончейн, и клиринг прайс мы узнаем только с их слов, все это будет в руках команды, фактически они могут сделать что угодно.\n  https://t.me/WEB3_AGGREGATOR/423189\n- - отсутствие понимания, как именно будут минтиться нфтшки, ведь на Zcash нет подобной ординалсам\\инскрипциям механики как на битке\n  https://t.me/WEB3_AGGREGATOR/423204\n- Часть роста ZEC, как я думаю, обусловлена страхом, что Биткоин стал слишком «закостенелым». Я говорю это как человек, который любит Биткоин.\n  https://t.me/crypto_hd/31487\n- $ZEC Альфа актив новая фин элита, крче defi развивается, nft развивается, бомжи уже не купят, ибо дорого, крч это бтс для молодых, плюс Уинклвосы, выкупают zec на компанию, как бит-майн баит эфирчик\n  https://t.me/WEB3_AGGREGATOR/423229\n\n## Вопросы, аргументы и опыт участников\n\n- Я этого гандона хотел лонговать когда он был по 450... Похуй фомо недозаработал бы баксов 40-50 в любом случае\n  основание: реплика к посту с одним событием по теме и тому же предмету\n  https://t.me/icryptocom/8099?comment=188801\n- 😝\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/icryptocom/8099?comment=188802\n- Декстер Морган вечером в пятницу никого не убивал,а на бирже торговал\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/icryptocom/8099?comment=188803\n- Звучит как прайс в дубае\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/icryptocom/8099?comment=188805\n- Фомо уже у всех, ждем отката )\n  основание: реплика к посту с одним событием по теме и тому же предмету\n  https://t.me/icodrops_sergey/2426?comment=150547\n- Нашёл когда загонять хомяков, на самом АТН, после х3\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/icodrops_sergey/2426?comment=150548\n- ХЕЙТЕРЫ УНИЧТОЖЕНЫ\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/icodrops_sergey/2426?comment=150549\n- Да какое фомо на около трех иксах. Если он будет 5к стоить, то тогда можно будет говорить о фомоебле\n  основание: реплика к посту с одним событием по теме и тому же предмету\n  https://t.me/icodrops_sergey/2426?comment=150550\n- время лонга с хорошим плечом\n  основание: реплика к посту с одним событием по теме и тому же предмету\n  https://t.me/icodrops_sergey/2426?comment=150551\n- Скоро шорт зека озолотит поколение.. 😂😂\n  основание: реплика к посту с одним событием по теме и тому же предмету\n  https://t.me/icodrops_sergey/2426?comment=150552\n- все как в 2017 будет\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/icodrops_sergey/2426?comment=150554\n- Хейтеры сели на бутылку\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/icodrops_sergey/2426?comment=150555\n- Серёга первый раз купил по 150 и он падал до 125\n  основание: вопрос или оценка по проекту в целом, не по конкретной новости\n  https://t.me/icodrops_sergey/2426?comment=150556\n- 12 иксов от дна\n  основание: вопрос или оценка по проекту в целом, не по конкретной новости\n  https://t.me/icodrops_sergey/2426?comment=150557\n- Я не хейтер. Можно тоже сесть?\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/icodrops_sergey/2426?comment=150558\n- Если нравится, то в чём проблема)\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/icodrops_sergey/2426?comment=150559\n- да. уже по телеку показывают\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/icodrops_sergey/2426?comment=150560\n- Может и хейтерам нравится\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/icodrops_sergey/2426?comment=150561\n- 20к мой прогноз, но не сразу, хотя зависит от обстоятельств\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/icodrops_sergey/2426?comment=150563\n- Я думаю 70к вполне реально, за битком пойдем, но придется подождать конечно\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/icodrops_sergey/2426?comment=150564\n- Это если все начнут чейны закрывать и в приватность уйдут, а зек как ледокол всех за собой поведет.\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/icodrops_sergey/2426?comment=150566\n- Тоже держу ниар. По структуре очень напоминает  zen, zec , ну, по моим параметрам.\n\nПо коинглас наблюдаю все это время. Даже на 15м почти не было продаж спота. Все покупали спот. Он пробил вверх дневные линейные регрессии 100 и 200. И\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/rawa_imagination/21112?comment=343092\n- #мнекажетсявсемпохуй\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/icodrops_sergey/2426?comment=150567\n- пока всем похуи, есть потенциал на иксы с текуших\n  основание: вопрос или оценка по проекту в целом, не по конкретной новости\n  https://t.me/icodrops_sergey/2426?comment=150568\n- Я думаю DASH  тоже себя ещё покажет как младший брат от ZEC\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/icodrops_sergey/2426?comment=150569\n- затаился в накоплении. не сейчас так через год 2 5 10. нк или сдохнет, тут 67 процентов\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/icodrops_sergey/2426?comment=150570\n- Раздутый мыльный пузырь\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/icodrops_sergey/2426?comment=150571\n- Дырявый ледокол на дно если только..\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/icodrops_sergey/2426?comment=150572\n- Добро пожаловать в чат Whitelist Media 👍\n\nНаши ресурсы: \n👍Whitelist Database (гайд по инструменту);\n👍Blacklist by Bogdan;\n👍X (Twitter);\n👍Links.\n\nПолезные ссылки: \n👍ProxyWing (прокси): по коду whitelist скидка 10%;\n👍Чат взаимных подписок\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7144?comment=571779\n- \n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7144?comment=571780\n- чувствую запах денег\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7144?comment=571781\n- Нам то что с того. Покупать сейчас что бы сделать х2 на $100 ну даже х5 от текущих будет... Это что то поменяет\n  основание: реплика к посту с одним событием по теме и тому же предмету\n  https://t.me/icodrops_sergey/2426?comment=150573\n- утро надо начинать с большой кружки кофе и со сбора кукурузки\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7144?comment=571784\n- С этой стороны конечно нет, Серёга просто флексит вином\n\nЯ ответил про фомо на 3 икса, когда их больше 10 уже\n  основание: реплика к посту с одним событием по теме и тому же предмету\n  https://t.me/icodrops_sergey/2426?comment=150574\n- Весь секрет в деньгах и связях. Если у команд/холдеров нет ни первого ни второго, то младший брат просто надузит в ползунки\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/icodrops_sergey/2426?comment=150575\n- сигнал был тут https://t.me/icodrops_sergey/2105\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/icodrops_sergey/2426?comment=150576\n- Какие там затраты для топа?\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7144?comment=571796\n- ты можешь зайти, бесплатные ключи потратить и надеяться на рафл\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7144?comment=571797\n- Главный посыл обязательно к прочтению.\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/moni_talks/12227?comment=468762\n- остряк\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/icodrops_sergey/2426?comment=150581\n- Арьитрус теперь по сути тоже кормушка же\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/icodrops_sergey/2431?comment=150597\n- Деду больше не наливать.\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/icodrops_sergey/2431?comment=150598\n- Да наступит тысячилетнии булран!\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/icodrops_sergey/2431?comment=150599\n- \n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/icodrops_sergey/2431?comment=150600\n- Да просто прими, что ты обосрался со своим Render-ом, вместо которого нужно было набирать TAO, или на крайний случай NEAR\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/icodrops_sergey/2431?comment=150601\n- Вы с Брюсом Fomo активируйте лучше) ноль инфо шума по нему\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/icodrops_sergey/2431?comment=150604\n- Добро пожаловать в чат Whitelist Media 👍\n\nНаши ресурсы: \n👍Whitelist Database (гайд по инструменту);\n👍Blacklist by Bogdan;\n👍X (Twitter);\n👍Links.\n\nПолезные ссылки: \n👍ProxyWing (прокси): по коду whitelist скидка 10%;\n👍Чат взаимных подписок\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7146?comment=571876\n- Орнул с линеи\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7146?comment=571877\n- Такие опездалы\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7146?comment=571878\n- ахаха, линера днище. помню тот ажиотаж с ролями: \"у меня золото\", \" а у меня платина\"... хотя и сам был в той лодке))\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7146?comment=571879\n- Щас Кайл Самани стратег в бэкпаке движуху наведет и его тоже запишем в альфа активы\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/icodrops_sergey/2431?comment=150615\n- Так много где было\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7146?comment=571881\n- У меня было серебро, и я переживал что не успел докачать полтора уровня до золота. Выходит, зря переживал))\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7146?comment=571887\n- Что там Л2 старк арбитрум газуют скоро и о них заговорят\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/icodrops_sergey/2431?comment=150621\n- Хорош\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/icodrops_sergey/2431?comment=150625\n- Я тоже ничего, можешь посмотреть мой онлифанс\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/icodrops_sergey/2431?comment=150627\n- Мужики, налетай!!\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/icodrops_sergey/2431?comment=150628\n- Добро пожаловать в чат Whitelist Media 👍\n\nНаши ресурсы: \n👍Whitelist Database (гайд по инструменту);\n👍Blacklist by Bogdan;\n👍X (Twitter);\n👍Links.\n\nПолезные ссылки: \n👍ProxyWing (прокси): по коду whitelist скидка 10%;\n👍Чат взаимных подписок\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7149?comment=571963\n- прошел кто в лягух?\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7149?comment=571964\n- только чекер выкатили\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7149?comment=571965\n- чина, 8/10 аков прошли\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7149?comment=571966\n- каждая по касику минимум\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7149?comment=571968\n- Да вот х его з\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7149?comment=571970\n- Та чето дорогое\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7149?comment=571971\n- А на каком маркете торгуются нфт на Zcash ?\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7149?comment=571974\n- Основной https://zecbit.net/\n\nНо некоторые лаунчатся сами у себя\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7149?comment=571975\n- Щас пока что зекбит только, и то с 2 коллекциями. Каждый на своем сайте торги ведет\n  основание: предмет реплики — сторонний сервис/коллекция экосистемы, не событие темы\n  https://t.me/whitelist1/7149?comment=571976\n- Зафанался с этим WL, пойдет замес!\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7149?comment=571981\n- Слышь, говорят отнимают обратно 😄\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7149?comment=571982\n- Да ну?\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7149?comment=571983\n- Некоторые уже жалуются\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7149?comment=571984\n- скамят работяг???\n  основание: предмет реплики — сторонний сервис/коллекция экосистемы, не событие темы\n  https://t.me/whitelist1/7149?comment=571985\n- \n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7149?comment=571986\n- \n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7149?comment=571987\n- жестко\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7149?comment=571988\n- \n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7149?comment=571991\n- Вот эти еще вроде как норм\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7149?comment=571993\n- ахуй, гц\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7149?comment=571994\n- это гарантированный вл? или нет?\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7149?comment=571995\n- zaddr уже перестали заявки принимать?\n  основание: предмет реплики — сторонний сервис/коллекция экосистемы, не событие темы\n  https://t.me/whitelist1/7149?comment=571996\n- у меня оказывается тоже\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7149?comment=571998\n- Пару дней назад еще\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7149?comment=572000\n- Да хорош вам уже)))\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7149?comment=572001\n- Так там нфт меньше, чем вл, наверное 😕\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7149?comment=572002\n- Как завести Zec на кошелек noir? Только с биржи?\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7149?comment=572005\n- кросчейн через бридж рубик можно\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7149?comment=572006\n- Ооо, точно, знаю такой. Спс\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7149?comment=572008\n- Я прошел\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7149?comment=572009\n- Гратц, надеюсь накорямт\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7149?comment=572010\n- Тоже очень надеюсь) 🤞\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7149?comment=572011\n- Комса у них чёт большая\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7149?comment=572012\n- Да, потратить 10-15 баксов норм\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7149?comment=572013\n- Ты тож прошел?\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7149?comment=572021\n- Приватность нужно оплачивать)\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7149?comment=572022\n- \n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7149?comment=572023\n- у тебя на кошельке был зек? или прям нулевый?\n  основание: вопрос или оценка по проекту в целом, не по конкретной новости\n  https://t.me/whitelist1/7149?comment=572024\n- только создал\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7149?comment=572027\n- Вот сцуки, почему сбрили активных тогда, наверняка они акки в Х смотрели.\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7149?comment=572028\n- наверно, у меня там не пусто)\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7149?comment=572030\n- Какие критерии кто в курсе ?\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7149?comment=572039\n- Это скам\n  основание: предмет реплики — сторонний сервис/коллекция экосистемы, не событие темы\n  https://t.me/whitelist1/7149?comment=572040\n- @NikitonNT\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7149?comment=572041\n- И этого тож туда же\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7149?comment=572042\n- С хуяли ?\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7149?comment=572043\n- Проверка)\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7149?comment=572044\n- 1) если в среднем 600 с кошелька, то почему с твоих 5 старых прокаченных вышло +-250 баксов\n2) старый кошель прокаченный как раз 600 бы и дал\n3) если давно в крипте, то че так мало кошельков?!?\n\nЗадолбали со своей скаминой лезть\n  основание: предмет реплики — сторонний сервис/коллекция экосистемы, не событие темы\n  https://t.me/whitelist1/7149?comment=572050\n- братан тебе не похуй?\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7149?comment=572051\n- Да тупо отвлекся от работы)))\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7149?comment=572052\n\n## Изменения относительно предыдущего периода\n\n- Появившиеся события: 77.\n- Исчезнувшие события: 10.\n- Изменение охвата источников: +2 / −1 каналов.\n- Комментарии по теме: 108 в текущем окне, 19 в предыдущем.\n\n## Охват и ограничения\n\n- Публикации 4655, комментарии 596, каналы 19.\n- Режим publication_replay: discovered_at в снимке отсутствует, «впервые системой» не заявляется.\n- Роль источника unknown: в базе нет редакционного реестра.\n- Неизвестные авторы не объединяются.\n- Отсечено после cutoff 2026-09-21T06:04:32+00:00: 3165.\n\n## Основания\n\n- https://t.me/marketfeed/1039055: «ZCASH HOLDERS OVERWHELMINGLY BACK FASTER TRANSACTIONS AND BITCOIN-STYLE HALVINGS»\n- https://t.me/marketfeed/1039182: «Zcash holders backed faster transactions and halving-style design»\n- https://t.me/WEB3_AGGREGATOR/423085: «ZEC»\n- https://t.me/WEB3_AGGREGATOR/423102: «ZEC»\n- https://t.me/WEB3_AGGREGATOR/423090: «Zcash»\n- https://t.me/WEB3_AGGREGATOR/423102: «Zcash»\n- https://t.me/WEB3_AGGREGATOR/423137: «Тир-лист предстоящих проектов в экосистеме ZEC»\n- https://t.me/WEB3_AGGREGATOR/423142: «На самом деле сейчас несется че то очень интересное, потому что и на Robinhood и на Arc и на Zcash, стали выходить коллекции, причем не для виду, а реально с ку»\n- https://t.me/WEB3_AGGREGATOR/423147: «Мысль по Zcash экосистеме»\n- https://t.me/WEB3_AGGREGATOR/423147: «И пока этот круг не случится у нас будет разогрев всей экосистемы Zcash, а значит $ZEC продолжит расти, тот же ZCAT продолжит расти и так далее»\n- https://t.me/WEB3_AGGREGATOR/423150: «Тут список того, что поделать в Zcash»\n- https://t.me/WEB3_AGGREGATOR/423248: «Списочек NFT на $ZEC»\n- https://t.me/Defiscamcheck/4871: «Он шортил ZEC еще в в начале лета, был в плюсе на $20М после слухов о уязвимости в системе шилдинга ZEC, но не зафиксировал прибыль, а удержал позицию.»\n- https://t.me/WEB3_AGGREGATOR/423167: «Он шортил ZEC еще в в начале лета, был в плюсе на $20М после слухов о уязвимости в системе шилдинга ZEC, но не зафиксировал прибыль, а удержал позицию.»\n- https://t.me/markettwits/385132: «Популярнейший анонимный токен ZEC анонимного проекта ZCash с юридическим офисом в одном квартале от штаб-квартиры ЦРУ в США становится еще анонимнее при цене > »\n- https://t.me/icryptocom/8099: «#zec = 1400$ say GM 🏆»\n- https://t.me/crypto_hd/31476: «➤ Bitcoin OG увеличил шорт по ZEC. Сейчас он шортит 37,760 ZEC ($51,5m) с нереализованным убытком $26m. Цена ликвидации = $2632.»\n- https://t.me/crypto_hd/31476: «➤ Кит «t1JhvB» вывел с Binance, OKX и Kraken 15,300 ZEC ($17,9m).»\n- https://t.me/WEB3_AGGREGATOR/423189: «Хайп аукцион zkSNARKs на зкеше.»\n- https://t.me/WEB3_AGGREGATOR/423204: «Автор ничего толкового давно не писал, но сегодня, вроде как, есть повод: весь твиттер гудит по поводу минта нфтшек на Zcash»\n",
   "model": "deepseek/deepseek-v4-flash",
   "llm": {
     "calls": 0,

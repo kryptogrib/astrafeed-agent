@@ -156,8 +156,11 @@ def render_markdown(payload: dict[str, Any]) -> str:
         f"- Изменение охвата источников: +{len(cov.get('added_channels') or [])} "
         f"/ −{len(cov.get('removed_channels') or [])} каналов."
     )
-    if ch.get("discussion_comments") is not None:
-        lines.append(f"- Комментарии в текущем окне: {ch['discussion_comments']}.")
+    if ch.get("topic_comments") is not None:
+        lines.append(
+            f"- Комментарии по теме: {ch['topic_comments']} в текущем окне, "
+            f"{ch.get('previous_topic_comments', 0)} в предыдущем."
+        )
     lines += ["", "## Охват и ограничения", ""]
     coverage = payload.get("coverage") or {}
     lines.append(
@@ -272,6 +275,37 @@ def _event_signature(ev: dict) -> str:
         str(x or "")
         for x in (ev.get("actor"), ev.get("action"), ev.get("object"), ev.get("headline"))
     )
+
+
+def _changes(
+    snap: Snapshot,
+    prev_snap: Snapshot,
+    *,
+    events: list[dict],
+    prev_events: list[dict],
+    discussion: list[dict],
+    prev_discussion: list[dict],
+) -> dict[str, Any]:
+    """Topic dynamics only; the snapshot-wide comment volume belongs to coverage, not here.
+    Channels are keyed by source_id so the evaluator can recompute them from the DB."""
+    cur_keys = {_event_signature(e) for e in events}
+    prev_keys = {_event_signature(e) for e in prev_events}
+    cur_ch = {str(p.source_id) for p in snap.publications}
+    prev_ch = {str(p.source_id) for p in prev_snap.publications}
+    return {
+        "previous_window": prev_snap.window.requested,
+        "previous_events": sorted(prev_keys),
+        "events_appeared": sorted(cur_keys - prev_keys),
+        "events_gone": sorted(prev_keys - cur_keys),
+        "topic_comments": sum(1 for row in discussion if row.get("url")),
+        "previous_topic_comments": sum(1 for row in prev_discussion if row.get("url")),
+        "source_coverage": {
+            "added_channels": sorted(cur_ch - prev_ch),
+            "removed_channels": sorted(prev_ch - cur_ch),
+            "current_channels": len(cur_ch),
+            "previous_channels": len(prev_ch),
+        },
+    }
 
 
 def _iso(value: object) -> str:
@@ -499,7 +533,8 @@ def _process_window(
         comment_links[c.pub_id] = link
         named = any(t.casefold() in (c.text or "").casefold() for t in topic_spec.confirmed)
         in_topic_thread = (c.thread_id or "") in topic_threads
-        if named or (in_topic_thread and link["target"] in {"event", "author_thesis", "other_subject", "project"}):
+        # a doubtful link inside a topic thread stays as topic_level discussion (spec §4), not dropped
+        if named or in_topic_thread:
             discussion.append(link)
     return obs, groups, event_dicts, discussion, comment_links
 
@@ -554,28 +589,19 @@ def build(
     prev_client.budget.spent = 0.0
     # share the same remaining budget
     prev_client.budget.max_usd = max(0.0, client.budget.max_usd - client.budget.spent)
-    _, _, prev_events, _, _ = _process_window(prev_snap, topic_spec, prev_client)
+    _, _, prev_events, prev_discussion, _ = _process_window(prev_snap, topic_spec, prev_client)
     client.budget.spent += prev_client.budget.spent
     if prev_client.budget.stopped:
         client.budget.stopped = True
 
-    cur_keys = {_event_signature(e) for e in events}
-    prev_keys = {_event_signature(e) for e in prev_events}
-    cur_ch = {p.metadata.get("channel") or str(p.source_id) for p in snap.publications}
-    prev_ch = {p.metadata.get("channel") or str(p.source_id) for p in prev_snap.publications}
-    changes = {
-        "previous_window": prev.requested,
-        "events_appeared": sorted(cur_keys - prev_keys),
-        "events_gone": sorted(prev_keys - cur_keys),
-        "discussion_comments": len(snap.comments),
-        "previous_comments": len(prev_snap.comments),
-        "source_coverage": {
-            "added_channels": sorted(x for x in cur_ch - prev_ch if x),
-            "removed_channels": sorted(x for x in prev_ch - cur_ch if x),
-            "current_channels": len(cur_ch),
-            "previous_channels": len(prev_ch),
-        },
-    }
+    changes = _changes(
+        snap,
+        prev_snap,
+        events=events,
+        prev_events=prev_events,
+        discussion=discussion,
+        prev_discussion=prev_discussion,
+    )
     not_processed = sum(1 for o in obs if o.status == "not_processed")
     decisions = assemble_decisions(
         topic=topic_spec.topic,

@@ -1019,12 +1019,12 @@
       "headline": "С 22 сентября квалифицированные инвесторы смогут торговать вечными фьючерсами на индексы #BTC, #ETH, #SOL, #XRP и #TRX.",
       "counts": {
         "events": 1,
-        "publications": 3,
-        "channels": 3,
+        "publications": 2,
+        "channels": 2,
         "known_authors": 0,
-        "unknown_authors": 3,
+        "unknown_authors": 2,
         "found_origins": 2,
-        "reprints": 1,
+        "reprints": 0,
         "unknown_origin": 0
       },
       "actor": "Московская биржа",
@@ -1064,20 +1064,6 @@
             136
           ],
           "origin": "own"
-        },
-        {
-          "obs_id": "telegram:15:423158#s6",
-          "publication_id": "telegram:15:423158",
-          "source_id": 15,
-          "author_id": null,
-          "published_at": "2026-09-16T22:32:32+00:00",
-          "url": "https://t.me/WEB3_AGGREGATOR/423158",
-          "quote": "Мосбиржа 22 сентября запустит бессрочные фьючерсы на индексы #BTC, #ETH, #SOL, #XRP и #TRX для квалифицированных инвесторов",
-          "span": [
-            271,
-            394
-          ],
-          "origin": "retelling"
         }
       ]
     },
@@ -1327,7 +1313,44 @@
       ]
     },
     {
-      "event_id": "e33-376101725588103a",
+      "event_id": "e33-2065cb84a9000001",
+      "headline": "Мосбиржа 22 сентября запустит бессрочные фьючерсы на индексы #BTC, #ETH, #SOL, #XRP и #TRX для квалифицированных инвесторов",
+      "counts": {
+        "events": 1,
+        "publications": 1,
+        "channels": 1,
+        "known_authors": 0,
+        "unknown_authors": 1,
+        "found_origins": 0,
+        "reprints": 1,
+        "unknown_origin": 0
+      },
+      "actor": "Moscow Exchange",
+      "action": "launch perpetual futures",
+      "object": "indexes on BTC, ETH, SOL, XRP, TRX",
+      "qualifiers": {
+        "event_date": "2026-09-22",
+        "place": "Moscow Exchange"
+      },
+      "members": [
+        {
+          "obs_id": "telegram:15:423158#s6",
+          "publication_id": "telegram:15:423158",
+          "source_id": 15,
+          "author_id": null,
+          "published_at": "2026-09-16T22:32:32+00:00",
+          "url": "https://t.me/WEB3_AGGREGATOR/423158",
+          "quote": "Мосбиржа 22 сентября запустит бессрочные фьючерсы на индексы #BTC, #ETH, #SOL, #XRP и #TRX для квалифицированных инвесторов",
+          "span": [
+            271,
+            394
+          ],
+          "origin": "retelling"
+        }
+      ]
+    },
+    {
+      "event_id": "e34-376101725588103a",
       "headline": "Ethereum и банковский вирус (читать)",
       "counts": {
         "events": 1,
@@ -1364,7 +1387,7 @@
       ]
     },
     {
-      "event_id": "e34-1b98e70b7e1ada6b",
+      "event_id": "e35-1b98e70b7e1ada6b",
       "headline": "Общий чистый отток спотовых ETH-ETF составил $224,1 млн.",
       "counts": {
         "events": 1,
@@ -1416,7 +1439,7 @@
       ]
     },
     {
-      "event_id": "e35-ec98efd39500ce4c",
+      "event_id": "e36-ec98efd39500ce4c",
       "headline": "1. 0xC2f1 вывел 2 695 #ETH ($6,94 млн) с Gemini и разместил их в стейкинге;",
       "counts": {
         "events": 1,
@@ -1466,7 +1489,7 @@
       ]
     },
     {
-      "event_id": "e36-fbc8cedab2aaaef9",
+      "event_id": "e37-fbc8cedab2aaaef9",
       "headline": "2. 0x3F2c вывел 2 500 #ETH ($6,02 млн) с Binance после 9 месяцев бездействия.",
       "counts": {
         "events": 1,
@@ -1502,7 +1525,7 @@
       ]
     },
     {
-      "event_id": "e37-73a28409f802189b",
+      "event_id": "e38-73a28409f802189b",
       "headline": "➤ Инвестор «0x0058» потратил 13m USDC на покупку 5368 ETH по средней цене $2422.",
       "counts": {
         "events": 1,
@@ -1538,7 +1561,7 @@
       ]
     },
     {
-      "event_id": "e38-6a10d8c975578af1",
+      "event_id": "e39-6a10d8c975578af1",
       "headline": "⚠️✴️#BTC #ETH #крипто #cot ",
       "counts": {
         "events": 1,
@@ -1572,7 +1595,7 @@
       ]
     },
     {
-      "event_id": "e39-0cbce6a16038085b",
+      "event_id": "e40-0cbce6a16038085b",
       "headline": "Комиссия за транзакции в сети Ethereum значительно снизилась. С момента достижения пикового значения 21 апреля в $0,72,  сегодня средняя транзакция за перевод оценивается всего в…",
       "counts": {
         "events": 1,
@@ -1609,7 +1632,7 @@
       ]
     },
     {
-      "event_id": "e40-79ddbc00ba386cd5",
+      "event_id": "e41-79ddbc00ba386cd5",
       "headline": "➤ При резком росте #ETH до ~$2730 объем ликвидаций SHORT-позиций превысит $3,060,000,000.",
       "counts": {
         "events": 1,
@@ -1646,7 +1669,7 @@
       ]
     },
     {
-      "event_id": "e41-25495bb8ed6c21b0",
+      "event_id": "e42-25495bb8ed6c21b0",
       "headline": "🕵️‍♂️ BlackRock перевели на Coinbase Prime 54 096 #ETH (131,7 млн $) и 2 015 #BTC (153,8 млн $)",
       "counts": {
         "events": 1,
@@ -1683,7 +1706,7 @@
       ]
     },
     {
-      "event_id": "e42-d57ff52e9ff96871",
+      "event_id": "e43-d57ff52e9ff96871",
       "headline": "Общий чистый отток спотовых ETH-ETF составил $39,3 млн.",
       "counts": {
         "events": 1,
@@ -1736,7 +1759,7 @@
       ]
     },
     {
-      "event_id": "e43-5c0c02b4a45b50e5",
+      "event_id": "e44-5c0c02b4a45b50e5",
       "headline": "📍Сегодня экспирация в опционах на BTC и ETH! (Deribit)",
       "counts": {
         "events": 1,
@@ -1773,7 +1796,7 @@
       ]
     },
     {
-      "event_id": "e44-d94d5187156da12d",
+      "event_id": "e45-d94d5187156da12d",
       "headline": "@nostrafinance has reported that a manipulated NSTR oracle price allowed a single account to borrow ~$3.5M in ETH, STRK, USDC, USDT, WBTC, and DAI against NSTR collateral on…",
       "counts": {
         "events": 1,
@@ -1812,7 +1835,7 @@
       ]
     },
     {
-      "event_id": "e45-6f00f19e65b20c33",
+      "event_id": "e46-6f00f19e65b20c33",
       "headline": "ETH: Binance: +0.0091% 🐂 | Bybit: +0.0100% 🐂",
       "counts": {
         "events": 1,
@@ -1851,7 +1874,7 @@
       ]
     },
     {
-      "event_id": "e46-72ba3c573f7b8cd0",
+      "event_id": "e47-72ba3c573f7b8cd0",
       "headline": "➤ Инсайдер Bitcoin OG выставил ордер на открытие лонга на 2450 BTC (~$190m) по цене $78,000. Также он продал 35,000 ETH ($87,5m) по цене ~$2500 и направил часть средств на…",
       "counts": {
         "events": 1,
@@ -1890,7 +1913,7 @@
       ]
     },
     {
-      "event_id": "e47-21869d99515ccb24",
+      "event_id": "e48-21869d99515ccb24",
       "headline": "➤ 11 новых кошельков, вероятно принадлежащих одному киту, за последние три дня продали 602 BTC за $45,8m на Hyperliquid и купили 18,780 ETH на ту же сумму.",
       "counts": {
         "events": 1,
@@ -1929,7 +1952,7 @@
       ]
     },
     {
-      "event_id": "e48-e7b0e741d1a92de8",
+      "event_id": "e49-e7b0e741d1a92de8",
       "headline": "➤ Кит «0x72e0», вероятно, меняет HYPE на ETH. Он перевел 440,000 HYPE ($36m) в FalconX, после чего вывел 12,250 ETH ($30,1m).",
       "counts": {
         "events": 1,
@@ -1968,7 +1991,7 @@
       ]
     },
     {
-      "event_id": "e49-00c57e20e0576712",
+      "event_id": "e50-00c57e20e0576712",
       "headline": "➤ Четыре новых кошелька одного кита/институционала купили 6972 ETH ($17,15m) по средней цене $2460,69 и отправили всю позицию в стейкинг.",
       "counts": {
         "events": 1,
@@ -2007,7 +2030,7 @@
       ]
     },
     {
-      "event_id": "e50-c97d0c8cb7e8c107",
+      "event_id": "e51-c97d0c8cb7e8c107",
       "headline": "По его словам, инвесторы ошибались, считая, что Ethereum станет единым стандартом для институционального рынка. Сейчас компании рассматривают разные блокчейны, и победитель пока не…",
       "counts": {
         "events": 1,
@@ -2046,7 +2069,7 @@
       ]
     },
     {
-      "event_id": "e51-e5b6ccff9b088623",
+      "event_id": "e52-e5b6ccff9b088623",
       "headline": "1. У них есть уже коллекция почти по эфиру.",
       "counts": {
         "events": 1,
@@ -2085,7 +2108,7 @@
       ]
     },
     {
-      "event_id": "e52-a4f2adbf4b9d2794",
+      "event_id": "e53-a4f2adbf4b9d2794",
       "headline": "🪙 Ethereum хочет ускорить базовый ритм сети — предложение EIP-8198 должно сделать длительность слота настраиваемой вместо жёстких 12 секунд, чтобы затем постепенно сокращать её.",
       "counts": {
         "events": 1,
@@ -2119,7 +2142,7 @@
       ]
     },
     {
-      "event_id": "e53-d5a5326d209f61fa",
+      "event_id": "e54-d5a5326d209f61fa",
       "headline": "В обсуждениях называют 10 секунд как первый осторожный шаг, а в текущем черновике EIP фигурируют 8 секунд, Ethereum Foundation уже включила инициативу в B-tier для Hegotá.",
       "counts": {
         "events": 1,
@@ -2155,7 +2178,7 @@
       ]
     },
     {
-      "event_id": "e54-0485a411367d9252",
+      "event_id": "e55-0485a411367d9252",
       "headline": "Общий чистый приток спотовых ETH-ETF составил $143,7 млн.",
       "counts": {
         "events": 1,
@@ -2217,7 +2240,7 @@
       ]
     },
     {
-      "event_id": "e55-94522467a1ad084d",
+      "event_id": "e56-94522467a1ad084d",
       "headline": "–Два кошелька (вероятно, принадлежащие одному и тому же киту) перевели на Bitfinex 33 180 #ETH (~86,9 млн $) после более чем 2-летнего бездействия (1, 2);",
       "counts": {
         "events": 1,
@@ -2253,7 +2276,7 @@
       ]
     },
     {
-      "event_id": "e56-28d1b3f1a9ad545d",
+      "event_id": "e57-28d1b3f1a9ad545d",
       "headline": "Активность китов в ETH резко выросла, кол-во холдеров обновило рекорд. В альткоинах ралли. — Santiment",
       "counts": {
         "events": 1,
@@ -2287,7 +2310,7 @@
       ]
     },
     {
-      "event_id": "e57-3da122a196632c38",
+      "event_id": "e58-3da122a196632c38",
       "headline": "ETH: Binance: +0.0100% 🐂 | Bybit: +0.0100% 🐂",
       "counts": {
         "events": 1,
@@ -2337,7 +2360,7 @@
       ]
     },
     {
-      "event_id": "e58-7e3a3f30e727aa81",
+      "event_id": "e59-7e3a3f30e727aa81",
       "headline": "#ETHER 2639.50 +0.32%",
       "counts": {
         "events": 1,
@@ -2371,7 +2394,7 @@
       ]
     },
     {
-      "event_id": "e59-39d34980417fb7cd",
+      "event_id": "e60-39d34980417fb7cd",
       "headline": "• Bitcoin holds around $81.2K; ether near $2.64K — risk assets steady despite macro/policy noise.",
       "counts": {
         "events": 1,
@@ -2405,7 +2428,7 @@
       ]
     },
     {
-      "event_id": "e60-d8930c1560bb8ed1",
+      "event_id": "e61-d8930c1560bb8ed1",
       "headline": "Мосбиржа запускает бессрочные фьючерсы на индексы #BTC, #ETH, #SOL, #XRP и #TRX для квалифицированных инвесторов",
       "counts": {
         "events": 1,
@@ -2456,7 +2479,7 @@
       ]
     },
     {
-      "event_id": "e61-eeb7d3e71bc57509",
+      "event_id": "e62-eeb7d3e71bc57509",
       "headline": "В анализе утверждается, что рост активности на уровне Layer 2 не обязательно приводит к пропорциональному росту доходов Ethereum, поскольку большая часть доходов от комиссий…",
       "counts": {
         "events": 1,
@@ -2490,7 +2513,7 @@
       ]
     },
     {
-      "event_id": "e62-bac60b19c932c9f7",
+      "event_id": "e63-bac60b19c932c9f7",
       "headline": "Что случилось (19.09.2026, Ethereum):",
       "counts": {
         "events": 1,
@@ -2526,7 +2549,7 @@
       ]
     },
     {
-      "event_id": "e63-efe773526e73e093",
+      "event_id": "e64-efe773526e73e093",
       "headline": "Выручку атакующий консолидировал в 546.36 ETH (~$1.44 млн) — по трейсу PeckShield.",
       "counts": {
         "events": 1,
@@ -2562,7 +2585,7 @@
       ]
     },
     {
-      "event_id": "e64-1a5f2bc1cadd814d",
+      "event_id": "e65-1a5f2bc1cadd814d",
       "headline": "В итоге в treasury накопилось больше 1 200 ETH",
       "counts": {
         "events": 1,
@@ -2596,7 +2619,7 @@
       ]
     },
     {
-      "event_id": "e65-f54651253738ae06",
+      "event_id": "e66-f54651253738ae06",
       "headline": "#ETHER 2605.40 -1.14%",
       "counts": {
         "events": 1,
@@ -2633,7 +2656,7 @@
       ]
     },
     {
-      "event_id": "e66-f5200a99ddc2717f",
+      "event_id": "e67-f5200a99ddc2717f",
       "headline": "#ETHER 2633.40 -0.11%",
       "counts": {
         "events": 1,
@@ -2670,7 +2693,7 @@
       ]
     },
     {
-      "event_id": "e67-7740753e2bac6598",
+      "event_id": "e68-7740753e2bac6598",
       "headline": "Ether near $2.6K",
       "counts": {
         "events": 1,
@@ -2707,7 +2730,7 @@
       ]
     },
     {
-      "event_id": "e68-f93cb27f88fb20d1",
+      "event_id": "e69-f93cb27f88fb20d1",
       "headline": "$2,700 $ETH",
       "counts": {
         "events": 1,
@@ -2744,7 +2767,7 @@
       ]
     },
     {
-      "event_id": "e69-58c91916c0236925",
+      "event_id": "e70-58c91916c0236925",
       "headline": "#BTC #ETH #ETF",
       "counts": {
         "events": 1,
@@ -2781,7 +2804,7 @@
       ]
     },
     {
-      "event_id": "e70-3a85e2c4b7a15060",
+      "event_id": "e71-3a85e2c4b7a15060",
       "headline": "Общий чистый отток спотовых ETH-ETF составил ~$140 млн.",
       "counts": {
         "events": 1,
@@ -2818,7 +2841,7 @@
       ]
     },
     {
-      "event_id": "e71-a589f48ce438d957",
+      "event_id": "e72-a589f48ce438d957",
       "headline": "выкупил обратно 7 567 #ETH ($19,93 млн) по более высокой цене;",
       "counts": {
         "events": 1,
@@ -2855,7 +2878,7 @@
       ]
     },
     {
-      "event_id": "e72-9adf56218ea55fcc",
+      "event_id": "e73-9adf56218ea55fcc",
       "headline": "купил 34 422 #ETH ($86,5 млн) и разместил все эти средства в стейкинг;",
       "counts": {
         "events": 1,
@@ -2892,7 +2915,7 @@
       ]
     },
     {
-      "event_id": "e73-69728fbd1846f6ad",
+      "event_id": "e74-69728fbd1846f6ad",
       "headline": "ETH тестирует отметку $2700, это максимум с января 2026г. Виталик одобряет.",
       "counts": {
         "events": 1,
@@ -2929,7 +2952,7 @@
       ]
     },
     {
-      "event_id": "e74-906dcce30c65bf31",
+      "event_id": "e75-906dcce30c65bf31",
       "headline": "Прогноз цены Ethereum: киты накапливают ETH, а слабые объемы повышают риск разворота",
       "counts": {
         "events": 1,
@@ -2963,7 +2986,7 @@
       ]
     },
     {
-      "event_id": "e75-e90a9ab891272a7e",
+      "event_id": "e76-e90a9ab891272a7e",
       "headline": "Ethereum: $2,662 +3.24%",
       "counts": {
         "events": 1,
@@ -2999,7 +3022,7 @@
       ]
     },
     {
-      "event_id": "e76-da6128cf8ca77f09",
+      "event_id": "e77-da6128cf8ca77f09",
       "headline": "📈 🟢 ETH ETF: приток $144M",
       "counts": {
         "events": 1,
@@ -3033,7 +3056,7 @@
       ]
     },
     {
-      "event_id": "e77-dffa7009818f8ab6",
+      "event_id": "e78-dffa7009818f8ab6",
       "headline": "🎩 #ETH Bitmine за прошедшую неделю приобрели 27 562 ETH.",
       "counts": {
         "events": 1,
@@ -3070,7 +3093,7 @@
       ]
     },
     {
-      "event_id": "e78-f0455d463db9859f",
+      "event_id": "e79-f0455d463db9859f",
       "headline": "BITMINE'S ETH HOLDINGS REACHED 5.98 MILLION AFTER ACQUIRING 27,562 TOKENS OVER THE PAST WEEK ...",
       "counts": {
         "events": 1,
@@ -3189,12 +3212,236 @@
       "quote": "Кстати, по моему писпл уже. Если эфир пока идет с опережением к битку, то бмнр к эфиру график тоже идет с опережение. То есть проще покупать бмнр в долгосрок"
     },
     {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "у меня уже куплено, я уже даже дивы получаю 😁",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/rawa_imagination/21078?comment=342795",
+      "quote": "у меня уже куплено, я уже даже дивы получаю 😁"
+    },
+    {
       "target": "project",
       "target_id": null,
-      "text": "DU, granddaughters! Autumn is coming... I'm already feeling snotty. Let's run through what's going on with crypto. 🟪This week promises to be interesting and volatile: the Senate vote on the CLARITY ACT is tomorrow, and the rate decision is ",
+      "text": "DU, granddaughters! Autumn is coming... I'm already feeling snotty. Let's run through what's going on with crypto. 🟪This week promises to be interesting and volatile: the Senate vote on the CLARITY ACT is tomorrow, and the rate decision is",
       "basis": "вопрос или оценка по проекту в целом, не по конкретной новости",
       "url": "https://t.me/cryptonftded/3267?comment=187249",
-      "quote": "DU, granddaughters! Autumn is coming... I'm already feeling snotty. Let's run through what's going on with crypto. 🟪This week promises to be interesting and volatile: the Senate vo"
+      "quote": "DU, granddaughters! Autumn is coming... I'm already feeling snotty. Let's run through what's going on with crypto. 🟪This week promises to be interesting and volatile: the Senate"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "Завтра ещё будет лучше",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/cryptonftded/3269?comment=187300",
+      "quote": "Завтра ещё будет лучше"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "Добро пожаловать в чат Whitelist Media 👍\n\nНаши ресурсы: \n👍Whitelist Database (гайд по инструменту);\n👍Blacklist by Bogdan;\n👍X (Twitter);\n👍Links.\n\nПолезные ссылки: \n👍ProxyWing (прокси): по коду whitelist скидка 10%;\n👍Чат взаимных подписок",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/whitelist1/7137?comment=571471",
+      "quote": "Добро пожаловать в чат Whitelist Media 👍\n\nНаши ресурсы: \n👍Whitelist Database (гайд по инструменту);\n👍Blacklist by Bogdan;\n👍X (Twitter);\n👍Links.\n\nПолезные ссылки: \n👍ProxyWing"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "Дайте мне просто денег, хватит извдеваться!",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/whitelist1/7137?comment=571476",
+      "quote": "Дайте мне просто денег, хватит извдеваться!"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "Рынок сегодня явно решил наказать обе стороны",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/cryptonftded/3269?comment=187304",
+      "quote": "Рынок сегодня явно решил наказать обе стороны"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/whitelist1/7137?comment=571477",
+      "quote": ""
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "Это что б не расслаблялись",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/cryptonftded/3269?comment=187305",
+      "quote": "Это что б не расслаблялись"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "Waiting Room еще не октрыли?",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/whitelist1/7137?comment=571484",
+      "quote": "Waiting Room еще не октрыли?"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "А сколько уже было циклов с 2020 года?",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/Slavik_investor_updates/6921?comment=138133",
+      "quote": "А сколько уже было циклов с 2020 года?"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/Slavik_investor_updates/6921?comment=138134",
+      "quote": ""
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "Жесть, держим кулаки!",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/Slavik_investor_updates/6921?comment=138135",
+      "quote": "Жесть, держим кулаки!"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "Тут уже скорее держим кулаки за то, чтобы остатки казны не растворились до мая 2027. После взлома вера в аккуратное закрытие так себе.",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/Slavik_investor_updates/6921?comment=138136",
+      "quote": "Тут уже скорее держим кулаки за то, чтобы остатки казны не растворились до мая 2027. После взлома вера в аккуратное закрытие так себе."
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "Когда начнутся качели, тогда и будет памп. ИМХО",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/cryptonftded/3269?comment=187307",
+      "quote": "Когда начнутся качели, тогда и будет памп. ИМХО"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "юнипеги остановитесь, мы еще от второго ланчпада не отошли 😂",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/moni_talks/12225?comment=468537",
+      "quote": "юнипеги остановитесь, мы еще от второго ланчпада не отошли 😂"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "флагманский продукт лять )))",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/moni_talks/12225?comment=468539",
+      "quote": "флагманский продукт лять )))"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "Лаунчпад без воштрейдинг ботофермы - не лаунчпад, к сожалению 💧",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/moni_talks/12225?comment=468540",
+      "quote": "Лаунчпад без воштрейдинг ботофермы - не лаунчпад, к сожалению 💧"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "Ого",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/cryptonftded/3270?comment=187331",
+      "quote": "Ого"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "Сейчас ещё ключевую ставку в США поднимут, и про крипту можно будет забыть!!!:)",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/cryptonftded/3270?comment=187383",
+      "quote": "Сейчас ещё ключевую ставку в США поднимут, и про крипту можно будет забыть!!!:)"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "Наконец-то))",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/cryptonftded/3270?comment=187389",
+      "quote": "Наконец-то))"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "Не, на опережение работают",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/whitelist1/7137?comment=571542",
+      "quote": "Не, на опережение работают"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "Тонкипер, вроде апгрейд сделали(мультичейн) все дела.Как-бы момент что мог в рост пойти, ну фиг там)) Gram, вообще кажется пофиг, хоть зимой вместо снега золотые слитки будут падать, с неба, вряд-ли пока ростом отреагирует)))",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/cryptonftded/3270?comment=187390",
+      "quote": "Тонкипер, вроде апгрейд сделали(мультичейн) все дела.Как-бы момент что мог в рост пойти, ну фиг там)) Gram, вообще кажется пофиг, хоть зимой вместо снега золотые слитки будут"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/cryptonftded/3270?comment=187392",
+      "quote": ""
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "Подборка годная, всё четко разложено по полкам",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/whitelist1/7137?comment=571591",
+      "quote": "Подборка годная, всё четко разложено по полкам"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "Ну в целом ты наверное прав, я сильно с позитивной нотки наверное рассмотрел обнову)). Что благодаря этому всякие другие сети начнут переливать в Тон ну и как бы плюс новый ликвид для тона в перспективе",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/cryptonftded/3270?comment=187446",
+      "quote": "Ну в целом ты наверное прав, я сильно с позитивной нотки наверное рассмотрел обнову)). Что благодаря этому всякие другие сети начнут переливать в Тон ну и как бы плюс новый ликвид"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "ыы писало же.)",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/rawa_imagination/21108?comment=343073",
+      "quote": "ыы писало же.)"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "речь о Японии, сегодня ночью",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/rawa_imagination/21108?comment=343075",
+      "quote": "речь о Японии, сегодня ночью"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "моя ии не делает таких банальных ошибок",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/rawa_imagination/21108?comment=343076",
+      "quote": "моя ии не делает таких банальных ошибок"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "это было в недельном обзоре, Раванга предположила, что вы его прочитали.",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/rawa_imagination/21108?comment=343079",
+      "quote": "это было в недельном обзоре, Раванга предположила, что вы его прочитали."
     },
     {
       "target": "other_subject",
@@ -3205,12 +3452,220 @@
       "quote": "биток ушёл под 76к и уже щупал 74.9, а по пути вынесло почти 300 миллионов лонгов, так что я бы не ловил дно, пока ФРС не скажет что-то внятное по ставке"
     },
     {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "да уж печально, но такое бывает, главное не терять надежду",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/Slavik_investor_updates/6921?comment=138189",
+      "quote": "да уж печально, но такое бывает, главное не терять надежду"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "Офигеть, вот это поворот, печально очень",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/Slavik_investor_updates/6921?comment=138212",
+      "quote": "Офигеть, вот это поворот, печально очень"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "Андрей, а в не думаете альты докупить? И сразу же после этого объявить альтсезон. Крутой же план?",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/rawa_imagination/21117?comment=343125",
+      "quote": "Андрей, а в не думаете альты докупить? И сразу же после этого объявить альтсезон. Крутой же план?"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "мне хватает текущих, остальные альты только для спекуляций",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/rawa_imagination/21117?comment=343130",
+      "quote": "мне хватает текущих, остальные альты только для спекуляций"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "ну я про них и спрашиваю",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/rawa_imagination/21117?comment=343138",
+      "quote": "ну я про них и спрашиваю"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "я короткие сделки вообще не публикую с некоторых пор, но это не значит, что их нет. На некоторые иногда намекаю, но никогда ничего не рекомендую",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/rawa_imagination/21117?comment=343146",
+      "quote": "я короткие сделки вообще не публикую с некоторых пор, но это не значит, что их нет. На некоторые иногда намекаю, но никогда ничего не рекомендую"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "а так могу вот выложить столбики с дневными pnl",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/rawa_imagination/21117?comment=343148",
+      "quote": "а так могу вот выложить столбики с дневными pnl"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "так альтсезон же начинается? )",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/rawa_imagination/21117?comment=343151",
+      "quote": "так альтсезон же начинается? )"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "покрывает аренду и даже больше",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/rawa_imagination/21117?comment=343175",
+      "quote": "покрывает аренду и даже больше"
+    },
+    {
       "target": "other_subject",
       "target_id": null,
       "text": "примерно так, плюс/минус оплата мощностей + частично апи. С подписками на Равангу и донатами пока покрывает.",
       "basis": "предмет реплики — сторонний сервис/коллекция экосистемы, не событие темы",
       "url": "https://t.me/rawa_imagination/21117?comment=343184",
       "quote": "примерно так, плюс/минус оплата мощностей + частично апи. С подписками на Равангу и донатами пока покрывает."
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "Опять богатеть.😃",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/cryptonftded/3277?comment=187600",
+      "quote": "Опять богатеть.😃"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "да ты что охуел что ли с такими ценами это же пиздец какой-то",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/cryptonftded/3277?comment=187601",
+      "quote": "да ты что охуел что ли с такими ценами это же пиздец какой-то"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "Что такое))",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/cryptonftded/3277?comment=187602",
+      "quote": "Что такое))"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "NEAR тоже вон + 30%",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/cryptonftded/3277?comment=187603",
+      "quote": "NEAR тоже вон + 30%"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "Ничего себе мастерство 🔥 почему позиции в минус глубокий не уходят ? Всегда стоит стоп ? Это торговля только  внутри дня ? Просто шок , хлеще любого робота 🤯",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/rawa_imagination/21117?comment=343420",
+      "quote": "Ничего себе мастерство 🔥 почему позиции в минус глубокий не уходят ? Всегда стоит стоп ? Это торговля только  внутри дня ? Просто шок , хлеще любого робота 🤯"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "я если определенный минус получаю ухожу из торгов в этот день. Это как правило стопы. А плюсы отпускаю через трейлинг. Да, это интрадей.\n\nНу и да, сейчас почти все сделки идут с Равангой, вы тоже подписаны, так что это частично робот,",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/rawa_imagination/21117?comment=343421",
+      "quote": "я если определенный минус получаю ухожу из торгов в этот день. Это как правило стопы. А плюсы отпускаю через трейлинг. Да, это интрадей.\n\nНу и да, сейчас почти все сделки идут с"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "На койнгеко написали что ключ украли",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/rawa_imagination/21126?comment=343764",
+      "quote": "На койнгеко написали что ключ украли"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "ага, Раванга это и предположила",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/rawa_imagination/21126?comment=343765",
+      "quote": "ага, Раванга это и предположила"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "Добро пожаловать в чат Whitelist Media 👍\n\nНаши ресурсы: \n👍Whitelist Database (гайд по инструменту);\n👍Blacklist by Bogdan;\n👍X (Twitter);\n👍Links.\n\nПолезные ссылки: \n👍ProxyWing (прокси): по коду whitelist скидка 10%;\n👍Чат взаимных подписок",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/whitelist1/7149?comment=571963",
+      "quote": "Добро пожаловать в чат Whitelist Media 👍\n\nНаши ресурсы: \n👍Whitelist Database (гайд по инструменту);\n👍Blacklist by Bogdan;\n👍X (Twitter);\n👍Links.\n\nПолезные ссылки: \n👍ProxyWing"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "прошел кто в лягух?",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/whitelist1/7149?comment=571964",
+      "quote": "прошел кто в лягух?"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "только чекер выкатили",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/whitelist1/7149?comment=571965",
+      "quote": "только чекер выкатили"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "чина, 8/10 аков прошли",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/whitelist1/7149?comment=571966",
+      "quote": "чина, 8/10 аков прошли"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "каждая по касику минимум",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/whitelist1/7149?comment=571968",
+      "quote": "каждая по касику минимум"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "Да вот х его з",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/whitelist1/7149?comment=571970",
+      "quote": "Да вот х его з"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "Та чето дорогое",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/whitelist1/7149?comment=571971",
+      "quote": "Та чето дорогое"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "А на каком маркете торгуются нфт на Zcash ?",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/whitelist1/7149?comment=571974",
+      "quote": "А на каком маркете торгуются нфт на Zcash ?"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "Основной https://zecbit.net/\n\nНо некоторые лаунчатся сами у себя",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/whitelist1/7149?comment=571975",
+      "quote": "Основной https://zecbit.net/\n\nНо некоторые лаунчатся сами у себя"
     },
     {
       "target": "other_subject",
@@ -3221,12 +3676,100 @@
       "quote": "Щас пока что зекбит только, и то с 2 коллекциями. Каждый на своем сайте торги ведет"
     },
     {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "Зафанался с этим WL, пойдет замес!",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/whitelist1/7149?comment=571981",
+      "quote": "Зафанался с этим WL, пойдет замес!"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "Слышь, говорят отнимают обратно 😄",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/whitelist1/7149?comment=571982",
+      "quote": "Слышь, говорят отнимают обратно 😄"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "Да ну?",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/whitelist1/7149?comment=571983",
+      "quote": "Да ну?"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "Некоторые уже жалуются",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/whitelist1/7149?comment=571984",
+      "quote": "Некоторые уже жалуются"
+    },
+    {
       "target": "other_subject",
       "target_id": null,
       "text": "скамят работяг???",
       "basis": "предмет реплики — сторонний сервис/коллекция экосистемы, не событие темы",
       "url": "https://t.me/whitelist1/7149?comment=571985",
       "quote": "скамят работяг???"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/whitelist1/7149?comment=571986",
+      "quote": ""
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/whitelist1/7149?comment=571987",
+      "quote": ""
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "жестко",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/whitelist1/7149?comment=571988",
+      "quote": "жестко"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/whitelist1/7149?comment=571991",
+      "quote": ""
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "Вот эти еще вроде как норм",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/whitelist1/7149?comment=571993",
+      "quote": "Вот эти еще вроде как норм"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "ахуй, гц",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/whitelist1/7149?comment=571994",
+      "quote": "ахуй, гц"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "это гарантированный вл? или нет?",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/whitelist1/7149?comment=571995",
+      "quote": "это гарантированный вл? или нет?"
     },
     {
       "target": "other_subject",
@@ -3237,12 +3780,164 @@
       "quote": "zaddr уже перестали заявки принимать?"
     },
     {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "у меня оказывается тоже",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/whitelist1/7149?comment=571998",
+      "quote": "у меня оказывается тоже"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "Пару дней назад еще",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/whitelist1/7149?comment=572000",
+      "quote": "Пару дней назад еще"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "Да хорош вам уже)))",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/whitelist1/7149?comment=572001",
+      "quote": "Да хорош вам уже)))"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "Так там нфт меньше, чем вл, наверное 😕",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/whitelist1/7149?comment=572002",
+      "quote": "Так там нфт меньше, чем вл, наверное 😕"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "Как завести Zec на кошелек noir? Только с биржи?",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/whitelist1/7149?comment=572005",
+      "quote": "Как завести Zec на кошелек noir? Только с биржи?"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "кросчейн через бридж рубик можно",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/whitelist1/7149?comment=572006",
+      "quote": "кросчейн через бридж рубик можно"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "Ооо, точно, знаю такой. Спс",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/whitelist1/7149?comment=572008",
+      "quote": "Ооо, точно, знаю такой. Спс"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "Я прошел",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/whitelist1/7149?comment=572009",
+      "quote": "Я прошел"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "Гратц, надеюсь накорямт",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/whitelist1/7149?comment=572010",
+      "quote": "Гратц, надеюсь накорямт"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "Тоже очень надеюсь) 🤞",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/whitelist1/7149?comment=572011",
+      "quote": "Тоже очень надеюсь) 🤞"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "Комса у них чёт большая",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/whitelist1/7149?comment=572012",
+      "quote": "Комса у них чёт большая"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "Да, потратить 10-15 баксов норм",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/whitelist1/7149?comment=572013",
+      "quote": "Да, потратить 10-15 баксов норм"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "Ты тож прошел?",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/whitelist1/7149?comment=572021",
+      "quote": "Ты тож прошел?"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "Приватность нужно оплачивать)",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/whitelist1/7149?comment=572022",
+      "quote": "Приватность нужно оплачивать)"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/whitelist1/7149?comment=572023",
+      "quote": ""
+    },
+    {
       "target": "project",
       "target_id": null,
       "text": "у тебя на кошельке был зек? или прям нулевый?",
       "basis": "вопрос или оценка по проекту в целом, не по конкретной новости",
       "url": "https://t.me/whitelist1/7149?comment=572024",
       "quote": "у тебя на кошельке был зек? или прям нулевый?"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "только создал",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/whitelist1/7149?comment=572027",
+      "quote": "только создал"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "Вот сцуки, почему сбрили активных тогда, наверняка они акки в Х смотрели.",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/whitelist1/7149?comment=572028",
+      "quote": "Вот сцуки, почему сбрили активных тогда, наверняка они акки в Х смотрели."
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "наверно, у меня там не пусто)",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/whitelist1/7149?comment=572030",
+      "quote": "наверно, у меня там не пусто)"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "Какие критерии кто в курсе ?",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/whitelist1/7149?comment=572039",
+      "quote": "Какие критерии кто в курсе ?"
     },
     {
       "target": "other_subject",
@@ -3253,6 +3948,38 @@
       "quote": "Это скам"
     },
     {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "@NikitonNT",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/whitelist1/7149?comment=572041",
+      "quote": "@NikitonNT"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "И этого тож туда же",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/whitelist1/7149?comment=572042",
+      "quote": "И этого тож туда же"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "С хуяли ?",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/whitelist1/7149?comment=572043",
+      "quote": "С хуяли ?"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "Проверка)",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/whitelist1/7149?comment=572044",
+      "quote": "Проверка)"
+    },
+    {
       "target": "other_subject",
       "target_id": null,
       "text": "1) если в среднем 600 с кошелька, то почему с твоих 5 старых прокаченных вышло +-250 баксов\n2) старый кошель прокаченный как раз 600 бы и дал\n3) если давно в крипте, то че так мало кошельков?!?\n\nЗадолбали со своей скаминой лезть",
@@ -3261,12 +3988,68 @@
       "quote": "1) если в среднем 600 с кошелька, то почему с твоих 5 старых прокаченных вышло +-250 баксов\n2) старый кошель прокаченный как раз 600 бы и дал\n3) если давно в крипте, то че так мало"
     },
     {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "братан тебе не похуй?",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/whitelist1/7149?comment=572051",
+      "quote": "братан тебе не похуй?"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "Да тупо отвлекся от работы)))",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/whitelist1/7149?comment=572052",
+      "quote": "Да тупо отвлекся от работы)))"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "походу это не грант вл, за ночь их раздали кучу народу",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/whitelist1/7149?comment=572072",
+      "quote": "походу это не грант вл, за ночь их раздали кучу народу"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "А они потом, как лягушки, отпуржат половину))",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/whitelist1/7149?comment=572073",
+      "quote": "А они потом, как лягушки, отпуржат половину))"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "не удивлюсь, не нравиться мне все что твориться в зек, переобвка на переобувке",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/whitelist1/7149?comment=572074",
+      "quote": "не удивлюсь, не нравиться мне все что твориться в зек, переобвка на переобувке"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "Да и люди голову потеряли тож, как с цепи сорвались))",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/whitelist1/7149?comment=572075",
+      "quote": "Да и люди голову потеряли тож, как с цепи сорвались))"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "согласен, многие тупо не видят лютые редфдаги и прут туда",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/whitelist1/7149?comment=572076",
+      "quote": "согласен, многие тупо не видят лютые редфдаги и прут туда"
+    },
+    {
       "target": "project",
       "target_id": null,
-      "text": "BULL, granddaughters!\n Bitcoin has gained 9% in a week, and Solana has gained 14%, even though it was trading at $70 in the summer.\n\n GRAM +5%, one of the worst indicators, oh, I wish they would release a wallet or a step MTONGA, but who ne",
+      "text": "BULL, granddaughters!\n Bitcoin has gained 9% in a week, and Solana has gained 14%, even though it was trading at $70 in the summer.\n\n GRAM +5%, one of the worst indicators, oh, I wish they would release a wallet or a step MTONGA, but who",
       "basis": "вопрос или оценка по проекту в целом, не по конкретной новости",
       "url": "https://t.me/cryptonftded/3282?comment=187840",
-      "quote": "BULL, granddaughters!\n Bitcoin has gained 9% in a week, and Solana has gained 14%, even though it was trading at $70 in the summer.\n\n GRAM +5%, one of the worst indicators, oh, I w"
+      "quote": "BULL, granddaughters!\n Bitcoin has gained 9% in a week, and Solana has gained 14%, even though it was trading at $70 in the summer.\n\n GRAM +5%, one of the worst indicators, oh, I"
     },
     {
       "target": "other_subject",
@@ -3275,6 +4058,22 @@
       "basis": "предмет реплики — сторонний сервис/коллекция экосистемы, не событие темы",
       "url": "https://t.me/cryptonftded/3282?comment=187841",
       "quote": "Я рад, но опять всё пропустил (((\n\nУже который раз хочу обменять все свои ГРАМы на биток и уже забить на детище Дурова, но всё никак выгодно не успеваю..."
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "Я рада, что кто-то рад 😁",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/cryptonftded/3282?comment=187844",
+      "quote": "Я рада, что кто-то рад 😁"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "Я с утра за нир наблюдала, пошортила немного 😄",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/cryptonftded/3282?comment=187845",
+      "quote": "Я с утра за нир наблюдала, пошортила немного 😄"
     },
     {
       "target": "other_subject",
@@ -3287,14 +4086,78 @@
     {
       "target": "topic_level",
       "target_id": null,
+      "text": "@Kosheleffff почему такая реакция \nЯ удачно пошортила near 😁",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/cryptonftded/3282?comment=187847",
+      "quote": "@Kosheleffff почему такая реакция \nЯ удачно пошортила near 😁"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
       "text": "ottoclub ETH кошелёк требует - это нормально для Zec проекта?",
       "basis": "совпадение темы недостаточно, связь со событием не установлена",
       "url": "https://t.me/don_invest/5299?comment=380347",
       "quote": "ottoclub ETH кошелёк требует - это нормально для Zec проекта?"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "Как всегда бычка случилась неожиданно.",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/cryptonftded/3282?comment=187849",
+      "quote": "Как всегда бычка случилась неожиданно."
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "что-то ты не в курсе как на рынке бывает",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/cryptonftded/3282?comment=187852",
+      "quote": "что-то ты не в курсе как на рынке бывает"
     }
   ],
   "changes": {
     "previous_window": "2026-09-07T12:22:38+00:00..2026-09-14T12:33:46+00:00",
+    "previous_events": [
+      "Consensys|plans to split|MetaMask|Consensys plans to split MetaMask into an independent company, separating its wallet business from its Ethereum infrastructure and institutional operations by the end of 2026.",
+      "Consensys|spins off|MetaMask|ETHEREUM GIANT CONSENSYS SPINS OFF FLAGSHIP METAMASK WALLET, STAYS MUM ON IPO AND TOKEN PLANS ...",
+      "Consensys|выделил|MetaMask|Consensys  (разработчик Ethereum и MetaMask) выделил его в отдельную компанию по одноименным брендом \"MetaMask\"",
+      "Consensys|планирует выделить|MetaMask|🦊👀 #ETH Consensys планирует выделить флагманский кошелек MetaMask в отдельную компанию. Решение о выделении связано с тем, что темпы роста потребительского бизнеса MetaMask…",
+      "ETH ETF|inflow|ETH ETF|📈 🟢 ETH ETF: приток $216M",
+      "ETH-ETF|net inflow|ETH-ETF|Общий чистый приток спотовых ETH-ETF составил $216,4 млн.",
+      "ETHEREUM, SOLANA, AND BASE|составляют|рыночная капитализация евро-стейблкоинов|ETHEREUM, SOLANA, AND BASE ACCOUNT FOR 91.5% OF THE MARKET CAP OF EURO STABLECOINS  ...",
+      "ETH|price change on exchanges|ETH|ETH: Binance: +0.0030% 🐂 | Bybit: +0.0057% 🐂",
+      "Ethereum|holds largest share|RWA value|And while Ethereum still holds the largest share of RWA value, BNB Chain leads all chains by dollar growth in 2026.",
+      "Ethereum|выходит в лидеры||• Ethereum выходит в лидеры на фоне оттока $463 млн из Bitcoin ETF?",
+      "Ethereum|убирает|налог на вход|Ethereum убирает «налог на вход»: газ можно будет платить стейблами",
+      "Machi|accumulate_longs_and_get_liquidated|ETH|Machi accumulated $135M in longs with 25x leverage and got partially liquidated. He still holds ETH & HYPE positions",
+      "SPOT ETH ETFS|saw inflows|$1.75B|SPOT ETH ETFS SAW $1.75B INFLOWS IN AUGUST, THE LARGEST INFLOW SINCE AUG 2025  ...",
+      "attacker|stole|~15.45 ETH ($38k)|Ущерб составил ~15,45 ETH ($38k). Уязвимость позволяла злоумышленнику назначить адрес жертвы исполнителем операции БЕЗ ее согласия, а затем использовать ранее выданное разрешение…",
+      "hacker|drained|~15.45 ETH|Liquid (liquidETH) holders were drained for ~15.45 ETH via the Veda AtomicQueue.",
+      "hacker|hacked|ether.fi|😐 SlowMist: Хакер взломал крупный DeFi-протокол ether․fi.",
+      "market|price update|ETHER|#ETHER 2535.30 +0.17%",
+      "project|distributes ETH from mint|ETH|$ETH с минта распределяется внутри проекта: 70% идет всем прошлым котам, 30% уходит в казну для выкупа и сжигания токена. Все роялти и комиссии в пуле также будут направлены на…",
+      "unknown|launchpad on Ethereum|launchpad|Лаунчпад на эфире по типу STONK",
+      "|become_post_quantum|Ethereum|Ethereum станет постквантовым к декабрю 2029",
+      "|burn|ETH|сеть по-прежнему получает и жжёт ETH — базовая комиссия по EIP-1559 никуда не делась",
+      "|change_keys|ETH|сменить ключи на квантово-устойчивые прямо на старом адресе",
+      "|expiration|options on BTC and ETH|📍Сегодня экспирация в опционах на BTC и ETH! (Deribit)",
+      "|net_outflow|ETH-ETF|Общий чистый отток спотовых ETH-ETF составил $29,9 млн",
+      "|nominal value|ETH options|– Номинальная стоимость опционов #ETH: 279,86 млн $",
+      "|price change|ETH|ETH: Binance: +0.0071% 🐂 | Bybit: +0.0094% 🐂",
+      "|price_change|ETH|ETH dropped by 3.8% in the last 24h, currently trading at $2,410",
+      "|update|Ethereum|Обновление Ethereum Glamsterdam ориентировочно запланировано в Sepolia на 6 октября",
+      "|||ETH Asteroid",
+      "|||ETH drift lower",
+      "|котировка|Ethereum|Bitcoin: $77,798 +0.88%",
+      "|ожидается приток|институционалов|• Сильный квартал для Ethereum: ожидается приток институционалов",
+      "|приток|ETH ETF|ETH ETF: приток $35M",
+      "|снижается|ETH|ETH снижается: оттоки из ETF под управлением Grayscale спровоцировали распродажу",
+      "|чистый приток|спотовых ETH-ETF|Общий чистый приток спотовых ETH-ETF составил $34,7 млн.",
+      "кит|ликвидировало лонг|ордер|У кита на бирже Bitget ликвидировало лонг на $22,63m одним ордером (в паре ETH/USDT).",
+      "кит|ликвидировало шорт|short position|У кита на бирже Hyperliquid ликвидировало шорт на $20,3m одним ордером (в паре ETH/USD).",
+      "спотовые ETH-ETF|чистый приток|ETH|Общий чистый приток спотовых ETH-ETF составил ~197 млн."
+    ],
     "events_appeared": [
       "#ETH Ethereum и Base|отказались от разработки|общего стандарта кошельков|🙅‍♂️ #ETH Ethereum и Base отказались от разработки общего стандарта кошельков после нескольких месяцев переговоров. coindesk.com",
       "0x3F2c|вывел|2 500 #ETH ($6,02 млн)|2. 0x3F2c вывел 2 500 #ETH ($6,02 млн) с Binance после 9 месяцев бездействия.",
@@ -3326,6 +4189,7 @@
       "Ethereum|хочет ускорить базовый ритм сети|предложение EIP-8198|🪙 Ethereum хочет ускорить базовый ритм сети — предложение EIP-8198 должно сделать длительность слота настраиваемой вместо жёстких 12 секунд, чтобы затем постепенно сокращать её.",
       "Lazarus Group hackers|sold|911 ETH|3. Хакеры из Lazarus Group продали 911 #ETH ($2,28 млн) по средней цене $2 499.",
       "Matrixport|перевела и вывела|ETH|вывела 10 000 #ETH ($24,67 млн) с Binance.",
+      "Moscow Exchange|launch perpetual futures|indexes on BTC, ETH, SOL, XRP, TRX|Мосбиржа 22 сентября запустит бессрочные фьючерсы на индексы #BTC, #ETH, #SOL, #XRP и #TRX для квалифицированных инвесторов",
       "Standard Reserve|запускает|Onchain ETH Reserve|Standard Reserve Launches Onchain ETH Reserve",
       "hackers|use|Ethereum|Хакеры начали использовать Ethereum для управления банковским вирусом.",
       "nostrafinance|reported|a manipulated NSTR oracle price allowed a single account to borrow ~$3.5M in ETH, STRK, USDC, USDT, WBTC, and DAI against NSTR collateral on Nostra's #Starknet money market|@nostrafinance has reported that a manipulated NSTR oracle price allowed a single account to borrow ~$3.5M in ETH, STRK, USDC, USDT, WBTC, and DAI against NSTR collateral on…",
@@ -3413,16 +4277,16 @@
       "кит|ликвидировало шорт|short position|У кита на бирже Hyperliquid ликвидировало шорт на $20,3m одним ордером (в паре ETH/USD).",
       "спотовые ETH-ETF|чистый приток|ETH|Общий чистый приток спотовых ETH-ETF составил ~197 млн."
     ],
-    "discussion_comments": 875,
-    "previous_comments": 533,
+    "topic_comments": 114,
+    "previous_topic_comments": 110,
     "source_coverage": {
       "added_channels": [
-        "@CryptoEarnImp",
-        "@badfriend_loops",
-        "@icodrops_sergey"
+        "16",
+        "4",
+        "6"
       ],
       "removed_channels": [
-        "@slavik_investor"
+        "8"
       ],
       "current_channels": 19,
       "previous_channels": 17
@@ -3430,10 +4294,10 @@
   },
   "short_observations": [
     "BITMINE'S ETH HOLDINGS REACHED 5.96 MILLION AFTER ACQUIRING 27,180 TOKENS OVER THE PAST WEEK",
-    "С 22 сентября квалифицированные инвесторы смогут торговать вечными фьючерсами на индексы #BTC, #ETH, #SOL, #XRP и #TRX.",
     "Общий чистый приток спотовых ETH-ETF составил $143,7 млн.",
     "🎩 #ETH BitMine за последнюю неделю приобрели 27 180 ETH, в результате чего общий объем активов теперь составляет 5,96 млн ETH",
-    "Общий чистый приток спотовых ETH-ETF составил $121,02 млн."
+    "Общий чистый приток спотовых ETH-ETF составил $121,02 млн.",
+    "Общий чистый отток спотовых ETH-ETF составил $142,3 млн."
   ],
   "coverage": {
     "publications": 7119,
@@ -3792,16 +4656,6 @@
       "publication_id": "telegram:11:96754"
     },
     {
-      "id": "telegram:15:423158#s6",
-      "url": "https://t.me/WEB3_AGGREGATOR/423158",
-      "quote": "Мосбиржа 22 сентября запустит бессрочные фьючерсы на индексы #BTC, #ETH, #SOL, #XRP и #TRX для квалифицированных инвесторов",
-      "span": [
-        271,
-        394
-      ],
-      "publication_id": "telegram:15:423158"
-    },
-    {
       "id": "telegram:21:21099#s30",
       "url": "https://t.me/rawa_imagination/21099",
       "quote": "• Прогноз цены Ethereum: давление на поддержку после блокировки регулирования в Сенате США",
@@ -3870,6 +4724,16 @@
         584
       ],
       "publication_id": "telegram:15:423129"
+    },
+    {
+      "id": "telegram:15:423158#s6",
+      "url": "https://t.me/WEB3_AGGREGATOR/423158",
+      "quote": "Мосбиржа 22 сентября запустит бессрочные фьючерсы на индексы #BTC, #ETH, #SOL, #XRP и #TRX для квалифицированных инвесторов",
+      "span": [
+        271,
+        394
+      ],
+      "publication_id": "telegram:15:423158"
     },
     {
       "id": "telegram:18:31472#s8",
@@ -4997,9 +5861,134 @@
       "quote": "Кстати, по моему писпл уже. Если эфир пока идет с опережением к битку, то бмнр к эфиру график тоже идет с опережение. То есть проще покупать бмнр в долгосрок"
     },
     {
+      "id": "https://t.me/rawa_imagination/21078?comment=342795",
+      "url": "https://t.me/rawa_imagination/21078?comment=342795",
+      "quote": "у меня уже куплено, я уже даже дивы получаю 😁"
+    },
+    {
       "id": "https://t.me/cryptonftded/3267?comment=187249",
       "url": "https://t.me/cryptonftded/3267?comment=187249",
-      "quote": "DU, granddaughters! Autumn is coming... I'm already feeling snotty. Let's run through what's going on with crypto. 🟪This week promises to be interesting and volatile: the Senate vo"
+      "quote": "DU, granddaughters! Autumn is coming... I'm already feeling snotty. Let's run through what's going on with crypto. 🟪This week promises to be interesting and volatile: the Senate"
+    },
+    {
+      "id": "https://t.me/cryptonftded/3269?comment=187300",
+      "url": "https://t.me/cryptonftded/3269?comment=187300",
+      "quote": "Завтра ещё будет лучше"
+    },
+    {
+      "id": "https://t.me/whitelist1/7137?comment=571471",
+      "url": "https://t.me/whitelist1/7137?comment=571471",
+      "quote": "Добро пожаловать в чат Whitelist Media 👍\n\nНаши ресурсы: \n👍Whitelist Database (гайд по инструменту);\n👍Blacklist by Bogdan;\n👍X (Twitter);\n👍Links.\n\nПолезные ссылки: \n👍ProxyWing"
+    },
+    {
+      "id": "https://t.me/whitelist1/7137?comment=571476",
+      "url": "https://t.me/whitelist1/7137?comment=571476",
+      "quote": "Дайте мне просто денег, хватит извдеваться!"
+    },
+    {
+      "id": "https://t.me/cryptonftded/3269?comment=187304",
+      "url": "https://t.me/cryptonftded/3269?comment=187304",
+      "quote": "Рынок сегодня явно решил наказать обе стороны"
+    },
+    {
+      "id": "https://t.me/cryptonftded/3269?comment=187305",
+      "url": "https://t.me/cryptonftded/3269?comment=187305",
+      "quote": "Это что б не расслаблялись"
+    },
+    {
+      "id": "https://t.me/whitelist1/7137?comment=571484",
+      "url": "https://t.me/whitelist1/7137?comment=571484",
+      "quote": "Waiting Room еще не октрыли?"
+    },
+    {
+      "id": "https://t.me/Slavik_investor_updates/6921?comment=138133",
+      "url": "https://t.me/Slavik_investor_updates/6921?comment=138133",
+      "quote": "А сколько уже было циклов с 2020 года?"
+    },
+    {
+      "id": "https://t.me/Slavik_investor_updates/6921?comment=138135",
+      "url": "https://t.me/Slavik_investor_updates/6921?comment=138135",
+      "quote": "Жесть, держим кулаки!"
+    },
+    {
+      "id": "https://t.me/Slavik_investor_updates/6921?comment=138136",
+      "url": "https://t.me/Slavik_investor_updates/6921?comment=138136",
+      "quote": "Тут уже скорее держим кулаки за то, чтобы остатки казны не растворились до мая 2027. После взлома вера в аккуратное закрытие так себе."
+    },
+    {
+      "id": "https://t.me/cryptonftded/3269?comment=187307",
+      "url": "https://t.me/cryptonftded/3269?comment=187307",
+      "quote": "Когда начнутся качели, тогда и будет памп. ИМХО"
+    },
+    {
+      "id": "https://t.me/moni_talks/12225?comment=468537",
+      "url": "https://t.me/moni_talks/12225?comment=468537",
+      "quote": "юнипеги остановитесь, мы еще от второго ланчпада не отошли 😂"
+    },
+    {
+      "id": "https://t.me/moni_talks/12225?comment=468539",
+      "url": "https://t.me/moni_talks/12225?comment=468539",
+      "quote": "флагманский продукт лять )))"
+    },
+    {
+      "id": "https://t.me/moni_talks/12225?comment=468540",
+      "url": "https://t.me/moni_talks/12225?comment=468540",
+      "quote": "Лаунчпад без воштрейдинг ботофермы - не лаунчпад, к сожалению 💧"
+    },
+    {
+      "id": "https://t.me/cryptonftded/3270?comment=187331",
+      "url": "https://t.me/cryptonftded/3270?comment=187331",
+      "quote": "Ого"
+    },
+    {
+      "id": "https://t.me/cryptonftded/3270?comment=187383",
+      "url": "https://t.me/cryptonftded/3270?comment=187383",
+      "quote": "Сейчас ещё ключевую ставку в США поднимут, и про крипту можно будет забыть!!!:)"
+    },
+    {
+      "id": "https://t.me/cryptonftded/3270?comment=187389",
+      "url": "https://t.me/cryptonftded/3270?comment=187389",
+      "quote": "Наконец-то))"
+    },
+    {
+      "id": "https://t.me/whitelist1/7137?comment=571542",
+      "url": "https://t.me/whitelist1/7137?comment=571542",
+      "quote": "Не, на опережение работают"
+    },
+    {
+      "id": "https://t.me/cryptonftded/3270?comment=187390",
+      "url": "https://t.me/cryptonftded/3270?comment=187390",
+      "quote": "Тонкипер, вроде апгрейд сделали(мультичейн) все дела.Как-бы момент что мог в рост пойти, ну фиг там)) Gram, вообще кажется пофиг, хоть зимой вместо снега золотые слитки будут"
+    },
+    {
+      "id": "https://t.me/whitelist1/7137?comment=571591",
+      "url": "https://t.me/whitelist1/7137?comment=571591",
+      "quote": "Подборка годная, всё четко разложено по полкам"
+    },
+    {
+      "id": "https://t.me/cryptonftded/3270?comment=187446",
+      "url": "https://t.me/cryptonftded/3270?comment=187446",
+      "quote": "Ну в целом ты наверное прав, я сильно с позитивной нотки наверное рассмотрел обнову)). Что благодаря этому всякие другие сети начнут переливать в Тон ну и как бы плюс новый ликвид"
+    },
+    {
+      "id": "https://t.me/rawa_imagination/21108?comment=343073",
+      "url": "https://t.me/rawa_imagination/21108?comment=343073",
+      "quote": "ыы писало же.)"
+    },
+    {
+      "id": "https://t.me/rawa_imagination/21108?comment=343075",
+      "url": "https://t.me/rawa_imagination/21108?comment=343075",
+      "quote": "речь о Японии, сегодня ночью"
+    },
+    {
+      "id": "https://t.me/rawa_imagination/21108?comment=343076",
+      "url": "https://t.me/rawa_imagination/21108?comment=343076",
+      "quote": "моя ии не делает таких банальных ошибок"
+    },
+    {
+      "id": "https://t.me/rawa_imagination/21108?comment=343079",
+      "url": "https://t.me/rawa_imagination/21108?comment=343079",
+      "quote": "это было в недельном обзоре, Раванга предположила, что вы его прочитали."
     },
     {
       "id": "https://t.me/cryptonftded/3270?comment=187463",
@@ -5007,9 +5996,139 @@
       "quote": "биток ушёл под 76к и уже щупал 74.9, а по пути вынесло почти 300 миллионов лонгов, так что я бы не ловил дно, пока ФРС не скажет что-то внятное по ставке"
     },
     {
+      "id": "https://t.me/Slavik_investor_updates/6921?comment=138189",
+      "url": "https://t.me/Slavik_investor_updates/6921?comment=138189",
+      "quote": "да уж печально, но такое бывает, главное не терять надежду"
+    },
+    {
+      "id": "https://t.me/Slavik_investor_updates/6921?comment=138212",
+      "url": "https://t.me/Slavik_investor_updates/6921?comment=138212",
+      "quote": "Офигеть, вот это поворот, печально очень"
+    },
+    {
+      "id": "https://t.me/rawa_imagination/21117?comment=343125",
+      "url": "https://t.me/rawa_imagination/21117?comment=343125",
+      "quote": "Андрей, а в не думаете альты докупить? И сразу же после этого объявить альтсезон. Крутой же план?"
+    },
+    {
+      "id": "https://t.me/rawa_imagination/21117?comment=343130",
+      "url": "https://t.me/rawa_imagination/21117?comment=343130",
+      "quote": "мне хватает текущих, остальные альты только для спекуляций"
+    },
+    {
+      "id": "https://t.me/rawa_imagination/21117?comment=343138",
+      "url": "https://t.me/rawa_imagination/21117?comment=343138",
+      "quote": "ну я про них и спрашиваю"
+    },
+    {
+      "id": "https://t.me/rawa_imagination/21117?comment=343146",
+      "url": "https://t.me/rawa_imagination/21117?comment=343146",
+      "quote": "я короткие сделки вообще не публикую с некоторых пор, но это не значит, что их нет. На некоторые иногда намекаю, но никогда ничего не рекомендую"
+    },
+    {
+      "id": "https://t.me/rawa_imagination/21117?comment=343148",
+      "url": "https://t.me/rawa_imagination/21117?comment=343148",
+      "quote": "а так могу вот выложить столбики с дневными pnl"
+    },
+    {
+      "id": "https://t.me/rawa_imagination/21117?comment=343151",
+      "url": "https://t.me/rawa_imagination/21117?comment=343151",
+      "quote": "так альтсезон же начинается? )"
+    },
+    {
+      "id": "https://t.me/rawa_imagination/21117?comment=343175",
+      "url": "https://t.me/rawa_imagination/21117?comment=343175",
+      "quote": "покрывает аренду и даже больше"
+    },
+    {
       "id": "https://t.me/rawa_imagination/21117?comment=343184",
       "url": "https://t.me/rawa_imagination/21117?comment=343184",
       "quote": "примерно так, плюс/минус оплата мощностей + частично апи. С подписками на Равангу и донатами пока покрывает."
+    },
+    {
+      "id": "https://t.me/cryptonftded/3277?comment=187600",
+      "url": "https://t.me/cryptonftded/3277?comment=187600",
+      "quote": "Опять богатеть.😃"
+    },
+    {
+      "id": "https://t.me/cryptonftded/3277?comment=187601",
+      "url": "https://t.me/cryptonftded/3277?comment=187601",
+      "quote": "да ты что охуел что ли с такими ценами это же пиздец какой-то"
+    },
+    {
+      "id": "https://t.me/cryptonftded/3277?comment=187602",
+      "url": "https://t.me/cryptonftded/3277?comment=187602",
+      "quote": "Что такое))"
+    },
+    {
+      "id": "https://t.me/cryptonftded/3277?comment=187603",
+      "url": "https://t.me/cryptonftded/3277?comment=187603",
+      "quote": "NEAR тоже вон + 30%"
+    },
+    {
+      "id": "https://t.me/rawa_imagination/21117?comment=343420",
+      "url": "https://t.me/rawa_imagination/21117?comment=343420",
+      "quote": "Ничего себе мастерство 🔥 почему позиции в минус глубокий не уходят ? Всегда стоит стоп ? Это торговля только  внутри дня ? Просто шок , хлеще любого робота 🤯"
+    },
+    {
+      "id": "https://t.me/rawa_imagination/21117?comment=343421",
+      "url": "https://t.me/rawa_imagination/21117?comment=343421",
+      "quote": "я если определенный минус получаю ухожу из торгов в этот день. Это как правило стопы. А плюсы отпускаю через трейлинг. Да, это интрадей.\n\nНу и да, сейчас почти все сделки идут с"
+    },
+    {
+      "id": "https://t.me/rawa_imagination/21126?comment=343764",
+      "url": "https://t.me/rawa_imagination/21126?comment=343764",
+      "quote": "На койнгеко написали что ключ украли"
+    },
+    {
+      "id": "https://t.me/rawa_imagination/21126?comment=343765",
+      "url": "https://t.me/rawa_imagination/21126?comment=343765",
+      "quote": "ага, Раванга это и предположила"
+    },
+    {
+      "id": "https://t.me/whitelist1/7149?comment=571963",
+      "url": "https://t.me/whitelist1/7149?comment=571963",
+      "quote": "Добро пожаловать в чат Whitelist Media 👍\n\nНаши ресурсы: \n👍Whitelist Database (гайд по инструменту);\n👍Blacklist by Bogdan;\n👍X (Twitter);\n👍Links.\n\nПолезные ссылки: \n👍ProxyWing"
+    },
+    {
+      "id": "https://t.me/whitelist1/7149?comment=571964",
+      "url": "https://t.me/whitelist1/7149?comment=571964",
+      "quote": "прошел кто в лягух?"
+    },
+    {
+      "id": "https://t.me/whitelist1/7149?comment=571965",
+      "url": "https://t.me/whitelist1/7149?comment=571965",
+      "quote": "только чекер выкатили"
+    },
+    {
+      "id": "https://t.me/whitelist1/7149?comment=571966",
+      "url": "https://t.me/whitelist1/7149?comment=571966",
+      "quote": "чина, 8/10 аков прошли"
+    },
+    {
+      "id": "https://t.me/whitelist1/7149?comment=571968",
+      "url": "https://t.me/whitelist1/7149?comment=571968",
+      "quote": "каждая по касику минимум"
+    },
+    {
+      "id": "https://t.me/whitelist1/7149?comment=571970",
+      "url": "https://t.me/whitelist1/7149?comment=571970",
+      "quote": "Да вот х его з"
+    },
+    {
+      "id": "https://t.me/whitelist1/7149?comment=571971",
+      "url": "https://t.me/whitelist1/7149?comment=571971",
+      "quote": "Та чето дорогое"
+    },
+    {
+      "id": "https://t.me/whitelist1/7149?comment=571974",
+      "url": "https://t.me/whitelist1/7149?comment=571974",
+      "quote": "А на каком маркете торгуются нфт на Zcash ?"
+    },
+    {
+      "id": "https://t.me/whitelist1/7149?comment=571975",
+      "url": "https://t.me/whitelist1/7149?comment=571975",
+      "quote": "Основной https://zecbit.net/\n\nНо некоторые лаунчатся сами у себя"
     },
     {
       "id": "https://t.me/whitelist1/7149?comment=571976",
@@ -5017,9 +6136,49 @@
       "quote": "Щас пока что зекбит только, и то с 2 коллекциями. Каждый на своем сайте торги ведет"
     },
     {
+      "id": "https://t.me/whitelist1/7149?comment=571981",
+      "url": "https://t.me/whitelist1/7149?comment=571981",
+      "quote": "Зафанался с этим WL, пойдет замес!"
+    },
+    {
+      "id": "https://t.me/whitelist1/7149?comment=571982",
+      "url": "https://t.me/whitelist1/7149?comment=571982",
+      "quote": "Слышь, говорят отнимают обратно 😄"
+    },
+    {
+      "id": "https://t.me/whitelist1/7149?comment=571983",
+      "url": "https://t.me/whitelist1/7149?comment=571983",
+      "quote": "Да ну?"
+    },
+    {
+      "id": "https://t.me/whitelist1/7149?comment=571984",
+      "url": "https://t.me/whitelist1/7149?comment=571984",
+      "quote": "Некоторые уже жалуются"
+    },
+    {
       "id": "https://t.me/whitelist1/7149?comment=571985",
       "url": "https://t.me/whitelist1/7149?comment=571985",
       "quote": "скамят работяг???"
+    },
+    {
+      "id": "https://t.me/whitelist1/7149?comment=571988",
+      "url": "https://t.me/whitelist1/7149?comment=571988",
+      "quote": "жестко"
+    },
+    {
+      "id": "https://t.me/whitelist1/7149?comment=571993",
+      "url": "https://t.me/whitelist1/7149?comment=571993",
+      "quote": "Вот эти еще вроде как норм"
+    },
+    {
+      "id": "https://t.me/whitelist1/7149?comment=571994",
+      "url": "https://t.me/whitelist1/7149?comment=571994",
+      "quote": "ахуй, гц"
+    },
+    {
+      "id": "https://t.me/whitelist1/7149?comment=571995",
+      "url": "https://t.me/whitelist1/7149?comment=571995",
+      "quote": "это гарантированный вл? или нет?"
     },
     {
       "id": "https://t.me/whitelist1/7149?comment=571996",
@@ -5027,9 +6186,99 @@
       "quote": "zaddr уже перестали заявки принимать?"
     },
     {
+      "id": "https://t.me/whitelist1/7149?comment=571998",
+      "url": "https://t.me/whitelist1/7149?comment=571998",
+      "quote": "у меня оказывается тоже"
+    },
+    {
+      "id": "https://t.me/whitelist1/7149?comment=572000",
+      "url": "https://t.me/whitelist1/7149?comment=572000",
+      "quote": "Пару дней назад еще"
+    },
+    {
+      "id": "https://t.me/whitelist1/7149?comment=572001",
+      "url": "https://t.me/whitelist1/7149?comment=572001",
+      "quote": "Да хорош вам уже)))"
+    },
+    {
+      "id": "https://t.me/whitelist1/7149?comment=572002",
+      "url": "https://t.me/whitelist1/7149?comment=572002",
+      "quote": "Так там нфт меньше, чем вл, наверное 😕"
+    },
+    {
+      "id": "https://t.me/whitelist1/7149?comment=572005",
+      "url": "https://t.me/whitelist1/7149?comment=572005",
+      "quote": "Как завести Zec на кошелек noir? Только с биржи?"
+    },
+    {
+      "id": "https://t.me/whitelist1/7149?comment=572006",
+      "url": "https://t.me/whitelist1/7149?comment=572006",
+      "quote": "кросчейн через бридж рубик можно"
+    },
+    {
+      "id": "https://t.me/whitelist1/7149?comment=572008",
+      "url": "https://t.me/whitelist1/7149?comment=572008",
+      "quote": "Ооо, точно, знаю такой. Спс"
+    },
+    {
+      "id": "https://t.me/whitelist1/7149?comment=572009",
+      "url": "https://t.me/whitelist1/7149?comment=572009",
+      "quote": "Я прошел"
+    },
+    {
+      "id": "https://t.me/whitelist1/7149?comment=572010",
+      "url": "https://t.me/whitelist1/7149?comment=572010",
+      "quote": "Гратц, надеюсь накорямт"
+    },
+    {
+      "id": "https://t.me/whitelist1/7149?comment=572011",
+      "url": "https://t.me/whitelist1/7149?comment=572011",
+      "quote": "Тоже очень надеюсь) 🤞"
+    },
+    {
+      "id": "https://t.me/whitelist1/7149?comment=572012",
+      "url": "https://t.me/whitelist1/7149?comment=572012",
+      "quote": "Комса у них чёт большая"
+    },
+    {
+      "id": "https://t.me/whitelist1/7149?comment=572013",
+      "url": "https://t.me/whitelist1/7149?comment=572013",
+      "quote": "Да, потратить 10-15 баксов норм"
+    },
+    {
+      "id": "https://t.me/whitelist1/7149?comment=572021",
+      "url": "https://t.me/whitelist1/7149?comment=572021",
+      "quote": "Ты тож прошел?"
+    },
+    {
+      "id": "https://t.me/whitelist1/7149?comment=572022",
+      "url": "https://t.me/whitelist1/7149?comment=572022",
+      "quote": "Приватность нужно оплачивать)"
+    },
+    {
       "id": "https://t.me/whitelist1/7149?comment=572024",
       "url": "https://t.me/whitelist1/7149?comment=572024",
       "quote": "у тебя на кошельке был зек? или прям нулевый?"
+    },
+    {
+      "id": "https://t.me/whitelist1/7149?comment=572027",
+      "url": "https://t.me/whitelist1/7149?comment=572027",
+      "quote": "только создал"
+    },
+    {
+      "id": "https://t.me/whitelist1/7149?comment=572028",
+      "url": "https://t.me/whitelist1/7149?comment=572028",
+      "quote": "Вот сцуки, почему сбрили активных тогда, наверняка они акки в Х смотрели."
+    },
+    {
+      "id": "https://t.me/whitelist1/7149?comment=572030",
+      "url": "https://t.me/whitelist1/7149?comment=572030",
+      "quote": "наверно, у меня там не пусто)"
+    },
+    {
+      "id": "https://t.me/whitelist1/7149?comment=572039",
+      "url": "https://t.me/whitelist1/7149?comment=572039",
+      "quote": "Какие критерии кто в курсе ?"
     },
     {
       "id": "https://t.me/whitelist1/7149?comment=572040",
@@ -5037,14 +6286,69 @@
       "quote": "Это скам"
     },
     {
+      "id": "https://t.me/whitelist1/7149?comment=572041",
+      "url": "https://t.me/whitelist1/7149?comment=572041",
+      "quote": "@NikitonNT"
+    },
+    {
+      "id": "https://t.me/whitelist1/7149?comment=572042",
+      "url": "https://t.me/whitelist1/7149?comment=572042",
+      "quote": "И этого тож туда же"
+    },
+    {
+      "id": "https://t.me/whitelist1/7149?comment=572043",
+      "url": "https://t.me/whitelist1/7149?comment=572043",
+      "quote": "С хуяли ?"
+    },
+    {
+      "id": "https://t.me/whitelist1/7149?comment=572044",
+      "url": "https://t.me/whitelist1/7149?comment=572044",
+      "quote": "Проверка)"
+    },
+    {
       "id": "https://t.me/whitelist1/7149?comment=572050",
       "url": "https://t.me/whitelist1/7149?comment=572050",
       "quote": "1) если в среднем 600 с кошелька, то почему с твоих 5 старых прокаченных вышло +-250 баксов\n2) старый кошель прокаченный как раз 600 бы и дал\n3) если давно в крипте, то че так мало"
     },
     {
+      "id": "https://t.me/whitelist1/7149?comment=572051",
+      "url": "https://t.me/whitelist1/7149?comment=572051",
+      "quote": "братан тебе не похуй?"
+    },
+    {
+      "id": "https://t.me/whitelist1/7149?comment=572052",
+      "url": "https://t.me/whitelist1/7149?comment=572052",
+      "quote": "Да тупо отвлекся от работы)))"
+    },
+    {
+      "id": "https://t.me/whitelist1/7149?comment=572072",
+      "url": "https://t.me/whitelist1/7149?comment=572072",
+      "quote": "походу это не грант вл, за ночь их раздали кучу народу"
+    },
+    {
+      "id": "https://t.me/whitelist1/7149?comment=572073",
+      "url": "https://t.me/whitelist1/7149?comment=572073",
+      "quote": "А они потом, как лягушки, отпуржат половину))"
+    },
+    {
+      "id": "https://t.me/whitelist1/7149?comment=572074",
+      "url": "https://t.me/whitelist1/7149?comment=572074",
+      "quote": "не удивлюсь, не нравиться мне все что твориться в зек, переобвка на переобувке"
+    },
+    {
+      "id": "https://t.me/whitelist1/7149?comment=572075",
+      "url": "https://t.me/whitelist1/7149?comment=572075",
+      "quote": "Да и люди голову потеряли тож, как с цепи сорвались))"
+    },
+    {
+      "id": "https://t.me/whitelist1/7149?comment=572076",
+      "url": "https://t.me/whitelist1/7149?comment=572076",
+      "quote": "согласен, многие тупо не видят лютые редфдаги и прут туда"
+    },
+    {
       "id": "https://t.me/cryptonftded/3282?comment=187840",
       "url": "https://t.me/cryptonftded/3282?comment=187840",
-      "quote": "BULL, granddaughters!\n Bitcoin has gained 9% in a week, and Solana has gained 14%, even though it was trading at $70 in the summer.\n\n GRAM +5%, one of the worst indicators, oh, I w"
+      "quote": "BULL, granddaughters!\n Bitcoin has gained 9% in a week, and Solana has gained 14%, even though it was trading at $70 in the summer.\n\n GRAM +5%, one of the worst indicators, oh, I"
     },
     {
       "id": "https://t.me/cryptonftded/3282?comment=187841",
@@ -5052,23 +6356,48 @@
       "quote": "Я рад, но опять всё пропустил (((\n\nУже который раз хочу обменять все свои ГРАМы на биток и уже забить на детище Дурова, но всё никак выгодно не успеваю..."
     },
     {
+      "id": "https://t.me/cryptonftded/3282?comment=187844",
+      "url": "https://t.me/cryptonftded/3282?comment=187844",
+      "quote": "Я рада, что кто-то рад 😁"
+    },
+    {
+      "id": "https://t.me/cryptonftded/3282?comment=187845",
+      "url": "https://t.me/cryptonftded/3282?comment=187845",
+      "quote": "Я с утра за нир наблюдала, пошортила немного 😄"
+    },
+    {
       "id": "https://t.me/cryptonftded/3282?comment=187846",
       "url": "https://t.me/cryptonftded/3282?comment=187846",
       "quote": "Сделай это сейчас и жди роста битка) если ждать биток через месяц может стать 120😁"
     },
     {
+      "id": "https://t.me/cryptonftded/3282?comment=187847",
+      "url": "https://t.me/cryptonftded/3282?comment=187847",
+      "quote": "@Kosheleffff почему такая реакция \nЯ удачно пошортила near 😁"
+    },
+    {
       "id": "https://t.me/don_invest/5299?comment=380347",
       "url": "https://t.me/don_invest/5299?comment=380347",
       "quote": "ottoclub ETH кошелёк требует - это нормально для Zec проекта?"
+    },
+    {
+      "id": "https://t.me/cryptonftded/3282?comment=187849",
+      "url": "https://t.me/cryptonftded/3282?comment=187849",
+      "quote": "Как всегда бычка случилась неожиданно."
+    },
+    {
+      "id": "https://t.me/cryptonftded/3282?comment=187852",
+      "url": "https://t.me/cryptonftded/3282?comment=187852",
+      "quote": "что-то ты не в курсе как на рынке бывает"
     }
   ],
   "spend_usd": 0.0,
   "numbers_by": "code",
-  "brief_markdown": "# Pulse (news-first): eth, окно 2026-09-14T12:33:46+00:00 – 2026-09-21T12:44:54+00:00\n\n## Коротко\n\n- BITMINE'S ETH HOLDINGS REACHED 5.96 MILLION AFTER ACQUIRING 27,180 TOKENS OVER THE PAST WEEK\n- С 22 сентября квалифицированные инвесторы смогут торговать вечными фьючерсами на индексы #BTC, #ETH, #SOL, #XRP и #TRX.\n- Общий чистый приток спотовых ETH-ETF составил $143,7 млн.\n- 🎩 #ETH BitMine за последнюю неделю приобрели 27 180 ETH, в результате чего общий объем активов теперь составляет 5,96 млн ETH\n- Общий чистый приток спотовых ETH-ETF составил $121,02 млн.\n\n## События и заявления\n\n- **Компания BitMine Тома Ли из Fundstrat купила на баланс еще 27 180 ETH на прошлой неделе**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/markettwits/384699: «Компания BitMine Тома Ли из Fundstrat купила на баланс еще 27 180 ETH на прошлой неделе\n\n»\n- **на балансе уже более 5.96 млн ETH (около 4.9% общего предложения)**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/markettwits/384699: «на балансе уже более 5.96 млн ETH (около 4.9% общего предложения)\n\n»\n- **объявленная цель компании - купить 5% всего ETH**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/markettwits/384699: «объявленная цель компании - купить 5% всего ETH»\n- **🎩 #ETH BitMine за последнюю неделю приобрели 27 180 ETH, в результате чего общий объем активов теперь составляет 5,96 млн ETH**\n  публикации 2, каналы 2, известные авторы 0, первоисточники 0, перепечатки 2, неизвестное происхождение 0.\n  - https://t.me/cryptoattack24/96719: «🎩 #ETH BitMine за последнюю неделю приобрели 27 180 ETH, в результате чего общий объем активов теперь составляет 5,96 млн ETH»\n  - https://t.me/WEB3_AGGREGATOR/422973: «🎩 BitMine за прошедшую неделю приобрели 27 180 #ETH»\n- **BITMINE'S ETH HOLDINGS REACHED 5.96 MILLION AFTER ACQUIRING 27,180 TOKENS OVER THE PAST WEEK**\n  публикации 4, каналы 3, известные авторы 0, первоисточники 4, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/marketfeed/1037572: «BITMINE'S ETH HOLDINGS REACHED 5.96 MILLION AFTER ACQUIRING 27,180 TOKENS OVER THE PAST WEEK»\n  - https://t.me/rawa_imagination/21078: «$BMNR скупила уже 4,9% всего $ETH - остался всего 0,1% до цели.»\n  - https://t.me/WEB3_AGGREGATOR/422949: «🟢 BitMine добрала 28 086 ETH, всего 5,93 млн»\n- **🟢 Ethereum метит в квантово-стойкий L1 к 2029 году**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/422949: «🟢 Ethereum метит в квантово-стойкий L1 к 2029 году»\n- **🟢 ETH ETF приток $1,75 млрд за август, лучший с 2025**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/422949: «🟢 ETH ETF приток $1,75 млрд за август, лучший с 2025»\n- **Причём примерно 85% своих запасов — около 5 млн ETH — компания уже отправила в стейкинг.**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/422950: «Причём примерно 85% своих запасов — около 5 млн ETH — компания уже отправила в стейкинг.»\n- **Standard Reserve Launches Onchain ETH Reserve**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/422959: «Standard Reserve Launches Onchain ETH Reserve»\n- **🪙 BitMine за неделю докупила ещё 27 180 ETH и теперь контролирует почти 5% всего предложения Ethereum. Причём примерно 85% своих запасов — около 5 млн ETH — компания уже отправила…**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/422965: «🪙 BitMine за неделю докупила ещё 27 180 ETH и теперь контролирует почти 5% всего предложения Ethereum. Причём примерно 85% своих запасов — около 5 млн ETH — ком»\n- **Запасы ETH на биржах снизились до минимума за 11 лет**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/markettwits/384763: «Запасы ETH на биржах снизились до минимума за 11 лет»\n- **📉 #ETH Santiment: количество ETH на биржах достигло 11-летнего минимума.**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/cryptoattack24/96730: «📉 #ETH Santiment: количество ETH на биржах достигло 11-летнего минимума.»\n- **Общий чистый приток спотовых ETH-ETF составил $121,02 млн.**\n  публикации 2, каналы 2, известные авторы 0, первоисточники 1, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/cryptoattack24/96732: «Общий чистый приток спотовых ETH-ETF составил $121,02 млн.»\n  - https://t.me/rawa_imagination/21088: «ETH ETF: приток $121M»\n- **1. Два кошелька, которые более года были неактивны (возможно, принадлежащие одному и тому же киту), перевели на OKX 14 700 #ETH ($36,94 млн);**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/cryptoattack24/96735: «1. Два кошелька, которые более года были неактивны (возможно, принадлежащие одному и тому же киту), перевели на OKX 14 700 #ETH ($36,94 млн);»\n- **3. Хакеры из Lazarus Group продали 911 #ETH ($2,28 млн) по средней цене $2 499.**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/cryptoattack24/96735: «3. Хакеры из Lazarus Group продали 911 #ETH ($2,28 млн) по средней цене $2 499.»\n- **ETHEREUM, BASE DEVELOPERS ABANDON EFFORT TO ALIGN ACCOUNT ABSTRACTION PROPOSALS ...**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/marketfeed/1038133: «ETHEREUM, BASE DEVELOPERS ABANDON EFFORT TO ALIGN ACCOUNT ABSTRACTION PROPOSALS ...»\n- **Ethereum: $2,475 -1.89%**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/422990: «Ethereum: $2,475 -1.89%»\n- **вывела 10 000 #ETH ($24,67 млн) с Binance.**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/cryptoattack24/96738: «вывела 10 000 #ETH ($24,67 млн) с Binance.»\n- **ETH: Binance: -0.0088% 🐻 | Bybit: -0.0113% 🐻**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/rawa_imagination/21088: «ETH: Binance: -0.0088% 🐻 | Bybit: -0.0113% 🐻»\n- **в паре ETH/USDT**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/crypto_hd/31433: «в паре ETH/USDT»\n- **MVRV Ethereum указывает на завершение медвежьего рынка.**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/crypto_hd/31434: «MVRV Ethereum указывает на завершение медвежьего рынка.»\n- **предшествовал восстановлению ETH.**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/crypto_hd/31434: «предшествовал восстановлению ETH.»\n- **– кол-во #ETH на биржах достигло 11-летнего минимума**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 0, неизвестное происхождение 1.\n  - https://t.me/WEB3_AGGREGATOR/423064: «– кол-во #ETH на биржах достигло 11-летнего минимума»\n- **Общий чистый отток спотовых ETH-ETF составил $142,3 млн.**\n  публикации 2, каналы 2, известные авторы 0, первоисточники 0, перепечатки 0, неизвестное происхождение 2.\n  - https://t.me/cryptoattack24/96747: «Общий чистый отток спотовых ETH-ETF составил $142,3 млн.»\n  - https://t.me/rawa_imagination/21101: «📈 🔴 ETH ETF: отток $141M»\n- **2. Кит обменял 512 #WBTC ($38,64 млн) и 354 #cbBTC ($26,73 млн) на 26 924 #ETH ($64,57 млн).**\n  публикации 2, каналы 2, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 1.\n  - https://t.me/cryptoattack24/96749: «2. Кит обменял 512 #WBTC ($38,64 млн) и 354 #cbBTC ($26,73 млн) на 26 924 #ETH ($64,57 млн).»\n  - https://t.me/crypto_hd/31451: «➤ Кит «0x4553» обменял Bitcoin на Ethereum: 512 WBTC ($38,6m) и 354 cbBTC ($26,7m) на 26,924 ETH ($64,6m).»\n- **С 22 сентября квалифицированные инвесторы смогут торговать вечными фьючерсами на индексы #BTC, #ETH, #SOL, #XRP и #TRX.**\n  публикации 3, каналы 3, известные авторы 0, первоисточники 2, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/crypto_hd/31450: «С 22 сентября квалифицированные инвесторы смогут торговать вечными фьючерсами на индексы #BTC, #ETH, #SOL, #XRP и #TRX.»\n  - https://t.me/cryptoattack24/96754: «🇷🇺 Московская биржа 22 сентября запускает бессрочные фьючерсы на индексы #BTC, #ETH, #SOL, #XRP и #TRX для квалифицированных инвесторов.»\n  - https://t.me/WEB3_AGGREGATOR/423158: «Мосбиржа 22 сентября запустит бессрочные фьючерсы на индексы #BTC, #ETH, #SOL, #XRP и #TRX для квалифицированных инвесторов»\n- **• Прогноз цены Ethereum: давление на поддержку после блокировки регулирования в Сенате США**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/rawa_imagination/21099: «• Прогноз цены Ethereum: давление на поддержку после блокировки регулирования в Сенате США»\n- **🙅‍♂️ #ETH Ethereum и Base отказались от разработки общего стандарта кошельков после нескольких месяцев переговоров. coindesk.com**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/cryptoattack24/96755: «🙅‍♂️ #ETH Ethereum и Base отказались от разработки общего стандарта кошельков после нескольких месяцев переговоров. coindesk.com»\n- **Ethereum и Base отказались от разработки единого стандарта крипто-кошельков после нескольких месяцев переговоров — Coindesk**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/markettwits/385008: «Ethereum и Base отказались от разработки единого стандарта крипто-кошельков после нескольких месяцев переговоров — Coindesk»\n- **Крупнейший банк Германии позволит клиентам хранить и переводить #BTC, #ETH и отдельные стейблкоины напрямую через Deutsche Bank.**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/crypto_hd/31454: «Крупнейший банк Германии позволит клиентам хранить и переводить #BTC, #ETH и отдельные стейблкоины напрямую через Deutsche Bank.»\n- **Хакеры начали использовать Ethereum для управления банковским вирусом.**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/crypto_hd/31457: «Хакеры начали использовать Ethereum для управления банковским вирусом.»\n  - https://t.me/crypto_hd/31457: «Самое интересное – злоумышленники используют смарт-контракты Ethereum для обновления адресов управляющих серверов и источников загрузки вируса, что усложняет бл»\n- **Aerie Capital launched a new Morpho market on Ethereum mainnet**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/423129: «Aerie Capital launched a new Morpho market on Ethereum mainnet»\n- **Ethereum и банковский вирус (читать)**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/crypto_hd/31472: «Ethereum и банковский вирус (читать)»\n- **Общий чистый отток спотовых ETH-ETF составил $224,1 млн.**\n  публикации 2, каналы 2, известные авторы 0, первоисточники 1, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/cryptoattack24/96773: «Общий чистый отток спотовых ETH-ETF составил $224,1 млн.»\n  - https://t.me/rawa_imagination/21109: «📈 🔴 ETH ETF: отток $224M»\n- **1. 0xC2f1 вывел 2 695 #ETH ($6,94 млн) с Gemini и разместил их в стейкинге;**\n  публикации 2, каналы 2, известные авторы 0, первоисточники 1, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/cryptoattack24/96776: «1. 0xC2f1 вывел 2 695 #ETH ($6,94 млн) с Gemini и разместил их в стейкинге;»\n  - https://t.me/crypto_hd/31476: «➤ Кит «0xC2f1» вывел с Gemini 2695 ETH ($6,94m) и сразу отправил всю позицию в стейкинг. Еще один кит «0x3F2c» после 9 месяцев бездействия вывел с Binance 2500 »\n- **2. 0x3F2c вывел 2 500 #ETH ($6,02 млн) с Binance после 9 месяцев бездействия.**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/cryptoattack24/96776: «2. 0x3F2c вывел 2 500 #ETH ($6,02 млн) с Binance после 9 месяцев бездействия.»\n- **➤ Инвестор «0x0058» потратил 13m USDC на покупку 5368 ETH по средней цене $2422.**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/crypto_hd/31476: «➤ Инвестор «0x0058» потратил 13m USDC на покупку 5368 ETH по средней цене $2422.»\n- **⚠️✴️#BTC #ETH #крипто #cot **\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/markettwits/385211: «⚠️✴️#BTC #ETH #крипто #cot \nBlackRock сегодня начал переводить BTC и ETH на биржи - скорее всего, на продажу для клиентов  — мониторинг»\n- **Комиссия за транзакции в сети Ethereum значительно снизилась. С момента достижения пикового значения 21 апреля в $0,72,  сегодня средняя транзакция за перевод оценивается всего в…**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/markettwits/385262: «Комиссия за транзакции в сети Ethereum значительно снизилась. С момента достижения пикового значения 21 апреля в $0,72,  сегодня средняя транзакция за перевод о»\n- **➤ При резком росте #ETH до ~$2730 объем ликвидаций SHORT-позиций превысит $3,060,000,000.**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/crypto_hd/31491: «➤ При резком росте #ETH до ~$2730 объем ликвидаций SHORT-позиций превысит $3,060,000,000.»\n- **🕵️‍♂️ BlackRock перевели на Coinbase Prime 54 096 #ETH (131,7 млн $) и 2 015 #BTC (153,8 млн $)**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/423250: «🕵️‍♂️ BlackRock перевели на Coinbase Prime 54 096 #ETH (131,7 млн $) и 2 015 #BTC (153,8 млн $)»\n- **Общий чистый отток спотовых ETH-ETF составил $39,3 млн.**\n  публикации 2, каналы 2, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 1.\n  - https://t.me/cryptoattack24/96795: «Общий чистый отток спотовых ETH-ETF составил $39,3 млн.»\n  - https://t.me/rawa_imagination/21117: «📈 🔴 ETH ETF: отток $39M»\n- **📍Сегодня экспирация в опционах на BTC и ETH! (Deribit)**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/crypto_hd/31498: «📍Сегодня экспирация в опционах на BTC и ETH! (Deribit)»\n- **@nostrafinance has reported that a manipulated NSTR oracle price allowed a single account to borrow ~$3.5M in ETH, STRK, USDC, USDT, WBTC, and DAI against NSTR collateral on…**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/423264: «@nostrafinance has reported that a manipulated NSTR oracle price allowed a single account to borrow ~$3.5M in ETH, STRK, USDC, USDT, WBTC, and DAI against NSTR »\n- **ETH: Binance: +0.0091% 🐂 | Bybit: +0.0100% 🐂**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 0, неизвестное происхождение 1.\n  - https://t.me/rawa_imagination/21117: «ETH: Binance: +0.0091% 🐂 | Bybit: +0.0100% 🐂»\n- **➤ Инсайдер Bitcoin OG выставил ордер на открытие лонга на 2450 BTC (~$190m) по цене $78,000. Также он продал 35,000 ETH ($87,5m) по цене ~$2500 и направил часть средств на…**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/crypto_hd/31503: «➤ Инсайдер Bitcoin OG выставил ордер на открытие лонга на 2450 BTC (~$190m) по цене $78,000. Также он продал 35,000 ETH ($87,5m) по цене ~$2500 и направил часть»\n- **➤ 11 новых кошельков, вероятно принадлежащих одному киту, за последние три дня продали 602 BTC за $45,8m на Hyperliquid и купили 18,780 ETH на ту же сумму.**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/crypto_hd/31503: «➤ 11 новых кошельков, вероятно принадлежащих одному киту, за последние три дня продали 602 BTC за $45,8m на Hyperliquid и купили 18,780 ETH на ту же сумму.»\n- **➤ Кит «0x72e0», вероятно, меняет HYPE на ETH. Он перевел 440,000 HYPE ($36m) в FalconX, после чего вывел 12,250 ETH ($30,1m).**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/crypto_hd/31503: «➤ Кит «0x72e0», вероятно, меняет HYPE на ETH. Он перевел 440,000 HYPE ($36m) в FalconX, после чего вывел 12,250 ETH ($30,1m).»\n- **➤ Четыре новых кошелька одного кита/институционала купили 6972 ETH ($17,15m) по средней цене $2460,69 и отправили всю позицию в стейкинг.**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/crypto_hd/31503: «➤ Четыре новых кошелька одного кита/институционала купили 6972 ETH ($17,15m) по средней цене $2460,69 и отправили всю позицию в стейкинг.»\n- **По его словам, инвесторы ошибались, считая, что Ethereum станет единым стандартом для институционального рынка. Сейчас компании рассматривают разные блокчейны, и победитель пока не…**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/crypto_hd/31504: «По его словам, инвесторы ошибались, считая, что Ethereum станет единым стандартом для институционального рынка. Сейчас компании рассматривают разные блокчейны, »\n- **1. У них есть уже коллекция почти по эфиру.**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 0, неизвестное происхождение 1.\n  - https://t.me/WEB3_AGGREGATOR/423294: «1. У них есть уже коллекция почти по эфиру.»\n- **🪙 Ethereum хочет ускорить базовый ритм сети — предложение EIP-8198 должно сделать длительность слота настраиваемой вместо жёстких 12 секунд, чтобы затем постепенно сокращать её.**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/423312: «🪙 Ethereum хочет ускорить базовый ритм сети — предложение EIP-8198 должно сделать длительность слота настраиваемой вместо жёстких 12 секунд, чтобы затем постепе»\n- **В обсуждениях называют 10 секунд как первый осторожный шаг, а в текущем черновике EIP фигурируют 8 секунд, Ethereum Foundation уже включила инициативу в B-tier для Hegotá.**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/423312: «В обсуждениях называют 10 секунд как первый осторожный шаг, а в текущем черновике EIP фигурируют 8 секунд, Ethereum Foundation уже включила инициативу в B-tier »\n- **Общий чистый приток спотовых ETH-ETF составил $143,7 млн.**\n  публикации 3, каналы 2, известные авторы 0, первоисточники 3, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/cryptoattack24/96819: «Общий чистый приток спотовых ETH-ETF составил $143,7 млн.»\n  - https://t.me/rawa_imagination/21121: «📈 🟢 ETH ETF: приток $144M»\n  - https://t.me/rawa_imagination/21127: «📈 🟢 ETH ETF: приток $144M»\n- **–Два кошелька (вероятно, принадлежащие одному и тому же киту) перевели на Bitfinex 33 180 #ETH (~86,9 млн $) после более чем 2-летнего бездействия (1, 2);**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/cryptoattack24/96824: «–Два кошелька (вероятно, принадлежащие одному и тому же киту) перевели на Bitfinex 33 180 #ETH (~86,9 млн $) после более чем 2-летнего бездействия (1, 2);»\n- **Активность китов в ETH резко выросла, кол-во холдеров обновило рекорд. В альткоинах ралли. — Santiment**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/markettwits/385442: «Активность китов в ETH резко выросла, кол-во холдеров обновило рекорд. В альткоинах ралли. — Santiment»\n- **ETH: Binance: +0.0100% 🐂 | Bybit: +0.0100% 🐂**\n  публикации 2, каналы 1, известные авторы 0, первоисточники 2, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/rawa_imagination/21121: «  ETH: Binance: +0.0100% 🐂 | Bybit: +0.0100% 🐂»\n  - https://t.me/rawa_imagination/21137: «  ETH: Binance: +0.0100% 🐂 | Bybit: +0.0100% 🐂»\n- **#ETHER 2639.50 +0.32%**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/marketfeed/1041526: «#ETHER 2639.50 +0.32%»\n- **• Bitcoin holds around $81.2K; ether near $2.64K — risk assets steady despite macro/policy noise.**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/marketfeed/1041542: «• Bitcoin holds around $81.2K; ether near $2.64K — risk assets steady despite macro/policy noise.»\n- **Мосбиржа запускает бессрочные фьючерсы на индексы #BTC, #ETH, #SOL, #XRP и #TRX для квалифицированных инвесторов**\n  публикации 2, каналы 2, известные авторы 0, первоисточники 2, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/cryptoattack24/96827: «Мосбиржа запускает бессрочные фьючерсы на индексы #BTC, #ETH, #SOL, #XRP и #TRX для квалифицированных инвесторов»\n  - https://t.me/WEB3_AGGREGATOR/423395: «Мосбиржа запускает бессрочные фьючерсы на индексы #BTC, #ETH, #SOL, #XRP и #TRX для квалифицированных инвесторов»\n- **В анализе утверждается, что рост активности на уровне Layer 2 не обязательно приводит к пропорциональному росту доходов Ethereum, поскольку большая часть доходов от комиссий…**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/cryptoattack24/96830: «В анализе утверждается, что рост активности на уровне Layer 2 не обязательно приводит к пропорциональному росту доходов Ethereum, поскольку большая часть доходо»\n- **Что случилось (19.09.2026, Ethereum):**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/rawa_imagination/21126: «Что случилось (19.09.2026, Ethereum):»\n- **Выручку атакующий консолидировал в 546.36 ETH (~$1.44 млн) — по трейсу PeckShield.**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/rawa_imagination/21126: «Выручку атакующий консолидировал в 546.36 ETH (~$1.44 млн) — по трейсу PeckShield.»\n- **В итоге в treasury накопилось больше 1 200 ETH**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/423399: «В итоге в treasury накопилось больше 1 200 ETH»\n- **#ETHER 2605.40 -1.14%**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/marketfeed/1041930: «#ETHER 2605.40 -1.14%»\n- **#ETHER 2633.40 -0.11%**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/marketfeed/1041998: «#ETHER 2633.40 -0.11%»\n- **Ether near $2.6K**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/marketfeed/1042010: «Ether near $2.6K»\n- **$2,700 $ETH**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/marketfeed/1042085: «$2,700 $ETH»\n- **#BTC #ETH #ETF**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/cryptoattack24/96837: «#BTC #ETH #ETF»\n- **Общий чистый отток спотовых ETH-ETF составил ~$140 млн.**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/cryptoattack24/96837: «Общий чистый отток спотовых ETH-ETF составил ~$140 млн.»\n- **выкупил обратно 7 567 #ETH ($19,93 млн) по более высокой цене;**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/cryptoattack24/96838: «выкупил обратно 7 567 #ETH ($19,93 млн) по более высокой цене;»\n- **купил 34 422 #ETH ($86,5 млн) и разместил все эти средства в стейкинг;**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/cryptoattack24/96838: «купил 34 422 #ETH ($86,5 млн) и разместил все эти средства в стейкинг;»\n- **ETH тестирует отметку $2700, это максимум с января 2026г. Виталик одобряет.**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/markettwits/385524: «ETH тестирует отметку $2700, это максимум с января 2026г. Виталик одобряет.»\n- **Прогноз цены Ethereum: киты накапливают ETH, а слабые объемы повышают риск разворота**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/rawa_imagination/21135: «Прогноз цены Ethereum: киты накапливают ETH, а слабые объемы повышают риск разворота\n»\n- **Ethereum: $2,662 +3.24%**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/423460: «Ethereum: $2,662 +3.24%\n\n»\n- **📈 🟢 ETH ETF: приток $144M**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/rawa_imagination/21137: «📈 🟢 ETH ETF: приток $144M»\n- **🎩 #ETH Bitmine за прошедшую неделю приобрели 27 562 ETH.**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/cryptoattack24/96850: «🎩 #ETH Bitmine за прошедшую неделю приобрели 27 562 ETH.»\n- **BITMINE'S ETH HOLDINGS REACHED 5.98 MILLION AFTER ACQUIRING 27,562 TOKENS OVER THE PAST WEEK ...**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/marketfeed/1042392: «BITMINE'S ETH HOLDINGS REACHED 5.98 MILLION AFTER ACQUIRING 27,562 TOKENS OVER THE PAST WEEK ...»\n\n## Кто распространяет информацию и какие позиции\n\n- Study inscriptions on eth/btc.\n  https://t.me/spidersjournal/18913\n- Курс Ethereum обошел биткоин по росту на 20% с июня. Какие перспективы\n  https://t.me/rawa_imagination/21086\n- Ethereum обогнал биткоин на 20%: что дальше\n  https://t.me/rawa_imagination/21086\n- Основатель Ethereum не согласен с мнением, что развитие AI неизбежно приведет к массовым взломам. AI-технологии смогут не только искать уязвимости, но и математически доказывать безопасность программ, причем проверять весь код целиком.\n  https://t.me/crypto_hd/31473\n- Именно в этом направлении в Ethereum планируют двигаться в ближайшие несколько лет. Бутерин считает, что без усиления безопасности у масштабируемых и приватных блокчейнов «нет будущего».\n  https://t.me/crypto_hd/31473\n- Именно в эту сторону Ethereum планирует двигаться в ближайшие годы.\n  https://t.me/WEB3_AGGREGATOR/423173\n- The S-tier – Lighter, Delta, Arcus, Index, Bankr, Virtuals – shows the chain is built for perps, tokenized stocks and agents, while B and C are mostly memecoins. Notably absent: Ethereum's DeFi blue chips – Robinhood is building around its own product, not the DeFi stack.\n  https://t.me/WEB3_AGGREGATOR/423218\n\n## Вопросы, аргументы и опыт участников\n\n- Кстати, по моему писпл уже. Если эфир пока идет с опережением к битку, то бмнр к эфиру график тоже идет с опережение. То есть проще покупать бмнр в долгосрок\n  основание: реплика к посту с одним событием по теме и тому же предмету\n  https://t.me/rawa_imagination/21078?comment=342794\n- DU, granddaughters! Autumn is coming... I'm already feeling snotty. Let's run through what's going on with crypto. 🟪This week promises to be interesting and volatile: the Senate vote on the CLARITY ACT is tomorrow, and the rate decision is \n  основание: вопрос или оценка по проекту в целом, не по конкретной новости\n  https://t.me/cryptonftded/3267?comment=187249\n- биток ушёл под 76к и уже щупал 74.9, а по пути вынесло почти 300 миллионов лонгов, так что я бы не ловил дно, пока ФРС не скажет что-то внятное по ставке\n  основание: предмет реплики — сторонний сервис/коллекция экосистемы, не событие темы\n  https://t.me/cryptonftded/3270?comment=187463\n- примерно так, плюс/минус оплата мощностей + частично апи. С подписками на Равангу и донатами пока покрывает.\n  основание: предмет реплики — сторонний сервис/коллекция экосистемы, не событие темы\n  https://t.me/rawa_imagination/21117?comment=343184\n- Щас пока что зекбит только, и то с 2 коллекциями. Каждый на своем сайте торги ведет\n  основание: предмет реплики — сторонний сервис/коллекция экосистемы, не событие темы\n  https://t.me/whitelist1/7149?comment=571976\n- скамят работяг???\n  основание: предмет реплики — сторонний сервис/коллекция экосистемы, не событие темы\n  https://t.me/whitelist1/7149?comment=571985\n- zaddr уже перестали заявки принимать?\n  основание: предмет реплики — сторонний сервис/коллекция экосистемы, не событие темы\n  https://t.me/whitelist1/7149?comment=571996\n- у тебя на кошельке был зек? или прям нулевый?\n  основание: вопрос или оценка по проекту в целом, не по конкретной новости\n  https://t.me/whitelist1/7149?comment=572024\n- Это скам\n  основание: предмет реплики — сторонний сервис/коллекция экосистемы, не событие темы\n  https://t.me/whitelist1/7149?comment=572040\n- 1) если в среднем 600 с кошелька, то почему с твоих 5 старых прокаченных вышло +-250 баксов\n2) старый кошель прокаченный как раз 600 бы и дал\n3) если давно в крипте, то че так мало кошельков?!?\n\nЗадолбали со своей скаминой лезть\n  основание: предмет реплики — сторонний сервис/коллекция экосистемы, не событие темы\n  https://t.me/whitelist1/7149?comment=572050\n- BULL, granddaughters!\n Bitcoin has gained 9% in a week, and Solana has gained 14%, even though it was trading at $70 in the summer.\n\n GRAM +5%, one of the worst indicators, oh, I wish they would release a wallet or a step MTONGA, but who ne\n  основание: вопрос или оценка по проекту в целом, не по конкретной новости\n  https://t.me/cryptonftded/3282?comment=187840\n- Я рад, но опять всё пропустил (((\n\nУже который раз хочу обменять все свои ГРАМы на биток и уже забить на детище Дурова, но всё никак выгодно не успеваю...\n  основание: предмет реплики — сторонний сервис/коллекция экосистемы, не событие темы\n  https://t.me/cryptonftded/3282?comment=187841\n- Сделай это сейчас и жди роста битка) если ждать биток через месяц может стать 120😁\n  основание: предмет реплики — сторонний сервис/коллекция экосистемы, не событие темы\n  https://t.me/cryptonftded/3282?comment=187846\n- ottoclub ETH кошелёк требует - это нормально для Zec проекта?\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/don_invest/5299?comment=380347\n\n## Изменения относительно предыдущего периода\n\n- Появившиеся события: 77.\n- Исчезнувшие события: 37.\n- Изменение охвата источников: +3 / −1 каналов.\n- Комментарии в текущем окне: 875.\n\n## Охват и ограничения\n\n- Публикации 7119, комментарии 875, каналы 19.\n- Режим publication_replay: discovered_at в снимке отсутствует, «впервые системой» не заявляется.\n- Роль источника unknown: в базе нет редакционного реестра.\n- Неизвестные авторы не объединяются.\n- Отсечено после cutoff 2026-09-21T12:44:54+00:00: 2684.\n\n## Основания\n\n- https://t.me/markettwits/384699: «Компания BitMine Тома Ли из Fundstrat купила на баланс еще 27 180 ETH на прошлой неделе\n\n»\n- https://t.me/markettwits/384699: «на балансе уже более 5.96 млн ETH (около 4.9% общего предложения)\n\n»\n- https://t.me/markettwits/384699: «объявленная цель компании - купить 5% всего ETH»\n- https://t.me/cryptoattack24/96719: «🎩 #ETH BitMine за последнюю неделю приобрели 27 180 ETH, в результате чего общий объем активов теперь составляет 5,96 млн ETH»\n- https://t.me/WEB3_AGGREGATOR/422973: «🎩 BitMine за прошедшую неделю приобрели 27 180 #ETH»\n- https://t.me/marketfeed/1037572: «BITMINE'S ETH HOLDINGS REACHED 5.96 MILLION AFTER ACQUIRING 27,180 TOKENS OVER THE PAST WEEK»\n- https://t.me/rawa_imagination/21078: «$BMNR скупила уже 4,9% всего $ETH - остался всего 0,1% до цели.»\n- https://t.me/WEB3_AGGREGATOR/422949: «🟢 BitMine добрала 28 086 ETH, всего 5,93 млн»\n- https://t.me/WEB3_AGGREGATOR/422950: «🪙 BitMine за неделю докупила ещё 27 180 ETH и теперь контролирует почти 5% всего предложения Ethereum.»\n- https://t.me/WEB3_AGGREGATOR/422949: «🟢 Ethereum метит в квантово-стойкий L1 к 2029 году»\n- https://t.me/WEB3_AGGREGATOR/422949: «🟢 ETH ETF приток $1,75 млрд за август, лучший с 2025»\n- https://t.me/WEB3_AGGREGATOR/422950: «Причём примерно 85% своих запасов — около 5 млн ETH — компания уже отправила в стейкинг.»\n- https://t.me/WEB3_AGGREGATOR/422959: «Standard Reserve Launches Onchain ETH Reserve»\n- https://t.me/WEB3_AGGREGATOR/422965: «🪙 BitMine за неделю докупила ещё 27 180 ETH и теперь контролирует почти 5% всего предложения Ethereum. Причём примерно 85% своих запасов — около 5 млн ETH — ком»\n- https://t.me/markettwits/384763: «Запасы ETH на биржах снизились до минимума за 11 лет»\n- https://t.me/cryptoattack24/96730: «📉 #ETH Santiment: количество ETH на биржах достигло 11-летнего минимума.»\n- https://t.me/cryptoattack24/96732: «Общий чистый приток спотовых ETH-ETF составил $121,02 млн.»\n- https://t.me/rawa_imagination/21088: «ETH ETF: приток $121M»\n- https://t.me/cryptoattack24/96735: «1. Два кошелька, которые более года были неактивны (возможно, принадлежащие одному и тому же киту), перевели на OKX 14 700 #ETH ($36,94 млн);»\n- https://t.me/cryptoattack24/96735: «3. Хакеры из Lazarus Group продали 911 #ETH ($2,28 млн) по средней цене $2 499.»\n",
+  "brief_markdown": "# Pulse (news-first): eth, окно 2026-09-14T12:33:46+00:00 – 2026-09-21T12:44:54+00:00\n\n## Коротко\n\n- BITMINE'S ETH HOLDINGS REACHED 5.96 MILLION AFTER ACQUIRING 27,180 TOKENS OVER THE PAST WEEK\n- Общий чистый приток спотовых ETH-ETF составил $143,7 млн.\n- 🎩 #ETH BitMine за последнюю неделю приобрели 27 180 ETH, в результате чего общий объем активов теперь составляет 5,96 млн ETH\n- Общий чистый приток спотовых ETH-ETF составил $121,02 млн.\n- Общий чистый отток спотовых ETH-ETF составил $142,3 млн.\n\n## События и заявления\n\n- **Компания BitMine Тома Ли из Fundstrat купила на баланс еще 27 180 ETH на прошлой неделе**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/markettwits/384699: «Компания BitMine Тома Ли из Fundstrat купила на баланс еще 27 180 ETH на прошлой неделе\n\n»\n- **на балансе уже более 5.96 млн ETH (около 4.9% общего предложения)**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/markettwits/384699: «на балансе уже более 5.96 млн ETH (около 4.9% общего предложения)\n\n»\n- **объявленная цель компании - купить 5% всего ETH**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/markettwits/384699: «объявленная цель компании - купить 5% всего ETH»\n- **🎩 #ETH BitMine за последнюю неделю приобрели 27 180 ETH, в результате чего общий объем активов теперь составляет 5,96 млн ETH**\n  публикации 2, каналы 2, известные авторы 0, первоисточники 0, перепечатки 2, неизвестное происхождение 0.\n  - https://t.me/cryptoattack24/96719: «🎩 #ETH BitMine за последнюю неделю приобрели 27 180 ETH, в результате чего общий объем активов теперь составляет 5,96 млн ETH»\n  - https://t.me/WEB3_AGGREGATOR/422973: «🎩 BitMine за прошедшую неделю приобрели 27 180 #ETH»\n- **BITMINE'S ETH HOLDINGS REACHED 5.96 MILLION AFTER ACQUIRING 27,180 TOKENS OVER THE PAST WEEK**\n  публикации 4, каналы 3, известные авторы 0, первоисточники 4, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/marketfeed/1037572: «BITMINE'S ETH HOLDINGS REACHED 5.96 MILLION AFTER ACQUIRING 27,180 TOKENS OVER THE PAST WEEK»\n  - https://t.me/rawa_imagination/21078: «$BMNR скупила уже 4,9% всего $ETH - остался всего 0,1% до цели.»\n  - https://t.me/WEB3_AGGREGATOR/422949: «🟢 BitMine добрала 28 086 ETH, всего 5,93 млн»\n- **🟢 Ethereum метит в квантово-стойкий L1 к 2029 году**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/422949: «🟢 Ethereum метит в квантово-стойкий L1 к 2029 году»\n- **🟢 ETH ETF приток $1,75 млрд за август, лучший с 2025**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/422949: «🟢 ETH ETF приток $1,75 млрд за август, лучший с 2025»\n- **Причём примерно 85% своих запасов — около 5 млн ETH — компания уже отправила в стейкинг.**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/422950: «Причём примерно 85% своих запасов — около 5 млн ETH — компания уже отправила в стейкинг.»\n- **Standard Reserve Launches Onchain ETH Reserve**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/422959: «Standard Reserve Launches Onchain ETH Reserve»\n- **🪙 BitMine за неделю докупила ещё 27 180 ETH и теперь контролирует почти 5% всего предложения Ethereum. Причём примерно 85% своих запасов — около 5 млн ETH — компания уже отправила…**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/422965: «🪙 BitMine за неделю докупила ещё 27 180 ETH и теперь контролирует почти 5% всего предложения Ethereum. Причём примерно 85% своих запасов — около 5 млн ETH — ком»\n- **Запасы ETH на биржах снизились до минимума за 11 лет**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/markettwits/384763: «Запасы ETH на биржах снизились до минимума за 11 лет»\n- **📉 #ETH Santiment: количество ETH на биржах достигло 11-летнего минимума.**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/cryptoattack24/96730: «📉 #ETH Santiment: количество ETH на биржах достигло 11-летнего минимума.»\n- **Общий чистый приток спотовых ETH-ETF составил $121,02 млн.**\n  публикации 2, каналы 2, известные авторы 0, первоисточники 1, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/cryptoattack24/96732: «Общий чистый приток спотовых ETH-ETF составил $121,02 млн.»\n  - https://t.me/rawa_imagination/21088: «ETH ETF: приток $121M»\n- **1. Два кошелька, которые более года были неактивны (возможно, принадлежащие одному и тому же киту), перевели на OKX 14 700 #ETH ($36,94 млн);**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/cryptoattack24/96735: «1. Два кошелька, которые более года были неактивны (возможно, принадлежащие одному и тому же киту), перевели на OKX 14 700 #ETH ($36,94 млн);»\n- **3. Хакеры из Lazarus Group продали 911 #ETH ($2,28 млн) по средней цене $2 499.**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/cryptoattack24/96735: «3. Хакеры из Lazarus Group продали 911 #ETH ($2,28 млн) по средней цене $2 499.»\n- **ETHEREUM, BASE DEVELOPERS ABANDON EFFORT TO ALIGN ACCOUNT ABSTRACTION PROPOSALS ...**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/marketfeed/1038133: «ETHEREUM, BASE DEVELOPERS ABANDON EFFORT TO ALIGN ACCOUNT ABSTRACTION PROPOSALS ...»\n- **Ethereum: $2,475 -1.89%**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/422990: «Ethereum: $2,475 -1.89%»\n- **вывела 10 000 #ETH ($24,67 млн) с Binance.**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/cryptoattack24/96738: «вывела 10 000 #ETH ($24,67 млн) с Binance.»\n- **ETH: Binance: -0.0088% 🐻 | Bybit: -0.0113% 🐻**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/rawa_imagination/21088: «ETH: Binance: -0.0088% 🐻 | Bybit: -0.0113% 🐻»\n- **в паре ETH/USDT**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/crypto_hd/31433: «в паре ETH/USDT»\n- **MVRV Ethereum указывает на завершение медвежьего рынка.**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/crypto_hd/31434: «MVRV Ethereum указывает на завершение медвежьего рынка.»\n- **предшествовал восстановлению ETH.**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/crypto_hd/31434: «предшествовал восстановлению ETH.»\n- **– кол-во #ETH на биржах достигло 11-летнего минимума**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 0, неизвестное происхождение 1.\n  - https://t.me/WEB3_AGGREGATOR/423064: «– кол-во #ETH на биржах достигло 11-летнего минимума»\n- **Общий чистый отток спотовых ETH-ETF составил $142,3 млн.**\n  публикации 2, каналы 2, известные авторы 0, первоисточники 0, перепечатки 0, неизвестное происхождение 2.\n  - https://t.me/cryptoattack24/96747: «Общий чистый отток спотовых ETH-ETF составил $142,3 млн.»\n  - https://t.me/rawa_imagination/21101: «📈 🔴 ETH ETF: отток $141M»\n- **2. Кит обменял 512 #WBTC ($38,64 млн) и 354 #cbBTC ($26,73 млн) на 26 924 #ETH ($64,57 млн).**\n  публикации 2, каналы 2, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 1.\n  - https://t.me/cryptoattack24/96749: «2. Кит обменял 512 #WBTC ($38,64 млн) и 354 #cbBTC ($26,73 млн) на 26 924 #ETH ($64,57 млн).»\n  - https://t.me/crypto_hd/31451: «➤ Кит «0x4553» обменял Bitcoin на Ethereum: 512 WBTC ($38,6m) и 354 cbBTC ($26,7m) на 26,924 ETH ($64,6m).»\n- **С 22 сентября квалифицированные инвесторы смогут торговать вечными фьючерсами на индексы #BTC, #ETH, #SOL, #XRP и #TRX.**\n  публикации 2, каналы 2, известные авторы 0, первоисточники 2, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/crypto_hd/31450: «С 22 сентября квалифицированные инвесторы смогут торговать вечными фьючерсами на индексы #BTC, #ETH, #SOL, #XRP и #TRX.»\n  - https://t.me/cryptoattack24/96754: «🇷🇺 Московская биржа 22 сентября запускает бессрочные фьючерсы на индексы #BTC, #ETH, #SOL, #XRP и #TRX для квалифицированных инвесторов.»\n- **• Прогноз цены Ethereum: давление на поддержку после блокировки регулирования в Сенате США**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/rawa_imagination/21099: «• Прогноз цены Ethereum: давление на поддержку после блокировки регулирования в Сенате США»\n- **🙅‍♂️ #ETH Ethereum и Base отказались от разработки общего стандарта кошельков после нескольких месяцев переговоров. coindesk.com**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/cryptoattack24/96755: «🙅‍♂️ #ETH Ethereum и Base отказались от разработки общего стандарта кошельков после нескольких месяцев переговоров. coindesk.com»\n- **Ethereum и Base отказались от разработки единого стандарта крипто-кошельков после нескольких месяцев переговоров — Coindesk**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/markettwits/385008: «Ethereum и Base отказались от разработки единого стандарта крипто-кошельков после нескольких месяцев переговоров — Coindesk»\n- **Крупнейший банк Германии позволит клиентам хранить и переводить #BTC, #ETH и отдельные стейблкоины напрямую через Deutsche Bank.**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/crypto_hd/31454: «Крупнейший банк Германии позволит клиентам хранить и переводить #BTC, #ETH и отдельные стейблкоины напрямую через Deutsche Bank.»\n- **Хакеры начали использовать Ethereum для управления банковским вирусом.**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/crypto_hd/31457: «Хакеры начали использовать Ethereum для управления банковским вирусом.»\n  - https://t.me/crypto_hd/31457: «Самое интересное – злоумышленники используют смарт-контракты Ethereum для обновления адресов управляющих серверов и источников загрузки вируса, что усложняет бл»\n- **Aerie Capital launched a new Morpho market on Ethereum mainnet**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/423129: «Aerie Capital launched a new Morpho market on Ethereum mainnet»\n- **Мосбиржа 22 сентября запустит бессрочные фьючерсы на индексы #BTC, #ETH, #SOL, #XRP и #TRX для квалифицированных инвесторов**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/423158: «Мосбиржа 22 сентября запустит бессрочные фьючерсы на индексы #BTC, #ETH, #SOL, #XRP и #TRX для квалифицированных инвесторов»\n- **Ethereum и банковский вирус (читать)**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/crypto_hd/31472: «Ethereum и банковский вирус (читать)»\n- **Общий чистый отток спотовых ETH-ETF составил $224,1 млн.**\n  публикации 2, каналы 2, известные авторы 0, первоисточники 1, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/cryptoattack24/96773: «Общий чистый отток спотовых ETH-ETF составил $224,1 млн.»\n  - https://t.me/rawa_imagination/21109: «📈 🔴 ETH ETF: отток $224M»\n- **1. 0xC2f1 вывел 2 695 #ETH ($6,94 млн) с Gemini и разместил их в стейкинге;**\n  публикации 2, каналы 2, известные авторы 0, первоисточники 1, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/cryptoattack24/96776: «1. 0xC2f1 вывел 2 695 #ETH ($6,94 млн) с Gemini и разместил их в стейкинге;»\n  - https://t.me/crypto_hd/31476: «➤ Кит «0xC2f1» вывел с Gemini 2695 ETH ($6,94m) и сразу отправил всю позицию в стейкинг. Еще один кит «0x3F2c» после 9 месяцев бездействия вывел с Binance 2500 »\n- **2. 0x3F2c вывел 2 500 #ETH ($6,02 млн) с Binance после 9 месяцев бездействия.**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/cryptoattack24/96776: «2. 0x3F2c вывел 2 500 #ETH ($6,02 млн) с Binance после 9 месяцев бездействия.»\n- **➤ Инвестор «0x0058» потратил 13m USDC на покупку 5368 ETH по средней цене $2422.**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/crypto_hd/31476: «➤ Инвестор «0x0058» потратил 13m USDC на покупку 5368 ETH по средней цене $2422.»\n- **⚠️✴️#BTC #ETH #крипто #cot **\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/markettwits/385211: «⚠️✴️#BTC #ETH #крипто #cot \nBlackRock сегодня начал переводить BTC и ETH на биржи - скорее всего, на продажу для клиентов  — мониторинг»\n- **Комиссия за транзакции в сети Ethereum значительно снизилась. С момента достижения пикового значения 21 апреля в $0,72,  сегодня средняя транзакция за перевод оценивается всего в…**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/markettwits/385262: «Комиссия за транзакции в сети Ethereum значительно снизилась. С момента достижения пикового значения 21 апреля в $0,72,  сегодня средняя транзакция за перевод о»\n- **➤ При резком росте #ETH до ~$2730 объем ликвидаций SHORT-позиций превысит $3,060,000,000.**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/crypto_hd/31491: «➤ При резком росте #ETH до ~$2730 объем ликвидаций SHORT-позиций превысит $3,060,000,000.»\n- **🕵️‍♂️ BlackRock перевели на Coinbase Prime 54 096 #ETH (131,7 млн $) и 2 015 #BTC (153,8 млн $)**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/423250: «🕵️‍♂️ BlackRock перевели на Coinbase Prime 54 096 #ETH (131,7 млн $) и 2 015 #BTC (153,8 млн $)»\n- **Общий чистый отток спотовых ETH-ETF составил $39,3 млн.**\n  публикации 2, каналы 2, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 1.\n  - https://t.me/cryptoattack24/96795: «Общий чистый отток спотовых ETH-ETF составил $39,3 млн.»\n  - https://t.me/rawa_imagination/21117: «📈 🔴 ETH ETF: отток $39M»\n- **📍Сегодня экспирация в опционах на BTC и ETH! (Deribit)**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/crypto_hd/31498: «📍Сегодня экспирация в опционах на BTC и ETH! (Deribit)»\n- **@nostrafinance has reported that a manipulated NSTR oracle price allowed a single account to borrow ~$3.5M in ETH, STRK, USDC, USDT, WBTC, and DAI against NSTR collateral on…**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/423264: «@nostrafinance has reported that a manipulated NSTR oracle price allowed a single account to borrow ~$3.5M in ETH, STRK, USDC, USDT, WBTC, and DAI against NSTR »\n- **ETH: Binance: +0.0091% 🐂 | Bybit: +0.0100% 🐂**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 0, неизвестное происхождение 1.\n  - https://t.me/rawa_imagination/21117: «ETH: Binance: +0.0091% 🐂 | Bybit: +0.0100% 🐂»\n- **➤ Инсайдер Bitcoin OG выставил ордер на открытие лонга на 2450 BTC (~$190m) по цене $78,000. Также он продал 35,000 ETH ($87,5m) по цене ~$2500 и направил часть средств на…**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/crypto_hd/31503: «➤ Инсайдер Bitcoin OG выставил ордер на открытие лонга на 2450 BTC (~$190m) по цене $78,000. Также он продал 35,000 ETH ($87,5m) по цене ~$2500 и направил часть»\n- **➤ 11 новых кошельков, вероятно принадлежащих одному киту, за последние три дня продали 602 BTC за $45,8m на Hyperliquid и купили 18,780 ETH на ту же сумму.**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/crypto_hd/31503: «➤ 11 новых кошельков, вероятно принадлежащих одному киту, за последние три дня продали 602 BTC за $45,8m на Hyperliquid и купили 18,780 ETH на ту же сумму.»\n- **➤ Кит «0x72e0», вероятно, меняет HYPE на ETH. Он перевел 440,000 HYPE ($36m) в FalconX, после чего вывел 12,250 ETH ($30,1m).**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/crypto_hd/31503: «➤ Кит «0x72e0», вероятно, меняет HYPE на ETH. Он перевел 440,000 HYPE ($36m) в FalconX, после чего вывел 12,250 ETH ($30,1m).»\n- **➤ Четыре новых кошелька одного кита/институционала купили 6972 ETH ($17,15m) по средней цене $2460,69 и отправили всю позицию в стейкинг.**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/crypto_hd/31503: «➤ Четыре новых кошелька одного кита/институционала купили 6972 ETH ($17,15m) по средней цене $2460,69 и отправили всю позицию в стейкинг.»\n- **По его словам, инвесторы ошибались, считая, что Ethereum станет единым стандартом для институционального рынка. Сейчас компании рассматривают разные блокчейны, и победитель пока не…**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/crypto_hd/31504: «По его словам, инвесторы ошибались, считая, что Ethereum станет единым стандартом для институционального рынка. Сейчас компании рассматривают разные блокчейны, »\n- **1. У них есть уже коллекция почти по эфиру.**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 0, неизвестное происхождение 1.\n  - https://t.me/WEB3_AGGREGATOR/423294: «1. У них есть уже коллекция почти по эфиру.»\n- **🪙 Ethereum хочет ускорить базовый ритм сети — предложение EIP-8198 должно сделать длительность слота настраиваемой вместо жёстких 12 секунд, чтобы затем постепенно сокращать её.**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/423312: «🪙 Ethereum хочет ускорить базовый ритм сети — предложение EIP-8198 должно сделать длительность слота настраиваемой вместо жёстких 12 секунд, чтобы затем постепе»\n- **В обсуждениях называют 10 секунд как первый осторожный шаг, а в текущем черновике EIP фигурируют 8 секунд, Ethereum Foundation уже включила инициативу в B-tier для Hegotá.**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/423312: «В обсуждениях называют 10 секунд как первый осторожный шаг, а в текущем черновике EIP фигурируют 8 секунд, Ethereum Foundation уже включила инициативу в B-tier »\n- **Общий чистый приток спотовых ETH-ETF составил $143,7 млн.**\n  публикации 3, каналы 2, известные авторы 0, первоисточники 3, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/cryptoattack24/96819: «Общий чистый приток спотовых ETH-ETF составил $143,7 млн.»\n  - https://t.me/rawa_imagination/21121: «📈 🟢 ETH ETF: приток $144M»\n  - https://t.me/rawa_imagination/21127: «📈 🟢 ETH ETF: приток $144M»\n- **–Два кошелька (вероятно, принадлежащие одному и тому же киту) перевели на Bitfinex 33 180 #ETH (~86,9 млн $) после более чем 2-летнего бездействия (1, 2);**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/cryptoattack24/96824: «–Два кошелька (вероятно, принадлежащие одному и тому же киту) перевели на Bitfinex 33 180 #ETH (~86,9 млн $) после более чем 2-летнего бездействия (1, 2);»\n- **Активность китов в ETH резко выросла, кол-во холдеров обновило рекорд. В альткоинах ралли. — Santiment**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/markettwits/385442: «Активность китов в ETH резко выросла, кол-во холдеров обновило рекорд. В альткоинах ралли. — Santiment»\n- **ETH: Binance: +0.0100% 🐂 | Bybit: +0.0100% 🐂**\n  публикации 2, каналы 1, известные авторы 0, первоисточники 2, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/rawa_imagination/21121: «  ETH: Binance: +0.0100% 🐂 | Bybit: +0.0100% 🐂»\n  - https://t.me/rawa_imagination/21137: «  ETH: Binance: +0.0100% 🐂 | Bybit: +0.0100% 🐂»\n- **#ETHER 2639.50 +0.32%**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/marketfeed/1041526: «#ETHER 2639.50 +0.32%»\n- **• Bitcoin holds around $81.2K; ether near $2.64K — risk assets steady despite macro/policy noise.**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/marketfeed/1041542: «• Bitcoin holds around $81.2K; ether near $2.64K — risk assets steady despite macro/policy noise.»\n- **Мосбиржа запускает бессрочные фьючерсы на индексы #BTC, #ETH, #SOL, #XRP и #TRX для квалифицированных инвесторов**\n  публикации 2, каналы 2, известные авторы 0, первоисточники 2, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/cryptoattack24/96827: «Мосбиржа запускает бессрочные фьючерсы на индексы #BTC, #ETH, #SOL, #XRP и #TRX для квалифицированных инвесторов»\n  - https://t.me/WEB3_AGGREGATOR/423395: «Мосбиржа запускает бессрочные фьючерсы на индексы #BTC, #ETH, #SOL, #XRP и #TRX для квалифицированных инвесторов»\n- **В анализе утверждается, что рост активности на уровне Layer 2 не обязательно приводит к пропорциональному росту доходов Ethereum, поскольку большая часть доходов от комиссий…**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/cryptoattack24/96830: «В анализе утверждается, что рост активности на уровне Layer 2 не обязательно приводит к пропорциональному росту доходов Ethereum, поскольку большая часть доходо»\n- **Что случилось (19.09.2026, Ethereum):**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/rawa_imagination/21126: «Что случилось (19.09.2026, Ethereum):»\n- **Выручку атакующий консолидировал в 546.36 ETH (~$1.44 млн) — по трейсу PeckShield.**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/rawa_imagination/21126: «Выручку атакующий консолидировал в 546.36 ETH (~$1.44 млн) — по трейсу PeckShield.»\n- **В итоге в treasury накопилось больше 1 200 ETH**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/423399: «В итоге в treasury накопилось больше 1 200 ETH»\n- **#ETHER 2605.40 -1.14%**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/marketfeed/1041930: «#ETHER 2605.40 -1.14%»\n- **#ETHER 2633.40 -0.11%**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/marketfeed/1041998: «#ETHER 2633.40 -0.11%»\n- **Ether near $2.6K**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/marketfeed/1042010: «Ether near $2.6K»\n- **$2,700 $ETH**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/marketfeed/1042085: «$2,700 $ETH»\n- **#BTC #ETH #ETF**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/cryptoattack24/96837: «#BTC #ETH #ETF»\n- **Общий чистый отток спотовых ETH-ETF составил ~$140 млн.**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/cryptoattack24/96837: «Общий чистый отток спотовых ETH-ETF составил ~$140 млн.»\n- **выкупил обратно 7 567 #ETH ($19,93 млн) по более высокой цене;**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/cryptoattack24/96838: «выкупил обратно 7 567 #ETH ($19,93 млн) по более высокой цене;»\n- **купил 34 422 #ETH ($86,5 млн) и разместил все эти средства в стейкинг;**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/cryptoattack24/96838: «купил 34 422 #ETH ($86,5 млн) и разместил все эти средства в стейкинг;»\n- **ETH тестирует отметку $2700, это максимум с января 2026г. Виталик одобряет.**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/markettwits/385524: «ETH тестирует отметку $2700, это максимум с января 2026г. Виталик одобряет.»\n- **Прогноз цены Ethereum: киты накапливают ETH, а слабые объемы повышают риск разворота**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/rawa_imagination/21135: «Прогноз цены Ethereum: киты накапливают ETH, а слабые объемы повышают риск разворота\n»\n- **Ethereum: $2,662 +3.24%**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/423460: «Ethereum: $2,662 +3.24%\n\n»\n- **📈 🟢 ETH ETF: приток $144M**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/rawa_imagination/21137: «📈 🟢 ETH ETF: приток $144M»\n- **🎩 #ETH Bitmine за прошедшую неделю приобрели 27 562 ETH.**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/cryptoattack24/96850: «🎩 #ETH Bitmine за прошедшую неделю приобрели 27 562 ETH.»\n- **BITMINE'S ETH HOLDINGS REACHED 5.98 MILLION AFTER ACQUIRING 27,562 TOKENS OVER THE PAST WEEK ...**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/marketfeed/1042392: «BITMINE'S ETH HOLDINGS REACHED 5.98 MILLION AFTER ACQUIRING 27,562 TOKENS OVER THE PAST WEEK ...»\n\n## Кто распространяет информацию и какие позиции\n\n- Study inscriptions on eth/btc.\n  https://t.me/spidersjournal/18913\n- Курс Ethereum обошел биткоин по росту на 20% с июня. Какие перспективы\n  https://t.me/rawa_imagination/21086\n- Ethereum обогнал биткоин на 20%: что дальше\n  https://t.me/rawa_imagination/21086\n- Основатель Ethereum не согласен с мнением, что развитие AI неизбежно приведет к массовым взломам. AI-технологии смогут не только искать уязвимости, но и математически доказывать безопасность программ, причем проверять весь код целиком.\n  https://t.me/crypto_hd/31473\n- Именно в этом направлении в Ethereum планируют двигаться в ближайшие несколько лет. Бутерин считает, что без усиления безопасности у масштабируемых и приватных блокчейнов «нет будущего».\n  https://t.me/crypto_hd/31473\n- Именно в эту сторону Ethereum планирует двигаться в ближайшие годы.\n  https://t.me/WEB3_AGGREGATOR/423173\n- The S-tier – Lighter, Delta, Arcus, Index, Bankr, Virtuals – shows the chain is built for perps, tokenized stocks and agents, while B and C are mostly memecoins. Notably absent: Ethereum's DeFi blue chips – Robinhood is building around its own product, not the DeFi stack.\n  https://t.me/WEB3_AGGREGATOR/423218\n\n## Вопросы, аргументы и опыт участников\n\n- Кстати, по моему писпл уже. Если эфир пока идет с опережением к битку, то бмнр к эфиру график тоже идет с опережение. То есть проще покупать бмнр в долгосрок\n  основание: реплика к посту с одним событием по теме и тому же предмету\n  https://t.me/rawa_imagination/21078?comment=342794\n- у меня уже куплено, я уже даже дивы получаю 😁\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/rawa_imagination/21078?comment=342795\n- DU, granddaughters! Autumn is coming... I'm already feeling snotty. Let's run through what's going on with crypto. 🟪This week promises to be interesting and volatile: the Senate vote on the CLARITY ACT is tomorrow, and the rate decision is\n  основание: вопрос или оценка по проекту в целом, не по конкретной новости\n  https://t.me/cryptonftded/3267?comment=187249\n- Завтра ещё будет лучше\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/cryptonftded/3269?comment=187300\n- Добро пожаловать в чат Whitelist Media 👍\n\nНаши ресурсы: \n👍Whitelist Database (гайд по инструменту);\n👍Blacklist by Bogdan;\n👍X (Twitter);\n👍Links.\n\nПолезные ссылки: \n👍ProxyWing (прокси): по коду whitelist скидка 10%;\n👍Чат взаимных подписок\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7137?comment=571471\n- Дайте мне просто денег, хватит извдеваться!\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7137?comment=571476\n- Рынок сегодня явно решил наказать обе стороны\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/cryptonftded/3269?comment=187304\n- \n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7137?comment=571477\n- Это что б не расслаблялись\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/cryptonftded/3269?comment=187305\n- Waiting Room еще не октрыли?\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7137?comment=571484\n- А сколько уже было циклов с 2020 года?\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/Slavik_investor_updates/6921?comment=138133\n- \n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/Slavik_investor_updates/6921?comment=138134\n- Жесть, держим кулаки!\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/Slavik_investor_updates/6921?comment=138135\n- Тут уже скорее держим кулаки за то, чтобы остатки казны не растворились до мая 2027. После взлома вера в аккуратное закрытие так себе.\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/Slavik_investor_updates/6921?comment=138136\n- Когда начнутся качели, тогда и будет памп. ИМХО\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/cryptonftded/3269?comment=187307\n- юнипеги остановитесь, мы еще от второго ланчпада не отошли 😂\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/moni_talks/12225?comment=468537\n- флагманский продукт лять )))\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/moni_talks/12225?comment=468539\n- Лаунчпад без воштрейдинг ботофермы - не лаунчпад, к сожалению 💧\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/moni_talks/12225?comment=468540\n- Ого\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/cryptonftded/3270?comment=187331\n- Сейчас ещё ключевую ставку в США поднимут, и про крипту можно будет забыть!!!:)\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/cryptonftded/3270?comment=187383\n- Наконец-то))\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/cryptonftded/3270?comment=187389\n- Не, на опережение работают\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7137?comment=571542\n- Тонкипер, вроде апгрейд сделали(мультичейн) все дела.Как-бы момент что мог в рост пойти, ну фиг там)) Gram, вообще кажется пофиг, хоть зимой вместо снега золотые слитки будут падать, с неба, вряд-ли пока ростом отреагирует)))\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/cryptonftded/3270?comment=187390\n- \n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/cryptonftded/3270?comment=187392\n- Подборка годная, всё четко разложено по полкам\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7137?comment=571591\n- Ну в целом ты наверное прав, я сильно с позитивной нотки наверное рассмотрел обнову)). Что благодаря этому всякие другие сети начнут переливать в Тон ну и как бы плюс новый ликвид для тона в перспективе\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/cryptonftded/3270?comment=187446\n- ыы писало же.)\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/rawa_imagination/21108?comment=343073\n- речь о Японии, сегодня ночью\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/rawa_imagination/21108?comment=343075\n- моя ии не делает таких банальных ошибок\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/rawa_imagination/21108?comment=343076\n- это было в недельном обзоре, Раванга предположила, что вы его прочитали.\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/rawa_imagination/21108?comment=343079\n- биток ушёл под 76к и уже щупал 74.9, а по пути вынесло почти 300 миллионов лонгов, так что я бы не ловил дно, пока ФРС не скажет что-то внятное по ставке\n  основание: предмет реплики — сторонний сервис/коллекция экосистемы, не событие темы\n  https://t.me/cryptonftded/3270?comment=187463\n- да уж печально, но такое бывает, главное не терять надежду\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/Slavik_investor_updates/6921?comment=138189\n- Офигеть, вот это поворот, печально очень\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/Slavik_investor_updates/6921?comment=138212\n- Андрей, а в не думаете альты докупить? И сразу же после этого объявить альтсезон. Крутой же план?\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/rawa_imagination/21117?comment=343125\n- мне хватает текущих, остальные альты только для спекуляций\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/rawa_imagination/21117?comment=343130\n- ну я про них и спрашиваю\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/rawa_imagination/21117?comment=343138\n- я короткие сделки вообще не публикую с некоторых пор, но это не значит, что их нет. На некоторые иногда намекаю, но никогда ничего не рекомендую\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/rawa_imagination/21117?comment=343146\n- а так могу вот выложить столбики с дневными pnl\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/rawa_imagination/21117?comment=343148\n- так альтсезон же начинается? )\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/rawa_imagination/21117?comment=343151\n- покрывает аренду и даже больше\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/rawa_imagination/21117?comment=343175\n- примерно так, плюс/минус оплата мощностей + частично апи. С подписками на Равангу и донатами пока покрывает.\n  основание: предмет реплики — сторонний сервис/коллекция экосистемы, не событие темы\n  https://t.me/rawa_imagination/21117?comment=343184\n- Опять богатеть.😃\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/cryptonftded/3277?comment=187600\n- да ты что охуел что ли с такими ценами это же пиздец какой-то\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/cryptonftded/3277?comment=187601\n- Что такое))\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/cryptonftded/3277?comment=187602\n- NEAR тоже вон + 30%\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/cryptonftded/3277?comment=187603\n- Ничего себе мастерство 🔥 почему позиции в минус глубокий не уходят ? Всегда стоит стоп ? Это торговля только  внутри дня ? Просто шок , хлеще любого робота 🤯\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/rawa_imagination/21117?comment=343420\n- я если определенный минус получаю ухожу из торгов в этот день. Это как правило стопы. А плюсы отпускаю через трейлинг. Да, это интрадей.\n\nНу и да, сейчас почти все сделки идут с Равангой, вы тоже подписаны, так что это частично робот,\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/rawa_imagination/21117?comment=343421\n- На койнгеко написали что ключ украли\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/rawa_imagination/21126?comment=343764\n- ага, Раванга это и предположила\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/rawa_imagination/21126?comment=343765\n- Добро пожаловать в чат Whitelist Media 👍\n\nНаши ресурсы: \n👍Whitelist Database (гайд по инструменту);\n👍Blacklist by Bogdan;\n👍X (Twitter);\n👍Links.\n\nПолезные ссылки: \n👍ProxyWing (прокси): по коду whitelist скидка 10%;\n👍Чат взаимных подписок\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7149?comment=571963\n- прошел кто в лягух?\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7149?comment=571964\n- только чекер выкатили\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7149?comment=571965\n- чина, 8/10 аков прошли\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7149?comment=571966\n- каждая по касику минимум\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7149?comment=571968\n- Да вот х его з\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7149?comment=571970\n- Та чето дорогое\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7149?comment=571971\n- А на каком маркете торгуются нфт на Zcash ?\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7149?comment=571974\n- Основной https://zecbit.net/\n\nНо некоторые лаунчатся сами у себя\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7149?comment=571975\n- Щас пока что зекбит только, и то с 2 коллекциями. Каждый на своем сайте торги ведет\n  основание: предмет реплики — сторонний сервис/коллекция экосистемы, не событие темы\n  https://t.me/whitelist1/7149?comment=571976\n- Зафанался с этим WL, пойдет замес!\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7149?comment=571981\n- Слышь, говорят отнимают обратно 😄\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7149?comment=571982\n- Да ну?\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7149?comment=571983\n- Некоторые уже жалуются\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7149?comment=571984\n- скамят работяг???\n  основание: предмет реплики — сторонний сервис/коллекция экосистемы, не событие темы\n  https://t.me/whitelist1/7149?comment=571985\n- \n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7149?comment=571986\n- \n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7149?comment=571987\n- жестко\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7149?comment=571988\n- \n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7149?comment=571991\n- Вот эти еще вроде как норм\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7149?comment=571993\n- ахуй, гц\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7149?comment=571994\n- это гарантированный вл? или нет?\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7149?comment=571995\n- zaddr уже перестали заявки принимать?\n  основание: предмет реплики — сторонний сервис/коллекция экосистемы, не событие темы\n  https://t.me/whitelist1/7149?comment=571996\n- у меня оказывается тоже\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7149?comment=571998\n- Пару дней назад еще\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7149?comment=572000\n- Да хорош вам уже)))\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7149?comment=572001\n- Так там нфт меньше, чем вл, наверное 😕\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7149?comment=572002\n- Как завести Zec на кошелек noir? Только с биржи?\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7149?comment=572005\n- кросчейн через бридж рубик можно\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7149?comment=572006\n- Ооо, точно, знаю такой. Спс\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7149?comment=572008\n- Я прошел\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7149?comment=572009\n- Гратц, надеюсь накорямт\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7149?comment=572010\n- Тоже очень надеюсь) 🤞\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7149?comment=572011\n- Комса у них чёт большая\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7149?comment=572012\n- Да, потратить 10-15 баксов норм\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7149?comment=572013\n- Ты тож прошел?\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7149?comment=572021\n- Приватность нужно оплачивать)\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7149?comment=572022\n- \n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7149?comment=572023\n- у тебя на кошельке был зек? или прям нулевый?\n  основание: вопрос или оценка по проекту в целом, не по конкретной новости\n  https://t.me/whitelist1/7149?comment=572024\n- только создал\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7149?comment=572027\n- Вот сцуки, почему сбрили активных тогда, наверняка они акки в Х смотрели.\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7149?comment=572028\n- наверно, у меня там не пусто)\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7149?comment=572030\n- Какие критерии кто в курсе ?\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7149?comment=572039\n- Это скам\n  основание: предмет реплики — сторонний сервис/коллекция экосистемы, не событие темы\n  https://t.me/whitelist1/7149?comment=572040\n- @NikitonNT\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7149?comment=572041\n- И этого тож туда же\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7149?comment=572042\n- С хуяли ?\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7149?comment=572043\n- Проверка)\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7149?comment=572044\n- 1) если в среднем 600 с кошелька, то почему с твоих 5 старых прокаченных вышло +-250 баксов\n2) старый кошель прокаченный как раз 600 бы и дал\n3) если давно в крипте, то че так мало кошельков?!?\n\nЗадолбали со своей скаминой лезть\n  основание: предмет реплики — сторонний сервис/коллекция экосистемы, не событие темы\n  https://t.me/whitelist1/7149?comment=572050\n- братан тебе не похуй?\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7149?comment=572051\n- Да тупо отвлекся от работы)))\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7149?comment=572052\n- походу это не грант вл, за ночь их раздали кучу народу\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7149?comment=572072\n- А они потом, как лягушки, отпуржат половину))\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7149?comment=572073\n- не удивлюсь, не нравиться мне все что твориться в зек, переобвка на переобувке\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7149?comment=572074\n- Да и люди голову потеряли тож, как с цепи сорвались))\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7149?comment=572075\n- согласен, многие тупо не видят лютые редфдаги и прут туда\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7149?comment=572076\n- BULL, granddaughters!\n Bitcoin has gained 9% in a week, and Solana has gained 14%, even though it was trading at $70 in the summer.\n\n GRAM +5%, one of the worst indicators, oh, I wish they would release a wallet or a step MTONGA, but who\n  основание: вопрос или оценка по проекту в целом, не по конкретной новости\n  https://t.me/cryptonftded/3282?comment=187840\n- Я рад, но опять всё пропустил (((\n\nУже который раз хочу обменять все свои ГРАМы на биток и уже забить на детище Дурова, но всё никак выгодно не успеваю...\n  основание: предмет реплики — сторонний сервис/коллекция экосистемы, не событие темы\n  https://t.me/cryptonftded/3282?comment=187841\n- Я рада, что кто-то рад 😁\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/cryptonftded/3282?comment=187844\n- Я с утра за нир наблюдала, пошортила немного 😄\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/cryptonftded/3282?comment=187845\n- Сделай это сейчас и жди роста битка) если ждать биток через месяц может стать 120😁\n  основание: предмет реплики — сторонний сервис/коллекция экосистемы, не событие темы\n  https://t.me/cryptonftded/3282?comment=187846\n- @Kosheleffff почему такая реакция \nЯ удачно пошортила near 😁\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/cryptonftded/3282?comment=187847\n- ottoclub ETH кошелёк требует - это нормально для Zec проекта?\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/don_invest/5299?comment=380347\n- Как всегда бычка случилась неожиданно.\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/cryptonftded/3282?comment=187849\n- что-то ты не в курсе как на рынке бывает\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/cryptonftded/3282?comment=187852\n\n## Изменения относительно предыдущего периода\n\n- Появившиеся события: 78.\n- Исчезнувшие события: 37.\n- Изменение охвата источников: +3 / −1 каналов.\n- Комментарии по теме: 114 в текущем окне, 110 в предыдущем.\n\n## Охват и ограничения\n\n- Публикации 7119, комментарии 875, каналы 19.\n- Режим publication_replay: discovered_at в снимке отсутствует, «впервые системой» не заявляется.\n- Роль источника unknown: в базе нет редакционного реестра.\n- Неизвестные авторы не объединяются.\n- Отсечено после cutoff 2026-09-21T12:44:54+00:00: 2684.\n\n## Основания\n\n- https://t.me/markettwits/384699: «Компания BitMine Тома Ли из Fundstrat купила на баланс еще 27 180 ETH на прошлой неделе\n\n»\n- https://t.me/markettwits/384699: «на балансе уже более 5.96 млн ETH (около 4.9% общего предложения)\n\n»\n- https://t.me/markettwits/384699: «объявленная цель компании - купить 5% всего ETH»\n- https://t.me/cryptoattack24/96719: «🎩 #ETH BitMine за последнюю неделю приобрели 27 180 ETH, в результате чего общий объем активов теперь составляет 5,96 млн ETH»\n- https://t.me/WEB3_AGGREGATOR/422973: «🎩 BitMine за прошедшую неделю приобрели 27 180 #ETH»\n- https://t.me/marketfeed/1037572: «BITMINE'S ETH HOLDINGS REACHED 5.96 MILLION AFTER ACQUIRING 27,180 TOKENS OVER THE PAST WEEK»\n- https://t.me/rawa_imagination/21078: «$BMNR скупила уже 4,9% всего $ETH - остался всего 0,1% до цели.»\n- https://t.me/WEB3_AGGREGATOR/422949: «🟢 BitMine добрала 28 086 ETH, всего 5,93 млн»\n- https://t.me/WEB3_AGGREGATOR/422950: «🪙 BitMine за неделю докупила ещё 27 180 ETH и теперь контролирует почти 5% всего предложения Ethereum.»\n- https://t.me/WEB3_AGGREGATOR/422949: «🟢 Ethereum метит в квантово-стойкий L1 к 2029 году»\n- https://t.me/WEB3_AGGREGATOR/422949: «🟢 ETH ETF приток $1,75 млрд за август, лучший с 2025»\n- https://t.me/WEB3_AGGREGATOR/422950: «Причём примерно 85% своих запасов — около 5 млн ETH — компания уже отправила в стейкинг.»\n- https://t.me/WEB3_AGGREGATOR/422959: «Standard Reserve Launches Onchain ETH Reserve»\n- https://t.me/WEB3_AGGREGATOR/422965: «🪙 BitMine за неделю докупила ещё 27 180 ETH и теперь контролирует почти 5% всего предложения Ethereum. Причём примерно 85% своих запасов — около 5 млн ETH — ком»\n- https://t.me/markettwits/384763: «Запасы ETH на биржах снизились до минимума за 11 лет»\n- https://t.me/cryptoattack24/96730: «📉 #ETH Santiment: количество ETH на биржах достигло 11-летнего минимума.»\n- https://t.me/cryptoattack24/96732: «Общий чистый приток спотовых ETH-ETF составил $121,02 млн.»\n- https://t.me/rawa_imagination/21088: «ETH ETF: приток $121M»\n- https://t.me/cryptoattack24/96735: «1. Два кошелька, которые более года были неактивны (возможно, принадлежащие одному и тому же киту), перевели на OKX 14 700 #ETH ($36,94 млн);»\n- https://t.me/cryptoattack24/96735: «3. Хакеры из Lazarus Group продали 911 #ETH ($2,28 млн) по средней цене $2 499.»\n",
   "model": "deepseek/deepseek-v4-flash",
   "llm": {
     "calls": 0,
-    "cache_hits": 300,
+    "cache_hits": 298,
     "spent_usd": 0.0,
     "errors": []
   }

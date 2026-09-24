@@ -1791,3 +1791,208 @@ def test_grounding_check_catches_altered_number_and_edited_brief(tmp_path):
     wrong_count = json.loads(json.dumps(pulse))
     wrong_count["events"][0]["counts"]["publications"] = 3
     assert any(f["kind"] == "counts" for f in check_run(write(wrong_count), texts)["failures"])
+
+
+def test_topic_thread_comment_without_ticker_stays_topic_level():
+    from dataclasses import replace
+
+    from news_pulse_build import _process_window
+    from news_pulse_load import Snapshot, parse_window
+
+    topic = load_aliases("docs/research/entity_aliases.tsv")["eth"]
+    post = _pub("telegram:1:1", "Ethereum update вышел в тестнет")
+    doubt = replace(
+        _pub("telegram:1:1:c:1", "Не понимаю, зачем это нужно", kind="comment"),
+        thread_id="telegram:1:1",
+    )
+    snap = Snapshot(
+        window=parse_window("2026-09-18..2026-09-18"),
+        cutoff=_dt("2026-09-19T00:00:00"),
+        db_md5="x",
+        sources={},
+        publications=[post],
+        comments=[doubt],
+        dropped_after_cutoff=0,
+    )
+    *_, discussion, _links = _process_window(snap, topic, None)
+    rows = [row for row in discussion if row.get("url") == doubt.url]
+    assert rows and rows[0]["target"] == "topic_level"
+
+
+def test_changes_count_topic_discussion_not_all_snapshot_comments():
+    from news_pulse_build import _changes
+    from news_pulse_load import Snapshot, parse_window
+
+    def snap(window, posts, comments):
+        return Snapshot(
+            window=parse_window(window),
+            cutoff=_dt("2026-09-24T00:00:00"),
+            db_md5="x",
+            sources={},
+            publications=posts,
+            comments=comments,
+            dropped_after_cutoff=0,
+        )
+
+    noise = [_pub(f"telegram:9:{i}", "шум", kind="comment", source_id=9) for i in range(5)]
+    cur = snap("2026-09-22..2026-09-23", [_pub("telegram:1:1", "Aave", source_id=1)], noise)
+    prev = snap("2026-09-20..2026-09-21", [_pub("telegram:2:1", "Aave", source_id=2)], noise[:3])
+    topic_row = {"url": "https://t.me/ch/c1", "target": "topic_level"}
+    changes = _changes(
+        cur, prev, events=[], prev_events=[], discussion=[topic_row], prev_discussion=[]
+    )
+    assert changes["topic_comments"] == 1
+    assert changes["previous_topic_comments"] == 0
+    assert "discussion_comments" not in changes
+    assert changes["source_coverage"]["added_channels"] == ["1"]
+    assert changes["source_coverage"]["removed_channels"] == ["2"]
+    md = render_markdown(
+        build_from_parts(
+            topic="aave",
+            window="2026-09-22..2026-09-23",
+            events=[],
+            positions=[],
+            discussion=[],
+            changes=changes,
+            coverage={"publications": 1, "comments": 5, "channels": 1},
+            limitations=[],
+            evidence=[],
+        )
+    )
+    assert "Комментарии в текущем окне" not in md
+    assert "Комментарии по теме: 1 в текущем окне, 0 в предыдущем." in md
+
+
+def test_identical_text_on_different_days_is_not_one_event():
+    kw = {
+        "actor": None,
+        "action": "inflow",
+        "object": "ETH ETF",
+        "quote": "Today ETH-ETF inflow $100M",
+    }
+    a = _obs("a", ts="2026-09-21T10:00:00", **kw)
+    b = _obs("b", ts="2026-09-23T10:00:00", pub_id="tg:1:2", **kw)
+    assert a.text_hash == b.text_hash
+    assert len(group_events([a, b])) == 2
+
+
+def test_explicit_consecutive_flow_days_with_close_amounts_stay_apart():
+    a = _obs(
+        "a",
+        actor=None,
+        action="inflow",
+        object="ETH ETF",
+        qualifiers={"event_date": "2026-09-21"},
+        quote="ETH ETF: приток $100M",
+        ts="2026-09-22T09:00:00",
+    )
+    b = _obs(
+        "b",
+        actor=None,
+        action="inflow",
+        object="ETH ETF",
+        qualifiers={"event_date": "2026-09-22"},
+        quote="ETH ETF: приток $102M",
+        ts="2026-09-23T09:00:00",
+        pub_id="tg:2:1",
+        source_id=2,
+    )
+    assert len(group_events([a, b])) == 2
+
+
+def test_same_action_object_with_different_actors_stays_apart():
+    binance = _obs(
+        "a", actor="Binance", action="listing", object="AAVE", quote="Binance listing AAVE"
+    )
+    coinbase = _obs(
+        "b",
+        actor="Coinbase",
+        action="listing",
+        object="AAVE",
+        quote="Coinbase listing AAVE",
+        pub_id="tg:2:1",
+        source_id=2,
+    )
+    assert len(group_events([binance, coinbase])) == 2
+
+
+def test_grounding_checks_short_observations_and_discussion_basis(tmp_path):
+    from news_pulse_ground import check_run
+
+    source = "Фонд привлёк $12 млн.\nВторая строка поста."
+    comment = "Не понимаю, зачем это нужно"
+    url, curl = "https://t.me/ch/1", "https://t.me/ch/1?comment=2"
+    member = {
+        "publication_id": "p1",
+        "source_id": 1,
+        "url": url,
+        "quote": "Фонд привлёк $12 млн.",
+        "origin": "own",
+    }
+    pulse = build_from_parts(
+        topic="x",
+        window="2026-09-01..2026-09-02",
+        events=[
+            {
+                "event_id": "e1",
+                "headline": "Фонд привлёк $12 млн.",
+                "counts": {
+                    "events": 1,
+                    "publications": 1,
+                    "channels": 1,
+                    "found_origins": 1,
+                    "reprints": 0,
+                    "unknown_origin": 0,
+                },
+                "members": [member],
+            }
+        ],
+        positions=[],
+        discussion=[
+            {
+                "target": "topic_level",
+                "target_id": None,
+                "text": comment,
+                "basis": "совпадение темы недостаточно, связь со событием не установлена",
+                "url": curl,
+                "quote": comment,
+            }
+        ],
+        changes={},
+        coverage={},
+        limitations=[],
+        evidence=[],
+    )
+    texts = {url: source, curl: comment}
+
+    def run_of(p):
+        p = json.loads(json.dumps(p))
+        p["brief_markdown"] = render_markdown(p)
+        run = tmp_path / str(len(list(tmp_path.iterdir())))
+        run.mkdir()
+        (run / "pulse.json").write_text(json.dumps(p, ensure_ascii=False), encoding="utf-8")
+        (run / "brief.md").write_text(p["brief_markdown"], encoding="utf-8")
+        return check_run(run, texts)
+
+    ok = run_of(pulse)
+    assert ok["grounded"] == ok["claims"], ok["failures"]
+
+    fake = json.loads(json.dumps(pulse))
+    fake["short_observations"] = ["Aave officially confirmed a price of $987654321."]
+    report = run_of(fake)
+    assert any(f["kind"] == "short_observation" for f in report["failures"])
+
+    basis = json.loads(json.dumps(pulse))
+    basis["discussion"][0]["basis"] = "автор подтвердил, что это реакция на событие"
+    assert any(f["kind"] == "discussion_basis" for f in run_of(basis)["failures"])
+
+    target = json.loads(json.dumps(pulse))
+    target["discussion"][0].update(target="event", target_id="e404")
+    assert any(f["kind"] == "discussion_basis" for f in run_of(target)["failures"])
+
+
+def test_long_comment_is_clipped_without_splitting_numbers():
+    text = "держу етф " + "x" * 228 + " 100 и 200 канал"
+    link = link_comment(_pub("tg:1:c9", text, kind="comment"), [], theses=[], post_observations=[])
+    assert link["text"].endswith("x") and text.startswith(link["text"])
+    assert "1" not in link["text"]

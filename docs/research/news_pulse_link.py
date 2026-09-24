@@ -8,6 +8,17 @@ from typing import Any
 from news_pulse_load import Publication, fold
 
 TARGETS = ("event", "author_thesis", "project", "other_subject", "topic_level")
+# every basis the linker may emit, with the only target it justifies; grounding rejects anything else
+BASES: dict[str, str] = {
+    "предмет реплики — сторонний сервис/коллекция экосистемы, не событие темы": "other_subject",
+    "комментарий повторяет формулировку события": "event",
+    "реплика опирается на формулировку авторского тезиса": "author_thesis",
+    "жалоба на сторонний сервис экосистемы, не на событие поста": "other_subject",
+    "реплика к посту с одним событием по теме и тому же предмету": "event",
+    "реплика по предмету единственного события родительского сегмента": "event",
+    "вопрос или оценка по проекту в целом, не по конкретной новости": "project",
+    "совпадение темы недостаточно, связь со событием не установлена": "topic_level",
+}
 OTHER_HINT = re.compile(r"(?i)\bnft\b|сайт|site|маркетплейс|коллекц|аукцион|минт|кошельк|wallet|zaddr|zecvisions")
 SERVICE_COMPLAINT = re.compile(
     r"(?i)жалоб|не открыв|скам|мусор|сайт|маркетплейс|коллекц|\bnft\b|аукцион|"
@@ -74,15 +85,26 @@ def _about_event_subject(text: str, event: dict[str, Any]) -> bool:
 
 
 def _row(target: str, comment: Publication, *, target_id: str | None = None, basis: str) -> dict[str, Any]:
-    text = comment.text or ""
+    assert BASES.get(basis) == target, basis
+    text = (comment.text or "").strip()
     return {
         "target": target,
         "target_id": target_id,
-        "text": text.strip()[:240],
+        "text": _clip_words(text, 240),
         "basis": basis,
         "url": comment.url,
-        "quote": text.strip()[:180],
+        "quote": _clip_words(text, 180),
     }
+
+
+def _clip_words(text: str, limit: int) -> str:
+    """Cut at a word boundary so a number is never split: "100" must not become a quoted "1"."""
+    if len(text) <= limit:
+        return text
+    cut = text[:limit]
+    if not text[limit].isspace() and " " in cut:
+        cut = cut[: cut.rfind(" ")]
+    return cut.rstrip()
 
 
 def link_comment(

@@ -200,7 +200,9 @@
       ],
       "event_ids": [
         "e1-194fbea6a335e1e2",
-        "e2-8a75dfb4c419fe87"
+        "e2-8a75dfb4c419fe87",
+        "e3-8a766f54fba274d1",
+        "e4-f6f1e759519a5cbd"
       ],
       "origin": "own",
       "source_role": "editorial",
@@ -235,7 +237,7 @@
         }
       ],
       "event_ids": [
-        "e3-c707bf347f67384f"
+        "e5-c707bf347f67384f"
       ],
       "origin": "own",
       "source_role": "editorial",
@@ -312,7 +314,7 @@
         }
       ],
       "event_ids": [
-        "e4-d8574fe1e9df058c"
+        "e6-d8574fe1e9df058c"
       ],
       "origin": "own",
       "source_role": "editorial",
@@ -374,10 +376,10 @@
         }
       ],
       "event_ids": [
-        "e5-c9826d15d0d75d44",
-        "e6-c03fbc4f340af233",
-        "e7-af16fdc54e5e1347",
-        "e8-f5dee91bb2f52cb4"
+        "e7-c9826d15d0d75d44",
+        "e8-c03fbc4f340af233",
+        "e9-af16fdc54e5e1347",
+        "e10-f5dee91bb2f52cb4"
       ],
       "origin": "own",
       "source_role": "editorial",
@@ -454,7 +456,7 @@
         }
       ],
       "event_ids": [
-        "e9-bc95ef671dc0981f"
+        "e11-bc95ef671dc0981f"
       ],
       "origin": "own",
       "source_role": "editorial",
@@ -498,7 +500,7 @@
         }
       ],
       "event_ids": [
-        "e10-c5cc91bc0559fb7d"
+        "e12-c5cc91bc0559fb7d"
       ],
       "origin": "own",
       "source_role": "editorial",
@@ -703,7 +705,7 @@
         }
       ],
       "event_ids": [
-        "e11-525acbc9683eaa9d"
+        "e13-525acbc9683eaa9d"
       ],
       "origin": "own",
       "source_role": "author",
@@ -732,7 +734,7 @@
         }
       ],
       "event_ids": [
-        "e12-fc76b3cacccdad42"
+        "e14-fc76b3cacccdad42"
       ],
       "origin": "own",
       "source_role": "author",
@@ -806,10 +808,10 @@
         }
       ],
       "event_ids": [
-        "e3-c707bf347f67384f",
-        "e13-aae72a40fa53caf6",
-        "e14-4d7ac3720cf84b0f",
-        "e15-419ffa3f9fce6606"
+        "e2-8a75dfb4c419fe87",
+        "e15-aae72a40fa53caf6",
+        "e16-4d7ac3720cf84b0f",
+        "e17-419ffa3f9fce6606"
       ],
       "origin": "own",
       "source_role": "editorial",
@@ -832,7 +834,7 @@
         }
       ],
       "event_ids": [
-        "e16-ed48c18aa3328218"
+        "e18-ed48c18aa3328218"
       ],
       "origin": "own",
       "source_role": "editorial",
@@ -876,7 +878,7 @@
         }
       ],
       "event_ids": [
-        "e11-525acbc9683eaa9d"
+        "e13-525acbc9683eaa9d"
       ],
       "origin": "own",
       "source_role": "editorial",
@@ -899,7 +901,7 @@
         }
       ],
       "event_ids": [
-        "e11-525acbc9683eaa9d"
+        "e13-525acbc9683eaa9d"
       ],
       "origin": "own",
       "source_role": "editorial",
@@ -949,8 +951,8 @@
         }
       ],
       "event_ids": [
-        "e17-c813add0d14f4b10",
-        "e18-286906c4a81433de"
+        "e19-c813add0d14f4b10",
+        "e20-286906c4a81433de"
       ],
       "origin": "own",
       "source_role": "editorial",
@@ -1020,7 +1022,7 @@
         }
       ],
       "event_ids": [
-        "e17-c813add0d14f4b10"
+        "e19-c813add0d14f4b10"
       ],
       "origin": "retelling",
       "source_role": "author",
@@ -1735,35 +1737,63 @@
     {
       "event_id": "e2-8a75dfb4c419fe87",
       "publications": [
-        "https://t.me/WEB3_AGGREGATOR/423100"
-      ],
-      "n_publications": 1,
-      "n_channels": 1,
-      "n_known_authors": 0,
-      "found_origins": [
-        "https://t.me/WEB3_AGGREGATOR/423100"
-      ],
-      "n_reprints": 0,
-      "n_unknown_origin": 0
-    },
-    {
-      "event_id": "e3-c707bf347f67384f",
-      "publications": [
-        "https://t.me/WEB3_AGGREGATOR/423105",
+        "https://t.me/WEB3_AGGREGATOR/423100",
         "https://t.me/WEB3_AGGREGATOR/423153"
       ],
       "n_publications": 2,
       "n_channels": 1,
       "n_known_authors": 0,
       "found_origins": [
-        "https://t.me/WEB3_AGGREGATOR/423105",
+        "https://t.me/WEB3_AGGREGATOR/423100",
         "https://t.me/WEB3_AGGREGATOR/423153"
       ],
       "n_reprints": 0,
       "n_unknown_origin": 0
     },
     {
-      "event_id": "e4-d8574fe1e9df058c",
+      "event_id": "e3-8a766f54fba274d1",
+      "publications": [
+        "https://t.me/WEB3_AGGREGATOR/423100"
+      ],
+      "n_publications": 1,
+      "n_channels": 1,
+      "n_known_authors": 0,
+      "found_origins": [
+        "https://t.me/WEB3_AGGREGATOR/423100"
+      ],
+      "n_reprints": 0,
+      "n_unknown_origin": 0
+    },
+    {
+      "event_id": "e4-f6f1e759519a5cbd",
+      "publications": [
+        "https://t.me/WEB3_AGGREGATOR/423100"
+      ],
+      "n_publications": 1,
+      "n_channels": 1,
+      "n_known_authors": 0,
+      "found_origins": [
+        "https://t.me/WEB3_AGGREGATOR/423100"
+      ],
+      "n_reprints": 0,
+      "n_unknown_origin": 0
+    },
+    {
+      "event_id": "e5-c707bf347f67384f",
+      "publications": [
+        "https://t.me/WEB3_AGGREGATOR/423105"
+      ],
+      "n_publications": 1,
+      "n_channels": 1,
+      "n_known_authors": 0,
+      "found_origins": [
+        "https://t.me/WEB3_AGGREGATOR/423105"
+      ],
+      "n_reprints": 0,
+      "n_unknown_origin": 0
+    },
+    {
+      "event_id": "e6-d8574fe1e9df058c",
       "publications": [
         "https://t.me/WEB3_AGGREGATOR/423117"
       ],
@@ -1777,7 +1807,7 @@
       "n_unknown_origin": 0
     },
     {
-      "event_id": "e5-c9826d15d0d75d44",
+      "event_id": "e7-c9826d15d0d75d44",
       "publications": [
         "https://t.me/krasnovcrypto/3754"
       ],
@@ -1791,7 +1821,7 @@
       "n_unknown_origin": 0
     },
     {
-      "event_id": "e6-c03fbc4f340af233",
+      "event_id": "e8-c03fbc4f340af233",
       "publications": [
         "https://t.me/krasnovcrypto/3754"
       ],
@@ -1805,7 +1835,7 @@
       "n_unknown_origin": 0
     },
     {
-      "event_id": "e7-af16fdc54e5e1347",
+      "event_id": "e9-af16fdc54e5e1347",
       "publications": [
         "https://t.me/krasnovcrypto/3754"
       ],
@@ -1819,7 +1849,7 @@
       "n_unknown_origin": 0
     },
     {
-      "event_id": "e8-f5dee91bb2f52cb4",
+      "event_id": "e10-f5dee91bb2f52cb4",
       "publications": [
         "https://t.me/krasnovcrypto/3754"
       ],
@@ -1833,7 +1863,7 @@
       "n_unknown_origin": 0
     },
     {
-      "event_id": "e9-bc95ef671dc0981f",
+      "event_id": "e11-bc95ef671dc0981f",
       "publications": [
         "https://t.me/WEB3_AGGREGATOR/423121"
       ],
@@ -1847,7 +1877,7 @@
       "n_unknown_origin": 0
     },
     {
-      "event_id": "e10-c5cc91bc0559fb7d",
+      "event_id": "e12-c5cc91bc0559fb7d",
       "publications": [
         "https://t.me/WEB3_AGGREGATOR/423128"
       ],
@@ -1861,7 +1891,7 @@
       "n_unknown_origin": 0
     },
     {
-      "event_id": "e11-525acbc9683eaa9d",
+      "event_id": "e13-525acbc9683eaa9d",
       "publications": [
         "https://t.me/WEB3_AGGREGATOR/423150",
         "https://t.me/crypto_hd/31472",
@@ -1879,7 +1909,7 @@
       "n_unknown_origin": 0
     },
     {
-      "event_id": "e12-fc76b3cacccdad42",
+      "event_id": "e14-fc76b3cacccdad42",
       "publications": [
         "https://t.me/WEB3_AGGREGATOR/423151"
       ],
@@ -1893,7 +1923,7 @@
       "n_unknown_origin": 0
     },
     {
-      "event_id": "e13-aae72a40fa53caf6",
+      "event_id": "e15-aae72a40fa53caf6",
       "publications": [
         "https://t.me/WEB3_AGGREGATOR/423153"
       ],
@@ -1907,7 +1937,7 @@
       "n_unknown_origin": 0
     },
     {
-      "event_id": "e14-4d7ac3720cf84b0f",
+      "event_id": "e16-4d7ac3720cf84b0f",
       "publications": [
         "https://t.me/WEB3_AGGREGATOR/423153"
       ],
@@ -1921,7 +1951,7 @@
       "n_unknown_origin": 0
     },
     {
-      "event_id": "e15-419ffa3f9fce6606",
+      "event_id": "e17-419ffa3f9fce6606",
       "publications": [
         "https://t.me/WEB3_AGGREGATOR/423153"
       ],
@@ -1935,7 +1965,7 @@
       "n_unknown_origin": 0
     },
     {
-      "event_id": "e16-ed48c18aa3328218",
+      "event_id": "e18-ed48c18aa3328218",
       "publications": [
         "https://t.me/WEB3_AGGREGATOR/423161"
       ],
@@ -1949,7 +1979,7 @@
       "n_unknown_origin": 0
     },
     {
-      "event_id": "e17-c813add0d14f4b10",
+      "event_id": "e19-c813add0d14f4b10",
       "publications": [
         "https://t.me/whitelist1/7141",
         "https://t.me/WEB3_AGGREGATOR/423182"
@@ -1964,7 +1994,7 @@
       "n_unknown_origin": 0
     },
     {
-      "event_id": "e18-286906c4a81433de",
+      "event_id": "e20-286906c4a81433de",
       "publications": [
         "https://t.me/whitelist1/7141"
       ],

@@ -246,8 +246,9 @@ def extract_key_quals(obs: EventObservation) -> dict[str, str]:
 
 
 def _dates_compatible(qa: dict[str, str], qb: dict[str, str]) -> bool:
-    """Equal ISO dates; a one-day gap is allowed only when both carry matching amounts
-    (a daily report posted the next morning vs. the flow date)."""
+    """Equal ISO dates; a one-day gap is allowed only when one amount is the other rounded
+    (a daily report posted the next morning vs. the flow date). Close but different amounts
+    on neighbouring days are two daily flows."""
     da, db = qa.get("event_date"), qb.get("event_date")
     if not da or not db or da == db:
         return True
@@ -256,8 +257,18 @@ def _dates_compatible(qa: dict[str, str], qb: dict[str, str]) -> bool:
     except ValueError:
         return False
     if gap <= 1 and "amount" in qa and "amount" in qb:
-        return _amounts_compatible(qa["amount"], qb["amount"])
+        return _amounts_same_rounded(qa["amount"], qb["amount"])
     return False
+
+
+def _amounts_same_rounded(a: str, b: str) -> bool:
+    """The more precise amount rounds to the less precise one: 143.7 ~ 144, but 100 != 102."""
+    try:
+        xa, xb = float(a), float(b)
+    except ValueError:
+        return a == b
+    decimals = min(len(a.partition(".")[2]), len(b.partition(".")[2]))
+    return round(xa, decimals) == round(xb, decimals)
 
 
 def _flow_days_compatible(a: EventObservation, b: EventObservation, qa: dict, qb: dict) -> bool:
@@ -366,13 +377,26 @@ def conflicting(a: EventObservation, b: EventObservation) -> bool:
     sa, sb = subject_key(a), subject_key(b)
     if sa[1] and sb[1] and sa[1] != sb[1] and {sa[1], sb[1]} == {"vote", "upgrade"}:
         return True
-    return False
+    return _actors_conflict(sa, sb)
+
+
+def _actors_conflict(sa: tuple, sb: tuple) -> bool:
+    """Two named actors with no shared word are two events (Binance vs Coinbase listing).
+    Fund flows are exempt: their actor is whoever reported the table, not who acted."""
+    if sa[2].endswith("etf") or sb[2].endswith("etf"):
+        return False
+    if not sa[0] or not sb[0] or sa[0] == sb[0]:
+        return False
+    return not set(re.findall(r"\w+", sa[0])) & set(re.findall(r"\w+", sb[0]))
 
 
 def same_event_deterministic(a: EventObservation, b: EventObservation) -> bool:
+    # identical wording is not identity: "Today ... $100M" on two days is two flows
+    if conflicting(a, b):
+        return False
     if a.text_hash and a.text_hash == b.text_hash:
         return True
-    if ticker_only(a, b) or conflicting(a, b):
+    if ticker_only(a, b):
         return False
     sa, sb = subject_key(a), subject_key(b)
     qa, qb = extract_key_quals(a), extract_key_quals(b)

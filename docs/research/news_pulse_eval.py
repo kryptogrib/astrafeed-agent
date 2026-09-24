@@ -289,6 +289,33 @@ def check_temporal(run, records, metric, history):
             metric.missing.append(dict(run=run["path"], reason=f"Нет {name}.json"))
 
 
+def event_signature(event):
+    return "|".join(str(event.get(k) or "") for k in ("actor", "action", "object", "headline"))
+
+
+def check_changes(pulse, posts, start, end, compare, metric, path):
+    """Every number of «Изменения» is recomputed: channels from the DB, event deltas as set
+    arithmetic over this run's events and the listed previous ones, topic comments from discussion."""
+    changes = pulse.get("changes")
+    if not changes:
+        metric.missing.append(dict(run=path, reason="Нет changes в pulse.json"))
+        return
+    previous_start = start - (end - start)
+    cur_ch = {str(p["source_id"]) for p in posts if start <= ts(p["published_at"]) < end}
+    prev_ch = {str(p["source_id"]) for p in posts if previous_start <= ts(p["published_at"]) < start}
+    coverage = changes.get("source_coverage") or {}
+    compare("changes.source_coverage.added_channels", coverage.get("added_channels"), sorted(cur_ch - prev_ch))
+    compare("changes.source_coverage.removed_channels", coverage.get("removed_channels"), sorted(prev_ch - cur_ch))
+    compare("changes.source_coverage.current_channels", coverage.get("current_channels"), len(cur_ch))
+    compare("changes.source_coverage.previous_channels", coverage.get("previous_channels"), len(prev_ch))
+    cur_ev = {event_signature(e) for e in pulse.get("events") or []}
+    prev_ev = set(changes.get("previous_events") or [])
+    compare("changes.events_appeared", changes.get("events_appeared"), sorted(cur_ev - prev_ev))
+    compare("changes.events_gone", changes.get("events_gone"), sorted(prev_ev - cur_ev))
+    topic_rows = sum(1 for row in pulse.get("discussion") or [] if row.get("url"))
+    compare("changes.topic_comments", changes.get("topic_comments"), topic_rows)
+
+
 def check_aggregates(run, posts, comments, metric):
     start, end = ts(run["window"]["start"]), ts(run["window"]["end"])
     dbposts = {p["link"]: p for p in posts}
@@ -307,17 +334,7 @@ def check_aggregates(run, posts, comments, metric):
     coverage = pulse.get("coverage", {})
     for key, expected in (("publications", len(window_posts)), ("channels", len({p["source_id"] for p in window_posts})), ("comments", len(window_comments))):
         compare("coverage." + key, coverage.get(key), expected)
-    changes = pulse.get("changes", {})
-    previous_start = start - (end - start)
-    previous_posts = [p for p in posts if previous_start <= ts(p["published_at"]) < start]
-    previous_comments = [c for c in comments if previous_start <= ts(c["published_at"]) < start]
-    for key, value in (("discussion_comments", len(window_comments)), ("previous_comments", len(previous_comments))):
-        if key in changes:
-            compare("changes." + key, changes[key], value)
-    source_coverage = changes.get("source_coverage", {})
-    for key, rows in (("current_channels", window_posts), ("previous_channels", previous_posts)):
-        if key in source_coverage:
-            compare("changes.source_coverage." + key, source_coverage[key], len({p["source_id"] for p in rows}))
+    check_changes(pulse, posts, start, end, compare, metric, run["path"])
     if decisions is None:
         metric.missing.append(dict(run=run["path"], reason="Без decisions нельзя пересчитать отбор и группы"))
         return

@@ -1,15 +1,15 @@
 {
   "db_md5_before": "8618099125a806df376354286ccd982e",
   "db_md5_after": "8618099125a806df376354286ccd982e",
-  "claims": 8866,
-  "grounded": 8866,
+  "claims": 17949,
+  "grounded": 17949,
   "grounding_rate": 1.0,
   "fabricated_numbers": 0,
   "runs": [
     {
       "run": "artifacts/news-pulse/aave/2026-09-09..2026-09-23",
-      "claims": 26,
-      "grounded": 26,
+      "claims": 94,
+      "grounded": 94,
       "fabricated_numbers": 0,
       "failures": []
     },
@@ -22,162 +22,162 @@
     },
     {
       "run": "artifacts/news-pulse/arc/2026-09-09..2026-09-23",
-      "claims": 388,
-      "grounded": 388,
+      "claims": 869,
+      "grounded": 869,
       "fabricated_numbers": 0,
       "failures": []
     },
     {
       "run": "artifacts/news-pulse/arc/2026-09-09T00-00-00-00-00..2026-09-16T11-01-00-00-00",
-      "claims": 174,
-      "grounded": 174,
+      "claims": 361,
+      "grounded": 361,
       "fabricated_numbers": 0,
       "failures": []
     },
     {
       "run": "artifacts/news-pulse/arc/2026-09-09T00-00-00-00-00..2026-09-16T11-01-01-00-00",
-      "claims": 174,
-      "grounded": 174,
+      "claims": 361,
+      "grounded": 361,
       "fabricated_numbers": 0,
       "failures": []
     },
     {
       "run": "artifacts/news-pulse/arc/2026-09-09T00-00-00-00-00..2026-09-16T11-01-02-00-00",
-      "claims": 175,
-      "grounded": 175,
+      "claims": 362,
+      "grounded": 362,
       "fabricated_numbers": 0,
       "failures": []
     },
     {
       "run": "artifacts/news-pulse/arc/2026-09-16T11-01-01-00-00..2026-09-17T11-01-01-00-00",
-      "claims": 129,
-      "grounded": 129,
+      "claims": 333,
+      "grounded": 333,
       "fabricated_numbers": 0,
       "failures": []
     },
     {
       "run": "artifacts/news-pulse/eth/2026-09-09..2026-09-23",
-      "claims": 899,
-      "grounded": 899,
+      "claims": 1923,
+      "grounded": 1923,
       "fabricated_numbers": 0,
       "failures": []
     },
     {
       "run": "artifacts/news-pulse/eth/2026-09-09T00-00-00-00-00..2026-09-14T12-33-45-00-00",
-      "claims": 266,
-      "grounded": 266,
+      "claims": 642,
+      "grounded": 642,
       "fabricated_numbers": 0,
       "failures": []
     },
     {
       "run": "artifacts/news-pulse/eth/2026-09-09T00-00-00-00-00..2026-09-14T12-33-46-00-00",
-      "claims": 266,
-      "grounded": 266,
+      "claims": 642,
+      "grounded": 642,
       "fabricated_numbers": 0,
       "failures": []
     },
     {
       "run": "artifacts/news-pulse/eth/2026-09-09T00-00-00-00-00..2026-09-14T12-33-47-00-00",
-      "claims": 278,
-      "grounded": 278,
+      "claims": 654,
+      "grounded": 654,
       "fabricated_numbers": 0,
       "failures": []
     },
     {
       "run": "artifacts/news-pulse/eth/2026-09-09T00-00-00-00-00..2026-09-21T12-44-53-00-00",
-      "claims": 727,
-      "grounded": 727,
+      "claims": 1500,
+      "grounded": 1500,
       "fabricated_numbers": 0,
       "failures": []
     },
     {
       "run": "artifacts/news-pulse/eth/2026-09-09T00-00-00-00-00..2026-09-21T12-44-54-00-00",
-      "claims": 727,
-      "grounded": 727,
+      "claims": 1500,
+      "grounded": 1500,
       "fabricated_numbers": 0,
       "failures": []
     },
     {
       "run": "artifacts/news-pulse/eth/2026-09-09T00-00-00-00-00..2026-09-21T12-44-55-00-00",
-      "claims": 737,
-      "grounded": 737,
+      "claims": 1510,
+      "grounded": 1510,
       "fabricated_numbers": 0,
       "failures": []
     },
     {
       "run": "artifacts/news-pulse/eth/2026-09-14T12-33-46-00-00..2026-09-21T12-44-54-00-00",
-      "claims": 462,
-      "grounded": 462,
+      "claims": 862,
+      "grounded": 862,
       "fabricated_numbers": 0,
       "failures": []
     },
     {
       "run": "artifacts/news-pulse/eth/2026-09-17..2026-09-19",
-      "claims": 141,
-      "grounded": 141,
+      "claims": 215,
+      "grounded": 215,
       "fabricated_numbers": 0,
       "failures": []
     },
     {
       "run": "artifacts/news-pulse/zec/2026-09-09..2026-09-23",
-      "claims": 753,
-      "grounded": 753,
+      "claims": 1493,
+      "grounded": 1493,
       "fabricated_numbers": 0,
       "failures": []
     },
     {
       "run": "artifacts/news-pulse/zec/2026-09-09T00-00-00-00-00..2026-09-16T06-10-18-00-00",
-      "claims": 78,
-      "grounded": 78,
+      "claims": 156,
+      "grounded": 156,
       "fabricated_numbers": 0,
       "failures": []
     },
     {
       "run": "artifacts/news-pulse/zec/2026-09-09T00-00-00-00-00..2026-09-16T06-10-19-00-00",
-      "claims": 78,
-      "grounded": 78,
+      "claims": 156,
+      "grounded": 156,
       "fabricated_numbers": 0,
       "failures": []
     },
     {
       "run": "artifacts/news-pulse/zec/2026-09-09T00-00-00-00-00..2026-09-16T06-10-20-00-00",
-      "claims": 82,
-      "grounded": 82,
+      "claims": 160,
+      "grounded": 160,
       "fabricated_numbers": 0,
       "failures": []
     },
     {
       "run": "artifacts/news-pulse/zec/2026-09-09T00-00-00-00-00..2026-09-21T06-04-31-00-00",
-      "claims": 513,
-      "grounded": 513,
+      "claims": 946,
+      "grounded": 946,
       "fabricated_numbers": 0,
       "failures": []
     },
     {
       "run": "artifacts/news-pulse/zec/2026-09-09T00-00-00-00-00..2026-09-21T06-04-32-00-00",
-      "claims": 513,
-      "grounded": 513,
+      "claims": 946,
+      "grounded": 946,
       "fabricated_numbers": 0,
       "failures": []
     },
     {
       "run": "artifacts/news-pulse/zec/2026-09-09T00-00-00-00-00..2026-09-21T06-04-33-00-00",
-      "claims": 523,
-      "grounded": 523,
+      "claims": 956,
+      "grounded": 956,
       "fabricated_numbers": 0,
       "failures": []
     },
     {
       "run": "artifacts/news-pulse/zec/2026-09-16T06-10-19-00-00..2026-09-21T06-04-32-00-00",
-      "claims": 440,
-      "grounded": 440,
+      "claims": 798,
+      "grounded": 798,
       "fabricated_numbers": 0,
       "failures": []
     },
     {
       "run": "artifacts/news-pulse/zec/2026-09-17..2026-09-19",
-      "claims": 316,
-      "grounded": 316,
+      "claims": 509,
+      "grounded": 509,
       "fabricated_numbers": 0,
       "failures": []
     }

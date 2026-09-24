@@ -17,6 +17,7 @@
   },
   "missing_inputs": [],
   "runs": [
+    "artifacts/news-pulse/aave/2026-09-09..2026-09-23",
     "artifacts/news-pulse/aave/2026-09-22..2026-09-23",
     "artifacts/news-pulse/arc/2026-09-09..2026-09-23",
     "artifacts/news-pulse/arc/2026-09-09T00-00-00-00-00..2026-09-16T11-01-00-00-00",
@@ -177,12 +178,205 @@
     "future_leakage": {
       "title": "Записи и ссылки вне окна",
       "numerator": 0,
-      "denominator": 59815,
+      "denominator": 71903,
       "value": 0.0,
       "threshold": "= 0 ошибок",
-      "status": "pass",
+      "status": "unverified",
       "errors": [],
-      "missing": [],
+      "missing": [
+        {
+          "run": "artifacts/news-pulse/zec/2026-09-09..2026-09-23",
+          "path": "pulse.discussion[54].text",
+          "links": [
+            "https://t.me/icodrops_sergey/2105"
+          ],
+          "reason": "В БД нет времени ссылки"
+        },
+        {
+          "run": "artifacts/news-pulse/zec/2026-09-09..2026-09-23",
+          "path": "pulse.discussion[54].quote",
+          "links": [
+            "https://t.me/icodrops_sergey/2105"
+          ],
+          "reason": "В БД нет времени ссылки"
+        },
+        {
+          "run": "artifacts/news-pulse/zec/2026-09-09..2026-09-23",
+          "path": "pulse.evidence[261].quote",
+          "links": [
+            "https://t.me/icodrops_sergey/2105"
+          ],
+          "reason": "В БД нет времени ссылки"
+        },
+        {
+          "run": "artifacts/news-pulse/zec/2026-09-09..2026-09-23",
+          "path": "pulse.brief_markdown",
+          "links": [
+            "https://t.me/icodrops_sergey/2105"
+          ],
+          "reason": "В БД нет времени ссылки"
+        },
+        {
+          "run": "artifacts/news-pulse/zec/2026-09-09T00-00-00-00-00..2026-09-21T06-04-31-00-00",
+          "path": "pulse.discussion[54].text",
+          "links": [
+            "https://t.me/icodrops_sergey/2105"
+          ],
+          "reason": "В БД нет времени ссылки"
+        },
+        {
+          "run": "artifacts/news-pulse/zec/2026-09-09T00-00-00-00-00..2026-09-21T06-04-31-00-00",
+          "path": "pulse.discussion[54].quote",
+          "links": [
+            "https://t.me/icodrops_sergey/2105"
+          ],
+          "reason": "В БД нет времени ссылки"
+        },
+        {
+          "run": "artifacts/news-pulse/zec/2026-09-09T00-00-00-00-00..2026-09-21T06-04-31-00-00",
+          "path": "pulse.evidence[205].quote",
+          "links": [
+            "https://t.me/icodrops_sergey/2105"
+          ],
+          "reason": "В БД нет времени ссылки"
+        },
+        {
+          "run": "artifacts/news-pulse/zec/2026-09-09T00-00-00-00-00..2026-09-21T06-04-31-00-00",
+          "path": "pulse.brief_markdown",
+          "links": [
+            "https://t.me/icodrops_sergey/2105"
+          ],
+          "reason": "В БД нет времени ссылки"
+        },
+        {
+          "run": "artifacts/news-pulse/zec/2026-09-09T00-00-00-00-00..2026-09-21T06-04-32-00-00",
+          "path": "pulse.discussion[54].text",
+          "links": [
+            "https://t.me/icodrops_sergey/2105"
+          ],
+          "reason": "В БД нет времени ссылки"
+        },
+        {
+          "run": "artifacts/news-pulse/zec/2026-09-09T00-00-00-00-00..2026-09-21T06-04-32-00-00",
+          "path": "pulse.discussion[54].quote",
+          "links": [
+            "https://t.me/icodrops_sergey/2105"
+          ],
+          "reason": "В БД нет времени ссылки"
+        },
+        {
+          "run": "artifacts/news-pulse/zec/2026-09-09T00-00-00-00-00..2026-09-21T06-04-32-00-00",
+          "path": "pulse.evidence[205].quote",
+          "links": [
+            "https://t.me/icodrops_sergey/2105"
+          ],
+          "reason": "В БД нет времени ссылки"
+        },
+        {
+          "run": "artifacts/news-pulse/zec/2026-09-09T00-00-00-00-00..2026-09-21T06-04-32-00-00",
+          "path": "pulse.brief_markdown",
+          "links": [
+            "https://t.me/icodrops_sergey/2105"
+          ],
+          "reason": "В БД нет времени ссылки"
+        },
+        {
+          "run": "artifacts/news-pulse/zec/2026-09-09T00-00-00-00-00..2026-09-21T06-04-33-00-00",
+          "path": "pulse.discussion[54].text",
+          "links": [
+            "https://t.me/icodrops_sergey/2105"
+          ],
+          "reason": "В БД нет времени ссылки"
+        },
+        {
+          "run": "artifacts/news-pulse/zec/2026-09-09T00-00-00-00-00..2026-09-21T06-04-33-00-00",
+          "path": "pulse.discussion[54].quote",
+          "links": [
+            "https://t.me/icodrops_sergey/2105"
+          ],
+          "reason": "В БД нет времени ссылки"
+        },
+        {
+          "run": "artifacts/news-pulse/zec/2026-09-09T00-00-00-00-00..2026-09-21T06-04-33-00-00",
+          "path": "pulse.evidence[208].quote",
+          "links": [
+            "https://t.me/icodrops_sergey/2105"
+          ],
+          "reason": "В БД нет времени ссылки"
+        },
+        {
+          "run": "artifacts/news-pulse/zec/2026-09-09T00-00-00-00-00..2026-09-21T06-04-33-00-00",
+          "path": "pulse.brief_markdown",
+          "links": [
+            "https://t.me/icodrops_sergey/2105"
+          ],
+          "reason": "В БД нет времени ссылки"
+        },
+        {
+          "run": "artifacts/news-pulse/zec/2026-09-16T06-10-19-00-00..2026-09-21T06-04-32-00-00",
+          "path": "pulse.discussion[35].text",
+          "links": [
+            "https://t.me/icodrops_sergey/2105"
+          ],
+          "reason": "В БД нет времени ссылки"
+        },
+        {
+          "run": "artifacts/news-pulse/zec/2026-09-16T06-10-19-00-00..2026-09-21T06-04-32-00-00",
+          "path": "pulse.discussion[35].quote",
+          "links": [
+            "https://t.me/icodrops_sergey/2105"
+          ],
+          "reason": "В БД нет времени ссылки"
+        },
+        {
+          "run": "artifacts/news-pulse/zec/2026-09-16T06-10-19-00-00..2026-09-21T06-04-32-00-00",
+          "path": "pulse.evidence[156].quote",
+          "links": [
+            "https://t.me/icodrops_sergey/2105"
+          ],
+          "reason": "В БД нет времени ссылки"
+        },
+        {
+          "run": "artifacts/news-pulse/zec/2026-09-16T06-10-19-00-00..2026-09-21T06-04-32-00-00",
+          "path": "pulse.brief_markdown",
+          "links": [
+            "https://t.me/icodrops_sergey/2105"
+          ],
+          "reason": "В БД нет времени ссылки"
+        },
+        {
+          "run": "artifacts/news-pulse/zec/2026-09-17..2026-09-19",
+          "path": "pulse.discussion[35].text",
+          "links": [
+            "https://t.me/icodrops_sergey/2105"
+          ],
+          "reason": "В БД нет времени ссылки"
+        },
+        {
+          "run": "artifacts/news-pulse/zec/2026-09-17..2026-09-19",
+          "path": "pulse.discussion[35].quote",
+          "links": [
+            "https://t.me/icodrops_sergey/2105"
+          ],
+          "reason": "В БД нет времени ссылки"
+        },
+        {
+          "run": "artifacts/news-pulse/zec/2026-09-17..2026-09-19",
+          "path": "pulse.evidence[116].quote",
+          "links": [
+            "https://t.me/icodrops_sergey/2105"
+          ],
+          "reason": "В БД нет времени ссылки"
+        },
+        {
+          "run": "artifacts/news-pulse/zec/2026-09-17..2026-09-19",
+          "path": "pulse.brief_markdown",
+          "links": [
+            "https://t.me/icodrops_sergey/2105"
+          ],
+          "reason": "В БД нет времени ссылки"
+        }
+      ],
       "note": "Числитель — нарушения; знаменатель — проверенные вхождения времени/ссылок. Включает время < start; явная предыстория отдельно."
     },
     "boundary": {
@@ -198,8 +392,8 @@
     },
     "numeric_aggregates": {
       "title": "Правильность числовых агрегатов",
-      "numerator": 24506,
-      "denominator": 24506,
+      "numerator": 25153,
+      "denominator": 25153,
       "value": 1.0,
       "threshold": 1,
       "status": "pass",
@@ -209,8 +403,8 @@
     },
     "brief_grounding": {
       "title": "Подтверждённость фактов брифа",
-      "numerator": 8840,
-      "denominator": 8840,
+      "numerator": 17949,
+      "denominator": 17949,
       "value": 1.0,
       "threshold": 0.95,
       "status": "pass",
@@ -221,7 +415,7 @@
     "fabrications": {
       "title": "Выдуманные цены, даты, авторство, официальное подтверждение",
       "numerator": 0,
-      "denominator": 8840,
+      "denominator": 17949,
       "value": 0.0,
       "threshold": "= 0 ошибок",
       "status": "pass",

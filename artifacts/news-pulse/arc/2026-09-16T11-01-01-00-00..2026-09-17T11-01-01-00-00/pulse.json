@@ -82,11 +82,11 @@
       "headline": "Circle's Arc Stablecoin L1 Goes Live on Mainnet",
       "counts": {
         "events": 1,
-        "publications": 1,
+        "publications": 2,
         "channels": 1,
         "known_authors": 0,
-        "unknown_authors": 1,
-        "found_origins": 1,
+        "unknown_authors": 2,
+        "found_origins": 2,
         "reprints": 0,
         "unknown_origin": 0
       },
@@ -112,6 +112,40 @@
           "origin": "own"
         },
         {
+          "obs_id": "telegram:15:423153#s0",
+          "publication_id": "telegram:15:423153",
+          "source_id": 15,
+          "author_id": null,
+          "published_at": "2026-09-16T22:31:41+00:00",
+          "url": "https://t.me/WEB3_AGGREGATOR/423153",
+          "quote": "Первый день мэйннета ARC",
+          "span": [
+            2,
+            26
+          ],
+          "origin": "own"
+        }
+      ]
+    },
+    {
+      "event_id": "e3-8a766f54fba274d1",
+      "headline": "Arc arrives as a full-stack financial platform rather than a bare chain, shipping assets, applications, interoperability, and Circle platform services from day one.",
+      "counts": {
+        "events": 1,
+        "publications": 1,
+        "channels": 1,
+        "known_authors": 0,
+        "unknown_authors": 1,
+        "found_origins": 1,
+        "reprints": 0,
+        "unknown_origin": 0
+      },
+      "actor": "Arc",
+      "action": "arrives",
+      "object": null,
+      "qualifiers": {},
+      "members": [
+        {
           "obs_id": "telegram:15:423100#s2",
           "publication_id": "telegram:15:423100",
           "source_id": 15,
@@ -124,7 +158,27 @@
             424
           ],
           "origin": "own"
-        },
+        }
+      ]
+    },
+    {
+      "event_id": "e4-f6f1e759519a5cbd",
+      "headline": "More than 190 institutional and ecosystem teams are already building on Arc, one of the most institutionally backed genesis cohorts the industry has seen, as Circle pushes…",
+      "counts": {
+        "events": 1,
+        "publications": 1,
+        "channels": 1,
+        "known_authors": 0,
+        "unknown_authors": 1,
+        "found_origins": 1,
+        "reprints": 0,
+        "unknown_origin": 0
+      },
+      "actor": "institutional and ecosystem teams",
+      "action": "building",
+      "object": "Arc",
+      "qualifiers": {},
+      "members": [
         {
           "obs_id": "telegram:15:423100#s3",
           "publication_id": "telegram:15:423100",
@@ -142,15 +196,15 @@
       ]
     },
     {
-      "event_id": "e3-c707bf347f67384f",
+      "event_id": "e5-c707bf347f67384f",
       "headline": "Сегодня, 16 сентября, Circle запустила мейннет Arc и сразу подключила его к Agent Stack, набору инструментов, который с 11 мая дает ИИ-агенту собственный кошелек.",
       "counts": {
         "events": 1,
-        "publications": 2,
+        "publications": 1,
         "channels": 1,
         "known_authors": 0,
-        "unknown_authors": 2,
-        "found_origins": 2,
+        "unknown_authors": 1,
+        "found_origins": 1,
         "reprints": 0,
         "unknown_origin": 0
       },
@@ -174,25 +228,11 @@
             187
           ],
           "origin": "own"
-        },
-        {
-          "obs_id": "telegram:15:423153#s0",
-          "publication_id": "telegram:15:423153",
-          "source_id": 15,
-          "author_id": null,
-          "published_at": "2026-09-16T22:31:41+00:00",
-          "url": "https://t.me/WEB3_AGGREGATOR/423153",
-          "quote": "Первый день мэйннета ARC",
-          "span": [
-            2,
-            26
-          ],
-          "origin": "own"
         }
       ]
     },
     {
-      "event_id": "e4-d8574fe1e9df058c",
+      "event_id": "e6-d8574fe1e9df058c",
       "headline": "Основная сеть Arc запустилась. Arc и OpenSea запустили бесплатный минт NFT:",
       "counts": {
         "events": 1,
@@ -226,7 +266,7 @@
       ]
     },
     {
-      "event_id": "e5-c9826d15d0d75d44",
+      "event_id": "e7-c9826d15d0d75d44",
       "headline": "📟Arc | фармим раннюю активность в mainnet",
       "counts": {
         "events": 1,
@@ -260,7 +300,7 @@
       ]
     },
     {
-      "event_id": "e6-c03fbc4f340af233",
+      "event_id": "e8-c03fbc4f340af233",
       "headline": "Arc запустил публичный mainnet и уже сейчас мы можем делать быстрые активности.",
       "counts": {
         "events": 1,
@@ -294,7 +334,7 @@
       ]
     },
     {
-      "event_id": "e7-af16fdc54e5e1347",
+      "event_id": "e9-af16fdc54e5e1347",
       "headline": "Arc — L1-сеть от Circle для платежей, стейблкоинов и финансовых приложений. В экосистеме уже есть Uniswap, Aave, Morpho, Aerodrome и другие крупные проекты.",
       "counts": {
         "events": 1,
@@ -328,7 +368,7 @@
       ]
     },
     {
-      "event_id": "e8-f5dee91bb2f52cb4",
+      "event_id": "e10-f5dee91bb2f52cb4",
       "headline": "🔘Бриджим любой актив в USDC в сеть Arc",
       "counts": {
         "events": 1,
@@ -362,7 +402,7 @@
       ]
     },
     {
-      "event_id": "e9-bc95ef671dc0981f",
+      "event_id": "e11-bc95ef671dc0981f",
       "headline": "Я вам просто напоминаю, что в 18 по Москве официально ARC запускают и вы уже сейчас можете абсолютно бесплатно создавать свои мемы на https://arc.openfair.app/",
       "counts": {
         "events": 1,
@@ -396,7 +436,7 @@
       ]
     },
     {
-      "event_id": "e10-c5cc91bc0559fb7d",
+      "event_id": "e12-c5cc91bc0559fb7d",
       "headline": "🔹 Arc Chain Coin Tracking Is Live",
       "counts": {
         "events": 1,
@@ -430,7 +470,7 @@
       ]
     },
     {
-      "event_id": "e11-525acbc9683eaa9d",
+      "event_id": "e13-525acbc9683eaa9d",
       "headline": "Arc запущен",
       "counts": {
         "events": 1,
@@ -492,7 +532,7 @@
       ]
     },
     {
-      "event_id": "e12-fc76b3cacccdad42",
+      "event_id": "e14-fc76b3cacccdad42",
       "headline": "🟢Arc вышли в майннет",
       "counts": {
         "events": 1,
@@ -540,7 +580,7 @@
       ]
     },
     {
-      "event_id": "e13-aae72a40fa53caf6",
+      "event_id": "e15-aae72a40fa53caf6",
       "headline": "🟣AKA DN404 — первая коллекция на Arc: NFT + ERC-20 в одном активе, а комиссии идут в RWA",
       "counts": {
         "events": 1,
@@ -577,7 +617,7 @@
       ]
     },
     {
-      "event_id": "e14-4d7ac3720cf84b0f",
+      "event_id": "e16-4d7ac3720cf84b0f",
       "headline": "🟣Arclings — первая полностью ончейн 1-bit коллекция на Arc",
       "counts": {
         "events": 1,
@@ -613,7 +653,7 @@
       ]
     },
     {
-      "event_id": "e15-419ffa3f9fce6606",
+      "event_id": "e17-419ffa3f9fce6606",
       "headline": "🟣Arc Fly — минт состоится сегодня на OpenSea, будет фри минт на 7.777 NFT",
       "counts": {
         "events": 1,
@@ -650,7 +690,7 @@
       ]
     },
     {
-      "event_id": "e16-ed48c18aa3328218",
+      "event_id": "e18-ed48c18aa3328218",
       "headline": "Arc — community → Zack: поддержка уже запущена.",
       "counts": {
         "events": 1,
@@ -686,7 +726,7 @@
       ]
     },
     {
-      "event_id": "e17-c813add0d14f4b10",
+      "event_id": "e19-c813add0d14f4b10",
       "headline": "🔴Arc сминтили 10 млрд токенов $ARC в Mainnet. Сама же команда пишет, что это техническая необходимость, а не подготовка к дропу. При этом, в X сами байтят холдеров Architect ролей.",
       "counts": {
         "events": 1,
@@ -736,7 +776,7 @@
       ]
     },
     {
-      "event_id": "e18-286906c4a81433de",
+      "event_id": "e20-286906c4a81433de",
       "headline": "👍Extended запустили RWA Trading Competition на $50 тыс. Набиваем PNL, объем, OI и поднимаемся в лидерборде. В награды войдут топ 100 трейдеров, турнир продлится до 29 сентября.…",
       "counts": {
         "events": 1,
@@ -807,6 +847,94 @@
   ],
   "discussion": [
     {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "Добро пожаловать в чат Whitelist Media 👍\n\nНаши ресурсы: \n👍Whitelist Database (гайд по инструменту);\n👍Blacklist by Bogdan;\n👍X (Twitter);\n👍Links.\n\nПолезные ссылки: \n👍ProxyWing (прокси): по коду whitelist скидка 10%;\n👍Чат взаимных подписок",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/whitelist1/7139?comment=571594",
+      "quote": "Добро пожаловать в чат Whitelist Media 👍\n\nНаши ресурсы: \n👍Whitelist Database (гайд по инструменту);\n👍Blacklist by Bogdan;\n👍X (Twitter);\n👍Links.\n\nПолезные ссылки: \n👍ProxyWing"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "Крутая подборка, всё четко по времени и ссылкам",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/whitelist1/7139?comment=571595",
+      "quote": "Крутая подборка, всё четко по времени и ссылкам"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "время ректоваться",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/whitelist1/7139?comment=571596",
+      "quote": "время ректоваться"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "панки уже вышли",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/whitelist1/7139?comment=571597",
+      "quote": "панки уже вышли"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "в минус",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/whitelist1/7139?comment=571598",
+      "quote": "в минус"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "фига, у меня даж фкфс на арклингс откуда-то))",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/whitelist1/7139?comment=571599",
+      "quote": "фига, у меня даж фкфс на арклингс откуда-то))"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "ооо, гл",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/whitelist1/7139?comment=571600",
+      "quote": "ооо, гл"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "да щас уже нет проблем с этим, что фкфс, что гарант. хотя на арк первый раз, хз как сеть там вообще.",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/whitelist1/7139?comment=571601",
+      "quote": "да щас уже нет проблем с этим, что фкфс, что гарант. хотя на арк первый раз, хз как сеть там вообще."
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "@Izvinites не подскажешь что по комиссиям в арке?",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/whitelist1/7139?comment=571602",
+      "quote": "@Izvinites не подскажешь что по комиссиям в арке?"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "Пока что копейки, но могут разогнаться на минтах",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/whitelist1/7139?comment=571603",
+      "quote": "Пока что копейки, но могут разогнаться на минтах"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "пока на минтах нет желающих",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/whitelist1/7139?comment=571604",
+      "quote": "пока на минтах нет желающих"
+    },
+    {
       "target": "other_subject",
       "target_id": null,
       "text": "так пока хайповых коллекций и не вышло, не?",
@@ -817,10 +945,66 @@
     {
       "target": "topic_level",
       "target_id": null,
+      "text": "пока нет таких)))",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/whitelist1/7139?comment=571606",
+      "quote": "пока нет таких)))"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "Богдан продал вчера Rare Friends? Мне тоже слот достался, сегодня мб что-то на Арк минтану",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/whitelist1/7139?comment=571607",
+      "quote": "Богдан продал вчера Rare Friends? Мне тоже слот достался, сегодня мб что-то на Арк минтану"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "Да, поспешил, за 3к слил",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/whitelist1/7139?comment=571611",
+      "quote": "Да, поспешил, за 3к слил"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "я за 4300, идеально было бы продать за 5к)",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/whitelist1/7139?comment=571612",
+      "quote": "я за 4300, идеально было бы продать за 5к)"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "Там и 7500 было",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/whitelist1/7139?comment=571613",
+      "quote": "Там и 7500 было"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "давали только по флору слить",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/whitelist1/7139?comment=571614",
+      "quote": "давали только по флору слить"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
       "text": "arcadians уменьшили саплай и цену поменяли были",
       "basis": "совпадение темы недостаточно, связь со событием не установлена",
       "url": "https://t.me/whitelist1/7139?comment=571615",
       "quote": "arcadians уменьшили саплай и цену поменяли были"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "несите следующего))",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/whitelist1/7139?comment=571616",
+      "quote": "несите следующего))"
     },
     {
       "target": "other_subject",
@@ -829,6 +1013,22 @@
       "basis": "предмет реплики — сторонний сервис/коллекция экосистемы, не событие темы",
       "url": "https://t.me/whitelist1/7139?comment=571617",
       "quote": "скам значит"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "там саплай еще меньше стал😁 3333)",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/whitelist1/7139?comment=571618",
+      "quote": "там саплай еще меньше стал😁 3333)"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "ажиотажа нет, они так могут делать, арк не зашел",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/whitelist1/7139?comment=571619",
+      "quote": "ажиотажа нет, они так могут делать, арк не зашел"
     },
     {
       "target": "other_subject",
@@ -841,10 +1041,90 @@
     {
       "target": "topic_level",
       "target_id": null,
+      "text": "там даже кнопки минт нет)))",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/whitelist1/7139?comment=571621",
+      "quote": "там даже кнопки минт нет)))"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "лоадинг же по-русски написано))))",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/whitelist1/7139?comment=571622",
+      "quote": "лоадинг же по-русски написано))))"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "лучше бы они делали на OS минт)",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/whitelist1/7139?comment=571623",
+      "quote": "лучше бы они делали на OS минт)"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "акулы вот вроде норм зашли",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/whitelist1/7139?comment=571624",
+      "quote": "акулы вот вроде норм зашли"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "а что за акулы?",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/whitelist1/7139?comment=571625",
+      "quote": "а что за акулы?"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
       "text": "https://opensea.io/collection/onchainsharc-791982284",
       "basis": "совпадение темы недостаточно, связь со событием не установлена",
       "url": "https://t.me/whitelist1/7139?comment=571626",
       "quote": "https://opensea.io/collection/onchainsharc-791982284"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "что сливать? или держать?",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/whitelist1/7139?comment=571641",
+      "quote": "что сливать? или держать?"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "кто вкрячил дизлайк бесплатной тулзе? 😱",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/badfriend_loops/829?comment=1066",
+      "quote": "кто вкрячил дизлайк бесплатной тулзе? 😱"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "Больше 3 месяцем как перестал следить за активностями. Руки опустились в какой-то момент. \nОтрабатывал Open Sea с сундуками. \nЧто-то слышно по наградам?",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/whitelist1/7139?comment=571644",
+      "quote": "Больше 3 месяцем как перестал следить за активностями. Руки опустились в какой-то момент. \nОтрабатывал Open Sea с сундуками. \nЧто-то слышно по наградам?"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "Солдаут?",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/whitelist1/7139?comment=571647",
+      "quote": "Солдаут?"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "да, разобрали",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/whitelist1/7139?comment=571648",
+      "quote": "да, разобрали"
     },
     {
       "target": "other_subject",
@@ -853,15 +1133,168 @@
       "basis": "предмет реплики — сторонний сервис/коллекция экосистемы, не событие темы",
       "url": "https://t.me/whitelist1/7139?comment=571649",
       "quote": "А я чет отвлекся и забы(и) л из-за их сайта глючного"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "Минт пара баксов был?",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/whitelist1/7139?comment=571650",
+      "quote": "Минт пара баксов был?"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "6 баксов",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/whitelist1/7139?comment=571651",
+      "quote": "6 баксов"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "вот бы сейчас пивка бахнуть",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/krasnovcrypto/3754?comment=284537",
+      "quote": "вот бы сейчас пивка бахнуть"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "Вот правильный комментарий )",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/krasnovcrypto/3754?comment=284540",
+      "quote": "Вот правильный комментарий )"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "Самое то 😅",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/krasnovcrypto/3754?comment=284541",
+      "quote": "Самое то 😅"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "Добро пожаловать в чат Whitelist Media 👍\n\nНаши ресурсы: \n👍Whitelist Database (гайд по инструменту);\n👍Blacklist by Bogdan;\n👍X (Twitter);\n👍Links.\n\nПолезные ссылки: \n👍ProxyWing (прокси): по коду whitelist скидка 10%;\n👍Чат взаимных подписок",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/whitelist1/7141?comment=571692",
+      "quote": "Добро пожаловать в чат Whitelist Media 👍\n\nНаши ресурсы: \n👍Whitelist Database (гайд по инструменту);\n👍Blacklist by Bogdan;\n👍X (Twitter);\n👍Links.\n\nПолезные ссылки: \n👍ProxyWing"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/whitelist1/7141?comment=571693",
+      "quote": ""
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "А не жирно ли работягам столько?",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/whitelist1/7141?comment=571695",
+      "quote": "А не жирно ли работягам столько?"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "не забывай что там часть команды еще",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/whitelist1/7141?comment=571696",
+      "quote": "не забывай что там часть команды еще"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "Среди работяг?",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/whitelist1/7141?comment=571697",
+      "quote": "Среди работяг?"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "По этому так жирно?",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/whitelist1/7141?comment=571698",
+      "quote": "По этому так жирно?"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "5к транзакцій как монаде набивать не будем больше ?😁",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/krasnovcrypto/3754?comment=284547",
+      "quote": "5к транзакцій как монаде набивать не будем больше ?😁"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "именно",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/whitelist1/7141?comment=571700",
+      "quote": "именно"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "Можно и 10к набить 😅",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/krasnovcrypto/3754?comment=284548",
+      "quote": "Можно и 10к набить 😅"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "я там вообще нихера не набивал и не делал и дали дроп",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/krasnovcrypto/3754?comment=284549",
+      "quote": "я там вообще нихера не набивал и не делал и дали дроп"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "Так да, там же раздали за активности в других экосистемах )",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/krasnovcrypto/3754?comment=284550",
+      "quote": "Так да, там же раздали за активности в других экосистемах )"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "жирно да но что сделаешь",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/whitelist1/7141?comment=571704",
+      "quote": "жирно да но что сделаешь"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "не, там походу раздали умным, кто не делал monad - у того есть мозги, тем и раздали 😂",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/krasnovcrypto/3754?comment=284552",
+      "quote": "не, там походу раздали умным, кто не делал monad - у того есть мозги, тем и раздали 😂"
     }
   ],
   "changes": {
     "previous_window": "2026-09-15T11:01:01+00:00..2026-09-16T11:01:01+00:00",
+    "previous_events": [
+      "ARC|launch|public mainnet|Завтра ARC паблик майнет",
+      "Arc|begins officially|public launch|Granted, yes there were people early new Arc 1-2 months before, today it begins \"officially\" via public (few hours basically only)",
+      "Circle|launches|Arc mainnet|CIRCLE LAUNCHES ARC MAINNET WITH BLACKROCK AND VISA AMONG VALIDATORS, MINTS 10 BILLION ARC TOKENS ...",
+      "Circle|plans to launch|blockchain Arc|✴️🇺🇸#CRCL Circle планирует запустить свой блокчейна Arc",
+      "Circle|will present|official presentation of Arc launch|Официальная презентация запуска Arc начнется сегодня в 18:30 мск.",
+      "TokenPocket Token|интегрируется|основная сеть Arc|🤝 #TPT TokenPocket Token интегрируется с основной сетью Arc"
+    ],
     "events_appeared": [
       "AKA DN404|first collection on Arc|Arc|🟣AKA DN404 — первая коллекция на Arc: NFT + ERC-20 в одном активе, а комиссии идут в RWA",
       "ARC|launch|official launch|Я вам просто напоминаю, что в 18 по Москве официально ARC запускают и вы уже сейчас можете абсолютно бесплатно создавать свои мемы на https://arc.openfair.app/",
       "Arc Fly|mint today on OpenSea|Arc|🟣Arc Fly — минт состоится сегодня на OpenSea, будет фри минт на 7.777 NFT",
       "Arclings|first fully on-chain 1-bit collection on Arc|Arc|🟣Arclings — первая полностью ончейн 1-bit коллекция на Arc",
+      "Arc|arrives||Arc arrives as a full-stack financial platform rather than a bare chain, shipping assets, applications, interoperability, and Circle platform services from day one.",
       "Arc|launched|public mainnet|Arc запустил публичный mainnet и уже сейчас мы можем делать быстрые активности.",
       "Arc|launch|mainnet|Основная сеть Arc запустилась. Arc и OpenSea запустили бесплатный минт NFT:",
       "Arc|minted 10 billion tokens in Mainnet|$ARC|🔴Arc сминтили 10 млрд токенов $ARC в Mainnet. Сама же команда пишет, что это техническая необходимость, а не подготовка к дропу. При этом, в X сами байтят холдеров Architect ролей.",
@@ -869,6 +1302,7 @@
       "Circle|launched|Arc mainnet|Сегодня, 16 сентября, Circle запустила мейннет Arc и сразу подключила его к Agent Stack, набору инструментов, который с 11 мая дает ИИ-агенту собственный кошелек.",
       "Extended|announced transition to Arc|Arc|👍Extended запустили RWA Trading Competition на $50 тыс. Набиваем PNL, объем, OI и поднимаемся в лидерборде. В награды войдут топ 100 трейдеров, турнир продлится до 29 сентября.…",
       "Zack|announced support already launched|Arc|Arc — community → Zack: поддержка уже запущена.",
+      "institutional and ecosystem teams|building|Arc|More than 190 institutional and ecosystem teams are already building on Arc, one of the most institutionally backed genesis cohorts the industry has seen, as Circle pushes…",
       "|bridge|any asset to USDC in Arc network|🔘Бриджим любой актив в USDC в сеть Arc",
       "|description|Arc|Arc — L1-сеть от Circle для платежей, стейблкоинов и финансовых приложений. В экосистеме уже есть Uniswap, Aave, Morpho, Aerodrome и другие крупные проекты.",
       "|farm|early activity in mainnet|📟Arc | фармим раннюю активность в mainnet",
@@ -885,15 +1319,15 @@
       "Circle|will present|official presentation of Arc launch|Официальная презентация запуска Arc начнется сегодня в 18:30 мск.",
       "TokenPocket Token|интегрируется|основная сеть Arc|🤝 #TPT TokenPocket Token интегрируется с основной сетью Arc"
     ],
-    "discussion_comments": 92,
-    "previous_comments": 117,
+    "topic_comments": 54,
+    "previous_topic_comments": 29,
     "source_coverage": {
       "added_channels": [],
       "removed_channels": [
-        "@CryptoEarnImp",
-        "@cryptonftded",
-        "@don_invest",
-        "@moni_talks"
+        "16",
+        "2",
+        "5",
+        "7"
       ],
       "current_channels": 14,
       "previous_channels": 18
@@ -903,8 +1337,8 @@
     "Arc запущен",
     "🔴Arc сминтили 10 млрд токенов $ARC в Mainnet. Сама же команда пишет, что это техническая необходимость, а не подготовка к дропу. При этом, в X сами байтят холдеров Architect ролей.",
     "кстати мейннет Arc, можно будет бриджить через Jumper",
-    "Сегодня, 16 сентября, Circle запустила мейннет Arc и сразу подключила его к Agent Stack, набору инструментов, который с 11 мая дает ИИ-агенту собственный кошелек.",
-    "Circle's Arc Stablecoin L1 Goes Live on Mainnet"
+    "Circle's Arc Stablecoin L1 Goes Live on Mainnet",
+    "Arc arrives as a full-stack financial platform rather than a bare chain, shipping assets, applications, interoperability, and Circle platform services from day one."
   ],
   "coverage": {
     "publications": 1423,
@@ -963,6 +1397,16 @@
       "publication_id": "telegram:15:423100"
     },
     {
+      "id": "telegram:15:423153#s0",
+      "url": "https://t.me/WEB3_AGGREGATOR/423153",
+      "quote": "Первый день мэйннета ARC",
+      "span": [
+        2,
+        26
+      ],
+      "publication_id": "telegram:15:423153"
+    },
+    {
       "id": "telegram:15:423100#s2",
       "url": "https://t.me/WEB3_AGGREGATOR/423100",
       "quote": "Arc arrives as a full-stack financial platform rather than a bare chain, shipping assets, applications, interoperability, and Circle platform services from day one.",
@@ -991,16 +1435,6 @@
         187
       ],
       "publication_id": "telegram:15:423105"
-    },
-    {
-      "id": "telegram:15:423153#s0",
-      "url": "https://t.me/WEB3_AGGREGATOR/423153",
-      "quote": "Первый день мэйннета ARC",
-      "span": [
-        2,
-        26
-      ],
-      "publication_id": "telegram:15:423153"
     },
     {
       "id": "telegram:15:423117#s1",
@@ -1333,9 +1767,94 @@
       "publication_id": "telegram:18:31468"
     },
     {
+      "id": "https://t.me/whitelist1/7139?comment=571594",
+      "url": "https://t.me/whitelist1/7139?comment=571594",
+      "quote": "Добро пожаловать в чат Whitelist Media 👍\n\nНаши ресурсы: \n👍Whitelist Database (гайд по инструменту);\n👍Blacklist by Bogdan;\n👍X (Twitter);\n👍Links.\n\nПолезные ссылки: \n👍ProxyWing"
+    },
+    {
+      "id": "https://t.me/whitelist1/7139?comment=571595",
+      "url": "https://t.me/whitelist1/7139?comment=571595",
+      "quote": "Крутая подборка, всё четко по времени и ссылкам"
+    },
+    {
+      "id": "https://t.me/whitelist1/7139?comment=571596",
+      "url": "https://t.me/whitelist1/7139?comment=571596",
+      "quote": "время ректоваться"
+    },
+    {
+      "id": "https://t.me/whitelist1/7139?comment=571597",
+      "url": "https://t.me/whitelist1/7139?comment=571597",
+      "quote": "панки уже вышли"
+    },
+    {
+      "id": "https://t.me/whitelist1/7139?comment=571598",
+      "url": "https://t.me/whitelist1/7139?comment=571598",
+      "quote": "в минус"
+    },
+    {
+      "id": "https://t.me/whitelist1/7139?comment=571599",
+      "url": "https://t.me/whitelist1/7139?comment=571599",
+      "quote": "фига, у меня даж фкфс на арклингс откуда-то))"
+    },
+    {
+      "id": "https://t.me/whitelist1/7139?comment=571600",
+      "url": "https://t.me/whitelist1/7139?comment=571600",
+      "quote": "ооо, гл"
+    },
+    {
+      "id": "https://t.me/whitelist1/7139?comment=571601",
+      "url": "https://t.me/whitelist1/7139?comment=571601",
+      "quote": "да щас уже нет проблем с этим, что фкфс, что гарант. хотя на арк первый раз, хз как сеть там вообще."
+    },
+    {
+      "id": "https://t.me/whitelist1/7139?comment=571602",
+      "url": "https://t.me/whitelist1/7139?comment=571602",
+      "quote": "@Izvinites не подскажешь что по комиссиям в арке?"
+    },
+    {
+      "id": "https://t.me/whitelist1/7139?comment=571603",
+      "url": "https://t.me/whitelist1/7139?comment=571603",
+      "quote": "Пока что копейки, но могут разогнаться на минтах"
+    },
+    {
+      "id": "https://t.me/whitelist1/7139?comment=571604",
+      "url": "https://t.me/whitelist1/7139?comment=571604",
+      "quote": "пока на минтах нет желающих"
+    },
+    {
       "id": "https://t.me/whitelist1/7139?comment=571605",
       "url": "https://t.me/whitelist1/7139?comment=571605",
       "quote": "так пока хайповых коллекций и не вышло, не?"
+    },
+    {
+      "id": "https://t.me/whitelist1/7139?comment=571606",
+      "url": "https://t.me/whitelist1/7139?comment=571606",
+      "quote": "пока нет таких)))"
+    },
+    {
+      "id": "https://t.me/whitelist1/7139?comment=571607",
+      "url": "https://t.me/whitelist1/7139?comment=571607",
+      "quote": "Богдан продал вчера Rare Friends? Мне тоже слот достался, сегодня мб что-то на Арк минтану"
+    },
+    {
+      "id": "https://t.me/whitelist1/7139?comment=571611",
+      "url": "https://t.me/whitelist1/7139?comment=571611",
+      "quote": "Да, поспешил, за 3к слил"
+    },
+    {
+      "id": "https://t.me/whitelist1/7139?comment=571612",
+      "url": "https://t.me/whitelist1/7139?comment=571612",
+      "quote": "я за 4300, идеально было бы продать за 5к)"
+    },
+    {
+      "id": "https://t.me/whitelist1/7139?comment=571613",
+      "url": "https://t.me/whitelist1/7139?comment=571613",
+      "quote": "Там и 7500 было"
+    },
+    {
+      "id": "https://t.me/whitelist1/7139?comment=571614",
+      "url": "https://t.me/whitelist1/7139?comment=571614",
+      "quote": "давали только по флору слить"
     },
     {
       "id": "https://t.me/whitelist1/7139?comment=571615",
@@ -1343,9 +1862,24 @@
       "quote": "arcadians уменьшили саплай и цену поменяли были"
     },
     {
+      "id": "https://t.me/whitelist1/7139?comment=571616",
+      "url": "https://t.me/whitelist1/7139?comment=571616",
+      "quote": "несите следующего))"
+    },
+    {
       "id": "https://t.me/whitelist1/7139?comment=571617",
       "url": "https://t.me/whitelist1/7139?comment=571617",
       "quote": "скам значит"
+    },
+    {
+      "id": "https://t.me/whitelist1/7139?comment=571618",
+      "url": "https://t.me/whitelist1/7139?comment=571618",
+      "quote": "там саплай еще меньше стал😁 3333)"
+    },
+    {
+      "id": "https://t.me/whitelist1/7139?comment=571619",
+      "url": "https://t.me/whitelist1/7139?comment=571619",
+      "quote": "ажиотажа нет, они так могут делать, арк не зашел"
     },
     {
       "id": "https://t.me/whitelist1/7139?comment=571620",
@@ -1353,23 +1887,158 @@
       "quote": "у арклингс сайт вообще лежит)"
     },
     {
+      "id": "https://t.me/whitelist1/7139?comment=571621",
+      "url": "https://t.me/whitelist1/7139?comment=571621",
+      "quote": "там даже кнопки минт нет)))"
+    },
+    {
+      "id": "https://t.me/whitelist1/7139?comment=571622",
+      "url": "https://t.me/whitelist1/7139?comment=571622",
+      "quote": "лоадинг же по-русски написано))))"
+    },
+    {
+      "id": "https://t.me/whitelist1/7139?comment=571623",
+      "url": "https://t.me/whitelist1/7139?comment=571623",
+      "quote": "лучше бы они делали на OS минт)"
+    },
+    {
+      "id": "https://t.me/whitelist1/7139?comment=571624",
+      "url": "https://t.me/whitelist1/7139?comment=571624",
+      "quote": "акулы вот вроде норм зашли"
+    },
+    {
+      "id": "https://t.me/whitelist1/7139?comment=571625",
+      "url": "https://t.me/whitelist1/7139?comment=571625",
+      "quote": "а что за акулы?"
+    },
+    {
       "id": "https://t.me/whitelist1/7139?comment=571626",
       "url": "https://t.me/whitelist1/7139?comment=571626",
       "quote": "https://opensea.io/collection/onchainsharc-791982284"
     },
     {
+      "id": "https://t.me/whitelist1/7139?comment=571641",
+      "url": "https://t.me/whitelist1/7139?comment=571641",
+      "quote": "что сливать? или держать?"
+    },
+    {
+      "id": "https://t.me/badfriend_loops/829?comment=1066",
+      "url": "https://t.me/badfriend_loops/829?comment=1066",
+      "quote": "кто вкрячил дизлайк бесплатной тулзе? 😱"
+    },
+    {
+      "id": "https://t.me/whitelist1/7139?comment=571644",
+      "url": "https://t.me/whitelist1/7139?comment=571644",
+      "quote": "Больше 3 месяцем как перестал следить за активностями. Руки опустились в какой-то момент. \nОтрабатывал Open Sea с сундуками. \nЧто-то слышно по наградам?"
+    },
+    {
+      "id": "https://t.me/whitelist1/7139?comment=571647",
+      "url": "https://t.me/whitelist1/7139?comment=571647",
+      "quote": "Солдаут?"
+    },
+    {
+      "id": "https://t.me/whitelist1/7139?comment=571648",
+      "url": "https://t.me/whitelist1/7139?comment=571648",
+      "quote": "да, разобрали"
+    },
+    {
       "id": "https://t.me/whitelist1/7139?comment=571649",
       "url": "https://t.me/whitelist1/7139?comment=571649",
       "quote": "А я чет отвлекся и забы(и) л из-за их сайта глючного"
+    },
+    {
+      "id": "https://t.me/whitelist1/7139?comment=571650",
+      "url": "https://t.me/whitelist1/7139?comment=571650",
+      "quote": "Минт пара баксов был?"
+    },
+    {
+      "id": "https://t.me/whitelist1/7139?comment=571651",
+      "url": "https://t.me/whitelist1/7139?comment=571651",
+      "quote": "6 баксов"
+    },
+    {
+      "id": "https://t.me/krasnovcrypto/3754?comment=284537",
+      "url": "https://t.me/krasnovcrypto/3754?comment=284537",
+      "quote": "вот бы сейчас пивка бахнуть"
+    },
+    {
+      "id": "https://t.me/krasnovcrypto/3754?comment=284540",
+      "url": "https://t.me/krasnovcrypto/3754?comment=284540",
+      "quote": "Вот правильный комментарий )"
+    },
+    {
+      "id": "https://t.me/krasnovcrypto/3754?comment=284541",
+      "url": "https://t.me/krasnovcrypto/3754?comment=284541",
+      "quote": "Самое то 😅"
+    },
+    {
+      "id": "https://t.me/whitelist1/7141?comment=571692",
+      "url": "https://t.me/whitelist1/7141?comment=571692",
+      "quote": "Добро пожаловать в чат Whitelist Media 👍\n\nНаши ресурсы: \n👍Whitelist Database (гайд по инструменту);\n👍Blacklist by Bogdan;\n👍X (Twitter);\n👍Links.\n\nПолезные ссылки: \n👍ProxyWing"
+    },
+    {
+      "id": "https://t.me/whitelist1/7141?comment=571695",
+      "url": "https://t.me/whitelist1/7141?comment=571695",
+      "quote": "А не жирно ли работягам столько?"
+    },
+    {
+      "id": "https://t.me/whitelist1/7141?comment=571696",
+      "url": "https://t.me/whitelist1/7141?comment=571696",
+      "quote": "не забывай что там часть команды еще"
+    },
+    {
+      "id": "https://t.me/whitelist1/7141?comment=571697",
+      "url": "https://t.me/whitelist1/7141?comment=571697",
+      "quote": "Среди работяг?"
+    },
+    {
+      "id": "https://t.me/whitelist1/7141?comment=571698",
+      "url": "https://t.me/whitelist1/7141?comment=571698",
+      "quote": "По этому так жирно?"
+    },
+    {
+      "id": "https://t.me/krasnovcrypto/3754?comment=284547",
+      "url": "https://t.me/krasnovcrypto/3754?comment=284547",
+      "quote": "5к транзакцій как монаде набивать не будем больше ?😁"
+    },
+    {
+      "id": "https://t.me/whitelist1/7141?comment=571700",
+      "url": "https://t.me/whitelist1/7141?comment=571700",
+      "quote": "именно"
+    },
+    {
+      "id": "https://t.me/krasnovcrypto/3754?comment=284548",
+      "url": "https://t.me/krasnovcrypto/3754?comment=284548",
+      "quote": "Можно и 10к набить 😅"
+    },
+    {
+      "id": "https://t.me/krasnovcrypto/3754?comment=284549",
+      "url": "https://t.me/krasnovcrypto/3754?comment=284549",
+      "quote": "я там вообще нихера не набивал и не делал и дали дроп"
+    },
+    {
+      "id": "https://t.me/krasnovcrypto/3754?comment=284550",
+      "url": "https://t.me/krasnovcrypto/3754?comment=284550",
+      "quote": "Так да, там же раздали за активности в других экосистемах )"
+    },
+    {
+      "id": "https://t.me/whitelist1/7141?comment=571704",
+      "url": "https://t.me/whitelist1/7141?comment=571704",
+      "quote": "жирно да но что сделаешь"
+    },
+    {
+      "id": "https://t.me/krasnovcrypto/3754?comment=284552",
+      "url": "https://t.me/krasnovcrypto/3754?comment=284552",
+      "quote": "не, там походу раздали умным, кто не делал monad - у того есть мозги, тем и раздали 😂"
     }
   ],
   "spend_usd": 0.0,
   "numbers_by": "code",
-  "brief_markdown": "# Pulse (news-first): arc, окно 2026-09-16T11:01:01+00:00 – 2026-09-17T11:01:01+00:00\n\n## Коротко\n\n- Arc запущен\n- 🔴Arc сминтили 10 млрд токенов $ARC в Mainnet. Сама же команда пишет, что это техническая необходимость, а не подготовка к дропу. При этом, в X сами байтят холдеров Architect ролей.\n- кстати мейннет Arc, можно будет бриджить через Jumper\n- Сегодня, 16 сентября, Circle запустила мейннет Arc и сразу подключила его к Agent Stack, набору инструментов, который с 11 мая дает ИИ-агенту собственный кошелек.\n- Circle's Arc Stablecoin L1 Goes Live on Mainnet\n\n## События и заявления\n\n- **кстати мейннет Arc, можно будет бриджить через Jumper**\n  публикации 3, каналы 1, известные авторы 0, первоисточники 1, перепечатки 2, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/423093: «кстати мейннет Arc, можно будет бриджить через Jumper»\n  - https://t.me/WEB3_AGGREGATOR/423100: «Arc, the stablecoin-native Layer-1 built by Circle, launched its public mainnet, positioning itself as an \"Economic OS for the internet\" with USDC as the native»\n  - https://t.me/WEB3_AGGREGATOR/423143: «🪙 Circle запустила мейннет Arc — сеть уже принимает транзакции, а за первые два часа в неё завели более $370 млн USDC.»\n- **Circle's Arc Stablecoin L1 Goes Live on Mainnet**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/423100: «Circle's Arc Stablecoin L1 Goes Live on Mainnet»\n  - https://t.me/WEB3_AGGREGATOR/423100: «Arc arrives as a full-stack financial platform rather than a bare chain, shipping assets, applications, interoperability, and Circle platform services from day »\n  - https://t.me/WEB3_AGGREGATOR/423100: «More than 190 institutional and ecosystem teams are already building on Arc, one of the most institutionally backed genesis cohorts the industry has seen, as Ci»\n- **Сегодня, 16 сентября, Circle запустила мейннет Arc и сразу подключила его к Agent Stack, набору инструментов, который с 11 мая дает ИИ-агенту собственный кошелек.**\n  публикации 2, каналы 1, известные авторы 0, первоисточники 2, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/423105: «Сегодня, 16 сентября, Circle запустила мейннет Arc и сразу подключила его к Agent Stack, набору инструментов, который с 11 мая дает ИИ-агенту собственный кошеле»\n  - https://t.me/WEB3_AGGREGATOR/423153: «Первый день мэйннета ARC»\n- **Основная сеть Arc запустилась. Arc и OpenSea запустили бесплатный минт NFT:**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/423117: «Основная сеть Arc запустилась. Arc и OpenSea запустили бесплатный минт NFT:»\n- **📟Arc | фармим раннюю активность в mainnet**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/krasnovcrypto/3754: «📟Arc | фармим раннюю активность в mainnet»\n- **Arc запустил публичный mainnet и уже сейчас мы можем делать быстрые активности.**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/krasnovcrypto/3754: «Arc запустил публичный mainnet и уже сейчас мы можем делать быстрые активности.»\n- **Arc — L1-сеть от Circle для платежей, стейблкоинов и финансовых приложений. В экосистеме уже есть Uniswap, Aave, Morpho, Aerodrome и другие крупные проекты.**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/krasnovcrypto/3754: «Arc — L1-сеть от Circle для платежей, стейблкоинов и финансовых приложений. В экосистеме уже есть Uniswap, Aave, Morpho, Aerodrome и другие крупные проекты.»\n- **🔘Бриджим любой актив в USDC в сеть Arc**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/krasnovcrypto/3754: «🔘Бриджим любой актив в USDC в сеть Arc»\n- **Я вам просто напоминаю, что в 18 по Москве официально ARC запускают и вы уже сейчас можете абсолютно бесплатно создавать свои мемы на https://arc.openfair.app/**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/423121: «Я вам просто напоминаю, что в 18 по Москве официально ARC запускают и вы уже сейчас можете абсолютно бесплатно создавать свои мемы на https://arc.openfair.app/»\n- **🔹 Arc Chain Coin Tracking Is Live**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/423128: «🔹 Arc Chain Coin Tracking Is Live»\n- **Arc запущен**\n  публикации 3, каналы 3, известные авторы 0, первоисточники 3, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/423150: «Arc запущен»\n  - https://t.me/crypto_hd/31472: «▫️Запуск майннета Arc (читать)»\n  - https://t.me/spidersjournal/19007: «• Early on Arc — A chance to launch from day one in a new ecosystem built around stablecoins and global finance. Arc is built by Circle, with founding validator»\n- **🟢Arc вышли в майннет**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/423151: «🟢Arc вышли в майннет»\n  - https://t.me/WEB3_AGGREGATOR/423151: «⛓️Сегодня сеть Arc вышла в майннет, в которой для оплаты газа не нужен отдельный токен, все списывается в $USDC.\nТакже можно сминтить памятный NFT в честь запус»\n- **🟣AKA DN404 — первая коллекция на Arc: NFT + ERC-20 в одном активе, а комиссии идут в RWA**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/423153: «🟣AKA DN404 — первая коллекция на Arc: NFT + ERC-20 в одном активе, а комиссии идут в RWA»\n- **🟣Arclings — первая полностью ончейн 1-bit коллекция на Arc**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/423153: «🟣Arclings — первая полностью ончейн 1-bit коллекция на Arc»\n- **🟣Arc Fly — минт состоится сегодня на OpenSea, будет фри минт на 7.777 NFT**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/423153: «🟣Arc Fly — минт состоится сегодня на OpenSea, будет фри минт на 7.777 NFT»\n- **Arc — community → Zack: поддержка уже запущена.**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/423161: «Arc — community → Zack: поддержка уже запущена.»\n- **🔴Arc сминтили 10 млрд токенов $ARC в Mainnet. Сама же команда пишет, что это техническая необходимость, а не подготовка к дропу. При этом, в X сами байтят холдеров Architect ролей.**\n  публикации 2, каналы 2, известные авторы 0, первоисточники 1, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/whitelist1/7141: «🔴Arc сминтили 10 млрд токенов $ARC в Mainnet. Сама же команда пишет, что это техническая необходимость, а не подготовка к дропу. При этом, в X сами байтят холде»\n  - https://t.me/WEB3_AGGREGATOR/423182: «сминтили 10 млрд токенов $ARC в майннете»\n- **👍Extended запустили RWA Trading Competition на $50 тыс. Набиваем PNL, объем, OI и поднимаемся в лидерборде. В награды войдут топ 100 трейдеров, турнир продлится до 29 сентября.…**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/whitelist1/7141: «👍Extended запустили RWA Trading Competition на $50 тыс. Набиваем PNL, объем, OI и поднимаемся в лидерборде. В награды войдут топ 100 трейдеров, турнир продлится»\n\n## Кто распространяет информацию и какие позиции\n\n- she’s head of product at arc and circle\n  https://t.me/spidersjournal/18984\n- 😐 На самом деле сейчас несется че то очень интересное, потому что и на Robinhood и на Arc и на Zcash, стали выходить коллекции, причем не для виду, а реально с кучей иксов. ну вы сами знаете.\n  https://t.me/WEB3_AGGREGATOR/423142\n- По поводу самого арка - Тут предыдущий список того, что есть на Arc, но там уже на всём сотни процентов плюса. Из того, что не подсвечивал, но тоже может быть интересно:\n  https://t.me/WEB3_AGGREGATOR/423150\n\n## Вопросы, аргументы и опыт участников\n\n- так пока хайповых коллекций и не вышло, не?\n  основание: предмет реплики — сторонний сервис/коллекция экосистемы, не событие темы\n  https://t.me/whitelist1/7139?comment=571605\n- arcadians уменьшили саплай и цену поменяли были\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7139?comment=571615\n- скам значит\n  основание: предмет реплики — сторонний сервис/коллекция экосистемы, не событие темы\n  https://t.me/whitelist1/7139?comment=571617\n- у арклингс сайт вообще лежит)\n  основание: предмет реплики — сторонний сервис/коллекция экосистемы, не событие темы\n  https://t.me/whitelist1/7139?comment=571620\n- https://opensea.io/collection/onchainsharc-791982284\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7139?comment=571626\n- А я чет отвлекся и забы(и) л из-за их сайта глючного\n  основание: предмет реплики — сторонний сервис/коллекция экосистемы, не событие темы\n  https://t.me/whitelist1/7139?comment=571649\n\n## Изменения относительно предыдущего периода\n\n- Появившиеся события: 18.\n- Исчезнувшие события: 6.\n- Изменение охвата источников: +0 / −4 каналов.\n- Комментарии в текущем окне: 92.\n\n## Охват и ограничения\n\n- Публикации 1423, комментарии 92, каналы 14.\n- Режим publication_replay: discovered_at в снимке отсутствует, «впервые системой» не заявляется.\n- Роль источника unknown: в базе нет редакционного реестра.\n- Неизвестные авторы не объединяются.\n- Отсечено после cutoff 2026-09-17T11:01:01+00:00: 6590.\n\n## Основания\n\n- https://t.me/WEB3_AGGREGATOR/423093: «кстати мейннет Arc, можно будет бриджить через Jumper»\n- https://t.me/WEB3_AGGREGATOR/423100: «Arc, the stablecoin-native Layer-1 built by Circle, launched its public mainnet, positioning itself as an \"Economic OS for the internet\" with USDC as the native»\n- https://t.me/WEB3_AGGREGATOR/423143: «🪙 Circle запустила мейннет Arc — сеть уже принимает транзакции, а за первые два часа в неё завели более $370 млн USDC.»\n- https://t.me/WEB3_AGGREGATOR/423100: «Circle's Arc Stablecoin L1 Goes Live on Mainnet»\n- https://t.me/WEB3_AGGREGATOR/423100: «Arc arrives as a full-stack financial platform rather than a bare chain, shipping assets, applications, interoperability, and Circle platform services from day »\n- https://t.me/WEB3_AGGREGATOR/423100: «More than 190 institutional and ecosystem teams are already building on Arc, one of the most institutionally backed genesis cohorts the industry has seen, as Ci»\n- https://t.me/WEB3_AGGREGATOR/423105: «Сегодня, 16 сентября, Circle запустила мейннет Arc и сразу подключила его к Agent Stack, набору инструментов, который с 11 мая дает ИИ-агенту собственный кошеле»\n- https://t.me/WEB3_AGGREGATOR/423153: «Первый день мэйннета ARC»\n- https://t.me/WEB3_AGGREGATOR/423117: «Основная сеть Arc запустилась. Arc и OpenSea запустили бесплатный минт NFT:»\n- https://t.me/krasnovcrypto/3754: «📟Arc | фармим раннюю активность в mainnet»\n- https://t.me/krasnovcrypto/3754: «Arc запустил публичный mainnet и уже сейчас мы можем делать быстрые активности.»\n- https://t.me/krasnovcrypto/3754: «Arc — L1-сеть от Circle для платежей, стейблкоинов и финансовых приложений. В экосистеме уже есть Uniswap, Aave, Morpho, Aerodrome и другие крупные проекты.»\n- https://t.me/krasnovcrypto/3754: «🔘Бриджим любой актив в USDC в сеть Arc»\n- https://t.me/WEB3_AGGREGATOR/423121: «Я вам просто напоминаю, что в 18 по Москве официально ARC запускают и вы уже сейчас можете абсолютно бесплатно создавать свои мемы на https://arc.openfair.app/»\n- https://t.me/WEB3_AGGREGATOR/423128: «🔹 Arc Chain Coin Tracking Is Live»\n- https://t.me/WEB3_AGGREGATOR/423150: «Arc запущен»\n- https://t.me/crypto_hd/31472: «▫️Запуск майннета Arc (читать)»\n- https://t.me/spidersjournal/19007: «• Early on Arc — A chance to launch from day one in a new ecosystem built around stablecoins and global finance. Arc is built by Circle, with founding validator»\n- https://t.me/WEB3_AGGREGATOR/423151: «🟢Arc вышли в майннет»\n- https://t.me/WEB3_AGGREGATOR/423151: «⛓️Сегодня сеть Arc вышла в майннет, в которой для оплаты газа не нужен отдельный токен, все списывается в $USDC.\nТакже можно сминтить памятный NFT в честь запус»\n",
+  "brief_markdown": "# Pulse (news-first): arc, окно 2026-09-16T11:01:01+00:00 – 2026-09-17T11:01:01+00:00\n\n## Коротко\n\n- Arc запущен\n- 🔴Arc сминтили 10 млрд токенов $ARC в Mainnet. Сама же команда пишет, что это техническая необходимость, а не подготовка к дропу. При этом, в X сами байтят холдеров Architect ролей.\n- кстати мейннет Arc, можно будет бриджить через Jumper\n- Circle's Arc Stablecoin L1 Goes Live on Mainnet\n- Arc arrives as a full-stack financial platform rather than a bare chain, shipping assets, applications, interoperability, and Circle platform services from day one.\n\n## События и заявления\n\n- **кстати мейннет Arc, можно будет бриджить через Jumper**\n  публикации 3, каналы 1, известные авторы 0, первоисточники 1, перепечатки 2, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/423093: «кстати мейннет Arc, можно будет бриджить через Jumper»\n  - https://t.me/WEB3_AGGREGATOR/423100: «Arc, the stablecoin-native Layer-1 built by Circle, launched its public mainnet, positioning itself as an \"Economic OS for the internet\" with USDC as the native»\n  - https://t.me/WEB3_AGGREGATOR/423143: «🪙 Circle запустила мейннет Arc — сеть уже принимает транзакции, а за первые два часа в неё завели более $370 млн USDC.»\n- **Circle's Arc Stablecoin L1 Goes Live on Mainnet**\n  публикации 2, каналы 1, известные авторы 0, первоисточники 2, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/423100: «Circle's Arc Stablecoin L1 Goes Live on Mainnet»\n  - https://t.me/WEB3_AGGREGATOR/423153: «Первый день мэйннета ARC»\n- **Arc arrives as a full-stack financial platform rather than a bare chain, shipping assets, applications, interoperability, and Circle platform services from day one.**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/423100: «Arc arrives as a full-stack financial platform rather than a bare chain, shipping assets, applications, interoperability, and Circle platform services from day »\n- **More than 190 institutional and ecosystem teams are already building on Arc, one of the most institutionally backed genesis cohorts the industry has seen, as Circle pushes…**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/423100: «More than 190 institutional and ecosystem teams are already building on Arc, one of the most institutionally backed genesis cohorts the industry has seen, as Ci»\n- **Сегодня, 16 сентября, Circle запустила мейннет Arc и сразу подключила его к Agent Stack, набору инструментов, который с 11 мая дает ИИ-агенту собственный кошелек.**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/423105: «Сегодня, 16 сентября, Circle запустила мейннет Arc и сразу подключила его к Agent Stack, набору инструментов, который с 11 мая дает ИИ-агенту собственный кошеле»\n- **Основная сеть Arc запустилась. Arc и OpenSea запустили бесплатный минт NFT:**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/423117: «Основная сеть Arc запустилась. Arc и OpenSea запустили бесплатный минт NFT:»\n- **📟Arc | фармим раннюю активность в mainnet**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/krasnovcrypto/3754: «📟Arc | фармим раннюю активность в mainnet»\n- **Arc запустил публичный mainnet и уже сейчас мы можем делать быстрые активности.**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/krasnovcrypto/3754: «Arc запустил публичный mainnet и уже сейчас мы можем делать быстрые активности.»\n- **Arc — L1-сеть от Circle для платежей, стейблкоинов и финансовых приложений. В экосистеме уже есть Uniswap, Aave, Morpho, Aerodrome и другие крупные проекты.**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/krasnovcrypto/3754: «Arc — L1-сеть от Circle для платежей, стейблкоинов и финансовых приложений. В экосистеме уже есть Uniswap, Aave, Morpho, Aerodrome и другие крупные проекты.»\n- **🔘Бриджим любой актив в USDC в сеть Arc**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/krasnovcrypto/3754: «🔘Бриджим любой актив в USDC в сеть Arc»\n- **Я вам просто напоминаю, что в 18 по Москве официально ARC запускают и вы уже сейчас можете абсолютно бесплатно создавать свои мемы на https://arc.openfair.app/**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/423121: «Я вам просто напоминаю, что в 18 по Москве официально ARC запускают и вы уже сейчас можете абсолютно бесплатно создавать свои мемы на https://arc.openfair.app/»\n- **🔹 Arc Chain Coin Tracking Is Live**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/423128: «🔹 Arc Chain Coin Tracking Is Live»\n- **Arc запущен**\n  публикации 3, каналы 3, известные авторы 0, первоисточники 3, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/423150: «Arc запущен»\n  - https://t.me/crypto_hd/31472: «▫️Запуск майннета Arc (читать)»\n  - https://t.me/spidersjournal/19007: «• Early on Arc — A chance to launch from day one in a new ecosystem built around stablecoins and global finance. Arc is built by Circle, with founding validator»\n- **🟢Arc вышли в майннет**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/423151: «🟢Arc вышли в майннет»\n  - https://t.me/WEB3_AGGREGATOR/423151: «⛓️Сегодня сеть Arc вышла в майннет, в которой для оплаты газа не нужен отдельный токен, все списывается в $USDC.\nТакже можно сминтить памятный NFT в честь запус»\n- **🟣AKA DN404 — первая коллекция на Arc: NFT + ERC-20 в одном активе, а комиссии идут в RWA**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/423153: «🟣AKA DN404 — первая коллекция на Arc: NFT + ERC-20 в одном активе, а комиссии идут в RWA»\n- **🟣Arclings — первая полностью ончейн 1-bit коллекция на Arc**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/423153: «🟣Arclings — первая полностью ончейн 1-bit коллекция на Arc»\n- **🟣Arc Fly — минт состоится сегодня на OpenSea, будет фри минт на 7.777 NFT**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/423153: «🟣Arc Fly — минт состоится сегодня на OpenSea, будет фри минт на 7.777 NFT»\n- **Arc — community → Zack: поддержка уже запущена.**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/423161: «Arc — community → Zack: поддержка уже запущена.»\n- **🔴Arc сминтили 10 млрд токенов $ARC в Mainnet. Сама же команда пишет, что это техническая необходимость, а не подготовка к дропу. При этом, в X сами байтят холдеров Architect ролей.**\n  публикации 2, каналы 2, известные авторы 0, первоисточники 1, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/whitelist1/7141: «🔴Arc сминтили 10 млрд токенов $ARC в Mainnet. Сама же команда пишет, что это техническая необходимость, а не подготовка к дропу. При этом, в X сами байтят холде»\n  - https://t.me/WEB3_AGGREGATOR/423182: «сминтили 10 млрд токенов $ARC в майннете»\n- **👍Extended запустили RWA Trading Competition на $50 тыс. Набиваем PNL, объем, OI и поднимаемся в лидерборде. В награды войдут топ 100 трейдеров, турнир продлится до 29 сентября.…**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/whitelist1/7141: «👍Extended запустили RWA Trading Competition на $50 тыс. Набиваем PNL, объем, OI и поднимаемся в лидерборде. В награды войдут топ 100 трейдеров, турнир продлится»\n\n## Кто распространяет информацию и какие позиции\n\n- she’s head of product at arc and circle\n  https://t.me/spidersjournal/18984\n- 😐 На самом деле сейчас несется че то очень интересное, потому что и на Robinhood и на Arc и на Zcash, стали выходить коллекции, причем не для виду, а реально с кучей иксов. ну вы сами знаете.\n  https://t.me/WEB3_AGGREGATOR/423142\n- По поводу самого арка - Тут предыдущий список того, что есть на Arc, но там уже на всём сотни процентов плюса. Из того, что не подсвечивал, но тоже может быть интересно:\n  https://t.me/WEB3_AGGREGATOR/423150\n\n## Вопросы, аргументы и опыт участников\n\n- Добро пожаловать в чат Whitelist Media 👍\n\nНаши ресурсы: \n👍Whitelist Database (гайд по инструменту);\n👍Blacklist by Bogdan;\n👍X (Twitter);\n👍Links.\n\nПолезные ссылки: \n👍ProxyWing (прокси): по коду whitelist скидка 10%;\n👍Чат взаимных подписок\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7139?comment=571594\n- Крутая подборка, всё четко по времени и ссылкам\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7139?comment=571595\n- время ректоваться\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7139?comment=571596\n- панки уже вышли\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7139?comment=571597\n- в минус\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7139?comment=571598\n- фига, у меня даж фкфс на арклингс откуда-то))\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7139?comment=571599\n- ооо, гл\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7139?comment=571600\n- да щас уже нет проблем с этим, что фкфс, что гарант. хотя на арк первый раз, хз как сеть там вообще.\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7139?comment=571601\n- @Izvinites не подскажешь что по комиссиям в арке?\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7139?comment=571602\n- Пока что копейки, но могут разогнаться на минтах\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7139?comment=571603\n- пока на минтах нет желающих\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7139?comment=571604\n- так пока хайповых коллекций и не вышло, не?\n  основание: предмет реплики — сторонний сервис/коллекция экосистемы, не событие темы\n  https://t.me/whitelist1/7139?comment=571605\n- пока нет таких)))\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7139?comment=571606\n- Богдан продал вчера Rare Friends? Мне тоже слот достался, сегодня мб что-то на Арк минтану\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7139?comment=571607\n- Да, поспешил, за 3к слил\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7139?comment=571611\n- я за 4300, идеально было бы продать за 5к)\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7139?comment=571612\n- Там и 7500 было\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7139?comment=571613\n- давали только по флору слить\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7139?comment=571614\n- arcadians уменьшили саплай и цену поменяли были\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7139?comment=571615\n- несите следующего))\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7139?comment=571616\n- скам значит\n  основание: предмет реплики — сторонний сервис/коллекция экосистемы, не событие темы\n  https://t.me/whitelist1/7139?comment=571617\n- там саплай еще меньше стал😁 3333)\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7139?comment=571618\n- ажиотажа нет, они так могут делать, арк не зашел\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7139?comment=571619\n- у арклингс сайт вообще лежит)\n  основание: предмет реплики — сторонний сервис/коллекция экосистемы, не событие темы\n  https://t.me/whitelist1/7139?comment=571620\n- там даже кнопки минт нет)))\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7139?comment=571621\n- лоадинг же по-русски написано))))\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7139?comment=571622\n- лучше бы они делали на OS минт)\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7139?comment=571623\n- акулы вот вроде норм зашли\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7139?comment=571624\n- а что за акулы?\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7139?comment=571625\n- https://opensea.io/collection/onchainsharc-791982284\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7139?comment=571626\n- что сливать? или держать?\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7139?comment=571641\n- кто вкрячил дизлайк бесплатной тулзе? 😱\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/badfriend_loops/829?comment=1066\n- Больше 3 месяцем как перестал следить за активностями. Руки опустились в какой-то момент. \nОтрабатывал Open Sea с сундуками. \nЧто-то слышно по наградам?\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7139?comment=571644\n- Солдаут?\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7139?comment=571647\n- да, разобрали\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7139?comment=571648\n- А я чет отвлекся и забы(и) л из-за их сайта глючного\n  основание: предмет реплики — сторонний сервис/коллекция экосистемы, не событие темы\n  https://t.me/whitelist1/7139?comment=571649\n- Минт пара баксов был?\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7139?comment=571650\n- 6 баксов\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7139?comment=571651\n- вот бы сейчас пивка бахнуть\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/krasnovcrypto/3754?comment=284537\n- Вот правильный комментарий )\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/krasnovcrypto/3754?comment=284540\n- Самое то 😅\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/krasnovcrypto/3754?comment=284541\n- Добро пожаловать в чат Whitelist Media 👍\n\nНаши ресурсы: \n👍Whitelist Database (гайд по инструменту);\n👍Blacklist by Bogdan;\n👍X (Twitter);\n👍Links.\n\nПолезные ссылки: \n👍ProxyWing (прокси): по коду whitelist скидка 10%;\n👍Чат взаимных подписок\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7141?comment=571692\n- \n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7141?comment=571693\n- А не жирно ли работягам столько?\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7141?comment=571695\n- не забывай что там часть команды еще\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7141?comment=571696\n- Среди работяг?\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7141?comment=571697\n- По этому так жирно?\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7141?comment=571698\n- 5к транзакцій как монаде набивать не будем больше ?😁\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/krasnovcrypto/3754?comment=284547\n- именно\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7141?comment=571700\n- Можно и 10к набить 😅\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/krasnovcrypto/3754?comment=284548\n- я там вообще нихера не набивал и не делал и дали дроп\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/krasnovcrypto/3754?comment=284549\n- Так да, там же раздали за активности в других экосистемах )\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/krasnovcrypto/3754?comment=284550\n- жирно да но что сделаешь\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7141?comment=571704\n- не, там походу раздали умным, кто не делал monad - у того есть мозги, тем и раздали 😂\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/krasnovcrypto/3754?comment=284552\n\n## Изменения относительно предыдущего периода\n\n- Появившиеся события: 20.\n- Исчезнувшие события: 6.\n- Изменение охвата источников: +0 / −4 каналов.\n- Комментарии по теме: 54 в текущем окне, 29 в предыдущем.\n\n## Охват и ограничения\n\n- Публикации 1423, комментарии 92, каналы 14.\n- Режим publication_replay: discovered_at в снимке отсутствует, «впервые системой» не заявляется.\n- Роль источника unknown: в базе нет редакционного реестра.\n- Неизвестные авторы не объединяются.\n- Отсечено после cutoff 2026-09-17T11:01:01+00:00: 6590.\n\n## Основания\n\n- https://t.me/WEB3_AGGREGATOR/423093: «кстати мейннет Arc, можно будет бриджить через Jumper»\n- https://t.me/WEB3_AGGREGATOR/423100: «Arc, the stablecoin-native Layer-1 built by Circle, launched its public mainnet, positioning itself as an \"Economic OS for the internet\" with USDC as the native»\n- https://t.me/WEB3_AGGREGATOR/423143: «🪙 Circle запустила мейннет Arc — сеть уже принимает транзакции, а за первые два часа в неё завели более $370 млн USDC.»\n- https://t.me/WEB3_AGGREGATOR/423100: «Circle's Arc Stablecoin L1 Goes Live on Mainnet»\n- https://t.me/WEB3_AGGREGATOR/423153: «Первый день мэйннета ARC»\n- https://t.me/WEB3_AGGREGATOR/423100: «Arc arrives as a full-stack financial platform rather than a bare chain, shipping assets, applications, interoperability, and Circle platform services from day »\n- https://t.me/WEB3_AGGREGATOR/423100: «More than 190 institutional and ecosystem teams are already building on Arc, one of the most institutionally backed genesis cohorts the industry has seen, as Ci»\n- https://t.me/WEB3_AGGREGATOR/423105: «Сегодня, 16 сентября, Circle запустила мейннет Arc и сразу подключила его к Agent Stack, набору инструментов, который с 11 мая дает ИИ-агенту собственный кошеле»\n- https://t.me/WEB3_AGGREGATOR/423117: «Основная сеть Arc запустилась. Arc и OpenSea запустили бесплатный минт NFT:»\n- https://t.me/krasnovcrypto/3754: «📟Arc | фармим раннюю активность в mainnet»\n- https://t.me/krasnovcrypto/3754: «Arc запустил публичный mainnet и уже сейчас мы можем делать быстрые активности.»\n- https://t.me/krasnovcrypto/3754: «Arc — L1-сеть от Circle для платежей, стейблкоинов и финансовых приложений. В экосистеме уже есть Uniswap, Aave, Morpho, Aerodrome и другие крупные проекты.»\n- https://t.me/krasnovcrypto/3754: «🔘Бриджим любой актив в USDC в сеть Arc»\n- https://t.me/WEB3_AGGREGATOR/423121: «Я вам просто напоминаю, что в 18 по Москве официально ARC запускают и вы уже сейчас можете абсолютно бесплатно создавать свои мемы на https://arc.openfair.app/»\n- https://t.me/WEB3_AGGREGATOR/423128: «🔹 Arc Chain Coin Tracking Is Live»\n- https://t.me/WEB3_AGGREGATOR/423150: «Arc запущен»\n- https://t.me/crypto_hd/31472: «▫️Запуск майннета Arc (читать)»\n- https://t.me/spidersjournal/19007: «• Early on Arc — A chance to launch from day one in a new ecosystem built around stablecoins and global finance. Arc is built by Circle, with founding validator»\n- https://t.me/WEB3_AGGREGATOR/423151: «🟢Arc вышли в майннет»\n- https://t.me/WEB3_AGGREGATOR/423151: «⛓️Сегодня сеть Arc вышла в майннет, в которой для оплаты газа не нужен отдельный токен, все списывается в $USDC.\nТакже можно сминтить памятный NFT в честь запус»\n",
   "model": "deepseek/deepseek-v4-flash",
   "llm": {
     "calls": 0,
-    "cache_hits": 118,
+    "cache_hits": 109,
     "spent_usd": 0.0,
     "errors": []
   }

@@ -24,6 +24,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from news_pulse_build import NO_REACTION, render_markdown  # noqa: E402
+from news_pulse_link import BASES  # noqa: E402
 
 NUMBER = re.compile(r"\d+(?:[.,]\d+)?")
 
@@ -81,6 +82,37 @@ def _claim(kind: str, text: str, sources: list[str], where: str) -> dict:
     }
 
 
+def _structural(kind: str, where: str, text: str, ok: bool) -> dict:
+    return {"kind": kind, "where": where, "text": text, "source_found": True,
+            "verbatim": ok, "numbers_from_source": True, "grounded": ok}
+
+
+def _link_claims(pulse: dict) -> list[dict]:
+    """A comment link is a claim too: its basis must be one the linker emits for that target,
+    and a named target must exist in this run."""
+    event_ids = {ev.get("event_id") for ev in pulse.get("events") or []}
+    out = []
+    for row in pulse.get("discussion") or []:
+        if not row.get("url"):
+            continue  # the "no reaction found" placeholder
+        target, target_id = row.get("target"), row.get("target_id")
+        ok = BASES.get(row.get("basis") or "") == target
+        if target == "event" and target_id is not None:
+            ok = ok and target_id in event_ids
+        out.append(_structural("discussion_basis", row["url"], f"{target}: {row.get('basis')}", ok))
+    return out
+
+
+def _short_claims(pulse: dict) -> list[dict]:
+    """«Коротко» may only repeat event headlines or discussion texts, which are grounded themselves."""
+    allowed = {ev.get("headline") for ev in pulse.get("events") or []}
+    allowed |= {row.get("text") for row in pulse.get("discussion") or [] if row.get("url")}
+    return [
+        _structural("short_observation", "short_observations", text, text in allowed)
+        for text in pulse.get("short_observations") or []
+    ]
+
+
 def check_run(run: Path, texts: dict[str, str]) -> dict:
     pulse = json.loads((run / "pulse.json").read_text(encoding="utf-8"))
     brief = (run / "brief.md").read_text(encoding="utf-8")
@@ -136,6 +168,8 @@ def check_run(run: Path, texts: dict[str, str]) -> dict:
             text = row.get(field) or ""
             if text and text != NO_REACTION:
                 claims.append(_claim(f"discussion_{field}", text, [texts.get(row["url"], "")], row["url"]))
+    claims += _link_claims(pulse)
+    claims += _short_claims(pulse)
     for pos in pulse.get("distribution_and_positions") or []:
         for field in ("text", "quote"):
             text = pos.get(field) or ""

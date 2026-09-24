@@ -16,11 +16,11 @@ MD5 БД до/после: `8618099125a806df376354286ccd982e` / `8618099125a806df
 | Ошибочное объединение отрицательных пар | 0 | 12 | = 0 ошибок | pass |
 | Полнота объединения положительных пар | 9 | 12 | 0.9 | fail |
 | Правильность заявленных связей комментарий → событие | 1 | 1 | 0.9 | pass |
-| Записи и ссылки вне окна | 0 | 59815 | = 0 ошибок | pass |
+| Записи и ссылки вне окна | 0 | 71903 | = 0 ошибок | unverified |
 | Граничные пробы [start,end) | 0 | 0 | 1 | unverified |
-| Правильность числовых агрегатов | 24506 | 24506 | 1 | pass |
-| Подтверждённость фактов брифа | 8840 | 8840 | 0.95 | pass |
-| Выдуманные цены, даты, авторство, официальное подтверждение | 0 | 8840 | = 0 ошибок | pass |
+| Правильность числовых агрегатов | 25153 | 25153 | 1 | pass |
+| Подтверждённость фактов брифа | 17949 | 17949 | 0.95 | pass |
+| Выдуманные цены, даты, авторство, официальное подтверждение | 0 | 17949 | = 0 ошибок | pass |
 | Согласие сегментных классов | 7 | 43 | нет | unverified |
 | Согласие происхождения | 18 | 43 | нет | unverified |
 | Согласие роли источника | 27 | 43 | нет | unverified |
@@ -79,7 +79,30 @@ MD5 БД до/после: `8618099125a806df376354286ccd982e` / `8618099125a806df
 
 Числитель — нарушения; знаменатель — проверенные вхождения времени/ссылок. Включает время < start; явная предыстория отдельно.
 
-Ошибок не обнаружено.
+- Не проверено: {"run": "artifacts/news-pulse/zec/2026-09-09..2026-09-23", "path": "pulse.discussion[54].text", "links": ["https://t.me/icodrops_sergey/2105"], "reason": "В БД нет времени ссылки"}
+- Не проверено: {"run": "artifacts/news-pulse/zec/2026-09-09..2026-09-23", "path": "pulse.discussion[54].quote", "links": ["https://t.me/icodrops_sergey/2105"], "reason": "В БД нет времени ссылки"}
+- Не проверено: {"run": "artifacts/news-pulse/zec/2026-09-09..2026-09-23", "path": "pulse.evidence[261].quote", "links": ["https://t.me/icodrops_sergey/2105"], "reason": "В БД нет времени ссылки"}
+- Не проверено: {"run": "artifacts/news-pulse/zec/2026-09-09..2026-09-23", "path": "pulse.brief_markdown", "links": ["https://t.me/icodrops_sergey/2105"], "reason": "В БД нет времени ссылки"}
+- Не проверено: {"run": "artifacts/news-pulse/zec/2026-09-09T00-00-00-00-00..2026-09-21T06-04-31-00-00", "path": "pulse.discussion[54].text", "links": ["https://t.me/icodrops_sergey/2105"], "reason": "В БД нет времени ссылки"}
+- Не проверено: {"run": "artifacts/news-pulse/zec/2026-09-09T00-00-00-00-00..2026-09-21T06-04-31-00-00", "path": "pulse.discussion[54].quote", "links": ["https://t.me/icodrops_sergey/2105"], "reason": "В БД нет времени ссылки"}
+- Не проверено: {"run": "artifacts/news-pulse/zec/2026-09-09T00-00-00-00-00..2026-09-21T06-04-31-00-00", "path": "pulse.evidence[205].quote", "links": ["https://t.me/icodrops_sergey/2105"], "reason": "В БД нет времени ссылки"}
+- Не проверено: {"run": "artifacts/news-pulse/zec/2026-09-09T00-00-00-00-00..2026-09-21T06-04-31-00-00", "path": "pulse.brief_markdown", "links": ["https://t.me/icodrops_sergey/2105"], "reason": "В БД нет времени ссылки"}
+- Не проверено: {"run": "artifacts/news-pulse/zec/2026-09-09T00-00-00-00-00..2026-09-21T06-04-32-00-00", "path": "pulse.discussion[54].text", "links": ["https://t.me/icodrops_sergey/2105"], "reason": "В БД нет времени ссылки"}
+- Не проверено: {"run": "artifacts/news-pulse/zec/2026-09-09T00-00-00-00-00..2026-09-21T06-04-32-00-00", "path": "pulse.discussion[54].quote", "links": ["https://t.me/icodrops_sergey/2105"], "reason": "В БД нет времени ссылки"}
+- Не проверено: {"run": "artifacts/news-pulse/zec/2026-09-09T00-00-00-00-00..2026-09-21T06-04-32-00-00", "path": "pulse.evidence[205].quote", "links": ["https://t.me/icodrops_sergey/2105"], "reason": "В БД нет времени ссылки"}
+- Не проверено: {"run": "artifacts/news-pulse/zec/2026-09-09T00-00-00-00-00..2026-09-21T06-04-32-00-00", "path": "pulse.brief_markdown", "links": ["https://t.me/icodrops_sergey/2105"], "reason": "В БД нет времени ссылки"}
+- Не проверено: {"run": "artifacts/news-pulse/zec/2026-09-09T00-00-00-00-00..2026-09-21T06-04-33-00-00", "path": "pulse.discussion[54].text", "links": ["https://t.me/icodrops_sergey/2105"], "reason": "В БД нет времени ссылки"}
+- Не проверено: {"run": "artifacts/news-pulse/zec/2026-09-09T00-00-00-00-00..2026-09-21T06-04-33-00-00", "path": "pulse.discussion[54].quote", "links": ["https://t.me/icodrops_sergey/2105"], "reason": "В БД нет времени ссылки"}
+- Не проверено: {"run": "artifacts/news-pulse/zec/2026-09-09T00-00-00-00-00..2026-09-21T06-04-33-00-00", "path": "pulse.evidence[208].quote", "links": ["https://t.me/icodrops_sergey/2105"], "reason": "В БД нет времени ссылки"}
+- Не проверено: {"run": "artifacts/news-pulse/zec/2026-09-09T00-00-00-00-00..2026-09-21T06-04-33-00-00", "path": "pulse.brief_markdown", "links": ["https://t.me/icodrops_sergey/2105"], "reason": "В БД нет времени ссылки"}
+- Не проверено: {"run": "artifacts/news-pulse/zec/2026-09-16T06-10-19-00-00..2026-09-21T06-04-32-00-00", "path": "pulse.discussion[35].text", "links": ["https://t.me/icodrops_sergey/2105"], "reason": "В БД нет времени ссылки"}
+- Не проверено: {"run": "artifacts/news-pulse/zec/2026-09-16T06-10-19-00-00..2026-09-21T06-04-32-00-00", "path": "pulse.discussion[35].quote", "links": ["https://t.me/icodrops_sergey/2105"], "reason": "В БД нет времени ссылки"}
+- Не проверено: {"run": "artifacts/news-pulse/zec/2026-09-16T06-10-19-00-00..2026-09-21T06-04-32-00-00", "path": "pulse.evidence[156].quote", "links": ["https://t.me/icodrops_sergey/2105"], "reason": "В БД нет времени ссылки"}
+- Не проверено: {"run": "artifacts/news-pulse/zec/2026-09-16T06-10-19-00-00..2026-09-21T06-04-32-00-00", "path": "pulse.brief_markdown", "links": ["https://t.me/icodrops_sergey/2105"], "reason": "В БД нет времени ссылки"}
+- Не проверено: {"run": "artifacts/news-pulse/zec/2026-09-17..2026-09-19", "path": "pulse.discussion[35].text", "links": ["https://t.me/icodrops_sergey/2105"], "reason": "В БД нет времени ссылки"}
+- Не проверено: {"run": "artifacts/news-pulse/zec/2026-09-17..2026-09-19", "path": "pulse.discussion[35].quote", "links": ["https://t.me/icodrops_sergey/2105"], "reason": "В БД нет времени ссылки"}
+- Не проверено: {"run": "artifacts/news-pulse/zec/2026-09-17..2026-09-19", "path": "pulse.evidence[116].quote", "links": ["https://t.me/icodrops_sergey/2105"], "reason": "В БД нет времени ссылки"}
+- Не проверено: {"run": "artifacts/news-pulse/zec/2026-09-17..2026-09-19", "path": "pulse.brief_markdown", "links": ["https://t.me/icodrops_sergey/2105"], "reason": "В БД нет времени ссылки"}
 
 ## Граничные пробы [start,end)
 
