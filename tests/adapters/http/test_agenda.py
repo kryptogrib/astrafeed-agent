@@ -122,6 +122,7 @@ async def test_agenda_search_story_share_one_snapshot():
     page = await _get(app, "/agenda?format=html")
     assert page.headers["content-type"].startswith("text/html")
     assert "AstraFeed" in page.text
+    assert 'rel="icon" href="/favicon.ico"' in page.text
     assert "POST /a2mcp/astrafeed" in page.text
     assert '<a href="/stories/st-eth?format=html&amp;snapshot_id=snap-demo">' in page.text
     assert '<a href="https://t.me/alpha/10">@alpha</a>' in page.text

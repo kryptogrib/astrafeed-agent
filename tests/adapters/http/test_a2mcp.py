@@ -106,3 +106,11 @@ async def test_preparing_stays_503():
 async def test_not_mounted_without_agenda(path):
     app = create_app(pulse=lambda topic, window=None: {"brief_markdown": "x"})
     assert (await _post(app, path)).status_code in (404, 405)
+
+
+async def test_favicon_is_an_ico():
+    transport = httpx.ASGITransport(app=create_app())
+    async with httpx.AsyncClient(transport=transport, base_url="http://test") as client:
+        icon = await client.get("/favicon.ico")
+    assert icon.status_code == 200
+    assert icon.content[:4] == b"\x00\x00\x01\x00"

@@ -731,6 +731,7 @@ def _html_page(title: str, body: str) -> str:
         '<meta name="description" content="Live crypto agenda with source links.">'
         f'<meta property="og:title" content="{escape(title)}">'
         '<meta property="og:description" content="Crypto stories with source quotes and links.">'
+        '<link rel="icon" href="/favicon.ico" type="image/x-icon">'
         f"<title>{escape(title)}</title><style>{_PAGE_CSS}</style></head>"
         f"<body><main>{body}</main></body></html>"
     )

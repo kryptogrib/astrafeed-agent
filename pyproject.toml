@@ -33,6 +33,9 @@ build-backend = "hatchling.build"
 [tool.hatch.build.targets.wheel]
 packages = ["src/astrafeed"]
 
+[tool.hatch.build.targets.wheel.force-include]
+"src/astrafeed/adapters/http/static/favicon.ico" = "astrafeed/adapters/http/static/favicon.ico"
+
 [tool.pytest.ini_options]
 asyncio_mode = "auto"
 testpaths = ["tests"]
