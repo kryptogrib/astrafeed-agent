@@ -13,7 +13,13 @@ import logging
 import re
 from dataclasses import replace
 
-from astrafeed.domain.agenda import Discussion, Snapshot, StoryCard, StoryDetail
+from astrafeed.domain.agenda import (
+    Discussion,
+    Snapshot,
+    StoryCard,
+    StoryDetail,
+    numbers_are_grounded,
+)
 from astrafeed.ports.agenda import Translator
 
 _log = logging.getLogger(__name__)
@@ -76,21 +82,26 @@ class EnglishLocalizer:
                 if english.strip() and not needs_translation(english):
                     self._cache[source] = english.strip()
 
-    def _english(self, text: str) -> str:
+    def _english(self, text: str, evidence: list[str] | None = None) -> str:
         """Translation of a non-English text, or "" when none is needed or known."""
-        return self._cache.get(text, "") if needs_translation(text) else ""
+        translated = self._cache.get(text, "") if needs_translation(text) else ""
+        if translated and evidence is not None and not numbers_are_grounded(translated, evidence):
+            return ""
+        return translated
 
     def _card(self, card: StoryCard) -> StoryCard:
+        quotes = [claim.quote for claim in card.claims]
         discussion = card.discussion
         if discussion is not None:
             discussion = self._discussion(discussion)
         return replace(
             card,
-            title=self._english(card.title) or card.title,
+            title=self._english(card.title, quotes) or card.title,
             entities=tuple(dict.fromkeys(self._english(e) or e for e in card.entities)),
-            explanation=self._english(card.explanation) or card.explanation,
+            explanation=self._english(card.explanation, quotes) or card.explanation,
             claims=tuple(
-                replace(claim, translation=self._english(claim.quote)) for claim in card.claims
+                replace(claim, translation=self._english(claim.quote, [claim.quote]))
+                for claim in card.claims
             ),
             discussion=discussion,
         )
