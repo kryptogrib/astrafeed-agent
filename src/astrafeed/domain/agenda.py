@@ -171,6 +171,7 @@ def select_agenda(
         if c.get("eligible", True) and int(c.get("current_channels") or 0) >= MIN_CHANNELS
     ]
     ranked = rank_agenda_stories([{**c, "eligible": True} for c in multi])
+
     def limit_entities(items: list[dict[str, Any]]) -> list[dict[str, Any]]:
         selected: list[dict[str, Any]] = []
         counts: dict[str, int] = {}
@@ -357,6 +358,31 @@ class ClaimCard:
 
 
 @dataclass(frozen=True)
+class CommentQuote:
+    text: str
+    link: str
+    channel_ref: str
+
+
+@dataclass(frozen=True)
+class Discussion:
+    """What readers say under a story's posts. Never counted as a channel vote."""
+
+    comment_count: int
+    read_count: int
+    points: tuple[str, ...] = ()
+    quotes: tuple[CommentQuote, ...] = ()
+
+
+@dataclass(frozen=True)
+class DiscussionDigest:
+    """Summarizer output: Russian takeaways and indices of representative comments."""
+
+    points: tuple[str, ...]
+    quote_indices: tuple[int, ...] = ()
+
+
+@dataclass(frozen=True)
 class StoryCard:
     story_id: str
     title: str
@@ -374,6 +400,7 @@ class StoryCard:
     retellings: int = 0
     event_count: int = 0
     position_count: int = 0
+    discussion: Discussion | None = None
 
 
 @dataclass(frozen=True)

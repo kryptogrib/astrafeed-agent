@@ -21,8 +21,10 @@ from astrafeed.adapters.repository.sqlite.models import (
 from astrafeed.domain.agenda import (
     Claim,
     ClaimCard,
+    CommentQuote,
     CoverageInfo,
     CycleState,
+    Discussion,
     Entity,
     Event,
     EventCard,
@@ -48,8 +50,10 @@ _TYPES = {
     for cls in (
         Claim,
         ClaimCard,
+        CommentQuote,
         CoverageInfo,
         CycleState,
+        Discussion,
         Entity,
         Event,
         EventCard,

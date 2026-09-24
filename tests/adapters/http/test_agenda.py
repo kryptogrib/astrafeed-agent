@@ -193,3 +193,51 @@ def test_agenda_page_escapes_text_and_drops_unsafe_links():
     assert "javascript:" not in page
     assert "снимок устарел; обработка ещё идёт" in page
     assert "рост н/д" in page and "впервые 25.09 09:14 UTC" in page
+
+
+def test_discussion_is_rendered_in_markdown_and_html_and_escaped():
+    from astrafeed.application.agenda_query import render_agenda_html, render_agenda_md
+
+    card = {
+        "story_id": "s1",
+        "title": "Bitget",
+        "entities": [],
+        "current_channels": 3,
+        "growth": 1,
+        "first_seen": "2026-09-25T09:14:00+00:00",
+        "explanation": "e",
+        "claims": [],
+        "discussion": {
+            "comment_count": 214,
+            "read_count": 80,
+            "points": ["Многие <b>не верят</b> во взлом"],
+            "quotes": [
+                {"text": "вывел всё вчера", "link": "https://t.me/a/1?comment=5", "channel": "@a"},
+                {"text": "второй", "link": "javascript:alert(1)", "channel": "@b"},
+            ],
+        },
+    }
+    payload = {
+        "snapshot_id": "snap",
+        "t": "2026-09-25T12:00:00+00:00",
+        "stale": False,
+        "limitations": [],
+        "coverage": {
+            "channels_ok": 3,
+            "channels_failed": 0,
+            "publications_total": 1,
+            "publications_processed": 1,
+        },
+        "stories": [card],
+    }
+
+    md = render_agenda_md(payload)
+    assert "💬 **В комментариях** (214):" in md
+    assert "- Многие <b>не верят</b> во взлом" in md
+    assert "> «вывел всё вчера» — [комментарий в @a](https://t.me/a/1?comment=5)" in md
+    # The agenda card shows one comment; the story page shows them all.
+    assert "второй" not in md
+
+    page = render_agenda_html(payload)
+    assert "Многие &lt;b&gt;не верят&lt;/b&gt; во взлом" in page
+    assert "(214)" in page and "вывел всё вчера" in page

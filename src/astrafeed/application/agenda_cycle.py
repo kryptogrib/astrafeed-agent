@@ -39,6 +39,7 @@ from astrafeed.ports.agenda import (
 )
 
 CollectFn = Callable[[datetime, datetime], Awaitable[None]]
+DiscussFn = Callable[[Snapshot, datetime], Awaitable[Snapshot]]
 _log = logging.getLogger(__name__)
 
 
@@ -164,6 +165,7 @@ async def run_cycle(
     partial_snapshot_seconds: float = 600.0,
     max_posts_per_cycle: int | None = None,
     ingest: bool = True,
+    discuss: DiscussFn | None = None,
 ) -> Snapshot | None:
     if not source_ids:
         raise ValueError("agenda requires at least one resolved source")
@@ -382,6 +384,8 @@ async def run_cycle(
             verifier=evidence_verifier,
         )
         snapshot = replace(snapshot, published_at=finished_at)
+        if discuss is not None and snapshot.agenda:
+            snapshot = await discuss(snapshot, finished_at)
         if remaining_backfill:
             snapshot = replace(
                 snapshot,

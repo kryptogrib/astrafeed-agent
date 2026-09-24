@@ -539,3 +539,39 @@ async def test_health_redacts_legacy_persisted_provider_error():
 
     assert payload["cycle"]["last_error"] == "analysis_error"
     assert "SECRET_POST_CONTENT" not in str(payload)
+
+
+@pytest.mark.asyncio
+async def test_final_snapshot_is_published_with_discussion_hook_result():
+    store = InMemoryAgendaStore()
+    t = datetime(2026, 9, 24, 12, tzinfo=UTC)
+    start = t - timedelta(hours=10)
+    seen = []
+
+    async def discuss(snapshot, now):
+        seen.append(now)
+        return replace(snapshot, snapshot_id=snapshot.snapshot_id + "-talk")
+
+    snap = await run_cycle(
+        store,
+        reader=Reader(
+            {
+                1: [_item("@a", "1", "Отток ETH ETF 120 млн сегодня.", start + timedelta(hours=1))],
+                2: [
+                    _item(
+                        "@b", "2", "BlackRock: отток ETH ETF 120 млн.", start + timedelta(hours=2)
+                    )
+                ],
+            }
+        ),
+        source_ids=[1, 2],
+        extractor=Extractor(),
+        embedder=Embedder(),
+        assigner=Assigner(),
+        now=t,
+        discuss=discuss,
+    )
+
+    assert snap is not None and snap.snapshot_id.endswith("-talk")
+    assert (await store.get_snapshot(None)).snapshot_id == snap.snapshot_id
+    assert seen and seen[0] >= t

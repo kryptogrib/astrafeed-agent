@@ -73,6 +73,22 @@ def _card_payload(card: StoryCard) -> dict:
             }
             for claim in card.claims
         ],
+        "discussion": _discussion_payload(card),
+    }
+
+
+def _discussion_payload(card: StoryCard) -> dict | None:
+    discussion = card.discussion
+    if discussion is None:
+        return None
+    return {
+        "comment_count": discussion.comment_count,
+        "read_count": discussion.read_count,
+        "points": list(discussion.points),
+        "quotes": [
+            {"text": quote.text, "link": quote.link, "channel": quote.channel_ref}
+            for quote in discussion.quotes
+        ],
     }
 
 
@@ -191,6 +207,20 @@ def _md_card_head(card: dict, heading: str) -> list[str]:
     return lines
 
 
+def _md_discussion(card: dict, *, full: bool) -> list[str]:
+    discussion = card.get("discussion")
+    if not discussion:
+        return []
+    lines = ["", f"💬 **В комментариях** ({discussion['comment_count']}):"]
+    lines += [f"- {point}" for point in discussion["points"]]
+    for comment in discussion["quotes"][: None if full else 1]:
+        lines += [
+            "",
+            f"> «{comment['text']}» — [комментарий в {comment['channel']}]({comment['link']})",
+        ]
+    return lines
+
+
 def render_agenda_md(payload: dict) -> str:
     lines = [
         f"# Повестка крипто-Telegram · {_when(payload['t'])}",
@@ -211,6 +241,7 @@ def render_agenda_md(payload: dict) -> str:
         lines += _md_card_head(card, f"## {index}. {card['title']}")
         for claim in card["claims"][:_CARD_QUOTES]:
             lines += _md_quote(claim)
+        lines += _md_discussion(card, full=False)
     return "\n".join(lines) + "\n"
 
 
@@ -221,6 +252,7 @@ def render_story_md(payload: dict) -> str:
         lines += ["", "## Что пишут"]
         for claim in card["claims"]:
             lines += _md_quote(claim)
+    lines += _md_discussion(card, full=True)
     if card.get("positions"):
         lines += ["", "## Мнения авторов"]
         for position in card["positions"]:
@@ -255,6 +287,8 @@ h2 a:hover{text-decoration:underline}
 blockquote{margin:10px 0;padding:2px 0 2px 12px;border-left:3px solid var(--line)}
 blockquote cite{display:block;font-style:normal;color:var(--muted);font-size:.9rem}
 ul{padding-left:20px}footer{font-size:.85rem;margin-top:24px}
+.talk{border-top:1px dashed var(--line);margin-top:12px;padding-top:8px}
+.talk ul{margin:4px 0}
 """
 
 
@@ -283,6 +317,23 @@ def _html_card_head(card: dict, title_html: str) -> str:
         links = " · ".join(f'<a href="{_url(link)}">{escape(name)}</a>' for name, link in channels)
         parts.append(f"<p>Пишут: {links}</p>")
     return "".join(parts)
+
+
+def _html_discussion(card: dict, *, full: bool) -> str:
+    discussion = card.get("discussion")
+    if not discussion:
+        return ""
+    points = "".join(f"<li>{escape(point)}</li>" for point in discussion["points"])
+    quotes = "".join(
+        f"<blockquote>«{escape(comment['text'])}»<cite>— "
+        f'<a href="{_url(comment["link"])}">комментарий в {escape(comment["channel"])}</a>'
+        "</cite></blockquote>"
+        for comment in discussion["quotes"][: None if full else 1]
+    )
+    return (
+        f'<div class="talk"><p><b>💬 В комментариях</b> ({discussion["comment_count"]})</p>'
+        f"{f'<ul>{points}</ul>' if points else ''}{quotes}</div>"
+    )
 
 
 def _html_page(title: str, body: str) -> str:
@@ -314,7 +365,8 @@ def render_agenda_html(payload: dict) -> str:
         href = f"/stories/{quote(card['story_id'])}?format=html&amp;snapshot_id={snapshot}"
         title = f'<h2><a href="{href}">{index}. {escape(card["title"])}</a></h2>'
         quotes = "".join(_html_quote(claim) for claim in card["claims"][:_CARD_QUOTES])
-        body.append(f"<article>{_html_card_head(card, title)}{quotes}</article>")
+        talk = _html_discussion(card, full=False)
+        body.append(f"<article>{_html_card_head(card, title)}{quotes}{talk}</article>")
     body.append(
         f"<footer>Снимок {escape(payload['snapshot_id'])} · "
         f'<a href="/agenda?format=md&amp;snapshot_id={snapshot}">Markdown</a> · '
@@ -333,6 +385,7 @@ def render_story_html(payload: dict) -> str:
     ]
     if card["claims"]:
         body.append("<h2>Что пишут</h2>" + "".join(_html_quote(c) for c in card["claims"]))
+    body.append(_html_discussion(card, full=True))
     if card.get("positions"):
         body.append("<h2>Мнения авторов</h2>" + "".join(_html_quote(p) for p in card["positions"]))
     if card.get("publications"):

@@ -6,6 +6,7 @@ from typing import Protocol
 
 from astrafeed.domain.agenda import (
     CycleState,
+    DiscussionDigest,
     Entity,
     Event,
     ExtractionResult,
@@ -15,6 +16,7 @@ from astrafeed.domain.agenda import (
     Story,
     StoryLink,
 )
+from astrafeed.domain.models import DiscussionComment, Item
 
 
 class OpenExtractor(Protocol):
@@ -43,6 +45,16 @@ class AssignmentDraft(Protocol):
 
 class EvidenceVerifier(Protocol):
     async def verify(self, story: Story, quotes: Sequence[str]) -> list[bool]: ...
+
+
+class CommentReader(Protocol):
+    async def reply_counts(self, channel_ref: str, post_ids: Sequence[str]) -> dict[str, int]: ...
+
+    async def fetch_comments(self, item: Item, *, limit: int) -> list[DiscussionComment]: ...
+
+
+class DiscussionSummarizer(Protocol):
+    async def summarize(self, title: str, comments: Sequence[str]) -> DiscussionDigest: ...
 
 
 class AgendaStore(Protocol):
