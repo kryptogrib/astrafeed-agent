@@ -268,15 +268,17 @@ async def _agenda_poll(
 ) -> None:
     collection_window = max(LOOKBACK, timedelta(hours=cfg.backfill_hours))
     reader = TelegramSource(client, backfill_window=collection_window)
-    # Read-only: comments come from public discussion threads; the agenda never
-    # makes the account join discussion groups.
-    discussions = DiscussionEnricher(
-        TelegramSource(client, discussion_join_limit_per_run=0), summarizer
+    # Most discussion groups are readable only by members, so the account may
+    # join a few per cycle (agenda.discussion_joins_per_cycle).
+    comment_source = TelegramSource(
+        client, discussion_join_limit_per_run=cfg.agenda.discussion_joins_per_cycle
     )
+    discussions = DiscussionEnricher(comment_source, summarizer)
     english = EnglishLocalizer(translator)
     market = OkxMarket()
 
     async def discuss_in_english(snapshot: Snapshot, now: datetime) -> Snapshot:
+        comment_source.reset_discussion_join_budget()
         # Translate after comments are attached so their quotes are covered too.
         snapshot = await english.localize(await discussions.enrich(snapshot, now))
         return await add_price_moves(snapshot, market, now)

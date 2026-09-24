@@ -68,6 +68,9 @@ class AgendaSettings(BaseModel):
     cycle_post_limit: int = Field(default=128, ge=1, le=256)
     assignment_mode: Literal["auto", "strict", "relaxed"] = "auto"
     merge_cosine_threshold: float = Field(default=0.92, ge=0, le=1)
+    # Discussion groups the account may join per cycle to read comments under
+    # agenda posts. Joining acts on the user's Telegram account; 0 is read-only.
+    discussion_joins_per_cycle: int = Field(default=3, ge=0, le=10)
 
 
 class Settings(BaseModel):
