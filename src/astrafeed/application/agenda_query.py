@@ -32,6 +32,7 @@ def _status(snapshot: Snapshot, now: datetime) -> dict:
         "collected_at": snapshot.collected_at.isoformat(),
         "analyzed_at": snapshot.analyzed_at.isoformat(),
         "stale": is_stale(snapshot.published_at, now),
+        "snapshot_age_seconds": max(0, int((now - snapshot.published_at).total_seconds())),
         "coverage": {
             "channels_ok": snapshot.coverage.channels_ok,
             "channels_failed": snapshot.coverage.channels_failed,
@@ -247,6 +248,11 @@ async def health_payload(store: AgendaStore, *, now: datetime, commit: str) -> d
             "phase": state.phase,
             "last_error": _safe_cycle_error(state.last_error),
             "last_success_at": state.last_success_at.isoformat() if state.last_success_at else None,
+            "last_collect_at": state.last_collect_at.isoformat() if state.last_collect_at else None,
+            "last_partial_at": state.last_partial_at.isoformat() if state.last_partial_at else None,
+            "last_full_success_at": (
+                state.last_full_success_at.isoformat() if state.last_full_success_at else None
+            ),
             "queue_depth": queue_depth,
         },
         "last_snapshot": None
@@ -255,6 +261,7 @@ async def health_payload(store: AgendaStore, *, now: datetime, commit: str) -> d
             "id": snapshot.snapshot_id,
             "t": snapshot.t.isoformat(),
             "stale": is_stale(snapshot.published_at, now),
+            "age_seconds": max(0, int((now - snapshot.published_at).total_seconds())),
         },
         "budget_blocked": state.budget_blocked,
     }

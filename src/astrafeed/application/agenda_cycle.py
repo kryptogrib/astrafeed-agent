@@ -320,6 +320,7 @@ async def run_cycle(
                         previous = await store.get_snapshot(None)
                         if _partial_is_publishable(partial, previous):
                             await publish_snapshot(store, partial)
+                            state.last_partial_at = partial_time
                             state.queue_depth = await store.queue_depth()
                             await store.set_cycle_state(state)
                             _log.info(
@@ -386,11 +387,13 @@ async def run_cycle(
             previous = await store.get_snapshot(None)
             if _partial_is_publishable(snapshot, previous):
                 await publish_snapshot(store, snapshot)
+                state.last_partial_at = finished_at
         else:
             await publish_snapshot(store, snapshot)
         state.phase = "idle"
         if not remaining_backfill:
             state.last_success_at = finished_at
+            state.last_full_success_at = finished_at
         state.last_error = ""
         state.queue_depth = await store.queue_depth()
         await store.set_cycle_state(state)
