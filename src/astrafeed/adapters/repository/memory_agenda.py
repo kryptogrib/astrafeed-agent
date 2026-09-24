@@ -88,6 +88,10 @@ class InMemoryAgendaStore:
         self._embeddings[cache_key] = vector
 
     async def enqueue(self, publication_id: str, reason: str) -> None:
+        previous = self._queue.get(publication_id, "")
+        if reason.endswith("_error") and previous.split(":")[0] == reason:
+            count = int(previous.split(":")[1]) if ":" in previous else 1
+            reason = f"{reason}:{count + 1}"
         self._queue[publication_id] = reason
 
     async def mark_processed(self, publication_id: str) -> None:
@@ -98,6 +102,15 @@ class InMemoryAgendaStore:
 
     async def queued_ids(self) -> list[str]:
         return list(self._queue)
+
+    async def retryable_ids(self) -> list[str]:
+        from astrafeed.domain.agenda import queue_reason_retryable
+
+        return [
+            publication_id
+            for publication_id, reason in self._queue.items()
+            if queue_reason_retryable(reason)
+        ]
 
     async def save_entity(self, entity: Entity) -> None:
         self._entities[entity.entity_id] = entity

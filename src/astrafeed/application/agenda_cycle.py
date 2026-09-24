@@ -193,7 +193,7 @@ async def run_cycle(
         state.phase = "analyze"
         await store.set_cycle_state(state)
 
-        queued = set(await store.queued_ids())
+        queued = set(await store.retryable_ids())
         pending = [
             pub
             for pub in await store.publications_in(datetime.min.replace(tzinfo=UTC), as_of)

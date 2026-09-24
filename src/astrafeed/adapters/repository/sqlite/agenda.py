@@ -40,6 +40,7 @@ from astrafeed.domain.agenda import (
     StoryCard,
     StoryDetail,
     StoryLink,
+    queue_reason_retryable,
 )
 
 _TYPES = {
@@ -234,6 +235,9 @@ class SqliteAgendaStore:
             if row is None:
                 session.add(AgendaQueueRow(publication_id=publication_id, reason=reason))
             else:
+                if reason.endswith("_error") and row.reason.split(":")[0] == reason:
+                    count = int(row.reason.split(":")[1]) if ":" in row.reason else 1
+                    reason = f"{reason}:{count + 1}"
                 row.reason = reason
 
     async def mark_processed(self, publication_id: str) -> None:
@@ -249,6 +253,15 @@ class SqliteAgendaStore:
         async with self._session() as session:
             rows = (await session.scalars(select(AgendaQueueRow))).all()
             return [row.publication_id for row in rows]
+
+    async def retryable_ids(self) -> list[str]:
+        async with self._session() as session:
+            rows = (await session.scalars(select(AgendaQueueRow))).all()
+            return [
+                row.publication_id
+                for row in rows
+                if queue_reason_retryable(row.reason)
+            ]
 
     async def save_entity(self, entity: Entity) -> None:
         await self._put_json("entity", entity.entity_id, entity)

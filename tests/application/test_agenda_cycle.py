@@ -27,6 +27,19 @@ from astrafeed.domain.models import Item as SourceItem
 from astrafeed.domain.spend_budget import BudgetExceeded
 
 
+@pytest.mark.asyncio
+async def test_three_identical_analysis_failures_stay_in_coverage_queue_without_retry():
+    store = InMemoryAgendaStore()
+    await store.enqueue("post", "new")
+    for _ in range(3):
+        await store.enqueue("post", "extract_error")
+    assert store.queue_reason("post") == "extract_error:3"
+    assert await store.queued_ids() == ["post"]
+    assert await store.retryable_ids() == []
+    await store.enqueue("post", "edited")
+    assert await store.retryable_ids() == ["post"]
+
+
 def _item(source: str, external: str, text: str, when: datetime) -> SourceItem:
     return SourceItem(
         channel_ref=source,

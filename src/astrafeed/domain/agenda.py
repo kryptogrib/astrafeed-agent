@@ -197,6 +197,11 @@ def is_stale(published_at: datetime, now: datetime) -> bool:
     return now - published_at >= STALE_AFTER
 
 
+def queue_reason_retryable(reason: str) -> bool:
+    head, sep, count = reason.rpartition(":")
+    return not (sep and head.endswith("_error") and count.isdecimal() and int(count) >= 3)
+
+
 def embedding_input(fragment_text: str, entity_surfaces: list[str]) -> str:
     names = ", ".join(surface for surface in entity_surfaces if surface.strip())
     if names:
