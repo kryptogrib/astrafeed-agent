@@ -171,12 +171,26 @@ def select_agenda(
         if c.get("eligible", True) and int(c.get("current_channels") or 0) >= MIN_CHANNELS
     ]
     ranked = rank_agenda_stories([{**c, "eligible": True} for c in multi])
+    def limit_entities(items: list[dict[str, Any]]) -> list[dict[str, Any]]:
+        selected: list[dict[str, Any]] = []
+        counts: dict[str, int] = {}
+        for item in items:
+            entity = str(item.get("primary_entity") or "").casefold()
+            if entity and counts.get(entity, 0) >= 2:
+                continue
+            selected.append(item)
+            if entity:
+                counts[entity] = counts.get(entity, 0) + 1
+            if len(selected) == AGENDA_LIMIT:
+                break
+        return selected
+
     if comparable_count < MIN_CHANNELS:
-        return ranked[:AGENDA_LIMIT], "limited_no_growth_claim"
+        return limit_entities(ranked), "limited_no_growth_claim"
     growing = [c for c in ranked if isinstance(c.get("growth"), int) and c["growth"] > 0]
     if not growing:
         return [], "empty_no_growth"
-    return growing[:AGENDA_LIMIT], "full"
+    return limit_entities(growing), "full"
 
 
 def is_stale(published_at: datetime, now: datetime) -> bool:
@@ -423,6 +437,8 @@ class CycleState:
     last_error: str = ""
     last_success_at: datetime | None = None
     last_collect_at: datetime | None = None
+    last_partial_at: datetime | None = None
+    last_full_success_at: datetime | None = None
     last_analyze_at: datetime | None = None
     budget_blocked: bool = False
     queue_depth: int = 0

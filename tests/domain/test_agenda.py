@@ -165,3 +165,29 @@ def test_empty_agenda_when_full_compare_has_no_new_or_growing_stories():
     selected, mode = select_agenda(limited, comparable_count=1)
     assert [c["story_id"] for c in selected] == ["st-multi"]
     assert mode == "limited_no_growth_claim"
+
+
+def test_agenda_limits_each_confirmed_primary_entity_to_two_without_losing_stories():
+    from astrafeed.domain.agenda import select_agenda
+
+    cards = [
+        {
+            "story_id": f"var-{index}",
+            "growth": 10 - index,
+            "current_channels": 3,
+            "eligible": True,
+            "primary_entity": "variational",
+        }
+        for index in range(4)
+    ] + [
+        {
+            "story_id": "other",
+            "growth": 5,
+            "current_channels": 3,
+            "eligible": True,
+            "primary_entity": "payy",
+        }
+    ]
+    selected, _ = select_agenda(cards, comparable_count=4)
+    assert [item["story_id"] for item in selected] == ["var-0", "var-1", "other"]
+    assert len(cards) == 5
