@@ -6,6 +6,7 @@ import pytest
 from astrafeed.adapters.http.app import create_app
 from astrafeed.adapters.repository.memory_agenda import InMemoryAgendaStore
 from astrafeed.application.agenda_query import (
+    _growth_text,
     agenda_payload,
     search_payload,
     story_payload,
@@ -120,6 +121,8 @@ async def test_agenda_search_story_share_one_snapshot():
 
     page = await _get(app, "/agenda?format=html")
     assert page.headers["content-type"].startswith("text/html")
+    assert "AstraFeed" in page.text
+    assert "POST /a2mcp/astrafeed" in page.text
     assert '<a href="/stories/st-eth?format=html&amp;snapshot_id=snap-demo">' in page.text
     assert '<a href="https://t.me/alpha/10">@alpha</a>' in page.text
 
@@ -193,7 +196,66 @@ def test_agenda_page_escapes_text_and_drops_unsafe_links():
     assert "a &amp; b" in page and "&lt;/blockquote&gt;" in page
     assert "javascript:" not in page
     assert "snapshot is stale; processing is still running" in page
-    assert "growth n/a" in page and "first seen Sep 25, 09:14 UTC" in page
+    assert "growth n/a" in page and "story tracked since Sep 25, 09:14 UTC" in page
+
+
+def test_story_history_and_first_linked_source_have_distinct_labels():
+    from astrafeed.application.agenda_query import render_agenda_md
+
+    card = {
+        "story_id": "bitget",
+        "title": "Bitget report",
+        "entities": ["Bitget"],
+        "current_channels": 2,
+        "growth": 2,
+        "first_seen": "2026-09-24T20:04:00+00:00",
+        "explanation": "Reported in two channels",
+        "claims": [],
+        "signals": {
+            "confirmation": "rumor",
+            "attributed_to": [],
+            "spread_minutes": 10,
+            "sources": [
+                {
+                    "channel": "@a",
+                    "link": "https://t.me/a/1",
+                    "published_at": "2026-09-24T20:14:00+00:00",
+                    "minutes_after_first": 0,
+                    "echo_of": None,
+                },
+                {
+                    "channel": "@b",
+                    "link": "https://t.me/b/2",
+                    "published_at": "2026-09-24T20:24:00+00:00",
+                    "minutes_after_first": 10,
+                    "echo_of": None,
+                },
+            ],
+            "independent_channels": 2,
+            "echo_channels": 0,
+            "figures_conflict": False,
+            "figures": [],
+            "price": None,
+        },
+    }
+    payload = {
+        "snapshot_id": "snap",
+        "t": "2026-09-24T20:30:00+00:00",
+        "stale": False,
+        "limitations": [],
+        "coverage": {
+            "channels_ok": 2,
+            "channels_failed": 0,
+            "publications_total": 2,
+            "publications_processed": 2,
+        },
+        "stories": [card],
+    }
+
+    md = render_agenda_md(payload)
+
+    assert "story tracked since Sep 24, 20:04 UTC" in md
+    assert "First linked source: @a at 20:14 UTC" in md
 
 
 def test_discussion_is_rendered_in_markdown_and_html_and_escaped():
@@ -246,7 +308,7 @@ def test_discussion_is_rendered_in_markdown_and_html_and_escaped():
     md = render_agenda_md(payload)
     assert "💬 **From reader comments** (214 comments, unverified):" in md
     assert (
-        "- A reader says <b>withdrawals</b> are stuck — [comment in @a](https://t.me/a/1?comment=5)"
+        "- A reader says <b>withdrawals</b> are stuck — [discussion in @a](https://t.me/a/1?comment=5)"
     ) in md
     # The agenda keeps facts short; the comment text is on the story page.
     assert "withdrew everything yesterday" not in md and "вывел" not in md
@@ -262,3 +324,50 @@ def test_discussion_is_rendered_in_markdown_and_html_and_escaped():
 
     silent = {**card, "discussion": {**card["discussion"], "highlights": [], "quotes": []}}
     assert "reader comments" not in render_agenda_md({**payload, "stories": [silent]})
+
+
+def test_agenda_markdown_ends_with_a_measured_trust_line():
+    from astrafeed.application.agenda_query import render_agenda_md
+
+    payload = {
+        "snapshot_id": "snap",
+        "t": "2026-09-25T12:00:00+00:00",
+        "collected_at": "2026-09-25T11:57:18+00:00",
+        "published_at": "2026-09-25T12:00:00+00:00",
+        "stale": False,
+        "limitations": [],
+        "coverage": {
+            "channels_ok": 37,
+            "channels_failed": 0,
+            "publications_total": 2518,
+            "publications_processed": 2481,
+        },
+        "stories": [
+            {
+                "story_id": "s1",
+                "title": "Payy",
+                "entities": [],
+                "current_channels": 2,
+                "growth": 2,
+                "first_seen": "2026-09-25T09:14:00+00:00",
+                "explanation": "e",
+                "claims": [
+                    {"quote": "$1.83m", "channel": "@c", "link": "https://t.me/c/1"},
+                ],
+            }
+        ],
+    }
+    md = render_agenda_md(payload)
+    assert "1 displayed quote passed the span check" in md
+    assert "162s collect→publish" in md
+    assert "37 channels, 2481/2518 posts" in md
+
+
+def test_growth_text_explains_incomplete_channel():
+    assert (
+        _growth_text({"growth": 5, "current_channels": 6, "previous_channels": 0})
+        == "↑ +5 in 24h on comparable channels (6 observed)"
+    )
+    assert _growth_text({"growth": 2, "current_channels": 2, "previous_channels": 0}) == (
+        "↑ +2 in 24h"
+    )

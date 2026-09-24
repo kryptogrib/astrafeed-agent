@@ -10,6 +10,7 @@ import re
 import subprocess
 from datetime import UTC, datetime, timedelta
 
+import httpx
 import uvicorn
 from openai import AsyncOpenAI
 from sqlalchemy.exc import OperationalError
@@ -31,7 +32,7 @@ from astrafeed.adapters.llm.budgeted_client import BudgetedClient
 from astrafeed.adapters.llm.openrouter import OpenRouterLLMClient
 from astrafeed.adapters.llm.stub import StubLLMClient
 from astrafeed.adapters.repository.sqlite.agenda import SqliteAgendaStore
-from astrafeed.adapters.repository.sqlite.ingestion import SqliteIngestionStore
+from astrafeed.adapters.repository.sqlite.ingestion import SqliteIngestionStore, migrate_rss_sources
 from astrafeed.adapters.repository.sqlite.models import Base
 from astrafeed.adapters.repository.sqlite.pulse import SqliteCommentStore
 from astrafeed.adapters.repository.sqlite.spend_budget import (
@@ -39,6 +40,7 @@ from astrafeed.adapters.repository.sqlite.spend_budget import (
     migrate_spend_reservations,
 )
 from astrafeed.adapters.source.fake import FakeSource
+from astrafeed.adapters.source.rss import RssReader
 from astrafeed.adapters.source.telegram import TelegramSource
 from astrafeed.application.agenda_cycle import run_cycle
 from astrafeed.application.agenda_discussion import DiscussionEnricher
@@ -57,6 +59,7 @@ from astrafeed.application.ingestion import (
     limits_from_settings,
 )
 from astrafeed.application.pulse_ingest import CommentCollector
+from astrafeed.application.rss_ingest import collect_feeds, resolve_feeds
 from astrafeed.config import Settings
 from astrafeed.domain.agenda import EMBEDDING_MODEL, LOOKBACK, Snapshot
 from astrafeed.logging_cfg import configure_logging
@@ -82,7 +85,7 @@ async def _refresh_displayed_posts(snapshot, posts, reader: TelegramSource) -> i
         async with semaphore:
             try:
                 source = await posts.get_source(source_id)
-                if source is None:
+                if source is None or source.telegram_id is None:
                     return 0
                 items = await reader.read_posts(source.telegram_id, sorted(ids))
                 if items:
@@ -138,6 +141,7 @@ async def _storage(cfg: Settings):
     async with engine.begin() as conn:
         await conn.run_sync(Base.metadata.create_all)
         if sqlite:
+            await migrate_rss_sources(conn)
             await migrate_spend_reservations(conn)
             await conn.exec_driver_sql("PRAGMA journal_mode=WAL")
     return engine, async_sessionmaker(engine, expire_on_commit=False)
@@ -250,7 +254,8 @@ async def _resolve_union(coordinator: IngestionCoordinator, refs: list[str]) -> 
         except Exception:
             _log.exception("Could not resolve configured source %s", ref)
             continue
-        seen.setdefault(source.telegram_id, source.id)
+        if source.telegram_id is not None:
+            seen.setdefault(source.telegram_id, source.id)
     return list(seen.values())
 
 
@@ -287,6 +292,7 @@ async def _agenda_poll(
         posts, reader, resolver=reader, limits=limits_from_settings(cfg)
     )
     source_ids: list[int] = []
+    rss_feeds: dict[int, str] = {}
     while True:
         now = datetime.now(UTC)
         cycle_state = await agenda.get_cycle_state()
@@ -295,12 +301,22 @@ async def _agenda_poll(
             or now - cycle_state.last_collect_at >= timedelta(seconds=cfg.poll_seconds)
         )
         if collect_due or not source_ids:
+            source_ids = []
+            if cfg.channels or cfg.news_channels:
+                try:
+                    async with asyncio.timeout(10):
+                        await _ensure_connected(client)
+                        source_ids = await _resolve_union(
+                            coordinator, [*cfg.channels, *cfg.news_channels]
+                        )
+                except Exception as exc:
+                    _log.warning("agenda Telegram source resolution failed: %s", type(exc).__name__)
             try:
-                await _ensure_connected(client)
-                source_ids = await _resolve_union(coordinator, [*cfg.channels, *cfg.news_channels])
+                rss_feeds = await resolve_feeds(posts, cfg.rss_feeds)
+                source_ids.extend(rss_feeds)
             except Exception as exc:
-                _log.error("agenda source resolution failed: %s", type(exc).__name__)
-                source_ids = []
+                _log.error("agenda RSS source resolution failed: %s", type(exc).__name__)
+                rss_feeds = {}
             if not source_ids:
                 cycle_state.last_error = "source_unavailable"
                 cycle_state.phase = "idle"
@@ -308,14 +324,26 @@ async def _agenda_poll(
                 await asyncio.sleep(cfg.poll_seconds)
                 continue
 
-        async def collect(start: datetime, end: datetime, ids: list[int] = source_ids) -> None:
+        async def collect(
+            start: datetime,
+            end: datetime,
+            ids: list[int] = source_ids,
+            feeds: dict[int, str] = rss_feeds,
+        ) -> None:
             if ids:
-                result = await coordinator.ensure_window(ids, start, end)
+                telegram_ids = [sid for sid in ids if sid not in feeds]
+                result = await coordinator.ensure_window(telegram_ids, start, end)
+                async with httpx.AsyncClient(
+                    timeout=15,
+                    follow_redirects=True,
+                    headers={"User-Agent": "AstraFeed/0.1 RSS reader"},
+                ) as http:
+                    rss_errors = await collect_feeds(posts, RssReader(http), feeds, start, end)
                 _log.info(
                     "agenda collect sources=%d incomplete=%d errors=%d",
                     len(ids),
-                    sum(not coverage.complete for coverage in result.values()),
-                    len(result.errors),
+                    sum(not coverage.complete for coverage in result.values()) + len(rss_errors),
+                    len(result.errors) + len(rss_errors),
                 )
                 previous_snapshot = await agenda.get_snapshot(None)
                 if previous_snapshot is not None:
@@ -397,7 +425,6 @@ async def _serve(config_path: str) -> None:
     cfg = Settings.load(config_path)
     configure_logging("INFO", None)
     client = _telegram(cfg)
-    await _ensure_connected(client)
     engine, session = await _storage(cfg)
     posts = SqliteIngestionStore(session)
     agenda = SqliteAgendaStore(session)
@@ -482,12 +509,13 @@ async def _backfill_posts(args: argparse.Namespace) -> None:
     cfg = Settings.load(args.config)
     configure_logging("INFO", None)
     refs = list(dict.fromkeys([*cfg.channels, *cfg.news_channels]))
-    if not refs:
-        raise SystemExit("config.yaml has no channels: run scripts/channels.py --write")
+    if not refs and not cfg.rss_feeds:
+        raise SystemExit("config.yaml has no channels or rss_feeds")
     now = datetime.now(UTC)
     start = now - args.window
     client = _telegram(cfg)
-    await _ensure_connected(client)
+    if refs:
+        await _ensure_connected(client)
     engine, session = await _storage(cfg)
     try:
         store = SqliteIngestionStore(session)
@@ -510,6 +538,13 @@ async def _backfill_posts(args: argparse.Namespace) -> None:
             except Exception as e:  # noqa: BLE001 - report every bad ref, keep going
                 failed[ref] = str(e)
         result = await coordinator.ensure_window(list(resolved), start, now)
+        rss_feeds = await resolve_feeds(store, cfg.rss_feeds)
+        async with httpx.AsyncClient(
+            timeout=15,
+            follow_redirects=True,
+            headers={"User-Agent": "AstraFeed/0.1 RSS reader"},
+        ) as http:
+            rss_errors = await collect_feeds(store, RssReader(http), rss_feeds, start, now)
         print(f"\n{'channel':<32} {'posts':>6}  status")
         total = 0
         for sid, ref in resolved.items():
@@ -519,6 +554,11 @@ async def _backfill_posts(args: argparse.Namespace) -> None:
             print(f"{ref:<32} {posts:>6}  {status}")
         for ref, reason in failed.items():
             print(f"{ref:<32} {'-':>6}  UNRESOLVED {reason}")
+        for sid, url in rss_feeds.items():
+            articles = len(await store.read_window(sid, start, now))
+            total += articles
+            status = "ok" if sid not in rss_errors else f"INCOMPLETE {rss_errors[sid]}"
+            print(f"{url:<32} {articles:>6}  {status}")
         print(f"\nTotal posts in [{start:%Y-%m-%d %H:%M}, {now:%Y-%m-%d %H:%M}] UTC: {total}")
     finally:
         await client.disconnect()

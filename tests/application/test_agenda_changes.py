@@ -5,7 +5,7 @@ import pytest
 
 from astrafeed.adapters.repository.memory_agenda import InMemoryAgendaStore
 from astrafeed.application.agenda_query import agenda_payload, render_agenda_html
-from astrafeed.domain.agenda import PriceMove, PublicationRef, SourceNode, StorySignals
+from astrafeed.domain.agenda import CaveatDrop, PriceMove, PublicationRef, SourceNode, StorySignals
 from tests.adapters.http.test_agenda import _snapshot
 
 T = datetime(2026, 9, 25, 12, tzinfo=UTC)
@@ -130,6 +130,28 @@ async def test_changed_quote_and_sourcing_are_reported_with_before_and_after():
         "before": {"confirmation": "rumor", "attributed_to": []},
         "after": {"confirmation": "attributed", "attributed_to": ["Arkham"]},
     }
+
+
+async def test_new_caveat_drop_is_reported_to_polling_agent():
+    before, after = _pair()
+    detail = after.stories["st-eth"]
+    caveat = CaveatDrop(
+        "possibly",
+        "@alpha",
+        "https://t.me/alpha/10",
+        "Possibly ETH ETF outflow rose.",
+        "@beta",
+        "https://t.me/beta/20",
+        "ETH ETF outflow rose.",
+        5,
+    )
+    card = replace(detail.card, signals=StorySignals(caveat_drop=caveat))
+    after = replace(after, agenda=(card,), stories={"st-eth": replace(detail, card=card)})
+    result = await _read(before, after, since_snapshot_id="snap-before")
+    change = result["changes"]["updated_stories"][0]
+    assert change["caveat_drop"]["before"] is None
+    assert change["caveat_drop"]["after"]["after_link"] == "https://t.me/beta/20"
+    assert "qualifier-drop signal changed" in result["brief_markdown"]
 
 
 async def test_translation_title_order_and_freshness_do_not_create_news():

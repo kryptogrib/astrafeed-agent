@@ -181,7 +181,7 @@ def select_agenda(
             if entity and counts.get(entity, 0) >= 2:
                 continue
             signature = tuple(item.get("source_signature") or ())
-            if len(signature) >= 2 and source_counts.get(signature, 0) >= 2:
+            if len(signature) >= 2 and source_counts.get(signature, 0) >= 1:
                 continue
             selected.append(item)
             if entity:
@@ -415,7 +415,7 @@ class FigureGroup:
 
 @dataclass(frozen=True)
 class PriceMove:
-    """Market price since the story was first seen in the observed channels."""
+    """OKX spot around the first observed Telegram post: hour before and after."""
 
     inst_id: str
     since: datetime
@@ -423,6 +423,23 @@ class PriceMove:
     price_now: float
     change_pct: float
     measured_at: datetime
+    price_hour_before: float | None = None
+    change_pct_before: float | None = None
+    verdict: str | None = None
+
+
+@dataclass(frozen=True)
+class CaveatDrop:
+    """Two closely worded posts where an explicit uncertainty word disappeared."""
+
+    qualifier: str
+    before_channel: str
+    before_link: str
+    before_quote: str
+    after_channel: str
+    after_link: str
+    after_quote: str
+    minutes_later: int
 
 
 @dataclass(frozen=True)
@@ -440,6 +457,7 @@ class StorySignals:
     tickers: tuple[str, ...] = ()
     scheduled: bool = False
     price: PriceMove | None = None
+    caveat_drop: CaveatDrop | None = None
 
 
 @dataclass(frozen=True)

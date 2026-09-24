@@ -1,7 +1,7 @@
 [project]
 name = "astrafeed"
 version = "0.1.0"
-description = "A compact engine for source-backed token briefs"
+description = "Live Telegram agenda with source-backed claims for humans and agents"
 readme = "README.md"
 requires-python = ">=3.12,<3.13"
 license = "Apache-2.0"
@@ -39,6 +39,7 @@ pythonpath = ["src", "."]
 
 [dependency-groups]
 dev = [
+    "import-linter>=2.11",
     "mypy>=2.1.0",
     "pre-commit>=4.6.0",
     "pytest>=9.0.3",

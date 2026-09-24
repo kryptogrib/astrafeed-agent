@@ -15,6 +15,23 @@ from pydantic import BaseModel, Field
 
 A2MCP_PATH = "/a2mcp/astrafeed"
 
+# Empty POST must stay HTTP 200 + agenda for the OKX listing self-check.
+# `usage` is for a reviewer or agent that did not open the README.
+A2MCP_USAGE = {
+    "actions": {
+        "agenda": "Empty body. Optional: snapshot_id, since_snapshot_id, format=json|md",
+        "search": '{"query":"HYPE"} plus optional snapshot_id, limit, format',
+        "story": '{"story_id":"st-…","snapshot_id":"snap-…"} plus optional format',
+    },
+    "rules": [
+        "One action per call: empty body, query, or story_id",
+        "since_snapshot_id is agenda-only; a missing baseline returns the full agenda",
+        "Read-only: the call never runs the collector or the LLM",
+    ],
+    "listing": "https://www.okx.ai/agents/13877",
+    "listing_status": "submitted, pending OKX review",
+}
+
 
 class AstraFeedRequest(BaseModel):
     query: str | None = Field(
@@ -48,6 +65,7 @@ def mount_a2mcp(
     async def astrafeed(
         req: Annotated[AstraFeedRequest | None, Body()] = None,
     ) -> dict[str, Any] | PlainTextResponse:
+        """AstraFeed Crypto Agenda: empty POST returns the live agenda."""
         req = req or AstraFeedRequest()
         if req.query and req.story_id:
             raise HTTPException(status_code=422, detail="pass query or story_id, not both")
@@ -77,4 +95,9 @@ def mount_a2mcp(
             return PlainTextResponse(
                 result["brief_markdown"], media_type="text/markdown; charset=utf-8"
             )
-        return {"service": "astrafeed", "action": action, "result": result}
+        return {
+            "service": "astrafeed",
+            "action": action,
+            "usage": A2MCP_USAGE,
+            "result": result,
+        }

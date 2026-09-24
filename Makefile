@@ -10,9 +10,10 @@ install: ## Sync dependencies
 test: ## Run tests
 	uv run pytest -q
 
-lint: ## Check formatting and lint
+lint: ## Check formatting, lint, and layer imports
 	uv run ruff check src tests
 	uv run ruff format --check src tests
+	uv run lint-imports
 
 fmt: ## Format and fix lint
 	uv run ruff check --fix src tests

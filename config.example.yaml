@@ -7,6 +7,19 @@ backfill_hours: 24
 channels:
   - "@cointelegraph"
   - "@The_blockchain"
+rss_feeds:
+  - "https://www.coindesk.com/arc/outboundfeeds/rss/"
+  - "https://www.theblock.co/rss.xml"
+  - "https://cointelegraph.com/rss"
+  - "https://decrypt.co/feed"
+  - "https://bitcoinmagazine.com/feed"
+  - "https://cryptoslate.com/feed/"
+  - "https://thedefiant.io/feed/"
+  - "https://blockworks.co/feed/"
+  - "https://feeds.bloomberg.com/crypto/news.rss"
+  - "https://cryptobriefing.com/feed/"
+  - "https://protos.com/feed"
+  - "https://www.ft.com/crypto?format=rss"
 interests:
   - "SOL"
   - "OKB"

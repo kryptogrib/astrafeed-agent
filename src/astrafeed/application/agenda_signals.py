@@ -12,12 +12,13 @@ import logging
 import re
 from collections.abc import Iterable
 from dataclasses import replace
-from datetime import datetime
+from datetime import datetime, timedelta
 from difflib import SequenceMatcher
 from statistics import median
 from typing import Protocol
 
 from astrafeed.domain.agenda import (
+    CaveatDrop,
     ChannelLead,
     FigureGroup,
     PriceMove,
@@ -38,6 +39,11 @@ FIGURE_TOLERANCE = 0.1
 
 _URL = re.compile(r"https?://\S+|t\.me/\S+|@\w+")
 _NON_WORD = re.compile(r"[^\w$%.,]+", re.UNICODE)
+_UNCERTAINTY = re.compile(
+    r"\b(?:potentially|possibly|allegedly|unconfirmed|rumou?red?|возможно|вероятно|предположительно|якобы)\b",
+    re.I,
+)
+_SENTENCE = re.compile(r"(?<=[.!?])\s+|\n+")
 
 _OFFICIAL = re.compile(
     r"официальн\w*|подтвердил\w*|объявил\w*|анонсировал\w*|сообщил\w* в (?:своём|своем|официальном)"
@@ -53,7 +59,7 @@ _RUMOR = re.compile(
     r"слух\w*|вероятно|возможно|предположительно|якобы|не подтвержд\w*"
     r"|инсайд\w*|в твиттер\w* (?:пишут|сообщают)"
     r"|\bpotentially\b|\breportedly\b|\bunconfirmed\b|\brumou?r\w*\b"
-    r"|\ballegedly\b|\bpossibl[ey]\b",
+    r"|\ballegedly\b|\bpossible\b|\bpossibly\b",
     re.I,
 )
 # On-chain analysts and wires often named as the origin of a figure.
@@ -173,6 +179,40 @@ def sourcing(text: str) -> str:
     if _ATTRIBUTED.search(text) or any(name in text for name in _NAMED_SOURCES):
         return "attributed"
     return "unmarked"
+
+
+def _caveat_drop(firsts: list[PublicationVersion]) -> CaveatDrop | None:
+    """Find one narrowly evidenced wording change, without inferring event truth."""
+    for index, before in enumerate(firsts):
+        for sentence in _SENTENCE.split(before.text):
+            marker = _UNCERTAINTY.search(sentence)
+            if not marker or not 35 <= len(sentence) <= 280:
+                continue
+            core = _normalized(_UNCERTAINTY.sub(" ", sentence))
+            for after in firsts[index + 1 :]:
+                if sourcing(after.text) != "unmarked":
+                    continue
+                for later in _SENTENCE.split(after.text):
+                    if not 30 <= len(later) <= 280 or _UNCERTAINTY.search(later):
+                        continue
+                    if (
+                        SequenceMatcher(None, core, _normalized(later), autojunk=False).ratio()
+                        < 0.92
+                    ):
+                        continue
+                    return CaveatDrop(
+                        qualifier=marker.group(),
+                        before_channel=before.channel_ref,
+                        before_link=before.link,
+                        before_quote=sentence.strip(),
+                        after_channel=after.channel_ref,
+                        after_link=after.link,
+                        after_quote=later.strip(),
+                        minutes_later=int(
+                            (after.published_at - before.published_at).total_seconds() // 60
+                        ),
+                    )
+    return None
 
 
 def is_scheduled(title: str, texts: Iterable[str]) -> bool:
@@ -319,6 +359,7 @@ def story_signals(
         figures_conflict=conflict,
         tickers=tickers(card.title, card.entities, [q for _, q in quotes]),
         scheduled=is_scheduled(card.title, texts),
+        caveat_drop=_caveat_drop(firsts),
     )
 
 
@@ -358,20 +399,60 @@ class MarketPrices(Protocol):
     async def open_at(self, inst_id: str, at: datetime) -> float | None: ...
 
 
+_MATERIAL_MOVE_PCT = 2.0
+_SMALL_MOVE_PCT = 1.0
+
+
+def price_timing_verdict(change_pct_before: float | None, change_pct_after: float) -> str | None:
+    """Classify whether the market moved before the first observed Telegram post.
+
+    Thresholds are magnitudes, not proof of a leak or of Telegram causing the move:
+    2% counts as material, under 1% as quiet. Tune here if the report feels jumpy.
+    """
+    if change_pct_before is None:
+        return None
+    before, after = abs(change_pct_before), abs(change_pct_after)
+    if before >= _MATERIAL_MOVE_PCT and after < _SMALL_MOVE_PCT:
+        return "priced_in"
+    if before < _SMALL_MOVE_PCT and after >= _MATERIAL_MOVE_PCT:
+        return "telegram_ahead"
+    if before >= _MATERIAL_MOVE_PCT and after >= _MATERIAL_MOVE_PCT:
+        return "both_moved"
+    return "quiet"
+
+
+def _pct_change(start: float, end: float) -> float | None:
+    if not start:
+        return None
+    return round((end - start) / start * 100, 2)
+
+
 async def _price_move(
     market: MarketPrices, symbol: str, since: datetime, now: datetime
 ) -> PriceMove | None:
     inst_id = f"{symbol}-USDT"
-    then, last = await asyncio.gather(market.open_at(inst_id, since), market.last(inst_id))
+    hour_before = since - timedelta(hours=1)
+    before, then, last = await asyncio.gather(
+        market.open_at(inst_id, hour_before),
+        market.open_at(inst_id, since),
+        market.last(inst_id),
+    )
     if not then or not last:
         return None
+    change_after = _pct_change(then, last)
+    if change_after is None:
+        return None
+    change_before = _pct_change(before, then) if before else None
     return PriceMove(
         inst_id=inst_id,
         since=since,
         price_then=then,
         price_now=last,
-        change_pct=round((last - then) / then * 100, 2),
+        change_pct=change_after,
         measured_at=now,
+        price_hour_before=before,
+        change_pct_before=change_before,
+        verdict=price_timing_verdict(change_before, change_after),
     )
 
 

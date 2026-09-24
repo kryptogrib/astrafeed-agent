@@ -196,3 +196,32 @@ async def test_even_few_comments_are_checked_for_facts_and_opinions_are_not_show
     # No facts means no quotes either: comments are not shown just for being there.
     assert discussion.highlights == () and discussion.quotes == ()
     assert replace(snapshot.agenda[0], discussion=None) == _snapshot("s").agenda[0]
+
+
+@pytest.mark.asyncio
+async def test_unrelated_comment_under_shared_post_is_not_reported_as_story_evidence():
+    snapshot = _snapshot("short")
+    card = replace(snapshot.agenda[0], title="$SHORT airdrop", entities=("$SHORT", "BigShort"))
+    detail = replace(snapshot.stories["short"], card=card)
+    snapshot = replace(snapshot, agenda=(card,), stories={"short": detail})
+    reader = Reader(
+        {"@a": {"short1": 2}},
+        ["Bitget взломан, выводите средства", "$SHORT airdrop claim opens tomorrow"],
+    )
+
+    class OffTopicDigest:
+        async def summarize(self, title, posts, comments):
+            return DiscussionDigest(
+                points=(),
+                quote_indices=(0, 1),
+                highlights=("A reader says Bitget was hacked", "A reader asks about $SHORT"),
+            )
+
+    result = await DiscussionEnricher(reader, OffTopicDigest()).enrich(snapshot, T)
+
+    assert result.agenda[0].discussion is not None
+    assert result.agenda[0].discussion.read_count == 2
+    assert result.agenda[0].discussion.highlights == ("A reader asks about $SHORT",)
+    assert tuple(q.text for q in result.agenda[0].discussion.quotes) == (
+        "$SHORT airdrop claim opens tomorrow",
+    )

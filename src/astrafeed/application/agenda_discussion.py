@@ -8,6 +8,7 @@ from __future__ import annotations
 
 import asyncio
 import logging
+import re
 from collections import defaultdict
 from dataclasses import dataclass, replace
 from datetime import datetime, timedelta
@@ -151,7 +152,11 @@ class DiscussionEnricher:
         # source comment is dropped rather than shown unsourced.
         facts: list[tuple[str, CommentQuote]] = []
         for text, index in zip(digest.highlights, digest.quote_indices, strict=False):
-            if text.strip() and 0 <= index < len(comments):
+            if (
+                text.strip()
+                and 0 <= index < len(comments)
+                and _mentions_story_subject(comments[index].text, card.entities)
+            ):
                 facts.append((text.strip(), comments[index]))
         facts = facts[:MAX_FACTS]
         return Discussion(
@@ -164,6 +169,15 @@ class DiscussionEnricher:
 
 def _external_id(pub: PublicationRef) -> str:
     return pub.publication_id.rpartition(":")[2]
+
+
+def _mentions_story_subject(text: str, entities: tuple[str, ...]) -> bool:
+    """Prefer silence when a comment in a story's thread names another subject."""
+    anchors = [entity.lstrip("$").strip() for entity in entities]
+    anchors = [anchor for anchor in anchors if len(anchor) >= 4]
+    if not anchors:
+        return True
+    return any(re.search(rf"(?<!\w){re.escape(anchor)}(?!\w)", text, re.I) for anchor in anchors)
 
 
 def _with_discussions(snapshot: Snapshot, discussions: dict[str, Discussion]) -> Snapshot:

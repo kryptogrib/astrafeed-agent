@@ -31,6 +31,7 @@ class SourceRow(Base):
     __tablename__ = "source"
     id: Mapped[int] = mapped_column(primary_key=True)
     telegram_id: Mapped[int] = mapped_column(unique=True)
+    rss_url: Mapped[str | None] = mapped_column(String, unique=True, nullable=True)
 
 
 class RawItemRow(Base):

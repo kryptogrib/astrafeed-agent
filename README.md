@@ -1,12 +1,56 @@
 # AstraFeed
 
+[![check](https://github.com/kryptogrib/astrafeed-agent/actions/workflows/check.yml/badge.svg)](https://github.com/kryptogrib/astrafeed-agent/actions/workflows/check.yml)
+
 **What changed in crypto Telegram, who said it first, and where is the evidence?**
 
 AstraFeed turns posts from 38 selected public channels into a live agenda for humans and AI agents. It groups posts into stories, compares the last 24 hours with the previous 24, and links every displayed claim to its original Telegram post. The same published snapshot is available as a readable page, JSON, Markdown, and an OKX.AI A2MCP service.
 
 **[Open the live agenda](https://cutememe.lol/agenda?format=html)** · **[Check the live service](https://cutememe.lol/healthz)** · [Source code](https://github.com/kryptogrib/astrafeed-agent)
 
-Built for **OKX Dev Day 2026 · Build a Company / OKX AI**. A2MCP endpoint: `POST https://cutememe.lol/a2mcp/astrafeed`.
+Built for **OKX Dev Day 2026 · Build a Company / OKX AI**. A2MCP endpoint: `POST https://cutememe.lol/a2mcp/astrafeed`. OKX.AI agent **#13877** has a free service submitted; its marketplace listing is **under review as of 25 Sep 2026**.
+
+| Reviewer link | Status |
+|---|---|
+| [Live agenda](https://cutememe.lol/agenda?format=html) | Public HTTPS |
+| [A2MCP](https://cutememe.lol/a2mcp/astrafeed) | Empty `POST` returns the agenda |
+| [OKX.AI listing #13877](https://www.okx.ai/agents/13877) | Submitted; **pending OKX review**, not in the marketplace yet |
+| Demo video | Recording tomorrow; this README is the walkthrough until then |
+
+Do not treat the listing page as a live marketplace discovery until OKX approves it. The working integration is the HTTPS endpoint.
+
+## Reviewer guide
+
+Start with these six files. The earlier Token Brief engine is documented in [PROVENANCE.md](PROVENANCE.md); frozen research runs are under `artifacts/`.
+
+1. [docs/product.md](docs/product.md) — what the product promises
+2. [src/astrafeed/domain/agenda.py](src/astrafeed/domain/agenda.py) — quote spans, windows, growth rules
+3. [src/astrafeed/application/agenda_signals.py](src/astrafeed/application/agenda_signals.py) — echoes, conflicting figures, price before/after Telegram
+4. [src/astrafeed/application/agenda_changes.py](src/astrafeed/application/agenda_changes.py) — `since_snapshot_id` report delta
+5. [src/astrafeed/application/agenda_query.py](src/astrafeed/application/agenda_query.py) — JSON / Markdown / HTML from the published snapshot
+6. [src/astrafeed/adapters/http/a2mcp.py](src/astrafeed/adapters/http/a2mcp.py) — OKX.AI tool over the same read API
+
+`make check` runs ruff, mypy, import-linter, and pytest.
+
+### Invariants the code enforces
+
+| Guarantee | Where it is checked |
+|---|---|
+| `quote == text[start:end]`, or the unique occurrence | `tests/domain/test_agenda.py::test_quote_accepted_only_when_span_matches_or_unique_occurrence` |
+| paraphrase numbers exist in attached quotes | `tests/domain/test_agenda.py::test_paraphrase_cannot_invent_numbers_absent_from_quotes` |
+| a failed or incomplete channel is not treated as zero | `tests/domain/test_agenda.py::test_comparable_channels_require_complete_processing_of_both_windows` |
+| growth is `null` when the comparable set is too small | `tests/domain/test_agenda.py::test_growth_is_null_when_comparable_set_is_too_small` |
+| HTTP adapters do not import the cycle or LLM | `tests/adapters/http/test_http_isolation.py::test_http_adapters_do_not_import_llm_or_the_cycle` |
+| domain does not import adapters or application | `.importlinter` contract `domain`, run by `make check` |
+
+### Measured quality
+
+Manual source review in [artifacts/agenda-eval/quality-2026-09-25.md](artifacts/agenda-eval/quality-2026-09-25.md), not a CI score:
+
+- **29/29** displayed quotes in the pinned public baseline cards were verbatim in the linked Telegram posts
+- **38/38** counted publication quotes on live `snap-20260924T215317Z` were verbatim
+- that live cycle ran **91 seconds** from collect to full success
+- code invariants reproduce with `make check`
 
 ## The detail that matters: an evidence trail
 
@@ -23,6 +67,8 @@ Here is a real, pinned [HYPE listing story](https://cutememe.lol/stories/st-e5cf
 The card records **6 channels, including 1 detected echo**, and shows the [exact quoted announcement](https://t.me/marketfeed/1044681). “First” means first among channels AstraFeed observed, based on post time. An echo is a text-similarity finding, not proof of coordination. The story also carries an OKX spot price change since the first post; that is market context, **not a claim that the post moved the price**. The example is a historical snapshot, so its figures do not silently change with the live feed.
 
 The same trail flags disagreements when quoted amounts differ. It keeps the original wording and source links so a reader can decide what to trust. AstraFeed reports what channels **said**, not whether the underlying event is true.
+
+When a close later retelling drops an explicit uncertainty word such as “potentially,” the card shows **both exact phrases and links** under “Qualifier dropped in later wording.” This describes a change in wording; it does not claim the event was confirmed or that one channel copied another.
 
 ## See it in 60 seconds
 
@@ -54,14 +100,16 @@ The response has `service`, `action` (`agenda`, `search`, or `story`), and `resu
 
 | Field | Meaning |
 |---|---|
-| `current_channels` | Observed channels with a story post in the latest 24-hour window. |
-| `growth` | Change against the preceding 24 hours on channels complete and processed in **both** windows. Uncomparable data gets `null`, never a fabricated zero. |
+| `current_channels` | Observed Telegram channels or RSS publishers with a story publication in the latest 24-hour window. The field name is retained for API compatibility. |
+| `growth` | Change against the preceding 24 hours on channels complete and processed in **both** windows. It can be lower than `current_channels` when one source is still incomplete. Uncomparable data gets `null`, never a fabricated zero. |
 | `independent_channels` / `echo_channels` | A text-similarity split of observed posts. “Independent” means *no near-verbatim copy detected*, not independent verification. |
-| `first_seen` | First matching post time in the observed channels, not the first report anywhere. |
+| `first_seen` | Publication time of the first post assigned to the story in observed channels. The displayed spread timeline starts with the first linked source in the current window and can begin later. |
 | `confirmation` | A label inferred from wording and attribution in posts; inspect the linked source before relying on it. |
+| `signals.caveat_drop` | An optional pair of closely matched source sentences where explicit uncertainty disappears in the later wording, with both links and publication gap. |
 | `coverage`, `stale`, `limitations` | What was collected and processed, and what the snapshot cannot support. |
+| `price.verdict` | Code label from OKX spot: did the market move in the hour **before** the first observed post, after it, both, or neither. Context, not causation. |
 
-The watched channels are a curated Russian-language Telegram folder, not a representative sample of the whole market. Quotes in the English report may be machine-translated; JSON retains the original. Reader comments, when shown, are marked unverified. No sentiment score or trading recommendation is produced.
+The watched channels are a curated Russian-language Telegram folder, not a representative sample of the whole market. Quotes in the English report may be machine-translated; JSON retains the original. Reader comments are unverified and shown as takeaways only when the quoted comment explicitly names a story entity; silence does not mean agreement. No sentiment score or trading recommendation is produced.
 
 ## Poll for changes
 
@@ -71,9 +119,26 @@ An agent saves the returned `snapshot_id`, then requests
 The delta contains new/updated cards and changes in sources, quotes and sourcing
 labels. An unavailable baseline returns the full agenda with
 `baseline_unavailable`. `snapshot_id` can still pin the target of the comparison.
+This is in the current tree; the public host only answers it after that commit
+is deployed (`GET /healthz` → `commit`). Until then a live call ignores the
+field and returns the full agenda.
 [Response fields, examples and limits](docs/snapshot-changes.md).
 
 ## How it works
+
+### RSS news sources
+
+Add HTTPS feed URLs under `rss_feeds` in `config.yaml` (the sample config lists
+CoinDesk, The Block, Cointelegraph, Decrypt, Bitcoin Magazine, CryptoSlate,
+The Defiant, Blockworks, Bloomberg Crypto, Crypto Briefing, Protos and FT Crypto).
+The polling cycle reads them alongside Telegram channels. Articles enter the
+same story extraction and search flow, with the publisher's original link in
+each card. Run `uv run astrafeed-pulse backfill-posts --window 2d` to load the
+currently available feed entries before the next cycle. RSS feeds often expose
+only recent entries; the response keeps incomplete history visible in coverage
+and does not count it as zero activity. Publisher rate limits or feed errors
+affect that feed only. This configuration changes future local snapshots;
+historical snapshots and the hosted demo above are unchanged.
 
 ```mermaid
 flowchart LR
@@ -98,7 +163,7 @@ docker compose up -d --build    # API at http://localhost:8000
 curl http://localhost:8000/healthz
 ```
 
-The first analysis can take time; `/healthz` shows progress and `/agenda` becomes available after a snapshot is published. `make check` runs lint, types, and tests. For a public HTTPS deployment, see `docker-compose.tunnel.yml` and set `CLOUDFLARE_TUNNEL_TOKEN` in `.env`.
+The first analysis can take time; `/healthz` shows progress and `/agenda` becomes available after a snapshot is published. `make check` runs lint, types, import-linter, and tests. For a public HTTPS deployment, see `docker-compose.tunnel.yml` and set `CLOUDFLARE_TUNNEL_TOKEN` in `.env`.
 
 ## Hackathon scope
 

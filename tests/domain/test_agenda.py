@@ -215,5 +215,5 @@ def test_agenda_limits_stories_from_identical_publication_sets():
         }
     ]
     selected, _ = select_agenda(cards, comparable_count=4)
-    assert [item["story_id"] for item in selected] == ["digest-0", "digest-1", "independent"]
+    assert [item["story_id"] for item in selected] == ["digest-0", "independent"]
     assert len(cards) == 5

@@ -25,7 +25,8 @@ class Coverage:
 @dataclass(frozen=True)
 class Source:
     id: int
-    telegram_id: int
+    telegram_id: int | None = None
+    rss_url: str | None = None
 
 
 class PrivateSourceRefError(ValueError):

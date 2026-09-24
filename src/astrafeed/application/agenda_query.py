@@ -12,6 +12,7 @@ from astrafeed.domain.agenda import (
     SEARCH_DEFAULT_LIMIT,
     SEARCH_MAX_LIMIT,
     CycleState,
+    SearchDoc,
     SearchHit,
     Snapshot,
     StoryCard,
@@ -35,6 +36,7 @@ def _status(snapshot: Snapshot, now: datetime) -> dict:
         "t": snapshot.t.isoformat(),
         "collected_at": snapshot.collected_at.isoformat(),
         "analyzed_at": snapshot.analyzed_at.isoformat(),
+        "published_at": snapshot.published_at.isoformat(),
         "stale": is_stale(snapshot.published_at, now),
         "snapshot_age_seconds": max(0, int((now - snapshot.published_at).total_seconds())),
         "coverage": {
@@ -85,6 +87,7 @@ def _signals_payload(card: StoryCard) -> dict | None:
     if signals is None:
         return None
     price = signals.price
+    caveat = signals.caveat_drop
     return {
         "independent_channels": signals.independent_channels,
         "echo_channels": signals.echo_channels,
@@ -108,6 +111,18 @@ def _signals_payload(card: StoryCard) -> dict | None:
             }
             for node in signals.sources
         ],
+        "caveat_drop": None
+        if caveat is None
+        else {
+            "qualifier": caveat.qualifier,
+            "before_channel": caveat.before_channel,
+            "before_link": caveat.before_link,
+            "before_quote": caveat.before_quote,
+            "after_channel": caveat.after_channel,
+            "after_link": caveat.after_link,
+            "after_quote": caveat.after_quote,
+            "minutes_later": caveat.minutes_later,
+        },
         "price": None
         if price is None
         else {
@@ -117,6 +132,9 @@ def _signals_payload(card: StoryCard) -> dict | None:
             "price_now": price.price_now,
             "change_pct": price.change_pct,
             "measured_at": price.measured_at.isoformat(),
+            "price_hour_before": price.price_hour_before,
+            "change_pct_before": price.change_pct_before,
+            "verdict": price.verdict,
             "source": "OKX spot",
         },
     }
@@ -204,12 +222,20 @@ def _growth_text(card: dict) -> str:
     if not isinstance(growth, int):
         return "growth n/a"
     if growth > 0:
-        return f"↑ +{growth} in 24h"
-    return f"↓ {growth} in 24h" if growth < 0 else "no change in 24h"
+        text = f"↑ +{growth} in 24h"
+    elif growth < 0:
+        text = f"↓ {growth} in 24h"
+    else:
+        text = "no change in 24h"
+    current = card.get("current_channels")
+    previous = card.get("previous_channels") or 0
+    if isinstance(current, int) and current != previous + growth:
+        text += f" on comparable channels ({current} observed)"
+    return text
 
 
 def _meta_text(card: dict) -> str:
-    return " · ".join([*card["entities"][:5], f"first seen {_when(card['first_seen'])}"])
+    return " · ".join([*card["entities"][:5], f"story tracked since {_when(card['first_seen'])}"])
 
 
 def _channel_links(card: dict) -> list[tuple[str, str, str]]:
@@ -249,6 +275,12 @@ _CONFIRMATION = {
     "attributed": "🟡 attributed",
     "rumor": "🔴 unconfirmed / rumor",
 }
+_PRICE_VERDICT = {
+    "priced_in": "price already moved before the first Telegram post",
+    "telegram_ahead": "Telegram posted before a material price move",
+    "both_moved": "price moved both before and after the first post",
+    "quiet": "no material price move around the first post",
+}
 
 
 def _usd(value: float) -> str:
@@ -273,7 +305,7 @@ def _signal_lines(card: dict) -> list[str]:
     if len(sources) >= 2 and signals["spread_minutes"] is not None:
         first = sources[0]
         lines.append(
-            f"⏱ First: {first['channel']} at {_clock(first['published_at'])} → "
+            f"⏱ First linked source: {first['channel']} at {_clock(first['published_at'])} → "
             f"{_channels(len(sources))} in {_duration(signals['spread_minutes'])}"
         )
     if signals["figures_conflict"]:
@@ -284,13 +316,27 @@ def _signal_lines(card: dict) -> list[str]:
         lines.append("⚠️ Figures differ: " + " vs ".join(parts))
     price = signals.get("price")
     if price:
-        arrow = "📈" if price["change_pct"] >= 0 else "📉"
-        lines.append(
-            f"{arrow} {price['inst_id'].split('-')[0]} "
-            f"{price['change_pct']:+.2f}% since first post "
-            f"({price['price_then']:g} → {price['price_now']:g} USDT, OKX spot; not causal)"
-        )
+        lines.append(_price_line(price))
     return lines
+
+
+def _price_line(price: dict) -> str:
+    arrow = "📈" if price["change_pct"] >= 0 else "📉"
+    symbol = price["inst_id"].split("-")[0]
+    before = price.get("change_pct_before")
+    hour_before = price.get("price_hour_before")
+    verdict = _PRICE_VERDICT.get(price.get("verdict") or "", "")
+    note = f"{verdict} (OKX spot; not causal)" if verdict else "OKX spot; not causal"
+    if before is not None and hour_before is not None:
+        return (
+            f"{arrow} {symbol} {before:+.2f}% in the hour before first post, "
+            f"{price['change_pct']:+.2f}% after "
+            f"({hour_before:g} → {price['price_then']:g} → {price['price_now']:g} USDT). {note}"
+        )
+    return (
+        f"{arrow} {symbol} {price['change_pct']:+.2f}% since first post "
+        f"({price['price_then']:g} → {price['price_now']:g} USDT, {note})"
+    )
 
 
 def _clock(iso: str) -> str:
@@ -319,6 +365,30 @@ def _coverage_text(payload: dict) -> str:
     return text
 
 
+def _trust_line(payload: dict) -> str | None:
+    """Measured snapshot facts: displayed quotes, cycle time, and coverage."""
+    parts: list[str] = []
+    quotes = sum(len(card.get("claims") or []) for card in payload.get("stories") or [])
+    if quotes:
+        noun = "quote" if quotes == 1 else "quotes"
+        parts.append(f"{quotes} displayed {noun} passed the span check")
+    collected = payload.get("collected_at")
+    published = payload.get("published_at") or payload.get("analyzed_at")
+    if collected and published:
+        seconds = int(
+            (datetime.fromisoformat(published) - datetime.fromisoformat(collected)).total_seconds()
+        )
+        if seconds >= 0:
+            parts.append(f"{seconds}s collect→publish")
+    cov = payload.get("coverage") or {}
+    if cov.get("channels_ok") is not None and cov.get("publications_total") is not None:
+        parts.append(
+            f"{_channels(cov['channels_ok'])}, "
+            f"{cov.get('publications_processed', 0)}/{cov['publications_total']} posts"
+        )
+    return " · ".join(parts) if parts else None
+
+
 def _limitation_notes(payload: dict) -> list[str]:
     notes = [_LIMITATION_TEXT.get(code, code) for code in payload["limitations"]]
     return ["snapshot is stale", *notes] if payload["stale"] else notes
@@ -345,6 +415,14 @@ def _md_card_head(card: dict, heading: str) -> list[str]:
     signal_lines = _signal_lines(card)
     if signal_lines:
         lines += [""] + [f"{line}  " for line in signal_lines]
+    caveat = (card.get("signals") or {}).get("caveat_drop")
+    if caveat:
+        lines += [
+            "",
+            f"⚠️ **Qualifier dropped in later wording** (+{_duration(caveat['minutes_later'])}):",
+            f"- [{caveat['before_channel']}]({caveat['before_link']}): “{caveat['before_quote']}”",
+            f"- [{caveat['after_channel']}]({caveat['after_link']}): “{caveat['after_quote']}”",
+        ]
     channels = _channel_links(card)
     if channels:
         lines += [
@@ -380,7 +458,7 @@ def _md_discussion(card: dict, *, full: bool) -> list[str]:
     # Snapshots published before facts-only comments carry opinion points.
     lines += [f"- {point}" for point in discussion["points"]]
     for fact, comment in facts:
-        source = f" — [comment in {comment['channel']}]({comment['link']})" if comment else ""
+        source = f" — [discussion in {comment['channel']}]({comment['link']})" if comment else ""
         lines.append(f"- {fact}{source}")
         if full and comment:
             lines.append(f"  > “{_english(comment, 'text')}”")
@@ -388,8 +466,9 @@ def _md_discussion(card: dict, *, full: bool) -> list[str]:
 
 
 _LEAD = (
-    "Stories that appeared or gained channels over the last 24 hours "
-    "compared with the previous 24 hours."
+    "AstraFeed · OKX.AI A2MCP. Stories that appeared or gained channels "
+    "over the last 24 hours compared with the previous 24 hours. "
+    "Growth counts only channels complete in both windows."
 )
 _EMPTY = "No new or growing stories across comparable channels."
 
@@ -411,6 +490,7 @@ def render_agenda_md(payload: dict) -> str:
         if not delta:
             lines += ["", _EMPTY]
         lines += _md_extras(payload)
+        lines += _md_footer(payload)
         return "\n".join(lines) + "\n"
     for index, card in enumerate(payload["stories"], 1):
         lines += ["", "---", ""]
@@ -419,7 +499,12 @@ def render_agenda_md(payload: dict) -> str:
             lines += _md_quote(claim)
         lines += _md_discussion(card, full=False)
     lines += _md_extras(payload)
-    lines += [
+    lines += _md_footer(payload)
+    return "\n".join(lines) + "\n"
+
+
+def _md_footer(payload: dict) -> list[str]:
+    lines = [
         "",
         "---",
         "",
@@ -427,7 +512,10 @@ def render_agenda_md(payload: dict) -> str:
         "Copies are posts that repeat an earlier channel's text near-verbatim; "
         "they add reach, not confirmation. Prices are context, not cause._",
     ]
-    return "\n".join(lines) + "\n"
+    trust = _trust_line(payload)
+    if trust:
+        lines += ["", trust]
+    return lines
 
 
 def _md_extras(payload: dict) -> list[str]:
@@ -557,6 +645,18 @@ def _html_card_head(card: dict, title_html: str) -> str:
             for line in signal_lines
         )
         parts.append(f'<ul class="sig">{items}</ul>')
+    caveat = (card.get("signals") or {}).get("caveat_drop")
+    if caveat:
+        parts.append(
+            '<div class="talk"><p><b>⚠️ Qualifier dropped in later wording</b> '
+            f"(+{escape(_duration(caveat['minutes_later']))})</p>"
+            f"<blockquote>“{escape(caveat['before_quote'])}” <cite>— "
+            f'<a href="{_url(caveat["before_link"])}">{escape(caveat["before_channel"])}</a>'
+            "</cite></blockquote>"
+            f"<blockquote>“{escape(caveat['after_quote'])}” <cite>— "
+            f'<a href="{_url(caveat["after_link"])}">{escape(caveat["after_channel"])}</a>'
+            "</cite></blockquote></div>"
+        )
     parts.append(_html_timeline(card))
     channels = _channel_links(card)
     if channels:
@@ -585,7 +685,8 @@ def _html_discussion(card: dict, *, full: bool) -> str:
         source = quote_html = ""
         if comment:
             source = (
-                f' — <a href="{_url(comment["link"])}">comment in {escape(comment["channel"])}</a>'
+                f' — <a href="{_url(comment["link"])}">'
+                f"discussion in {escape(comment['channel'])}</a>"
             )
             if full:
                 quote_html = (
@@ -619,8 +720,8 @@ def render_agenda_html(payload: dict) -> str:
     delta = payload.get("response_mode") == "delta"
     lead = "New and updated cards relative to the requested snapshot." if delta else _LEAD
     body = [
-        f"<h1>Crypto Telegram agenda · {escape(_when(payload['t']))}</h1>",
-        f'<p class="lead">{lead}</p>',
+        f"<h1>AstraFeed · Crypto Telegram agenda · {escape(_when(payload['t']))}</h1>",
+        f'<p class="lead">{lead} Same snapshot: <code>POST /a2mcp/astrafeed</code>.</p>',
         _html_status(payload),
     ]
     body.extend(f'<p class="note">{escape(line)}</p>' for line in comparison_lines(payload))
@@ -653,15 +754,18 @@ def render_agenda_html(payload: dict) -> str:
         if "since_snapshot_id" in payload
         else ""
     )
+    trust = _trust_line(payload)
+    trust_html = f"<br>{escape(trust)}" if trust else ""
     body.append(
         "<footer>Copies repeat an earlier channel's text near-verbatim: reach, not confirmation. "
         "Prices are OKX spot context, not cause. "
         "Quotes from non-English posts and comments are machine-translated. "
         f"Snapshot {escape(payload['snapshot_id'])} · "
         f'<a href="/agenda?format=md&amp;snapshot_id={snapshot}{baseline_query}">Markdown</a> · '
-        f'<a href="/agenda?snapshot_id={snapshot}{baseline_query}">JSON</a></footer>'
+        f'<a href="/agenda?snapshot_id={snapshot}{baseline_query}">JSON</a>'
+        f"{trust_html}</footer>"
     )
-    return _html_page("Crypto Telegram agenda", "".join(body))
+    return _html_page("AstraFeed · Crypto Telegram agenda", "".join(body))
 
 
 def render_story_html(payload: dict) -> str:
@@ -707,8 +811,12 @@ def search_in_snapshot(
     docs_by_story: dict[str, list] = {}
     for doc in snapshot.search_docs:
         docs_by_story.setdefault(doc.story_id, []).append(doc)
+    display_titles = {card.story_id: card.title for card in (*snapshot.agenda, *snapshot.upcoming)}
     for story_id, docs in docs_by_story.items():
         title = next((doc.text for doc in docs if doc.kind == "title"), story_id)
+        display_title = display_titles.get(story_id, title)
+        if display_title != title:
+            docs = [*docs, SearchDoc(story_id, "title", display_title)]
         matches: list[str] = []
         found: set[str] = set()
         score = 0.0
@@ -734,7 +842,7 @@ def search_in_snapshot(
             score += 1000.0
         elif needle in title.casefold():
             score += 20.0
-        scored.append(SearchHit(story_id, title, tuple(matches), score))
+        scored.append(SearchHit(story_id, display_title, tuple(matches), score))
     scored.sort(key=lambda hit: (-hit.score, hit.story_id))
     return scored[offset : offset + limit], len(scored)
 
@@ -862,7 +970,7 @@ async def search_payload(
         for hit in hits
     ]
     payload["brief_markdown"] = "\n".join(f"- {hit.title} (`{hit.story_id}`)" for hit in hits) + (
-        "\n" if hits else "Ничего не найдено.\n"
+        "\n" if hits else "No matching stories.\n"
     )
     return payload
 

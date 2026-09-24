@@ -47,6 +47,8 @@ async def test_bare_post_returns_agenda_for_okx_self_check():
     assert r.status_code == 200
     body = r.json()
     assert body["action"] == "agenda"
+    assert body["usage"]["actions"]["agenda"].startswith("Empty body")
+    assert body["usage"]["listing"] == "https://www.okx.ai/agents/13877"
     assert body["result"]["snapshot_id"] == "snap-demo"
     assert body["result"]["stories"][0]["title"] == "Потоки ETH ETF"
 
