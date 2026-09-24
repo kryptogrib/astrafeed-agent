@@ -1,5 +1,6 @@
 """Atomic daily spend reservations in integer micro-dollars."""
 
+import asyncio
 from collections.abc import Callable
 from datetime import UTC, datetime
 from decimal import ROUND_CEILING, Decimal
@@ -30,6 +31,7 @@ class SqliteSpendBudget:
         self._session = session
         self._limit = _micros(daily_limit)
         self._clock = clock or (lambda: datetime.now(UTC))
+        self._lock = asyncio.Lock()
 
     async def reserve(self, principal_id: int, amount: float) -> str:
         micros = _micros(amount)
@@ -37,7 +39,7 @@ class SqliteSpendBudget:
             raise ValueError("Reservation must be positive")
         day = self._clock().astimezone(UTC).date().isoformat()
         reservation_id = uuid4().hex
-        async with self._session() as session:
+        async with self._lock, self._session() as session:
             # Serialize the read/check/write across workers and processes.
             await session.execute(text("BEGIN IMMEDIATE"))
             used = await session.scalar(
@@ -61,7 +63,8 @@ class SqliteSpendBudget:
 
     async def settle(self, reservation_id: str, actual_cost: float) -> None:
         micros = _micros(actual_cost)
-        async with self._session() as session, session.begin():
+        async with self._lock, self._session() as session:
+            await session.execute(text("BEGIN IMMEDIATE"))
             record = await session.get(SpendReservationRow, reservation_id)
             if record is None:
                 raise LookupError("Unknown spend reservation")
@@ -69,3 +72,4 @@ class SqliteSpendBudget:
                 return
             record.amount_micros = micros
             record.settled = True
+            await session.commit()
