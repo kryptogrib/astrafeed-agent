@@ -10,7 +10,8 @@ Submitted to **OKX Dev Day 2026, track "Build a Company" (OKX AI)**.
 |---|---|
 | Live endpoint | `POST https://cutememe.lol/a2mcp/astrafeed` |
 | Health | `GET https://cutememe.lol/healthz` |
-| OKX.AI listing | _pending review_ |
+| Source code | https://github.com/kryptogrib/astrafeed-agent |
+| OKX.AI listing | _pending review_ (agent ID 13877, service "AstraFeed Crypto Agenda") |
 | Demo video | _link_ |
 
 ## Try it
@@ -58,7 +59,7 @@ Telegram channels ──collect──▶ SQLite queue ──LLM extract + assign
 - **Cheap requests.** The LLM (via OpenRouter) runs only in the background cycle and has a daily budget cap. HTTP requests read the published snapshot.
 - **Layout.** Hexagonal: `domain/`, `application/`, `ports/`, `adapters/` (Telegram, SQLite, OpenRouter, HTTP). The OKX endpoint lives in [`src/astrafeed/adapters/http/a2mcp.py`](src/astrafeed/adapters/http/a2mcp.py).
 
-**Channel selection.** The live demo watches a small set of public crypto news channels whose recent posts overlap on the same events. Otherwise there would be nothing to group into stories. The exact list is in the snapshot's coverage block. The list is not a sample of "the market", and answers describe only these sources.
+**Channel selection.** The live demo watches 38 public Russian-language crypto channels: news aggregators, market feeds and analysts from one curated Telegram folder. It reads the last 72 hours, and growth compares the last 24 hours with the 24 hours before. The exact list is in the snapshot's coverage block. The list is not a sample of "the market", and answers describe only these sources.
 
 ## Monetization on OKX.AI
 
