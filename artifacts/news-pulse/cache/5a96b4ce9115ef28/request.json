@@ -1,0 +1,21 @@
+{
+ "a": {
+  "quote": "• 6969 пиксельных лягушек на ZEC, free mint. Минимум 0.007 ZEC на газ;",
+  "actor": null,
+  "action": "free mint",
+  "object": "6969 пиксельных лягушек на ZEC",
+  "qualifiers": {
+   "version": "free mint",
+   "counterparty": "0.007 ZEC на газ"
+  },
+  "url": "https://t.me/whitelist1/7149"
+ },
+ "b": {
+  "quote": "• 3 333 пиксельных кота на Zcash. Нужны X + t1-адрес. Цена TBA;\n",
+  "actor": null,
+  "action": "3 333 пиксельных кота на Zcash. Нужны X + t1-адрес. Цена TBA",
+  "object": "3 333 пиксельных кота",
+  "qualifiers": {},
+  "url": "https://t.me/whitelist1/7149"
+ }
+}

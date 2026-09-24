@@ -1,0 +1,25 @@
+{
+ "a": {
+  "quote": "1inch Swap: Arc поддерживается 1inch с первого дня в качестве launch partner;\n1inch Business: пользователи с  активной подпиской могут сразу использовать API;  \n1inch Aqua также теперь работает на всех 4 сетях.\n\n",
+  "actor": "1inch",
+  "action": "support",
+  "object": "Arc",
+  "qualifiers": {
+   "event_date": null,
+   "place": null,
+   "version": null,
+   "counterparty": null
+  },
+  "url": "https://t.me/whitelist1/7153"
+ },
+ "b": {
+  "quote": "• Arclings: 6,283 fully on-chain 1-bit SVG, mint на день Arc Mainnet, 16 сентября;",
+  "actor": "Arclings",
+  "action": "mint on Arc Mainnet day",
+  "object": "Arclings NFTs",
+  "qualifiers": {
+   "event_date": "16 сентября"
+  },
+  "url": "https://t.me/whitelist1/7135"
+ }
+}

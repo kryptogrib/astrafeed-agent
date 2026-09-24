@@ -1,0 +1,46 @@
+{
+ "id": "gen-1790198806-9sNCSQxpLGmGY2Ubs2Jd",
+ "object": "chat.completion",
+ "created": 1790198806,
+ "model": "deepseek/deepseek-v4-flash",
+ "provider": "SiliconFlow",
+ "system_fingerprint": null,
+ "service_tier": null,
+ "choices": [
+  {
+   "index": 0,
+   "logprobs": null,
+   "finish_reason": "stop",
+   "native_finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "content": "{\n  \"labels\": [\n    {\n      \"id\": \"telegram:15:423585#s23\",\n      \"kind\": \"promo_service\",\n      \"actor\": null,\n      \"action\": \"announces waiting for form\",\n      \"object\": \"Zec Hash\",\n      \"qualifiers\": {},\n      \"origin\": \"unknown\",\n      \"source_role\": \"unknown\",\n      \"verification_status\": \"unverified\",\n      \"quote\": \"🟣Zec Hash — Ждем форму\",\n      \"span\": [0, 25]\n    },\n    {\n      \"id\": \"telegram:15:423585#s24\",\n      \"kind\": \"promo_service\",\n      \"actor\": null,\n      \"action\": \"announces waiting for form\",\n      \"object\": \"Zec Quotrons\",\n      \"qualifiers\": {},\n      \"origin\": \"unknown\",\n      \"source_role\": \"unknown\",\n      \"verification_status\": \"unverified\",\n      \"quote\": \"🟣Zec Quotrons — Ждем форму\",\n      \"span\": [0, 27]\n    },\n    {\n      \"id\": \"telegram:15:423585#s25\",\n      \"kind\": \"promo_service\",\n      \"actor\": null,\n      \"action\": \"announces waiting for form\",\n      \"object\": \"Zec Machines\",\n      \"qualifiers\": {},\n      \"origin\": \"unknown\",\n      \"source_role\": \"unknown\",\n      \"verification_status\": \"unverified\",\n      \"quote\": \"🟣Zec Machines — Ждем форму\",\n      \"span\": [0, 28]\n    },\n    {\n      \"id\": \"telegram:15:423606#s0\",\n      \"kind\": \"event\",\n      \"actor\": null,\n      \"action\": \"mentions Zcash and ZEC in context of NFT and privacy\",\n      \"object\": \"Zcash/ZEC\",\n      \"qualifiers\": {},\n      \"origin\": \"unknown\",\n      \"source_role\": \"unknown\",\n      \"verification_status\": \"unverified\",\n      \"quote\": \"#Zcash #ZEC #NFT #privacy 👀\",\n      \"span\": [0, 29]\n    },\n    {\n      \"id\": \"telegram:15:423606#s1\",\n      \"kind\": \"event\",\n      \"actor\": \"Zcash\",\n      \"action\": \"is hyping, but NFT not in mainnet\",\n      \"object\": \"Zcash\",\n      \"qualifiers\": {},\n      \"origin\": \"unknown\",\n      \"source_role\": \"unknown\",\n      \"verification_status\": \"unverified\",\n      \"quote\": \"Zcash хайпует, но NFT в мейннет нет. Разбираемся, кто и за что платит\",\n      \"span\": [0, 70]\n    },\n    {\n      \"id\": \"telegram:15:423606#s2\",\n      \"kind\": \"event\",\n      \"actor\": null,\n      \"action\": \"describes feed full of mints and whitelists on ZEC\",\n      \"object\": \"ZEC\",\n      \"qualifiers\": {},\n      \"origin\": \"unknown\",\n      \"source_role\": \"unknown\",\n      \"verification_status\": \"unverified\",\n      \"quote\": \"Лента забита минтами и вайтлистами на ZEC? Одни говорят, что это новая мета, другие - что это вообще не NFT. Деньги при этом ходят настоящие. Разберём, как устроено.\",\n      \"span\": [0, 139]\n    },\n    {\n      \"id\": \"telegram:15:423606#s3\",\n      \"kind\": \"event\",\n      \"actor\": null,\n      \"action\": \"states base: Zcash has three address types\",\n      \"object\": \"Zcash\",\n      \"qualifiers\": {},\n      \"origin\": \"unknown\",\n      \"source_role\": \"unknown\",\n      \"verification_status\": \"unverified\",\n      \"quote\": \"🟢 База: у Zcash три типа адресов\",\n      \"span\": [0, 35]\n    },\n    {\n      \"id\": \"telegram:15:423606#s6\",\n      \"kind\": \"event\",\n      \"actor\": null,\n      \"action\": \"asks why no NFT in Zcash mainnet\",\n      \"object\": \"Zcash\",\n      \"qualifiers\": {},\n      \"origin\": \"unknown\",\n      \"source_role\": \"unknown\",\n      \"verification_status\": \"unverified\",\n      \"quote\": \"🟢 Почему в мейннет Zcash нет NFT?\",\n      \"span\": [0, 34]\n    },\n    {\n      \"id\": \"telegram:15:423606#s7\",\n      \"kind\": \"event\",\n      \"actor\": \"Zcash\",\n      \"action\": \"defines only one asset ZEC, no arbitrary assets, ZSA path, ZIPs, security review, testnet, NU7 not including ZSA\",\n      \"object\": \"Zcash\",\n      \"qualifiers\": {\n        \"version\": \"ZIP 226 and 227\",\n        \"event_date\": \"2026-09-22\",\n        \"place\": \"mainnet Zcash\",\n        \"counterparty\": \"Least Authority\"\n      },\n      \"origin\": \"unknown\",\n      \"source_role\": \"unknown\",\n      \"verification_status\": \"unverified\",\n      \"quote\": \"В мейннет Zcash определён ровно один актив - сам ZEC. Механизма выпуска произвольных активов там нет.\\nПуть к нему называется ZSA - Zcash Shielded Assets. ZIP 226 и 227 написаны, ZSA прошли security review Least Authority, с августа работает отдельный публичный Testnet-ZSA. Статус спецификаций - Draft. В текущем плане NU7 от 5 ноября ZSA среди заявленных изменений нет. NU7 это не запуск NFT.\",\n      \"span\": [0, 280]\n    },\n    {\n      \"id\": \"telegram:15:423606#s9\",\n      \"kind\": \"event\",\n      \"actor\": null,\n      \"action\": \"describes first method: payment plus record, platform indexes identifier\",\n      \"object\": \"ZEC\",\n      \"qualifiers\": {},\n      \"origin\": \"unknown\",\n      \"source_role\": \"unknown\",\n      \"verification_status\": \"unverified\",\n      \"quote\": \"⏺️Первая: платёж плюс запись. Отправляешь ZEC с мемо, площадка пишет у себя в индексе, что идентификатор теперь твой. Ончейн только факт платежа.\",\n      \"span\": [0, 119]\n    },\n    {\n      \"id\": \"telegram:15:423606#s17\",\n      \"kind\": \"event\",\n      \"actor\": \"ZCAT\",\n      \"action\": \"is token on Solana paying holders in ZEC, not related to Zcash NFT; BITFOOTS minted via Zcash but inscription on Bitcoin\",\n      \"object\": \"ZCAT, BITFOOTS\",\n      \"qualifiers\": {\n        \"place\": \"Solana, Zcash, Bitcoin\",\n        \"counterparty\": \"Zcash\"\n      },\n      \"origin\": \"unknown\",\n      \"source_role\": \"unknown\",\n      \"verification_status\": \"unverified\",\n      \"quote\": \"$ZCAT это токен на Solana, который платит холдерам в ZEC, к NFT на Zcash отношения не имеет. BITFOOTS минтится через Zcash, а инскрипцию отдаёт на биткоине через Ordinals. Надпись Zcash NFT не значит, что актив лежит в Zcash.\",\n      \"span\": [0, 205]\n    },\n    {\n      \"id\": \"telegram:15:423619#s6\",\n      \"kind\": \"event\",\n      \"actor\": \"Dukz\",\n      \"action\": \"launched whitelist registration for new NFT collection on Zcash\",\n      \"object\": \"Dukz\",\n      \"qualifiers\": {\n        \"place\": \"Zcash\",\n        \"counterparty\": \"Twitter\"\n      },\n      \"origin\": \"unknown\",\n      \"source_role\": \"unknown\",\n      \"verification_status\": \"unverified\",\n      \"quote\": \"🛡️Dukz - новая NFT-коллекция на Zcash запустили регистрацию в вайтлист. Для участия выполняем задания в Twitter и оставляем кошелёк Zcash.\",\n      \"span\": [0, 119]\n    }\n  ]\n}",
+    "refusal": null,
+    "reasoning": null
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 1910,
+  "completion_tokens": 1865,
+  "total_tokens": 3775,
+  "cost": 0.0007705,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.0007705,
+   "upstream_inference_prompt_cost": 0.0002483,
+   "upstream_inference_completions_cost": 0.0005222
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

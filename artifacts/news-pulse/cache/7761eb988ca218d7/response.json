@@ -1,0 +1,32 @@
+{
+ "choices": [
+  {
+   "message": {
+    "content": "{\"labels\": [{\"id\": \"telegram:15:422949#s15\", \"kind\": \"event\", \"actor\": \"Ethereum\", \"action\": \"aims to become\", \"object\": \"quantum-resistant L1\", \"qualifiers\": {\"event_date\": \"2029\"}, \"origin\": \"own\", \"source_role\": \"editorial\", \"verification_status\": \"unverified\", \"quote\": \"Ethereum метит в квантово-стойкий L1 к 2029 году\", \"span\": [0, 52]}]}"
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 1899,
+  "completion_tokens": 1715,
+  "total_tokens": 3614,
+  "cost": 0.00074606,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.00074606,
+   "upstream_inference_prompt_cost": 0.00026586,
+   "upstream_inference_completions_cost": 0.0004802
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

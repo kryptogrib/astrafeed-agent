@@ -1,0 +1,18 @@
+{
+ "a": {
+  "quote": "Wall Street kept walking in: S&P Global agreed to buy OpenZeppelin, the firm securing $37T in smart contracts, Deutsche Bank went live with institutional BTC/ETH custody, and Circle's Arc L1 hit mainnet; while crypto's courtroom pile grew, from DOJ charges against two Robinhood engineers to Celsius's $495M suit against BitMEX.",
+  "actor": "Circle's Arc L1",
+  "action": "hit mainnet",
+  "object": null,
+  "qualifiers": {},
+  "url": "https://t.me/WEB3_AGGREGATOR/423249"
+ },
+ "b": {
+  "quote": "— Circle's Arc, its USDC-gas stablecoin L1, goes live on mainnet",
+  "actor": "Circle's Arc",
+  "action": "goes live on mainnet",
+  "object": null,
+  "qualifiers": {},
+  "url": "https://t.me/WEB3_AGGREGATOR/423249"
+ }
+}

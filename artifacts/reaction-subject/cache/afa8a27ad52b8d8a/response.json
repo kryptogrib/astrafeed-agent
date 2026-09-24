@@ -1,0 +1,46 @@
+{
+ "id": "gen-1790247018-EDJFWreGqzklZzYLWd3H",
+ "object": "chat.completion",
+ "created": 1790247018,
+ "model": "deepseek/deepseek-v4-flash",
+ "provider": "AtlasCloud",
+ "system_fingerprint": null,
+ "service_tier": "default",
+ "choices": [
+  {
+   "index": 0,
+   "logprobs": null,
+   "finish_reason": "stop",
+   "native_finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "content": "{\"items\": [{\"id\": \"arc|https://t.me/Slavik_investor_updates/6918?comment=138099\", \"target\": \"event\", \"target_id\": \"e3-e183a9539dc7838b\", \"comment_fragment\": \"Ну зашквар или новый уровень?\", \"context_fragment\": \"Circle 16 сентября запускает Arc - собственный L1 под стейблкоин-финансы.\", \"why\": \"Comment evaluates the launch of Arc, a reported event.\"}, {\"id\": \"arc|https://t.me/Slavik_investor_updates/6918?comment=138119\", \"target\": \"event\", \"target_id\": \"e3-e183a9539dc7838b\", \"comment_fragment\": \"Вот это поворот, интригующе же\", \"context_fragment\": \"Circle 16 сентября запускает Arc - собственный L1 под стейблкоин-финансы.\", \"why\": \"Short emotion reacting to the single-news post about Arc launch.\"}, {\"id\": \"arc|https://t.me/Slavik_investor_updates/6918?comment=138120\", \"target\": \"event\", \"target_id\": \"e3-e183a9539dc7838b\", \"comment_fragment\": \"Вот это поворот, ждем новостей!\", \"context_fragment\": \"Circle 16 сентября запускает Arc - собственный L1 под стейблкоин-финансы.\", \"why\": \"Short emotion reacting to the single-news post about Arc launch.\"}, {\"id\": \"arc|https://t.me/Slavik_investor_updates/6918?comment=138167\", \"target\": \"event\", \"target_id\": \"e3-e183a9539dc7838b\", \"comment_fragment\": \"Ну это ж круто, смотрю за развитием\", \"context_fragment\": \"Circle 16 сентября запускает Arc - собственный L1 под стейблкоин-финансы.\", \"why\": \"Short emotion reacting to the single-news post about Arc launch.\"}]}",
+    "refusal": null,
+    "reasoning": null
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 1325,
+  "completion_tokens": 469,
+  "total_tokens": 1794,
+  "cost": 0.00031682,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.00031682,
+   "upstream_inference_prompt_cost": 0.0001855,
+   "upstream_inference_completions_cost": 0.00013132
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

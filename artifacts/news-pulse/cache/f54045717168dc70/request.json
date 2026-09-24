@@ -1,0 +1,23 @@
+{
+ "a": {
+  "quote": "Я вам просто напоминаю, что в 18 по Москве официально ARC запускают и вы уже сейчас можете абсолютно бесплатно создавать свои мемы на https://arc.openfair.app/",
+  "actor": null,
+  "action": "launch",
+  "object": "ARC",
+  "qualifiers": {
+   "event_date": "18 по Москве",
+   "place": "https://arc.openfair.app/"
+  },
+  "url": "https://t.me/WEB3_AGGREGATOR/423121"
+ },
+ "b": {
+  "quote": "Есть новый чейн Arc от Circle, эмитента USDC. Сначала хайпанул, а потом начался какой-то цирк:",
+  "actor": "Circle",
+  "action": "launch",
+  "object": "Arc",
+  "qualifiers": {
+   "version": "новый чейн от Circle, эмитента USDC"
+  },
+  "url": "https://t.me/cryptonftded/3271"
+ }
+}

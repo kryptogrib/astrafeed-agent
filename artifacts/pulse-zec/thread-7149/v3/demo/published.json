@@ -1,0 +1,472 @@
+{
+ "link": "https://t.me/whitelist1/7149",
+ "model_labels": "artifacts/pulse-zec/thread-7149/v3/labels.json",
+ "corrections": "artifacts/pulse-zec/thread-7149/v3/demo/corrections.json",
+ "reviewer": null,
+ "published": [
+  {
+   "id": "571964",
+   "relevance": "relevant",
+   "aspect": "usage",
+   "kind": "question",
+   "summary": "Спрашивает, прошел ли кто-то в whitelist лягушек (ZEC Frogs).",
+   "quote": "прошел кто в лягух?",
+   "context_ids": [
+    "post"
+   ],
+   "name_candidate": null,
+   "link": "https://t.me/whitelist1/7149?comment=571964",
+   "corrected": false,
+   "borderline": false
+  },
+  {
+   "id": "571965",
+   "relevance": "relevant",
+   "aspect": "usage",
+   "kind": "experience",
+   "summary": "Сообщает, что только выкатили чекер для ZEC Frogs.",
+   "quote": "только чекер выкатили",
+   "context_ids": [
+    "post"
+   ],
+   "name_candidate": null,
+   "link": "https://t.me/whitelist1/7149?comment=571965",
+   "corrected": false,
+   "borderline": false
+  },
+  {
+   "id": "571966",
+   "relevance": "relevant",
+   "aspect": "usage",
+   "kind": "experience",
+   "summary": "Сообщает, что 8 из 10 аккаунтов прошли whitelist.",
+   "quote": "8/10 аков прошли",
+   "context_ids": [
+    "post"
+   ],
+   "name_candidate": null,
+   "link": "https://t.me/whitelist1/7149?comment=571966",
+   "corrected": false,
+   "borderline": false
+  },
+  {
+   "id": "571968",
+   "relevance": "relevant",
+   "aspect": "market",
+   "kind": "opinion",
+   "summary": "Считает, что каждая лягушка будет стоить минимум по касику.",
+   "quote": "каждая по касику минимум",
+   "context_ids": [
+    "571966"
+   ],
+   "name_candidate": null,
+   "link": "https://t.me/whitelist1/7149?comment=571968",
+   "corrected": false,
+   "borderline": false
+  },
+  {
+   "id": "571971",
+   "relevance": "relevant",
+   "aspect": "market",
+   "kind": "opinion",
+   "summary": "Считает, что лягушки дорогие.",
+   "quote": "Та чето дорогое",
+   "context_ids": [
+    "571968"
+   ],
+   "name_candidate": null,
+   "link": "https://t.me/whitelist1/7149?comment=571971",
+   "corrected": false,
+   "borderline": false
+  },
+  {
+   "id": "571974",
+   "relevance": "relevant",
+   "aspect": "usage",
+   "kind": "question",
+   "summary": "Спрашивает, на каком маркете торгуются NFT на Zcash.",
+   "quote": "А на каком маркете торгуются нфт на Zcash ?",
+   "context_ids": [
+    "post"
+   ],
+   "name_candidate": null,
+   "link": "https://t.me/whitelist1/7149?comment=571974",
+   "corrected": false,
+   "borderline": false
+  },
+  {
+   "id": "571975",
+   "relevance": "relevant",
+   "aspect": "usage",
+   "kind": "experience",
+   "summary": "Отвечает, что основной маркет — zecbit.net, но некоторые запускаются сами.",
+   "quote": "Основной https://zecbit.net/ Но некоторые лаунчатся сами у себя",
+   "context_ids": [
+    "571974"
+   ],
+   "name_candidate": null,
+   "link": "https://t.me/whitelist1/7149?comment=571975",
+   "corrected": false,
+   "borderline": false
+  },
+  {
+   "id": "571976",
+   "relevance": "relevant",
+   "aspect": "usage",
+   "kind": "experience",
+   "summary": "Говорит, что пока только zecbit с двумя коллекциями, каждый ведет торги на своем сайте.",
+   "quote": "Щас пока что зекбит только, и то с 2 коллекциями. Каждый на своем сайте торги ведет",
+   "context_ids": [
+    "571974"
+   ],
+   "name_candidate": null,
+   "link": "https://t.me/whitelist1/7149?comment=571976",
+   "corrected": false,
+   "borderline": false
+  },
+  {
+   "id": "571982",
+   "relevance": "relevant",
+   "aspect": "usage",
+   "kind": "experience",
+   "summary": "Говорит, что слышал, будто отнимают whitelist обратно.",
+   "quote": "Слышь, говорят отнимают обратно 😄",
+   "context_ids": [
+    "571966"
+   ],
+   "name_candidate": null,
+   "link": "https://t.me/whitelist1/7149?comment=571982",
+   "corrected": false,
+   "borderline": false
+  },
+  {
+   "id": "571983",
+   "relevance": "relevant",
+   "aspect": "usage",
+   "kind": "question",
+   "summary": "Спрашивает с сомнением, правда ли отнимают.",
+   "quote": "Да ну?",
+   "context_ids": [
+    "571982"
+   ],
+   "name_candidate": null,
+   "link": "https://t.me/whitelist1/7149?comment=571983",
+   "corrected": false,
+   "borderline": false
+  },
+  {
+   "id": "571984",
+   "relevance": "relevant",
+   "aspect": "usage",
+   "kind": "experience",
+   "summary": "Говорит, что некоторые уже жалуются на отзыв whitelist.",
+   "quote": "Некоторые уже жалуются",
+   "context_ids": [
+    "571983"
+   ],
+   "name_candidate": null,
+   "link": "https://t.me/whitelist1/7149?comment=571984",
+   "corrected": false,
+   "borderline": false
+  },
+  {
+   "id": "571985",
+   "relevance": "relevant",
+   "aspect": "usage",
+   "kind": "question",
+   "summary": "Спрашивает, скамят ли работяг.",
+   "quote": "скамят работяг???",
+   "context_ids": [
+    "571982"
+   ],
+   "name_candidate": null,
+   "link": "https://t.me/whitelist1/7149?comment=571985",
+   "corrected": false,
+   "borderline": false
+  },
+  {
+   "id": "571996",
+   "relevance": "relevant",
+   "aspect": "usage",
+   "kind": "question",
+   "summary": "Спрашивает, перестали ли принимать заявки на Zaddr.",
+   "quote": "zaddr уже перестали заявки принимать?",
+   "context_ids": [
+    "post"
+   ],
+   "name_candidate": null,
+   "link": "https://t.me/whitelist1/7149?comment=571996",
+   "corrected": false,
+   "borderline": false
+  },
+  {
+   "id": "572000",
+   "relevance": "relevant",
+   "aspect": "usage",
+   "kind": "experience",
+   "summary": "Отвечает, что заявки на Zaddr перестали принимать пару дней назад.",
+   "quote": "Пару дней назад еще",
+   "context_ids": [
+    "571996"
+   ],
+   "name_candidate": null,
+   "link": "https://t.me/whitelist1/7149?comment=572000",
+   "corrected": false,
+   "borderline": false
+  },
+  {
+   "id": "572005",
+   "relevance": "relevant",
+   "aspect": "usage",
+   "kind": "question",
+   "summary": "Спрашивает, как завести ZEC на кошелек Noir, только ли с биржи.",
+   "quote": "Как завести Zec на кошелек noir? Только с биржи?",
+   "context_ids": [
+    "post"
+   ],
+   "name_candidate": null,
+   "link": "https://t.me/whitelist1/7149?comment=572005",
+   "corrected": false,
+   "borderline": false
+  },
+  {
+   "id": "572006",
+   "relevance": "relevant",
+   "aspect": "usage",
+   "kind": "experience",
+   "summary": "Отвечает, что можно через кроссчейн-бридж Rubic.",
+   "quote": "кросчейн через бридж рубик можно",
+   "context_ids": [
+    "572005"
+   ],
+   "name_candidate": null,
+   "link": "https://t.me/whitelist1/7149?comment=572006",
+   "corrected": false,
+   "borderline": false
+  },
+  {
+   "id": "572008",
+   "relevance": "relevant",
+   "aspect": "usage",
+   "kind": "experience",
+   "summary": "Говорит, что знает такой бридж, и благодарит.",
+   "quote": "Ооо, точно, знаю такой. Спс",
+   "context_ids": [
+    "572006"
+   ],
+   "name_candidate": null,
+   "link": "https://t.me/whitelist1/7149?comment=572008",
+   "corrected": false,
+   "borderline": false
+  },
+  {
+   "id": "572009",
+   "relevance": "relevant",
+   "aspect": "usage",
+   "kind": "experience",
+   "summary": "Сообщает, что прошел whitelist лягушек.",
+   "quote": "Я прошел",
+   "context_ids": [
+    "571964"
+   ],
+   "name_candidate": null,
+   "link": "https://t.me/whitelist1/7149?comment=572009",
+   "corrected": false,
+   "borderline": false
+  },
+  {
+   "id": "572010",
+   "relevance": "relevant",
+   "aspect": "usage",
+   "kind": "opinion",
+   "summary": "Поздравляет и выражает надежду, что накормят.",
+   "quote": "Гратц, надеюсь накорямт",
+   "context_ids": [
+    "572009"
+   ],
+   "name_candidate": null,
+   "link": "https://t.me/whitelist1/7149?comment=572010",
+   "corrected": false,
+   "borderline": false
+  },
+  {
+   "id": "572011",
+   "relevance": "relevant",
+   "aspect": "usage",
+   "kind": "experience",
+   "summary": "Тоже надеется на получение прибыли.",
+   "quote": "Тоже очень надеюсь) 🤞",
+   "context_ids": [
+    "572010"
+   ],
+   "name_candidate": null,
+   "link": "https://t.me/whitelist1/7149?comment=572011",
+   "corrected": false,
+   "borderline": false
+  },
+  {
+   "id": "572012",
+   "relevance": "relevant",
+   "aspect": "usage",
+   "kind": "opinion",
+   "summary": "Считает, что комиссия у них большая.",
+   "quote": "Комса у них чёт большая",
+   "context_ids": [
+    "572011"
+   ],
+   "name_candidate": null,
+   "link": "https://t.me/whitelist1/7149?comment=572012",
+   "corrected": false,
+   "borderline": false
+  },
+  {
+   "id": "572013",
+   "relevance": "relevant",
+   "aspect": "usage",
+   "kind": "opinion",
+   "summary": "Считает нормальным потратить 10-15 долларов на комиссию.",
+   "quote": "Да, потратить 10-15 баксов норм",
+   "context_ids": [
+    "572012"
+   ],
+   "name_candidate": null,
+   "link": "https://t.me/whitelist1/7149?comment=572013",
+   "corrected": false,
+   "borderline": false
+  },
+  {
+   "id": "572021",
+   "relevance": "relevant",
+   "aspect": "usage",
+   "kind": "question",
+   "summary": "Спрашивает, прошел ли собеседник whitelist.",
+   "quote": "Ты тож прошел?",
+   "context_ids": [
+    "572010"
+   ],
+   "name_candidate": null,
+   "link": "https://t.me/whitelist1/7149?comment=572021",
+   "corrected": false,
+   "borderline": false
+  },
+  {
+   "id": "572022",
+   "relevance": "relevant",
+   "aspect": "usage",
+   "kind": "opinion",
+   "summary": "Считает, что приватность нужно оплачивать.",
+   "quote": "Приватность нужно оплачивать)",
+   "context_ids": [
+    "572012"
+   ],
+   "name_candidate": null,
+   "link": "https://t.me/whitelist1/7149?comment=572022",
+   "corrected": false,
+   "borderline": false
+  },
+  {
+   "id": "572030",
+   "relevance": "relevant",
+   "aspect": "usage",
+   "kind": "experience",
+   "summary": "Говорит, что у него в X не пусто.",
+   "quote": "наверно, у меня там не пусто)",
+   "context_ids": [
+    "post"
+   ],
+   "name_candidate": null,
+   "link": "https://t.me/whitelist1/7149?comment=572030",
+   "corrected": false,
+   "borderline": false
+  }
+ ],
+ "held_for_review": {
+  "reason": "relevant_not_grounded на метках модели",
+  "labels": [
+   {
+    "id": "572024",
+    "relevance": "relevant",
+    "aspect": "usage",
+    "kind": "question",
+    "summary": "Спрашивает, был ли на кошельке ZEC или он был пустым.",
+    "quote": "у тебя на кошельке был зек? или прям нулевый?",
+    "context_ids": [
+     "572023"
+    ],
+    "name_candidate": null,
+    "link": "https://t.me/whitelist1/7149?comment=572024",
+    "text": "у тебя на кошельке был зек? или прям нулевый?"
+   },
+   {
+    "id": "572027",
+    "relevance": "relevant",
+    "aspect": "usage",
+    "kind": "experience",
+    "summary": "Отвечает, что только создал кошелек.",
+    "quote": "только создал",
+    "context_ids": [
+     "572024"
+    ],
+    "name_candidate": null,
+    "link": "https://t.me/whitelist1/7149?comment=572027",
+    "text": "только создал"
+   },
+   {
+    "id": "572028",
+    "relevance": "relevant",
+    "aspect": "usage",
+    "kind": "opinion",
+    "summary": "Выражает недовольство, что сбрили активных, и предполагает, что смотрели аккаунты в X.",
+    "quote": "Вот сцуки, почему сбрили активных тогда, наверняка они акки в Х смотрели.",
+    "context_ids": [
+     "572027"
+    ],
+    "name_candidate": null,
+    "link": "https://t.me/whitelist1/7149?comment=572028",
+    "text": "Вот сцуки, почему сбрили активных тогда, наверняка они акки в Х смотрели."
+   },
+   {
+    "id": "572074",
+    "relevance": "relevant",
+    "aspect": "usage",
+    "kind": "opinion",
+    "summary": "Выражает недовольство происходящим в ZEC, называет это переобувкой на переобувке.",
+    "quote": "не нравиться мне все что твориться в зек, переобвка на переобувке",
+    "context_ids": [
+     "572073"
+    ],
+    "name_candidate": null,
+    "link": "https://t.me/whitelist1/7149?comment=572074",
+    "text": "не удивлюсь, не нравиться мне все что твориться в зек, переобвка на переобувке"
+   },
+   {
+    "id": "572075",
+    "relevance": "relevant",
+    "aspect": "usage",
+    "kind": "opinion",
+    "summary": "Считает, что люди потеряли голову и сорвались с цепи.",
+    "quote": "Да и люди голову потеряли тож, как с цепи сорвались))",
+    "context_ids": [
+     "572074"
+    ],
+    "name_candidate": null,
+    "link": "https://t.me/whitelist1/7149?comment=572075",
+    "text": "Да и люди голову потеряли тож, как с цепи сорвались))"
+   },
+   {
+    "id": "572076",
+    "relevance": "relevant",
+    "aspect": "usage",
+    "kind": "opinion",
+    "summary": "Соглашается, что многие не видят красные флаги и лезут.",
+    "quote": "согласен, многие тупо не видят лютые редфдаги и прут туда",
+    "context_ids": [
+     "572075"
+    ],
+    "name_candidate": null,
+    "link": "https://t.me/whitelist1/7149?comment=572076",
+    "text": "согласен, многие тупо не видят лютые редфдаги и прут туда"
+   }
+  ]
+ }
+}

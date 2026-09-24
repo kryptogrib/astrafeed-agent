@@ -1,0 +1,46 @@
+{
+ "id": "gen-1790198753-y3qYNLzsh3ctmA0Tmxuo",
+ "object": "chat.completion",
+ "created": 1790198753,
+ "model": "deepseek/deepseek-v4-flash",
+ "provider": "SiliconFlow",
+ "system_fingerprint": null,
+ "service_tier": null,
+ "choices": [
+  {
+   "index": 0,
+   "logprobs": null,
+   "finish_reason": "stop",
+   "native_finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "content": "{\"labels\": [{\"id\": \"telegram:1:7151#s21\", \"kind\": \"promo_service\", \"actor\": null, \"action\": \"announce launch\", \"object\": \"Zec Hash\", \"qualifiers\": {\"version\": \"Proof of Work\", \"event_date\": \"launch soon\"}, \"origin\": \"own\", \"source_role\": \"author\", \"verification_status\": \"unverified\", \"quote\": \"Zec Hash: Proof of Work · launch soon\", \"span\": [2, 38]}, {\"id\": \"telegram:15:423478#s2\", \"kind\": \"author_position\", \"actor\": \"author\", \"action\": \"expresses opinion\", \"object\": \"SUI/HUY/SEI vs BTC+Zcash+HYPE\", \"qualifiers\": {}, \"origin\": \"own\", \"source_role\": \"author\", \"verification_status\": \"unverified\", \"quote\": \"окажется что SUI/HUY/SEI это чистый приватный токен, лучше BTC+Zcash+HYPE вместе взятых\", \"span\": [48, 126]}, {\"id\": \"telegram:15:423478#s5\", \"kind\": \"author_position\", \"actor\": \"author\", \"action\": \"states non-investment\", \"object\": \"Zcash\", \"qualifiers\": {}, \"origin\": \"own\", \"source_role\": \"author\", \"verification_status\": \"unverified\", \"quote\": \"поэтому я во всякие понсы/кешкошку и даже ЗКЕШ я не инвестирую\", \"span\": [0, 62]}, {\"id\": \"telegram:15:423486#s3\", \"kind\": \"event\", \"actor\": \"Ethereum community\", \"action\": \"discusses implementation\", \"object\": \"private transfers\", \"qualifiers\": {\"counterparty\": \"Zcash\", \"version\": \"shielded pool\"}, \"origin\": \"retelling\", \"source_role\": \"editorial\", \"verification_status\": \"unverified\", \"quote\": \"Уже обсуждается внедрение нативных приватных переводов ETH и ERC-20 через общий shielded pool на уровне протокола\", \"span\": [42, 132]}, {\"id\": \"telegram:15:423488#s3\", \"kind\": \"promo_service\", \"actor\": null, \"action\": \"announces collection\", \"object\": \"DUCKZ\", \"qualifiers\": {\"place\": \"Zcash network\"}, \"origin\": \"own\", \"source_role\": \"author\", \"verification_status\": \"unverified\", \"quote\": \"DUCKZ — ерли коллекция из уточек в сети Zcash\", \"span\": [2, 48]}, {\"id\": \"telegram:15:423488#s4\", \"kind\": \"promo_service\", \"actor\": null, \"action\": \"instructs participation\", \"object\": \"DUCKZ airdrop\", \"qualifiers\": {\"counterparty\": \"Zcash wallet\"}, \"origin\": \"own\", \"source_role\": \"author\", \"verification_status\": \"unverified\", \"quote\": \"Переходим по ссылке, коннектим X, выполняем задания, добавляем Zcash кошелек и ждем результатов\", \"span\": [2, 91]}, {\"id\": \"telegram:15:423488#s5\", \"kind\": \"promo_service\", \"actor\": null, \"action\": \"announces collection\", \"object\": \"ZecMap\", \"qualifiers\": {\"place\": \"Zcash network\", \"version\": \"2222 NFT\"}, \"origin\": \"own\", \"source_role\": \"author\", \"verification_status\": \"unverified\", \"quote\": \"ZecMap — коллекция из 2222 NFT в сети Zcash\", \"span\": [2, 48]}, {\"id\": \"telegram:15:423488#s6\", \"kind\": \"promo_service\", \"actor\": null, \"action\": \"instructs participation\", \"object\": \"ZecMap airdrop\", \"qualifiers\": {\"counterparty\": \"Zcash wallet\", \"place\": \"X\"}, \"origin\": \"own\", \"source_role\": \"author\", \"verification_status\": \"unverified\", \"quote\": \"Переходим по ссылке, коннектим X (нужно минимум 100 фолловеров и акк старше 3 мес), выполняем задания и набираем >100 поинтов, добавляем Zcash кошелек и ждем результатов\", \"span\": [2, 139]}, {\"id\": \"telegram:15:423488#s7\", \"kind\": \"promo_service\", \"actor\": null, \"action\": \"announces collection\", \"object\": \"BITFOOTS\", \"qualifiers\": {\"place\": \"Zcash network\"}, \"origin\": \"own\", \"source_role\": \"author\", \"verification_status\": \"unverified\", \"quote\": \"BITFOOTS — коллекция из бигфутов в сети Zcash\", \"span\": [2, 48]}, {\"id\": \"telegram:15:423488#s9\", \"kind\": \"promo_service\", \"actor\": null, \"action\": \"announces collection\", \"object\": \"Shielded Wizards\", \"qualifiers\": {\"place\": \"Zcash network\", \"version\": \"2100 магов\"}, \"origin\": \"own\", \"source_role\": \"author\", \"verification_status\": \"unverified\", \"quote\": \"Shielded Wizards — коллекция из 2100 магов в сети Zcash\", \"span\": [2, 58]}, {\"id\": \"telegram:15:423488#s10\", \"kind\": \"promo_service\", \"actor\": null, \"action\": \"instructs participation\", \"object\": \"Shielded Wizards airdrop\", \"qualifiers\": {\"counterparty\": \"Zcash wallet\"}, \"origin\": \"own\", \"source_role\": \"author\", \"verification_status\": \"unverified\", \"quote\": \"Переходим по ссылке, выполняем задания, добавляем Zcash кошелек и ждем результатов\", \"span\": [2, 78]}, {\"id\": \"telegram:15:423491#s2\", \"kind\": \"event\", \"actor\": \"NEAR Intents\", \"action\": \"processed volume\", \"object\": \"ZEC swaps\", \"qualifiers\": {\"event_date\": \"30 days\", \"place\": \"NEAR Intents\", \"counterparty\": \"ZEC\"}, \"origin\": \"retelling\", \"source_role\": \"editorial\", \"verification_status\": \"unverified\", \"quote\": \"через NEAR Intents за 30 дней прошло $3,4 млрд кроссчейн объемов, в том числе и свопы в ZEC\", \"span\": [28, 105]}]}",
+    "refusal": null,
+    "reasoning": null
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 1833,
+  "completion_tokens": 1512,
+  "total_tokens": 3345,
+  "cost": 0.00066165,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.00066165,
+   "upstream_inference_prompt_cost": 0.00023829,
+   "upstream_inference_completions_cost": 0.00042336
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

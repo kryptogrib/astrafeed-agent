@@ -1,0 +1,17 @@
+{
+ "segments": [
+  {
+   "id": "telegram:15:422774#s3",
+   "text": "Liquid (liquidETH) holders were drained for ~15.45 ETH via the Veda AtomicQueue. - link\n\n",
+   "mentions": [
+    {
+     "text": "ETH",
+     "status": "confirmed"
+    }
+   ],
+   "kind_hint": "post",
+   "url": "https://t.me/WEB3_AGGREGATOR/422774",
+   "time": "2026-09-11T09:28:09+00:00"
+  }
+ ]
+}

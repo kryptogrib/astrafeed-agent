@@ -1,0 +1,17 @@
+{
+ "segments": [
+  {
+   "id": "telegram:10:838:c:64341#s0",
+   "text": "Standard 0,15 eth mint написали из за ажиотажа решили вот так сделать",
+   "mentions": [
+    {
+     "text": "eth",
+     "status": "confirmed"
+    }
+   ],
+   "kind_hint": "comment",
+   "url": "https://t.me/maxshitpostit/838?comment=64341",
+   "time": "2026-09-13T19:09:11+00:00"
+  }
+ ]
+}

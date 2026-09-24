@@ -1,0 +1,17 @@
+{
+ "segments": [
+  {
+   "id": "telegram:1:7130#s7",
+   "text": "• 4,444 NFT, около 2,632 для public mint, цена 0.015 ETH;\n",
+   "mentions": [
+    {
+     "text": "ETH",
+     "status": "confirmed"
+    }
+   ],
+   "kind_hint": "post",
+   "url": "https://t.me/whitelist1/7130",
+   "time": "2026-09-11T12:04:59+00:00"
+  }
+ ]
+}

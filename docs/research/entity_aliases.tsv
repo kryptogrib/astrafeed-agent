@@ -1,0 +1,82 @@
+# Open alias registry for entity_candidates.py. Hand-editable, one row per spelling.
+# It does NOT define the topic list: new candidates are still discovered from the corpus
+# without a row here. A row only links a spelling to an already-found candidate.
+#
+# Columns (tab-separated):
+#   surface    exact word or phrase, matched as a whole word after NFKC+casefold (no prefix match)
+#   candidate  target candidate key; "-" for not_entity_head rows
+#   relation   ru_form          Russian spelling/inflection of a name
+#              asset_symbol     project/network <-> asset ticker; reported as related, never merged
+#              not_entity_head  word that heads phrases but is not an entity (CEO Nvidia -> nvidia)
+#   basis      why the row exists; "corpus: <link>" = seen and checked in this snapshot
+#   status     confirmed  -> mention counted for the candidate
+#              ambiguous  -> kept as a separate ambiguous mention, never merged automatically
+#   condition  for ambiguous rows: reject=<regex>; support=<regex>. Checked in a +-60 char window.
+#              reject -> mention stored as rejected; support -> stored as ambiguous with a hint.
+#
+# Forms below are the ones present in astrafeed.db on 2026-09-23; add more as they appear.
+surface	candidate	relation	basis	status	condition
+биткоин	bitcoin	ru_form	corpus: https://t.me/cryptonftded/3284?comment=187878	confirmed
+биткоина	bitcoin	ru_form	corpus	confirmed
+биткоину	bitcoin	ru_form	corpus	confirmed
+биткоином	bitcoin	ru_form	corpus	confirmed
+биткоине	bitcoin	ru_form	corpus	confirmed
+биткоинах	bitcoin	ru_form	corpus	confirmed
+биткоины	bitcoin	ru_form	corpus	confirmed
+биткойн	bitcoin	ru_form	corpus	confirmed
+биткойна	bitcoin	ru_form	corpus	confirmed
+биток	bitcoin	ru_form	slang; corpus: https://t.me/rawa_imagination/21157?comment=344049	confirmed
+битка	bitcoin	ru_form	slang; corpus: https://t.me/cryptonftded/3282?comment=187846	confirmed
+битку	bitcoin	ru_form	slang; corpus	confirmed
+битке	bitcoin	ru_form	slang; corpus: https://t.me/WEB3_AGGREGATOR/423204	confirmed
+битком	bitcoin	ru_form	slang; corpus: https://t.me/cryptonftded/3264?comment=186668	confirmed
+эфир	ethereum	ru_form	slang, also "broadcast"; corpus: https://t.me/slavik_investor/2469	ambiguous	reject=прям\w*\s+эфир|эфир\w*\s+(CNN|Радио|РБК|телеканал)|(заявил\w*|сказал\w*|выступ\w*)\s+в\s+эфир; support=\$|\d\s*к\b|лонг|шорт|ликвидац|сет[ьиеяю]|кош|токен|клейм|минт|свап|биток|битк|альт|цен|позици|бмнр|eth|beta
+эфира	ethereum	ru_form	same as эфир	ambiguous	reject=прям\w*\s+эфир|эфир\w*\s+(CNN|Радио|РБК|телеканал); support=\$|\d\s*к\b|лонг|шорт|ликвидац|сет[ьиеяю]|токен|цен|позици|предложени|накоплен|своп
+эфиру	ethereum	ru_form	same as эфир	ambiguous	reject=прям\w*\s+эфир; support=\$|\d|лонг|шорт|ликвидац|битк|коллекци|график|ситуац
+эфире	ethereum	ru_form	same as эфир	ambiguous	reject=прям\w*\s+эфир|эфир\w*\s+(CNN|Радио|РБК|телеканал)|(заявил\w*|сказал\w*|выступ\w*)\s+в\s+эфир; support=сет[ьиеяю]|лаунчпад|клейм|токен|биткоин|кош
+эфиром	ethereum	ru_form	same as эфир	ambiguous	reject=прям\w*\s+эфир; support=заплат|торгует|биток|биткоин|альт
+эфиры	ethereum	ru_form	same as эфир	ambiguous	reject=прям\w*\s+эфир; support=минт|eth
+эфирчик	ethereum	ru_form	slang; corpus: https://t.me/WEB3_AGGREGATOR/423229	confirmed
+солана	solana	ru_form	corpus	confirmed
+солане	solana	ru_form	corpus	confirmed
+солану	solana	ru_form	corpus	confirmed
+соланы	solana	ru_form	corpus	confirmed
+бинанс	binance	ru_form	corpus	confirmed
+бинанса	binance	ru_form	corpus	confirmed
+бинансе	binance	ru_form	corpus	confirmed
+байбит	bybit	ru_form	corpus	confirmed
+арбитрум	arbitrum	ru_form	corpus	confirmed
+арбитруме	arbitrum	ru_form	corpus	confirmed
+хайперликвиде	hyperliquid	ru_form	corpus: https://t.me/WEB3_AGGREGATOR/423040	confirmed
+хайпер	hyperliquid	ru_form	slang, also "hyper-" prefix word	ambiguous	support=зек|позици|юсдт|usdt|дроп|kinetiq|тим|l2|купи
+хайпера	hyperliquid	ru_form	slang	ambiguous	support=зек|позици|юсдт|usdt|дроп|купи
+хайпере	hyperliquid	ru_form	slang	ambiguous	support=kinetiq|тим|l2|score
+тон	ton	ru_form	also "tone"	ambiguous	reject=(задать|смягч\w*|сменить|повыс\w*)\s+тон\b; support=\$|\d|блокчейн|сет[ьиеяю]|ликвид|купи|покупа|продал
+тона	ton	ru_form	also "tone"	ambiguous	support=\$|\d|блокчейн|сет[ьиеяю]|ликвид|купи
+тончик	ton	ru_form	slang	confirmed
+опенси	opensea	ru_form	corpus	confirmed
+опенсии	opensea	ru_form	corpus	confirmed
+робинхуд	robinhood	ru_form	corpus	confirmed
+робинхуде	robinhood	ru_form	corpus	confirmed
+зкеш	zcash	ru_form	corpus	confirmed
+зкеше	zcash	ru_form	corpus	confirmed
+юсдт	usdt	ru_form	corpus: https://t.me/Slavik_investor_updates/6912?comment=138020	confirmed
+ии	ai	ru_form	Russian abbreviation of AI	confirmed
+трампа	трамп	ru_form	corpus	confirmed
+трампу	трамп	ru_form	corpus	confirmed
+трампом	трамп	ru_form	corpus	confirmed
+трампе	трамп	ru_form	corpus	confirmed
+ethereum	eth	asset_symbol	network and its native asset	confirmed
+bitcoin	btc	asset_symbol	network and its native asset	confirmed
+solana	sol	asset_symbol	network and its native asset	confirmed
+zcash	zec	asset_symbol	network and its native asset	confirmed
+arbitrum	arb	asset_symbol	network and its governance token	confirmed
+uniswap	uni	asset_symbol	protocol and its token	confirmed
+hyperliquid	hype	asset_symbol	exchange and its token	confirmed
+ceo	-	not_entity_head	role: "CEO Nvidia" names Nvidia, not a CEO entity	confirmed
+cfo	-	not_entity_head	role	confirmed
+cto	-	not_entity_head	role	confirmed
+coo	-	not_entity_head	role	confirmed
+founder	-	not_entity_head	role	confirmed
+president	-	not_entity_head	role	confirmed
+chairman	-	not_entity_head	role	confirmed

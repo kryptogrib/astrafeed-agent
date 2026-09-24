@@ -1,0 +1,25 @@
+{
+ "segments": [
+  {
+   "id": "telegram:15:423606#s7",
+   "text": "В мейннет Zcash определён ровно один актив - сам ZEC. Механизма выпуска произвольных активов там нет.\nПуть к нему называется ZSA - Zcash Shielded Assets. ZIP 226 и 227 написаны, ZSA прошли security review Least Authority, с августа работает отдельный публичный Testnet-ZSA. Статус спецификаций - Draft. В текущем плане NU7 от 5 ноября ZSA среди заявленных изменений нет. NU7 это не запуск NFT.\n\n",
+   "mentions": [
+    {
+     "text": "Zcash",
+     "status": "confirmed"
+    },
+    {
+     "text": "ZEC",
+     "status": "confirmed"
+    },
+    {
+     "text": "Zcash",
+     "status": "confirmed"
+    }
+   ],
+   "kind_hint": "post",
+   "url": "https://t.me/WEB3_AGGREGATOR/423606",
+   "time": "2026-09-22T19:29:28+00:00"
+  }
+ ]
+}

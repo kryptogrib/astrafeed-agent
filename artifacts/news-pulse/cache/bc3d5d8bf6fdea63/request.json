@@ -1,0 +1,21 @@
+{
+ "segments": [
+  {
+   "id": "telegram:14:8116#s0",
+   "text": "А сейчас ебанутое ускорение одной палкой на 3к$ по #eth 😇😇",
+   "mentions": [
+    {
+     "text": "#eth",
+     "status": "confirmed"
+    },
+    {
+     "text": "eth",
+     "status": "confirmed"
+    }
+   ],
+   "kind_hint": "post",
+   "url": "https://t.me/icryptocom/8116",
+   "time": "2026-09-21T13:11:36+00:00"
+  }
+ ]
+}

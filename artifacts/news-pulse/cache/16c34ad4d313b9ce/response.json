@@ -1,0 +1,46 @@
+{
+ "id": "gen-1790191138-0SvKkF3nkZIz2l9DobTN",
+ "object": "chat.completion",
+ "created": 1790191138,
+ "model": "deepseek/deepseek-v4-flash",
+ "provider": "GMICloud",
+ "system_fingerprint": null,
+ "service_tier": null,
+ "choices": [
+  {
+   "index": 0,
+   "logprobs": null,
+   "finish_reason": "stop",
+   "native_finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "content": "{\"labels\": [{\"id\": \"telegram:15:423137#s0\", \"kind\": \"promo_service\", \"actor\": null, \"action\": null, \"object\": null, \"qualifiers\": {}, \"origin\": \"unknown\", \"source_role\": \"unknown\", \"verification_status\": \"unverified\", \"quote\": \"Тир-лист предстоящих проектов в экосистеме ZEC\", \"span\": [0, 48]}, {\"id\": \"telegram:15:423142#s1\", \"kind\": \"event\", \"actor\": \"Robinhood, Arc, Zcash\", \"action\": \"стали выходить коллекции\", \"object\": \"коллекции\", \"qualifiers\": {\"event_date\": \"сейчас\"}, \"origin\": \"retelling\", \"source_role\": \"author\", \"verification_status\": \"unverified\", \"quote\": \"стали выходить коллекции\", \"span\": [55, 80]}, {\"id\": \"telegram:15:423147#s0\", \"kind\": \"author_position\", \"actor\": \"автор\", \"action\": \"выражает мысль\", \"object\": \"Zcash экосистема\", \"qualifiers\": {}, \"origin\": \"own\", \"source_role\": \"author\", \"verification_status\": \"unverified\", \"quote\": \"Мысль по Zcash экосистеме\", \"span\": [0, 25]}, {\"id\": \"telegram:15:423147#s2\", \"kind\": \"author_position\", \"actor\": \"автор\", \"action\": \"прогнозирует рост\", \"object\": \"ZEC, ZCAT\", \"qualifiers\": {}, \"origin\": \"own\", \"source_role\": \"author\", \"verification_status\": \"unverified\", \"quote\": \"$ZEC продолжит расти, тот же ZCAT продолжит расти\", \"span\": [55, 100]}, {\"id\": \"telegram:15:423150#s8\", \"kind\": \"promo_service\", \"actor\": null, \"action\": null, \"object\": null, \"qualifiers\": {}, \"origin\": \"unknown\", \"source_role\": \"unknown\", \"verification_status\": \"unverified\", \"quote\": \"Тут список того, что поделать в ИНКе\\n• Тут список того, что поделать в Zcash\", \"span\": [0, 62]}, {\"id\": \"telegram:15:423159#s0\", \"kind\": \"participant_reaction\", \"actor\": \"автор\", \"action\": \"советует закинуть баланс\", \"object\": \"кошелек\", \"qualifiers\": {\"counterparty\": \"zec\"}, \"origin\": \"own\", \"source_role\": \"author\", \"verification_status\": \"unverified\", \"quote\": \"закиньте заранее балик на кош хотя бы баксов 10+\", \"span\": [20, 65]}]}",
+    "refusal": null,
+    "reasoning": null
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 1055,
+  "completion_tokens": 651,
+  "total_tokens": 1706,
+  "cost": 0.0001499862,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 886,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.0001499862,
+   "upstream_inference_prompt_cost": 3.15042e-05,
+   "upstream_inference_completions_cost": 0.000118482
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

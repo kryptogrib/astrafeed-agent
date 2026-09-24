@@ -1,0 +1,32 @@
+{
+ "choices": [
+  {
+   "message": {
+    "content": "{\"labels\": [{\"id\": \"telegram:20:48890#s0\", \"kind\": \"participant_reaction\", \"actor\": \"author\", \"action\": \"comments on announcement\", \"object\": \"ETH mainnet\", \"qualifiers\": {\"time\": \"11 hours ago\", \"reaction\": \"nobody bat an eye\"}, \"origin\": \"own\", \"source_role\": \"author\", \"verification_status\": \"unverified\", \"topic_role\": \"context\", \"quote\": \"How I'm seeing it is they announced it about 11H ago, nobody bat an eye (bc again not many use ETH mainnet as comparable to RH/SOL/BSC for ex)\", \"span\": [0, 133]}]}"
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 2109,
+  "completion_tokens": 1847,
+  "total_tokens": 3956,
+  "cost": 0.000528073,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.000528073,
+   "upstream_inference_prompt_cost": 0.000191919,
+   "upstream_inference_completions_cost": 0.000336154
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

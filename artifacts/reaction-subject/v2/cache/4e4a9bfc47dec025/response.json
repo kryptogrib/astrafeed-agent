@@ -1,0 +1,46 @@
+{
+ "id": "gen-1790249350-zuUto2ebExk6a5upH6lR",
+ "object": "chat.completion",
+ "created": 1790249350,
+ "model": "deepseek/deepseek-v4-flash",
+ "provider": "GMICloud",
+ "system_fingerprint": null,
+ "service_tier": null,
+ "choices": [
+  {
+   "index": 0,
+   "logprobs": null,
+   "finish_reason": "stop",
+   "native_finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "content": "{\n  \"target\": \"event\",\n  \"target_id\": \"e22-51767aa7a816c2cb\",\n  \"comment_fragment\": \"10к\",\n  \"context_fragment\": \"Arc запустил публичный mainnet и уже сейчас мы можем делать быстрые активности.\",\n  \"why\": \"Comment reacts to the event of Arc mainnet launch, suggesting 10k transactions.\"\n}",
+    "refusal": null,
+    "reasoning": null
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 1037,
+  "completion_tokens": 86,
+  "total_tokens": 1123,
+  "cost": 5.41086e-05,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 768,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 5.41086e-05,
+   "upstream_inference_prompt_cost": 3.84566e-05,
+   "upstream_inference_completions_cost": 1.5652e-05
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

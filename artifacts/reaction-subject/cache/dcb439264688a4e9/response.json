@@ -1,0 +1,46 @@
+{
+ "id": "gen-1790247146-EmdNUY94Aylbx4Ki3bTl",
+ "object": "chat.completion",
+ "created": 1790247146,
+ "model": "deepseek/deepseek-v4-flash",
+ "provider": "NextBit",
+ "system_fingerprint": null,
+ "service_tier": null,
+ "choices": [
+  {
+   "index": 0,
+   "logprobs": null,
+   "finish_reason": "stop",
+   "native_finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "content": "{\n  \"items\": [\n    {\n      \"id\": \"zec|https://t.me/rawa_imagination/21112?comment=343092\",\n      \"target\": \"project\",\n      \"target_id\": null,\n      \"comment_fragment\": \"Тоже держу ниар. По структуре очень напоминает  zen, zec , ну, по моим параметрам.\",\n      \"context_fragment\": \"#крипто $NEAR\\n\\nПопытка пробоя вверх, в течении года таких было 6 штук и всегда следовал резкий откат.\\n\\nВ этот раз интересно тем, что на прошлой недельной свече было аж 6 сигналов к перекупленности, но они не отработали. Сейчас котировка проколола недельную МА200, а объёмов как таковых ещё не зашло, зато накопилась мощная шортовая братия, которую пока ещё не вынесли.\\n\\nЭто один из моих древних портфельных альтов, который я готов удерживать, но если у вас не так много веры как у меня, можете частично его сдать на этом уровне, если бы был икс я бы половину пофиксил, но у меня пока нет икса, я лишь немного вышел в плюс ( #не_ИИР )\",\n      \"why\": \"Comment discusses holding NEAR and compares it to other coins, not reacting to a specific event or thesis.\"\n    }\n  ]\n}",
+    "refusal": null,
+    "reasoning": null
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 1020,
+  "completion_tokens": 335,
+  "total_tokens": 1355,
+  "cost": 0.00019462,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 512,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.00019462,
+   "upstream_inference_prompt_cost": 9.412e-05,
+   "upstream_inference_completions_cost": 0.0001005
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

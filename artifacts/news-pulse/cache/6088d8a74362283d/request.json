@@ -1,0 +1,22 @@
+{
+ "a": {
+  "quote": "Ethereum убирает «налог на вход»: газ можно будет платить стейблами",
+  "actor": "Ethereum",
+  "action": "убирает",
+  "object": "налог на вход",
+  "qualifiers": {
+   "version": "газ можно будет платить стейблами"
+  },
+  "url": "https://t.me/WEB3_AGGREGATOR/422716"
+ },
+ "b": {
+  "quote": "сменить ключи на квантово-устойчивые прямо на старом адресе",
+  "actor": null,
+  "action": "change_keys",
+  "object": "ETH",
+  "qualifiers": {
+   "event_date": "2027-м"
+  },
+  "url": "https://t.me/WEB3_AGGREGATOR/422716"
+ }
+}

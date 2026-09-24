@@ -1,0 +1,26 @@
+{
+ "link": "https://t.me/rawa_imagination/21112",
+ "model_labels": "artifacts/pulse-zec/thread-21112/v3/labels.json",
+ "corrections": "artifacts/pulse-zec/thread-21112/v3/demo/corrections.json",
+ "reviewer": "агентская проверка 2026-09-24, не человеческая разметка",
+ "published": [
+  {
+   "id": "343092",
+   "relevance": "relevant",
+   "aspect": "market",
+   "kind": "experience",
+   "summary": "Держит NEAR; по его параметрам структура NEAR напоминает zen и zec. Разбирает NEAR технически (спот, регрессии, канал Гаусса), цели 3,7–5 и глобально 10; если NEAR повторит структуру ZEC — «космос». Также держит ZEN.",
+   "quote": "Тоже держу ниар. По структуре очень напоминает zen, zec",
+   "context_ids": [
+    "post"
+   ],
+   "link": "https://t.me/rawa_imagination/21112?comment=343092",
+   "corrected": true,
+   "borderline": false
+  }
+ ],
+ "held_for_review": {
+  "reason": "relevant_not_grounded на метках модели",
+  "labels": []
+ }
+}

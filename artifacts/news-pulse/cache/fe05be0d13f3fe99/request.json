@@ -1,0 +1,23 @@
+{
+ "a": {
+  "quote": "📈 🔴 ETH ETF: отток $224M",
+  "actor": null,
+  "action": "отток",
+  "object": "ETH ETF",
+  "qualifiers": {
+   "amount": "$224M"
+  },
+  "url": "https://t.me/rawa_imagination/21109"
+ },
+ "b": {
+  "quote": "Самое интересное – злоумышленники используют смарт-контракты Ethereum для обновления адресов управляющих серверов и источников загрузки вируса, что усложняет блокировку инфраструктуры.",
+  "actor": "attackers",
+  "action": "use",
+  "object": "Ethereum smart contracts",
+  "qualifiers": {
+   "event_date": "2026-09-16T12:55:11+00:00",
+   "place": "null"
+  },
+  "url": "https://t.me/crypto_hd/31457"
+ }
+}

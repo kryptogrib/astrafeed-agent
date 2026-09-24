@@ -1,0 +1,493 @@
+{
+ "grouping": "группировка не выполнена: тема = aspect модели, тип = kind модели, строка = пересказ модели",
+ "threads": {
+  "21055": {
+   "link": "https://t.me/rawa_imagination/21055",
+   "channel": "rawa_imagination",
+   "comments": 49,
+   "participants": 9,
+   "published": 14,
+   "held": 0,
+   "first": "2026-09-11 15:12:27.000000",
+   "last": "2026-09-12 01:00:08.000000",
+   "first_kept": "2026-09-11 15:12:27.000000",
+   "last_kept": "2026-09-12 01:00:08.000000"
+  },
+  "5296": {
+   "link": "https://t.me/don_invest/5296",
+   "channel": "don_invest",
+   "comments": 82,
+   "participants": 25,
+   "published": 7,
+   "held": 14,
+   "first": "2026-09-11 19:17:13.000000",
+   "last": "2026-09-15 13:35:19.000000",
+   "first_kept": "2026-09-11 19:17:13.000000",
+   "last_kept": "2026-09-15 13:35:19.000000"
+  }
+ },
+ "window": [
+  "2026-09-11 15:12:56.000000",
+  "2026-09-13 06:33:26.000000"
+ ],
+ "unassigned_published": [],
+ "units": [
+  {
+   "key": "21055/342462",
+   "type": "experience",
+   "title": "Говорит, что утром видел много шортов на ликвидацию вверху эфира. *(пересказ модели)*",
+   "ids": [
+    "21055/342462"
+   ],
+   "subject": "Рынок и цена",
+   "comments": 1,
+   "authors": 1,
+   "threads": 1,
+   "channels": 1,
+   "links": [
+    "https://t.me/rawa_imagination/21055?comment=342462"
+   ],
+   "ts": [
+    "2026-09-11 15:12:56.000000"
+   ]
+  },
+  {
+   "key": "21055/342466",
+   "type": "question",
+   "title": "Спрашивает, откуда взялись эти объемы. *(пересказ модели)*",
+   "ids": [
+    "21055/342466"
+   ],
+   "subject": "Рынок и цена",
+   "comments": 1,
+   "authors": 1,
+   "threads": 1,
+   "channels": 1,
+   "links": [
+    "https://t.me/rawa_imagination/21055?comment=342466"
+   ],
+   "ts": [
+    "2026-09-11 15:13:40.000000"
+   ]
+  },
+  {
+   "key": "21055/342468",
+   "type": "other",
+   "title": "Называет упомянутые объёмы спотовыми. *(пересказ модели)*",
+   "ids": [
+    "21055/342468"
+   ],
+   "subject": "Рынок и цена",
+   "comments": 1,
+   "authors": 1,
+   "threads": 1,
+   "channels": 1,
+   "links": [
+    "https://t.me/rawa_imagination/21055?comment=342468"
+   ],
+   "ts": [
+    "2026-09-11 15:14:13.000000"
+   ]
+  },
+  {
+   "key": "21055/342484",
+   "type": "opinion",
+   "title": "Говорит, что его бы устроил эфир по 10 тысяч. *(пересказ модели)*",
+   "ids": [
+    "21055/342484"
+   ],
+   "subject": "Рынок и цена",
+   "comments": 1,
+   "authors": 1,
+   "threads": 1,
+   "channels": 1,
+   "links": [
+    "https://t.me/rawa_imagination/21055?comment=342484"
+   ],
+   "ts": [
+    "2026-09-11 15:31:04.000000"
+   ]
+  },
+  {
+   "key": "21055/342485",
+   "type": "opinion",
+   "title": "Допускает ETH по 10 тысяч, но не на этом этапе, а «года через 2, после битка по 300к+». *(пересказ модели)*",
+   "ids": [
+    "21055/342485"
+   ],
+   "subject": "Рынок и цена",
+   "comments": 1,
+   "authors": 1,
+   "threads": 1,
+   "channels": 1,
+   "links": [
+    "https://t.me/rawa_imagination/21055?comment=342485"
+   ],
+   "ts": [
+    "2026-09-11 15:33:14.000000"
+   ]
+  },
+  {
+   "key": "21055/342487",
+   "type": "opinion",
+   "title": "Выражает недовольство длительностью ожидания обсуждаемого роста ETH. *(пересказ модели)*",
+   "ids": [
+    "21055/342487"
+   ],
+   "subject": "Рынок и цена",
+   "comments": 1,
+   "authors": 1,
+   "threads": 1,
+   "channels": 1,
+   "links": [
+    "https://t.me/rawa_imagination/21055?comment=342487"
+   ],
+   "ts": [
+    "2026-09-11 15:33:48.000000"
+   ]
+  },
+  {
+   "key": "21055/342489",
+   "type": "question",
+   "title": "Спрашивает, где видят эфир в рамках этого этапа. *(пересказ модели)*",
+   "ids": [
+    "21055/342489"
+   ],
+   "subject": "Рынок и цена",
+   "comments": 1,
+   "authors": 1,
+   "threads": 1,
+   "channels": 1,
+   "links": [
+    "https://t.me/rawa_imagination/21055?comment=342489"
+   ],
+   "ts": [
+    "2026-09-11 15:35:40.000000"
+   ]
+  },
+  {
+   "key": "21055/342490",
+   "type": "opinion",
+   "title": "Считает, что достижение ETH уровня 4 тысяч на этом этапе уже было бы хорошим результатом. *(пересказ модели)*",
+   "ids": [
+    "21055/342490"
+   ],
+   "subject": "Рынок и цена",
+   "comments": 1,
+   "authors": 1,
+   "threads": 1,
+   "channels": 1,
+   "links": [
+    "https://t.me/rawa_imagination/21055?comment=342490"
+   ],
+   "ts": [
+    "2026-09-11 15:45:09.000000"
+   ]
+  },
+  {
+   "key": "21055/342498",
+   "type": "opinion",
+   "title": "Предполагает появление на четырёхчасовом графике ETH фигуры «голова Барта». *(пересказ модели)*",
+   "ids": [
+    "21055/342498"
+   ],
+   "subject": "Рынок и цена",
+   "comments": 1,
+   "authors": 1,
+   "threads": 1,
+   "channels": 1,
+   "links": [
+    "https://t.me/rawa_imagination/21055?comment=342498"
+   ],
+   "ts": [
+    "2026-09-11 18:07:09.000000"
+   ]
+  },
+  {
+   "key": "21055/342507",
+   "type": "opinion",
+   "title": "Иронично говорит, что ждет, когда ETH перевалит за 5 тысяч, чтобы рекомендовать его к покупке. *(пересказ модели)*",
+   "ids": [
+    "21055/342507"
+   ],
+   "subject": "Рынок и цена",
+   "comments": 1,
+   "authors": 1,
+   "threads": 1,
+   "channels": 1,
+   "links": [
+    "https://t.me/rawa_imagination/21055?comment=342507"
+   ],
+   "ts": [
+    "2026-09-11 18:27:27.000000"
+   ]
+  },
+  {
+   "key": "21055/342526",
+   "type": "question",
+   "title": "Спрашивает, должен ли уровень 2500 быть удержан на дневке. *(пересказ модели)*",
+   "ids": [
+    "21055/342526"
+   ],
+   "subject": "Рынок и цена",
+   "comments": 1,
+   "authors": 1,
+   "threads": 1,
+   "channels": 1,
+   "links": [
+    "https://t.me/rawa_imagination/21055?comment=342526"
+   ],
+   "ts": [
+    "2026-09-11 19:05:13.000000"
+   ]
+  },
+  {
+   "key": "21055/342537",
+   "type": "other",
+   "title": "Подтверждает, что 2500 нужно удержать на дневке. *(пересказ модели)*",
+   "ids": [
+    "21055/342537"
+   ],
+   "subject": "Рынок и цена",
+   "comments": 1,
+   "authors": 1,
+   "threads": 1,
+   "channels": 1,
+   "links": [
+    "https://t.me/rawa_imagination/21055?comment=342537"
+   ],
+   "ts": [
+    "2026-09-11 19:13:39.000000"
+   ]
+  },
+  {
+   "key": "21055/342557",
+   "type": "opinion",
+   "title": "Считает, что это не пробой вверх, а забор ликвидности, но возможно нарисуют вайкоффа, и если так, то формация ростовая. *(пересказ модели)*",
+   "ids": [
+    "21055/342557"
+   ],
+   "subject": "Рынок и цена",
+   "comments": 1,
+   "authors": 1,
+   "threads": 1,
+   "channels": 1,
+   "links": [
+    "https://t.me/rawa_imagination/21055?comment=342557"
+   ],
+   "ts": [
+    "2026-09-12 00:58:50.000000"
+   ]
+  },
+  {
+   "key": "21055/342482",
+   "type": "opinion",
+   "title": "Считает, что L2 и Dot — сомнительные технологии, так как эфир делает то же самое. *(пересказ модели)*",
+   "ids": [
+    "21055/342482"
+   ],
+   "subject": "Технология",
+   "comments": 1,
+   "authors": 1,
+   "threads": 1,
+   "channels": 1,
+   "links": [
+    "https://t.me/rawa_imagination/21055?comment=342482"
+   ],
+   "ts": [
+    "2026-09-11 15:27:38.000000"
+   ]
+  },
+  {
+   "key": "5296/379796",
+   "type": "other",
+   "title": "Называет сумму 0.148 ETH; назначение неизвестно, родителя нет в базе. *(пересказ модели)*",
+   "ids": [
+    "5296/379796"
+   ],
+   "subject": "Использование",
+   "comments": 1,
+   "authors": 1,
+   "threads": 1,
+   "channels": 1,
+   "links": [
+    "https://t.me/don_invest/5296?comment=379796"
+   ],
+   "ts": [
+    "2026-09-11 19:35:38.000000"
+   ]
+  },
+  {
+   "key": "5296/379890",
+   "type": "experience",
+   "title": "Сообщает, что намайнил, но не может отправить из-за нехватки ether для цены и газа. *(пересказ модели)*",
+   "ids": [
+    "5296/379890"
+   ],
+   "subject": "Использование",
+   "comments": 1,
+   "authors": 1,
+   "threads": 1,
+   "channels": 1,
+   "links": [
+    "https://t.me/don_invest/5296?comment=379890"
+   ],
+   "ts": [
+    "2026-09-13 03:23:11.000000"
+   ]
+  },
+  {
+   "key": "5296/379891",
+   "type": "experience",
+   "title": "Сообщает о балансе в эфире на 7 баксов в сети Robinhood. *(пересказ модели)*",
+   "ids": [
+    "5296/379891"
+   ],
+   "subject": "Использование",
+   "comments": 1,
+   "authors": 1,
+   "threads": 1,
+   "channels": 1,
+   "links": [
+    "https://t.me/don_invest/5296?comment=379891"
+   ],
+   "ts": [
+    "2026-09-13 03:23:47.000000"
+   ]
+  },
+  {
+   "key": "5296/379892",
+   "type": "other",
+   "title": "Советует посмотреть цену минта. *(пересказ модели)*",
+   "ids": [
+    "5296/379892"
+   ],
+   "subject": "Использование",
+   "comments": 1,
+   "authors": 1,
+   "threads": 1,
+   "channels": 1,
+   "links": [
+    "https://t.me/don_invest/5296?comment=379892"
+   ],
+   "ts": [
+    "2026-09-13 03:29:49.000000"
+   ]
+  },
+  {
+   "key": "5296/379895",
+   "type": "experience",
+   "title": "Сообщает, что у него та же проблема: 55 долларов в сети не хватило. *(пересказ модели)*",
+   "ids": [
+    "5296/379895"
+   ],
+   "subject": "Использование",
+   "comments": 1,
+   "authors": 1,
+   "threads": 1,
+   "channels": 1,
+   "links": [
+    "https://t.me/don_invest/5296?comment=379895"
+   ],
+   "ts": [
+    "2026-09-13 03:55:15.000000"
+   ]
+  },
+  {
+   "key": "5296/379897",
+   "type": "opinion",
+   "title": "Указывает цену минта около 0,16 ETH и считает 55$ недостаточными. *(пересказ модели)*",
+   "ids": [
+    "5296/379897"
+   ],
+   "subject": "Использование",
+   "comments": 1,
+   "authors": 1,
+   "threads": 1,
+   "channels": 1,
+   "links": [
+    "https://t.me/don_invest/5296?comment=379897"
+   ],
+   "ts": [
+    "2026-09-13 05:20:07.000000"
+   ]
+  },
+  {
+   "key": "5296/379909",
+   "type": "opinion",
+   "title": "Сомневается в лёгкости продажи NFT с прибылью: сообщает о снижении минимальной цены с примерно 0.16 ETH до 0.14. *(пересказ модели)*",
+   "ids": [
+    "5296/379909"
+   ],
+   "subject": "Использование",
+   "comments": 1,
+   "authors": 1,
+   "threads": 1,
+   "channels": 1,
+   "links": [
+    "https://t.me/don_invest/5296?comment=379909"
+   ],
+   "ts": [
+    "2026-09-13 06:33:26.000000"
+   ]
+  }
+ ],
+ "topics": [
+  {
+   "topic": "Рынок и цена",
+   "comments": 13,
+   "authors": 8,
+   "threads": 1,
+   "by_type": {
+    "experience": {
+     "comments": 1,
+     "authors": 1
+    },
+    "question": {
+     "comments": 3,
+     "authors": 3
+    },
+    "other": {
+     "comments": 2,
+     "authors": 1
+    },
+    "opinion": {
+     "comments": 7,
+     "authors": 5
+    }
+   }
+  },
+  {
+   "topic": "Технология",
+   "comments": 1,
+   "authors": 1,
+   "threads": 1,
+   "by_type": {
+    "opinion": {
+     "comments": 1,
+     "authors": 1
+    }
+   }
+  },
+  {
+   "topic": "Использование",
+   "comments": 7,
+   "authors": 5,
+   "threads": 1,
+   "by_type": {
+    "other": {
+     "comments": 2,
+     "authors": 2
+    },
+    "experience": {
+     "comments": 3,
+     "authors": 2
+    },
+    "opinion": {
+     "comments": 2,
+     "authors": 1
+    }
+   }
+  }
+ ]
+}

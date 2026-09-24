@@ -1,0 +1,21 @@
+{
+ "segments": [
+  {
+   "id": "telegram:10:384763#s0",
+   "text": "✴️#ETH #крипто #обзор \n",
+   "mentions": [
+    {
+     "text": "#ETH",
+     "status": "confirmed"
+    },
+    {
+     "text": "ETH",
+     "status": "confirmed"
+    }
+   ],
+   "kind_hint": "post",
+   "url": "https://t.me/markettwits/384763",
+   "time": "2026-09-14T20:27:28+00:00"
+  }
+ ]
+}

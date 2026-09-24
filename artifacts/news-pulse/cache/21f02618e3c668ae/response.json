@@ -1,0 +1,32 @@
+{
+ "choices": [
+  {
+   "message": {
+    "content": "{\"labels\": [{\"id\": \"telegram:15:422983#s0\", \"kind\": \"event\", \"actor\": \"MEV bot\", \"action\": \"front-run\", \"object\": \"rsETH exploit\", \"qualifiers\": {\"version\": null, \"event_date\": null, \"place\": \"Ethereum\", \"counterparty\": null}, \"origin\": \"own\", \"source_role\": \"editorial\", \"verification_status\": \"unverified\", \"quote\": \"A MEV bot front-runs a ~$7.81M rsETH exploit on Ethereum\", \"span\": [0, 56]}]}"
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 1851,
+  "completion_tokens": 1681,
+  "total_tokens": 3532,
+  "cost": 0.000381424512,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 256,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.000381424512,
+   "upstream_inference_prompt_cost": 0.000125374592,
+   "upstream_inference_completions_cost": 0.00025604992
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

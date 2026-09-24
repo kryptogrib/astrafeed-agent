@@ -1,0 +1,18 @@
+{
+ "a": {
+  "quote": "Zcash хайпует, но NFT в мейннет нет. Разбираемся, кто и за что платит",
+  "actor": "Zcash",
+  "action": "hype",
+  "object": "NFT",
+  "qualifiers": {},
+  "url": "https://t.me/WEB3_AGGREGATOR/423606"
+ },
+ "b": {
+  "quote": "🟢 База: у Zcash три типа адресов",
+  "actor": "Zcash",
+  "action": "describe_base",
+  "object": "address types",
+  "qualifiers": {},
+  "url": "https://t.me/WEB3_AGGREGATOR/423606"
+ }
+}

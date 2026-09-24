@@ -1,0 +1,46 @@
+{
+ "id": "gen-1790253687-Mo9PvphKpRN1BkpltgOc",
+ "object": "chat.completion",
+ "created": 1790253687,
+ "model": "deepseek/deepseek-v4-flash",
+ "provider": "SiliconFlow",
+ "system_fingerprint": null,
+ "service_tier": null,
+ "choices": [
+  {
+   "index": 0,
+   "logprobs": null,
+   "finish_reason": "stop",
+   "native_finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "content": "{\n  \"theses\": [\n    {\n      \"quote\": \"апсайд по росту еще есть - как минимум у нас еще не было меты, когда мы все дружно летим в пирамидки\",\n      \"start\": 63,\n      \"end\": 151,\n      \"kind\": \"forecast\",\n      \"topic_role\": \"context\",\n      \"why\": \"Author predicts upside in ponzi meta, not directly about ETH.\"\n    },\n    {\n      \"quote\": \"По текущим в день падает ~100$, на аукционах выкупаются лицензии примерно по 3000$-4000$. Свою математику можешь дальше сам строить\",\n      \"start\": 548,\n      \"end\": 665,\n      \"kind\": \"evaluation\",\n      \"topic_role\": \"unrelated\",\n      \"why\": \"Evaluates Standard Reserve economics, unrelated to ETH.\"\n    },\n    {\n      \"quote\": \"Цена входа сейчас при минте = число уже существующих котов * 0.00002 ETH. Т.е. сейчас на Opensea +/- справедливая цена в 0.16 eth\",\n      \"start\": 1050,\n      \"end\": 1160,\n      \"kind\": \"evaluation\",\n      \"topic_role\": \"context\",\n      \"why\": \"Assesses HashCats fair price in ETH, relevant as context.\"\n    }\n  ],\n  \"truncated\": false\n}",
+    "refusal": null,
+    "reasoning": null
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 1518,
+  "completion_tokens": 312,
+  "total_tokens": 1830,
+  "cost": 0.0002847,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.0002847,
+   "upstream_inference_prompt_cost": 0.00019734,
+   "upstream_inference_completions_cost": 8.736e-05
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

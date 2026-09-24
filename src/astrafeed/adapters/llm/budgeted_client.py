@@ -1,6 +1,8 @@
 """Gate every completion, including Instructor repairs and research retries."""
 
+import asyncio
 import math
+from contextlib import suppress
 from types import SimpleNamespace
 from typing import Any
 
@@ -28,6 +30,7 @@ class BudgetedClient:
         self._reservation_amount = reservation_amount
         self._max_tokens = max_tokens
         self.chat = SimpleNamespace(completions=self)
+        self.embeddings = SimpleNamespace(create=self.create_embeddings)
 
     def with_options(self, **kwargs: Any) -> "BudgetedClient":
         return BudgetedClient(
@@ -47,14 +50,49 @@ class BudgetedClient:
         extra_body["usage"] = {"include": True}
         kwargs["extra_body"] = extra_body
         reservation = await self._store.reserve(self._user_id, self._reservation_amount)
-        # Exceptions/cancellation/crashes leave the durable conservative charge intact.
-        response = await self._client.chat.completions.create(**kwargs)
-        cost = getattr(getattr(response, "usage", None), "cost", None)
-        if cost is not None:
-            try:
-                actual_cost = float(cost)
-            except (TypeError, ValueError):
-                actual_cost = math.nan
-            if math.isfinite(actual_cost) and actual_cost >= 0:
-                await self._store.settle(reservation, actual_cost)
+        try:
+            response = await self._client.chat.completions.create(**kwargs)
+        except BaseException as exc:
+            await self._record_failure(reservation, exc)
+            raise
+        await self._settle(reservation, response)
         return response
+
+    async def create_embeddings(self, **kwargs: Any) -> Any:
+        extra_body = dict(kwargs.get("extra_body") or {})
+        extra_body["usage"] = {"include": True}
+        kwargs["extra_body"] = extra_body
+        reservation = await self._store.reserve(self._user_id, self._reservation_amount)
+        try:
+            response = await self._client.embeddings.create(**kwargs)
+        except BaseException as exc:
+            await self._record_failure(reservation, exc)
+            raise
+        await self._settle(reservation, response)
+        return response
+
+    async def _record_failure(self, reservation: str, exc: BaseException) -> None:
+        outcome = (
+            "cancelled"
+            if isinstance(exc, asyncio.CancelledError)
+            else "timeout"
+            if isinstance(exc, TimeoutError)
+            else "error"
+        )
+        with suppress(Exception):
+            await self._store.fail(reservation, outcome)
+
+    async def _settle(self, reservation: str, response: Any) -> None:
+        cost = getattr(getattr(response, "usage", None), "cost", None)
+        if cost is None:
+            await self._store.fail(reservation, "missing_usage")
+            return
+        try:
+            actual_cost = float(cost)
+        except (TypeError, ValueError):
+            await self._store.fail(reservation, "missing_usage")
+            return
+        if math.isfinite(actual_cost) and actual_cost >= 0:
+            await self._store.settle(reservation, actual_cost)
+        else:
+            await self._store.fail(reservation, "missing_usage")

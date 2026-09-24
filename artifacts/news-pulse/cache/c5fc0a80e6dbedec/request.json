@@ -1,0 +1,17 @@
+{
+ "segments": [
+  {
+   "id": "telegram:15:423197#s2",
+   "text": "What sets this launch apart: gas is paid in USDC, and the validators are BlackRock, DTCC, Visa, Mastercard and ICE rather than crypto node operators. Day-one access came via Binance Wallet, OKX, MetaMask and Kraken, with Aave, Morpho and Uniswap live from the start.\n\n",
+   "mentions": [
+    {
+     "text": "Aave",
+     "status": "confirmed"
+    }
+   ],
+   "kind_hint": "post",
+   "url": "https://t.me/WEB3_AGGREGATOR/423197",
+   "time": "2026-09-17T12:30:13+00:00"
+  }
+ ]
+}

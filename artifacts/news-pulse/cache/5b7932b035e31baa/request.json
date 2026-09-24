@@ -1,0 +1,23 @@
+{
+ "a": {
+  "quote": "• Uniswap + Aerodrome: ожидаются с поддержкой Arc day one.",
+  "actor": "Uniswap and Aerodrome",
+  "action": "announce expected support for Arc day one",
+  "object": "Arc",
+  "qualifiers": {
+   "event_date": null
+  },
+  "url": "https://t.me/whitelist1/7135"
+ },
+ "b": {
+  "quote": "Fomo будет работать на Arc с первого дня, поэтому регаемся.",
+  "actor": null,
+  "action": "launch",
+  "object": "Fomo",
+  "qualifiers": {
+   "place": "Arc",
+   "event_date": "с первого дня"
+  },
+  "url": "https://t.me/whitelist1/7135"
+ }
+}

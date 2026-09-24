@@ -1,0 +1,17 @@
+{
+ "segments": [
+  {
+   "id": "telegram:11:96833#s0",
+   "text": "🏴‍☠️ Хакер, взломавший Fetch и Nunet, также взломал Singularity NET, что привело к несанкционированному выпуску 260 млн #AGIX и 53,838 млн #WMTx на Ethereum. В настоящее время у злоумышленника находится криптовалюта на сумму около 16,7 млн $.",
+   "mentions": [
+    {
+     "text": "Ethereum",
+     "status": "confirmed"
+    }
+   ],
+   "kind_hint": "post",
+   "url": "https://t.me/cryptoattack24/96833",
+   "time": "2026-09-20T09:29:38+00:00"
+  }
+ ]
+}

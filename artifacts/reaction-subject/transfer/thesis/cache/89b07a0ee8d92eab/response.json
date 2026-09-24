@@ -1,0 +1,46 @@
+{
+ "id": "gen-1790253727-PzZCXVEGPFVGjiAsQME3",
+ "object": "chat.completion",
+ "created": 1790253727,
+ "model": "deepseek/deepseek-v4-flash",
+ "provider": "StreamLake",
+ "system_fingerprint": null,
+ "service_tier": null,
+ "choices": [
+  {
+   "index": 0,
+   "logprobs": null,
+   "finish_reason": "stop",
+   "native_finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "content": "{\n  \"theses\": [],\n  \"truncated\": false\n}",
+    "refusal": null,
+    "reasoning": null
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 511,
+  "completion_tokens": 17,
+  "total_tokens": 528,
+  "cost": 4.829027e-05,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 4.829027e-05,
+   "upstream_inference_prompt_cost": 4.5277666e-05,
+   "upstream_inference_completions_cost": 3.012604e-06
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

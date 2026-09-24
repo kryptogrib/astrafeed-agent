@@ -1,0 +1,21 @@
+{
+ "segments": [
+  {
+   "id": "telegram:9:1039167#s0",
+   "text": "CIRCLE LAUNCHES ARC MAINNET WITH BLACKROCK AND VISA AMONG VALIDATORS, MINTS 10 BILLION ARC TOKENS ...",
+   "mentions": [
+    {
+     "text": "ARC",
+     "status": "confirmed"
+    },
+    {
+     "text": "ARC",
+     "status": "confirmed"
+    }
+   ],
+   "kind_hint": "post",
+   "url": "https://t.me/marketfeed/1039167",
+   "time": "2026-09-16T10:31:00+00:00"
+  }
+ ]
+}

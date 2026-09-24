@@ -1,0 +1,32 @@
+{
+ "choices": [
+  {
+   "message": {
+    "content": "{\"labels\": [{\"id\": \"telegram:5:3267#s2\", \"kind\": \"event\", \"actor\": \"Keeper wallet\", \"action\": \"update to support multi-chain\", \"object\": \"wallet\", \"qualifiers\": {}, \"origin\": \"own\", \"source_role\": \"author\", \"verification_status\": \"source_statement\", \"topic_role\": \"context\", \"quote\": \"🟪Кошелёк Tonkeeper стал просто Keeper, так что не пугайтесь при обновлении. Теперь там можно создать новый кошелёк, который поддерживает Bitcoin, Ethereum, TRON, BSC и другие сети - удобно для тех, кто хотел пользоваться одной программой.\", \"span\": [0, 188]}]}"
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 1914,
+  "completion_tokens": 1925,
+  "total_tokens": 3839,
+  "cost": 0.000564872,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.000564872,
+   "upstream_inference_prompt_cost": 0.000187572,
+   "upstream_inference_completions_cost": 0.0003773
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

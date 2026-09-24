@@ -1,0 +1,46 @@
+{
+ "id": "gen-1790249256-KJ9TAri8AqtrfiYcS5Le",
+ "object": "chat.completion",
+ "created": 1790249256,
+ "model": "deepseek/deepseek-v4-flash",
+ "provider": "NextBit",
+ "system_fingerprint": null,
+ "service_tier": null,
+ "choices": [
+  {
+   "index": 0,
+   "logprobs": null,
+   "finish_reason": "stop",
+   "native_finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "content": "{\"verdict\": \"keep\", \"fragment\": \"Вот это поворот, золото в крипте, интересно\", \"why\": \"Comment reacts to the event of Aave accepting gold as collateral.\"}",
+    "refusal": null,
+    "reasoning": null
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 727,
+  "completion_tokens": 46,
+  "total_tokens": 773,
+  "cost": 0.00012285,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.00012285,
+   "upstream_inference_prompt_cost": 0.00010905,
+   "upstream_inference_completions_cost": 1.38e-05
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

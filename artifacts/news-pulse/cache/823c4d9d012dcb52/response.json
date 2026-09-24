@@ -1,0 +1,46 @@
+{
+ "id": "gen-1790194298-DVIDmqJ0sjIgBgWBg13t",
+ "object": "chat.completion",
+ "created": 1790194298,
+ "model": "deepseek/deepseek-v4-flash",
+ "provider": "DeepInfra",
+ "system_fingerprint": null,
+ "service_tier": null,
+ "choices": [
+  {
+   "index": 0,
+   "logprobs": null,
+   "finish_reason": "stop",
+   "native_finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "content": "{\"labels\": [{\"id\": \"telegram:18:31472#s8\", \"kind\": \"promo_service\", \"actor\": null, \"action\": null, \"object\": null, \"qualifiers\": {}, \"origin\": \"unknown\", \"source_role\": \"unknown\", \"verification_status\": \"unverified\", \"quote\": \"▫️Ethereum и банковский вирус (читать)\\n\\n\", \"span\": [0, 35]}, {\"id\": \"telegram:11:96773#s0\", \"kind\": \"event\", \"actor\": null, \"action\": \"net outflow\", \"object\": \"BTC-ETF\", \"qualifiers\": {\"event_date\": \"2026-09-16\", \"version\": \"spot\", \"counterparty\": null, \"place\": null}, \"origin\": \"own\", \"source_role\": \"editorial\", \"verification_status\": \"source_statement\", \"quote\": \"📉 #BTC #ETH #ETF Вчера общий чистый отток спотовых BTC-ETF составил ~$295,9 млн.\\n\\n\", \"span\": [0, 66]}, {\"id\": \"telegram:11:96773#s1\", \"kind\": \"event\", \"actor\": null, \"action\": \"net outflow\", \"object\": \"ETH-ETF\", \"qualifiers\": {\"event_date\": \"2026-09-16\", \"version\": \"spot\", \"counterparty\": null, \"place\": null}, \"origin\": \"own\", \"source_role\": \"editorial\", \"verification_status\": \"source_statement\", \"quote\": \"Общий чистый отток спотовых ETH-ETF составил $224,1 млн.\", \"span\": [0, 52]}, {\"id\": \"telegram:18:31473#s2\", \"kind\": \"author_position\", \"actor\": \"Основатель Ethereum\", \"action\": \"disagrees\", \"object\": \"мнение, что развитие AI неизбежно приведет к массовым взломам\", \"qualifiers\": {}, \"origin\": \"retelling\", \"source_role\": \"editorial\", \"verification_status\": \"source_statement\", \"quote\": \"Основатель Ethereum не согласен с мнением, что развитие AI неизбежно приведет к массовым взломам. AI-технологии смогут не только искать уязвимости, но и математически доказывать безопасность программ, причем проверять весь код целиком.\\n\\n\", \"span\": [0, 218]}, {\"id\": \"telegram:18:31473#s3\", \"kind\": \"author_position\", \"actor\": \"Бутерин\", \"action\": \"states\", \"object\": \"без усиления безопасности у масштабируемых и приватных блокчейнов «нет будущего»\", \"qualifiers\": {}, \"origin\": \"retelling\", \"source_role\": \"editorial\", \"verification_status\": \"source_statement\", \"quote\": \"Именно в этом направлении в Ethereum планируют двигаться в ближайшие несколько лет. Бутерин считает, что без усиления безопасности у масштабируемых и приватных блокчейнов «нет будущего».\\n\\n\", \"span\": [0, 170]}, {\"id\": \"telegram:11:96776#s1\", \"kind\": \"event\", \"actor\": \"0xC2f1\", \"action\": \"withdrew and staked\", \"object\": \"ETH\", \"qualifiers\": {\"version\": \"2 695 #ETH ($6,94 млн)\", \"counterparty\": \"Gemini\", \"place\": null}, \"origin\": \"own\", \"source_role\": \"editorial\", \"verification_status\": \"source_statement\", \"quote\": \"1. 0xC2f1 вывел 2 695 #ETH ($6,94 млн) с Gemini и разместил их в стейкинге;\\n2. 0x3F2c вывел 2 500 #ETH ($6,02 млн) с Binance после 9 месяцев бездействия.\", \"span\": [0, 148]}, {\"id\": \"telegram:18:31476#s3\", \"kind\": \"event\", \"actor\": \"Кит «0xC2f1»\", \"action\": \"withdrew and staked\", \"object\": \"ETH\", \"qualifiers\": {\"version\": \"2695 ETH ($6,94m)\", \"counterparty\": \"Gemini\", \"place\": null}, \"origin\": \"retelling\", \"source_role\": \"editorial\", \"verification_status\": \"source_statement\", \"quote\": \"➤ Кит «0xC2f1» вывел с Gemini 2695 ETH ($6,94m) и сразу отправил всю позицию в стейкинг. Еще один кит «0x3F2c» после 9 месяцев бездействия вывел с Binance 2500 ETH ($6,02m).\\n\\n\", \"span\": [0, 170]}, {\"id\": \"telegram:18:31476#s4\", \"kind\": \"event\", \"actor\": \"Инвестор «0x0058»\", \"action\": \"bought\", \"object\": \"ETH\", \"qualifiers\": {\"version\": \"5368 ETH\", \"counterparty\": null, \"place\": null, \"price\": \"$2422\"}, \"origin\": \"own\", \"source_role\": \"editorial\", \"verification_status\": \"source_statement\", \"quote\": \"➤ Инвестор «0x0058» потратил 13m USDC на покупку 5368 ETH по средней цене $2422.\\n\\n\", \"span\": [0, 82]}, {\"id\": \"telegram:15:423173#s1\", \"kind\": \"author_position\", \"actor\": \"Ethereum\", \"action\": \"plans to move\", \"object\": \"в эту сторону\", \"qualifiers\": {}, \"origin\": \"retelling\", \"source_role\": \"editorial\", \"verification_status\": \"source_statement\", \"quote\": \"Именно в эту сторону Ethereum планирует двигаться в ближайшие годы.\\n\\n\", \"span\": [0, 60]}, {\"id\": \"telegram:21:21109#s2\", \"kind\": \"event\", \"actor\": null, \"action\": \"funding rate\", \"object\": \"ETH\", \"qualifiers\": {\"version\": \"Binance: +0.0033% 🐂 | Bybit: +0.0067% 🐂\", \"counterparty\": null, \"place\": null}, \"origin\": \"own\", \"source_role\": \"editorial\", \"verification_status\": \"source_statement\", \"quote\": \"🔄 ФАНДИНГ (🐂 = быки платят медведям):\\n  BTC: Binance: +0.0055% 🐂 | Bybit: +0.0067% 🐂\\n  ETH: Binance: +0.0033% 🐂 | Bybit: +0.0067% 🐂\\n\\n\", \"span\": [0, 120]}, {\"id\": \"telegram:11:96782#s0\", \"kind\": \"event\", \"actor\": \"BlackRock\", \"action\": \"transferred\", \"object\": \"ETH\", \"qualifiers\": {\"version\": \"54 096 #ETH (131,7 млн $)\", \"counterparty\": \"Coinbase Prime\", \"place\": null}, \"origin\": \"own\", \"source_role\": \"editorial\", \"verification_status\": \"source_statement\", \"quote\": \"🕵️‍♂️ BlackRock перевели на Coinbase Prime 54 096 #ETH (131,7 млн $) и 2 015 #BTC (153,8 млн $).\", \"span\": [0, 87]}, {\"id\": \"telegram:10:385211#s0\", \"kind\": \"event\", \"actor\": \"BlackRock\", \"action\": \"started transferring\", \"object\": \"ETH\", \"qualifiers\": {\"version\": null, \"counterparty\": \"биржи\", \"place\": null}, \"origin\": \"own\", \"source_role\": \"editorial\", \"verification_status\": \"source_statement\", \"quote\": \"⚠️✴️#BTC #ETH #крипто #cot \\nBlackRock сегодня начал переводить BTC и ETH на биржи - скорее всего, на продажу для клиентов  — мониторинг\", \"span\": [0, 115]}]}",
+    "refusal": null,
+    "reasoning": null
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 1930,
+  "completion_tokens": 1888,
+  "total_tokens": 3818,
+  "cost": 0.00051354,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.00051354,
+   "upstream_inference_prompt_cost": 0.0001737,
+   "upstream_inference_completions_cost": 0.00033984
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

@@ -1,0 +1,24 @@
+{
+ "a": {
+  "quote": "Несколько часов назад Unipcs (Bonk guy) , нашумевший #1 трейдер на fomo app обратил внимание аудитории на ARC цепочку.",
+  "actor": "Unipcs",
+  "action": "обратил внимание аудитории на ARC цепочку",
+  "object": "ARC цепочка",
+  "qualifiers": {
+   "counterparty": "Unipcs"
+  },
+  "url": "https://t.me/WEB3_AGGREGATOR/422908"
+ },
+ "b": {
+  "quote": "За последние часы площадка забриджила 35%+ доступных акций Circle из Robinhood цепочки в Arc цепочку, такой вот ажиотаж.",
+  "actor": "площадка",
+  "action": "забриджила",
+  "object": "акции Circle",
+  "qualifiers": {
+   "version": "35%+",
+   "place": "Arc цепочку",
+   "counterparty": "Robinhood"
+  },
+  "url": "https://t.me/WEB3_AGGREGATOR/422908"
+ }
+}

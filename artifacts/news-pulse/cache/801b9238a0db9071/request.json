@@ -1,0 +1,17 @@
+{
+ "segments": [
+  {
+   "id": "telegram:15:423227#s3",
+   "text": "Самое необычное у Arc — валидаторы.\nБлоки печатают не анонимы, а BlackRock, Visa, Mastercard, DTCC, Standard Chartered, Galaxy, ICE, MoneyGram и другие — 11 крупнейших имён традиционных финансов.\n\n",
+   "mentions": [
+    {
+     "text": "Arc",
+     "status": "confirmed"
+    }
+   ],
+   "kind_hint": "post",
+   "url": "https://t.me/WEB3_AGGREGATOR/423227",
+   "time": "2026-09-17T17:40:23+00:00"
+  }
+ ]
+}

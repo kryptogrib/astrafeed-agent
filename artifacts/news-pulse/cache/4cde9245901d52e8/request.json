@@ -1,0 +1,24 @@
+{
+ "a": {
+  "quote": "📈 🔴 ETH ETF: отток $39M",
+  "actor": null,
+  "action": "outflow",
+  "object": "ETH ETF",
+  "qualifiers": {
+   "amount": "$39M",
+   "event_date": "2026-09-18"
+  },
+  "url": "https://t.me/rawa_imagination/21117"
+ },
+ "b": {
+  "quote": "Ethereum Foundation уже включила инициативу в B-tier для Hegotá.",
+  "actor": "Ethereum Foundation",
+  "action": "включила инициативу в B-tier",
+  "object": "EIP-8198",
+  "qualifiers": {
+   "event_date": "2026-09-18",
+   "place": "Hegotá"
+  },
+  "url": "https://t.me/WEB3_AGGREGATOR/423312"
+ }
+}

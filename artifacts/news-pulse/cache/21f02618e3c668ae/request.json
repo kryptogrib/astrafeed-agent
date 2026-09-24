@@ -1,0 +1,17 @@
+{
+ "segments": [
+  {
+   "id": "telegram:15:422983#s0",
+   "text": "A MEV bot front-runs a ~$7.81M rsETH exploit on Ethereum.\n\n",
+   "mentions": [
+    {
+     "text": "Ethereum",
+     "status": "confirmed"
+    }
+   ],
+   "kind_hint": "post",
+   "url": "https://t.me/WEB3_AGGREGATOR/422983",
+   "time": "2026-09-15T09:02:06+00:00"
+  }
+ ]
+}

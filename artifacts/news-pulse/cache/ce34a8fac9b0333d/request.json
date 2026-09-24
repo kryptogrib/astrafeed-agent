@@ -1,0 +1,24 @@
+{
+ "a": {
+  "quote": "🔘Бриджим любой актив в USDC в сеть Arc",
+  "actor": null,
+  "action": "bridge",
+  "object": "любой актив в USDC",
+  "qualifiers": {
+   "place": "сеть Arc"
+  },
+  "url": "https://t.me/krasnovcrypto/3754"
+ },
+ "b": {
+  "quote": "Arc — L1-сеть от Circle для платежей, стейблкоинов и финансовых приложений. В экосистеме уже есть Uniswap, Aave, Morpho, Aerodrome и другие крупные проекты.",
+  "actor": null,
+  "action": "announce",
+  "object": "Arc",
+  "qualifiers": {
+   "version": "L1-сеть от Circle для платежей, стейблкоинов и финансовых приложений",
+   "place": "экосистема",
+   "counterparty": "Uniswap, Aave, Morpho, Aerodrome и другие крупные проекты"
+  },
+  "url": "https://t.me/krasnovcrypto/3754"
+ }
+}

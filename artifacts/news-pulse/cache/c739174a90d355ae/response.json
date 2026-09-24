@@ -1,0 +1,32 @@
+{
+ "choices": [
+  {
+   "message": {
+    "content": "{\"labels\": [{\"id\": \"telegram:15:423648#s4\", \"kind\": \"event\", \"actor\": null, \"action\": null, \"object\": null, \"qualifiers\": {}, \"origin\": \"unknown\", \"source_role\": \"editorial\", \"verification_status\": \"unverified\", \"quote\": \"Lending leads: Morpho $207M, Aave V4 $145M\", \"span\": [0, 48]}]}"
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 385,
+  "completion_tokens": 102,
+  "total_tokens": 487,
+  "cost": 5.3599e-05,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 5.3599e-05,
+   "upstream_inference_prompt_cost": 3.5035e-05,
+   "upstream_inference_completions_cost": 1.8564e-05
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

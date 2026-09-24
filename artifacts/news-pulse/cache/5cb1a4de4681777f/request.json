@@ -1,0 +1,23 @@
+{
+ "a": {
+  "quote": "ARC / Вся экосистема в одном месте 😏",
+  "actor": null,
+  "action": "announce",
+  "object": "ARC ecosystem",
+  "qualifiers": {
+   "place": "ARC"
+  },
+  "url": "https://t.me/whitelist1/7135"
+ },
+ "b": {
+  "quote": "• Arc Citizens: 10,000 fully on-chain identity PFP, запуск планируется 16 сентября;",
+  "actor": null,
+  "action": "launch",
+  "object": "Arc Citizens",
+  "qualifiers": {
+   "event_date": "16 сентября",
+   "version": "10,000 fully on-chain identity PFP"
+  },
+  "url": "https://t.me/whitelist1/7135"
+ }
+}

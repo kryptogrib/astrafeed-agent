@@ -1,0 +1,33 @@
+{
+ "prompt_sha256": "ade5a18bc03db9e7",
+ "input_sha256": "bba9733a3daa75a5",
+ "model": "deepseek/deepseek-v4-flash",
+ "schema": "news-pulse-classify/v1",
+ "db_md5": "8618099125a806df376354286ccd982e",
+ "provider_pinned": null,
+ "seconds": 0.0,
+ "provider_actual": null,
+ "usage": {
+  "prompt_tokens": 1702,
+  "completion_tokens": 1490,
+  "total_tokens": 3192,
+  "cost": 0.000402948,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 256,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.000402948,
+   "upstream_inference_prompt_cost": 0.000134748,
+   "upstream_inference_completions_cost": 0.0002682
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

@@ -1,0 +1,17 @@
+{
+ "segments": [
+  {
+   "id": "telegram:2:5302:c:380603#s0",
+   "text": "а где можно посвапать usdc to eth на Lisk",
+   "mentions": [
+    {
+     "text": "eth",
+     "status": "confirmed"
+    }
+   ],
+   "kind_hint": "comment",
+   "url": "https://t.me/don_invest/5302?comment=380603",
+   "time": "2026-09-23T08:38:00+00:00"
+  }
+ ]
+}

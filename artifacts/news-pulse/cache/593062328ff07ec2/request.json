@@ -1,0 +1,22 @@
+{
+ "a": {
+  "quote": "#Zcash #ZEC #NFT #privacy 👀",
+  "actor": null,
+  "action": "highlight_topic",
+  "object": "Zcash",
+  "qualifiers": {
+   "version": "ZEC",
+   "place": "NFT",
+   "counterparty": "privacy"
+  },
+  "url": "https://t.me/WEB3_AGGREGATOR/423606"
+ },
+ "b": {
+  "quote": "🟢 База: у Zcash три типа адресов",
+  "actor": "Zcash",
+  "action": "describe_base",
+  "object": "address types",
+  "qualifiers": {},
+  "url": "https://t.me/WEB3_AGGREGATOR/423606"
+ }
+}

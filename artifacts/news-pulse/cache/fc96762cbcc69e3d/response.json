@@ -1,0 +1,46 @@
+{
+ "id": "gen-1790193578-c7YdN6E5mYFYYFU2E1Zz",
+ "object": "chat.completion",
+ "created": 1790193578,
+ "model": "deepseek/deepseek-v4-flash",
+ "provider": "Venice",
+ "system_fingerprint": null,
+ "service_tier": null,
+ "choices": [
+  {
+   "index": 0,
+   "logprobs": null,
+   "finish_reason": "stop",
+   "native_finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "content": "{\"labels\": [{\"id\": \"telegram:15:423189#s3\", \"kind\": \"author_position\", \"actor\": null, \"action\": \"dislike\", \"object\": \"Zcash\", \"qualifiers\": {\"version\": null, \"event_date\": null, \"place\": null, \"counterparty\": null}, \"origin\": \"own\", \"source_role\": \"author\", \"verification_status\": \"unverified\", \"quote\": \"Мне очень не нравится зкеш и его приколы с приватностью, нам не будет видно сколько всего депнули ончейн, и клиринг прайс мы узнаем только с их слов, все это будет в руках команды, фактически они могут сделать что угодно.\", \"span\": [0, 233]}, {\"id\": \"telegram:15:423204#s1\", \"kind\": \"event\", \"actor\": \"Twitter community\", \"action\": \"discuss\", \"object\": \"NFT mint on Zcash\", \"qualifiers\": {\"version\": null, \"event_date\": \"2026-09-17\", \"place\": null, \"counterparty\": null}, \"origin\": \"retelling\", \"source_role\": \"editorial\", \"verification_status\": \"source_statement\", \"quote\": \"Автор ничего толкового давно не писал, но сегодня, вроде как, есть повод: весь твиттер гудит по поводу минта нфтшек на Zcash\", \"span\": [0, 131]}, {\"id\": \"telegram:15:423204#s6\", \"kind\": \"event\", \"actor\": \"NEAR official account\", \"action\": \"repost\", \"object\": \"NFT mint project on Zcash\", \"qualifiers\": {\"version\": null, \"event_date\": null, \"place\": null, \"counterparty\": null}, \"origin\": \"retelling\", \"source_role\": \"editorial\", \"verification_status\": \"source_statement\", \"quote\": \"- оф. аккаунт NEAR, который репостит один из своих проектов, поддерживающий минт \\n- отсутствие понимания, как именно будут минтиться нфтшки, ведь на Zcash нет подобной ординалсам\\\\инскрипциям механики как на битке\\n- 10к саплай, 8к из которых будут проданы на этом аукционе\", \"span\": [0, 282]}, {\"id\": \"telegram:15:423204#s8\", \"kind\": \"promo_service\", \"actor\": null, \"action\": \"promote\", \"object\": \"NFT mint on Zcash\", \"qualifiers\": {\"version\": null, \"event_date\": null, \"place\": \"zilkroad.com\", \"counterparty\": null}, \"origin\": \"own\", \"source_role\": \"editorial\", \"verification_status\": \"unverified\", \"quote\": \"1. Зайти на сайт https://zilkroad.com/ \\n2. Выставить там желаемый бид (учтите, что 0.15 ZEC биды на 99% не пройдут) \\n3. Оплатить вашу заявку либо отправив спотовый ZEC с Hyperliquid, либо свопнув любую валюту через https://app.rubic.exchange/\\n4. Ждать результатов ставок\", \"span\": [0, 310]}, {\"id\": \"telegram:18:31484#s1\", \"kind\": \"event\", \"actor\": \"Zcash network\", \"action\": \"accelerate\", \"object\": \"block time\", \"qualifiers\": {\"version\": null, \"event_date\": null, \"place\": null, \"counterparty\": null}, \"origin\": \"retelling\", \"source_role\": \"editorial\", \"verification_status\": \"source_statement\", \"quote\": \"⚡️ Сеть Zcash собираются ускорить в 3 раза.\", \"span\": [0, 49]}, {\"id\": \"telegram:18:31484#s2\", \"kind\": \"event\", \"actor\": \"Zcash community\", \"action\": \"support\", \"object\": \"block time reduction from 75 to 25 seconds\", \"qualifiers\": {\"version\": null, \"event_date\": null, \"place\": null, \"counterparty\": null}, \"origin\": \"retelling\", \"source_role\": \"editorial\", \"verification_status\": \"source_statement\", \"quote\": \"Сообщество Zcash поддержало сокращение времени формирования блока с 75 до 25 секунд.\", \"span\": [0, 93]}, {\"id\": \"telegram:18:31484#s4\", \"kind\": \"event\", \"actor\": \"Zcash network\", \"action\": \"adjust\", \"object\": \"block reward\", \"qualifiers\": {\"version\": \"NU7\", \"event_date\": \"2026-11-05\", \"place\": null, \"counterparty\": null}, \"origin\": \"retelling\", \"source_role\": \"editorial\", \"verification_status\": \"source_statement\", \"quote\": \"Чтобы эмиссия ZEC не изменилась, при сокращении времени блока награду за каждый отдельный блок также уменьшат примерно в 3 раза. Изменения пока не запущены – их еще предстоит реализовать и протестировать в рамках обновления NU7 (5 ноября).\", \"span\": [0, 247]}, {\"id\": \"telegram:10:385234#s1\", \"kind\": \"event\", \"actor\": \"ZCash community\", \"action\": \"vote\", \"object\": \"block time acceleration to 25 seconds\", \"qualifiers\": {\"version\": null, \"event_date\": null, \"place\": null, \"counterparty\": null}, \"origin\": \"retelling\", \"source_role\": \"editorial\", \"verification_status\": \"source_statement\", \"quote\": \"Сообщество ZCash проголосовало за ускорение формирования блоков в сети в 3 раза -  до 25 сек!\", \"span\": [0, 99]}, {\"id\": \"telegram:15:423211#s2\", \"kind\": \"participant_reaction\", \"actor\": null, \"action\": \"expect\", \"object\": \"ZEC price floor at 1\", \"qualifiers\": {\"version\": null, \"event_date\": null, \"place\": null, \"counterparty\": null}, \"origin\": \"own\", \"source_role\": \"author\", \"verification_status\": \"unverified\", \"quote\": \"1 ZEC флор точно же ждем?!\", \"span\": [0, 27]}, {\"id\": \"telegram:15:423222#s0\", \"kind\": \"promo_service\", \"actor\": null, \"action\": \"promote\", \"object\": \"ZecVision vault on ZEC\", \"qualifiers\": {\"version\": null, \"event_date\": null, \"place\": null, \"counterparty\": null}, \"origin\": \"own\", \"source_role\": \"editorial\", \"verification_status\": \"unverified\", \"quote\": \"Заполняем новую влку ZecVision на ZEC\", \"span\": [0, 40]}, {\"id\": \"telegram:15:423225#s0\", \"kind\": \"event\", \"actor\": \"Zcash price\", \"action\": \"update\", \"object\": \"10-year high above $1400\", \"qualifiers\": {\"version\": null, \"event_date\": \"2026-09-17\", \"place\": null, \"counterparty\": null}, \"origin\": \"retelling\", \"source_role\": \"editorial\", \"verification_status\": \"source_statement\", \"quote\": \"👍 Курс Zcash обновил 10-летний максимум выше $1400.\", \"span\": [0, 60]}, {\"id\": \"telegram:18:31486#s0\", \"kind\": \"event\", \"actor\": \"Garrett Jin\", \"action\": \"lose\", \"object\": \"short position on ZEC\", \"qualifiers\": {\"version\": null, \"event_date\": null, \"place\": null, \"counterparty\": null}, \"origin\": \"retelling\", \"source_role\": \"editorial\", \"verification_status\": \"source_statement\", \"quote\": \"🙁 Инсайдер Гаррет Джин сейчас в минусе почти на -$30,000,000 по своему шорту с ZEC.\", \"span\": [0, 93]}]}",
+    "refusal": null,
+    "reasoning": null
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 1852,
+  "completion_tokens": 1881,
+  "total_tokens": 3733,
+  "cost": 0.0005409957,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.0005409957,
+   "upstream_inference_prompt_cost": 0.0001789032,
+   "upstream_inference_completions_cost": 0.0003620925
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

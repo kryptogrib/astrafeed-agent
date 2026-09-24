@@ -1,0 +1,28 @@
+{
+ "a": {
+  "quote": "Совсем недавно ETH сходил примерно к $1500, после чего почти месяц провёл в коробке и уже оттуда вышел к $2700.",
+  "actor": "ETH",
+  "action": "price movement",
+  "object": null,
+  "qualifiers": {
+   "version": null,
+   "event_date": null,
+   "place": null,
+   "counterparty": null
+  },
+  "url": "https://t.me/WEB3_AGGREGATOR/423486"
+ },
+ "b": {
+  "quote": "Если ETH пойдёт вниз, BMNR вполне может падать быстрее него. Плюс остаются корпоративный риск, размытие акций и риск сжатия премии к стоимости активов.",
+  "actor": "BMNR",
+  "action": "may fall faster than",
+  "object": "ETH",
+  "qualifiers": {
+   "version": null,
+   "event_date": null,
+   "place": null,
+   "counterparty": null
+  },
+  "url": "https://t.me/WEB3_AGGREGATOR/423486"
+ }
+}

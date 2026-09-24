@@ -1,0 +1,23 @@
+{
+ "a": {
+  "quote": "Бесплатный минт пройдёт 21 сентября в 20:00 мск",
+  "actor": "ZecFrogs",
+  "action": "бесплатный минт пройдёт 21 сентября в 20:00 мск",
+  "object": "ZecFrogs",
+  "qualifiers": {
+   "event_date": "2026-09-21T20:00:00+03:00"
+  },
+  "url": "https://t.me/WEB3_AGGREGATOR/423379"
+ },
+ "b": {
+  "quote": "Минт пройдет завтра в 20:00 мск, для участия понадобится 0.007 $ZEC на кошельке.",
+  "actor": "mint organizers",
+  "action": "mint scheduled",
+  "object": "mint",
+  "qualifiers": {
+   "event_date": "tomorrow 20:00 MSK",
+   "counterparty": "0.007 $ZEC"
+  },
+  "url": "https://t.me/WEB3_AGGREGATOR/423427"
+ }
+}

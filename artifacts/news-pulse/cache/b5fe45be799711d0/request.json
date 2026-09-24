@@ -1,0 +1,17 @@
+{
+ "segments": [
+  {
+   "id": "telegram:15:423460#s2",
+   "text": "Bitcoin: $81,776 +1.74%\nEthereum: $2,662 +3.24%\n\n",
+   "mentions": [
+    {
+     "text": "Ethereum",
+     "status": "confirmed"
+    }
+   ],
+   "kind_hint": "post",
+   "url": "https://t.me/WEB3_AGGREGATOR/423460",
+   "time": "2026-09-21T09:46:54+00:00"
+  }
+ ]
+}

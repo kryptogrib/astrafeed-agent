@@ -1,0 +1,46 @@
+{
+ "id": "gen-1790184446-2COyMcj2M0cA5MMaQ9Yc",
+ "object": "chat.completion",
+ "created": 1790184446,
+ "model": "deepseek/deepseek-v4-flash",
+ "provider": "DeepInfra",
+ "system_fingerprint": null,
+ "service_tier": null,
+ "choices": [
+  {
+   "index": 0,
+   "logprobs": null,
+   "finish_reason": "stop",
+   "native_finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "content": "{\"labels\": [{\"id\": \"572105\", \"relevance\": \"unrelated\", \"aspect\": null, \"kind\": \"other\", \"summary\": null, \"quote\": null, \"context_ids\": []}, {\"id\": \"572106\", \"relevance\": \"unrelated\", \"aspect\": null, \"kind\": \"opinion\", \"summary\": null, \"quote\": null, \"context_ids\": []}, {\"id\": \"572109\", \"relevance\": \"relevant\", \"aspect\": \"other\", \"kind\": \"opinion\", \"summary\": \"Одобряет, что все ZEC в одном месте.\", \"quote\": \"все ZEC в одном котле!\", \"context_ids\": [\"post\"]}, {\"id\": \"572112\", \"relevance\": \"relevant\", \"aspect\": \"market\", \"kind\": \"opinion\", \"summary\": \"Считает, что самого ZEC достаточно после его 150-кратного роста.\", \"quote\": \"Достаточно самого зек после его 150 иксов)\", \"context_ids\": [\"572106\"]}, {\"id\": \"572119\", \"relevance\": \"relevant\", \"aspect\": \"usage\", \"kind\": \"question\", \"summary\": \"Спрашивает, каким кошельком пользуются в ZEC.\", \"quote\": \"каким кошельком пользуетесь в ZEC?\", \"context_ids\": [\"post\"]}, {\"id\": \"572120\", \"relevance\": \"relevant\", \"aspect\": \"usage\", \"kind\": \"experience\", \"summary\": \"Отвечает, что пользуется кошельком Noir.\", \"quote\": \"Noir\", \"context_ids\": [\"572119\"]}, {\"id\": \"572127\", \"relevance\": \"relevant\", \"aspect\": \"other\", \"kind\": \"question\", \"summary\": \"Спрашивает, заминтил ли кто-то ZADDR.\", \"quote\": \"задр кто то заминтил?\", \"context_ids\": [\"post\"]}, {\"id\": \"572128\", \"relevance\": \"relevant\", \"aspect\": \"other\", \"kind\": \"opinion\", \"summary\": \"Советует пропустить (скип) ZADDR.\", \"quote\": \"скип\", \"context_ids\": [\"572127\"]}, {\"id\": \"572129\", \"relevance\": \"relevant\", \"aspect\": \"other\", \"kind\": \"experience\", \"summary\": \"Предлагает пачку GTD на минт от zecvisions.\", \"quote\": \"https://x.com/zecvisions Нужно если кому Дали пачку GTD на минт\", \"context_ids\": [\"572128\"]}, {\"id\": \"572130\", \"relevance\": \"relevant\", \"aspect\": \"other\", \"kind\": \"opinion\", \"summary\": \"Говорит, что взял бы (предложение).\", \"quote\": \"взял бы\", \"context_ids\": [\"572129\"]}, {\"id\": \"572131\", \"relevance\": \"relevant\", \"aspect\": \"usage\", \"kind\": \"experience\", \"summary\": \"Жалуется, что ZEC сильно лагает при работе с ZADDR.\", \"quote\": \"мне бы с задр разобраться, зек лагает ну просто дико\", \"context_ids\": [\"572129\"]}, {\"id\": \"572133\", \"relevance\": \"relevant\", \"aspect\": \"other\", \"kind\": \"opinion\", \"summary\": \"Предлагает провести розыгрыш, обещает поддержку.\", \"quote\": \"проводи розыгрыш, поддержим\", \"context_ids\": [\"572129\"]}, {\"id\": \"572135\", \"relevance\": \"relevant\", \"aspect\": \"other\", \"kind\": \"experience\", \"summary\": \"Сообщает, что твит скоро будет.\", \"quote\": \"Твит скоро будет\", \"context_ids\": [\"572130\"]}, {\"id\": \"572141\", \"relevance\": \"relevant\", \"aspect\": \"other\", \"kind\": \"opinion\", \"summary\": \"Выражает заинтересованность (Ннада).\", \"quote\": \"Ннада))\", \"context_ids\": [\"572129\"]}, {\"id\": \"572143\", \"relevance\": \"relevant\", \"aspect\": \"other\", \"kind\": \"experience\", \"summary\": \"Обещает, что всё будет, твит через 5 минут.\", \"quote\": \"Все будет брат Через 5 минут твит\", \"context_ids\": [\"572141\"]}, {\"id\": \"572153\", \"relevance\": \"relevant\", \"aspect\": \"other\", \"kind\": \"opinion\", \"summary\": \"Соглашается (Yes, sir).\", \"quote\": \"Yes, sir\", \"context_ids\": [\"572129\"]}, {\"id\": \"572154\", \"relevance\": \"relevant\", \"aspect\": \"other\", \"kind\": \"other\", \"summary\": \"Отвечает 'Х'.\", \"quote\": \"Х\", \"context_ids\": [\"572153\"]}, {\"id\": \"572168\", \"relevance\": \"unrelated\", \"aspect\": null, \"kind\": \"opinion\", \"summary\": null, \"quote\": null, \"context_ids\": []}, {\"id\": \"572170\", \"relevance\": \"unrelated\", \"aspect\": null, \"kind\": \"opinion\", \"summary\": null, \"quote\": null, \"context_ids\": []}, {\"id\": \"572180\", \"relevance\": \"unrelated\", \"aspect\": null, \"kind\": \"opinion\", \"summary\": null, \"quote\": null, \"context_ids\": []}]}",
+    "refusal": null,
+    "reasoning": null
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 2320,
+  "completion_tokens": 1226,
+  "total_tokens": 3546,
+  "cost": 0.000392616,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 512,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.000392616,
+   "upstream_inference_prompt_cost": 0.000171936,
+   "upstream_inference_completions_cost": 0.00022068
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

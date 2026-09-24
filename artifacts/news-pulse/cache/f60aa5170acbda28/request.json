@@ -1,0 +1,21 @@
+{
+ "segments": [
+  {
+   "id": "telegram:18:31547#s2",
+   "text": "➟ При резком снижении #ETH до ~$2430 объем ликвидаций LONG-позиций превысит $3,900,000,000.\n\n",
+   "mentions": [
+    {
+     "text": "#ETH",
+     "status": "confirmed"
+    },
+    {
+     "text": "ETH",
+     "status": "confirmed"
+    }
+   ],
+   "kind_hint": "post",
+   "url": "https://t.me/crypto_hd/31547",
+   "time": "2026-09-21T22:25:03+00:00"
+  }
+ ]
+}

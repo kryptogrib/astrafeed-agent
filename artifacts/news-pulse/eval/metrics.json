@@ -1,0 +1,1561 @@
+{
+  "sample_status": "заморожено; предварительная агентская разметка",
+  "sample_counts": {
+    "posts": 43,
+    "comments": 26,
+    "pairs": 20
+  },
+  "note": "Маленькая выборка — демо-проверка, не доказательство качества на всех данных. Общий балл не вычисляется.",
+  "db_md5_before": "8618099125a806df376354286ccd982e",
+  "db_md5_after": "8618099125a806df376354286ccd982e",
+  "sha256_verified": {
+    "posts.jsonl": "fe8362d93db3cac9d02338f0fb23cc35919eeb18984755a21609c4b2d51c328f",
+    "comments.jsonl": "d18a2d82a1237a9a463634fb37dc5425080b8ec9aaf44a29a681fe1f31cbba53",
+    "pairs.jsonl": "8109dff564a3df861043da3cbef8264d9d8007b195f7b70616bf5628e58d6acb",
+    "windows.json": "da067a0f89ad1d8b7b1fe5877af528ff21c984441a70ca9608d24a799bf153d0",
+    "holdout.json": "68fb5c2f0f1d27e45a3c450e18e4b3dd90140b0012fbb4b37122f9e428735e02",
+    "README.md": "290dcb54690b9a80f45f3f31bb1648b6a848ac8d22965193afd07b5b919c9f19",
+    "sample.py": "b5ad3c404ac6d5d85d52e95e969b4ee1bbe04bc083692a9155ff6ee80c26cb73"
+  },
+  "missing_inputs": [],
+  "runs": [
+    "/Users/chelovek/orca/workspaces/AstraFeed-TokenBrief/hakaton/artifacts/news-pulse/aave/2026-09-09..2026-09-23",
+    "/Users/chelovek/orca/workspaces/AstraFeed-TokenBrief/hakaton/artifacts/news-pulse/aave/2026-09-22..2026-09-23",
+    "/Users/chelovek/orca/workspaces/AstraFeed-TokenBrief/hakaton/artifacts/news-pulse/arc/2026-09-09..2026-09-23",
+    "/Users/chelovek/orca/workspaces/AstraFeed-TokenBrief/hakaton/artifacts/news-pulse/arc/2026-09-09T00-00-00-00-00..2026-09-16T11-01-00-00-00",
+    "/Users/chelovek/orca/workspaces/AstraFeed-TokenBrief/hakaton/artifacts/news-pulse/arc/2026-09-09T00-00-00-00-00..2026-09-16T11-01-01-00-00",
+    "/Users/chelovek/orca/workspaces/AstraFeed-TokenBrief/hakaton/artifacts/news-pulse/arc/2026-09-09T00-00-00-00-00..2026-09-16T11-01-02-00-00",
+    "/Users/chelovek/orca/workspaces/AstraFeed-TokenBrief/hakaton/artifacts/news-pulse/arc/2026-09-16T11-01-01-00-00..2026-09-17T11-01-01-00-00",
+    "/Users/chelovek/orca/workspaces/AstraFeed-TokenBrief/hakaton/artifacts/news-pulse/eth/2026-09-09..2026-09-23",
+    "/Users/chelovek/orca/workspaces/AstraFeed-TokenBrief/hakaton/artifacts/news-pulse/eth/2026-09-09T00-00-00-00-00..2026-09-14T12-33-45-00-00",
+    "/Users/chelovek/orca/workspaces/AstraFeed-TokenBrief/hakaton/artifacts/news-pulse/eth/2026-09-09T00-00-00-00-00..2026-09-14T12-33-46-00-00",
+    "/Users/chelovek/orca/workspaces/AstraFeed-TokenBrief/hakaton/artifacts/news-pulse/eth/2026-09-09T00-00-00-00-00..2026-09-14T12-33-47-00-00",
+    "/Users/chelovek/orca/workspaces/AstraFeed-TokenBrief/hakaton/artifacts/news-pulse/eth/2026-09-09T00-00-00-00-00..2026-09-21T12-44-53-00-00",
+    "/Users/chelovek/orca/workspaces/AstraFeed-TokenBrief/hakaton/artifacts/news-pulse/eth/2026-09-09T00-00-00-00-00..2026-09-21T12-44-54-00-00",
+    "/Users/chelovek/orca/workspaces/AstraFeed-TokenBrief/hakaton/artifacts/news-pulse/eth/2026-09-09T00-00-00-00-00..2026-09-21T12-44-55-00-00",
+    "/Users/chelovek/orca/workspaces/AstraFeed-TokenBrief/hakaton/artifacts/news-pulse/eth/2026-09-14T12-33-46-00-00..2026-09-21T12-44-54-00-00",
+    "/Users/chelovek/orca/workspaces/AstraFeed-TokenBrief/hakaton/artifacts/news-pulse/eth/2026-09-17..2026-09-19",
+    "/Users/chelovek/orca/workspaces/AstraFeed-TokenBrief/hakaton/artifacts/news-pulse/zec/2026-09-09..2026-09-23",
+    "/Users/chelovek/orca/workspaces/AstraFeed-TokenBrief/hakaton/artifacts/news-pulse/zec/2026-09-09T00-00-00-00-00..2026-09-16T06-10-18-00-00",
+    "/Users/chelovek/orca/workspaces/AstraFeed-TokenBrief/hakaton/artifacts/news-pulse/zec/2026-09-09T00-00-00-00-00..2026-09-16T06-10-19-00-00",
+    "/Users/chelovek/orca/workspaces/AstraFeed-TokenBrief/hakaton/artifacts/news-pulse/zec/2026-09-09T00-00-00-00-00..2026-09-16T06-10-20-00-00",
+    "/Users/chelovek/orca/workspaces/AstraFeed-TokenBrief/hakaton/artifacts/news-pulse/zec/2026-09-09T00-00-00-00-00..2026-09-21T06-04-31-00-00",
+    "/Users/chelovek/orca/workspaces/AstraFeed-TokenBrief/hakaton/artifacts/news-pulse/zec/2026-09-09T00-00-00-00-00..2026-09-21T06-04-32-00-00",
+    "/Users/chelovek/orca/workspaces/AstraFeed-TokenBrief/hakaton/artifacts/news-pulse/zec/2026-09-09T00-00-00-00-00..2026-09-21T06-04-33-00-00",
+    "/Users/chelovek/orca/workspaces/AstraFeed-TokenBrief/hakaton/artifacts/news-pulse/zec/2026-09-16T06-10-19-00-00..2026-09-21T06-04-32-00-00",
+    "/Users/chelovek/orca/workspaces/AstraFeed-TokenBrief/hakaton/artifacts/news-pulse/zec/2026-09-17..2026-09-19"
+  ],
+  "comment_links": {
+    "claimed_event_links": 4,
+    "abstentions": 18,
+    "other_types": 4,
+    "missing": 0,
+    "type:topic_level": 18,
+    "type:project": 1,
+    "type:other_subject": 3
+  },
+  "history": [],
+  "conventions": [
+    "Для семантических метрик используется замороженное самое широкое coverage-окно; узкое окно его не заменяет.",
+    "Единица отбора — пара (пост, тема); пары и комментарии также проверяются отдельно по теме.",
+    "Нет решения: false negative для recall, unverified для precision/отрицательных пар. Fail имеет приоритет при наблюдаемом нарушении порога.",
+    "coverage.publications/channels/comments — все записи БД в окне; topic_publications — уникальные selected_news. Групповые счётчики — уникальные публикации, не сегменты.",
+    "Автор берётся только из author_id/author_key БД; канал не подменяет автора. Origin пересчитывается по решениям, его истинность оценивается отдельно.",
+    "Проверка времени охватывает сериализованные записи и ссылки, но не доказывает отсутствие скрытого влияния будущего на LLM."
+  ],
+  "metrics": {
+    "news_precision": {
+      "title": "Точность отбора новостей",
+      "numerator": 28,
+      "denominator": 33,
+      "value": 0.8484848484848485,
+      "threshold": 0.95,
+      "status": "fail",
+      "errors": [
+        {
+          "links": [
+            "https://t.me/don_invest/5299"
+          ],
+          "topic": "zec",
+          "reason": "Решение не совпало с разметкой"
+        },
+        {
+          "links": [
+            "https://t.me/icodrops_sergey/2431"
+          ],
+          "topic": "zec",
+          "reason": "Решение не совпало с разметкой"
+        },
+        {
+          "links": [
+            "https://t.me/crypto_hd/31493"
+          ],
+          "topic": "zec",
+          "reason": "Решение не совпало с разметкой"
+        },
+        {
+          "links": [
+            "https://t.me/crypto_hd/31511"
+          ],
+          "topic": "zec",
+          "reason": "Решение не совпало с разметкой"
+        },
+        {
+          "links": [
+            "https://t.me/PowsGemCalls/49106"
+          ],
+          "topic": "zec",
+          "reason": "Решение не совпало с разметкой"
+        }
+      ],
+      "missing": [],
+      "note": ""
+    },
+    "news_recall": {
+      "title": "Полнота отбора новостей",
+      "numerator": 28,
+      "denominator": 31,
+      "value": 0.9032258064516129,
+      "threshold": 0.9,
+      "status": "pass",
+      "errors": [
+        {
+          "links": [
+            "https://t.me/whitelist1/7139"
+          ],
+          "topic": "arc",
+          "reason": "Решение не совпало с разметкой"
+        },
+        {
+          "links": [
+            "https://t.me/markettwits/385049"
+          ],
+          "topic": "eth",
+          "reason": "Решение не совпало с разметкой"
+        },
+        {
+          "links": [
+            "https://t.me/crypto_hd/31487"
+          ],
+          "topic": "zec",
+          "reason": "Решение не совпало с разметкой"
+        }
+      ],
+      "missing": [],
+      "note": ""
+    },
+    "false_merge": {
+      "title": "Ошибочное объединение отрицательных пар",
+      "numerator": 1,
+      "denominator": 10,
+      "value": 0.1,
+      "threshold": "= 0 ошибок",
+      "status": "fail",
+      "errors": [
+        {
+          "pair": "pair-12",
+          "topic": "eth",
+          "links": [
+            "https://t.me/markettwits/384699",
+            "https://t.me/markettwits/385603"
+          ],
+          "common_event_ids": [
+            "e41-5b311a56519bddda"
+          ]
+        }
+      ],
+      "missing": [],
+      "note": ""
+    },
+    "same_event_recall": {
+      "title": "Полнота объединения положительных пар",
+      "numerator": 4,
+      "denominator": 10,
+      "value": 0.4,
+      "threshold": 0.9,
+      "status": "fail",
+      "errors": [
+        {
+          "pair": "pair-01",
+          "topic": "zec",
+          "links": [
+            "https://t.me/marketfeed/1039055",
+            "https://t.me/markettwits/385234"
+          ],
+          "common_event_ids": []
+        },
+        {
+          "pair": "pair-02",
+          "topic": "zec",
+          "links": [
+            "https://t.me/marketfeed/1039055",
+            "https://t.me/crypto_hd/31484"
+          ],
+          "common_event_ids": []
+        },
+        {
+          "pair": "pair-04",
+          "topic": "zec",
+          "links": [
+            "https://t.me/marketfeed/1041046",
+            "https://t.me/markettwits/385538"
+          ],
+          "common_event_ids": []
+        },
+        {
+          "pair": "pair-08",
+          "topic": "eth",
+          "links": [
+            "https://t.me/markettwits/384699",
+            "https://t.me/WEB3_AGGREGATOR/422950"
+          ],
+          "common_event_ids": []
+        },
+        {
+          "pair": "pair-09",
+          "topic": "eth",
+          "links": [
+            "https://t.me/markettwits/384699",
+            "https://t.me/rawa_imagination/21078"
+          ],
+          "common_event_ids": []
+        },
+        {
+          "pair": "pair-10",
+          "topic": "eth",
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/422950",
+            "https://t.me/rawa_imagination/21078"
+          ],
+          "common_event_ids": []
+        }
+      ],
+      "missing": [],
+      "note": ""
+    },
+    "comment_event_precision": {
+      "title": "Правильность заявленных связей комментарий → событие",
+      "numerator": 0,
+      "denominator": 4,
+      "value": 0.0,
+      "threshold": 0.9,
+      "status": "fail",
+      "errors": [
+        {
+          "topic": "zec",
+          "links": [
+            "https://t.me/icodrops_sergey/2426?comment=150547"
+          ],
+          "expected": "author_thesis",
+          "actual": "event:e37-9e94ec9cc7c059c8",
+          "mapped_events": [
+            "zec-rank9-0917"
+          ]
+        },
+        {
+          "topic": "zec",
+          "links": [
+            "https://t.me/icodrops_sergey/2426?comment=150550"
+          ],
+          "expected": "author_thesis",
+          "actual": "event:e37-9e94ec9cc7c059c8",
+          "mapped_events": [
+            "zec-rank9-0917"
+          ]
+        },
+        {
+          "topic": "zec",
+          "links": [
+            "https://t.me/icodrops_sergey/2426?comment=150552"
+          ],
+          "expected": "project",
+          "actual": "event:e37-9e94ec9cc7c059c8",
+          "mapped_events": [
+            "zec-rank9-0917"
+          ]
+        },
+        {
+          "topic": "eth",
+          "links": [
+            "https://t.me/rawa_imagination/21078?comment=342794"
+          ],
+          "expected": "author_thesis",
+          "actual": "event:e44-fce1985e6d4db8f9",
+          "mapped_events": [
+            "bitmine-buy-27180-0914"
+          ]
+        }
+      ],
+      "missing": [],
+      "note": ""
+    },
+    "future_leakage": {
+      "title": "Записи и ссылки вне окна",
+      "numerator": 0,
+      "denominator": 71904,
+      "value": 0.0,
+      "threshold": "= 0 ошибок",
+      "status": "unverified",
+      "errors": [],
+      "missing": [
+        {
+          "run": "/Users/chelovek/orca/workspaces/AstraFeed-TokenBrief/hakaton/artifacts/news-pulse/zec/2026-09-09..2026-09-23",
+          "path": "pulse.discussion[54].text",
+          "links": [
+            "https://t.me/icodrops_sergey/2105"
+          ],
+          "reason": "В БД нет времени ссылки"
+        },
+        {
+          "run": "/Users/chelovek/orca/workspaces/AstraFeed-TokenBrief/hakaton/artifacts/news-pulse/zec/2026-09-09..2026-09-23",
+          "path": "pulse.discussion[54].quote",
+          "links": [
+            "https://t.me/icodrops_sergey/2105"
+          ],
+          "reason": "В БД нет времени ссылки"
+        },
+        {
+          "run": "/Users/chelovek/orca/workspaces/AstraFeed-TokenBrief/hakaton/artifacts/news-pulse/zec/2026-09-09..2026-09-23",
+          "path": "pulse.evidence[261].quote",
+          "links": [
+            "https://t.me/icodrops_sergey/2105"
+          ],
+          "reason": "В БД нет времени ссылки"
+        },
+        {
+          "run": "/Users/chelovek/orca/workspaces/AstraFeed-TokenBrief/hakaton/artifacts/news-pulse/zec/2026-09-09..2026-09-23",
+          "path": "pulse.brief_markdown",
+          "links": [
+            "https://t.me/icodrops_sergey/2105"
+          ],
+          "reason": "В БД нет времени ссылки"
+        },
+        {
+          "run": "/Users/chelovek/orca/workspaces/AstraFeed-TokenBrief/hakaton/artifacts/news-pulse/zec/2026-09-09T00-00-00-00-00..2026-09-21T06-04-31-00-00",
+          "path": "pulse.discussion[54].text",
+          "links": [
+            "https://t.me/icodrops_sergey/2105"
+          ],
+          "reason": "В БД нет времени ссылки"
+        },
+        {
+          "run": "/Users/chelovek/orca/workspaces/AstraFeed-TokenBrief/hakaton/artifacts/news-pulse/zec/2026-09-09T00-00-00-00-00..2026-09-21T06-04-31-00-00",
+          "path": "pulse.discussion[54].quote",
+          "links": [
+            "https://t.me/icodrops_sergey/2105"
+          ],
+          "reason": "В БД нет времени ссылки"
+        },
+        {
+          "run": "/Users/chelovek/orca/workspaces/AstraFeed-TokenBrief/hakaton/artifacts/news-pulse/zec/2026-09-09T00-00-00-00-00..2026-09-21T06-04-31-00-00",
+          "path": "pulse.evidence[205].quote",
+          "links": [
+            "https://t.me/icodrops_sergey/2105"
+          ],
+          "reason": "В БД нет времени ссылки"
+        },
+        {
+          "run": "/Users/chelovek/orca/workspaces/AstraFeed-TokenBrief/hakaton/artifacts/news-pulse/zec/2026-09-09T00-00-00-00-00..2026-09-21T06-04-31-00-00",
+          "path": "pulse.brief_markdown",
+          "links": [
+            "https://t.me/icodrops_sergey/2105"
+          ],
+          "reason": "В БД нет времени ссылки"
+        },
+        {
+          "run": "/Users/chelovek/orca/workspaces/AstraFeed-TokenBrief/hakaton/artifacts/news-pulse/zec/2026-09-09T00-00-00-00-00..2026-09-21T06-04-32-00-00",
+          "path": "pulse.discussion[54].text",
+          "links": [
+            "https://t.me/icodrops_sergey/2105"
+          ],
+          "reason": "В БД нет времени ссылки"
+        },
+        {
+          "run": "/Users/chelovek/orca/workspaces/AstraFeed-TokenBrief/hakaton/artifacts/news-pulse/zec/2026-09-09T00-00-00-00-00..2026-09-21T06-04-32-00-00",
+          "path": "pulse.discussion[54].quote",
+          "links": [
+            "https://t.me/icodrops_sergey/2105"
+          ],
+          "reason": "В БД нет времени ссылки"
+        },
+        {
+          "run": "/Users/chelovek/orca/workspaces/AstraFeed-TokenBrief/hakaton/artifacts/news-pulse/zec/2026-09-09T00-00-00-00-00..2026-09-21T06-04-32-00-00",
+          "path": "pulse.evidence[205].quote",
+          "links": [
+            "https://t.me/icodrops_sergey/2105"
+          ],
+          "reason": "В БД нет времени ссылки"
+        },
+        {
+          "run": "/Users/chelovek/orca/workspaces/AstraFeed-TokenBrief/hakaton/artifacts/news-pulse/zec/2026-09-09T00-00-00-00-00..2026-09-21T06-04-32-00-00",
+          "path": "pulse.brief_markdown",
+          "links": [
+            "https://t.me/icodrops_sergey/2105"
+          ],
+          "reason": "В БД нет времени ссылки"
+        },
+        {
+          "run": "/Users/chelovek/orca/workspaces/AstraFeed-TokenBrief/hakaton/artifacts/news-pulse/zec/2026-09-09T00-00-00-00-00..2026-09-21T06-04-33-00-00",
+          "path": "pulse.discussion[54].text",
+          "links": [
+            "https://t.me/icodrops_sergey/2105"
+          ],
+          "reason": "В БД нет времени ссылки"
+        },
+        {
+          "run": "/Users/chelovek/orca/workspaces/AstraFeed-TokenBrief/hakaton/artifacts/news-pulse/zec/2026-09-09T00-00-00-00-00..2026-09-21T06-04-33-00-00",
+          "path": "pulse.discussion[54].quote",
+          "links": [
+            "https://t.me/icodrops_sergey/2105"
+          ],
+          "reason": "В БД нет времени ссылки"
+        },
+        {
+          "run": "/Users/chelovek/orca/workspaces/AstraFeed-TokenBrief/hakaton/artifacts/news-pulse/zec/2026-09-09T00-00-00-00-00..2026-09-21T06-04-33-00-00",
+          "path": "pulse.evidence[208].quote",
+          "links": [
+            "https://t.me/icodrops_sergey/2105"
+          ],
+          "reason": "В БД нет времени ссылки"
+        },
+        {
+          "run": "/Users/chelovek/orca/workspaces/AstraFeed-TokenBrief/hakaton/artifacts/news-pulse/zec/2026-09-09T00-00-00-00-00..2026-09-21T06-04-33-00-00",
+          "path": "pulse.brief_markdown",
+          "links": [
+            "https://t.me/icodrops_sergey/2105"
+          ],
+          "reason": "В БД нет времени ссылки"
+        },
+        {
+          "run": "/Users/chelovek/orca/workspaces/AstraFeed-TokenBrief/hakaton/artifacts/news-pulse/zec/2026-09-16T06-10-19-00-00..2026-09-21T06-04-32-00-00",
+          "path": "pulse.discussion[35].text",
+          "links": [
+            "https://t.me/icodrops_sergey/2105"
+          ],
+          "reason": "В БД нет времени ссылки"
+        },
+        {
+          "run": "/Users/chelovek/orca/workspaces/AstraFeed-TokenBrief/hakaton/artifacts/news-pulse/zec/2026-09-16T06-10-19-00-00..2026-09-21T06-04-32-00-00",
+          "path": "pulse.discussion[35].quote",
+          "links": [
+            "https://t.me/icodrops_sergey/2105"
+          ],
+          "reason": "В БД нет времени ссылки"
+        },
+        {
+          "run": "/Users/chelovek/orca/workspaces/AstraFeed-TokenBrief/hakaton/artifacts/news-pulse/zec/2026-09-16T06-10-19-00-00..2026-09-21T06-04-32-00-00",
+          "path": "pulse.evidence[156].quote",
+          "links": [
+            "https://t.me/icodrops_sergey/2105"
+          ],
+          "reason": "В БД нет времени ссылки"
+        },
+        {
+          "run": "/Users/chelovek/orca/workspaces/AstraFeed-TokenBrief/hakaton/artifacts/news-pulse/zec/2026-09-16T06-10-19-00-00..2026-09-21T06-04-32-00-00",
+          "path": "pulse.brief_markdown",
+          "links": [
+            "https://t.me/icodrops_sergey/2105"
+          ],
+          "reason": "В БД нет времени ссылки"
+        },
+        {
+          "run": "/Users/chelovek/orca/workspaces/AstraFeed-TokenBrief/hakaton/artifacts/news-pulse/zec/2026-09-17..2026-09-19",
+          "path": "pulse.discussion[35].text",
+          "links": [
+            "https://t.me/icodrops_sergey/2105"
+          ],
+          "reason": "В БД нет времени ссылки"
+        },
+        {
+          "run": "/Users/chelovek/orca/workspaces/AstraFeed-TokenBrief/hakaton/artifacts/news-pulse/zec/2026-09-17..2026-09-19",
+          "path": "pulse.discussion[35].quote",
+          "links": [
+            "https://t.me/icodrops_sergey/2105"
+          ],
+          "reason": "В БД нет времени ссылки"
+        },
+        {
+          "run": "/Users/chelovek/orca/workspaces/AstraFeed-TokenBrief/hakaton/artifacts/news-pulse/zec/2026-09-17..2026-09-19",
+          "path": "pulse.evidence[116].quote",
+          "links": [
+            "https://t.me/icodrops_sergey/2105"
+          ],
+          "reason": "В БД нет времени ссылки"
+        },
+        {
+          "run": "/Users/chelovek/orca/workspaces/AstraFeed-TokenBrief/hakaton/artifacts/news-pulse/zec/2026-09-17..2026-09-19",
+          "path": "pulse.brief_markdown",
+          "links": [
+            "https://t.me/icodrops_sergey/2105"
+          ],
+          "reason": "В БД нет времени ссылки"
+        }
+      ],
+      "note": "Числитель — нарушения; знаменатель — проверенные вхождения времени/ссылок. Включает время < start; явная предыстория отдельно."
+    },
+    "boundary": {
+      "title": "Граничные пробы [start,end)",
+      "numerator": 58,
+      "denominator": 58,
+      "value": 1.0,
+      "threshold": 1,
+      "status": "pass",
+      "errors": [],
+      "missing": [],
+      "note": ""
+    },
+    "numeric_aggregates": {
+      "title": "Правильность числовых агрегатов",
+      "numerator": 25188,
+      "denominator": 25188,
+      "value": 1.0,
+      "threshold": 1,
+      "status": "pass",
+      "errors": [],
+      "missing": [],
+      "note": ""
+    },
+    "previous_window": {
+      "title": "«Изменения» относительно предыдущего окна",
+      "numerator": 0,
+      "denominator": 0,
+      "value": null,
+      "threshold": 1,
+      "status": "unverified",
+      "errors": [],
+      "missing": [
+        {
+          "run": "/Users/chelovek/orca/workspaces/AstraFeed-TokenBrief/hakaton/artifacts/news-pulse/aave/2026-09-09..2026-09-23",
+          "reason": "Нет прогона за предыдущее окно [2026-08-25T00:00:00+00:00, 2026-09-09T00:00:00+00:00)"
+        },
+        {
+          "run": "/Users/chelovek/orca/workspaces/AstraFeed-TokenBrief/hakaton/artifacts/news-pulse/aave/2026-09-22..2026-09-23",
+          "reason": "Нет прогона за предыдущее окно [2026-09-20T00:00:00+00:00, 2026-09-22T00:00:00+00:00)"
+        },
+        {
+          "run": "/Users/chelovek/orca/workspaces/AstraFeed-TokenBrief/hakaton/artifacts/news-pulse/arc/2026-09-09..2026-09-23",
+          "reason": "Нет прогона за предыдущее окно [2026-08-25T00:00:00+00:00, 2026-09-09T00:00:00+00:00)"
+        },
+        {
+          "run": "/Users/chelovek/orca/workspaces/AstraFeed-TokenBrief/hakaton/artifacts/news-pulse/arc/2026-09-09T00-00-00-00-00..2026-09-16T11-01-00-00-00",
+          "reason": "Нет прогона за предыдущее окно [2026-09-01T12:59:00+00:00, 2026-09-09T00:00:00+00:00)"
+        },
+        {
+          "run": "/Users/chelovek/orca/workspaces/AstraFeed-TokenBrief/hakaton/artifacts/news-pulse/arc/2026-09-09T00-00-00-00-00..2026-09-16T11-01-01-00-00",
+          "reason": "Нет прогона за предыдущее окно [2026-09-01T12:58:59+00:00, 2026-09-09T00:00:00+00:00)"
+        },
+        {
+          "run": "/Users/chelovek/orca/workspaces/AstraFeed-TokenBrief/hakaton/artifacts/news-pulse/arc/2026-09-09T00-00-00-00-00..2026-09-16T11-01-02-00-00",
+          "reason": "Нет прогона за предыдущее окно [2026-09-01T12:58:58+00:00, 2026-09-09T00:00:00+00:00)"
+        },
+        {
+          "run": "/Users/chelovek/orca/workspaces/AstraFeed-TokenBrief/hakaton/artifacts/news-pulse/arc/2026-09-16T11-01-01-00-00..2026-09-17T11-01-01-00-00",
+          "reason": "Нет прогона за предыдущее окно [2026-09-15T11:01:01+00:00, 2026-09-16T11:01:01+00:00)"
+        },
+        {
+          "run": "/Users/chelovek/orca/workspaces/AstraFeed-TokenBrief/hakaton/artifacts/news-pulse/eth/2026-09-09..2026-09-23",
+          "reason": "Нет прогона за предыдущее окно [2026-08-25T00:00:00+00:00, 2026-09-09T00:00:00+00:00)"
+        },
+        {
+          "run": "/Users/chelovek/orca/workspaces/AstraFeed-TokenBrief/hakaton/artifacts/news-pulse/eth/2026-09-09T00-00-00-00-00..2026-09-14T12-33-45-00-00",
+          "reason": "Нет прогона за предыдущее окно [2026-09-03T11:26:15+00:00, 2026-09-09T00:00:00+00:00)"
+        },
+        {
+          "run": "/Users/chelovek/orca/workspaces/AstraFeed-TokenBrief/hakaton/artifacts/news-pulse/eth/2026-09-09T00-00-00-00-00..2026-09-14T12-33-46-00-00",
+          "reason": "Нет прогона за предыдущее окно [2026-09-03T11:26:14+00:00, 2026-09-09T00:00:00+00:00)"
+        },
+        {
+          "run": "/Users/chelovek/orca/workspaces/AstraFeed-TokenBrief/hakaton/artifacts/news-pulse/eth/2026-09-09T00-00-00-00-00..2026-09-14T12-33-47-00-00",
+          "reason": "Нет прогона за предыдущее окно [2026-09-03T11:26:13+00:00, 2026-09-09T00:00:00+00:00)"
+        },
+        {
+          "run": "/Users/chelovek/orca/workspaces/AstraFeed-TokenBrief/hakaton/artifacts/news-pulse/eth/2026-09-09T00-00-00-00-00..2026-09-21T12-44-53-00-00",
+          "reason": "Нет прогона за предыдущее окно [2026-08-27T11:15:07+00:00, 2026-09-09T00:00:00+00:00)"
+        },
+        {
+          "run": "/Users/chelovek/orca/workspaces/AstraFeed-TokenBrief/hakaton/artifacts/news-pulse/eth/2026-09-09T00-00-00-00-00..2026-09-21T12-44-54-00-00",
+          "reason": "Нет прогона за предыдущее окно [2026-08-27T11:15:06+00:00, 2026-09-09T00:00:00+00:00)"
+        },
+        {
+          "run": "/Users/chelovek/orca/workspaces/AstraFeed-TokenBrief/hakaton/artifacts/news-pulse/eth/2026-09-09T00-00-00-00-00..2026-09-21T12-44-55-00-00",
+          "reason": "Нет прогона за предыдущее окно [2026-08-27T11:15:05+00:00, 2026-09-09T00:00:00+00:00)"
+        },
+        {
+          "run": "/Users/chelovek/orca/workspaces/AstraFeed-TokenBrief/hakaton/artifacts/news-pulse/eth/2026-09-14T12-33-46-00-00..2026-09-21T12-44-54-00-00",
+          "reason": "Нет прогона за предыдущее окно [2026-09-07T12:22:38+00:00, 2026-09-14T12:33:46+00:00)"
+        },
+        {
+          "run": "/Users/chelovek/orca/workspaces/AstraFeed-TokenBrief/hakaton/artifacts/news-pulse/eth/2026-09-17..2026-09-19",
+          "reason": "Нет прогона за предыдущее окно [2026-09-14T00:00:00+00:00, 2026-09-17T00:00:00+00:00)"
+        },
+        {
+          "run": "/Users/chelovek/orca/workspaces/AstraFeed-TokenBrief/hakaton/artifacts/news-pulse/zec/2026-09-09..2026-09-23",
+          "reason": "Нет прогона за предыдущее окно [2026-08-25T00:00:00+00:00, 2026-09-09T00:00:00+00:00)"
+        },
+        {
+          "run": "/Users/chelovek/orca/workspaces/AstraFeed-TokenBrief/hakaton/artifacts/news-pulse/zec/2026-09-09T00-00-00-00-00..2026-09-16T06-10-18-00-00",
+          "reason": "Нет прогона за предыдущее окно [2026-09-01T17:49:42+00:00, 2026-09-09T00:00:00+00:00)"
+        },
+        {
+          "run": "/Users/chelovek/orca/workspaces/AstraFeed-TokenBrief/hakaton/artifacts/news-pulse/zec/2026-09-09T00-00-00-00-00..2026-09-16T06-10-19-00-00",
+          "reason": "Нет прогона за предыдущее окно [2026-09-01T17:49:41+00:00, 2026-09-09T00:00:00+00:00)"
+        },
+        {
+          "run": "/Users/chelovek/orca/workspaces/AstraFeed-TokenBrief/hakaton/artifacts/news-pulse/zec/2026-09-09T00-00-00-00-00..2026-09-16T06-10-20-00-00",
+          "reason": "Нет прогона за предыдущее окно [2026-09-01T17:49:40+00:00, 2026-09-09T00:00:00+00:00)"
+        },
+        {
+          "run": "/Users/chelovek/orca/workspaces/AstraFeed-TokenBrief/hakaton/artifacts/news-pulse/zec/2026-09-09T00-00-00-00-00..2026-09-21T06-04-31-00-00",
+          "reason": "Нет прогона за предыдущее окно [2026-08-27T17:55:29+00:00, 2026-09-09T00:00:00+00:00)"
+        },
+        {
+          "run": "/Users/chelovek/orca/workspaces/AstraFeed-TokenBrief/hakaton/artifacts/news-pulse/zec/2026-09-09T00-00-00-00-00..2026-09-21T06-04-32-00-00",
+          "reason": "Нет прогона за предыдущее окно [2026-08-27T17:55:28+00:00, 2026-09-09T00:00:00+00:00)"
+        },
+        {
+          "run": "/Users/chelovek/orca/workspaces/AstraFeed-TokenBrief/hakaton/artifacts/news-pulse/zec/2026-09-09T00-00-00-00-00..2026-09-21T06-04-33-00-00",
+          "reason": "Нет прогона за предыдущее окно [2026-08-27T17:55:27+00:00, 2026-09-09T00:00:00+00:00)"
+        },
+        {
+          "run": "/Users/chelovek/orca/workspaces/AstraFeed-TokenBrief/hakaton/artifacts/news-pulse/zec/2026-09-16T06-10-19-00-00..2026-09-21T06-04-32-00-00",
+          "reason": "Нет прогона за предыдущее окно [2026-09-11T06:16:06+00:00, 2026-09-16T06:10:19+00:00)"
+        },
+        {
+          "run": "/Users/chelovek/orca/workspaces/AstraFeed-TokenBrief/hakaton/artifacts/news-pulse/zec/2026-09-17..2026-09-19",
+          "reason": "Нет прогона за предыдущее окно [2026-09-14T00:00:00+00:00, 2026-09-17T00:00:00+00:00)"
+        }
+      ],
+      "note": "События и комментарии предыдущего окна и разницы с ним сверяются с прогоном, построенным за это окно; без такого прогона — unverified."
+    },
+    "brief_grounding": {
+      "title": "Подтверждённость фактов брифа",
+      "numerator": 17959,
+      "denominator": 17959,
+      "value": 1.0,
+      "threshold": 0.95,
+      "status": "pass",
+      "errors": [],
+      "missing": [],
+      "note": "news_pulse_ground.py: brief.md = рендер pulse.json; цитаты, заголовки, реплики и основания дословно есть в источнике БД; счётчики пересчитываются по участникам."
+    },
+    "fabrications": {
+      "title": "Выдуманные цены, даты, авторство, официальное подтверждение",
+      "numerator": 0,
+      "denominator": 17959,
+      "value": 0.0,
+      "threshold": "= 0 ошибок",
+      "status": "pass",
+      "errors": [],
+      "missing": [],
+      "note": "Число в утверждении брифа, которого нет в связанном источнике. Бриф извлекающий: авторство и подтверждение не генерируются."
+    },
+    "segments": {
+      "title": "Согласие сегментных классов",
+      "numerator": 9,
+      "denominator": 43,
+      "value": 0.20930232558139536,
+      "threshold": null,
+      "status": "unverified",
+      "errors": [
+        {
+          "links": [
+            "https://t.me/whitelist1/7137"
+          ],
+          "topic": "eth",
+          "reason": "Решение не совпало с разметкой",
+          "expected": [
+            "promo_service"
+          ],
+          "actual": [
+            "event"
+          ]
+        },
+        {
+          "links": [
+            "https://t.me/don_invest/5299"
+          ],
+          "topic": "zec",
+          "reason": "Решение не совпало с разметкой",
+          "expected": [
+            "author_position",
+            "promo_service"
+          ],
+          "actual": [
+            "event"
+          ]
+        },
+        {
+          "links": [
+            "https://t.me/Slavik_investor_updates/6921"
+          ],
+          "topic": "eth",
+          "reason": "Решение не совпало с разметкой",
+          "expected": [
+            "author_position",
+            "event"
+          ],
+          "actual": [
+            "event"
+          ]
+        },
+        {
+          "links": [
+            "https://t.me/cryptonftded/3270"
+          ],
+          "topic": "eth",
+          "reason": "Решение не совпало с разметкой",
+          "expected": [
+            "author_position",
+            "event",
+            "promo_service"
+          ],
+          "actual": [
+            "promo_service"
+          ]
+        },
+        {
+          "links": [
+            "https://t.me/cryptonftded/3277"
+          ],
+          "topic": "eth",
+          "reason": "Решение не совпало с разметкой",
+          "expected": [
+            "author_position",
+            "promo_service"
+          ],
+          "actual": [
+            "promo_service"
+          ]
+        },
+        {
+          "links": [
+            "https://t.me/cryptonftded/3282"
+          ],
+          "topic": "eth",
+          "reason": "Решение не совпало с разметкой",
+          "expected": [
+            "author_position",
+            "event",
+            "promo_service"
+          ],
+          "actual": [
+            "promo_service"
+          ]
+        },
+        {
+          "links": [
+            "https://t.me/icodrops_sergey/2426"
+          ],
+          "topic": "zec",
+          "reason": "Решение не совпало с разметкой",
+          "expected": [
+            "author_position",
+            "event"
+          ],
+          "actual": [
+            "event"
+          ]
+        },
+        {
+          "links": [
+            "https://t.me/icodrops_sergey/2431"
+          ],
+          "topic": "zec",
+          "reason": "Решение не совпало с разметкой",
+          "expected": [
+            "author_position"
+          ],
+          "actual": [
+            "event"
+          ]
+        },
+        {
+          "links": [
+            "https://t.me/markettwits/385008"
+          ],
+          "topic": "eth",
+          "reason": "Решение не совпало с разметкой",
+          "expected": [
+            "event",
+            "redistribution"
+          ],
+          "actual": [
+            "event"
+          ]
+        },
+        {
+          "links": [
+            "https://t.me/markettwits/385049"
+          ],
+          "topic": "eth",
+          "reason": "Решение не совпало с разметкой",
+          "expected": [
+            "event",
+            "redistribution"
+          ],
+          "actual": [
+            "promo_service"
+          ]
+        },
+        {
+          "links": [
+            "https://t.me/markettwits/385132"
+          ],
+          "topic": "zec",
+          "reason": "Решение не совпало с разметкой",
+          "expected": [
+            "author_position",
+            "event"
+          ],
+          "actual": [
+            "event",
+            "promo_service"
+          ]
+        },
+        {
+          "links": [
+            "https://t.me/markettwits/385211"
+          ],
+          "topic": "eth",
+          "reason": "Решение не совпало с разметкой",
+          "expected": [
+            "author_position",
+            "event",
+            "redistribution"
+          ],
+          "actual": [
+            "event"
+          ]
+        },
+        {
+          "links": [
+            "https://t.me/markettwits/385234"
+          ],
+          "topic": "zec",
+          "reason": "Решение не совпало с разметкой",
+          "expected": [
+            "event"
+          ],
+          "actual": [
+            "event",
+            "promo_service"
+          ]
+        },
+        {
+          "links": [
+            "https://t.me/markettwits/385262"
+          ],
+          "topic": "eth",
+          "reason": "Решение не совпало с разметкой",
+          "expected": [
+            "event",
+            "redistribution"
+          ],
+          "actual": [
+            "event",
+            "promo_service"
+          ]
+        },
+        {
+          "links": [
+            "https://t.me/markettwits/385442"
+          ],
+          "topic": "eth",
+          "reason": "Решение не совпало с разметкой",
+          "expected": [
+            "event",
+            "redistribution"
+          ],
+          "actual": [
+            "event"
+          ]
+        },
+        {
+          "links": [
+            "https://t.me/markettwits/385524"
+          ],
+          "topic": "eth",
+          "reason": "Решение не совпало с разметкой",
+          "expected": [
+            "author_position",
+            "event"
+          ],
+          "actual": [
+            "event",
+            "promo_service"
+          ]
+        },
+        {
+          "links": [
+            "https://t.me/markettwits/385538"
+          ],
+          "topic": "zec",
+          "reason": "Решение не совпало с разметкой",
+          "expected": [
+            "event",
+            "redistribution"
+          ],
+          "actual": [
+            "event"
+          ]
+        },
+        {
+          "links": [
+            "https://t.me/markettwits/385603"
+          ],
+          "topic": "eth",
+          "reason": "Решение не совпало с разметкой",
+          "expected": [
+            "event",
+            "redistribution"
+          ],
+          "actual": [
+            "event",
+            "promo_service"
+          ]
+        },
+        {
+          "links": [
+            "https://t.me/Defiscamcheck/4871"
+          ],
+          "topic": "zec",
+          "reason": "Решение не совпало с разметкой",
+          "expected": [
+            "event",
+            "redistribution"
+          ],
+          "actual": [
+            "event",
+            "promo_service"
+          ]
+        },
+        {
+          "links": [
+            "https://t.me/Defiscamcheck/4873"
+          ],
+          "topic": "zec",
+          "reason": "Решение не совпало с разметкой",
+          "expected": [
+            "author_position",
+            "event"
+          ],
+          "actual": [
+            "event"
+          ]
+        },
+        {
+          "links": [
+            "https://t.me/cryptoattack24/96809"
+          ],
+          "topic": "zec",
+          "reason": "Решение не совпало с разметкой",
+          "expected": [
+            "event",
+            "redistribution"
+          ],
+          "actual": [
+            "event"
+          ]
+        },
+        {
+          "links": [
+            "https://t.me/cryptoattack24/96830"
+          ],
+          "topic": "eth",
+          "reason": "Решение не совпало с разметкой",
+          "expected": [
+            "event",
+            "redistribution"
+          ],
+          "actual": [
+            "event"
+          ]
+        },
+        {
+          "links": [
+            "https://t.me/cryptoattack24/96857"
+          ],
+          "topic": "eth",
+          "reason": "Решение не совпало с разметкой",
+          "expected": [
+            "event",
+            "redistribution"
+          ],
+          "actual": [
+            "event",
+            "participant_reaction"
+          ]
+        },
+        {
+          "links": [
+            "https://t.me/krasnovcrypto/3756"
+          ],
+          "topic": "eth",
+          "reason": "Решение не совпало с разметкой",
+          "expected": [
+            "author_position",
+            "promo_service"
+          ],
+          "actual": [
+            "participant_reaction"
+          ]
+        },
+        {
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/422950"
+          ],
+          "topic": "eth",
+          "reason": "Решение не совпало с разметкой",
+          "expected": [
+            "event",
+            "redistribution"
+          ],
+          "actual": [
+            "event"
+          ]
+        },
+        {
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/423167"
+          ],
+          "topic": "zec",
+          "reason": "Решение не совпало с разметкой",
+          "expected": [
+            "event",
+            "redistribution"
+          ],
+          "actual": [
+            "event",
+            "promo_service"
+          ]
+        },
+        {
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/423360"
+          ],
+          "topic": "zec",
+          "reason": "Решение не совпало с разметкой",
+          "expected": [
+            "event",
+            "redistribution"
+          ],
+          "actual": [
+            "event"
+          ]
+        },
+        {
+          "links": [
+            "https://t.me/markettwits/384699"
+          ],
+          "topic": "eth",
+          "reason": "Решение не совпало с разметкой",
+          "expected": [
+            "event",
+            "redistribution"
+          ],
+          "actual": [
+            "event",
+            "promo_service"
+          ]
+        },
+        {
+          "links": [
+            "https://t.me/crypto_hd/31484"
+          ],
+          "topic": "zec",
+          "reason": "Решение не совпало с разметкой",
+          "expected": [
+            "event"
+          ],
+          "actual": [
+            "event",
+            "promo_service"
+          ]
+        },
+        {
+          "links": [
+            "https://t.me/crypto_hd/31487"
+          ],
+          "topic": "zec",
+          "reason": "Решение не совпало с разметкой",
+          "expected": [
+            "event",
+            "redistribution"
+          ],
+          "actual": [
+            "author_position",
+            "promo_service"
+          ]
+        },
+        {
+          "links": [
+            "https://t.me/crypto_hd/31493"
+          ],
+          "topic": "zec",
+          "reason": "Решение не совпало с разметкой",
+          "expected": [
+            "author_position"
+          ],
+          "actual": [
+            "event",
+            "promo_service"
+          ]
+        },
+        {
+          "links": [
+            "https://t.me/crypto_hd/31511"
+          ],
+          "topic": "zec",
+          "reason": "Решение не совпало с разметкой",
+          "expected": [
+            "event",
+            "redistribution"
+          ],
+          "actual": [
+            "event"
+          ]
+        },
+        {
+          "links": [
+            "https://t.me/rawa_imagination/21078"
+          ],
+          "topic": "eth",
+          "reason": "Решение не совпало с разметкой",
+          "expected": [
+            "event",
+            "redistribution"
+          ],
+          "actual": [
+            "event"
+          ]
+        },
+        {
+          "links": [
+            "https://t.me/PowsGemCalls/49106"
+          ],
+          "topic": "zec",
+          "reason": "Решение не совпало с разметкой",
+          "expected": [
+            "participant_reaction"
+          ],
+          "actual": [
+            "event"
+          ]
+        }
+      ],
+      "missing": [],
+      "note": "Информативно, без порога; segments — точное совпадение множества классов поста, без оценки границ."
+    },
+    "origin": {
+      "title": "Согласие происхождения",
+      "numerator": 17,
+      "denominator": 43,
+      "value": 0.3953488372093023,
+      "threshold": null,
+      "status": "unverified",
+      "errors": [
+        {
+          "links": [
+            "https://t.me/whitelist1/7139"
+          ],
+          "topic": "arc",
+          "reason": "Решение не совпало с разметкой",
+          "expected": "retelling",
+          "actual": "own"
+        },
+        {
+          "links": [
+            "https://t.me/whitelist1/7149"
+          ],
+          "topic": "zec",
+          "reason": "Решение не совпало с разметкой",
+          "expected": "retelling",
+          "actual": "unknown"
+        },
+        {
+          "links": [
+            "https://t.me/Slavik_investor_updates/6921"
+          ],
+          "topic": "eth",
+          "reason": "Решение не совпало с разметкой",
+          "expected": "retelling",
+          "actual": "unknown"
+        },
+        {
+          "links": [
+            "https://t.me/cryptonftded/3270"
+          ],
+          "topic": "eth",
+          "reason": "Решение не совпало с разметкой",
+          "expected": "retelling",
+          "actual": "unknown"
+        },
+        {
+          "links": [
+            "https://t.me/cryptonftded/3277"
+          ],
+          "topic": "eth",
+          "reason": "Решение не совпало с разметкой",
+          "expected": "own",
+          "actual": "unknown"
+        },
+        {
+          "links": [
+            "https://t.me/cryptonftded/3282"
+          ],
+          "topic": "eth",
+          "reason": "Решение не совпало с разметкой",
+          "expected": "own",
+          "actual": "unknown"
+        },
+        {
+          "links": [
+            "https://t.me/icodrops_sergey/2426"
+          ],
+          "topic": "zec",
+          "reason": "Решение не совпало с разметкой",
+          "expected": "own",
+          "actual": "retelling"
+        },
+        {
+          "links": [
+            "https://t.me/markettwits/385008"
+          ],
+          "topic": "eth",
+          "reason": "Решение не совпало с разметкой",
+          "expected": "retelling",
+          "actual": "own"
+        },
+        {
+          "links": [
+            "https://t.me/markettwits/385049"
+          ],
+          "topic": "eth",
+          "reason": "Решение не совпало с разметкой",
+          "expected": "retelling",
+          "actual": "unknown"
+        },
+        {
+          "links": [
+            "https://t.me/markettwits/385132"
+          ],
+          "topic": "zec",
+          "reason": "Решение не совпало с разметкой",
+          "expected": "unknown",
+          "actual": "retelling"
+        },
+        {
+          "links": [
+            "https://t.me/markettwits/385211"
+          ],
+          "topic": "eth",
+          "reason": "Решение не совпало с разметкой",
+          "expected": "retelling",
+          "actual": "own"
+        },
+        {
+          "links": [
+            "https://t.me/markettwits/385255"
+          ],
+          "topic": "zec",
+          "reason": "Решение не совпало с разметкой",
+          "expected": "unknown",
+          "actual": "retelling"
+        },
+        {
+          "links": [
+            "https://t.me/markettwits/385442"
+          ],
+          "topic": "eth",
+          "reason": "Решение не совпало с разметкой",
+          "expected": "retelling",
+          "actual": "own"
+        },
+        {
+          "links": [
+            "https://t.me/markettwits/385524"
+          ],
+          "topic": "eth",
+          "reason": "Решение не совпало с разметкой",
+          "expected": "unknown",
+          "actual": "own"
+        },
+        {
+          "links": [
+            "https://t.me/markettwits/385538"
+          ],
+          "topic": "zec",
+          "reason": "Решение не совпало с разметкой",
+          "expected": "retelling",
+          "actual": "own"
+        },
+        {
+          "links": [
+            "https://t.me/markettwits/385603"
+          ],
+          "topic": "eth",
+          "reason": "Решение не совпало с разметкой",
+          "expected": "retelling",
+          "actual": "own"
+        },
+        {
+          "links": [
+            "https://t.me/Defiscamcheck/4873"
+          ],
+          "topic": "zec",
+          "reason": "Решение не совпало с разметкой",
+          "expected": "retelling",
+          "actual": "own"
+        },
+        {
+          "links": [
+            "https://t.me/cryptoattack24/96789"
+          ],
+          "topic": "zec",
+          "reason": "Решение не совпало с разметкой",
+          "expected": "unknown",
+          "actual": "retelling"
+        },
+        {
+          "links": [
+            "https://t.me/cryptoattack24/96857"
+          ],
+          "topic": "eth",
+          "reason": "Решение не совпало с разметкой",
+          "expected": "retelling",
+          "actual": "own"
+        },
+        {
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/422950"
+          ],
+          "topic": "eth",
+          "reason": "Решение не совпало с разметкой",
+          "expected": "retelling",
+          "actual": "own"
+        },
+        {
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/423167"
+          ],
+          "topic": "zec",
+          "reason": "Решение не совпало с разметкой",
+          "expected": "repost",
+          "actual": "retelling"
+        },
+        {
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/423360"
+          ],
+          "topic": "zec",
+          "reason": "Решение не совпало с разметкой",
+          "expected": "repost",
+          "actual": "own"
+        },
+        {
+          "links": [
+            "https://t.me/crypto_hd/31487"
+          ],
+          "topic": "zec",
+          "reason": "Решение не совпало с разметкой",
+          "expected": "retelling",
+          "actual": "own"
+        },
+        {
+          "links": [
+            "https://t.me/crypto_hd/31488"
+          ],
+          "topic": "zec",
+          "reason": "Решение не совпало с разметкой",
+          "expected": "unknown",
+          "actual": "retelling"
+        },
+        {
+          "links": [
+            "https://t.me/crypto_hd/31493"
+          ],
+          "topic": "zec",
+          "reason": "Решение не совпало с разметкой",
+          "expected": "unknown",
+          "actual": "own"
+        },
+        {
+          "links": [
+            "https://t.me/rawa_imagination/21078"
+          ],
+          "topic": "eth",
+          "reason": "Решение не совпало с разметкой",
+          "expected": "retelling",
+          "actual": "own"
+        }
+      ],
+      "missing": [],
+      "note": "Информативно, без порога; segments — точное совпадение множества классов поста, без оценки границ."
+    },
+    "source_role": {
+      "title": "Согласие роли источника",
+      "numerator": 26,
+      "denominator": 43,
+      "value": 0.6046511627906976,
+      "threshold": null,
+      "status": "unverified",
+      "errors": [
+        {
+          "links": [
+            "https://t.me/whitelist1/7139"
+          ],
+          "topic": "arc",
+          "reason": "Решение не совпало с разметкой",
+          "expected": "editorial",
+          "actual": "participant"
+        },
+        {
+          "links": [
+            "https://t.me/whitelist1/7149"
+          ],
+          "topic": "zec",
+          "reason": "Решение не совпало с разметкой",
+          "expected": "editorial",
+          "actual": "unknown"
+        },
+        {
+          "links": [
+            "https://t.me/Slavik_investor_updates/6921"
+          ],
+          "topic": "eth",
+          "reason": "Решение не совпало с разметкой",
+          "expected": "author",
+          "actual": "unknown"
+        },
+        {
+          "links": [
+            "https://t.me/cryptonftded/3270"
+          ],
+          "topic": "eth",
+          "reason": "Решение не совпало с разметкой",
+          "expected": "author",
+          "actual": "unknown"
+        },
+        {
+          "links": [
+            "https://t.me/cryptonftded/3277"
+          ],
+          "topic": "eth",
+          "reason": "Решение не совпало с разметкой",
+          "expected": "author",
+          "actual": "unknown"
+        },
+        {
+          "links": [
+            "https://t.me/cryptonftded/3282"
+          ],
+          "topic": "eth",
+          "reason": "Решение не совпало с разметкой",
+          "expected": "author",
+          "actual": "unknown"
+        },
+        {
+          "links": [
+            "https://t.me/icodrops_sergey/2426"
+          ],
+          "topic": "zec",
+          "reason": "Решение не совпало с разметкой",
+          "expected": "author",
+          "actual": "editorial"
+        },
+        {
+          "links": [
+            "https://t.me/markettwits/385049"
+          ],
+          "topic": "eth",
+          "reason": "Решение не совпало с разметкой",
+          "expected": "editorial",
+          "actual": "unknown"
+        },
+        {
+          "links": [
+            "https://t.me/markettwits/385603"
+          ],
+          "topic": "eth",
+          "reason": "Решение не совпало с разметкой",
+          "expected": "editorial",
+          "actual": "author"
+        },
+        {
+          "links": [
+            "https://t.me/Defiscamcheck/4873"
+          ],
+          "topic": "zec",
+          "reason": "Решение не совпало с разметкой",
+          "expected": "editorial",
+          "actual": "unknown"
+        },
+        {
+          "links": [
+            "https://t.me/krasnovcrypto/3756"
+          ],
+          "topic": "eth",
+          "reason": "Решение не совпало с разметкой",
+          "expected": "author",
+          "actual": "participant"
+        },
+        {
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/422657"
+          ],
+          "topic": "zec",
+          "reason": "Решение не совпало с разметкой",
+          "expected": "editorial",
+          "actual": "unknown"
+        },
+        {
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/422950"
+          ],
+          "topic": "eth",
+          "reason": "Решение не совпало с разметкой",
+          "expected": "editorial",
+          "actual": "author"
+        },
+        {
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/423360"
+          ],
+          "topic": "zec",
+          "reason": "Решение не совпало с разметкой",
+          "expected": "editorial",
+          "actual": "unknown"
+        },
+        {
+          "links": [
+            "https://t.me/crypto_hd/31487"
+          ],
+          "topic": "zec",
+          "reason": "Решение не совпало с разметкой",
+          "expected": "editorial",
+          "actual": "author"
+        },
+        {
+          "links": [
+            "https://t.me/crypto_hd/31511"
+          ],
+          "topic": "zec",
+          "reason": "Решение не совпало с разметкой",
+          "expected": "editorial",
+          "actual": "author"
+        },
+        {
+          "links": [
+            "https://t.me/PowsGemCalls/49106"
+          ],
+          "topic": "zec",
+          "reason": "Решение не совпало с разметкой",
+          "expected": "participant",
+          "actual": "author"
+        }
+      ],
+      "missing": [],
+      "note": "Информативно, без порога; segments — точное совпадение множества классов поста, без оценки границ."
+    }
+  }
+}

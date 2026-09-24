@@ -1,0 +1,32 @@
+{
+ "choices": [
+  {
+   "message": {
+    "content": "{\"labels\": [{\"id\": \"telegram:1:7151#s12\", \"kind\": \"event\", \"actor\": \"Wick on Zec\", \"action\": \"account_not_found\", \"object\": \"Twitter_account\", \"qualifiers\": {\"previous_info\": \"999 free\"}, \"origin\": \"retelling\", \"source_role\": \"author\", \"verification_status\": \"unverified\", \"quote\": \"• Wick on Zec: аккаунт @wickonzec не находится · в твоём списке было 999 free;\", \"span\": [0, 78]}]}"
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 1668,
+  "completion_tokens": 1778,
+  "total_tokens": 3446,
+  "cost": 0.0004836818,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 256,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.0004836818,
+   "upstream_inference_prompt_cost": 0.0001414168,
+   "upstream_inference_completions_cost": 0.000342265
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

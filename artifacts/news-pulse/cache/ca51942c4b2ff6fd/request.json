@@ -1,0 +1,23 @@
+{
+ "a": {
+  "quote": "Клубные NFT-выдры. Кошелек ETH, не ZEC",
+  "actor": null,
+  "action": "Клубные NFT-выдры. Кошелек ETH, не ZEC",
+  "object": "NFT-выдры",
+  "qualifiers": {},
+  "url": "https://t.me/whitelist1/7149"
+ },
+ "b": {
+  "quote": "Приватная коллекция на Zcash: арт публичный. Саплай/цена не раскрыты;",
+  "actor": null,
+  "action": "announcement of private collection",
+  "object": "private collection on Zcash",
+  "qualifiers": {
+   "version": null,
+   "event_date": null,
+   "place": null,
+   "counterparty": null
+  },
+  "url": "https://t.me/whitelist1/7149"
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "segments": [
+  {
+   "id": "telegram:15:423236#s2",
+   "text": "А тут вдобавок еще $ZEC ATH пишет... \n\n",
+   "mentions": [
+    {
+     "text": "$ZEC",
+     "status": "confirmed"
+    },
+    {
+     "text": "ZEC",
+     "status": "confirmed"
+    }
+   ],
+   "kind_hint": "post",
+   "url": "https://t.me/WEB3_AGGREGATOR/423236",
+   "time": "2026-09-17T17:45:11+00:00"
+  }
+ ]
+}

@@ -1,0 +1,32 @@
+{
+ "choices": [
+  {
+   "message": {
+    "content": "{\"labels\": [{\"id\": \"telegram:15:423249#s1\", \"kind\": \"event\", \"actor\": \"Circle's Arc L1\", \"action\": \"hit mainnet\", \"object\": null, \"qualifiers\": {}, \"origin\": \"retelling\", \"source_role\": \"editorial\", \"verification_status\": \"unverified\", \"topic_role\": \"subject\", \"quote\": \"Wall Street kept walking in: S&P Global agreed to buy OpenZeppelin, the firm securing $37T in smart contracts, Deutsche Bank went live with institutional BTC/ETH custody, and Circle's Arc L1 hit mainnet; while crypto's courtroom pile grew, from DOJ charges against two Robinhood engineers to Celsius's $495M suit against BitMEX.\", \"span\": [0, 340]}]}"
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 2083,
+  "completion_tokens": 1928,
+  "total_tokens": 4011,
+  "cost": 0.000795826,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.000795826,
+   "upstream_inference_prompt_cost": 0.000279122,
+   "upstream_inference_completions_cost": 0.000516704
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

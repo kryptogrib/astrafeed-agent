@@ -1,10 +1,11 @@
 from __future__ import annotations
 
+import hashlib
 import json
 from collections.abc import Sequence
 from datetime import datetime
 
-from sqlalchemy import select
+from sqlalchemy import inspect, select
 from sqlalchemy.dialects.sqlite import insert as sqlite_insert
 from sqlalchemy.ext.asyncio import async_sessionmaker
 
@@ -16,6 +17,18 @@ from astrafeed.adapters.repository.sqlite.models import (
 )
 from astrafeed.domain.ingestion import Coverage, Source, coverage_for_window
 from astrafeed.domain.models import Item
+
+
+async def migrate_rss_sources(connection) -> None:
+    """Add RSS identity to an existing Telegram-only source catalog."""
+    columns = await connection.run_sync(
+        lambda sync: {column["name"] for column in inspect(sync).get_columns("source")}
+    )
+    if "rss_url" not in columns:
+        await connection.exec_driver_sql("ALTER TABLE source ADD COLUMN rss_url VARCHAR")
+    await connection.exec_driver_sql(
+        "CREATE UNIQUE INDEX IF NOT EXISTS ix_source_rss_url ON source (rss_url)"
+    )
 
 
 def _encode_item(item: Item) -> dict[str, object]:
@@ -43,7 +56,11 @@ def _decode_item(value: dict[str, object]) -> Item:
 
 
 def _source_from_row(row: SourceRow) -> Source:
-    return Source(id=row.id, telegram_id=row.telegram_id)
+    return Source(
+        id=row.id,
+        telegram_id=None if row.rss_url else row.telegram_id,
+        rss_url=row.rss_url,
+    )
 
 
 class SqliteIngestionStore:
@@ -58,6 +75,19 @@ class SqliteIngestionStore:
             if existing is not None:
                 return _source_from_row(existing)
             row = SourceRow(telegram_id=telegram_id)
+            s.add(row)
+            await s.flush()
+            return _source_from_row(row)
+
+    async def upsert_rss_source(self, url: str) -> Source:
+        async with self._session() as s, s.begin():
+            existing = await s.scalar(select(SourceRow).where(SourceRow.rss_url == url))
+            if existing is not None:
+                return _source_from_row(existing)
+            # Existing databases have telegram_id NOT NULL. A stable negative
+            # catalog key leaves that schema intact; rss_url is the real identity.
+            surrogate = -int.from_bytes(hashlib.sha256(url.encode()).digest()[:7], "big") - 1
+            row = SourceRow(telegram_id=surrogate, rss_url=url)
             s.add(row)
             await s.flush()
             return _source_from_row(row)

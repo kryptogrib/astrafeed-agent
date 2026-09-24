@@ -1,0 +1,32 @@
+{
+ "choices": [
+  {
+   "message": {
+    "content": "{\"labels\": [{\"id\": \"telegram:15:422763#s19\", \"kind\": \"event\", \"actor\": \"Solana Foundation (rumored)\", \"action\": \"support (via secret bid)\", \"object\": \"rise of stock/spot token trading in SOL ecosystem\", \"qualifiers\": {\"counterparty\": [\"Hype\", \"Zec\", \"WbTC\", \"TAO\"]}, \"origin\": \"retelling\", \"source_role\": \"author\", \"verification_status\": \"unverified\", \"topic_role\": \"context\", \"quote\": \"Мета временно сместилась в СОЛ экосистеме. Ходят слухи, что такой взлет был поддержан тайным бидом от Solana Foundation - для которых развитие торговли акциями/ спот токенами (Hype,Zec, WbTC, TAO) в СОЛ блокчейне является одним из способов обелиться / отделившись от стереотипа, что SOL только для мемов.\", \"span\": [0, 280]}]}"
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 880,
+  "completion_tokens": 705,
+  "total_tokens": 1585,
+  "cost": 0.0005175,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.0005175,
+   "upstream_inference_prompt_cost": 0.00016649220704252453,
+   "upstream_inference_completions_cost": 0.0003510077929574755
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

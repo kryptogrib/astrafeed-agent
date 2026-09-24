@@ -1,0 +1,28 @@
+{
+ "a": {
+  "quote": "Arc запустил публичный mainnet и уже сейчас мы можем делать быстрые активности.",
+  "actor": "Arc",
+  "action": "launched",
+  "object": "public mainnet",
+  "qualifiers": {
+   "version": "mainnet",
+   "event_date": "2026-09-16",
+   "place": null,
+   "counterparty": null
+  },
+  "url": "https://t.me/krasnovcrypto/3754"
+ },
+ "b": {
+  "quote": "More than 190 institutional and ecosystem teams are already building on Arc, one of the most institutionally backed genesis cohorts the industry has seen, as Circle pushes stablecoins deeper into regulated finance.",
+  "actor": "Circle",
+  "action": "announced",
+  "object": "Arc",
+  "qualifiers": {
+   "version": null,
+   "event_date": "2026-09-16",
+   "place": null,
+   "counterparty": null
+  },
+  "url": "https://t.me/WEB3_AGGREGATOR/423100"
+ }
+}

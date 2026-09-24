@@ -1,0 +1,22 @@
+{
+ "a": {
+  "quote": "Arc, the stablecoin-native Layer-1 built by Circle, launched its public mainnet, positioning itself as an \"Economic OS for the internet\" with USDC as the native gas token and deterministic sub-second finality.",
+  "actor": "Circle",
+  "action": "launched",
+  "object": "Arc",
+  "qualifiers": {
+   "event_date": "2026-09-16"
+  },
+  "url": "https://t.me/WEB3_AGGREGATOR/423100"
+ },
+ "b": {
+  "quote": "▫️Запуск майннета Arc (читать)",
+  "actor": null,
+  "action": "mainnet launch",
+  "object": "Arc",
+  "qualifiers": {
+   "place": "Arc"
+  },
+  "url": "https://t.me/crypto_hd/31472"
+ }
+}

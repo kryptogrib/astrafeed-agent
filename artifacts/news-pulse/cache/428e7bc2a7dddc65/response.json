@@ -1,0 +1,32 @@
+{
+ "choices": [
+  {
+   "message": {
+    "content": "{\"labels\": [{\"id\": \"telegram:15:423129#s3\", \"kind\": \"event\", \"actor\": \"Aerie Capital\", \"action\": \"launched a new Morpho market on Ethereum mainnet\", \"object\": null, \"qualifiers\": {\"place\": \"Ethereum mainnet\"}, \"origin\": \"own\", \"source_role\": \"participant\", \"verification_status\": \"unverified\", \"quote\": \"In parallel, Aerie Capital launched a new Morpho market on Ethereum mainnet, allowing nALPHA, nOPAL, nBASIS, and nFALCON to serve as collateral. Holders can borrow stablecoins or run looping strategies inside one of Ethereum's largest lending environments.\", \"span\": [0, 280]}]}"
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 2009,
+  "completion_tokens": 1789,
+  "total_tokens": 3798,
+  "cost": 0.000409908352,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 256,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.000409908352,
+   "upstream_inference_prompt_cost": 0.000137407872,
+   "upstream_inference_completions_cost": 0.00027250048
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

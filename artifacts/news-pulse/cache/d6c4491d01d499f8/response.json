@@ -1,0 +1,46 @@
+{
+ "id": "gen-1790195767-3ftdKcu48cFN7Jgr4ZsO",
+ "object": "chat.completion",
+ "created": 1790195767,
+ "model": "deepseek/deepseek-v4-flash",
+ "provider": "Parasail",
+ "system_fingerprint": null,
+ "service_tier": null,
+ "choices": [
+  {
+   "index": 0,
+   "logprobs": null,
+   "finish_reason": "stop",
+   "native_finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "content": "{\n  \"labels\": [\n    {\n      \"id\": \"telegram:15:422716#s12\",\n      \"kind\": \"event\",\n      \"actor\": null,\n      \"action\": \"states\",\n      \"object\": \"Ethereum becoming post-quantum by December 2029\",\n      \"qualifiers\": {},\n      \"origin\": \"retelling\",\n      \"source_role\": \"editorial\",\n      \"verification_status\": \"unverified\",\n      \"quote\": \"Новости про то, что «Ethereum станет постквантовым к декабрю 2029», смешивают две разные истории.\",\n      \"span\": [0, 97]\n    },\n    {\n      \"id\": \"telegram:15:422716#s16\",\n      \"kind\": \"author_position\",\n      \"actor\": null,\n      \"action\": \"argues\",\n      \"object\": \"demand for ETH for gas shifts from retail to apps, key upgrade is quantum-resistant key change on old address by 2027\",\n      \"qualifiers\": {},\n      \"origin\": \"own\",\n      \"source_role\": \"editorial\",\n      \"verification_status\": \"unverified\",\n      \"quote\": \"Ключевая суть здесь заключается в смене держателя топлива: спрос на ETH ради газа не умирает, он просто уходит от розницы к приложениям — для цены это нейтральный фактор.\\nА вот что реально недооценено — возможность сменить ключи на квантово-устойчивые прямо на старом адресе. Если доедет до мейннета в 2027-м без урезаний — это и будет самая важная часть апгрейда.\",\n      \"span\": [0, 310]\n    },\n    {\n      \"id\": \"telegram:15:422727#s0\",\n      \"kind\": \"event\",\n      \"actor\": \"Machi\",\n      \"action\": \"accumulated and got partially liquidated\",\n      \"object\": \"$135M in longs with 25x leverage\",\n      \"qualifiers\": {},\n      \"origin\": \"retelling\",\n      \"source_role\": \"editorial\",\n      \"verification_status\": \"unverified\",\n      \"quote\": \"Machi accumulated $135M in longs with 25x leverage and got partially liquidated. He still holds ETH & HYPE positions, ranks #6 in the leaderboard.\",\n      \"span\": [0, 139]\n    },\n    {\n      \"id\": \"telegram:15:422727#s2\",\n      \"kind\": \"event\",\n      \"actor\": null,\n      \"action\": \"price change\",\n      \"object\": \"ETH\",\n      \"qualifiers\": {\"version\": \"3.8% drop in last 24h\", \"event_date\": \"last 24h\", \"place\": null, \"counterparty\": null},\n      \"origin\": \"own\",\n      \"source_role\": \"editorial\",\n      \"verification_status\": \"unverified\",\n      \"quote\": \"ETH dropped by 3.8% in the last 24h, currently trading at $2,410.\",\n      \"span\": [0, 68]\n    },\n    {\n      \"id\": \"telegram:15:422742#s4\",\n      \"kind\": \"event\",\n      \"actor\": null,\n      \"action\": \"launching\",\n      \"object\": \"first StablePair Hook pools on Ethereum for USDC/USDG and USDC/USDT\",\n      \"qualifiers\": {},\n      \"origin\": \"retelling\",\n      \"source_role\": \"editorial\",\n      \"verification_status\": \"unverified\",\n      \"quote\": \"The first StablePair Hook pools are launching on Ethereum for USDC/USDG and USDC/USDT.\",\n      \"span\": [0, 89]\n    },\n    {\n      \"id\": \"telegram:15:422747#s7\",\n      \"kind\": \"event\",\n      \"actor\": null,\n      \"action\": \"support\",\n      \"object\": \"multiple networks including Ethereum\",\n      \"qualifiers\": {},\n      \"origin\": \"own\",\n      \"source_role\": \"editorial\",\n      \"verification_status\": \"unverified\",\n      \"quote\": \"поддержку более десяти сетей, включая Base, Solana, Ethereum, Monad и Robinhood Chain.\",\n      \"span\": [0, 103]\n    },\n    {\n      \"id\": \"telegram:11:96674#s0\",\n      \"kind\": \"event\",\n      \"actor\": null,\n      \"action\": \"scheduled\",\n      \"object\": \"Ethereum Glamsterdam update on Sepolia testnet\",\n      \"qualifiers\": {\"event_date\": \"October 6\", \"place\": \"Sepolia\"},\n      \"origin\": \"retelling\",\n      \"source_role\": \"editorial\",\n      \"verification_status\": \"unverified\",\n      \"quote\": \"Обновление Ethereum Glamsterdam ориентировочно запланировано в Sepolia на 6 октября, дата основной сети все еще неизвестна.\",\n      \"span\": [0, 107]\n    },\n    {\n      \"id\": \"telegram:11:96675#s0\",\n      \"kind\": \"event\",\n      \"actor\": null,\n      \"action\": \"net outflow\",\n      \"object\": \"spot BTC-ETF\",\n      \"qualifiers\": {\"version\": \"$282.7M\", \"event_date\": \"yesterday\"},\n      \"origin\": \"own\",\n      \"source_role\": \"editorial\",\n      \"verification_status\": \"unverified\",\n      \"quote\": \"Вчера общий чистый отток спотовых BTC-ETF составил ~$282,7 млн.\",\n      \"span\": [0, 62]\n    },\n    {\n      \"id\": \"telegram:11:96675#s1\",\n      \"kind\": \"event\",\n      \"actor\": null,\n      \"action\": \"net outflow\",\n      \"object\": \"spot ETH-ETF\",\n      \"qualifiers\": {\"version\": \"$29.9M\"},\n      \"origin\": \"own\",\n      \"source_role\": \"editorial\",\n      \"verification_status\": \"unverified\",\n      \"quote\": \"Общий чистый отток спотовых ETH-ETF составил $29,9 млн.\",\n      \"span\": [0, 53]\n    },\n    {\n      \"id\": \"telegram:20:48835#s0\",\n      \"kind\": \"participant_reaction\",\n      \"actor\": null,\n      \"action\": \"liked\",\n      \"object\": \"branding of content on $ETH — Extremely Tired Housecat\",\n      \"qualifiers\": {},\n      \"origin\": \"own\",\n      \"source_role\": \"participant\",\n      \"verification_status\": \"unverified\",\n      \"quote\": \"I really liked the branding of their content here on $ETH — Extremely Tired Housecat\",\n      \"span\": [0, 87]\n    },\n    {\n      \"id\": \"telegram:20:48835#s1\",\n      \"kind\": \"author_position\",\n      \"actor\": null,\n      \"action\": \"states\",\n      \"object\": \"ETH rewards, cat narrative, stonkfun, easy narrative, no socials, hopes for organic movement\",\n      \"qualifiers\": {},\n      \"origin\": \"own\",\n      \"source_role\": \"participant\",\n      \"verification_status\": \"unverified\",\n      \"quote\": \"Gives ETH rewards, cat narrative, stonkfun, very easy narrative to get. No socials atm (according to dexscreener banner lol) but hopefully see some kind of organic movement here and hopefully see this run up w/ strength in time w/ some kind of community\",\n      \"span\": [0, 253]\n    },\n    {\n      \"id\": \"telegram:11:96677#s1\",\n      \"kind\": \"event\",\n      \"actor\": null,\n      \"action\": \"options data\",\n      \"object\": \"ETH options\",\n      \"qualifiers\": {\"version\": \"notional $279.86M, put/call ratio 1.17, max pain $2,450\"},\n      \"origin\": \"own\",\n      \"source_role\": \"editorial\",\n      \"verification_status\": \"unverified\",\n      \"quote\": \"Номинальная стоимость опционов #ETH: 279,86 млн $\\n- коэффициент пут/колл: 1,17\\n- макс. болевая точка: 2 450 $.\",\n      \"span\": [0, 93]\n    }\n  ]\n}",
+    "refusal": null,
+    "reasoning": null
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 1887,
+  "completion_tokens": 1837,
+  "total_tokens": 3724,
+  "cost": 0.00077854,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.00077854,
+   "upstream_inference_prompt_cost": 0.00026418,
+   "upstream_inference_completions_cost": 0.00051436
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

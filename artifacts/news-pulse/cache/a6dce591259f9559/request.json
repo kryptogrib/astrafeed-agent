@@ -1,0 +1,28 @@
+{
+ "a": {
+  "quote": "Один из топовых трейдеров Axiom потерял $600K, пытаясь сделать бридж в arc.",
+  "actor": "один из топовых трейдеров Axiom",
+  "action": "потерял",
+  "object": "$600K",
+  "qualifiers": {
+   "version": null,
+   "event_date": null,
+   "place": null,
+   "counterparty": null
+  },
+  "url": "https://t.me/WEB3_AGGREGATOR/423080"
+ },
+ "b": {
+  "quote": "fomo поддерживает кроссчейн (arc тоже уже добавили).",
+  "actor": "fomo",
+  "action": "поддерживает",
+  "object": "кроссчейн (arc тоже уже добавили)",
+  "qualifiers": {
+   "version": null,
+   "event_date": null,
+   "place": null,
+   "counterparty": null
+  },
+  "url": "https://t.me/WEB3_AGGREGATOR/423080"
+ }
+}

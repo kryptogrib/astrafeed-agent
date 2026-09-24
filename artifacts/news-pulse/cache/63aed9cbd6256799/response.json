@@ -1,0 +1,46 @@
+{
+ "id": "gen-1790198306-pOeYKce77pYHfdxHc0yM",
+ "object": "chat.completion",
+ "created": 1790198306,
+ "model": "deepseek/deepseek-v4-flash",
+ "provider": "DigitalOcean",
+ "system_fingerprint": null,
+ "service_tier": null,
+ "choices": [
+  {
+   "index": 0,
+   "logprobs": null,
+   "finish_reason": "stop",
+   "native_finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "content": "{\"labels\": [\n  {\n    \"id\": \"telegram:18:31476#s2\",\n    \"kind\": \"event\",\n    \"actor\": \"Bitcoin OG\",\n    \"action\": \"increases short position\",\n    \"object\": \"ZEC\",\n    \"qualifiers\": {\n      \"version\": null,\n      \"event_date\": null,\n      \"place\": null,\n      \"counterparty\": null\n    },\n    \"origin\": \"retelling\",\n    \"source_role\": \"author\",\n    \"verification_status\": \"source_statement\",\n    \"quote\": \"Bitcoin OG увеличил шорт по ZEC. Сейчас он шортит 37,760 ZEC ($51,5m) с нереализованным убытком $26m. Цена ликвидации = $2632.\",\n    \"span\": [0, 157]\n  },\n  {\n    \"id\": \"telegram:18:31476#s5\",\n    \"kind\": \"event\",\n    \"actor\": \"Кит «t1JhvB»\",\n    \"action\": \"withdraws from exchanges\",\n    \"object\": \"ZEC\",\n    \"qualifiers\": {\n      \"version\": null,\n      \"event_date\": null,\n      \"place\": \"Binance, OKX и Kraken\",\n      \"counterparty\": null\n    },\n    \"origin\": \"retelling\",\n    \"source_role\": \"author\",\n    \"verification_status\": \"source_statement\",\n    \"quote\": \"Кит «t1JhvB» вывел с Binance, OKX и Kraken 15,300 ZEC ($17,9m).\",\n    \"span\": [0, 65]\n  },\n  {\n    \"id\": \"telegram:15:423183#s1\",\n    \"kind\": \"participant_reaction\",\n    \"actor\": null,\n    \"action\": \"asks about movement and focus\",\n    \"object\": \"Robinhood + ZEC\",\n    \"qualifiers\": {\n      \"version\": null,\n      \"event_date\": null,\n      \"place\": null,\n      \"counterparty\": null\n    },\n    \"origin\": \"own\",\n    \"source_role\": \"participant\",\n    \"verification_status\": \"unverified\",\n    \"quote\": \"Еще подвигаются парни или отмена, возвращаемся к фокусу Robinhood + ZEC?!\",\n    \"span\": [0, 79]\n  },\n  {\n    \"id\": \"telegram:15:423189#s0\",\n    \"kind\": \"event\",\n    \"actor\": null,\n    \"action\": \"auction is hyped\",\n    \"object\": \"zkSNARKs auction on Zcash\",\n    \"qualifiers\": {\n      \"version\": null,\n      \"event_date\": null,\n      \"place\": null,\n      \"counterparty\": null\n    },\n    \"origin\": \"own\",\n    \"source_role\": \"participant\",\n    \"verification_status\": \"unverified\",\n    \"quote\": \"Хайп аукцион zkSNARKs на зкеше.\",\n    \"span\": [0, 31]\n  },\n  {\n    \"id\": \"telegram:15:423189#s3\",\n    \"kind\": \"participant_reaction\",\n    \"actor\": null,\n    \"action\": \"expresses dislike\",\n    \"object\": \"Zcash privacy and control risk\",\n    \"qualifiers\": {\n      \"version\": null,\n      \"event_date\": null,\n      \"place\": null,\n      \"counterparty\": null\n    },\n    \"origin\": \"own\",\n    \"source_role\": \"participant\",\n    \"verification_status\": \"unverified\",\n    \"quote\": \"Мне очень не нравится зкеш и его приколы с приватностью, нам не будет видно сколько всего депнули ончейн, и клиринг прайс мы узнаем только с их слов, все это будет в руках команды, фактически они могут сделать что угодно.\",\n    \"span\": [0, 212]\n  },\n  {\n    \"id\": \"telegram:15:423204#s1\",\n    \"kind\": \"participant_reaction\",\n    \"actor\": null,\n    \"action\": \"notes hype\",\n    \"object\": \"NFT mint on Zcash\",\n    \"qualifiers\": {\n      \"version\": null,\n      \"event_date\": \"сегодня\",\n      \"place\": \"twitter\",\n      \"counterparty\": null\n    },\n    \"origin\": \"own\",\n    \"source_role\": \"participant\",\n    \"verification_status\": \"unverified\",\n    \"quote\": \"Автор ничего толкового давно не писал, но сегодня, вроде как, есть повод: весь твиттер гудит по поводу минта нфтшек на Zcash\",\n    \"span\": [0, 126]\n  },\n  {\n    \"id\": \"telegram:15:423204#s8\",\n    \"kind\": \"participant_reaction\",\n    \"actor\": null,\n    \"action\": \"questions lack of understanding\",\n    \"object\": \"NFT minting mechanics on Zcash\",\n    \"qualifiers\": {\n      \"version\": null,\n      \"event_date\": null,\n      \"place\": null,\n      \"counterparty\": null\n    },\n    \"origin\": \"own\",\n    \"source_role\": \"participant\",\n    \"verification_status\": \"unverified\",\n    \"quote\": \"- отсутствие понимания, как именно будут минтиться нфтшки, ведь на Zcash нет подобной ординалсам\\\\инскрипциям механики как на битке\",\n    \"span\": [0, 124]\n  },\n  {\n    \"id\": \"telegram:15:423204#s12\",\n    \"kind\": \"promo_service\",\n    \"actor\": null,\n    \"action\": \"advises to place bid\",\n    \"object\": \"ZEC bid\",\n    \"qualifiers\": {\n      \"version\": null,\n      \"event_date\": null,\n      \"place\": null,\n      \"counterparty\": \"Hyperliquid\"\n    },\n    \"origin\": \"own\",\n    \"source_role\": \"participant\",\n    \"verification_status\": \"unverified\",\n    \"quote\": \"2. Выставить там желаемый бид (учтите, что 0.15 ZEC биды на 99% не пройдут)\",\n    \"span\": [0, 74]\n  },\n  {\n    \"id\": \"telegram:15:423204#s13\",\n    \"kind\": \"promo_service\",\n    \"actor\": null,\n    \"action\": \"advises to pay order\",\n    \"object\": \"ZEC or swap via Rubic\",\n    \"qualifiers\": {\n      \"version\": null,\n      \"event_date\": null,\n      \"place\": null,\n      \"counterparty\": \"Hyperliquid, app.rubic.exchange\"\n    },\n    \"origin\": \"own\",\n    \"source_role\": \"participant\",\n    \"verification_status\": \"unverified\",\n    \"quote\": \"3. Оплатить вашу заявку либо отправив спотовый ZEC с Hyperliquid, либо свопнув любую валюту через https://app.rubic.exchange/\",\n    \"span\": [0, 130]\n  },\n  {\n    \"id\": \"telegram:18:31484#s1\",\n    \"kind\": \"event\",\n    \"actor\": null,\n    \"action\": \"plans to speed up\",\n    \"object\": \"Zcash network\",\n    \"qualifiers\": {\n      \"version\": null,\n      \"event_date\": null,\n      \"place\": null,\n      \"counterparty\": null\n    },\n    \"origin\": \"retelling\",\n    \"source_role\": \"editorial\",\n    \"verification_status\": \"source_statement\",\n    \"quote\": \"⚡️ Сеть Zcash собираются ускорить в 3 раза.\",\n    \"span\": [0, 40]\n  },\n  {\n    \"id\": \"telegram:18:31484#s2\",\n    \"kind\": \"event\",\n    \"actor\": \"Сообщество Zcash\",\n    \"action\": \"supported reduction\",\n    \"object\": \"block time from 75 to 25 seconds\",\n    \"qualifiers\": {\n      \"version\": null,\n      \"event_date\": null,\n      \"place\": null,\n      \"counterparty\": null\n    },\n    \"origin\": \"retelling\",\n    \"source_role\": \"editorial\",\n    \"verification_status\": \"source_statement\",\n    \"quote\": \"Сообщество Zcash поддержало сокращение времени формирования блока с 75 до 25 секунд.\",\n    \"span\": [0, 90]\n  },\n  {\n    \"id\": \"telegram:18:31484#s4\",\n    \"kind\": \"event\",\n    \"actor\": null,\n    \"action\": \"explains emission unchanged\",\n    \"object\": \"ZEC reward reduction\",\n    \"qualifiers\": {\n      \"version\": \"NU7 (5 ноября)\",\n      \"event_date\": null,\n      \"place\": null,\n      \"counterparty\": null\n    },\n    \"origin\": \"retelling\",\n    \"source_role\": \"editorial\",\n    \"verification_status\": \"source_statement\",\n    \"quote\": \"Чтобы эмиссия ZEC не изменилась, при сокращении времени блока награду за каждый отдельный блок также уменьшат примерно в 3 раза. Изменения пока не запущены – их еще предстоит реализовать и протестировать в рамках обновления NU7 (5 ноября).\",\n    \"span\": [0, 240]\n  }\n]}",
+    "refusal": null,
+    "reasoning": null
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 1794,
+  "completion_tokens": 2097,
+  "total_tokens": 3891,
+  "cost": 0.000586824,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.000586824,
+   "upstream_inference_prompt_cost": 0.000175812,
+   "upstream_inference_completions_cost": 0.000411012
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

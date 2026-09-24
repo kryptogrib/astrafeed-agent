@@ -1,0 +1,32 @@
+{
+ "choices": [
+  {
+   "message": {
+    "content": "{\"labels\": [{\"id\": \"telegram:9:1036276#s0\", \"kind\": \"event\", \"actor\": \"Spot ETH ETFs\", \"action\": \"saw inflows\", \"object\": \"$1.75B\", \"qualifiers\": {\"period\": \"August\", \"comparison\": \"largest since Aug 2025\"}, \"origin\": \"retelling\", \"source_role\": \"editorial\", \"verification_status\": \"source_statement\", \"quote\": \"SPOT ETH ETFS SAW $1.75B INFLOWS IN AUGUST, THE LARGEST INFLOW SINCE AUG 2025\", \"span\": [0, 75]}]}"
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 1721,
+  "completion_tokens": 1430,
+  "total_tokens": 3151,
+  "cost": 0.00062413,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.00062413,
+   "upstream_inference_prompt_cost": 0.00022373,
+   "upstream_inference_completions_cost": 0.0004004
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

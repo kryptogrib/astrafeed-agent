@@ -1,0 +1,32 @@
+{
+ "choices": [
+  {
+   "message": {
+    "content": "{\"labels\": [{\"id\": \"telegram:12:271:c:4412#s0\", \"kind\": \"participant_reaction\", \"actor\": null, \"action\": null, \"object\": null, \"qualifiers\": {}, \"origin\": \"own\", \"source_role\": \"participant\", \"verification_status\": \"unverified\", \"topic_role\": \"subject\", \"quote\": \"а что за фарм был в arc?\", \"span\": [0, 24]}]}"
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 2031,
+  "completion_tokens": 1790,
+  "total_tokens": 3821,
+  "cost": 0.000510601,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.000510601,
+   "upstream_inference_prompt_cost": 0.000184821,
+   "upstream_inference_completions_cost": 0.00032578
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

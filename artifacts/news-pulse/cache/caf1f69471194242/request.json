@@ -1,0 +1,25 @@
+{
+ "a": {
+  "quote": "Бесплатный минт пройдёт 21 сентября в 20:00 мск",
+  "actor": "ZecFrogs",
+  "action": "бесплатный минт пройдёт 21 сентября в 20:00 мск",
+  "object": "ZecFrogs",
+  "qualifiers": {
+   "event_date": "2026-09-21T20:00:00+03:00"
+  },
+  "url": "https://t.me/WEB3_AGGREGATOR/423379"
+ },
+ "b": {
+  "quote": "• ZecFrogs: 6,969 · FREE · 21 сен 20:00 МСК · 0.007 ZEC на газ (чекер);",
+  "actor": "ZecFrogs",
+  "action": "announce_mint",
+  "object": "NFT_collection",
+  "qualifiers": {
+   "supply": "6,969",
+   "price": "FREE",
+   "date": "2026-09-21T17:00:00Z",
+   "gas_fee": "0.007 ZEC"
+  },
+  "url": "https://t.me/whitelist1/7151"
+ }
+}

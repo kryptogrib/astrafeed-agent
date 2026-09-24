@@ -1,0 +1,68 @@
+{
+  "topic": "aave",
+  "window": {
+    "requested": "2026-09-22..2026-09-23",
+    "start": "2026-09-22T00:00:00+00:00",
+    "end": "2026-09-24T00:00:00+00:00",
+    "cutoff": "2026-09-24T00:00:00+00:00",
+    "previous": "2026-09-20..2026-09-21",
+    "mode": "publication_replay"
+  },
+  "status": "no_data",
+  "events": [],
+  "distribution_and_positions": [],
+  "discussion": [],
+  "changes": {
+    "previous_window": "2026-09-20..2026-09-21",
+    "previous_events": [
+      "Aave|proposes|custodied collateral lending for institutions|• Aave Proposes Custodied Collateral Lending for Institutions",
+      "Aave|предлагает|займы под кастодиальный BTC|🟢 Aave предлагает займы под кастодиальный BTC"
+    ],
+    "events_appeared": [],
+    "events_gone": [
+      "Aave|proposes|custodied collateral lending for institutions|• Aave Proposes Custodied Collateral Lending for Institutions",
+      "Aave|предлагает|займы под кастодиальный BTC|🟢 Aave предлагает займы под кастодиальный BTC"
+    ],
+    "topic_comments": 0,
+    "previous_topic_comments": 0,
+    "source_coverage": {
+      "added_channels": [
+        "13",
+        "4",
+        "6"
+      ],
+      "removed_channels": [
+        "7"
+      ],
+      "current_channels": 17,
+      "previous_channels": 15
+    }
+  },
+  "short_observations": [],
+  "coverage": {
+    "publications": 1785,
+    "comments": 170,
+    "channels": 17,
+    "topic_publications": 0,
+    "not_processed": 0,
+    "db_md5": "8618099125a806df376354286ccd982e",
+    "cutoff": "2026-09-24T00:00:00+00:00"
+  },
+  "limitations": [
+    "Режим publication_replay: discovered_at в снимке отсутствует, «впервые системой» не заявляется.",
+    "Роль источника unknown: в базе нет редакционного реестра.",
+    "Неизвестные авторы не объединяются.",
+    "Отсечено после cutoff 2026-09-24T00:00:00+00:00: 0."
+  ],
+  "evidence": [],
+  "spend_usd": 0.0,
+  "numbers_by": "code",
+  "brief_markdown": "# Pulse (news-first): aave, окно 2026-09-22 – 2026-09-23\n\n## Коротко\n\n- Содержательных наблюдений в окне нет.\n\n## События и заявления\n\nНовостных событий в собранном окне не найдено.\n\n## Кто распространяет информацию и какие позиции\n\nОтдельных авторских позиций сверх событий не выделено.\n\n## Вопросы, аргументы и опыт участников\n\nОбсуждений в окне нет.\n\n## Изменения относительно предыдущего периода\n\n- Появившиеся события: 0.\n- Исчезнувшие события: 2.\n- Изменение охвата источников: +3 / −1 каналов.\n- Комментарии по теме: 0 в текущем окне, 0 в предыдущем.\n\n## Охват и ограничения\n\n- Публикации 1785, комментарии 170, каналы 17.\n- Режим publication_replay: discovered_at в снимке отсутствует, «впервые системой» не заявляется.\n- Роль источника unknown: в базе нет редакционного реестра.\n- Неизвестные авторы не объединяются.\n- Отсечено после cutoff 2026-09-24T00:00:00+00:00: 0.\n\n## Основания\n\n- Отдельных evidence-записей нет.\n",
+  "model": "deepseek/deepseek-v4-flash",
+  "llm": {
+    "calls": 0,
+    "cache_hits": 4,
+    "spent_usd": 0.0,
+    "errors": []
+  }
+}

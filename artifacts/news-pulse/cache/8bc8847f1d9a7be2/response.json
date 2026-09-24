@@ -1,0 +1,32 @@
+{
+ "choices": [
+  {
+   "message": {
+    "content": "{\"labels\": [{\"id\": \"telegram:11:96824#s4\", \"kind\": \"event\", \"actor\": \"крупный инвестор\", \"action\": \"перевел\", \"object\": \"#ZEC\", \"qualifiers\": {\"version\": \"value > $362M\", \"event_date\": \"спустя 10 месяцев бездействия\", \"place\": \"Coinbase\", \"counterparty\": null}, \"origin\": \"retelling\", \"source_role\": \"unknown\", \"verification_status\": \"unverified\", \"topic_role\": \"subject\", \"quote\": \"– крупный инвестор перевел #ZEC на сумму >362 млн $ спустя 10 месяцев бездействия (на тот момент стоимость токенов составляла ~163 млн $), после чего почти половину токенов перевёл на Coinbase.\", \"span\": [0, 248]}]}"
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 1905,
+  "completion_tokens": 1920,
+  "total_tokens": 3825,
+  "cost": 0.00056301,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.00056301,
+   "upstream_inference_prompt_cost": 0.00018669,
+   "upstream_inference_completions_cost": 0.00037632
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

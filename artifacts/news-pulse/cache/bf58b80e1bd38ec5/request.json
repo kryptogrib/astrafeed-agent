@@ -1,0 +1,23 @@
+{
+ "a": {
+  "quote": "🟣Arc Fly — минт состоится сегодня на OpenSea, будет фри минт на 7.777 NFT",
+  "actor": "Arc Fly",
+  "action": "mint",
+  "object": "NFT",
+  "qualifiers": {
+   "event_date": "today",
+   "place": "OpenSea"
+  },
+  "url": "https://t.me/WEB3_AGGREGATOR/423153"
+ },
+ "b": {
+  "quote": "AKA DN404 — первая коллекция на Arc: NFT + ERC-20 в одном активе, а комиссии идут в RWA",
+  "actor": "unknown",
+  "action": "first collection on Arc",
+  "object": "AKA DN404",
+  "qualifiers": {
+   "place": "Arc"
+  },
+  "url": "https://t.me/WEB3_AGGREGATOR/423153"
+ }
+}

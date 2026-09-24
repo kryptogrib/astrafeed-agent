@@ -1,0 +1,46 @@
+{
+ "id": "gen-1790246987-Yu0RFDS7zhL7qtzGGnmf",
+ "object": "chat.completion",
+ "created": 1790246987,
+ "model": "deepseek/deepseek-v4-flash",
+ "provider": "DeepInfra",
+ "system_fingerprint": null,
+ "service_tier": "default",
+ "choices": [
+  {
+   "index": 0,
+   "logprobs": null,
+   "finish_reason": "stop",
+   "native_finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "content": "{\"items\": [{\"id\": \"aave|https://t.me/Slavik_investor_updates/6912?comment=138020\", \"target\": \"other_subject\", \"target_id\": null, \"comment_fragment\": \"Там у хайпера если что фри позицию раздают 1к юсдт с 3 плечом за холд 2к юсдт на балансе просто\", \"context_fragment\": \"\", \"why\": \"Comment is about a different project (хайпер), not Aave or gold.\"}, {\"id\": \"aave|https://t.me/Slavik_investor_updates/6912?comment=138023\", \"target\": \"event\", \"target_id\": \"e1-4bdb4a742211eda9\", \"comment_fragment\": \"xaut давно же был на v4\", \"context_fragment\": \"В новый Global Dollar Hub на V4 подключили PAXG\", \"why\": \"Comment reacts to the event of gold token on Aave V4.\"}, {\"id\": \"aave|https://t.me/Slavik_investor_updates/6912?comment=138045\", \"target\": \"event\", \"target_id\": \"e1-4bdb4a742211eda9\", \"comment_fragment\": \"Золото? Вот это поворот!\", \"context_fragment\": \"#Aave: теперь принимает золото в качестве обеспечения\", \"why\": \"Short emotion reacting to the single-news post about gold.\"}, {\"id\": \"aave|https://t.me/Slavik_investor_updates/6912?comment=138053\", \"target\": \"event\", \"target_id\": \"e1-4bdb4a742211eda9\", \"comment_fragment\": \"Вот это поворот, золото в крипте, ждем дальше\", \"context_fragment\": \"#Aave: теперь принимает золото в качестве обеспечения\", \"why\": \"Comment reacts to the news of gold in crypto on Aave.\"}, {\"id\": \"aave|https://t.me/Slavik_investor_updates/6912?comment=138078\", \"target\": \"event\", \"target_id\": \"e1-4bdb4a742211eda9\", \"comment_fragment\": \"Вот это поворот, золото в крипте, интересно\", \"context_fragment\": \"#Aave: теперь принимает золото в качестве обеспечения\", \"why\": \"Comment reacts to the news of gold in crypto on Aave.\"}]}",
+    "refusal": null,
+    "reasoning": null
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 1409,
+  "completion_tokens": 558,
+  "total_tokens": 1967,
+  "cost": 0.00022725,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.00022725,
+   "upstream_inference_prompt_cost": 0.00012681,
+   "upstream_inference_completions_cost": 0.00010044
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

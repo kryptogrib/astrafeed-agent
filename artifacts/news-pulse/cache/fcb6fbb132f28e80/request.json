@@ -1,0 +1,17 @@
+{
+ "segments": [
+  {
+   "id": "telegram:18:31498#s0",
+   "text": "📍Сегодня экспирация в опционах на BTC и ETH! (Deribit)\n",
+   "mentions": [
+    {
+     "text": "ETH",
+     "status": "confirmed"
+    }
+   ],
+   "kind_hint": "post",
+   "url": "https://t.me/crypto_hd/31498",
+   "time": "2026-09-18T07:22:04+00:00"
+  }
+ ]
+}

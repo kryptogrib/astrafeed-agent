@@ -1,0 +1,1981 @@
+{
+  "topic": "arc",
+  "window": {
+    "start": "2026-09-16T11:01:01+00:00",
+    "end": "2026-09-17T11:01:01+00:00",
+    "interval": "[start,end)"
+  },
+  "publications": [
+    {
+      "source_id": 1,
+      "external_id": "7139",
+      "link": "https://t.me/whitelist1/7139",
+      "published_at": "2026-09-16T11:01:01+00:00",
+      "author_id": null,
+      "topic_mention": true,
+      "selected_news": false,
+      "segments": [
+        {
+          "class": "promo_service",
+          "start": 0,
+          "end": 53,
+          "quote": "NFT на Arc / Главная лудка месяца, кто минтит СЕГОДНЯ"
+        },
+        {
+          "class": "event",
+          "start": 513,
+          "end": 546,
+          "quote": "Сегодня, время после запуска Arc;"
+        },
+        {
+          "class": "promo_service",
+          "start": 669,
+          "end": 705,
+          "quote": "Все ARC инструменты смотрим в посте."
+        }
+      ],
+      "event_ids": [],
+      "origin": "own",
+      "source_role": "participant",
+      "status": "processed"
+    },
+    {
+      "source_id": 15,
+      "external_id": "423087",
+      "link": "https://t.me/WEB3_AGGREGATOR/423087",
+      "published_at": "2026-09-16T11:01:43+00:00",
+      "author_id": null,
+      "topic_mention": true,
+      "selected_news": false,
+      "segments": [
+        {
+          "class": "event",
+          "start": 0,
+          "end": 30,
+          "quote": "Бридж на ARC уже норм работает"
+        },
+        {
+          "class": "promo_service",
+          "start": 33,
+          "end": 186,
+          "quote": "https://relay.link/bridge/arc?toCurrency=0x3600000000000000000000000000000000000000&fromChainId=1&fromCurrency=0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48"
+        },
+        {
+          "class": "promo_service",
+          "start": 188,
+          "end": 270,
+          "quote": "Давайте ловить раннеров вместе (а ещё лучше создавать на https://arc.openfair.app)"
+        }
+      ],
+      "event_ids": [],
+      "origin": "own",
+      "source_role": "participant",
+      "status": "processed"
+    },
+    {
+      "source_id": 15,
+      "external_id": "423093",
+      "link": "https://t.me/WEB3_AGGREGATOR/423093",
+      "published_at": "2026-09-16T11:02:14+00:00",
+      "author_id": null,
+      "topic_mention": true,
+      "selected_news": true,
+      "segments": [
+        {
+          "class": "event",
+          "start": 132,
+          "end": 185,
+          "quote": "кстати мейннет Arc, можно будет бриджить через Jumper"
+        }
+      ],
+      "event_ids": [
+        "e1-194fbea6a335e1e2"
+      ],
+      "origin": "retelling",
+      "source_role": "author",
+      "status": "processed"
+    },
+    {
+      "source_id": 19,
+      "external_id": "18961",
+      "link": "https://t.me/spidersjournal/18961",
+      "published_at": "2026-09-16T11:13:29+00:00",
+      "author_id": null,
+      "topic_mention": true,
+      "selected_news": false,
+      "segments": [
+        {
+          "class": "participant_reaction",
+          "start": 0,
+          "end": 18,
+          "quote": "Cat runner of arc?"
+        }
+      ],
+      "event_ids": [],
+      "origin": "own",
+      "source_role": "participant",
+      "status": "processed"
+    },
+    {
+      "source_id": 19,
+      "external_id": "18970",
+      "link": "https://t.me/spidersjournal/18970",
+      "published_at": "2026-09-16T13:20:08+00:00",
+      "author_id": null,
+      "topic_mention": true,
+      "selected_news": false,
+      "segments": [
+        {
+          "class": "participant_reaction",
+          "start": 0,
+          "end": 118,
+          "quote": "Bought back $huhcat. The fact this ain’t dead yet after all the arc coins came out means a solid community is forming."
+        }
+      ],
+      "event_ids": [],
+      "origin": "own",
+      "source_role": "participant",
+      "status": "processed"
+    },
+    {
+      "source_id": 19,
+      "external_id": "18971",
+      "link": "https://t.me/spidersjournal/18971",
+      "published_at": "2026-09-16T13:31:17+00:00",
+      "author_id": null,
+      "topic_mention": true,
+      "selected_news": false,
+      "segments": [
+        {
+          "class": "event",
+          "start": 146,
+          "end": 300,
+          "quote": "Inus are one of the most battle-tested memes in crypto, and $CINU actually has lore behind the name — it’s Circle Inu deployed on Arc, Circle’s own chain."
+        },
+        {
+          "class": "event",
+          "start": 302,
+          "end": 321,
+          "quote": "Circle → Arc → Inu."
+        }
+      ],
+      "event_ids": [],
+      "origin": "own",
+      "source_role": "author",
+      "status": "processed"
+    },
+    {
+      "source_id": 15,
+      "external_id": "423100",
+      "link": "https://t.me/WEB3_AGGREGATOR/423100",
+      "published_at": "2026-09-16T13:55:06+00:00",
+      "author_id": null,
+      "topic_mention": true,
+      "selected_news": true,
+      "segments": [
+        {
+          "class": "event",
+          "start": 0,
+          "end": 47,
+          "quote": "Circle's Arc Stablecoin L1 Goes Live on Mainnet"
+        },
+        {
+          "class": "event",
+          "start": 49,
+          "end": 258,
+          "quote": "Arc, the stablecoin-native Layer-1 built by Circle, launched its public mainnet, positioning itself as an \"Economic OS for the internet\" with USDC as the native gas token and deterministic sub-second finality."
+        },
+        {
+          "class": "event",
+          "start": 260,
+          "end": 424,
+          "quote": "Arc arrives as a full-stack financial platform rather than a bare chain, shipping assets, applications, interoperability, and Circle platform services from day one."
+        },
+        {
+          "class": "event",
+          "start": 767,
+          "end": 981,
+          "quote": "More than 190 institutional and ecosystem teams are already building on Arc, one of the most institutionally backed genesis cohorts the industry has seen, as Circle pushes stablecoins deeper into regulated finance."
+        }
+      ],
+      "event_ids": [
+        "e1-194fbea6a335e1e2",
+        "e2-8a75dfb4c419fe87"
+      ],
+      "origin": "own",
+      "source_role": "editorial",
+      "status": "processed"
+    },
+    {
+      "source_id": 15,
+      "external_id": "423105",
+      "link": "https://t.me/WEB3_AGGREGATOR/423105",
+      "published_at": "2026-09-16T13:57:34+00:00",
+      "author_id": null,
+      "topic_mention": true,
+      "selected_news": true,
+      "segments": [
+        {
+          "class": "event",
+          "start": 25,
+          "end": 187,
+          "quote": "Сегодня, 16 сентября, Circle запустила мейннет Arc и сразу подключила его к Agent Stack, набору инструментов, который с 11 мая дает ИИ-агенту собственный кошелек."
+        },
+        {
+          "class": "event",
+          "start": 2039,
+          "end": 2111,
+          "quote": "Если агент работает на Arc, то ему приходится проще, чем в других сетях."
+        },
+        {
+          "class": "event",
+          "start": 2860,
+          "end": 2960,
+          "quote": "RSoft Agentic Bank выиграл онлайн-трек хакатона LabLab x Arc с банком, клиентами которого были боты."
+        }
+      ],
+      "event_ids": [
+        "e3-c707bf347f67384f"
+      ],
+      "origin": "own",
+      "source_role": "editorial",
+      "status": "processed"
+    },
+    {
+      "source_id": 15,
+      "external_id": "423107",
+      "link": "https://t.me/WEB3_AGGREGATOR/423107",
+      "published_at": "2026-09-16T13:57:39+00:00",
+      "author_id": null,
+      "topic_mention": true,
+      "selected_news": false,
+      "segments": [
+        {
+          "class": "event",
+          "start": 51,
+          "end": 124,
+          "quote": "пачка проектиков под фаст ресерч, 1/2 часа до запусков, всеобщий чек. ARC"
+        }
+      ],
+      "event_ids": [],
+      "origin": "own",
+      "source_role": "author",
+      "status": "processed"
+    },
+    {
+      "source_id": 4,
+      "external_id": "829",
+      "link": "https://t.me/badfriend_loops/829",
+      "published_at": "2026-09-16T14:05:34+00:00",
+      "author_id": null,
+      "topic_mention": true,
+      "selected_news": false,
+      "segments": [
+        {
+          "class": "event",
+          "start": 1152,
+          "end": 1265,
+          "quote": "• работать с Uniswap v3/v4 и Pancake v3 в большинстве нужных сетей, включая Robinhood и Arc (если он не сдохнет);"
+        }
+      ],
+      "event_ids": [],
+      "origin": "own",
+      "source_role": "author",
+      "status": "processed"
+    },
+    {
+      "source_id": 15,
+      "external_id": "423117",
+      "link": "https://t.me/WEB3_AGGREGATOR/423117",
+      "published_at": "2026-09-16T14:07:04+00:00",
+      "author_id": null,
+      "topic_mention": true,
+      "selected_news": true,
+      "segments": [
+        {
+          "class": "event",
+          "start": 0,
+          "end": 42,
+          "quote": "#shorts Забираем бесплатный NFT в сети Arc"
+        },
+        {
+          "class": "event",
+          "start": 44,
+          "end": 119,
+          "quote": "Основная сеть Arc запустилась. Arc и OpenSea запустили бесплатный минт NFT:"
+        },
+        {
+          "class": "promo_service",
+          "start": 120,
+          "end": 173,
+          "quote": "https://opensea.io/collection/the-arc-begins/overview"
+        }
+      ],
+      "event_ids": [
+        "e4-d8574fe1e9df058c"
+      ],
+      "origin": "own",
+      "source_role": "editorial",
+      "status": "processed"
+    },
+    {
+      "source_id": 9,
+      "external_id": "1039356",
+      "link": "https://t.me/marketfeed/1039356",
+      "published_at": "2026-09-16T15:04:39+00:00",
+      "author_id": null,
+      "topic_mention": true,
+      "selected_news": false,
+      "segments": [
+        {
+          "class": "event",
+          "start": 0,
+          "end": 71,
+          "quote": "1INCH GOES LIVE ON CIRCLE’S ARC — SWAPS, WALLET & AQUA FROM DAY ONE ..."
+        }
+      ],
+      "event_ids": [],
+      "origin": "own",
+      "source_role": "editorial",
+      "status": "processed"
+    },
+    {
+      "source_id": 13,
+      "external_id": "3754",
+      "link": "https://t.me/krasnovcrypto/3754",
+      "published_at": "2026-09-16T15:24:57+00:00",
+      "author_id": null,
+      "topic_mention": true,
+      "selected_news": true,
+      "segments": [
+        {
+          "class": "event",
+          "start": 0,
+          "end": 41,
+          "quote": "📟Arc | фармим раннюю активность в mainnet"
+        },
+        {
+          "class": "event",
+          "start": 43,
+          "end": 122,
+          "quote": "Arc запустил публичный mainnet и уже сейчас мы можем делать быстрые активности."
+        },
+        {
+          "class": "event",
+          "start": 124,
+          "end": 280,
+          "quote": "Arc — L1-сеть от Circle для платежей, стейблкоинов и финансовых приложений. В экосистеме уже есть Uniswap, Aave, Morpho, Aerodrome и другие крупные проекты."
+        },
+        {
+          "class": "event",
+          "start": 401,
+          "end": 439,
+          "quote": "🔘Бриджим любой актив в USDC в сеть Arc"
+        }
+      ],
+      "event_ids": [
+        "e5-c9826d15d0d75d44",
+        "e6-c03fbc4f340af233",
+        "e7-af16fdc54e5e1347",
+        "e8-f5dee91bb2f52cb4"
+      ],
+      "origin": "own",
+      "source_role": "editorial",
+      "status": "processed"
+    },
+    {
+      "source_id": 19,
+      "external_id": "18974",
+      "link": "https://t.me/spidersjournal/18974",
+      "published_at": "2026-09-16T15:37:29+00:00",
+      "author_id": null,
+      "topic_mention": true,
+      "selected_news": false,
+      "segments": [
+        {
+          "class": "participant_reaction",
+          "start": 0,
+          "end": 50,
+          "quote": "will claim X’s when this is the meme runner of arc"
+        }
+      ],
+      "event_ids": [],
+      "origin": "own",
+      "source_role": "participant",
+      "status": "processed"
+    },
+    {
+      "source_id": 19,
+      "external_id": "18978",
+      "link": "https://t.me/spidersjournal/18978",
+      "published_at": "2026-09-16T15:50:45+00:00",
+      "author_id": null,
+      "topic_mention": true,
+      "selected_news": false,
+      "segments": [
+        {
+          "class": "participant_reaction",
+          "start": 0,
+          "end": 31,
+          "quote": "bio - ‘ building @arc @circle ‘"
+        },
+        {
+          "class": "participant_reaction",
+          "start": 78,
+          "end": 107,
+          "quote": "This is the best meme for arc"
+        }
+      ],
+      "event_ids": [],
+      "origin": "own",
+      "source_role": "participant",
+      "status": "processed"
+    },
+    {
+      "source_id": 15,
+      "external_id": "423121",
+      "link": "https://t.me/WEB3_AGGREGATOR/423121",
+      "published_at": "2026-09-16T16:33:30+00:00",
+      "author_id": null,
+      "topic_mention": true,
+      "selected_news": true,
+      "segments": [
+        {
+          "class": "event",
+          "start": 0,
+          "end": 159,
+          "quote": "Я вам просто напоминаю, что в 18 по Москве официально ARC запускают и вы уже сейчас можете абсолютно бесплатно создавать свои мемы на https://arc.openfair.app/"
+        },
+        {
+          "class": "promo_service",
+          "start": 239,
+          "end": 282,
+          "quote": "https://arc.openfair.app/?ref=0xТвойКошелёк"
+        }
+      ],
+      "event_ids": [
+        "e9-bc95ef671dc0981f"
+      ],
+      "origin": "own",
+      "source_role": "editorial",
+      "status": "processed"
+    },
+    {
+      "source_id": 15,
+      "external_id": "423125",
+      "link": "https://t.me/WEB3_AGGREGATOR/423125",
+      "published_at": "2026-09-16T16:34:08+00:00",
+      "author_id": null,
+      "topic_mention": true,
+      "selected_news": false,
+      "segments": [
+        {
+          "class": "promo_service",
+          "start": 0,
+          "end": 96,
+          "quote": "https://decrypt.co/378374/circle-launches-arc-mainnet-with-blackrock-dtcc-and-visa-as-validators"
+        }
+      ],
+      "event_ids": [],
+      "origin": "unknown",
+      "source_role": "unknown",
+      "status": "processed"
+    },
+    {
+      "source_id": 15,
+      "external_id": "423128",
+      "link": "https://t.me/WEB3_AGGREGATOR/423128",
+      "published_at": "2026-09-16T16:34:44+00:00",
+      "author_id": null,
+      "topic_mention": true,
+      "selected_news": true,
+      "segments": [
+        {
+          "class": "event",
+          "start": 0,
+          "end": 33,
+          "quote": "🔹 Arc Chain Coin Tracking Is Live"
+        }
+      ],
+      "event_ids": [
+        "e10-c5cc91bc0559fb7d"
+      ],
+      "origin": "own",
+      "source_role": "editorial",
+      "status": "processed"
+    },
+    {
+      "source_id": 20,
+      "external_id": "49028",
+      "link": "https://t.me/PowsGemCalls/49028",
+      "published_at": "2026-09-16T16:34:56+00:00",
+      "author_id": null,
+      "topic_mention": true,
+      "selected_news": false,
+      "segments": [
+        {
+          "class": "participant_reaction",
+          "start": 0,
+          "end": 91,
+          "quote": "Still in my $ARCHITECTS position (PumpFun wallet integrated Arc chain so you can ape there)"
+        }
+      ],
+      "event_ids": [],
+      "origin": "own",
+      "source_role": "participant",
+      "status": "processed"
+    },
+    {
+      "source_id": 19,
+      "external_id": "18983",
+      "link": "https://t.me/spidersjournal/18983",
+      "published_at": "2026-09-16T17:37:30+00:00",
+      "author_id": null,
+      "topic_mention": true,
+      "selected_news": false,
+      "segments": [
+        {
+          "class": "participant_reaction",
+          "start": 0,
+          "end": 60,
+          "quote": "arc employee liked the tweet about the Dyson toothbrush meme"
+        }
+      ],
+      "event_ids": [],
+      "origin": "retelling",
+      "source_role": "participant",
+      "status": "processed"
+    },
+    {
+      "source_id": 19,
+      "external_id": "18984",
+      "link": "https://t.me/spidersjournal/18984",
+      "published_at": "2026-09-16T17:39:39+00:00",
+      "author_id": null,
+      "topic_mention": true,
+      "selected_news": false,
+      "segments": [
+        {
+          "class": "author_position",
+          "start": 32,
+          "end": 71,
+          "quote": "she’s head of product at arc and circle"
+        }
+      ],
+      "event_ids": [],
+      "origin": "own",
+      "source_role": "author",
+      "status": "processed"
+    },
+    {
+      "source_id": 19,
+      "external_id": "18987",
+      "link": "https://t.me/spidersjournal/18987",
+      "published_at": "2026-09-16T17:53:05+00:00",
+      "author_id": null,
+      "topic_mention": true,
+      "selected_news": false,
+      "segments": [
+        {
+          "class": "participant_reaction",
+          "start": 0,
+          "end": 53,
+          "quote": "arc head of product just replied directly to the team"
+        }
+      ],
+      "event_ids": [],
+      "origin": "retelling",
+      "source_role": "participant",
+      "status": "processed"
+    },
+    {
+      "source_id": 19,
+      "external_id": "18991",
+      "link": "https://t.me/spidersjournal/18991",
+      "published_at": "2026-09-16T17:58:39+00:00",
+      "author_id": null,
+      "topic_mention": true,
+      "selected_news": false,
+      "segments": [
+        {
+          "class": "participant_reaction",
+          "start": 0,
+          "end": 79,
+          "quote": "First meme on arc that arc team have directly engaged with btw & she created it"
+        },
+        {
+          "class": "promo_service",
+          "start": 81,
+          "end": 151,
+          "quote": "https://dexscreener.com/arc/0x4a2fc1fbe246f797894ba3d993a39c1e4879a101"
+        }
+      ],
+      "event_ids": [],
+      "origin": "retelling",
+      "source_role": "participant",
+      "status": "processed"
+    },
+    {
+      "source_id": 15,
+      "external_id": "423140",
+      "link": "https://t.me/WEB3_AGGREGATOR/423140",
+      "published_at": "2026-09-16T18:41:29+00:00",
+      "author_id": null,
+      "topic_mention": true,
+      "selected_news": false,
+      "segments": [
+        {
+          "class": "participant_reaction",
+          "start": 95,
+          "end": 105,
+          "quote": "arc szn???"
+        }
+      ],
+      "event_ids": [],
+      "origin": "own",
+      "source_role": "author",
+      "status": "processed"
+    },
+    {
+      "source_id": 15,
+      "external_id": "423142",
+      "link": "https://t.me/WEB3_AGGREGATOR/423142",
+      "published_at": "2026-09-16T18:42:07+00:00",
+      "author_id": null,
+      "topic_mention": true,
+      "selected_news": false,
+      "segments": [
+        {
+          "class": "author_position",
+          "start": 22,
+          "end": 213,
+          "quote": "😐 На самом деле сейчас несется че то очень интересное, потому что и на Robinhood и на Arc и на Zcash, стали выходить коллекции, причем не для виду, а реально с кучей иксов. ну вы сами знаете."
+        }
+      ],
+      "event_ids": [],
+      "origin": "own",
+      "source_role": "author",
+      "status": "processed"
+    },
+    {
+      "source_id": 15,
+      "external_id": "423143",
+      "link": "https://t.me/WEB3_AGGREGATOR/423143",
+      "published_at": "2026-09-16T18:42:09+00:00",
+      "author_id": null,
+      "topic_mention": true,
+      "selected_news": true,
+      "segments": [
+        {
+          "class": "event",
+          "start": 576,
+          "end": 694,
+          "quote": "🪙 Circle запустила мейннет Arc — сеть уже принимает транзакции, а за первые два часа в неё завели более $370 млн USDC."
+        }
+      ],
+      "event_ids": [
+        "e1-194fbea6a335e1e2"
+      ],
+      "origin": "retelling",
+      "source_role": "editorial",
+      "status": "processed"
+    },
+    {
+      "source_id": 15,
+      "external_id": "423150",
+      "link": "https://t.me/WEB3_AGGREGATOR/423150",
+      "published_at": "2026-09-16T20:22:49+00:00",
+      "author_id": null,
+      "topic_mention": true,
+      "selected_news": true,
+      "segments": [
+        {
+          "class": "event",
+          "start": 0,
+          "end": 11,
+          "quote": "Arc запущен"
+        },
+        {
+          "class": "author_position",
+          "start": 1791,
+          "end": 1960,
+          "quote": "По поводу самого арка - Тут предыдущий список того, что есть на Arc, но там уже на всём сотни процентов плюса. Из того, что не подсвечивал, но тоже может быть интересно:"
+        }
+      ],
+      "event_ids": [
+        "e11-525acbc9683eaa9d"
+      ],
+      "origin": "own",
+      "source_role": "author",
+      "status": "processed"
+    },
+    {
+      "source_id": 15,
+      "external_id": "423151",
+      "link": "https://t.me/WEB3_AGGREGATOR/423151",
+      "published_at": "2026-09-16T20:22:51+00:00",
+      "author_id": null,
+      "topic_mention": true,
+      "selected_news": true,
+      "segments": [
+        {
+          "class": "event",
+          "start": 23,
+          "end": 43,
+          "quote": "🟢Arc вышли в майннет"
+        },
+        {
+          "class": "event",
+          "start": 45,
+          "end": 279,
+          "quote": "⛓️Сегодня сеть Arc вышла в майннет, в которой для оплаты газа не нужен отдельный токен, все списывается в $USDC.\nТакже можно сминтить памятный NFT в честь запуска сети на ➡️Opensea, дедлайн 16 сентября 12:00 мск. Подробнее о сети тут."
+        }
+      ],
+      "event_ids": [
+        "e12-fc76b3cacccdad42"
+      ],
+      "origin": "own",
+      "source_role": "author",
+      "status": "processed"
+    },
+    {
+      "source_id": 18,
+      "external_id": "31468",
+      "link": "https://t.me/crypto_hd/31468",
+      "published_at": "2026-09-16T20:42:33+00:00",
+      "author_id": null,
+      "topic_mention": true,
+      "selected_news": false,
+      "segments": [
+        {
+          "class": "event",
+          "start": 75,
+          "end": 188,
+          "quote": "Один из топовых трейдеров Axiom стал жертвой фишинговой атаки и лишился денег при попытке перевести активы в Arc."
+        }
+      ],
+      "event_ids": [],
+      "origin": "retelling",
+      "source_role": "editorial",
+      "status": "processed"
+    },
+    {
+      "source_id": 15,
+      "external_id": "423153",
+      "link": "https://t.me/WEB3_AGGREGATOR/423153",
+      "published_at": "2026-09-16T22:31:41+00:00",
+      "author_id": null,
+      "topic_mention": true,
+      "selected_news": true,
+      "segments": [
+        {
+          "class": "event",
+          "start": 2,
+          "end": 26,
+          "quote": "Первый день мэйннета ARC"
+        },
+        {
+          "class": "participant_reaction",
+          "start": 224,
+          "end": 330,
+          "quote": "Или звести деньги через Jumper, у которого к слову сейчас открыт WL на их новый продукт, но вернёмся к ARC"
+        },
+        {
+          "class": "event",
+          "start": 468,
+          "end": 556,
+          "quote": "🟣AKA DN404 — первая коллекция на Arc: NFT + ERC-20 в одном активе, а комиссии идут в RWA"
+        },
+        {
+          "class": "event",
+          "start": 557,
+          "end": 615,
+          "quote": "🟣Arclings — первая полностью ончейн 1-bit коллекция на Arc"
+        },
+        {
+          "class": "event",
+          "start": 616,
+          "end": 689,
+          "quote": "🟣Arc Fly — минт состоится сегодня на OpenSea, будет фри минт на 7.777 NFT"
+        },
+        {
+          "class": "promo_service",
+          "start": 1073,
+          "end": 1088,
+          "quote": "#Drops #WL #ARC"
+        }
+      ],
+      "event_ids": [
+        "e3-c707bf347f67384f",
+        "e13-aae72a40fa53caf6",
+        "e14-4d7ac3720cf84b0f",
+        "e15-419ffa3f9fce6606"
+      ],
+      "origin": "own",
+      "source_role": "editorial",
+      "status": "processed"
+    },
+    {
+      "source_id": 15,
+      "external_id": "423161",
+      "link": "https://t.me/WEB3_AGGREGATOR/423161",
+      "published_at": "2026-09-16T22:33:20+00:00",
+      "author_id": null,
+      "topic_mention": true,
+      "selected_news": true,
+      "segments": [
+        {
+          "class": "event",
+          "start": 1903,
+          "end": 1950,
+          "quote": "Arc — community → Zack: поддержка уже запущена."
+        }
+      ],
+      "event_ids": [
+        "e16-ed48c18aa3328218"
+      ],
+      "origin": "own",
+      "source_role": "editorial",
+      "status": "processed"
+    },
+    {
+      "source_id": 20,
+      "external_id": "49038",
+      "link": "https://t.me/PowsGemCalls/49038",
+      "published_at": "2026-09-16T22:43:50+00:00",
+      "author_id": null,
+      "topic_mention": true,
+      "selected_news": false,
+      "segments": [
+        {
+          "class": "participant_reaction",
+          "start": 0,
+          "end": 111,
+          "quote": "Holy just looked back at $ARC positions and the chaos today 😂what in the WORLD are these p/a on the tokens LMAO"
+        }
+      ],
+      "event_ids": [],
+      "origin": "own",
+      "source_role": "participant",
+      "status": "processed"
+    },
+    {
+      "source_id": 18,
+      "external_id": "31472",
+      "link": "https://t.me/crypto_hd/31472",
+      "published_at": "2026-09-16T23:00:00+00:00",
+      "author_id": null,
+      "topic_mention": true,
+      "selected_news": true,
+      "segments": [
+        {
+          "class": "event",
+          "start": 71,
+          "end": 101,
+          "quote": "▫️Запуск майннета Arc (читать)"
+        }
+      ],
+      "event_ids": [
+        "e11-525acbc9683eaa9d"
+      ],
+      "origin": "own",
+      "source_role": "editorial",
+      "status": "processed"
+    },
+    {
+      "source_id": 19,
+      "external_id": "19007",
+      "link": "https://t.me/spidersjournal/19007",
+      "published_at": "2026-09-16T23:03:11+00:00",
+      "author_id": null,
+      "topic_mention": true,
+      "selected_news": true,
+      "segments": [
+        {
+          "class": "event",
+          "start": 39,
+          "end": 287,
+          "quote": "• Early on Arc — A chance to launch from day one in a new ecosystem built around stablecoins and global finance. Arc is built by Circle, with founding validators including BlackRock, Visa, Mastercard, DTCC, ICE (owner of the NYSE), Galaxy and more."
+        }
+      ],
+      "event_ids": [
+        "e11-525acbc9683eaa9d"
+      ],
+      "origin": "own",
+      "source_role": "editorial",
+      "status": "processed"
+    },
+    {
+      "source_id": 19,
+      "external_id": "19008",
+      "link": "https://t.me/spidersjournal/19008",
+      "published_at": "2026-09-16T23:17:23+00:00",
+      "author_id": null,
+      "topic_mention": true,
+      "selected_news": false,
+      "segments": [
+        {
+          "class": "promo_service",
+          "start": 0,
+          "end": 113,
+          "quote": "https://www.forbes.com/sites/boazsobrado/2026/09/16/circle-built-arc-for-blackrock-memecoins-are-moving-in-first/"
+        }
+      ],
+      "event_ids": [],
+      "origin": "unknown",
+      "source_role": "unknown",
+      "status": "processed"
+    },
+    {
+      "source_id": 1,
+      "external_id": "7141",
+      "link": "https://t.me/whitelist1/7141",
+      "published_at": "2026-09-17T07:02:16+00:00",
+      "author_id": null,
+      "topic_mention": true,
+      "selected_news": true,
+      "segments": [
+        {
+          "class": "event",
+          "start": 260,
+          "end": 440,
+          "quote": "🔴Arc сминтили 10 млрд токенов $ARC в Mainnet. Сама же команда пишет, что это техническая необходимость, а не подготовка к дропу. При этом, в X сами байтят холдеров Architect ролей."
+        },
+        {
+          "class": "event",
+          "start": 442,
+          "end": 670,
+          "quote": "👍Extended запустили RWA Trading Competition на $50 тыс. Набиваем PNL, объем, OI и поднимаемся в лидерборде. В награды войдут топ 100 трейдеров, турнир продлится до 29 сентября. Вместе с этим, Extended объявили о переходе на Arc."
+        }
+      ],
+      "event_ids": [
+        "e17-c813add0d14f4b10",
+        "e18-286906c4a81433de"
+      ],
+      "origin": "own",
+      "source_role": "editorial",
+      "status": "processed"
+    },
+    {
+      "source_id": 15,
+      "external_id": "423169",
+      "link": "https://t.me/WEB3_AGGREGATOR/423169",
+      "published_at": "2026-09-17T07:09:29+00:00",
+      "author_id": null,
+      "topic_mention": true,
+      "selected_news": false,
+      "segments": [],
+      "event_ids": [],
+      "origin": "own",
+      "source_role": "participant",
+      "status": "held"
+    },
+    {
+      "source_id": 15,
+      "external_id": "423172",
+      "link": "https://t.me/WEB3_AGGREGATOR/423172",
+      "published_at": "2026-09-17T07:10:12+00:00",
+      "author_id": null,
+      "topic_mention": true,
+      "selected_news": false,
+      "segments": [
+        {
+          "class": "redistribution",
+          "start": 32,
+          "end": 124,
+          "quote": "ARC пытаются повторить фокус Robinhood с мемкоинами, но в их окопах творится чистейший крайм"
+        },
+        {
+          "class": "participant_reaction",
+          "start": 164,
+          "end": 282,
+          "quote": "пока комьюнити качало народный $DUKE в честь собаки фаундера, команда ARC начала продвигать другой DUKE, убивая первый"
+        }
+      ],
+      "event_ids": [],
+      "origin": "retelling",
+      "source_role": "author",
+      "status": "processed"
+    },
+    {
+      "source_id": 15,
+      "external_id": "423182",
+      "link": "https://t.me/WEB3_AGGREGATOR/423182",
+      "published_at": "2026-09-17T10:11:57+00:00",
+      "author_id": null,
+      "topic_mention": true,
+      "selected_news": true,
+      "segments": [
+        {
+          "class": "event",
+          "start": 217,
+          "end": 257,
+          "quote": "сминтили 10 млрд токенов $ARC в майннете"
+        },
+        {
+          "class": "participant_reaction",
+          "start": 391,
+          "end": 431,
+          "quote": "Для верующих советую потыкать экосистему"
+        }
+      ],
+      "event_ids": [
+        "e17-c813add0d14f4b10"
+      ],
+      "origin": "retelling",
+      "source_role": "author",
+      "status": "processed"
+    },
+    {
+      "source_id": 15,
+      "external_id": "423183",
+      "link": "https://t.me/WEB3_AGGREGATOR/423183",
+      "published_at": "2026-09-17T10:12:16+00:00",
+      "author_id": null,
+      "topic_mention": true,
+      "selected_news": false,
+      "segments": [
+        {
+          "class": "participant_reaction",
+          "start": 0,
+          "end": 39,
+          "quote": "Что там происходит, на этом вашем ARC?!"
+        }
+      ],
+      "event_ids": [],
+      "origin": "own",
+      "source_role": "author",
+      "status": "processed"
+    },
+    {
+      "source_id": 15,
+      "external_id": "423187",
+      "link": "https://t.me/WEB3_AGGREGATOR/423187",
+      "published_at": "2026-09-17T10:13:09+00:00",
+      "author_id": null,
+      "topic_mention": true,
+      "selected_news": false,
+      "segments": [
+        {
+          "class": "participant_reaction",
+          "start": 0,
+          "end": 8,
+          "quote": "Arc гем?"
+        }
+      ],
+      "event_ids": [],
+      "origin": "own",
+      "source_role": "author",
+      "status": "processed"
+    }
+  ],
+  "comments": [
+    {
+      "comment_key": "channel:1494845665:571594",
+      "link": "https://t.me/whitelist1/7139?comment=571594",
+      "published_at": "2026-09-16T11:01:05+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1494845665:571595",
+      "link": "https://t.me/whitelist1/7139?comment=571595",
+      "published_at": "2026-09-16T11:01:20+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1494845665:571596",
+      "link": "https://t.me/whitelist1/7139?comment=571596",
+      "published_at": "2026-09-16T11:02:20+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1494845665:571597",
+      "link": "https://t.me/whitelist1/7139?comment=571597",
+      "published_at": "2026-09-16T11:02:24+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1494845665:571598",
+      "link": "https://t.me/whitelist1/7139?comment=571598",
+      "published_at": "2026-09-16T11:02:27+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1494845665:571599",
+      "link": "https://t.me/whitelist1/7139?comment=571599",
+      "published_at": "2026-09-16T11:06:51+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1494845665:571600",
+      "link": "https://t.me/whitelist1/7139?comment=571600",
+      "published_at": "2026-09-16T11:07:32+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1494845665:571601",
+      "link": "https://t.me/whitelist1/7139?comment=571601",
+      "published_at": "2026-09-16T11:08:18+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1494845665:571602",
+      "link": "https://t.me/whitelist1/7139?comment=571602",
+      "published_at": "2026-09-16T11:13:20+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1494845665:571603",
+      "link": "https://t.me/whitelist1/7139?comment=571603",
+      "published_at": "2026-09-16T11:13:44+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1494845665:571604",
+      "link": "https://t.me/whitelist1/7139?comment=571604",
+      "published_at": "2026-09-16T11:13:58+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1494845665:571605",
+      "link": "https://t.me/whitelist1/7139?comment=571605",
+      "published_at": "2026-09-16T11:14:21+00:00",
+      "link_target": "other_subject",
+      "basis": "предмет реплики — сторонний сервис/коллекция экосистемы, не событие темы"
+    },
+    {
+      "comment_key": "channel:1494845665:571606",
+      "link": "https://t.me/whitelist1/7139?comment=571606",
+      "published_at": "2026-09-16T11:14:51+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1494845665:571607",
+      "link": "https://t.me/whitelist1/7139?comment=571607",
+      "published_at": "2026-09-16T11:40:42+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1494845665:571611",
+      "link": "https://t.me/whitelist1/7139?comment=571611",
+      "published_at": "2026-09-16T12:15:00+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1494845665:571612",
+      "link": "https://t.me/whitelist1/7139?comment=571612",
+      "published_at": "2026-09-16T12:15:39+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1494845665:571613",
+      "link": "https://t.me/whitelist1/7139?comment=571613",
+      "published_at": "2026-09-16T12:15:48+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1494845665:571614",
+      "link": "https://t.me/whitelist1/7139?comment=571614",
+      "published_at": "2026-09-16T12:16:11+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1494845665:571615",
+      "link": "https://t.me/whitelist1/7139?comment=571615",
+      "published_at": "2026-09-16T12:18:39+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1530857706:138148",
+      "link": "https://t.me/Slavik_investor_updates/6922?comment=138148",
+      "published_at": "2026-09-16T12:20:41+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1494845665:571616",
+      "link": "https://t.me/whitelist1/7139?comment=571616",
+      "published_at": "2026-09-16T12:24:53+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1494845665:571617",
+      "link": "https://t.me/whitelist1/7139?comment=571617",
+      "published_at": "2026-09-16T12:25:33+00:00",
+      "link_target": "other_subject",
+      "basis": "предмет реплики — сторонний сервис/коллекция экосистемы, не событие темы"
+    },
+    {
+      "comment_key": "channel:1494845665:571618",
+      "link": "https://t.me/whitelist1/7139?comment=571618",
+      "published_at": "2026-09-16T12:26:31+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1494845665:571619",
+      "link": "https://t.me/whitelist1/7139?comment=571619",
+      "published_at": "2026-09-16T12:26:49+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1530857706:138149",
+      "link": "https://t.me/Slavik_investor_updates/6920?comment=138149",
+      "published_at": "2026-09-16T12:29:09+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1494845665:571620",
+      "link": "https://t.me/whitelist1/7139?comment=571620",
+      "published_at": "2026-09-16T12:29:37+00:00",
+      "link_target": "other_subject",
+      "basis": "предмет реплики — сторонний сервис/коллекция экосистемы, не событие темы"
+    },
+    {
+      "comment_key": "channel:1494845665:571621",
+      "link": "https://t.me/whitelist1/7139?comment=571621",
+      "published_at": "2026-09-16T12:29:52+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1530857706:138150",
+      "link": "https://t.me/Slavik_investor_updates/6922?comment=138150",
+      "published_at": "2026-09-16T12:30:26+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1494845665:571622",
+      "link": "https://t.me/whitelist1/7139?comment=571622",
+      "published_at": "2026-09-16T12:30:33+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1494845665:571623",
+      "link": "https://t.me/whitelist1/7139?comment=571623",
+      "published_at": "2026-09-16T12:36:59+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1494845665:571624",
+      "link": "https://t.me/whitelist1/7139?comment=571624",
+      "published_at": "2026-09-16T12:39:32+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1494845665:571625",
+      "link": "https://t.me/whitelist1/7139?comment=571625",
+      "published_at": "2026-09-16T12:40:56+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1494845665:571626",
+      "link": "https://t.me/whitelist1/7139?comment=571626",
+      "published_at": "2026-09-16T12:41:19+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1530857706:138152",
+      "link": "https://t.me/Slavik_investor_updates/6922?comment=138152",
+      "published_at": "2026-09-16T12:55:16+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1494845665:571629",
+      "link": "https://t.me/whitelist1/7140?comment=571629",
+      "published_at": "2026-09-16T13:02:11+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1494845665:571631",
+      "link": "https://t.me/whitelist1/7140?comment=571631",
+      "published_at": "2026-09-16T13:04:22+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1494845665:571633",
+      "link": "https://t.me/whitelist1/7140?comment=571633",
+      "published_at": "2026-09-16T13:08:19+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1494845665:571637",
+      "link": "https://t.me/whitelist1/7140?comment=571637",
+      "published_at": "2026-09-16T13:27:22+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1494845665:571638",
+      "link": "https://t.me/whitelist1/7140?comment=571638",
+      "published_at": "2026-09-16T13:27:49+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1530857706:138154",
+      "link": "https://t.me/Slavik_investor_updates/6922?comment=138154",
+      "published_at": "2026-09-16T13:32:22+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1494845665:571641",
+      "link": "https://t.me/whitelist1/7139?comment=571641",
+      "published_at": "2026-09-16T14:16:18+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:3836469437:1066",
+      "link": "https://t.me/badfriend_loops/829?comment=1066",
+      "published_at": "2026-09-16T14:23:34+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1494845665:571644",
+      "link": "https://t.me/whitelist1/7139?comment=571644",
+      "published_at": "2026-09-16T14:58:35+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1494845665:571645",
+      "link": "https://t.me/whitelist1/7140?comment=571645",
+      "published_at": "2026-09-16T14:59:25+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1494845665:571646",
+      "link": "https://t.me/whitelist1/7140?comment=571646",
+      "published_at": "2026-09-16T14:59:30+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1494845665:571647",
+      "link": "https://t.me/whitelist1/7139?comment=571647",
+      "published_at": "2026-09-16T15:13:22+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1494845665:571648",
+      "link": "https://t.me/whitelist1/7139?comment=571648",
+      "published_at": "2026-09-16T15:13:40+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1494845665:571649",
+      "link": "https://t.me/whitelist1/7139?comment=571649",
+      "published_at": "2026-09-16T15:14:02+00:00",
+      "link_target": "other_subject",
+      "basis": "предмет реплики — сторонний сервис/коллекция экосистемы, не событие темы"
+    },
+    {
+      "comment_key": "channel:1494845665:571650",
+      "link": "https://t.me/whitelist1/7139?comment=571650",
+      "published_at": "2026-09-16T15:14:36+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1494845665:571651",
+      "link": "https://t.me/whitelist1/7139?comment=571651",
+      "published_at": "2026-09-16T15:16:52+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1696030614:284537",
+      "link": "https://t.me/krasnovcrypto/3754?comment=284537",
+      "published_at": "2026-09-16T15:32:15+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1530857706:138160",
+      "link": "https://t.me/Slavik_investor_updates/6922?comment=138160",
+      "published_at": "2026-09-16T15:47:14+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1530857706:138164",
+      "link": "https://t.me/Slavik_investor_updates/6923?comment=138164",
+      "published_at": "2026-09-16T16:24:51+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1530857706:138166",
+      "link": "https://t.me/Slavik_investor_updates/6923?comment=138166",
+      "published_at": "2026-09-16T16:52:46+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1530857706:138167",
+      "link": "https://t.me/Slavik_investor_updates/6918?comment=138167",
+      "published_at": "2026-09-16T16:57:36+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1530857706:138168",
+      "link": "https://t.me/Slavik_investor_updates/6923?comment=138168",
+      "published_at": "2026-09-16T17:02:33+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1530857706:138169",
+      "link": "https://t.me/Slavik_investor_updates/6923?comment=138169",
+      "published_at": "2026-09-16T17:32:39+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1696030614:284540",
+      "link": "https://t.me/krasnovcrypto/3754?comment=284540",
+      "published_at": "2026-09-16T17:48:17+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1696030614:284541",
+      "link": "https://t.me/krasnovcrypto/3754?comment=284541",
+      "published_at": "2026-09-16T17:49:38+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1530857706:138170",
+      "link": "https://t.me/Slavik_investor_updates/6923?comment=138170",
+      "published_at": "2026-09-16T17:50:18+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1167285985:343062",
+      "link": "https://t.me/rawa_imagination/21105?comment=343062",
+      "published_at": "2026-09-16T19:02:17+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1167285985:343064",
+      "link": "https://t.me/rawa_imagination/21106?comment=343064",
+      "published_at": "2026-09-16T19:10:11+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1167285985:343066",
+      "link": "https://t.me/rawa_imagination/21107?comment=343066",
+      "published_at": "2026-09-16T19:55:03+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1545881523:187446",
+      "link": "https://t.me/cryptonftded/3270?comment=187446",
+      "published_at": "2026-09-17T07:01:39+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1494845665:571692",
+      "link": "https://t.me/whitelist1/7141?comment=571692",
+      "published_at": "2026-09-17T07:02:20+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1494845665:571693",
+      "link": "https://t.me/whitelist1/7141?comment=571693",
+      "published_at": "2026-09-17T07:04:01+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1742296134:188801",
+      "link": "https://t.me/icryptocom/8099?comment=188801",
+      "published_at": "2026-09-17T07:09:37+00:00",
+      "link_target": "project",
+      "basis": "вопрос или оценка по проекту в целом, не по конкретной новости"
+    },
+    {
+      "comment_key": "channel:1742296134:188802",
+      "link": "https://t.me/icryptocom/8099?comment=188802",
+      "published_at": "2026-09-17T07:40:08+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1742296134:188803",
+      "link": "https://t.me/icryptocom/8099?comment=188803",
+      "published_at": "2026-09-17T07:41:44+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1494845665:571695",
+      "link": "https://t.me/whitelist1/7141?comment=571695",
+      "published_at": "2026-09-17T07:57:56+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1742296134:188805",
+      "link": "https://t.me/icryptocom/8099?comment=188805",
+      "published_at": "2026-09-17T08:07:49+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1494845665:571696",
+      "link": "https://t.me/whitelist1/7141?comment=571696",
+      "published_at": "2026-09-17T08:12:39+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1494845665:571697",
+      "link": "https://t.me/whitelist1/7141?comment=571697",
+      "published_at": "2026-09-17T08:23:45+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1494845665:571698",
+      "link": "https://t.me/whitelist1/7141?comment=571698",
+      "published_at": "2026-09-17T08:23:51+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1696030614:284547",
+      "link": "https://t.me/krasnovcrypto/3754?comment=284547",
+      "published_at": "2026-09-17T08:25:30+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1494845665:571700",
+      "link": "https://t.me/whitelist1/7141?comment=571700",
+      "published_at": "2026-09-17T08:35:20+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1696030614:284548",
+      "link": "https://t.me/krasnovcrypto/3754?comment=284548",
+      "published_at": "2026-09-17T08:48:48+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1167285985:343073",
+      "link": "https://t.me/rawa_imagination/21108?comment=343073",
+      "published_at": "2026-09-17T09:03:00+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1167285985:343075",
+      "link": "https://t.me/rawa_imagination/21108?comment=343075",
+      "published_at": "2026-09-17T09:09:57+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1167285985:343076",
+      "link": "https://t.me/rawa_imagination/21108?comment=343076",
+      "published_at": "2026-09-17T09:22:04+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1167285985:343079",
+      "link": "https://t.me/rawa_imagination/21108?comment=343079",
+      "published_at": "2026-09-17T09:35:42+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1696030614:284549",
+      "link": "https://t.me/krasnovcrypto/3754?comment=284549",
+      "published_at": "2026-09-17T09:41:46+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1696030614:284550",
+      "link": "https://t.me/krasnovcrypto/3754?comment=284550",
+      "published_at": "2026-09-17T09:43:23+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1494845665:571704",
+      "link": "https://t.me/whitelist1/7141?comment=571704",
+      "published_at": "2026-09-17T09:55:35+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1742296134:188807",
+      "link": "https://t.me/icryptocom/8100?comment=188807",
+      "published_at": "2026-09-17T10:19:59+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1742296134:188808",
+      "link": "https://t.me/icryptocom/8100?comment=188808",
+      "published_at": "2026-09-17T10:20:45+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1742296134:188809",
+      "link": "https://t.me/icryptocom/8100?comment=188809",
+      "published_at": "2026-09-17T10:20:54+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1742296134:188811",
+      "link": "https://t.me/icryptocom/8100?comment=188811",
+      "published_at": "2026-09-17T10:21:28+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1545881523:187463",
+      "link": "https://t.me/cryptonftded/3270?comment=187463",
+      "published_at": "2026-09-17T10:30:05+00:00",
+      "link_target": "other_subject",
+      "basis": "предмет реплики — сторонний сервис/коллекция экосистемы, не событие темы"
+    },
+    {
+      "comment_key": "channel:1696030614:284552",
+      "link": "https://t.me/krasnovcrypto/3754?comment=284552",
+      "published_at": "2026-09-17T10:36:09+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1742296134:188812",
+      "link": "https://t.me/icryptocom/8100?comment=188812",
+      "published_at": "2026-09-17T10:59:09+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1742296134:188813",
+      "link": "https://t.me/icryptocom/8100?comment=188813",
+      "published_at": "2026-09-17T11:00:16+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    }
+  ],
+  "events": [
+    {
+      "event_id": "e1-194fbea6a335e1e2",
+      "publications": [
+        "https://t.me/WEB3_AGGREGATOR/423093",
+        "https://t.me/WEB3_AGGREGATOR/423100",
+        "https://t.me/WEB3_AGGREGATOR/423143"
+      ],
+      "n_publications": 3,
+      "n_channels": 1,
+      "n_known_authors": 0,
+      "found_origins": [
+        "https://t.me/WEB3_AGGREGATOR/423100"
+      ],
+      "n_reprints": 2,
+      "n_unknown_origin": 0
+    },
+    {
+      "event_id": "e2-8a75dfb4c419fe87",
+      "publications": [
+        "https://t.me/WEB3_AGGREGATOR/423100"
+      ],
+      "n_publications": 1,
+      "n_channels": 1,
+      "n_known_authors": 0,
+      "found_origins": [
+        "https://t.me/WEB3_AGGREGATOR/423100"
+      ],
+      "n_reprints": 0,
+      "n_unknown_origin": 0
+    },
+    {
+      "event_id": "e3-c707bf347f67384f",
+      "publications": [
+        "https://t.me/WEB3_AGGREGATOR/423105",
+        "https://t.me/WEB3_AGGREGATOR/423153"
+      ],
+      "n_publications": 2,
+      "n_channels": 1,
+      "n_known_authors": 0,
+      "found_origins": [
+        "https://t.me/WEB3_AGGREGATOR/423105",
+        "https://t.me/WEB3_AGGREGATOR/423153"
+      ],
+      "n_reprints": 0,
+      "n_unknown_origin": 0
+    },
+    {
+      "event_id": "e4-d8574fe1e9df058c",
+      "publications": [
+        "https://t.me/WEB3_AGGREGATOR/423117"
+      ],
+      "n_publications": 1,
+      "n_channels": 1,
+      "n_known_authors": 0,
+      "found_origins": [
+        "https://t.me/WEB3_AGGREGATOR/423117"
+      ],
+      "n_reprints": 0,
+      "n_unknown_origin": 0
+    },
+    {
+      "event_id": "e5-c9826d15d0d75d44",
+      "publications": [
+        "https://t.me/krasnovcrypto/3754"
+      ],
+      "n_publications": 1,
+      "n_channels": 1,
+      "n_known_authors": 0,
+      "found_origins": [
+        "https://t.me/krasnovcrypto/3754"
+      ],
+      "n_reprints": 0,
+      "n_unknown_origin": 0
+    },
+    {
+      "event_id": "e6-c03fbc4f340af233",
+      "publications": [
+        "https://t.me/krasnovcrypto/3754"
+      ],
+      "n_publications": 1,
+      "n_channels": 1,
+      "n_known_authors": 0,
+      "found_origins": [
+        "https://t.me/krasnovcrypto/3754"
+      ],
+      "n_reprints": 0,
+      "n_unknown_origin": 0
+    },
+    {
+      "event_id": "e7-af16fdc54e5e1347",
+      "publications": [
+        "https://t.me/krasnovcrypto/3754"
+      ],
+      "n_publications": 1,
+      "n_channels": 1,
+      "n_known_authors": 0,
+      "found_origins": [
+        "https://t.me/krasnovcrypto/3754"
+      ],
+      "n_reprints": 0,
+      "n_unknown_origin": 0
+    },
+    {
+      "event_id": "e8-f5dee91bb2f52cb4",
+      "publications": [
+        "https://t.me/krasnovcrypto/3754"
+      ],
+      "n_publications": 1,
+      "n_channels": 1,
+      "n_known_authors": 0,
+      "found_origins": [
+        "https://t.me/krasnovcrypto/3754"
+      ],
+      "n_reprints": 0,
+      "n_unknown_origin": 0
+    },
+    {
+      "event_id": "e9-bc95ef671dc0981f",
+      "publications": [
+        "https://t.me/WEB3_AGGREGATOR/423121"
+      ],
+      "n_publications": 1,
+      "n_channels": 1,
+      "n_known_authors": 0,
+      "found_origins": [
+        "https://t.me/WEB3_AGGREGATOR/423121"
+      ],
+      "n_reprints": 0,
+      "n_unknown_origin": 0
+    },
+    {
+      "event_id": "e10-c5cc91bc0559fb7d",
+      "publications": [
+        "https://t.me/WEB3_AGGREGATOR/423128"
+      ],
+      "n_publications": 1,
+      "n_channels": 1,
+      "n_known_authors": 0,
+      "found_origins": [
+        "https://t.me/WEB3_AGGREGATOR/423128"
+      ],
+      "n_reprints": 0,
+      "n_unknown_origin": 0
+    },
+    {
+      "event_id": "e11-525acbc9683eaa9d",
+      "publications": [
+        "https://t.me/WEB3_AGGREGATOR/423150",
+        "https://t.me/crypto_hd/31472",
+        "https://t.me/spidersjournal/19007"
+      ],
+      "n_publications": 3,
+      "n_channels": 3,
+      "n_known_authors": 0,
+      "found_origins": [
+        "https://t.me/WEB3_AGGREGATOR/423150",
+        "https://t.me/crypto_hd/31472",
+        "https://t.me/spidersjournal/19007"
+      ],
+      "n_reprints": 0,
+      "n_unknown_origin": 0
+    },
+    {
+      "event_id": "e12-fc76b3cacccdad42",
+      "publications": [
+        "https://t.me/WEB3_AGGREGATOR/423151"
+      ],
+      "n_publications": 1,
+      "n_channels": 1,
+      "n_known_authors": 0,
+      "found_origins": [
+        "https://t.me/WEB3_AGGREGATOR/423151"
+      ],
+      "n_reprints": 0,
+      "n_unknown_origin": 0
+    },
+    {
+      "event_id": "e13-aae72a40fa53caf6",
+      "publications": [
+        "https://t.me/WEB3_AGGREGATOR/423153"
+      ],
+      "n_publications": 1,
+      "n_channels": 1,
+      "n_known_authors": 0,
+      "found_origins": [
+        "https://t.me/WEB3_AGGREGATOR/423153"
+      ],
+      "n_reprints": 0,
+      "n_unknown_origin": 0
+    },
+    {
+      "event_id": "e14-4d7ac3720cf84b0f",
+      "publications": [
+        "https://t.me/WEB3_AGGREGATOR/423153"
+      ],
+      "n_publications": 1,
+      "n_channels": 1,
+      "n_known_authors": 0,
+      "found_origins": [
+        "https://t.me/WEB3_AGGREGATOR/423153"
+      ],
+      "n_reprints": 0,
+      "n_unknown_origin": 0
+    },
+    {
+      "event_id": "e15-419ffa3f9fce6606",
+      "publications": [
+        "https://t.me/WEB3_AGGREGATOR/423153"
+      ],
+      "n_publications": 1,
+      "n_channels": 1,
+      "n_known_authors": 0,
+      "found_origins": [
+        "https://t.me/WEB3_AGGREGATOR/423153"
+      ],
+      "n_reprints": 0,
+      "n_unknown_origin": 0
+    },
+    {
+      "event_id": "e16-ed48c18aa3328218",
+      "publications": [
+        "https://t.me/WEB3_AGGREGATOR/423161"
+      ],
+      "n_publications": 1,
+      "n_channels": 1,
+      "n_known_authors": 0,
+      "found_origins": [
+        "https://t.me/WEB3_AGGREGATOR/423161"
+      ],
+      "n_reprints": 0,
+      "n_unknown_origin": 0
+    },
+    {
+      "event_id": "e17-c813add0d14f4b10",
+      "publications": [
+        "https://t.me/whitelist1/7141",
+        "https://t.me/WEB3_AGGREGATOR/423182"
+      ],
+      "n_publications": 2,
+      "n_channels": 2,
+      "n_known_authors": 0,
+      "found_origins": [
+        "https://t.me/whitelist1/7141"
+      ],
+      "n_reprints": 1,
+      "n_unknown_origin": 0
+    },
+    {
+      "event_id": "e18-286906c4a81433de",
+      "publications": [
+        "https://t.me/whitelist1/7141"
+      ],
+      "n_publications": 1,
+      "n_channels": 1,
+      "n_known_authors": 0,
+      "found_origins": [
+        "https://t.me/whitelist1/7141"
+      ],
+      "n_reprints": 0,
+      "n_unknown_origin": 0
+    }
+  ]
+}

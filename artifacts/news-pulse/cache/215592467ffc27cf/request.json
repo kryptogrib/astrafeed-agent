@@ -1,0 +1,17 @@
+{
+ "segments": [
+  {
+   "id": "telegram:19:18984#s1",
+   "text": "she’s head of product at arc and circle",
+   "mentions": [
+    {
+     "text": "arc",
+     "status": "confirmed"
+    }
+   ],
+   "kind_hint": "post",
+   "url": "https://t.me/spidersjournal/18984",
+   "time": "2026-09-16T17:39:39+00:00"
+  }
+ ]
+}

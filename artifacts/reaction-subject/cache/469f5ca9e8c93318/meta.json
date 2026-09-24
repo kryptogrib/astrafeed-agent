@@ -1,0 +1,33 @@
+{
+ "prompt_sha256": "25b834fe5db8a64c",
+ "input_sha256": "19ca295b8f9ccd24",
+ "model": "deepseek/deepseek-v4-flash",
+ "schema": "reaction-subject/v1",
+ "db_md5": "8618099125a806df376354286ccd982e",
+ "provider_pinned": null,
+ "seconds": 12.6,
+ "provider_actual": "DeepInfra",
+ "usage": {
+  "prompt_tokens": 1733,
+  "completion_tokens": 682,
+  "total_tokens": 2415,
+  "cost": 0.000241866,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 512,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.000241866,
+   "upstream_inference_prompt_cost": 0.000119106,
+   "upstream_inference_completions_cost": 0.00012276
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

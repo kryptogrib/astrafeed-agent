@@ -1,0 +1,23 @@
+{
+ "a": {
+  "quote": "• Arc Punks: 10,000 punks, запуск 16 сентября, ориентир 0.5 USDC;",
+  "actor": "Arc",
+  "action": "launch",
+  "object": "Arc Punks",
+  "qualifiers": {
+   "event_date": "16 сентября",
+   "price": "0.5 USDC"
+  },
+  "url": "https://t.me/whitelist1/7135"
+ },
+ "b": {
+  "quote": "👍Напомним, что Arc выходит в Mainnet уже сегодня, а вместе с ним и многие NFT коллекции, сверяемся с постом.",
+  "actor": "Arc",
+  "action": "launches",
+  "object": "Mainnet",
+  "qualifiers": {
+   "event_date": "today"
+  },
+  "url": "https://t.me/whitelist1/7138"
+ }
+}

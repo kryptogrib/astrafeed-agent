@@ -1,0 +1,91 @@
+{
+ "model_input": {
+  "request": "artifacts/pulse-eth/thread-21055/v3/request.json",
+  "input_sha256": "e9c6deae41592aeb",
+  "mentions": {
+   "post": [
+    {
+     "text": "ETH",
+     "status": "confirmed"
+    }
+   ],
+   "342462": [
+    {
+     "text": "эфира",
+     "status": "ambiguous"
+    }
+   ],
+   "342482": [
+    {
+     "text": "эфир",
+     "status": "ambiguous"
+    }
+   ],
+   "342484": [
+    {
+     "text": "эфир",
+     "status": "ambiguous"
+    }
+   ],
+   "342489": [
+    {
+     "text": "эфир",
+     "status": "ambiguous"
+    }
+   ],
+   "342507": [
+    {
+     "text": "ETH",
+     "status": "confirmed"
+    }
+   ]
+  },
+  "held_if_published_on_it": []
+ },
+ "publication": {
+  "grounding_version": "headline-hashtag/2026-09-24",
+  "classifier_sha256": "b471a79b80634986",
+  "mentions": {
+   "post": [
+    {
+     "text": "ETH",
+     "status": "confirmed"
+    }
+   ],
+   "342507": [
+    {
+     "text": "ETH",
+     "status": "confirmed"
+    }
+   ],
+   "342489": [
+    {
+     "text": "эфир",
+     "status": "ambiguous"
+    }
+   ],
+   "342484": [
+    {
+     "text": "эфир",
+     "status": "ambiguous"
+    }
+   ],
+   "342482": [
+    {
+     "text": "эфир",
+     "status": "ambiguous"
+    }
+   ],
+   "342462": [
+    {
+     "text": "эфира",
+     "status": "ambiguous"
+    }
+   ]
+  },
+  "held": []
+ },
+ "mentions_changed": [],
+ "released_by_new_grounding": [],
+ "held_by_new_grounding": []
+}

@@ -1,0 +1,32 @@
+{
+ "choices": [
+  {
+   "message": {
+    "content": "{\"labels\": [{\"id\": \"telegram:18:31503#s2\", \"kind\": \"event\", \"actor\": \"Инсайдер Bitcoin OG\", \"action\": \"выставил ордер на открытие лонга на 2450 BTC и продал 35,000 ETH, направил часть средств на увеличение обеспечения убыточного шорта по ZEC\", \"object\": \"лонг на 2450 BTC, продажа 35,000 ETH, шорт по ZEC\", \"qualifiers\": {\"btc_amount\": \"2450 BTC\", \"btc_value\": \"$190m\", \"btc_price\": \"$78,000\", \"eth_amount\": \"35,000 ETH\", \"eth_value\": \"$87,5m\", \"eth_price\": \"~$2500\"}, \"origin\": \"retelling\", \"source_role\": \"editorial\", \"verification_status\": \"unverified\", \"topic_role\": \"context\", \"quote\": \"➤ Инсайдер Bitcoin OG выставил ордер на открытие лонга на 2450 BTC (~$190m) по цене $78,000. Также он продал 35,000 ETH ($87,5m) по цене ~$2500 и направил часть средств на увеличение обеспечения убыточного шорта по ZEC. \\n\\n\", \"span\": [0, 205]}]}"
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 2033,
+  "completion_tokens": 2131,
+  "total_tokens": 4164,
+  "cost": 0.0004470466,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 1728,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.0004470466,
+   "upstream_inference_prompt_cost": 5.92046e-05,
+   "upstream_inference_completions_cost": 0.000387842
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

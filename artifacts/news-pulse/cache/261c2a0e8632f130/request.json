@@ -1,0 +1,21 @@
+{
+ "segments": [
+  {
+   "id": "telegram:15:422833#s8",
+   "text": "Цена минта = (числу уже созданных котов) × 0.00002 $ETH. \n\n",
+   "mentions": [
+    {
+     "text": "$ETH",
+     "status": "confirmed"
+    },
+    {
+     "text": "ETH",
+     "status": "confirmed"
+    }
+   ],
+   "kind_hint": "post",
+   "url": "https://t.me/WEB3_AGGREGATOR/422833",
+   "time": "2026-09-11T20:46:42+00:00"
+  }
+ ]
+}

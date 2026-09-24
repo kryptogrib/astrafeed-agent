@@ -1,0 +1,26 @@
+{
+ "a": {
+  "quote": "🔘Подаем заявку в WL новой коллекции Zaddr (необходимо подключить X). Минт уже 21 сентября, mint price: 0.02 zec, 2,800 NFTs.",
+  "actor": null,
+  "action": "Подаем заявку в WL новой коллекции Zaddr",
+  "object": "Zaddr",
+  "qualifiers": {
+   "event_date": "21 сентября",
+   "place": "X"
+  },
+  "url": "https://t.me/whitelist1/7146"
+ },
+ "b": {
+  "quote": "• BoneHead: toxic waste of ZEC · WL через Discord;",
+  "actor": "BoneHead",
+  "action": "WL via Discord",
+  "object": "ZEC",
+  "qualifiers": {
+   "version": null,
+   "event_date": "2026-09-21",
+   "place": null,
+   "counterparty": null
+  },
+  "url": "https://t.me/whitelist1/7151"
+ }
+}

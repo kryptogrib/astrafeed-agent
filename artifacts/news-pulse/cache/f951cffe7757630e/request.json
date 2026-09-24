@@ -1,0 +1,25 @@
+{
+ "a": {
+  "quote": "16 сентября Circle запустила мейннет: среди валидаторов BlackRock и Visa, отчеканено 10 млрд ARC",
+  "actor": "Circle",
+  "action": "launch mainnet",
+  "object": "Arc",
+  "qualifiers": {
+   "event_date": "16 сентября",
+   "place": null,
+   "counterparty": null,
+   "version": null
+  },
+  "url": "https://t.me/WEB3_AGGREGATOR/423286"
+ },
+ "b": {
+  "quote": "Arc запустит майннет 16 сентября",
+  "actor": "Arc",
+  "action": "запустит майннет",
+  "object": "майннет",
+  "qualifiers": {
+   "event_date": "16 сентября"
+  },
+  "url": "https://t.me/WEB3_AGGREGATOR/422890"
+ }
+}

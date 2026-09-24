@@ -1,0 +1,17 @@
+{
+ "segments": [
+  {
+   "id": "telegram:4:829#s10",
+   "text": "• работать с Uniswap v3/v4 и Pancake v3 в большинстве нужных сетей, включая Robinhood и Arc (если он не сдохнет);\n",
+   "mentions": [
+    {
+     "text": "Arc",
+     "status": "confirmed"
+    }
+   ],
+   "kind_hint": "post",
+   "url": "https://t.me/badfriend_loops/829",
+   "time": "2026-09-16T14:05:34+00:00"
+  }
+ ]
+}

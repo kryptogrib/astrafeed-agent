@@ -1,0 +1,26 @@
+{
+ "a": {
+  "quote": "— Circle's Arc, its USDC-gas stablecoin L1, goes live on mainnet",
+  "actor": "Circle",
+  "action": "goes live",
+  "object": "Arc",
+  "qualifiers": {
+   "version": "mainnet",
+   "place": "USDC-gas stablecoin L1"
+  },
+  "url": "https://t.me/WEB3_AGGREGATOR/423249"
+ },
+ "b": {
+  "quote": "#shorts Забираем бесплатный NFT в сети Arc",
+  "actor": "Arc",
+  "action": "launched",
+  "object": "mainnet",
+  "qualifiers": {
+   "version": "mainnet",
+   "event_date": "2026-09-16",
+   "place": null,
+   "counterparty": null
+  },
+  "url": "https://t.me/WEB3_AGGREGATOR/423117"
+ }
+}

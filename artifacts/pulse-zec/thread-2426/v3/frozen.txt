@@ -1,0 +1,14 @@
+# Зафиксировано перед прогоном 2026-09-24 01:21
+fac9eacb926fdf1b50d9e181a23cfe49674b2d5b2cb59d4f704ced288dba175c  docs/research/pulse_classify_thread.py
+c9911d64cca69669e3eb0fd489175eb79a73cf3c5e9a3dbe9ae230e1d304a5ad  docs/research/pulse_label_instructions.md
+b2e736559c0b15ad110f28bd3a7c3fc02d8c71e2462e495279769dbe879165b1  docs/research/pulse_publish.py
+763a8d6fe09f068c22254c532bf7430eac11b6b6c77b2461db549ba507c66a3f  artifacts/entity-candidates/detections.jsonl
+
+# После прогона: в pulse_publish.py изменён только заголовок published.md (тема вместо «ETH»); логика отбора та же
+340cffd2568ce2df63134969a0cbf6cb2603be635cfdf2067434d616f2b3ec92  docs/research/pulse_publish.py
+
+# 2026-09-24, после общего ревью (docs/research/pulse-zec-common-review.md): изменён отбор опор, не промпт
+# topic_mentions: хештег-подлежащее строки («#ZEC растёт, …») снова служит опорой; rubric_hashtag теперь тоже пропускается.
+# Прогоны не повторялись. Разбор: artifacts/pulse-zec/filter-headline-hashtag.md
+b3ff57bc82dcb1727e00bee1a166dab8e236f2ca78ef39d5ae4dac77d71113b1  docs/research/pulse_classify_thread.py
+b644a588ed342fa69bffac968d1c3419e0904d2b49df548601fca35ef8b87987  docs/research/pulse_publish.py

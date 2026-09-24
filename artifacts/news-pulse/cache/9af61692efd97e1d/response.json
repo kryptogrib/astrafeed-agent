@@ -1,0 +1,32 @@
+{
+ "choices": [
+  {
+   "message": {
+    "content": "{\"labels\": [{\"id\": \"telegram:1:7138:c:571572#s0\", \"kind\": \"event\", \"actor\": null, \"action\": \"запуск\", \"object\": \"Arc\", \"qualifiers\": {\"version\": null, \"event_date\": null, \"place\": null, \"counterparty\": null}, \"origin\": \"own\", \"source_role\": \"participant\", \"verification_status\": \"unverified\", \"quote\": \"Во сколько Arc запуск? Никто не знает\", \"span\": [0, 38]}]}"
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 1530,
+  "completion_tokens": 1670,
+  "total_tokens": 3200,
+  "cost": 0.0003708992,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.0003708992,
+   "upstream_inference_prompt_cost": 0.0001165248,
+   "upstream_inference_completions_cost": 0.0002543744
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

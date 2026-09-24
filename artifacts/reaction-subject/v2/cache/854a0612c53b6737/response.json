@@ -1,0 +1,46 @@
+{
+ "id": "gen-1790249382-FsMt7YKq59kUkttXlkSw",
+ "object": "chat.completion",
+ "created": 1790249382,
+ "model": "deepseek/deepseek-v4-flash",
+ "provider": "Novita",
+ "system_fingerprint": null,
+ "service_tier": null,
+ "choices": [
+  {
+   "index": 0,
+   "logprobs": null,
+   "finish_reason": "stop",
+   "native_finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "content": "{\"target\": \"other_subject\", \"target_id\": null, \"comment_fragment\": \"пару usdjpy к btcusdt и ethusdt\", \"context_fragment\": \"\", \"why\": \"Comment discusses USDJPY and trading zones, not the golden cross news.\"}",
+    "refusal": null,
+    "reasoning": null
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 695,
+  "completion_tokens": 62,
+  "total_tokens": 757,
+  "cost": 0.00011466,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.00011466,
+   "upstream_inference_prompt_cost": 9.73e-05,
+   "upstream_inference_completions_cost": 1.736e-05
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

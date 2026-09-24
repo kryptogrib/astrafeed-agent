@@ -1,0 +1,42 @@
+{
+ "link": "https://t.me/whitelist1/7152",
+ "model_labels": "artifacts/pulse-zec/thread-7152/v3/labels.json",
+ "corrections": "artifacts/pulse-zec/thread-7152/v3/demo/corrections.json",
+ "reviewer": null,
+ "published": [
+  {
+   "id": "572207",
+   "relevance": "relevant",
+   "aspect": "usage",
+   "kind": "other",
+   "summary": "Указывает флор в 0.018 ZEC.",
+   "quote": "0.018 ZEC флор",
+   "context_ids": [
+    "post"
+   ],
+   "name_candidate": null,
+   "link": "https://t.me/whitelist1/7152?comment=572207",
+   "corrected": false,
+   "borderline": false
+  }
+ ],
+ "held_for_review": {
+  "reason": "relevant_not_grounded на метках модели",
+  "labels": [
+   {
+    "id": "572210",
+    "relevance": "relevant",
+    "aspect": "usage",
+    "kind": "opinion",
+    "summary": "Говорит, что по всем NFT в ZEC фад.",
+    "quote": "там по всем нфт фад в зеке",
+    "context_ids": [
+     "572205"
+    ],
+    "name_candidate": null,
+    "link": "https://t.me/whitelist1/7152?comment=572210",
+    "text": "там по всем нфт фад в зеке"
+   }
+  ]
+ }
+}

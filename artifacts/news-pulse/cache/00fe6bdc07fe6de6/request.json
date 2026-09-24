@@ -1,0 +1,17 @@
+{
+ "segments": [
+  {
+   "id": "telegram:3:6921#s2",
+   "text": "Balancer - один из старейших DEX на Ethereum, работает с 2020, пережил не один цикл. Теперь казначейский совет вынес на голосование план закрытия.\n\n",
+   "mentions": [
+    {
+     "text": "Ethereum",
+     "status": "confirmed"
+    }
+   ],
+   "kind_hint": "post",
+   "url": "https://t.me/Slavik_investor_updates/6921",
+   "time": "2026-09-15T16:01:03+00:00"
+  }
+ ]
+}

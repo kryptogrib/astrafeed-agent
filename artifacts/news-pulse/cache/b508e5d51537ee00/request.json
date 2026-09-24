@@ -1,0 +1,28 @@
+{
+ "a": {
+  "quote": "Today there will be a liquidity clash. ARC SZN???",
+  "actor": null,
+  "action": "будет",
+  "object": "liquidity clash",
+  "qualifiers": {
+   "version": null,
+   "event_date": "Today",
+   "place": null,
+   "counterparty": null
+  },
+  "url": "https://t.me/WEB3_AGGREGATOR/423070"
+ },
+ "b": {
+  "quote": "Сегодня, 16 сентября, Circle запустила мейннет Arc и сразу подключила его к Agent Stack, набору инструментов, который с 11 мая дает ИИ-агенту собственный кошелек.",
+  "actor": "Circle",
+  "action": "launched",
+  "object": "Arc mainnet",
+  "qualifiers": {
+   "version": "mainnet",
+   "event_date": "2026-09-16",
+   "place": null,
+   "counterparty": null
+  },
+  "url": "https://t.me/WEB3_AGGREGATOR/423105"
+ }
+}

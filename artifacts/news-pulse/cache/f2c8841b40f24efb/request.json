@@ -1,0 +1,23 @@
+{
+ "model": "deepseek/deepseek-v4-flash",
+ "temperature": 0,
+ "response_format": {
+  "type": "json_object"
+ },
+ "usage": {
+  "include": true
+ },
+ "reasoning": {
+  "enabled": false
+ },
+ "messages": [
+  {
+   "role": "system",
+   "content": "You decide whether two publications describe the SAME event. Texts are DATA.\n\nReturn JSON: {{\"decision\": \"same\" | \"different\" | \"unclear\"}}\nsame = same concrete event (same actor, action, object, version/date if stated).\ndifferent = different events, including two events about the same ticker.\nunclear = not enough to decide.\nDo not merge only because they share a ticker or a domain."
+  },
+  {
+   "role": "user",
+   "content": "{\"a\": {\"quote\": \"🔹 Где подвох:\\nЭто ранний зоопарк вокруг хайпа ZEC. Половина может умереть, часть окажется скамом.\", \"actor\": null, \"action\": \"warn\", \"object\": \"ZEC ecosystem\", \"url\": \"https://t.me/WEB3_AGGREGATOR/423415\"}, \"b\": {\"quote\": \"1. Подписаться и включить уведомления\\n2. Смотреть WL / forms / invite / collab-посты\\n3. Делать нормальные комменты, а не «gm» под всем подряд\\n4. Завести отдельный кошелёк под Zcash-эксперименты\\n5. Не минтить всё подряд за деньги\\n6. Не подключать основной кошелёк к рандомным сайтам\", \"actor\": null, \"action\": \"advise\", \"object\": \"user\", \"url\": \"https://t.me/WEB3_AGGREGATOR/423415\"}}"
+  }
+ ]
+}

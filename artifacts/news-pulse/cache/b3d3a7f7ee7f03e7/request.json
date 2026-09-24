@@ -1,0 +1,29 @@
+{
+ "segments": [
+  {
+   "id": "telegram:15:423362#s1",
+   "text": "начались торги NFTшек zkSnarks на аукционе с бидами по 1.5 $ZEC, торги сейчас идут полным ходом, флур сейчас составляет 2.13 $ZEC. \n\n",
+   "mentions": [
+    {
+     "text": "$ZEC",
+     "status": "confirmed"
+    },
+    {
+     "text": "ZEC",
+     "status": "confirmed"
+    },
+    {
+     "text": "$ZEC",
+     "status": "confirmed"
+    },
+    {
+     "text": "ZEC",
+     "status": "confirmed"
+    }
+   ],
+   "kind_hint": "post",
+   "url": "https://t.me/WEB3_AGGREGATOR/423362",
+   "time": "2026-09-19T13:17:47+00:00"
+  }
+ ]
+}

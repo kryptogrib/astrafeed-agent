@@ -1,0 +1,25 @@
+{
+ "segments": [
+  {
+   "id": "telegram:10:385211#s0",
+   "text": "⚠️✴️#BTC #ETH #крипто #cot \nBlackRock сегодня начал переводить BTC и ETH на биржи - скорее всего, на продажу для клиентов  — мониторинг",
+   "mentions": [
+    {
+     "text": "#ETH",
+     "status": "confirmed"
+    },
+    {
+     "text": "ETH",
+     "status": "confirmed"
+    },
+    {
+     "text": "ETH",
+     "status": "confirmed"
+    }
+   ],
+   "kind_hint": "post",
+   "url": "https://t.me/markettwits/385211",
+   "time": "2026-09-17T12:24:29+00:00"
+  }
+ ]
+}

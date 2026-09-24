@@ -1,0 +1,23 @@
+{
+ "a": {
+  "quote": "Ethereum метит в квантово-стойкий L1 к 2029 году",
+  "actor": "Ethereum",
+  "action": "aims to become",
+  "object": "quantum-resistant L1",
+  "qualifiers": {
+   "event_date": "2029"
+  },
+  "url": "https://t.me/WEB3_AGGREGATOR/422949"
+ },
+ "b": {
+  "quote": "BitMine добрала 28 086 ETH, всего 5,93 млн",
+  "actor": "BitMine",
+  "action": "accumulated",
+  "object": "ETH",
+  "qualifiers": {
+   "amount": "28,086 ETH",
+   "total": "5.93 million"
+  },
+  "url": "https://t.me/WEB3_AGGREGATOR/422949"
+ }
+}

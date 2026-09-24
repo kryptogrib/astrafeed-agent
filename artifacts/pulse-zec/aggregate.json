@@ -1,0 +1,531 @@
+{
+ "grouping": "агентская группировка 2026-09-24 по публикуемым наборам v3 (2426 — с исправлениями слоя corrections.json); не человеческая, не вывод модели",
+ "threads": {
+  "21112": {
+   "link": "https://t.me/rawa_imagination/21112",
+   "channel": "rawa_imagination",
+   "comments": 8,
+   "participants": 5,
+   "published": 1,
+   "held": 0
+  },
+  "2426": {
+   "link": "https://t.me/icodrops_sergey/2426",
+   "channel": "icodrops_sergey",
+   "comments": 30,
+   "participants": 22,
+   "published": 23,
+   "held": 0
+  },
+  "2432": {
+   "link": "https://t.me/icodrops_sergey/2432",
+   "channel": "icodrops_sergey",
+   "comments": 11,
+   "participants": 10,
+   "published": 1,
+   "held": 0
+  },
+  "5299": {
+   "link": "https://t.me/don_invest/5299",
+   "channel": "don_invest",
+   "comments": 28,
+   "participants": 10,
+   "published": 11,
+   "held": 16
+  },
+  "7130": {
+   "link": "https://t.me/whitelist1/7130",
+   "channel": "whitelist1",
+   "comments": 12,
+   "participants": 9,
+   "published": 0,
+   "held": 0
+  },
+  "7149": {
+   "link": "https://t.me/whitelist1/7149",
+   "channel": "whitelist1",
+   "comments": 57,
+   "participants": 13,
+   "published": 25,
+   "held": 6
+  },
+  "7150": {
+   "link": "https://t.me/whitelist1/7150",
+   "channel": "whitelist1",
+   "comments": 9,
+   "participants": 7,
+   "published": 0,
+   "held": 0
+  },
+  "7151": {
+   "link": "https://t.me/whitelist1/7151",
+   "channel": "whitelist1",
+   "comments": 20,
+   "participants": 11,
+   "published": 14,
+   "held": 1
+  },
+  "7152": {
+   "link": "https://t.me/whitelist1/7152",
+   "channel": "whitelist1",
+   "comments": 22,
+   "participants": 6,
+   "published": 1,
+   "held": 1
+  }
+ },
+ "arguments": [
+  {
+   "key": "forecast_up",
+   "title": "Прогнозы цены вверх (насколько всерьёз — неясно)",
+   "direction": "up",
+   "ids": [
+    "2426/150563",
+    "2426/150564"
+   ],
+   "subject": "Цена и стадия роста",
+   "comments": 2,
+   "authors": 2,
+   "threads": 1,
+   "channels": 1,
+   "links": [
+    "https://t.me/icodrops_sergey/2426?comment=150563",
+    "https://t.me/icodrops_sergey/2426?comment=150564"
+   ]
+  },
+  {
+   "key": "conditional_privacy",
+   "title": "Рост при условии, что рынок уйдёт в приватность, а ZEC поведёт",
+   "direction": "up",
+   "ids": [
+    "2426/150566"
+   ],
+   "subject": "Цена и стадия роста",
+   "comments": 1,
+   "authors": 1,
+   "threads": 1,
+   "channels": 1,
+   "links": [
+    "https://t.me/icodrops_sergey/2426?comment=150566"
+   ]
+  },
+  {
+   "key": "no_mass_interest",
+   "title": "Массового интереса/FOMO ещё нет, значит есть потенциал",
+   "direction": "up",
+   "ids": [
+    "2426/150550",
+    "2426/150567",
+    "2426/150568"
+   ],
+   "subject": "Цена и стадия роста",
+   "comments": 3,
+   "authors": 3,
+   "threads": 1,
+   "channels": 1,
+   "links": [
+    "https://t.me/icodrops_sergey/2426?comment=150550",
+    "https://t.me/icodrops_sergey/2426?comment=150567",
+    "https://t.me/icodrops_sergey/2426?comment=150568"
+   ]
+  },
+  {
+   "key": "late_entry",
+   "title": "FOMO уже есть, вход поздний, ждут отката",
+   "direction": "down",
+   "ids": [
+    "2426/150547",
+    "2426/150548",
+    "2426/150573",
+    "2426/150560"
+   ],
+   "subject": "Цена и стадия роста",
+   "comments": 4,
+   "authors": 4,
+   "threads": 1,
+   "channels": 1,
+   "links": [
+    "https://t.me/icodrops_sergey/2426?comment=150547",
+    "https://t.me/icodrops_sergey/2426?comment=150548",
+    "https://t.me/icodrops_sergey/2426?comment=150573",
+    "https://t.me/icodrops_sergey/2426?comment=150560"
+   ]
+  },
+  {
+   "key": "bubble",
+   "title": "Пузырь, пойдёт на дно",
+   "direction": "down",
+   "ids": [
+    "2426/150571",
+    "2426/150572"
+   ],
+   "subject": "Цена и стадия роста",
+   "comments": 2,
+   "authors": 1,
+   "threads": 1,
+   "channels": 1,
+   "links": [
+    "https://t.me/icodrops_sergey/2426?comment=150571",
+    "https://t.me/icodrops_sergey/2426?comment=150572"
+   ]
+  },
+  {
+   "key": "how_far",
+   "title": "Сколько уже прошли: иксы от дна, вход автора канала",
+   "direction": "none",
+   "ids": [
+    "2426/150556",
+    "2426/150557",
+    "2426/150574",
+    "2426/150576"
+   ],
+   "subject": "Цена и стадия роста",
+   "comments": 4,
+   "authors": 2,
+   "threads": 1,
+   "channels": 1,
+   "links": [
+    "https://t.me/icodrops_sergey/2426?comment=150556",
+    "https://t.me/icodrops_sergey/2426?comment=150557",
+    "https://t.me/icodrops_sergey/2426?comment=150574",
+    "https://t.me/icodrops_sergey/2426?comment=150576"
+   ]
+  },
+  {
+   "key": "unknown_direction",
+   "title": "Однострочники без установленного направления (возможна ирония)",
+   "direction": "unknown",
+   "ids": [
+    "2426/150551",
+    "2426/150552",
+    "2426/150554"
+   ],
+   "subject": "Цена и стадия роста",
+   "comments": 3,
+   "authors": 3,
+   "threads": 1,
+   "channels": 1,
+   "links": [
+    "https://t.me/icodrops_sergey/2426?comment=150551",
+    "https://t.me/icodrops_sergey/2426?comment=150552",
+    "https://t.me/icodrops_sergey/2426?comment=150554"
+   ]
+  },
+  {
+   "key": "gloating",
+   "title": "Злорадство над скептиками",
+   "direction": "up",
+   "ids": [
+    "2426/150549",
+    "2426/150555"
+   ],
+   "subject": "Цена и стадия роста",
+   "comments": 2,
+   "authors": 2,
+   "threads": 1,
+   "channels": 1,
+   "links": [
+    "https://t.me/icodrops_sergey/2426?comment=150549",
+    "https://t.me/icodrops_sergey/2426?comment=150555"
+   ]
+  },
+  {
+   "key": "privacy_disputed",
+   "title": "Приватность ZEC оспаривается, противопоставление Monero (утверждение не проверено)",
+   "direction": "down",
+   "ids": [
+    "2426/150651"
+   ],
+   "subject": "Приватность",
+   "comments": 1,
+   "authors": 1,
+   "threads": 1,
+   "channels": 1,
+   "links": [
+    "https://t.me/icodrops_sergey/2426?comment=150651"
+   ]
+  },
+  {
+   "key": "noir_wallet",
+   "title": "Noir как кошелёк для ZEC NFT/WL (и вопросы о нём)",
+   "direction": "none",
+   "ids": [
+    "5299/380352",
+    "5299/380353",
+    "5299/380354",
+    "5299/380355",
+    "5299/380360",
+    "5299/380361",
+    "7151/572119",
+    "7151/572120"
+   ],
+   "subject": "Кошельки и инфраструктура",
+   "comments": 8,
+   "authors": 6,
+   "threads": 2,
+   "channels": 2,
+   "links": [
+    "https://t.me/don_invest/5299?comment=380352",
+    "https://t.me/don_invest/5299?comment=380353",
+    "https://t.me/don_invest/5299?comment=380354",
+    "https://t.me/don_invest/5299?comment=380355",
+    "https://t.me/don_invest/5299?comment=380360",
+    "https://t.me/don_invest/5299?comment=380361",
+    "https://t.me/whitelist1/7151?comment=572119",
+    "https://t.me/whitelist1/7151?comment=572120"
+   ]
+  },
+  {
+   "key": "evm_wallet",
+   "title": "EVM-кошелёк для ZEC-проекта — нормально ли",
+   "direction": "none",
+   "ids": [
+    "5299/380347",
+    "5299/380348",
+    "5299/380349"
+   ],
+   "subject": "Кошельки и инфраструктура",
+   "comments": 3,
+   "authors": 3,
+   "threads": 1,
+   "channels": 1,
+   "links": [
+    "https://t.me/don_invest/5299?comment=380347",
+    "https://t.me/don_invest/5299?comment=380348",
+    "https://t.me/don_invest/5299?comment=380349"
+   ]
+  },
+  {
+   "key": "bridge",
+   "title": "Как завести ZEC на кошелёк: бридж",
+   "direction": "none",
+   "ids": [
+    "7149/572005",
+    "7149/572006",
+    "7149/572008"
+   ],
+   "subject": "Кошельки и инфраструктура",
+   "comments": 3,
+   "authors": 2,
+   "threads": 1,
+   "channels": 1,
+   "links": [
+    "https://t.me/whitelist1/7149?comment=572005",
+    "https://t.me/whitelist1/7149?comment=572006",
+    "https://t.me/whitelist1/7149?comment=572008"
+   ]
+  },
+  {
+   "key": "marketplace",
+   "title": "Где торгуются ZEC NFT",
+   "direction": "none",
+   "ids": [
+    "7149/571974",
+    "7149/571975",
+    "7149/571976"
+   ],
+   "subject": "Кошельки и инфраструктура",
+   "comments": 3,
+   "authors": 3,
+   "threads": 1,
+   "channels": 1,
+   "links": [
+    "https://t.me/whitelist1/7149?comment=571974",
+    "https://t.me/whitelist1/7149?comment=571975",
+    "https://t.me/whitelist1/7149?comment=571976"
+   ]
+  },
+  {
+   "key": "wl_where",
+   "title": "Вайтлисты ZEC-коллекций: как попасть, где проверить",
+   "direction": "none",
+   "ids": [
+    "7149/571964",
+    "7149/571965",
+    "7149/571966",
+    "7149/572009",
+    "5299/380362",
+    "5299/380363",
+    "7149/572021"
+   ],
+   "subject": "WL и минт: вопросы и жалобы",
+   "comments": 7,
+   "authors": 6,
+   "threads": 2,
+   "channels": 2,
+   "links": [
+    "https://t.me/whitelist1/7149?comment=571964",
+    "https://t.me/whitelist1/7149?comment=571965",
+    "https://t.me/whitelist1/7149?comment=571966",
+    "https://t.me/whitelist1/7149?comment=572009",
+    "https://t.me/don_invest/5299?comment=380362",
+    "https://t.me/don_invest/5299?comment=380363",
+    "https://t.me/whitelist1/7149?comment=572021"
+   ]
+  },
+  {
+   "key": "wl_revoked",
+   "title": "Отзыв WL, «скамят работяг»",
+   "direction": "none",
+   "ids": [
+    "7149/571982",
+    "7149/571984",
+    "7149/571985",
+    "7149/571983"
+   ],
+   "subject": "WL и минт: вопросы и жалобы",
+   "comments": 4,
+   "authors": 3,
+   "threads": 1,
+   "channels": 1,
+   "links": [
+    "https://t.me/whitelist1/7149?comment=571982",
+    "https://t.me/whitelist1/7149?comment=571984",
+    "https://t.me/whitelist1/7149?comment=571985",
+    "https://t.me/whitelist1/7149?comment=571983"
+   ]
+  },
+  {
+   "key": "mint_lags",
+   "title": "Лаги и закрытие приёма у ZADDR",
+   "direction": "none",
+   "ids": [
+    "7149/571996",
+    "7149/572000",
+    "7151/572127",
+    "7151/572131",
+    "7151/572128"
+   ],
+   "subject": "WL и минт: вопросы и жалобы",
+   "comments": 5,
+   "authors": 3,
+   "threads": 2,
+   "channels": 1,
+   "links": [
+    "https://t.me/whitelist1/7149?comment=571996",
+    "https://t.me/whitelist1/7149?comment=572000",
+    "https://t.me/whitelist1/7151?comment=572127",
+    "https://t.me/whitelist1/7151?comment=572131",
+    "https://t.me/whitelist1/7151?comment=572128"
+   ]
+  },
+  {
+   "key": "fees",
+   "title": "Большие комиссии (в т.ч. шутка «приватность нужно оплачивать»)",
+   "direction": "none",
+   "ids": [
+    "7149/572012",
+    "7149/572013",
+    "7149/572022"
+   ],
+   "subject": "WL и минт: вопросы и жалобы",
+   "comments": 3,
+   "authors": 3,
+   "threads": 1,
+   "channels": 1,
+   "links": [
+    "https://t.me/whitelist1/7149?comment=572012",
+    "https://t.me/whitelist1/7149?comment=572013",
+    "https://t.me/whitelist1/7149?comment=572022"
+   ]
+  },
+  {
+   "key": "nft_price",
+   "title": "Цена/флор ZEC NFT",
+   "direction": "none",
+   "ids": [
+    "7149/571968",
+    "7149/571971",
+    "7152/572207"
+   ],
+   "subject": "WL и минт: вопросы и жалобы",
+   "comments": 3,
+   "authors": 2,
+   "threads": 2,
+   "channels": 1,
+   "links": [
+    "https://t.me/whitelist1/7149?comment=571968",
+    "https://t.me/whitelist1/7149?comment=571971",
+    "https://t.me/whitelist1/7152?comment=572207"
+   ]
+  },
+  {
+   "key": "gtd_giveaway",
+   "title": "Раздача GTD на минт zecvisions (реплики-отклики)",
+   "direction": "none",
+   "ids": [
+    "7151/572129",
+    "7151/572130",
+    "7151/572133",
+    "7151/572135",
+    "7151/572141",
+    "7151/572143"
+   ],
+   "subject": "WL и минт: вопросы и жалобы",
+   "comments": 6,
+   "authors": 4,
+   "threads": 1,
+   "channels": 1,
+   "links": [
+    "https://t.me/whitelist1/7151?comment=572129",
+    "https://t.me/whitelist1/7151?comment=572130",
+    "https://t.me/whitelist1/7151?comment=572133",
+    "https://t.me/whitelist1/7151?comment=572135",
+    "https://t.me/whitelist1/7151?comment=572141",
+    "https://t.me/whitelist1/7151?comment=572143"
+   ]
+  },
+  {
+   "key": "comparisons",
+   "title": "ZEC рядом с DASH, NEAR, HYPE (у каждого своё сравнение)",
+   "direction": "unknown",
+   "ids": [
+    "2426/150569",
+    "21112/343092",
+    "2432/150645"
+   ],
+   "subject": "Сравнения с другими монетами",
+   "comments": 3,
+   "authors": 3,
+   "threads": 3,
+   "channels": 2,
+   "links": [
+    "https://t.me/icodrops_sergey/2426?comment=150569",
+    "https://t.me/rawa_imagination/21112?comment=343092",
+    "https://t.me/icodrops_sergey/2432?comment=150645"
+   ]
+  }
+ ],
+ "unassigned_published": [
+  {
+   "id": "7149/572010",
+   "summary": "Поздравляет и выражает надежду, что накормят.",
+   "link": "https://t.me/whitelist1/7149?comment=572010"
+  },
+  {
+   "id": "7149/572011",
+   "summary": "Тоже надеется на получение прибыли.",
+   "link": "https://t.me/whitelist1/7149?comment=572011"
+  },
+  {
+   "id": "7149/572030",
+   "summary": "Говорит, что у него в X не пусто.",
+   "link": "https://t.me/whitelist1/7149?comment=572030"
+  },
+  {
+   "id": "7151/572109",
+   "summary": "Одобряет, что все ZEC в одном месте.",
+   "link": "https://t.me/whitelist1/7151?comment=572109"
+  },
+  {
+   "id": "7151/572153",
+   "summary": "Соглашается (Yes, sir).",
+   "link": "https://t.me/whitelist1/7151?comment=572153"
+  },
+  {
+   "id": "7151/572154",
+   "summary": "Отвечает 'Х'.",
+   "link": "https://t.me/whitelist1/7151?comment=572154"
+  }
+ ]
+}

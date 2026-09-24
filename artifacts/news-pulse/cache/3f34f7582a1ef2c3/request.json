@@ -1,0 +1,26 @@
+{
+ "a": {
+  "quote": "Компания BitMine Тома Ли из Fundstrat купила на баланс еще 27 562 ETH на прошлой неделе",
+  "actor": "BitMine (Tom Lee's company)",
+  "action": "bought 27,562 ETH on balance last week",
+  "object": "ETH",
+  "qualifiers": {
+   "event_date": "2026-09-21",
+   "place": null,
+   "counterparty": null
+  },
+  "url": "https://t.me/markettwits/385603"
+ },
+ "b": {
+  "quote": "Клейм в эфире, у кого аллокация свыше 10к токенов, напомню что это второй клейм. Слить можно на Mexc, прайс 0,0067$",
+  "actor": null,
+  "action": "claim in Ethereum network, second claim, can sell on Mexc at price 0.0067$",
+  "object": "tokens",
+  "qualifiers": {
+   "event_date": "2026-09-21",
+   "place": "Mexc",
+   "counterparty": null
+  },
+  "url": "https://t.me/WEB3_AGGREGATOR/423484"
+ }
+}

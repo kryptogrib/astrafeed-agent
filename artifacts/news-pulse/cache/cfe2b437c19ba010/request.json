@@ -1,0 +1,17 @@
+{
+ "segments": [
+  {
+   "id": "telegram:19:18983#s0",
+   "text": "arc employee liked the tweet about the Dyson toothbrush meme\n\n",
+   "mentions": [
+    {
+     "text": "arc",
+     "status": "confirmed"
+    }
+   ],
+   "kind_hint": "post",
+   "url": "https://t.me/spidersjournal/18983",
+   "time": "2026-09-16T17:37:30+00:00"
+  }
+ ]
+}

@@ -1,0 +1,46 @@
+{
+ "id": "gen-1790249234-9v2rw2Fd9zMcYGMD69Ls",
+ "object": "chat.completion",
+ "created": 1790249234,
+ "model": "deepseek/deepseek-v4-flash",
+ "provider": "DeepInfra",
+ "system_fingerprint": null,
+ "service_tier": "default",
+ "choices": [
+  {
+   "index": 0,
+   "logprobs": null,
+   "finish_reason": "stop",
+   "native_finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "content": "{\"target\": \"other_subject\", \"target_id\": null, \"comment_fragment\": \"Там у хайпера если что фри позицию раздают 1к юсдт с 3 плечом за холд 2к юсдт на балансе просто\", \"context_fragment\": \"\", \"why\": \"Comment talks about a different project (хайпера), not Aave.\"}",
+    "refusal": null,
+    "reasoning": null
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 1142,
+  "completion_tokens": 91,
+  "total_tokens": 1233,
+  "cost": 0.000100728,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 256,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.000100728,
+   "upstream_inference_prompt_cost": 8.4348e-05,
+   "upstream_inference_completions_cost": 1.638e-05
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

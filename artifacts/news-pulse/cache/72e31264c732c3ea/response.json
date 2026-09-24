@@ -1,0 +1,32 @@
+{
+ "choices": [
+  {
+   "message": {
+    "content": "{\"labels\": [{\"id\": \"telegram:9:1043837#s0\", \"kind\": \"promo_service\", \"actor\": null, \"action\": \"reports max pain price and options data\", \"object\": \"Ethereum\", \"qualifiers\": {\"version\": \"max pain price $2,250, notional value $2.13B, put/call ratio 0.61\"}, \"origin\": \"retelling\", \"source_role\": \"editorial\", \"verification_status\": \"source_statement\", \"topic_role\": \"subject\", \"quote\": \"ETHEREUM MAX PAIN PRICE $2,250, $2.13 BILLION NOTIONAL VALUE, PUT/CALL RATIO 0.61  ...\", \"span\": [0, 80]}]}"
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 1872,
+  "completion_tokens": 1939,
+  "total_tokens": 3811,
+  "cost": 0.0005635,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.0005635,
+   "upstream_inference_prompt_cost": 0.000183456,
+   "upstream_inference_completions_cost": 0.000380044
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

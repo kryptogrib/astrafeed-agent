@@ -1,0 +1,32 @@
+{
+ "choices": [
+  {
+   "message": {
+    "content": "{\"labels\": [{\"id\": \"telegram:15:423206#s7\", \"kind\": \"event\", \"actor\": \"ARC\", \"action\": \"открывает официальный стрим запуска из Нью-Йорка\", \"object\": null, \"qualifiers\": {\"place\": \"Нью-Йорк\"}, \"origin\": \"retelling\", \"source_role\": \"author\", \"verification_status\": \"unverified\", \"quote\": \"• ARC открывает официальный стрим запуска из Нью-Йорка\", \"span\": [0, 53]}]}"
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 1827,
+  "completion_tokens": 1587,
+  "total_tokens": 3414,
+  "cost": 0.0004819857,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.0004819857,
+   "upstream_inference_prompt_cost": 0.0001764882,
+   "upstream_inference_completions_cost": 0.0003054975
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

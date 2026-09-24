@@ -31,6 +31,7 @@ class SourceRow(Base):
     __tablename__ = "source"
     id: Mapped[int] = mapped_column(primary_key=True)
     telegram_id: Mapped[int] = mapped_column(unique=True)
+    rss_url: Mapped[str | None] = mapped_column(String, unique=True, nullable=True)
 
 
 class RawItemRow(Base):
@@ -69,3 +70,75 @@ class SpendReservationRow(Base):
     day: Mapped[str] = mapped_column(String)
     amount_micros: Mapped[int]
     settled: Mapped[bool] = mapped_column(default=False)
+    created_at: Mapped[datetime | None] = mapped_column(UtcDateTime(), default=None)
+    outcome: Mapped[str | None] = mapped_column(String, default=None)
+
+
+class CommentRow(Base):
+    __tablename__ = "comment"
+    comment_key: Mapped[str] = mapped_column(String, primary_key=True)
+    source_id: Mapped[int] = mapped_column(ForeignKey("source.id"), index=True)
+    post_id: Mapped[str]
+    comment_id: Mapped[str]
+    parent_comment_id: Mapped[str | None] = mapped_column(default=None)
+    ts: Mapped[datetime] = mapped_column(UtcDateTime(), index=True)
+    edited_at: Mapped[datetime | None] = mapped_column(UtcDateTime(), default=None)
+    text: Mapped[str]
+    link: Mapped[str]
+    author_key: Mapped[str | None] = mapped_column(default=None)
+    has_media: Mapped[bool] = mapped_column(default=False)
+    # Flipped by the classifier; a re-fetched comment whose text changed is reset.
+    classified: Mapped[bool] = mapped_column(default=False, index=True)
+
+
+class ThreadStateRow(Base):
+    __tablename__ = "thread_state"
+    source_id: Mapped[int] = mapped_column(ForeignKey("source.id"), primary_key=True)
+    post_id: Mapped[str] = mapped_column(String, primary_key=True)
+    status: Mapped[str]
+    reply_counter: Mapped[int | None] = mapped_column(default=None)
+    comments_stored: Mapped[int] = mapped_column(default=0)
+    possibly_truncated: Mapped[bool] = mapped_column(default=False)
+    context_incomplete: Mapped[bool] = mapped_column(default=False)
+    reason: Mapped[str] = mapped_column(default="")
+    last_scan_at: Mapped[datetime] = mapped_column(UtcDateTime())
+
+
+class AgendaPublicationRow(Base):
+    __tablename__ = "agenda_publication"
+    publication_id: Mapped[str] = mapped_column(String, primary_key=True)
+    source_id: Mapped[int] = mapped_column(index=True)
+    external_id: Mapped[str]
+    text: Mapped[str]
+    text_hash: Mapped[str] = mapped_column(index=True)
+    published_at: Mapped[datetime] = mapped_column(UtcDateTime(), index=True)
+    detected_at: Mapped[datetime] = mapped_column(UtcDateTime())
+    channel_ref: Mapped[str]
+    link: Mapped[str]
+    version: Mapped[int]
+
+
+class AgendaJsonRow(Base):
+    __tablename__ = "agenda_json"
+    kind: Mapped[str] = mapped_column(String, primary_key=True)
+    item_id: Mapped[str] = mapped_column(String, primary_key=True)
+    payload: Mapped[str]
+
+
+class AgendaQueueRow(Base):
+    __tablename__ = "agenda_queue"
+    publication_id: Mapped[str] = mapped_column(String, primary_key=True)
+    reason: Mapped[str]
+
+
+class AgendaSnapshotRow(Base):
+    __tablename__ = "agenda_snapshot"
+    snapshot_id: Mapped[str] = mapped_column(String, primary_key=True)
+    published: Mapped[bool] = mapped_column(default=False, index=True)
+    payload: Mapped[str]
+
+
+class AgendaCycleRow(Base):
+    __tablename__ = "agenda_cycle"
+    id: Mapped[int] = mapped_column(primary_key=True)
+    payload: Mapped[str]

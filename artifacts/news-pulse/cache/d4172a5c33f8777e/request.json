@@ -1,0 +1,17 @@
+{
+ "segments": [
+  {
+   "id": "telegram:15:423573#s1",
+   "text": "IMD, the Fren Pet team's return, now on Ethereum, has opened its agent network to the public. Anyone holding one of 2,000 free-minted NFTs can plug in their own machine and run an agent that writes and reviews Solidity, builds websites and answers on-chain oracle queries. \n\n",
+   "mentions": [
+    {
+     "text": "Ethereum",
+     "status": "confirmed"
+    }
+   ],
+   "kind_hint": "post",
+   "url": "https://t.me/WEB3_AGGREGATOR/423573",
+   "time": "2026-09-22T12:02:14+00:00"
+  }
+ ]
+}

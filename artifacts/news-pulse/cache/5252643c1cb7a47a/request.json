@@ -1,0 +1,28 @@
+{
+ "a": {
+  "quote": "Ходят слухи, что такой взлет был поддержан тайным бидом от Solana Foundation - для которых развитие торговли акциями/ спот токенами (Hype,Zec, WbTC, TAO) в СОЛ блокчейне является одним из способов обелиться / отделившись от стереотипа, что SOL только для мемов.",
+  "actor": "Solana Foundation",
+  "action": "support",
+  "object": "rise of trading stocks/spot tokens (Hype, Zec, WbTC, TAO) in SOL blockchain",
+  "qualifiers": {
+   "version": null,
+   "event_date": null,
+   "place": "SOL ecosystem",
+   "counterparty": null
+  },
+  "url": "https://t.me/WEB3_AGGREGATOR/422763"
+ },
+ "b": {
+  "quote": "Торгуешь и держишь ZCAT - получаешь ZEC, BTC мем -> получаешь wBTC и т д.",
+  "actor": "holder of ZCAT",
+  "action": "receive",
+  "object": "ZEC",
+  "qualifiers": {
+   "version": null,
+   "event_date": null,
+   "place": null,
+   "counterparty": null
+  },
+  "url": "https://t.me/WEB3_AGGREGATOR/422763"
+ }
+}

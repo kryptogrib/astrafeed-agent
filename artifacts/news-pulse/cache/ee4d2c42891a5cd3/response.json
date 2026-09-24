@@ -1,0 +1,32 @@
+{
+ "choices": [
+  {
+   "message": {
+    "content": "{\"labels\": [{\"id\": \"telegram:15:422844#s4\", \"kind\": \"event\", \"actor\": \"Coinbase\", \"action\": \"builds financial account for AI\", \"object\": \"Coinbase for Agents\", \"qualifiers\": {\"announcement\": \"one phrase by Brian Armstrong\", \"service\": \"works since June\", \"features\": \"isolated sub-portfolios with limits, agent trades bitcoin, ether, XRP, SOL from ChatGPT or Claude\"}, \"origin\": \"own\", \"source_role\": \"author\", \"verification_status\": \"unverified\", \"topic_role\": \"context\", \"quote\": \"Coinbase «строит финансовый счёт для ИИ» — это всего лишь одна фраза Брайана Армстронга в X, без продукта и деталей. Сам сервис Coinbase for Agents работает с июня: изолированные суб-портфели с лимитами, где агент торгует биткоином, эфиром, XRP и SOL прямо из ChatGPT или Claude.\", \"span\": [0, 245]}]}"
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 2109,
+  "completion_tokens": 1847,
+  "total_tokens": 3956,
+  "cost": 0.000528073,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.000528073,
+   "upstream_inference_prompt_cost": 0.000191919,
+   "upstream_inference_completions_cost": 0.000336154
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

@@ -1,0 +1,33 @@
+{
+ "prompt_sha256": "5c596d0f863ff4bd",
+ "input_sha256": "83915d3b724bbc1a",
+ "model": "deepseek/deepseek-v4-flash",
+ "schema": "reaction-subject/v2",
+ "db_md5": "1c714bad0d7dd7e07d1f2c5032fd8dce",
+ "provider_pinned": null,
+ "seconds": 2.1,
+ "provider_actual": "Alibaba",
+ "usage": {
+  "prompt_tokens": 1904,
+  "completion_tokens": 145,
+  "total_tokens": 2049,
+  "cost": 0.000293996,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.000293996,
+   "upstream_inference_prompt_cost": 0.000255136,
+   "upstream_inference_completions_cost": 3.886e-05
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

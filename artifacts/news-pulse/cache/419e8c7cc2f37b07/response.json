@@ -1,0 +1,32 @@
+{
+ "choices": [
+  {
+   "message": {
+    "content": "{\"labels\": [{\"id\": \"telegram:10:385896#s0\", \"kind\": \"event\", \"actor\": null, \"action\": \"цена превысила\", \"object\": \"ZEC\", \"qualifiers\": {\"version\": \"> $1600\"}, \"origin\": \"unknown\", \"source_role\": \"editorial\", \"verification_status\": \"unverified\", \"topic_role\": \"subject\", \"quote\": \"#ZEC > $1600\", \"span\": [0, 12]}]}"
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 1902,
+  "completion_tokens": 1614,
+  "total_tokens": 3516,
+  "cost": 0.00074006,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 256,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.00074006,
+   "upstream_inference_prompt_cost": 0.00025586,
+   "upstream_inference_completions_cost": 0.0004842
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

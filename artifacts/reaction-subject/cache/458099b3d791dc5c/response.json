@@ -1,0 +1,46 @@
+{
+ "id": "gen-1790247161-8V6cH5oyhLJYMZl86TgF",
+ "object": "chat.completion",
+ "created": 1790247161,
+ "model": "deepseek/deepseek-v4-flash",
+ "provider": "DeepInfra",
+ "system_fingerprint": null,
+ "service_tier": "default",
+ "choices": [
+  {
+   "index": 0,
+   "logprobs": null,
+   "finish_reason": "stop",
+   "native_finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "content": "{\"items\": [{\"id\": \"eth|https://t.me/rawa_imagination/21141?comment=343946\", \"target\": \"other_subject\", \"target_id\": null, \"comment_fragment\": \"А золото не смотрели?\", \"context_fragment\": \"\", \"why\": \"Comment asks about gold, not about the post's BTC/ETH topic.\"}, {\"id\": \"eth|https://t.me/rawa_imagination/21141?comment=343947\", \"target\": \"other_subject\", \"target_id\": null, \"comment_fragment\": \"золото зависит от ставки\", \"context_fragment\": \"А золото не смотрели?\", \"why\": \"Replies to gold comment, continues off-topic discussion.\"}, {\"id\": \"eth|https://t.me/rawa_imagination/21141?comment=343950\", \"target\": \"other_subject\", \"target_id\": null, \"comment_fragment\": \"По индикаторам моим вот просто всё указывает на либо локальный откат в 4100 4200\", \"context_fragment\": \"А золото не смотрели?\", \"why\": \"Continues gold/ETH discussion, not about post's main subject.\"}]}",
+    "refusal": null,
+    "reasoning": null
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 2085,
+  "completion_tokens": 277,
+  "total_tokens": 2362,
+  "cost": 0.000200646,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 512,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.000200646,
+   "upstream_inference_prompt_cost": 0.000150786,
+   "upstream_inference_completions_cost": 4.986e-05
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

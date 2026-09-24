@@ -1,0 +1,28 @@
+{
+ "a": {
+  "quote": "1INCH GOES LIVE ON CIRCLE’S ARC — SWAPS, WALLET & AQUA FROM DAY ONE ...",
+  "actor": "1inch",
+  "action": "went live",
+  "object": "on Arc",
+  "qualifiers": {
+   "version": null,
+   "event_date": "2026-09-16",
+   "place": null,
+   "counterparty": null
+  },
+  "url": "https://t.me/marketfeed/1039356"
+ },
+ "b": {
+  "quote": "Сегодня, 16 сентября, Circle запустила мейннет Arc и сразу подключила его к Agent Stack, набору инструментов, который с 11 мая дает ИИ-агенту собственный кошелек.",
+  "actor": "Circle",
+  "action": "launched",
+  "object": "Arc mainnet",
+  "qualifiers": {
+   "version": "mainnet",
+   "event_date": "2026-09-16",
+   "place": null,
+   "counterparty": null
+  },
+  "url": "https://t.me/WEB3_AGGREGATOR/423105"
+ }
+}

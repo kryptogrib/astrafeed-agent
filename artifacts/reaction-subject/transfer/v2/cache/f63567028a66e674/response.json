@@ -1,0 +1,46 @@
+{
+ "id": "gen-1790251544-dhx5c3d5cjHKuV9EKDZR",
+ "object": "chat.completion",
+ "created": 1790251544,
+ "model": "deepseek/deepseek-v4-flash",
+ "provider": "StreamLake",
+ "system_fingerprint": null,
+ "service_tier": null,
+ "choices": [
+  {
+   "index": 0,
+   "logprobs": null,
+   "finish_reason": "stop",
+   "native_finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "content": "{\n  \"target\": \"other_subject\",\n  \"target_id\": null,\n  \"comment_fragment\": \"Фул тайм работа\\nВ твиттере да, много ии. В телеге только медиа\",\n  \"context_fragment\": \"сколько времени уделяешь на создание контента в твиттер и в тг?\",\n  \"why\": \"Comment answers a personal question about content creation, not the post.\"\n}",
+    "refusal": null,
+    "reasoning": null
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 1652,
+  "completion_tokens": 100,
+  "total_tokens": 1752,
+  "cost": 5.52192592e-05,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 1536,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 5.52192592e-05,
+   "upstream_inference_prompt_cost": 3.74980592e-05,
+   "upstream_inference_completions_cost": 1.77212e-05
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

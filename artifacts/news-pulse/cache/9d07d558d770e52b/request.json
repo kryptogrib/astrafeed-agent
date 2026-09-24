@@ -1,0 +1,17 @@
+{
+ "segments": [
+  {
+   "id": "telegram:18:31476#s5",
+   "text": "➤ Кит «t1JhvB» вывел с Binance, OKX и Kraken 15,300 ZEC ($17,9m).\n\n",
+   "mentions": [
+    {
+     "text": "ZEC",
+     "status": "confirmed"
+    }
+   ],
+   "kind_hint": "post",
+   "url": "https://t.me/crypto_hd/31476",
+   "time": "2026-09-17T06:49:07+00:00"
+  }
+ ]
+}

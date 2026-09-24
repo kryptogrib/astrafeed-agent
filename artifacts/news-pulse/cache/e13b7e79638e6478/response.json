@@ -1,0 +1,32 @@
+{
+ "choices": [
+  {
+   "message": {
+    "content": "{\"decision\": \"different\"}"
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 3967,
+  "completion_tokens": 267,
+  "total_tokens": 4234,
+  "cost": 0.00059047,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.00059047,
+   "upstream_inference_prompt_cost": 0.00051571,
+   "upstream_inference_completions_cost": 7.476e-05
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

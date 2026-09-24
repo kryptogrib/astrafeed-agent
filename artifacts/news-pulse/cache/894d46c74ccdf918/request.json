@@ -1,0 +1,17 @@
+{
+ "segments": [
+  {
+   "id": "telegram:5:3271#s1",
+   "text": "Есть новый чейн Arc от Circle, эмитента USDC. Сначала хайпанул, а потом начался какой-то цирк:\n\n",
+   "mentions": [
+    {
+     "text": "Arc",
+     "status": "confirmed"
+    }
+   ],
+   "kind_hint": "post",
+   "url": "https://t.me/cryptonftded/3271",
+   "time": "2026-09-17T11:41:18+00:00"
+  }
+ ]
+}

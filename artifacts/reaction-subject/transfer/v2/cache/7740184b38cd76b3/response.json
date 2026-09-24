@@ -1,0 +1,46 @@
+{
+ "id": "gen-1790251534-cAZHeuB53nqDxWTFyQmF",
+ "object": "chat.completion",
+ "created": 1790251534,
+ "model": "deepseek/deepseek-v4-flash",
+ "provider": "DigitalOcean",
+ "system_fingerprint": null,
+ "service_tier": null,
+ "choices": [
+  {
+   "index": 0,
+   "logprobs": null,
+   "finish_reason": "stop",
+   "native_finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "content": "{\n  \"target\": \"other_subject\",\n  \"target_id\": null,\n  \"comment_fragment\": \"где можно рефку на фомо от Секретного найти?\",\n  \"context_fragment\": \"\",\n  \"why\": \"Comment asks for a referral, not about Arc NFT collections.\"\n}",
+    "refusal": null,
+    "reasoning": null
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 1675,
+  "completion_tokens": 67,
+  "total_tokens": 1742,
+  "cost": 0.000177282,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.000177282,
+   "upstream_inference_prompt_cost": 0.00016415,
+   "upstream_inference_completions_cost": 1.3132e-05
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

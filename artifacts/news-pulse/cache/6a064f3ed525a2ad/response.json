@@ -1,0 +1,32 @@
+{
+ "choices": [
+  {
+   "message": {
+    "content": "{\"labels\": [{\"id\": \"telegram:15:422716#s16\", \"kind\": \"author_position\", \"actor\": null, \"action\": \"argues\", \"object\": \"key point about ETH demand and key change\", \"qualifiers\": {\"event_date\": \"2027\"}, \"origin\": \"own\", \"source_role\": \"author\", \"verification_status\": \"unverified\", \"quote\": \"Ключевая суть здесь заключается в смене держателя топлива: спрос на ETH ради газа не умирает, он просто уходит от розницы к приложениям — для цены это нейтральный фактор.\\nА вот что реально недооценено — возможность сменить ключи на квантово-устойчивые прямо на старом адресе. Если доедет до мейннета в 2027-м без урезаний — это и будет самая важная часть апгрейда.\", \"span\": [0, 310]}]}"
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 1879,
+  "completion_tokens": 1666,
+  "total_tokens": 3545,
+  "cost": 0.00046899,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.00046899,
+   "upstream_inference_prompt_cost": 0.00016911,
+   "upstream_inference_completions_cost": 0.00029988
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

@@ -1,0 +1,46 @@
+{
+ "id": "gen-1790194137-LnBkeX810MpwwgP0INa7",
+ "object": "chat.completion",
+ "created": 1790194137,
+ "model": "deepseek/deepseek-v4-flash",
+ "provider": "Baidu",
+ "system_fingerprint": null,
+ "service_tier": null,
+ "choices": [
+  {
+   "index": 0,
+   "logprobs": null,
+   "finish_reason": "stop",
+   "native_finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "content": "{\"labels\": [{\"id\": \"telegram:11:96696#s1\", \"kind\": \"event\", \"actor\": null, \"action\": \"net inflow\", \"object\": \"ETH ETF\", \"qualifiers\": {\"version\": \"spot\", \"event_date\": null, \"place\": null, \"counterparty\": null}, \"origin\": \"own\", \"source_role\": \"editorial\", \"verification_status\": \"source_statement\", \"quote\": \"Общий чистый приток спотовых ETH-ETF составил $216,4 млн.\", \"span\": [0, 56]}, {\"id\": \"telegram:20:48883#s1\", \"kind\": \"promo_service\", \"actor\": null, \"action\": \"link\", \"object\": \"trade\", \"qualifiers\": {\"version\": null, \"event_date\": null, \"place\": null, \"counterparty\": null}, \"origin\": \"own\", \"source_role\": \"participant\", \"verification_status\": \"unverified\", \"quote\": \"https://trade.padre.gg/trade/eth/u4_0x000000000004444c5dc75cb358380d2e3de08a90_0xfd1c4559ad314e035e2440d88574ce44ff10ab05cfc90e4c8591b2fae7c73a6f\", \"span\": [0, 148]}, {\"id\": \"telegram:20:48890#s0\", \"kind\": \"participant_reaction\", \"actor\": \"author\", \"action\": \"opinion\", \"object\": \"announcement\", \"qualifiers\": {\"version\": null, \"event_date\": \"11H ago\", \"place\": null, \"counterparty\": null}, \"origin\": \"own\", \"source_role\": \"participant\", \"verification_status\": \"unverified\", \"quote\": \"How I'm seeing it is they announced it about 11H ago, nobody bat an eye (bc again not many use ETH mainnet as comparable to RH/SOL/BSC for ex)\", \"span\": [0, 131]}, {\"id\": \"telegram:20:48890#s2\", \"kind\": \"participant_reaction\", \"actor\": \"author\", \"action\": \"opinion\", \"object\": \"ETH\", \"qualifiers\": {\"version\": null, \"event_date\": null, \"place\": null, \"counterparty\": null}, \"origin\": \"own\", \"source_role\": \"participant\", \"verification_status\": \"unverified\", \"quote\": \"Until it forms a base and then slowly/gradually get the attention and staying power and grows from there. Not really going to compare it to anything rn atm bc ETH has not had anything w/ staying power (MOSTLY)\", \"span\": [0, 196]}, {\"id\": \"telegram:15:422837#s0\", \"kind\": \"promo_service\", \"actor\": null, \"action\": \"link\", \"object\": \"launchpad\", \"qualifiers\": {\"version\": null, \"event_date\": null, \"place\": \"Ethereum\", \"counterparty\": null}, \"origin\": \"own\", \"source_role\": \"editorial\", \"verification_status\": \"unverified\", \"quote\": \"https://sender.family/\\nЛаунчпад на эфире по типу STONK\", \"span\": [0, 49]}, {\"id\": \"telegram:9:1036578#s0\", \"kind\": \"event\", \"actor\": null, \"action\": \"price update\", \"object\": \"ETHER\", \"qualifiers\": {\"version\": null, \"event_date\": null, \"place\": null, \"counterparty\": null}, \"origin\": \"own\", \"source_role\": \"editorial\", \"verification_status\": \"source_statement\", \"quote\": \"#ETHER 2535.30 +0.17%\", \"span\": [18, 41]}, {\"id\": \"telegram:21:21060#s2\", \"kind\": \"event\", \"actor\": null, \"action\": \"funding rate\", \"object\": \"ETH\", \"qualifiers\": {\"version\": null, \"event_date\": null, \"place\": \"Binance, Bybit\", \"counterparty\": null}, \"origin\": \"own\", \"source_role\": \"editorial\", \"verification_status\": \"source_statement\", \"quote\": \"ETH: Binance: +0.0030% 🐂 | Bybit: +0.0057% 🐂\", \"span\": [37, 86]}, {\"id\": \"telegram:15:422844#s4\", \"kind\": \"event\", \"actor\": \"Coinbase\", \"action\": \"build\", \"object\": \"financial account for AI\", \"qualifiers\": {\"version\": null, \"event_date\": null, \"place\": null, \"counterparty\": null}, \"origin\": \"retelling\", \"source_role\": \"editorial\", \"verification_status\": \"source_statement\", \"quote\": \"Coinbase «строит финансовый счёт для ИИ» — это всего лишь одна фраза Брайана Армстронга в X, без продукта и деталей. Сам сервис Coinbase for Agents работает с июня: изолированные суб-портфели с лимитами, где агент торгует биткоином, эфиром, XRP и SOL прямо из ChatGPT или Claude.\", \"span\": [0, 278]}, {\"id\": \"telegram:15:422853#s2\", \"kind\": \"event\", \"actor\": null, \"action\": \"comparison\", \"object\": \"Ethereum\", \"qualifiers\": {\"version\": null, \"event_date\": null, \"place\": null, \"counterparty\": null}, \"origin\": \"own\", \"source_role\": \"editorial\", \"verification_status\": \"unverified\", \"quote\": \"Как минимум, отличие от Ethereum, Base и Solana здесь есть. Газ платится в USDC, а не в волатильном токене, поэтому комиссия не скачет вместе с ценой газа. Финальность детерминированная, то есть после подтверждения блока отката уже не будет и ждать двенадцать блоков не нужно. Хоть валидаторы и выбраны из узкого списка, деплоить контракты может кто угодно.\", \"span\": [0, 370]}, {\"id\": \"telegram:15:422853#s4\", \"kind\": \"event\", \"actor\": null, \"action\": \"technical description\", \"object\": \"Ethereum\", \"qualifiers\": {\"version\": null, \"event_date\": null, \"place\": null, \"counterparty\": null}, \"origin\": \"own\", \"source_role\": \"editorial\", \"verification_status\": \"unverified\", \"quote\": \"Технически под капотом находится BFT-консенсус на базе Tendermint с блоком около полусекунды и исполнением на форке EVM, так что контракты с Ethereum переносятся почти без изменений. USDC встроен как нативный газ на уровне протокола, а не как надстройка сверху.\", \"span\": [0, 249]}, {\"id\": \"telegram:15:422854#s11\", \"kind\": \"author_position\", \"actor\": \"ValdeMURRR.eth\", \"action\": \"mention\", \"object\": \"GS Alpha\", \"qualifiers\": {\"version\": null, \"event_date\": null, \"place\": null, \"counterparty\": null}, \"origin\": \"own\", \"source_role\": \"participant\", \"verification_status\": \"unverified\", \"quote\": \"GS Alpha: ValdeMURRR.eth | Чат | Щитпост\", \"span\": [0, 42]}, {\"id\": \"telegram:20:48937#s0\", \"kind\": \"participant_reaction\", \"actor\": \"author\", \"action\": \"opinion\", \"object\": \"ETH Asteroid\", \"qualifiers\": {\"version\": null, \"event_date\": null, \"place\": null, \"counterparty\": null}, \"origin\": \"own\", \"source_role\": \"participant\", \"verification_status\": \"unverified\", \"quote\": \"Did not know ETH Asteroid was taken over by the RH one\", \"span\": [0, 56]}]}",
+    "refusal": null,
+    "reasoning": null
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 2112,
+  "completion_tokens": 1856,
+  "total_tokens": 3968,
+  "cost": 0.00047046272,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.00047046272,
+   "upstream_inference_prompt_cost": 0.00017060736,
+   "upstream_inference_completions_cost": 0.00029985536
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

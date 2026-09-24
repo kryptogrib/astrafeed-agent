@@ -1,0 +1,17 @@
+{
+ "segments": [
+  {
+   "id": "telegram:15:423087#s2",
+   "text": "Давайте ловить раннеров вместе (а ещё лучше создавать на https://arc.openfair.app)",
+   "mentions": [
+    {
+     "text": "arc",
+     "status": "confirmed"
+    }
+   ],
+   "kind_hint": "post",
+   "url": "https://t.me/WEB3_AGGREGATOR/423087",
+   "time": "2026-09-16T11:01:43+00:00"
+  }
+ ]
+}

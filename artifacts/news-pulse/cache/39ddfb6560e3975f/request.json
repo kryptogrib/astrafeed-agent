@@ -1,0 +1,22 @@
+{
+ "a": {
+  "quote": "Сегодня (спасибо за поправку @intelligent_ua) кстати мейннет Arc, можно будет бриджить через Jumper.",
+  "actor": null,
+  "action": "launch",
+  "object": "мейннет Arc",
+  "qualifiers": {
+   "event_date": "Сегодня"
+  },
+  "url": "https://t.me/WEB3_AGGREGATOR/423093"
+ },
+ "b": {
+  "quote": "arc апдейт - вышли в майннет вчера и перебанили кучу аккаунтов кто фармил поинты (точнее кто в ивентах регистрировался и не заходил на них). Но намеки на роли архитектора в плане дропа есть. Так же из интересного они сминтили 10 млрд токенов $ARC в майннете, при этом пишут про то что это тех. моменты.",
+  "actor": "Arc",
+  "action": "launched mainnet and banned accounts",
+  "object": "mainnet",
+  "qualifiers": {
+   "event_date": "yesterday"
+  },
+  "url": "https://t.me/WEB3_AGGREGATOR/423182"
+ }
+}

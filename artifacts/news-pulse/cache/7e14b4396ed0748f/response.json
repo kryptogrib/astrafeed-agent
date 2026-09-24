@@ -1,0 +1,32 @@
+{
+ "choices": [
+  {
+   "message": {
+    "content": "{\"labels\": [{\"id\": \"telegram:20:48835#s1\", \"kind\": \"author_position\", \"actor\": null, \"action\": \"states\", \"object\": \"ETH rewards and narrative\", \"qualifiers\": {}, \"origin\": \"own\", \"source_role\": \"author\", \"verification_status\": \"unverified\", \"quote\": \"Gives ETH rewards, cat narrative, stonkfun, very easy narrative to get. No socials atm (according to dexscreener banner lol) but hopefully see some kind of organic movement here and hopefully see this run up w/ strength in time w/ some kind of community\", \"span\": [0, 240]}]}"
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 1879,
+  "completion_tokens": 1666,
+  "total_tokens": 3545,
+  "cost": 0.00046899,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.00046899,
+   "upstream_inference_prompt_cost": 0.00016911,
+   "upstream_inference_completions_cost": 0.00029988
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

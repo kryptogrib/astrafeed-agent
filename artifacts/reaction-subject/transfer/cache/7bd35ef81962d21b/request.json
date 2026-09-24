@@ -1,0 +1,21 @@
+{
+ "segments": [
+  {
+   "id": "telegram:10:840#s18",
+   "text": "> ZEC-paired\n> 3% комса\n> На комсу откупается ZEC и начисляется холдерам ZCAT\n\n",
+   "mentions": [
+    {
+     "text": "ZEC",
+     "status": "confirmed"
+    },
+    {
+     "text": "ZEC",
+     "status": "confirmed"
+    }
+   ],
+   "kind_hint": "post",
+   "url": "https://t.me/maxshitpostit/840",
+   "time": "2026-09-15T18:45:27+00:00"
+  }
+ ]
+}

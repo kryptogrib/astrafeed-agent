@@ -1,0 +1,46 @@
+{
+ "id": "gen-1790193170-jSYZe5nPHlcroqZMZd7U",
+ "object": "chat.completion",
+ "created": 1790193170,
+ "model": "deepseek/deepseek-v4-flash",
+ "provider": "Venice",
+ "system_fingerprint": null,
+ "service_tier": null,
+ "choices": [
+  {
+   "index": 0,
+   "logprobs": null,
+   "finish_reason": "stop",
+   "native_finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "content": "{\"labels\": [{\"id\": \"telegram:15:423488#s6\", \"kind\": \"promo_service\", \"actor\": null, \"action\": \"promote\", \"object\": \"Zcash airdrop campaign\", \"qualifiers\": {\"version\": null, \"event_date\": null, \"place\": null, \"counterparty\": null}, \"origin\": \"retelling\", \"source_role\": \"unknown\", \"verification_status\": \"unverified\", \"quote\": \"Переходим по ссылке, коннектим X (нужно минимум 100 фолловеров и акк старше 3 мес), выполняем задания и набираем >100 поинтов, добавляем Zcash кошелек и ждем результатов.\", \"span\": [0, 175]}, {\"id\": \"telegram:15:423488#s7\", \"kind\": \"event\", \"actor\": null, \"action\": \"announce\", \"object\": \"BITFOOTS collection\", \"qualifiers\": {\"version\": null, \"event_date\": null, \"place\": \"Zcash network\", \"counterparty\": null}, \"origin\": \"retelling\", \"source_role\": \"unknown\", \"verification_status\": \"unverified\", \"quote\": \"BITFOOTS — коллекция из бигфутов в сети Zcash.\", \"span\": [0, 50]}, {\"id\": \"telegram:15:423488#s9\", \"kind\": \"event\", \"actor\": null, \"action\": \"announce\", \"object\": \"Shielded Wizards collection\", \"qualifiers\": {\"version\": null, \"event_date\": null, \"place\": \"Zcash network\", \"counterparty\": null}, \"origin\": \"retelling\", \"source_role\": \"unknown\", \"verification_status\": \"unverified\", \"quote\": \"Shielded Wizards — коллекция из 2100 магов в сети Zcash.\", \"span\": [0, 60]}, {\"id\": \"telegram:15:423488#s10\", \"kind\": \"promo_service\", \"actor\": null, \"action\": \"promote\", \"object\": \"Zcash airdrop campaign\", \"qualifiers\": {\"version\": null, \"event_date\": null, \"place\": null, \"counterparty\": null}, \"origin\": \"retelling\", \"source_role\": \"unknown\", \"verification_status\": \"unverified\", \"quote\": \"Переходим по ссылке, выполняем задания, добавляем Zcash кошелек и ждем результатов.\", \"span\": [0, 85]}, {\"id\": \"telegram:15:423491#s2\", \"kind\": \"event\", \"actor\": \"NEAR Intents\", \"action\": \"facilitate\", \"object\": \"ZEC swaps\", \"qualifiers\": {\"version\": null, \"event_date\": \"30 days\", \"place\": null, \"counterparty\": null}, \"origin\": \"retelling\", \"source_role\": \"unknown\", \"verification_status\": \"unverified\", \"quote\": \"через NEAR Intents за 30 дней прошло $3,4 млрд кроссчейн объемов, в том числе и свопы в ZEC. На этом цена поднялась до $4,3\", \"span\": [0, 175]}, {\"id\": \"telegram:15:423491#s5\", \"kind\": \"event\", \"actor\": \"NEAR Intents\", \"action\": \"describe\", \"object\": \"swap mechanism\", \"qualifiers\": {\"version\": null, \"event_date\": null, \"place\": null, \"counterparty\": null}, \"origin\": \"retelling\", \"source_role\": \"unknown\", \"verification_status\": \"unverified\", \"quote\": \"пользователь или агент не исполняет транзакцию на конкретном DEX, а сразу требует результат: «хочу ZEC, готов отдать ETH»\", \"span\": [0, 175]}, {\"id\": \"telegram:15:423491#s9\", \"kind\": \"event\", \"actor\": \"NEAR\", \"action\": \"analyze\", \"object\": \"DeFi metrics\", \"qualifiers\": {\"version\": null, \"event_date\": null, \"place\": null, \"counterparty\": null}, \"origin\": \"retelling\", \"source_role\": \"unknown\", \"verification_status\": \"unverified\", \"quote\": \"TVL $190 млн, из которых всего $80 млн стейблов\", \"span\": [0, 175]}, {\"id\": \"telegram:15:423506#s0\", \"kind\": \"promo_service\", \"actor\": null, \"action\": \"promote\", \"object\": \"whitelist opportunities\", \"qualifiers\": {\"version\": null, \"event_date\": null, \"place\": null, \"counterparty\": null}, \"origin\": \"retelling\", \"source_role\": \"unknown\", \"verification_status\": \"unverified\", \"quote\": \"Сборник актуальных WL на Zcash и Robinhood под ворк!\", \"span\": [0, 60]}, {\"id\": \"telegram:15:423506#s5\", \"kind\": \"event\", \"actor\": null, \"action\": \"announce\", \"object\": \"JpegFrens whitelist\", \"qualifiers\": {\"version\": null, \"event_date\": null, \"place\": \"Zcash\", \"counterparty\": null}, \"origin\": \"retelling\", \"source_role\": \"unknown\", \"verification_status\": \"unverified\", \"quote\": \"JpegFrens (Zcash). Форма открыта, ждем инфы по минту.\", \"span\": [0, 55]}, {\"id\": \"telegram:15:423506#s6\", \"kind\": \"event\", \"actor\": null, \"action\": \"announce\", \"object\": \"ZecVision whitelist\", \"qualifiers\": {\"version\": null, \"event_date\": null, \"place\": \"Zcash\", \"counterparty\": null}, \"origin\": \"retelling\", \"source_role\": \"unknown\", \"verification_status\": \"unverified\", \"quote\": \"ZecVision (Zcash). Форма открыта. Ждем инфы по минту.\", \"span\": [0, 55]}, {\"id\": \"telegram:15:423506#s7\", \"kind\": \"event\", \"actor\": null, \"action\": \"announce\", \"object\": \"Yield Fields whitelist\", \"qualifiers\": {\"version\": null, \"event_date\": \"28 сентября\", \"place\": \"Zcash\", \"counterparty\": null}, \"origin\": \"retelling\", \"source_role\": \"unknown\", \"verification_status\": \"unverified\", \"quote\": \"Yield Fields (Zcash). Фармим кукурузу для получения WL. Дедлайн - 28 сентября.\", \"span\": [0, 80]}, {\"id\": \"telegram:15:423506#s8\", \"kind\": \"event\", \"actor\": null, \"action\": \"announce\", \"object\": \"Zrc20 whitelist\", \"qualifiers\": {\"version\": null, \"event_date\": null, \"place\": \"Zcash\", \"counterparty\": null}, \"origin\": \"retelling\", \"source_role\": \"unknown\", \"verification_status\": \"unverified\", \"quote\": \"Zrc20 (Zcash). Форма открыта, ждем инфу по минту.\", \"span\": [0, 55]}]}",
+    "refusal": null,
+    "reasoning": null
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 1911,
+  "completion_tokens": 1642,
+  "total_tokens": 3553,
+  "cost": 0.0005006876,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.0005006876,
+   "upstream_inference_prompt_cost": 0.0001846026,
+   "upstream_inference_completions_cost": 0.000316085
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

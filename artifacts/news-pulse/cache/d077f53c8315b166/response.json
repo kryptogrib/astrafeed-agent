@@ -1,0 +1,32 @@
+{
+ "choices": [
+  {
+   "message": {
+    "content": "{\"labels\": [{\"id\": \"telegram:3:6910#s1\", \"kind\": \"author_position\", \"actor\": null, \"action\": null, \"object\": \"MetaMask\", \"qualifiers\": {}, \"origin\": \"own\", \"source_role\": \"author\", \"verification_status\": \"unverified\", \"quote\": \"MetaMask - главный Ethereum-кошелёк, 100 млн юзеров.\", \"span\": [0, 50]}]}"
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 1902,
+  "completion_tokens": 1831,
+  "total_tokens": 3733,
+  "cost": 0.00042375424,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.00042375424,
+   "upstream_inference_prompt_cost": 0.00014485632,
+   "upstream_inference_completions_cost": 0.00027889792
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

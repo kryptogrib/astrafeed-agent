@@ -1,0 +1,32 @@
+{
+ "choices": [
+  {
+   "message": {
+    "content": "{\"labels\": [{\"id\": \"telegram:15:423142#s1\", \"kind\": \"event\", \"actor\": null, \"action\": \"release\", \"object\": \"collections\", \"qualifiers\": {\"place\": \"Robinhood, Arc, Zcash\"}, \"origin\": \"own\", \"source_role\": \"author\", \"verification_status\": \"unverified\", \"quote\": \"На самом деле сейчас несется че то очень интересное, потому что и на Robinhood и на Arc и на Zcash, стали выходить коллекции, причем не для виду, а реально с кучей иксов. ну вы сами знаете.\", \"span\": [0, 175]}]}"
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 1835,
+  "completion_tokens": 1534,
+  "total_tokens": 3369,
+  "cost": 0.00044127,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.00044127,
+   "upstream_inference_prompt_cost": 0.00016515,
+   "upstream_inference_completions_cost": 0.00027612
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

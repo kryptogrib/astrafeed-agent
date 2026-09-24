@@ -1,0 +1,17 @@
+{
+ "segments": [
+  {
+   "id": "telegram:16:12745:c:475792#s0",
+   "text": "Я получил Архитектора в Arc House, а как в дисе теперь получить эту роль?",
+   "mentions": [
+    {
+     "text": "Arc",
+     "status": "confirmed"
+    }
+   ],
+   "kind_hint": "comment",
+   "url": "https://t.me/workIncrypts/12745?comment=475792",
+   "time": "2026-09-16T15:33:52+00:00"
+  }
+ ]
+}

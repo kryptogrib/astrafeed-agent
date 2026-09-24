@@ -1,0 +1,28 @@
+{
+ "a": {
+  "quote": "Сегодня (спасибо за поправку @intelligent_ua) кстати мейннет Arc",
+  "actor": "Arc",
+  "action": "будет мейннет",
+  "object": "мейннет Arc",
+  "qualifiers": {
+   "version": null,
+   "event_date": "Сегодня",
+   "place": null,
+   "counterparty": null
+  },
+  "url": "https://t.me/CryptoEarnImp/10991"
+ },
+ "b": {
+  "quote": "Arc запустил публичный mainnet и уже сейчас мы можем делать быстрые активности.",
+  "actor": "Arc",
+  "action": "launched",
+  "object": "public mainnet",
+  "qualifiers": {
+   "version": "mainnet",
+   "event_date": "2026-09-16",
+   "place": null,
+   "counterparty": null
+  },
+  "url": "https://t.me/krasnovcrypto/3754"
+ }
+}

@@ -1,0 +1,25 @@
+{
+ "segments": [
+  {
+   "id": "telegram:1:7141#s2",
+   "text": "🔴Arc сминтили 10 млрд токенов $ARC в Mainnet. Сама же команда пишет, что это техническая необходимость, а не подготовка к дропу. При этом, в X сами байтят холдеров Architect ролей.\n",
+   "mentions": [
+    {
+     "text": "Arc",
+     "status": "confirmed"
+    },
+    {
+     "text": "$ARC",
+     "status": "confirmed"
+    },
+    {
+     "text": "ARC",
+     "status": "confirmed"
+    }
+   ],
+   "kind_hint": "post",
+   "url": "https://t.me/whitelist1/7141",
+   "time": "2026-09-17T07:02:16+00:00"
+  }
+ ]
+}

@@ -1,0 +1,17 @@
+{
+ "segments": [
+  {
+   "id": "telegram:1:7149#s32",
+   "text": "• Приватная коллекция на Zcash: арт публичный. Саплай/цена не раскрыты; \n",
+   "mentions": [
+    {
+     "text": "Zcash",
+     "status": "confirmed"
+    }
+   ],
+   "kind_hint": "post",
+   "url": "https://t.me/whitelist1/7149",
+   "time": "2026-09-20T12:49:57+00:00"
+  }
+ ]
+}

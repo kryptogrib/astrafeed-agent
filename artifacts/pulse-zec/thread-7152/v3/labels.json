@@ -1,0 +1,206 @@
+[
+ {
+  "id": "572204",
+  "relevance": "unrelated",
+  "aspect": null,
+  "kind": "other",
+  "summary": null,
+  "quote": null,
+  "context_ids": []
+ },
+ {
+  "id": "572205",
+  "relevance": "unrelated",
+  "aspect": null,
+  "kind": "other",
+  "summary": null,
+  "quote": null,
+  "context_ids": []
+ },
+ {
+  "id": "572206",
+  "relevance": "unrelated",
+  "aspect": null,
+  "kind": "other",
+  "summary": null,
+  "quote": null,
+  "context_ids": []
+ },
+ {
+  "id": "572207",
+  "relevance": "relevant",
+  "aspect": "usage",
+  "kind": "other",
+  "summary": "Указывает флор в 0.018 ZEC.",
+  "quote": "0.018 ZEC флор",
+  "context_ids": [
+   "post"
+  ],
+  "name_candidate": null
+ },
+ {
+  "id": "572208",
+  "relevance": "unrelated",
+  "aspect": null,
+  "kind": "other",
+  "summary": null,
+  "quote": null,
+  "context_ids": []
+ },
+ {
+  "id": "572209",
+  "relevance": "unrelated",
+  "aspect": null,
+  "kind": "other",
+  "summary": null,
+  "quote": null,
+  "context_ids": []
+ },
+ {
+  "id": "572210",
+  "relevance": "relevant",
+  "aspect": "usage",
+  "kind": "opinion",
+  "summary": "Говорит, что по всем NFT в ZEC фад.",
+  "quote": "там по всем нфт фад в зеке",
+  "context_ids": [
+   "572205"
+  ],
+  "name_candidate": null
+ },
+ {
+  "id": "572211",
+  "relevance": "unrelated",
+  "aspect": null,
+  "kind": "other",
+  "summary": null,
+  "quote": null,
+  "context_ids": []
+ },
+ {
+  "id": "572212",
+  "relevance": "unrelated",
+  "aspect": null,
+  "kind": "other",
+  "summary": null,
+  "quote": null,
+  "context_ids": []
+ },
+ {
+  "id": "572216",
+  "relevance": "unrelated",
+  "aspect": null,
+  "kind": "other",
+  "summary": null,
+  "quote": null,
+  "context_ids": []
+ },
+ {
+  "id": "572217",
+  "relevance": "unrelated",
+  "aspect": null,
+  "kind": "other",
+  "summary": null,
+  "quote": null,
+  "context_ids": []
+ },
+ {
+  "id": "572218",
+  "relevance": "unrelated",
+  "aspect": null,
+  "kind": "other",
+  "summary": null,
+  "quote": null,
+  "context_ids": []
+ },
+ {
+  "id": "572219",
+  "relevance": "unrelated",
+  "aspect": null,
+  "kind": "other",
+  "summary": null,
+  "quote": null,
+  "context_ids": []
+ },
+ {
+  "id": "572220",
+  "relevance": "unrelated",
+  "aspect": null,
+  "kind": "other",
+  "summary": null,
+  "quote": null,
+  "context_ids": []
+ },
+ {
+  "id": "572221",
+  "relevance": "unrelated",
+  "aspect": null,
+  "kind": "other",
+  "summary": null,
+  "quote": null,
+  "context_ids": []
+ },
+ {
+  "id": "572225",
+  "relevance": "unrelated",
+  "aspect": null,
+  "kind": "other",
+  "summary": null,
+  "quote": null,
+  "context_ids": []
+ },
+ {
+  "id": "572226",
+  "relevance": "unrelated",
+  "aspect": null,
+  "kind": "other",
+  "summary": null,
+  "quote": null,
+  "context_ids": []
+ },
+ {
+  "id": "572227",
+  "relevance": "unrelated",
+  "aspect": null,
+  "kind": "other",
+  "summary": null,
+  "quote": null,
+  "context_ids": []
+ },
+ {
+  "id": "572235",
+  "relevance": "unrelated",
+  "aspect": null,
+  "kind": "other",
+  "summary": null,
+  "quote": null,
+  "context_ids": []
+ },
+ {
+  "id": "572236",
+  "relevance": "unrelated",
+  "aspect": null,
+  "kind": "other",
+  "summary": null,
+  "quote": null,
+  "context_ids": []
+ },
+ {
+  "id": "572237",
+  "relevance": "unrelated",
+  "aspect": null,
+  "kind": "other",
+  "summary": null,
+  "quote": null,
+  "context_ids": []
+ },
+ {
+  "id": "572238",
+  "relevance": "unrelated",
+  "aspect": null,
+  "kind": "other",
+  "summary": null,
+  "quote": null,
+  "context_ids": []
+ }
+]

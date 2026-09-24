@@ -1,0 +1,21 @@
+{
+ "segments": [
+  {
+   "id": "telegram:18:31450#s1",
+   "text": "С 22 сентября квалифицированные инвесторы смогут торговать вечными фьючерсами на индексы #BTC, #ETH, #SOL, #XRP и #TRX.\n\n",
+   "mentions": [
+    {
+     "text": "#ETH",
+     "status": "confirmed"
+    },
+    {
+     "text": "ETH",
+     "status": "confirmed"
+    }
+   ],
+   "kind_hint": "post",
+   "url": "https://t.me/crypto_hd/31450",
+   "time": "2026-09-16T07:12:49+00:00"
+  }
+ ]
+}

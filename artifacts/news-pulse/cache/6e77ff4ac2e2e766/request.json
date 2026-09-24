@@ -1,0 +1,17 @@
+{
+ "segments": [
+  {
+   "id": "telegram:21:21101#s3",
+   "text": "  BTC: Binance: +0.0017% 🐂 | Bybit: +0.0040% 🐂\n  ETH: Binance: -0.0052% 🐻 | Bybit: -0.0039% 🐻\n\n",
+   "mentions": [
+    {
+     "text": "ETH",
+     "status": "confirmed"
+    }
+   ],
+   "kind_hint": "post",
+   "url": "https://t.me/rawa_imagination/21101",
+   "time": "2026-09-16T10:01:01+00:00"
+  }
+ ]
+}

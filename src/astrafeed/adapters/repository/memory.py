@@ -22,6 +22,7 @@ class InMemoryRepository(Repository):
         self._next_queue = 1
         self._sources: dict[int, Source] = {}
         self._source_ids: dict[int, int] = {}
+        self._rss_source_ids: dict[str, int] = {}
         self._items: dict[tuple[int, str], Item] = {}
         self._coverage: dict[int, list[Coverage]] = {}
         self._ingest_watermarks: dict[int, datetime] = {}
@@ -82,6 +83,13 @@ class InMemoryRepository(Repository):
 
     async def get_source(self, source_id: int) -> Source | None:
         return self._sources.get(source_id)
+
+    async def upsert_rss_source(self, url: str) -> Source:
+        if url not in self._rss_source_ids:
+            source = Source(len(self._sources) + 1, rss_url=url)
+            self._sources[source.id] = source
+            self._rss_source_ids[url] = source.id
+        return self._sources[self._rss_source_ids[url]]
 
     async def store_items(self, source_id: int, items: Sequence[Item]) -> None:
         for item in items:

@@ -1,0 +1,11 @@
+{
+  "note": "Предварительная агентская разметка, настроечный набор D2; SHA-256 не является подписью.",
+  "db_md5": "8618099125a806df376354286ccd982e",
+  "sha256": {
+    "posts.jsonl": "5d1adfda8b2f87969c424510f63adbef0ad24ba71f41b859a354f2c9dd24a6dd",
+    "comments.jsonl": "e727e64954ef1890b717bcb9557b7264ea29269b46963d80cbba6321bb351bb4",
+    "pairs.jsonl": "742883eec2f702cf2015bc2d03ed58115cb95becbb3ce7398d8b811fb1c23eed",
+    "README.md": "02dee71625be2c45fa9f90018ac410618807151ba8236c49dd2d6c0b2e64ad4b",
+    "sample.py": "a84dba06b86654614da6f0c6d3b2d1e46eada24ac95f2343585192c662076ea0"
+  }
+}

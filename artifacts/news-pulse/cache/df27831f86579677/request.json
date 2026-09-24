@@ -1,0 +1,20 @@
+{
+ "a": {
+  "quote": "Но оч много фомо постов с ожиданиями, то что еще и $ZEC растет",
+  "actor": null,
+  "action": "observe",
+  "object": "FOMO posts and $ZEC growth",
+  "qualifiers": {},
+  "url": "https://t.me/WEB3_AGGREGATOR/423134"
+ },
+ "b": {
+  "quote": "Фиг его, не хочется обольщаться, другие посты и по 0.16 - 0.24 $ZEC за штуку",
+  "actor": null,
+  "action": "post",
+  "object": "NFT",
+  "qualifiers": {
+   "version": "0.16 - 0.24 $ZEC per piece"
+  },
+  "url": "https://t.me/WEB3_AGGREGATOR/423134"
+ }
+}

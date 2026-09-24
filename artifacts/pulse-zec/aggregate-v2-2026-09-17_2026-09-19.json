@@ -1,0 +1,565 @@
+{
+ "grouping": "агентская группировка v2, 2026-09-24, по публикуемым наборам v3 после исправления опоры #ZEC (2426 и 21112 — с исправлениями слоя corrections.json); не человеческая, не вывод модели. Заменяет arguments.json, который сохранён без изменений.",
+ "threads": {
+  "21112": {
+   "link": "https://t.me/rawa_imagination/21112",
+   "channel": "rawa_imagination",
+   "comments": 8,
+   "participants": 5,
+   "published": 1,
+   "held": 0,
+   "first": "2026-09-17 19:12:14.000000",
+   "last": "2026-09-18 18:50:57.000000",
+   "first_kept": "2026-09-17 19:12:14.000000",
+   "last_kept": "2026-09-18 18:50:57.000000"
+  },
+  "2426": {
+   "link": "https://t.me/icodrops_sergey/2426",
+   "channel": "icodrops_sergey",
+   "comments": 28,
+   "participants": 20,
+   "published": 22,
+   "held": 0,
+   "first": "2026-09-17 17:59:53.000000",
+   "last": "2026-09-23 08:00:52.000000",
+   "first_kept": "2026-09-17 17:59:53.000000",
+   "last_kept": "2026-09-18 19:14:01.000000"
+  },
+  "2432": {
+   "link": "https://t.me/icodrops_sergey/2432",
+   "channel": "icodrops_sergey",
+   "comments": 0,
+   "participants": 0,
+   "published": 0,
+   "held": 0,
+   "first": "2026-09-22 12:11:01.000000",
+   "last": "2026-09-23 05:40:16.000000",
+   "first_kept": null,
+   "last_kept": null
+  },
+  "5299": {
+   "link": "https://t.me/don_invest/5299",
+   "channel": "don_invest",
+   "comments": 0,
+   "participants": 0,
+   "published": 0,
+   "held": 0,
+   "first": "2026-09-21 08:38:24.000000",
+   "last": "2026-09-21 15:07:06.000000",
+   "first_kept": null,
+   "last_kept": null
+  },
+  "7130": {
+   "link": "https://t.me/whitelist1/7130",
+   "channel": "whitelist1",
+   "comments": 0,
+   "participants": 0,
+   "published": 0,
+   "held": 0,
+   "first": "2026-09-11 12:05:04.000000",
+   "last": "2026-09-12 12:56:11.000000",
+   "first_kept": null,
+   "last_kept": null
+  },
+  "7149": {
+   "link": "https://t.me/whitelist1/7149",
+   "channel": "whitelist1",
+   "comments": 0,
+   "participants": 0,
+   "published": 0,
+   "held": 0,
+   "first": "2026-09-20 12:50:00.000000",
+   "last": "2026-09-21 17:40:24.000000",
+   "first_kept": null,
+   "last_kept": null
+  },
+  "7150": {
+   "link": "https://t.me/whitelist1/7150",
+   "channel": "whitelist1",
+   "comments": 0,
+   "participants": 0,
+   "published": 0,
+   "held": 0,
+   "first": "2026-09-21 07:03:50.000000",
+   "last": "2026-09-21 09:24:51.000000",
+   "first_kept": null,
+   "last_kept": null
+  },
+  "7151": {
+   "link": "https://t.me/whitelist1/7151",
+   "channel": "whitelist1",
+   "comments": 0,
+   "participants": 0,
+   "published": 0,
+   "held": 0,
+   "first": "2026-09-21 10:30:23.000000",
+   "last": "2026-09-21 19:33:17.000000",
+   "first_kept": null,
+   "last_kept": null
+  },
+  "7152": {
+   "link": "https://t.me/whitelist1/7152",
+   "channel": "whitelist1",
+   "comments": 0,
+   "participants": 0,
+   "published": 0,
+   "held": 0,
+   "first": "2026-09-22 07:01:07.000000",
+   "last": "2026-09-22 11:28:54.000000",
+   "first_kept": null,
+   "last_kept": null
+  }
+ },
+ "window": [
+  "2026-09-17 17:59:53.000000",
+  "2026-09-18 08:30:45.000000"
+ ],
+ "unassigned_published": [],
+ "units": [
+  {
+   "key": "forecast_20k",
+   "type": "opinion",
+   "title": "Прогноз 20k, «но не сразу»",
+   "ids": [
+    "2426/150563"
+   ],
+   "direction": "up",
+   "subject": "Цена и стадия роста",
+   "comments": 1,
+   "authors": 1,
+   "threads": 1,
+   "channels": 1,
+   "links": [
+    "https://t.me/icodrops_sergey/2426?comment=150563"
+   ],
+   "ts": [
+    "2026-09-17 18:54:01.000000"
+   ]
+  },
+  {
+   "key": "forecast_70k",
+   "type": "opinion",
+   "title": "«70к вполне реально», ждать долго; чья цена — спорно",
+   "ids": [
+    "2426/150564"
+   ],
+   "direction": "up",
+   "subject": "Цена и стадия роста",
+   "comments": 1,
+   "authors": 1,
+   "threads": 1,
+   "channels": 1,
+   "links": [
+    "https://t.me/icodrops_sergey/2426?comment=150564"
+   ],
+   "ts": [
+    "2026-09-17 19:00:51.000000"
+   ]
+  },
+  {
+   "key": "conditional_privacy",
+   "type": "argument",
+   "title": "Рост при условии, что рынок уйдёт в приватность, а ZEC поведёт (условие к 70к)",
+   "ids": [
+    "2426/150566"
+   ],
+   "direction": "up",
+   "subject": "Цена и стадия роста",
+   "comments": 1,
+   "authors": 1,
+   "threads": 1,
+   "channels": 1,
+   "links": [
+    "https://t.me/icodrops_sergey/2426?comment=150566"
+   ],
+   "ts": [
+    "2026-09-17 19:07:24.000000"
+   ]
+  },
+  {
+   "key": "fomo_later",
+   "type": "argument",
+   "title": "На ~3 иксах FOMO нет, начнётся к 5k",
+   "ids": [
+    "2426/150550"
+   ],
+   "direction": "up",
+   "subject": "Цена и стадия роста",
+   "comments": 1,
+   "authors": 1,
+   "threads": 1,
+   "channels": 1,
+   "links": [
+    "https://t.me/icodrops_sergey/2426?comment=150550"
+   ],
+   "ts": [
+    "2026-09-17 18:03:30.000000"
+   ]
+  },
+  {
+   "key": "no_interest",
+   "type": "opinion",
+   "title": "Массового интереса пока нет (без вывода)",
+   "ids": [
+    "2426/150567"
+   ],
+   "direction": "none",
+   "subject": "Цена и стадия роста",
+   "comments": 1,
+   "authors": 1,
+   "threads": 1,
+   "channels": 1,
+   "links": [
+    "https://t.me/icodrops_sergey/2426?comment=150567"
+   ],
+   "ts": [
+    "2026-09-18 02:48:51.000000"
+   ]
+  },
+  {
+   "key": "no_interest_potential",
+   "type": "argument",
+   "title": "Всем всё равно — значит есть потенциал на иксы",
+   "ids": [
+    "2426/150568"
+   ],
+   "direction": "up",
+   "subject": "Цена и стадия роста",
+   "comments": 1,
+   "authors": 1,
+   "threads": 1,
+   "channels": 1,
+   "links": [
+    "https://t.me/icodrops_sergey/2426?comment=150568"
+   ],
+   "ts": [
+    "2026-09-18 03:08:00.000000"
+   ]
+  },
+  {
+   "key": "fomo_now",
+   "type": "opinion",
+   "title": "FOMO уже у всех, жду отката",
+   "ids": [
+    "2426/150547"
+   ],
+   "direction": "down",
+   "subject": "Цена и стадия роста",
+   "comments": 1,
+   "authors": 1,
+   "threads": 1,
+   "channels": 1,
+   "links": [
+    "https://t.me/icodrops_sergey/2426?comment=150547"
+   ],
+   "ts": [
+    "2026-09-17 17:59:53.000000"
+   ]
+  },
+  {
+   "key": "on_tv",
+   "type": "experience",
+   "title": "«Уже по телеку показывают» (возможна ирония)",
+   "ids": [
+    "2426/150560"
+   ],
+   "direction": "unknown",
+   "subject": "Цена и стадия роста",
+   "comments": 1,
+   "authors": 1,
+   "threads": 1,
+   "channels": 1,
+   "links": [
+    "https://t.me/icodrops_sergey/2426?comment=150560"
+   ],
+   "ts": [
+    "2026-09-17 18:26:26.000000"
+   ]
+  },
+  {
+   "key": "stake_too_small",
+   "type": "opinion",
+   "title": "Даже x2–x5 на $100 ничего не изменят",
+   "ids": [
+    "2426/150573"
+   ],
+   "direction": "none",
+   "subject": "Цена и стадия роста",
+   "comments": 1,
+   "authors": 1,
+   "threads": 1,
+   "channels": 1,
+   "links": [
+    "https://t.me/icodrops_sergey/2426?comment=150573"
+   ],
+   "ts": [
+    "2026-09-18 07:17:35.000000"
+   ]
+  },
+  {
+   "key": "bubble",
+   "type": "opinion",
+   "title": "Пузырь, «дырявый ледокол на дно» — один автор",
+   "ids": [
+    "2426/150571",
+    "2426/150572"
+   ],
+   "direction": "down",
+   "subject": "Цена и стадия роста",
+   "comments": 2,
+   "authors": 1,
+   "threads": 1,
+   "channels": 1,
+   "links": [
+    "https://t.me/icodrops_sergey/2426?comment=150571",
+    "https://t.me/icodrops_sergey/2426?comment=150572"
+   ],
+   "ts": [
+    "2026-09-18 05:18:49.000000",
+    "2026-09-18 05:20:19.000000"
+   ]
+  },
+  {
+   "key": "how_far",
+   "type": "opinion",
+   "title": "Сколько уже прошли: 12 иксов от дна, вход автора канала (цифры не проверены)",
+   "ids": [
+    "2426/150556",
+    "2426/150557",
+    "2426/150574"
+   ],
+   "direction": "none",
+   "subject": "Цена и стадия роста",
+   "comments": 3,
+   "authors": 1,
+   "threads": 1,
+   "channels": 1,
+   "links": [
+    "https://t.me/icodrops_sergey/2426?comment=150556",
+    "https://t.me/icodrops_sergey/2426?comment=150557",
+    "https://t.me/icodrops_sergey/2426?comment=150574"
+   ],
+   "ts": [
+    "2026-09-17 18:23:59.000000",
+    "2026-09-17 18:24:30.000000",
+    "2026-09-18 07:19:05.000000"
+   ]
+  },
+  {
+   "key": "early_signal",
+   "type": "answer",
+   "title": "Ссылка на ранний сигнал в канале (не проверялась)",
+   "ids": [
+    "2426/150576"
+   ],
+   "direction": "none",
+   "subject": "Цена и стадия роста",
+   "comments": 1,
+   "authors": 1,
+   "threads": 1,
+   "channels": 1,
+   "links": [
+    "https://t.me/icodrops_sergey/2426?comment=150576"
+   ],
+   "ts": [
+    "2026-09-18 08:30:45.000000"
+   ]
+  },
+  {
+   "key": "hamsters_irony",
+   "type": "reaction",
+   "title": "Ирония: хомяков загоняют на ATH после x3",
+   "ids": [
+    "2426/150548"
+   ],
+   "direction": "down",
+   "subject": "Цена и стадия роста",
+   "comments": 1,
+   "authors": 1,
+   "threads": 1,
+   "channels": 1,
+   "links": [
+    "https://t.me/icodrops_sergey/2426?comment=150548"
+   ],
+   "ts": [
+    "2026-09-17 18:00:30.000000"
+   ]
+  },
+  {
+   "key": "one_liners",
+   "type": "reaction",
+   "title": "Однострочники: «время лонга», «шорт озолотит», «как в 2017»",
+   "ids": [
+    "2426/150551",
+    "2426/150552",
+    "2426/150554"
+   ],
+   "direction": "unknown",
+   "subject": "Цена и стадия роста",
+   "comments": 3,
+   "authors": 3,
+   "threads": 1,
+   "channels": 1,
+   "links": [
+    "https://t.me/icodrops_sergey/2426?comment=150551",
+    "https://t.me/icodrops_sergey/2426?comment=150552",
+    "https://t.me/icodrops_sergey/2426?comment=150554"
+   ],
+   "ts": [
+    "2026-09-17 18:03:44.000000",
+    "2026-09-17 18:03:44.000000",
+    "2026-09-17 18:04:48.000000"
+   ]
+  },
+  {
+   "key": "gloating",
+   "type": "reaction",
+   "title": "Злорадство над скептиками",
+   "ids": [
+    "2426/150549",
+    "2426/150555"
+   ],
+   "direction": "up",
+   "subject": "Цена и стадия роста",
+   "comments": 2,
+   "authors": 2,
+   "threads": 1,
+   "channels": 1,
+   "links": [
+    "https://t.me/icodrops_sergey/2426?comment=150549",
+    "https://t.me/icodrops_sergey/2426?comment=150555"
+   ],
+   "ts": [
+    "2026-09-17 18:02:53.000000",
+    "2026-09-17 18:21:53.000000"
+   ]
+  },
+  {
+   "key": "dash",
+   "type": "opinion",
+   "title": "DASH — «младший брат» ZEC, ещё покажет себя",
+   "ids": [
+    "2426/150569"
+   ],
+   "subject": "Сравнения с другими монетами",
+   "comments": 1,
+   "authors": 1,
+   "threads": 1,
+   "channels": 1,
+   "links": [
+    "https://t.me/icodrops_sergey/2426?comment=150569"
+   ],
+   "ts": [
+    "2026-09-18 04:42:02.000000"
+   ]
+  },
+  {
+   "key": "near_like_zec",
+   "type": "argument",
+   "title": "Разбор NEAR: структура похожа на zen/zec, при повторе ZEC — «космос»; сам держит NEAR и ZEN",
+   "ids": [
+    "21112/343092"
+   ],
+   "subject": "Сравнения с другими монетами",
+   "comments": 1,
+   "authors": 1,
+   "threads": 1,
+   "channels": 1,
+   "links": [
+    "https://t.me/rawa_imagination/21112?comment=343092"
+   ],
+   "ts": [
+    "2026-09-17 19:40:52.000000"
+   ]
+  }
+ ],
+ "topics": [
+  {
+   "topic": "Цена и стадия роста",
+   "comments": 21,
+   "authors": 17,
+   "threads": 1,
+   "by_type": {
+    "opinion": {
+     "comments": 10,
+     "authors": 7
+    },
+    "argument": {
+     "comments": 3,
+     "authors": 3
+    },
+    "experience": {
+     "comments": 1,
+     "authors": 1
+    },
+    "answer": {
+     "comments": 1,
+     "authors": 1
+    },
+    "reaction": {
+     "comments": 6,
+     "authors": 6
+    }
+   }
+  },
+  {
+   "topic": "Сравнения с другими монетами",
+   "comments": 2,
+   "authors": 2,
+   "threads": 2,
+   "by_type": {
+    "opinion": {
+     "comments": 1,
+     "authors": 1
+    },
+    "argument": {
+     "comments": 1,
+     "authors": 1
+    }
+   }
+  }
+ ],
+ "observations": [
+  {
+   "key": "price_split",
+   "text": "О цене ZEC мнения расходятся. Доводы за рост — массового FOMO ещё нет, и рынок может уйти в приватность; против — пузырь и ожидание отката. Прогнозы конкретных уровней даны без обоснования.",
+   "units": [
+    "fomo_later",
+    "no_interest_potential",
+    "conditional_privacy",
+    "forecast_20k",
+    "forecast_70k",
+    "bubble",
+    "fomo_now"
+   ],
+   "units_total": 7,
+   "comments": 8,
+   "authors": 6,
+   "threads": 1,
+   "channels": 1,
+   "links": [
+    {
+     "id": "2426/150550",
+     "link": "https://t.me/icodrops_sergey/2426?comment=150550"
+    },
+    {
+     "id": "2426/150568",
+     "link": "https://t.me/icodrops_sergey/2426?comment=150568"
+    },
+    {
+     "id": "2426/150566",
+     "link": "https://t.me/icodrops_sergey/2426?comment=150566"
+    },
+    {
+     "id": "2426/150563",
+     "link": "https://t.me/icodrops_sergey/2426?comment=150563"
+    },
+    {
+     "id": "2426/150564",
+     "link": "https://t.me/icodrops_sergey/2426?comment=150564"
+    }
+   ],
+   "more_links": 3
+  }
+ ]
+}

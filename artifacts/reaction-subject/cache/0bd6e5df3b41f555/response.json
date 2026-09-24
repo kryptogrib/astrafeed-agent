@@ -1,0 +1,46 @@
+{
+ "id": "gen-1790247088-fvycio23nReuGRPJKa53",
+ "object": "chat.completion",
+ "created": 1790247088,
+ "model": "deepseek/deepseek-v4-flash",
+ "provider": "Parasail",
+ "system_fingerprint": null,
+ "service_tier": null,
+ "choices": [
+  {
+   "index": 0,
+   "logprobs": null,
+   "finish_reason": "stop",
+   "native_finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "content": "{\n  \"items\": [\n    {\n      \"id\": \"arc|https://t.me/icodrops_sergey/2427?comment=150626\",\n      \"target\": \"other_subject\",\n      \"target_id\": null,\n      \"comment_fragment\": \"Может я не до конца понимаю, но по мне, так как раз наоборот - достаточно узкоспециализированное применение у него.\",\n      \"context_fragment\": \"\",\n      \"why\": \"Comment discusses JEV's niche, not reacting to any event or thesis.\"\n    }\n  ]\n}",
+    "refusal": null,
+    "reasoning": null
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 986,
+  "completion_tokens": 124,
+  "total_tokens": 1110,
+  "cost": 0.00017276,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.00017276,
+   "upstream_inference_prompt_cost": 0.00013804,
+   "upstream_inference_completions_cost": 3.472e-05
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

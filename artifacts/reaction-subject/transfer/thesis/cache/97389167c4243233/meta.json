@@ -1,0 +1,33 @@
+{
+ "prompt_sha256": "effdaf427b04cc5f",
+ "input_sha256": "76269c433dad0cdd",
+ "model": "deepseek/deepseek-v4-flash",
+ "schema": "author-thesis-extract/v1",
+ "db_md5": "1c714bad0d7dd7e07d1f2c5032fd8dce",
+ "provider_pinned": null,
+ "seconds": 5.7,
+ "provider_actual": "GMICloud",
+ "usage": {
+  "prompt_tokens": 1320,
+  "completion_tokens": 387,
+  "total_tokens": 1707,
+  "cost": 0.0001719172,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 256,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.0001719172,
+   "upstream_inference_prompt_cost": 0.0001014832,
+   "upstream_inference_completions_cost": 7.0434e-05
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

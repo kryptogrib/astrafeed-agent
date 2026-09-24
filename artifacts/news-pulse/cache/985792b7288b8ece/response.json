@@ -1,0 +1,46 @@
+{
+ "id": "gen-1790191328-YAObxLb5cfPCR0ZuYh8H",
+ "object": "chat.completion",
+ "created": 1790191328,
+ "model": "deepseek/deepseek-v4-flash",
+ "provider": "Baidu",
+ "system_fingerprint": null,
+ "service_tier": null,
+ "choices": [
+  {
+   "index": 0,
+   "logprobs": null,
+   "finish_reason": "stop",
+   "native_finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "content": "{\n  \"labels\": [\n    {\n      \"id\": \"telegram:11:96708#s0\",\n      \"kind\": \"event\",\n      \"actor\": null,\n      \"action\": \"net outflow\",\n      \"object\": \"BTC-ETF\",\n      \"qualifiers\": {\n        \"event_date\": \"last week (7 to 11 August)\",\n        \"version\": \"spot\",\n        \"counterparty\": null,\n        \"place\": null\n      },\n      \"origin\": \"retelling\",\n      \"source_role\": \"editorial\",\n      \"verification_status\": \"source_statement\",\n      \"quote\": \"общий чистый отток спотовых BTC-ETF составил ~$462 млн\",\n      \"span\": [0, 93]\n    },\n    {\n      \"id\": \"telegram:11:96708#s1\",\n      \"kind\": \"event\",\n      \"actor\": null,\n      \"action\": \"net inflow\",\n      \"object\": \"ETH-ETF\",\n      \"qualifiers\": {\n        \"event_date\": \"last week (7 to 11 August)\",\n        \"version\": \"spot\",\n        \"counterparty\": null,\n        \"place\": null\n      },\n      \"origin\": \"retelling\",\n      \"source_role\": \"editorial\",\n      \"verification_status\": \"source_statement\",\n      \"quote\": \"Общий чистый приток спотовых ETH-ETF составил ~197 млн.\",\n      \"span\": [0, 55]\n    },\n    {\n      \"id\": \"telegram:15:422908#s10\",\n      \"kind\": \"event\",\n      \"actor\": \"author\",\n      \"action\": \"swap\",\n      \"object\": \"ETH\",\n      \"qualifiers\": {\n        \"version\": null,\n        \"event_date\": null,\n        \"place\": \"Robinhood\",\n        \"counterparty\": \"$CRCL\"\n      },\n      \"origin\": \"own\",\n      \"source_role\": \"participant\",\n      \"verification_status\": \"unverified\",\n      \"quote\": \"Свапаем ETH в Robinhood на $CRCL в Robinhood\",\n      \"span\": [0, 47]\n    },\n    {\n      \"id\": \"telegram:21:21074#s11\",\n      \"kind\": \"event\",\n      \"actor\": \"Ethereum\",\n      \"action\": \"becomes leader\",\n      \"object\": null,\n      \"qualifiers\": {\n        \"version\": null,\n        \"event_date\": null,\n        \"place\": null,\n        \"counterparty\": null\n      },\n      \"origin\": \"retelling\",\n      \"source_role\": \"editorial\",\n      \"verification_status\": \"source_statement\",\n      \"quote\": \"Ethereum выходит в лидеры на фоне оттока $463 млн из Bitcoin ETF?\",\n      \"span\": [4, 72]\n    },\n    {\n      \"id\": \"telegram:21:21074#s13\",\n      \"kind\": \"event\",\n      \"actor\": \"Ethereum\",\n      \"action\": \"becomes leader\",\n      \"object\": null,\n      \"qualifiers\": {\n        \"version\": null,\n        \"event_date\": null,\n        \"place\": null,\n        \"counterparty\": null\n      },\n      \"origin\": \"retelling\",\n      \"source_role\": \"editorial\",\n      \"verification_status\": \"source_statement\",\n      \"quote\": \"Ethereum выходит в лидеры на фоне оттока $463 млн из Bitcoin ETF?\",\n      \"span\": [17, 85]\n    },\n    {\n      \"id\": \"telegram:15:422914#s2\",\n      \"kind\": \"event\",\n      \"actor\": null,\n      \"action\": \"price quote\",\n      \"object\": \"Ethereum\",\n      \"qualifiers\": {\n        \"version\": null,\n        \"event_date\": null,\n        \"place\": null,\n        \"counterparty\": null\n      },\n      \"origin\": \"own\",\n      \"source_role\": \"editorial\",\n      \"verification_status\": \"unverified\",\n      \"quote\": \"Ethereum: $2,522 +0.18%\",\n      \"span\": [18, 42]\n    },\n    {\n      \"id\": \"telegram:21:21075#s2\",\n      \"kind\": \"event\",\n      \"actor\": null,\n      \"action\": \"funding rate\",\n      \"object\": \"ETH\",\n      \"qualifiers\": {\n        \"version\": null,\n        \"event_date\": null,\n        \"place\": \"Binance, Bybit\",\n        \"counterparty\": null\n      },\n      \"origin\": \"own\",\n      \"source_role\": \"editorial\",\n      \"verification_status\": \"unverified\",\n      \"quote\": \"ETH: Binance: +0.0074% 🐂 | Bybit: +0.0100% 🐂\",\n      \"span\": [37, 87]\n    },\n    {\n      \"id\": \"telegram:9:1037522#s0\",\n      \"kind\": \"event\",\n      \"actor\": null,\n      \"action\": \"market share\",\n      \"object\": \"Ethereum, Solana, Base\",\n      \"qualifiers\": {\n        \"version\": null,\n        \"event_date\": null,\n        \"place\": \"Euro stablecoins market\",\n        \"counterparty\": null\n      },\n      \"origin\": \"retelling\",\n      \"source_role\": \"editorial\",\n      \"verification_status\": \"source_statement\",\n      \"quote\": \"ETHEREUM, SOLANA, AND BASE ACCOUNT FOR 91.5% OF THE MARKET CAP OF EURO STABLECOINS\",\n      \"span\": [0, 89]\n    },\n    {\n      \"id\": \"telegram:10:384699#s0\",\n      \"kind\": \"event\",\n      \"actor\": \"BitMine (Tom Lee's Fundstrat)\",\n      \"action\": \"purchase\",\n      \"object\": \"ETH\",\n      \"qualifiers\": {\n        \"version\": null,\n        \"event_date\": \"last week\",\n        \"place\": null,\n        \"counterparty\": null\n      },\n      \"origin\": \"retelling\",\n      \"source_role\": \"editorial\",\n      \"verification_status\": \"source_statement\",\n      \"quote\": \"Компания BitMine Тома Ли из Fundstrat купила на баланс еще 27 180 ETH на прошлой неделе\",\n      \"span\": [0, 93]\n    },\n    {\n      \"id\": \"telegram:10:384699#s1\",\n      \"kind\": \"event\",\n      \"actor\": \"BitMine\",\n      \"action\": \"holdings\",\n      \"object\": \"ETH\",\n      \"qualifiers\": {\n        \"version\": null,\n        \"event_date\": null,\n        \"place\": null,\n        \"counterparty\": null\n      },\n      \"origin\": \"retelling\",\n      \"source_role\": \"editorial\",\n      \"verification_status\": \"source_statement\",\n      \"quote\": \"на балансе уже более 5.96 млн ETH (около 4.9% общего предложения)\",\n      \"span\": [0, 68]\n    },\n    {\n      \"id\": \"telegram:10:384699#s2\",\n      \"kind\": \"event\",\n      \"actor\": \"BitMine\",\n      \"action\": \"announcement\",\n      \"object\": \"ETH\",\n      \"qualifiers\": {\n        \"version\": null,\n        \"event_date\": null,\n        \"place\": null,\n        \"counterparty\": null\n      },\n      \"origin\": \"retelling\",\n      \"source_role\": \"editorial\",\n      \"verification_status\": \"source_statement\",\n      \"quote\": \"объявленная цель компании - купить 5% всего ETH\",\n      \"span\": [0, 52]\n    },\n    {\n      \"id\": \"telegram:11:96719#s0\",\n      \"kind\": \"event\",\n      \"actor\": \"BitMine\",\n      \"action\": \"purchase\",\n      \"object\": \"ETH\",\n      \"qualifiers\": {\n        \"version\": null,\n        \"event_date\": \"last week\",\n        \"place\": null,\n        \"counterparty\": null\n      },\n      \"origin\": \"retelling\",\n      \"source_role\": \"editorial\",\n      \"verification_status\": \"source_statement\",\n      \"quote\": \"BitMine за последнюю неделю приобрели 27 180 ETH, в результате чего общий объем активов теперь составляет 5,96 млн ETH\",\n      \"span\": [0, 115]\n    }\n  ]\n}",
+    "refusal": null,
+    "reasoning": null
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 1839,
+  "completion_tokens": 1850,
+  "total_tokens": 3689,
+  "cost": 0.00046450054,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.00046450054,
+   "upstream_inference_prompt_cost": 0.00015421854,
+   "upstream_inference_completions_cost": 0.000310282
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

@@ -189,6 +189,8 @@ class IngestionCoordinator:
         source = await self._store.get_source(source_id)
         if source is None:
             return Coverage(start=start, end=end, complete=False), f"source {source_id} not found"
+        if source.telegram_id is None:
+            return Coverage(start=start, end=end, complete=False), "not a Telegram source"
 
         existing = await self._store.coverage(source_id, start, end)
         if existing.complete:

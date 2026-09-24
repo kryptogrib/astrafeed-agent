@@ -1,0 +1,17 @@
+{
+ "segments": [
+  {
+   "id": "telegram:1:7149:c:571974#s0",
+   "text": "А на каком маркете торгуются нфт на Zcash ?",
+   "mentions": [
+    {
+     "text": "Zcash",
+     "status": "confirmed"
+    }
+   ],
+   "kind_hint": "comment",
+   "url": "https://t.me/whitelist1/7149?comment=571974",
+   "time": "2026-09-20T12:57:09+00:00"
+  }
+ ]
+}

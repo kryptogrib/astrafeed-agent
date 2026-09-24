@@ -1,0 +1,46 @@
+{
+ "id": "gen-1790247025-FG1kKNwXam7moXl9nDti",
+ "object": "chat.completion",
+ "created": 1790247025,
+ "model": "deepseek/deepseek-v4-flash",
+ "provider": "GMICloud",
+ "system_fingerprint": null,
+ "service_tier": null,
+ "choices": [
+  {
+   "index": 0,
+   "logprobs": null,
+   "finish_reason": "stop",
+   "native_finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "content": "{\"items\": [{\"id\": \"arc|https://t.me/Slavik_investor_updates/6918?comment=138099\", \"verdict\": \"keep\", \"fragment\": \"Ну зашквар или новый уровень?\", \"why\": \"Comment directly reacts to the launch event, questioning its quality.\"}, {\"id\": \"arc|https://t.me/Slavik_investor_updates/6918?comment=138119\", \"verdict\": \"keep\", \"fragment\": \"Вот это поворот, интригующе же\", \"why\": \"Comment expresses intrigue about the announced launch.\"}, {\"id\": \"arc|https://t.me/Slavik_investor_updates/6918?comment=138120\", \"verdict\": \"keep\", \"fragment\": \"Вот это поворот, ждем новостей!\", \"why\": \"Comment reacts to the event, anticipating further news.\"}, {\"id\": \"arc|https://t.me/Slavik_investor_updates/6918?comment=138167\", \"verdict\": \"keep\", \"fragment\": \"Ну это ж круто, смотрю за развитием\", \"why\": \"Comment positively reacts to the launch and follows development.\"}]}",
+    "refusal": null,
+    "reasoning": null
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 1146,
+  "completion_tokens": 271,
+  "total_tokens": 1417,
+  "cost": 0.000153608,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.000153608,
+   "upstream_inference_prompt_cost": 0.000104286,
+   "upstream_inference_completions_cost": 4.9322e-05
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

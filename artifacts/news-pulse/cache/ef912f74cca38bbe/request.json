@@ -1,0 +1,23 @@
+{
+ "a": {
+  "quote": "Сегодня (спасибо за поправку @intelligent_ua) кстати мейннет Arc, можно будет бриджить через Jumper.",
+  "actor": "Arc",
+  "action": "mainnet launch",
+  "object": "Arc",
+  "qualifiers": {
+   "event_date": "today",
+   "place": "Jumper bridge"
+  },
+  "url": "https://t.me/CryptoEarnImp/10991"
+ },
+ "b": {
+  "quote": "Arc запустит майннет 16 сентября",
+  "actor": "Arc",
+  "action": "запустит",
+  "object": "майннет",
+  "qualifiers": {
+   "event_date": "16 сентября"
+  },
+  "url": "https://t.me/WEB3_AGGREGATOR/422875"
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "a": {
+  "quote": "Общий чистый отток спотовых ETH-ETF составил ~$140 млн.",
+  "actor": null,
+  "action": "net outflow",
+  "object": "spot ETH-ETF",
+  "qualifiers": {
+   "version": "~$140 млн"
+  },
+  "url": "https://t.me/cryptoattack24/96837"
+ },
+ "b": {
+  "quote": "📈 🔴 ETH ETF: отток $39M",
+  "actor": null,
+  "action": "outflow",
+  "object": "ETH ETF",
+  "qualifiers": {
+   "amount": "$39M",
+   "event_date": "2026-09-18"
+  },
+  "url": "https://t.me/rawa_imagination/21117"
+ }
+}

@@ -1,0 +1,17 @@
+{
+ "segments": [
+  {
+   "id": "telegram:12:271:c:4412#s0",
+   "text": "а что за фарм был в arc?",
+   "mentions": [
+    {
+     "text": "arc",
+     "status": "confirmed"
+    }
+   ],
+   "kind_hint": "comment",
+   "url": "https://t.me/sellnotbuych/271?comment=4412",
+   "time": "2026-09-13T11:37:08+00:00"
+  }
+ ]
+}

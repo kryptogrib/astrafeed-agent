@@ -1,0 +1,29 @@
+{
+ "segments": [
+  {
+   "id": "telegram:11:96838#s3",
+   "text": "3. Гаррет Джин, удерживавший крупнейший шорт #ZEC, закрыл его, зафиксировав убыток в $35,44 млн. Он всё ещё удерживает спот на 202 078 #ZEC ($309,25 млн) с прибылью $221 млн.",
+   "mentions": [
+    {
+     "text": "#ZEC",
+     "status": "confirmed"
+    },
+    {
+     "text": "ZEC",
+     "status": "confirmed"
+    },
+    {
+     "text": "#ZEC",
+     "status": "confirmed"
+    },
+    {
+     "text": "ZEC",
+     "status": "confirmed"
+    }
+   ],
+   "kind_hint": "post",
+   "url": "https://t.me/cryptoattack24/96838",
+   "time": "2026-09-21T04:05:02+00:00"
+  }
+ ]
+}

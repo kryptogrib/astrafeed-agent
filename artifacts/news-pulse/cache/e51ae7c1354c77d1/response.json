@@ -1,0 +1,32 @@
+{
+ "choices": [
+  {
+   "message": {
+    "content": "{\"labels\": [{\"id\": \"telegram:15:423294#s2\", \"kind\": \"event\", \"actor\": null, \"action\": \"есть коллекция\", \"object\": \"по эфиру\", \"qualifiers\": {\"version\": null, \"event_date\": null, \"place\": null, \"counterparty\": null}, \"origin\": \"unknown\", \"source_role\": \"unknown\", \"verification_status\": \"unverified\", \"topic_role\": \"subject\", \"quote\": \"1. У них есть уже коллекция почти по эфиру.\", \"span\": [0, 42]}]}"
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 1910,
+  "completion_tokens": 2292,
+  "total_tokens": 4202,
+  "cost": 0.00046458076,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.00046458076,
+   "upstream_inference_prompt_cost": 0.0001366414,
+   "upstream_inference_completions_cost": 0.00032793936
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

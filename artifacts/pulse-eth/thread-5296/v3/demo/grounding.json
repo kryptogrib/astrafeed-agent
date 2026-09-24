@@ -1,0 +1,109 @@
+{
+ "model_input": {
+  "request": "artifacts/pulse-eth/thread-5296/v3/request.json",
+  "input_sha256": "d3b4ed3d94fd5e35",
+  "mentions": {
+   "379796": [
+    {
+     "text": "eth",
+     "status": "confirmed"
+    }
+   ],
+   "379890": [
+    {
+     "text": "ether",
+     "status": "confirmed"
+    }
+   ],
+   "379891": [
+    {
+     "text": "эфире",
+     "status": "ambiguous"
+    }
+   ],
+   "379897": [
+    {
+     "text": "eth",
+     "status": "confirmed"
+    }
+   ],
+   "379909": [
+    {
+     "text": "eth",
+     "status": "confirmed"
+    }
+   ]
+  },
+  "held_if_published_on_it": [
+   "379899",
+   "379908",
+   "379911",
+   "379912",
+   "379913",
+   "379914",
+   "379927",
+   "379928",
+   "379929",
+   "379931",
+   "379937",
+   "379938",
+   "379939",
+   "379940"
+  ]
+ },
+ "publication": {
+  "grounding_version": "headline-hashtag/2026-09-24",
+  "classifier_sha256": "b471a79b80634986",
+  "mentions": {
+   "379909": [
+    {
+     "text": "eth",
+     "status": "confirmed"
+    }
+   ],
+   "379897": [
+    {
+     "text": "eth",
+     "status": "confirmed"
+    }
+   ],
+   "379891": [
+    {
+     "text": "эфире",
+     "status": "ambiguous"
+    }
+   ],
+   "379890": [
+    {
+     "text": "ether",
+     "status": "confirmed"
+    }
+   ],
+   "379796": [
+    {
+     "text": "eth",
+     "status": "confirmed"
+    }
+   ]
+  },
+  "held": [
+   "379899",
+   "379908",
+   "379911",
+   "379912",
+   "379913",
+   "379914",
+   "379927",
+   "379928",
+   "379929",
+   "379931",
+   "379937",
+   "379938",
+   "379939",
+   "379940"
+  ]
+ },
+ "mentions_changed": [],
+ "released_by_new_grounding": [],
+ "held_by_new_grounding": []
+}

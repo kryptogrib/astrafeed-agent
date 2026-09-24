@@ -1,0 +1,46 @@
+{
+ "id": "gen-1790196651-GVFiEvp4unBYUqeubzZ4",
+ "object": "chat.completion",
+ "created": 1790196651,
+ "model": "deepseek/deepseek-v4-flash",
+ "provider": "Alibaba",
+ "system_fingerprint": null,
+ "service_tier": null,
+ "choices": [
+  {
+   "index": 0,
+   "logprobs": null,
+   "finish_reason": "stop",
+   "native_finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "content": "{\n  \"labels\": [\n    {\n      \"id\": \"telegram:13:3754#s0\",\n      \"kind\": \"promo_service\",\n      \"actor\": null,\n      \"action\": \"promote\",\n      \"object\": \"Arc\",\n      \"qualifiers\": {},\n      \"origin\": \"own\",\n      \"source_role\": \"author\",\n      \"verification_status\": \"unverified\",\n      \"quote\": \"📟Arc | фармим раннюю активность в mainnet\",\n      \"span\": [0, 44]\n    },\n    {\n      \"id\": \"telegram:13:3754#s1\",\n      \"kind\": \"event\",\n      \"actor\": \"Arc\",\n      \"action\": \"launch\",\n      \"object\": \"public mainnet\",\n      \"qualifiers\": {},\n      \"origin\": \"retelling\",\n      \"source_role\": \"author\",\n      \"verification_status\": \"unverified\",\n      \"quote\": \"Arc запустил публичный mainnet и уже сейчас мы можем делать быстрые активности.\",\n      \"span\": [0, 82]\n    },\n    {\n      \"id\": \"telegram:13:3754#s2\",\n      \"kind\": \"author_position\",\n      \"actor\": null,\n      \"action\": \"describe\",\n      \"object\": \"Arc\",\n      \"qualifiers\": {},\n      \"origin\": \"own\",\n      \"source_role\": \"author\",\n      \"verification_status\": \"unverified\",\n      \"quote\": \"Arc — L1-сеть от Circle для платежей, стейблкоинов и финансовых приложений. В экосистеме уже есть Uniswap, Aave, Morpho, Aerodrome и другие крупные проекты.\",\n      \"span\": [0, 155]\n    },\n    {\n      \"id\": \"telegram:13:3754#s4\",\n      \"kind\": \"promo_service\",\n      \"actor\": null,\n      \"action\": \"instruct\",\n      \"object\": \"Arc activities\",\n      \"qualifiers\": {},\n      \"origin\": \"own\",\n      \"source_role\": \"author\",\n      \"verification_status\": \"unverified\",\n      \"quote\": \"Инструкция:\\n🔘Заходим на OnchainGM — ТУТ\\n🔘Бриджим любой актив в USDC в сеть Arc\\n🔘На главной странице делаем GM и Deploy\\n🔘По желанию делаем несколько свапов через Uniswap\\n🔘Активничаем в fomoapp — ТУТ\",\n      \"span\": [0, 196]\n    },\n    {\n      \"id\": \"telegram:19:18974#s0\",\n      \"kind\": \"participant_reaction\",\n      \"actor\": null,\n      \"action\": \"express_intent\",\n      \"object\": \"claim X’s\",\n      \"qualifiers\": {},\n      \"origin\": \"own\",\n      \"source_role\": \"participant\",\n      \"verification_status\": \"unverified\",\n      \"quote\": \"will claim X’s when this is the meme runner of arc\",\n      \"span\": [0, 56]\n    },\n    {\n      \"id\": \"telegram:19:18978#s0\",\n      \"kind\": \"author_position\",\n      \"actor\": null,\n      \"action\": \"quote\",\n      \"object\": \"bio\",\n      \"qualifiers\": {},\n      \"origin\": \"retelling\",\n      \"source_role\": \"participant\",\n      \"verification_status\": \"unverified\",\n      \"quote\": \"bio - ‘ building @arc @circle ‘\",\n      \"span\": [0, 33]\n    },\n    {\n      \"id\": \"telegram:19:18978#s2\",\n      \"kind\": \"participant_reaction\",\n      \"actor\": null,\n      \"action\": \"praise\",\n      \"object\": \"meme for arc\",\n      \"qualifiers\": {},\n      \"origin\": \"own\",\n      \"source_role\": \"participant\",\n      \"verification_status\": \"unverified\",\n      \"quote\": \"This is the best meme for arc\",\n      \"span\": [0, 30]\n    },\n    {\n      \"id\": \"telegram:15:423121#s0\",\n      \"kind\": \"event\",\n      \"actor\": \"ARC\",\n      \"action\": \"launch\",\n      \"object\": \"mainnet\",\n      \"qualifiers\": {\"event_date\": \"18 MSK\"},\n      \"origin\": \"retelling\",\n      \"source_role\": \"author\",\n      \"verification_status\": \"unverified\",\n      \"quote\": \"Я вам просто напоминаю, что в 18 по Москве официально ARC запускают и вы уже сейчас можете абсолютно бесплатно создавать свои мемы на https://arc.openfair.app/\",\n      \"span\": [0, 155]\n    },\n    {\n      \"id\": \"telegram:15:423121#s1\",\n      \"kind\": \"promo_service\",\n      \"actor\": null,\n      \"action\": \"promote\",\n      \"object\": \"referral program\",\n      \"qualifiers\": {},\n      \"origin\": \"own\",\n      \"source_role\": \"author\",\n      \"verification_status\": \"unverified\",\n      \"quote\": \"Ну и конечно же можете делиться своей рефкой с друзьями создающими мемы вида \\nhttps://arc.openfair.app/?ref=0xТвойКошелёк\\nи получать 50% дохода платформы со всех свапов :)\",\n      \"span\": [0, 175]\n    },\n    {\n      \"id\": \"telegram:15:423125#s0\",\n      \"kind\": \"redistribution\",\n      \"actor\": null,\n      \"action\": \"share\",\n      \"object\": \"article\",\n      \"qualifiers\": {},\n      \"origin\": \"repost\",\n      \"source_role\": \"author\",\n      \"verification_status\": \"unverified\",\n      \"quote\": \"https://decrypt.co/378374/circle-launches-arc-mainnet-with-blackrock-dtcc-and-visa-as-validators\",\n      \"span\": [0, 93]\n    },\n    {\n      \"id\": \"telegram:15:423128#s0\",\n      \"kind\": \"promo_service\",\n      \"actor\": null,\n      \"action\": \"announce\",\n      \"object\": \"Arc Chain Coin Tracking\",\n      \"qualifiers\": {},\n      \"origin\": \"own\",\n      \"source_role\": \"author\",\n      \"verification_status\": \"unverified\",\n      \"quote\": \"🔹 Arc Chain Coin Tracking Is Live\",\n      \"span\": [0, 35]\n    },\n    {\n      \"id\": \"telegram:20:49028#s0\",\n      \"kind\": \"participant_reaction\",\n      \"actor\": null,\n      \"action\": \"hold\",\n      \"object\": \"$ARCHITECTS position\",\n      \"qualifiers\": {},\n      \"origin\": \"own\",\n      \"source_role\": \"participant\",\n      \"verification_status\": \"unverified\",\n      \"quote\": \"Still in my $ARCHITECTS position (PumpFun wallet integrated Arc chain so you can ape there)\",\n      \"span\": [0, 93]\n    }\n  ]\n}",
+    "refusal": null,
+    "reasoning": null
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 1659,
+  "completion_tokens": 1561,
+  "total_tokens": 3220,
+  "cost": 0.000640654,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.000640654,
+   "upstream_inference_prompt_cost": 0.000222306,
+   "upstream_inference_completions_cost": 0.000418348
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

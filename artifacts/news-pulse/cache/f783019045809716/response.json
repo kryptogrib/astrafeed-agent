@@ -1,0 +1,32 @@
+{
+ "choices": [
+  {
+   "message": {
+    "content": "{\"labels\": [{\"id\": \"telegram:15:423339#s1\", \"kind\": \"event\", \"actor\": null, \"action\": \"торгуются\", \"object\": \"zec\", \"qualifiers\": {\"counterparty\": \"клиринг прайса\"}, \"origin\": \"unknown\", \"source_role\": \"unknown\", \"verification_status\": \"unverified\", \"quote\": \"Перед использованием посмотрите гайд как и что там работает (транзу с кодом в мемо надо будет немного подождать), вроде даже не лагает особо. Торгуются в +0.5 zec от клиринг прайса (1.5 zec). Уменя на рафле хитнуло только 2/10 не достаточно бычил на их цену и просчитался анлаки\", \"span\": [0, 253]}]}"
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 1948,
+  "completion_tokens": 1858,
+  "total_tokens": 3806,
+  "cost": 0.0004400928,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.0004400928,
+   "upstream_inference_prompt_cost": 0.0001513596,
+   "upstream_inference_completions_cost": 0.0002887332
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

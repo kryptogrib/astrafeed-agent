@@ -1,0 +1,17 @@
+{
+ "segments": [
+  {
+   "id": "telegram:16:12747#s1",
+   "text": "1) Arc - запустили майнет\n",
+   "mentions": [
+    {
+     "text": "Arc",
+     "status": "confirmed"
+    }
+   ],
+   "kind_hint": "post",
+   "url": "https://t.me/workIncrypts/12747",
+   "time": "2026-09-17T08:27:35+00:00"
+  }
+ ]
+}

@@ -1,0 +1,46 @@
+{
+ "id": "gen-1790253941-Uy72VRIh6EMaHW3oekEH",
+ "object": "chat.completion",
+ "created": 1790253941,
+ "model": "deepseek/deepseek-v4-flash",
+ "provider": "Venice",
+ "system_fingerprint": null,
+ "service_tier": "default",
+ "choices": [
+  {
+   "index": 0,
+   "logprobs": null,
+   "finish_reason": "stop",
+   "native_finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "content": "{\"target\": \"other_subject\", \"target_id\": null, \"comment_fragment\": \"Вот это всё с клодом и обсуждай\", \"context_fragment\": \"\", \"why\": \"Comment dismisses the topic, referring to Claude discussion, not post content.\"}",
+    "refusal": null,
+    "reasoning": null
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 2147,
+  "completion_tokens": 62,
+  "total_tokens": 2209,
+  "cost": 8.13512e-05,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 1792,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 8.13512e-05,
+   "upstream_inference_prompt_cost": 6.94162e-05,
+   "upstream_inference_completions_cost": 1.1935e-05
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

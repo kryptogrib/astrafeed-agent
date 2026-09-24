@@ -1,0 +1,17 @@
+{
+ "segments": [
+  {
+   "id": "telegram:21:21051#s9",
+   "text": "📈 🔴 ETH ETF: отток $30M\n",
+   "mentions": [
+    {
+     "text": "ETH",
+     "status": "confirmed"
+    }
+   ],
+   "kind_hint": "post",
+   "url": "https://t.me/rawa_imagination/21051",
+   "time": "2026-09-11T10:01:01+00:00"
+  }
+ ]
+}

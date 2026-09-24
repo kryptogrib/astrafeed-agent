@@ -1,0 +1,23 @@
+{
+ "a": {
+  "quote": "🪙Circle сейчас держит два разных Arc в одном блоке: институциональный слой на $75 млн и мем-биржу на $336 млн.",
+  "actor": "Circle",
+  "action": "holds",
+  "object": "two different Arc in one block",
+  "qualifiers": {},
+  "url": "https://t.me/WEB3_AGGREGATOR/423227"
+ },
+ "b": {
+  "quote": "Circle запустила свой блокчейна Arc",
+  "actor": "Circle",
+  "action": "launched",
+  "object": "Arc blockchain",
+  "qualifiers": {
+   "version": null,
+   "event_date": null,
+   "place": null,
+   "counterparty": null
+  },
+  "url": "https://t.me/markettwits/385037"
+ }
+}

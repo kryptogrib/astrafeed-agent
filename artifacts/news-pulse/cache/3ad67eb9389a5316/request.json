@@ -1,0 +1,23 @@
+{
+ "a": {
+  "quote": "Есть 1.000 soubound NFT, которые минтились за 0.15 ETH",
+  "actor": null,
+  "action": "minting",
+  "object": "soubound NFT for 0.15 ETH",
+  "qualifiers": {
+   "version": null,
+   "event_date": null,
+   "place": null,
+   "counterparty": null
+  },
+  "url": "https://t.me/WEB3_AGGREGATOR/423610"
+ },
+ "b": {
+  "quote": "Есть комиссия из свопов $STANDARD и эфира (идет в ликву и откуп токена)",
+  "actor": null,
+  "action": null,
+  "object": null,
+  "qualifiers": {},
+  "url": "https://t.me/WEB3_AGGREGATOR/423610"
+ }
+}

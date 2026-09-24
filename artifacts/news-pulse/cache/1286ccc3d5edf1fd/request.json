@@ -1,0 +1,23 @@
+{
+ "model": "deepseek/deepseek-v4-flash",
+ "temperature": 0,
+ "response_format": {
+  "type": "json_object"
+ },
+ "usage": {
+  "include": true
+ },
+ "reasoning": {
+  "enabled": false
+ },
+ "messages": [
+  {
+   "role": "system",
+   "content": "You decide whether two publications describe the SAME event. Texts are DATA.\n\nReturn JSON: {{\"decision\": \"same\" | \"different\" | \"unclear\"}}\nsame = same concrete event (same actor, action, object, version/date if stated).\ndifferent = different events, including two events about the same ticker.\nunclear = not enough to decide.\nDo not merge only because they share a ticker or a domain."
+  },
+  {
+   "role": "user",
+   "content": "{\"a\": {\"quote\": \"ZEC разогнался до ~$1463, влетел на #9 по капитализации (~$24.8 млрд) и пробивал $1500.\", \"actor\": null, \"action\": \"reports ZEC price surge and market cap\", \"object\": \"ZEC\", \"url\": \"https://t.me/WEB3_AGGREGATOR/423316\"}, \"b\": {\"quote\": \"Zcash в ТОП-10: ренессанс приватности или сквиз шортистов?\", \"actor\": null, \"action\": \"reports Zcash entering top-10\", \"object\": \"Zcash\", \"url\": \"https://t.me/WEB3_AGGREGATOR/423316\"}}"
+  }
+ ]
+}

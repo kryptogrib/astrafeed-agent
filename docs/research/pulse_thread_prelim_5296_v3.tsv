@@ -1,0 +1,86 @@
+# PRELIMINARY agent labels (not human, not independent), thread 5296, contract v3 (relevance, aspect only).
+# Derived from pulse_thread_prelim_5296.tsv (v2) before the v3 model run: direct/contextual -> relevant, related/unrelated -> unrelated,
+# unclear -> unclear, payment -> usage; per-reply adjustments are noted. The agent had seen the v2 model output.
+comment_id	relevance	aspect	borderline	note
+379741	unrelated			
+379744	unrelated			
+379745	unrelated			question
+379746	unrelated			
+379750	unrelated			
+379752	unclear		image only	
+379747	unrelated			
+379748	unrelated			
+379753	unrelated			
+379754	unrelated			question
+379755	unrelated			
+379758	unrelated			
+379759	unrelated			
+379760	unrelated			
+379761	unrelated			
+379762	unrelated			
+379763	unrelated			
+379764	unrelated			
+379766	unclear		image only	
+379767	unrelated		1	refers to the image above
+379768	unrelated			
+379769	unrelated			
+379770	unrelated			
+379774	unrelated			
+379775	unrelated			
+379776	unrelated			
+379777	unrelated			
+379778	unclear		image only, in a banter chain	
+379779	unrelated			
+379782	unrelated			
+379792	unrelated		1	parent missing
+379794	unrelated			
+379796	relevant	usage		v3: mint price in ETH -> usage (payment currency)
+379797	unrelated		1	parent missing
+379798	unrelated		1	parent missing
+379800	unrelated			joke
+379802	unclear		parent missing	
+379804	unrelated		1	parent missing
+379807	unrelated		1	parent missing
+379817	unclear		parent missing	
+379820	unclear		parent missing	
+379823	unclear		parent missing	
+379824	unclear		parent missing	
+379846	unrelated			
+379847	unclear		question with image	
+379848	unclear		answer to an image question	
+379849	unrelated			
+379851	unrelated			
+379852	unrelated			
+379878	unrelated			
+379879	unrelated			
+379880	unrelated			
+379890	relevant	usage		v3: not enough ether for price and gas
+379891	relevant	usage		v3: balance in ETH on a wallet
+379892	relevant	usage	1	v3: reply to 379891 (balance in ETH): check the mint price
+379893	unrelated		1	follows 379892 in time, but replies to the post
+379895	relevant	usage		v3: reply to 379890 (not enough ether): same, 55$ not enough
+379896	unrelated		1	same error as 379890, but replies to the post
+379897	relevant	usage		v3: mint price 0.16 eth
+379898	unrelated			
+379899	unclear			v3: sent 500, cannot mint; ETH only implied by siblings
+379904	unrelated			
+379905	unrelated			
+379908	unrelated			
+379909	relevant	usage		v3: NFT floor price named in ETH -> usage, not ETH market
+379911	unrelated			question
+379912	unclear			v3: mint price 0.16+ without a unit; ETH only implied by a sibling (379897), not the chain
+379913	unrelated			
+379914	unrelated			
+379918	unrelated			
+379919	unrelated			
+379920	unrelated			
+379927	unrelated			
+379928	unrelated			
+379929	unrelated			
+379931	unrelated			question
+379933	unrelated			
+379937	unrelated			
+379938	unrelated			
+379939	unrelated			v3: mint price vs floor on OpenSea, no ETH in text or chain
+379940	unrelated			
+379999	unrelated			

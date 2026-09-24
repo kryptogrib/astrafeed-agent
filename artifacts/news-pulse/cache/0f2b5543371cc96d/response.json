@@ -1,0 +1,46 @@
+{
+ "id": "gen-1790192859-tfc7wWpI00u7uAoD38l3",
+ "object": "chat.completion",
+ "created": 1790192859,
+ "model": "deepseek/deepseek-v4-flash",
+ "provider": "Venice",
+ "system_fingerprint": null,
+ "service_tier": null,
+ "choices": [
+  {
+   "index": 0,
+   "logprobs": null,
+   "finish_reason": "stop",
+   "native_finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "content": "{\"labels\": [{\"id\": \"telegram:18:31476#s5\", \"kind\": \"event\", \"actor\": \"Кит «t1JhvB»\", \"action\": \"вывел\", \"object\": \"15,300 ZEC ($17,9m)\", \"qualifiers\": {\"counterparty\": \"Binance, OKX и Kraken\"}, \"origin\": \"own\", \"source_role\": \"unknown\", \"verification_status\": \"unverified\", \"quote\": \"➤ Кит «t1JhvB» вывел с Binance, OKX и Kraken 15,300 ZEC ($17,9m).\", \"span\": [0, 63]}, {\"id\": \"telegram:15:423183#s1\", \"kind\": \"participant_reaction\", \"actor\": null, \"action\": \"вопрос\", \"object\": \"Robinhood + ZEC\", \"qualifiers\": {}, \"origin\": \"own\", \"source_role\": \"participant\", \"verification_status\": \"unverified\", \"quote\": \"Еще подвигаются парни или отмена, возвращаемся к фокусу Robinhood + ZEC?!\", \"span\": [0, 72]}, {\"id\": \"telegram:15:423189#s0\", \"kind\": \"event\", \"actor\": null, \"action\": \"аукцион\", \"object\": \"zkSNARKs на зкеше\", \"qualifiers\": {}, \"origin\": \"own\", \"source_role\": \"participant\", \"verification_status\": \"unverified\", \"quote\": \"Хайп аукцион zkSNARKs на зкеше.\", \"span\": [0, 30]}, {\"id\": \"telegram:15:423189#s3\", \"kind\": \"participant_reaction\", \"actor\": null, \"action\": \"не нравится\", \"object\": \"зкеш и его приколы с приватностью\", \"qualifiers\": {}, \"origin\": \"own\", \"source_role\": \"participant\", \"verification_status\": \"unverified\", \"quote\": \"Мне очень не нравится зкеш и его приколы с приватностью, нам не будет видно сколько всего депнули ончейн, и клиринг прайс мы узнаем только с их слов, все это будет в руках команды, фактически они могут сделать что угодно.\", \"span\": [0, 199]}, {\"id\": \"telegram:15:423204#s1\", \"kind\": \"event\", \"actor\": null, \"action\": \"минт\", \"object\": \"нфтшек на Zcash\", \"qualifiers\": {}, \"origin\": \"retelling\", \"source_role\": \"participant\", \"verification_status\": \"unverified\", \"quote\": \"Автор ничего толкового давно не писал, но сегодня, вроде как, есть повод: весь твиттер гудит по поводу минта нфтшек на Zcash\", \"span\": [0, 117]}, {\"id\": \"telegram:15:423204#s6\", \"kind\": \"event\", \"actor\": \"оф. аккаунт NEAR\", \"action\": \"репостит\", \"object\": \"один из своих проектов, поддерживающий минт\", \"qualifiers\": {}, \"origin\": \"retelling\", \"source_role\": \"participant\", \"verification_status\": \"unverified\", \"quote\": \"- оф. аккаунт NEAR, который репостит один из своих проектов, поддерживающий минт \\n- отсутствие понимания, как именно будут минтиться нфтшки, ведь на Zcash нет подобной ординалсам\\\\инскрипциям механики как на битке\\n- 10к саплай, 8к из которых будут проданы на этом аукционе\", \"span\": [0, 247]}, {\"id\": \"telegram:15:423204#s8\", \"kind\": \"promo_service\", \"actor\": null, \"action\": \"инструкция\", \"object\": \"участие в аукционе\", \"qualifiers\": {\"place\": \"https://zilkroad.com/\"}, \"origin\": \"own\", \"source_role\": \"participant\", \"verification_status\": \"unverified\", \"quote\": \"1. Зайти на сайт https://zilkroad.com/ \\n2. Выставить там желаемый бид (учтите, что 0.15 ZEC биды на 99% не пройдут) \\n3. Оплатить вашу заявку либо отправив спотовый ZEC с Hyperliquid, либо свопнув любую валюту через https://app.rubic.exchange/\\n4. Ждать результатов ставок\", \"span\": [0, 280]}, {\"id\": \"telegram:18:31484#s1\", \"kind\": \"event\", \"actor\": \"Сеть Zcash\", \"action\": \"собираются ускорить\", \"object\": \"в 3 раза\", \"qualifiers\": {}, \"origin\": \"own\", \"source_role\": \"editorial\", \"verification_status\": \"unverified\", \"quote\": \"⚡️ Сеть Zcash собираются ускорить в 3 раза.\", \"span\": [0, 44]}, {\"id\": \"telegram:18:31484#s2\", \"kind\": \"event\", \"actor\": \"Сообщество Zcash\", \"action\": \"поддержало сокращение\", \"object\": \"времени формирования блока с 75 до 25 секунд\", \"qualifiers\": {}, \"origin\": \"own\", \"source_role\": \"editorial\", \"verification_status\": \"unverified\", \"quote\": \"Сообщество Zcash поддержало сокращение времени формирования блока с 75 до 25 секунд.\", \"span\": [0, 88]}, {\"id\": \"telegram:18:31484#s4\", \"kind\": \"event\", \"actor\": null, \"action\": \"изменения не запущены\", \"object\": \"обновление NU7 (5 ноября)\", \"qualifiers\": {\"event_date\": \"5 ноября\"}, \"origin\": \"own\", \"source_role\": \"editorial\", \"verification_status\": \"unverified\", \"quote\": \"Чтобы эмиссия ZEC не изменилась, при сокращении времени блока награду за каждый отдельный блок также уменьшат примерно в 3 раза. Изменения пока не запущены – их еще предстоит реализовать и протестировать в рамках обновления NU7 (5 ноября).\", \"span\": [0, 218]}, {\"id\": \"telegram:10:385234#s1\", \"kind\": \"event\", \"actor\": \"Сообщество ZCash\", \"action\": \"проголосовало за ускорение\", \"object\": \"формирования блоков в сети в 3 раза - до 25 сек\", \"qualifiers\": {}, \"origin\": \"own\", \"source_role\": \"editorial\", \"verification_status\": \"unverified\", \"quote\": \"Сообщество ZCash проголосовало за ускорение формирования блоков в сети в 3 раза -  до 25 сек!\", \"span\": [0, 88]}, {\"id\": \"telegram:15:423211#s2\", \"kind\": \"participant_reaction\", \"actor\": null, \"action\": \"вопрос\", \"object\": \"1 ZEC флор\", \"qualifiers\": {}, \"origin\": \"own\", \"source_role\": \"participant\", \"verification_status\": \"unverified\", \"quote\": \"1 ZEC флор точно же ждем?!\", \"span\": [0, 26]}]}",
+    "refusal": null,
+    "reasoning": null
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 1858,
+  "completion_tokens": 1719,
+  "total_tokens": 3577,
+  "cost": 0.0005103903,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.0005103903,
+   "upstream_inference_prompt_cost": 0.0001794828,
+   "upstream_inference_completions_cost": 0.0003309075
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

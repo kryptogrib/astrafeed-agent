@@ -1,0 +1,32 @@
+{
+ "choices": [
+  {
+   "message": {
+    "content": "{\"labels\": [{\"id\": \"telegram:15:422897#s1\", \"kind\": \"event\", \"actor\": null, \"action\": null, \"object\": null, \"qualifiers\": {}, \"origin\": \"unknown\", \"source_role\": \"unknown\", \"verification_status\": \"unverified\", \"quote\": \"00:00 - Robinhood корректос\\n01:13 - NFT. Quotron Free mint & Asati mint\\n04:45 - Листинги Robinhood. $FRONG, $INDEX, $PONS, $JUGGERNAUT\\n12:20 - $IPOD и $O1DOLL. Про FeelDotCash\\n19:11 - Стрим\\n20:03 - BaseApp -> Coinbase Wallet. Пост Cobie\\n22:38 - Events от TradeXyz\\n23:30 - Стейблы от World\\n24:30 - Arc. chart.zone\\n26:46 - Фри минт от фаундера Doodles. Standard Reserve минт завтра\\n29:04 - Запуск Байдена. Используй обменник, fomo и KYC\", \"span\": [0, 340]}]}"
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 1832,
+  "completion_tokens": 1810,
+  "total_tokens": 3642,
+  "cost": 0.000730568,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.000730568,
+   "upstream_inference_prompt_cost": 0.000245488,
+   "upstream_inference_completions_cost": 0.00048508
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

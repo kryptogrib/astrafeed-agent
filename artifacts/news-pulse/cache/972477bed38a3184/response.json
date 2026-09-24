@@ -1,0 +1,46 @@
+{
+ "id": "gen-1790192923-BY2Noc1hFY5ADsVEmXM0",
+ "object": "chat.completion",
+ "created": 1790192923,
+ "model": "deepseek/deepseek-v4-flash",
+ "provider": "Venice",
+ "system_fingerprint": null,
+ "service_tier": null,
+ "choices": [
+  {
+   "index": 0,
+   "logprobs": null,
+   "finish_reason": "stop",
+   "native_finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "content": "{\"labels\": [{\"id\": \"telegram:11:96809#s0\", \"kind\": \"event\", \"actor\": \"Управляющий партнер Dragonfly\", \"action\": \"предложил свернуть деятельность фонда разработчиков Zcash\", \"object\": \"фонд разработчиков Zcash\", \"qualifiers\": {}, \"origin\": \"retelling\", \"source_role\": \"editorial\", \"verification_status\": \"unverified\", \"quote\": \"Управляющий партнер Dragonfly предложил свернуть деятельность фонда разработчиков Zcash, утверждая, что фонд достаточно велик, чтобы финансировать оставшуюся работу над Zcash, и что он рискует быть «политизированным»\", \"span\": [0, 215]}, {\"id\": \"telegram:18:31503#s2\", \"kind\": \"event\", \"actor\": \"Инсайдер Bitcoin OG\", \"action\": \"выставил ордер на открытие лонга на 2450 BTC (~$190m) по цене $78,000. Также он продал 35,000 ETH ($87,5m) по цене ~$2500 и направил часть средств на увеличение обеспечения убыточного шорта по ZEC\", \"object\": \"ZEC\", \"qualifiers\": {\"counterparty\": \"ZEC\"}, \"origin\": \"retelling\", \"source_role\": \"editorial\", \"verification_status\": \"unverified\", \"quote\": \"Инсайдер Bitcoin OG выставил ордер на открытие лонга на 2450 BTC (~$190m) по цене $78,000. Также он продал 35,000 ETH ($87,5m) по цене ~$2500 и направил часть средств на увеличение обеспечения убыточного шорта по ZEC\", \"span\": [0, 215]}, {\"id\": \"telegram:18:31503#s5\", \"kind\": \"event\", \"actor\": \"Четыре новых кошелька\", \"action\": \"вывели с Binance и других бирж 32,293 ZEC (~$46,2m)\", \"object\": \"ZEC\", \"qualifiers\": {\"counterparty\": \"ZEC\"}, \"origin\": \"retelling\", \"source_role\": \"editorial\", \"verification_status\": \"unverified\", \"quote\": \"Киты активно накапливают ZEC. Четыре новых кошелька вывели с Binance и других бирж 32,293 ZEC (~$46,2m)\", \"span\": [0, 100]}, {\"id\": \"telegram:9:1041046#s0\", \"kind\": \"event\", \"actor\": null, \"action\": \"ZCASH TARGETS NOVEMBER UPGRADE TO MAKE PRIVATE PAYMENTS UP TO THREE TIMES FASTER\", \"object\": \"Zcash\", \"qualifiers\": {\"event_date\": \"NOVEMBER\"}, \"origin\": \"retelling\", \"source_role\": \"editorial\", \"verification_status\": \"unverified\", \"quote\": \"ZCASH TARGETS NOVEMBER UPGRADE TO MAKE PRIVATE PAYMENTS UP TO THREE TIMES FASTER\", \"span\": [0, 80]}, {\"id\": \"telegram:15:423298#s1\", \"kind\": \"event\", \"actor\": \"маркетплейс Zecmart\", \"action\": \"запускает минт своей коллекции\", \"object\": \"коллекция NFT\", \"qualifiers\": {\"counterparty\": \"ZEC\"}, \"origin\": \"retelling\", \"source_role\": \"editorial\", \"verification_status\": \"unverified\", \"quote\": \"Короче, маркетплейс Zecmart запускает минт своей коллекции. Твиттер слабый, но скорее всего не скам, так как Zcash отмечал их у себя на странице, еще в 2023 году. Будет фри минт на 555 NFT, из затрат - только немного $ZEC на комиссию сети\", \"span\": [0, 215]}, {\"id\": \"telegram:15:423299#s2\", \"kind\": \"event\", \"actor\": null, \"action\": null, \"object\": null, \"qualifiers\": {}, \"origin\": \"unknown\", \"source_role\": \"unknown\", \"verification_status\": \"unverified\", \"quote\": \"3333 supply \\nZEC Blockchain\\nMint price TBD\", \"span\": [0, 40]}, {\"id\": \"telegram:15:423300#s1\", \"kind\": \"event\", \"actor\": null, \"action\": null, \"object\": null, \"qualifiers\": {}, \"origin\": \"unknown\", \"source_role\": \"unknown\", \"verification_status\": \"unverified\", \"quote\": \"что-то мимо меня вчера инфа прошла, да и я чет ток в ZEC погрузился, но вот инфа -> ТЫК\", \"span\": [0, 80]}, {\"id\": \"telegram:7:12227#s1\", \"kind\": \"event\", \"actor\": \"SEC\", \"action\": \"сказали: \\\"Мы сами всех отрегулируем, на ближайшие лет 5\\\"\", \"object\": \"Innovation Exemption\", \"qualifiers\": {\"counterparty\": \"ZEC\"}, \"origin\": \"retelling\", \"source_role\": \"editorial\", \"verification_status\": \"unverified\", \"quote\": \"Биток продолжает показывает бычьи яйца, не такие конечно как ZEC. Одним из факторов конечно же стал Innovation Exemption от SEC, которые сказали: \\\"Мы сами всех отрегулируем, на ближайшие лет 5\\\". Вы уже наверное изучали, но если кратко - ончейн-акциям дают зеленый флаг (но не всем), и бОльший победитель тут конечно Робингуд, и наши щитки в паре с акциями (например, $AI)\", \"span\": [0, 400]}, {\"id\": \"telegram:15:423315#s0\", \"kind\": \"event\", \"actor\": null, \"action\": null, \"object\": null, \"qualifiers\": {}, \"origin\": \"unknown\", \"source_role\": \"unknown\", \"verification_status\": \"unverified\", \"quote\": \"$ZEC - как быстро и дешево депнуть в Zcash? ☕️\", \"span\": [0, 50]}, {\"id\": \"telegram:15:423315#s1\", \"kind\": \"event\", \"actor\": null, \"action\": null, \"object\": null, \"qualifiers\": {}, \"origin\": \"unknown\", \"source_role\": \"unknown\", \"verification_status\": \"unverified\", \"quote\": \"😐 В связи с большим количеством минтов на чейне Zcash, остро стал вопрос депа в саму сеть. Поэтому расписываю 1 раз, чтобы к этому не возвращаться ✏️\", \"span\": [0, 120]}, {\"id\": \"telegram:15:423315#s2\", \"kind\": \"event\", \"actor\": null, \"action\": null, \"object\": null, \"qualifiers\": {}, \"origin\": \"unknown\", \"source_role\": \"unknown\", \"verification_status\": \"unverified\", \"quote\": \"🔔 Что делаем:\\n• Во-первых, качаем кошелек Noir;\\n• Создаем кошелек, cохраняем сидку и копируем адрес который начинается с t1...;\\n• $ZEC вы можете купить на любой тир 1 бирже;\\n• При выводе с биржи указываем кош и сеть Zcash Mainnet;\\n• Выводите с Gate, комиссия будет 0.001 $ZEC (но минималка на вывод 0.01 $ZEC), или же с MEXC, тут комса на вывод - 0.005 $ZEC (на том же Бинансе или OKX комиссия будет 0.01 $ZEC, а это прям грабеж);\\n• Либо c Rubic депаем кроссчейн свапом с EVM кошелька прямо на Noir - комиссия будет +-0.0008 $ZEC (около 1$)\", \"span\": [0, 500]}, {\"id\": \"telegram:15:423316#s0\", \"kind\": \"event\", \"actor\": null, \"action\": null, \"object\": null, \"qualifiers\": {}, \"origin\": \"unknown\", \"source_role\": \"unknown\", \"verification_status\": \"unverified\", \"quote\": \"🔥 Zcash в ТОП-10: ренессанс приватности или сквиз шортистов?\", \"span\": [0, 60]}]}",
+    "refusal": null,
+    "reasoning": null
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 2357,
+  "completion_tokens": 1972,
+  "total_tokens": 4329,
+  "cost": 0.0005875842,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 256,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.0005875842,
+   "upstream_inference_prompt_cost": 0.0002079742,
+   "upstream_inference_completions_cost": 0.00037961
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

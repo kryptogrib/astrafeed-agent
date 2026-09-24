@@ -1,0 +1,17 @@
+{
+ "segments": [
+  {
+   "id": "telegram:19:18939#s0",
+   "text": "Aped bancor on arc.\n\n",
+   "mentions": [
+    {
+     "text": "arc",
+     "status": "confirmed"
+    }
+   ],
+   "kind_hint": "post",
+   "url": "https://t.me/spidersjournal/18939",
+   "time": "2026-09-15T23:56:38+00:00"
+  }
+ ]
+}

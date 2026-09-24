@@ -1,0 +1,22 @@
+{
+ "a": {
+  "quote": "• Arclings: 6,283 fully on-chain 1-bit SVG, mint на день Arc Mainnet, 16 сентября;",
+  "actor": "Arclings",
+  "action": "mint on Arc Mainnet day",
+  "object": "Arclings NFTs",
+  "qualifiers": {
+   "event_date": "16 сентября"
+  },
+  "url": "https://t.me/whitelist1/7135"
+ },
+ "b": {
+  "quote": "Завтра ARC паблик майнет",
+  "actor": null,
+  "action": "public mainnet launch",
+  "object": "ARC",
+  "qualifiers": {
+   "event_date": "tomorrow"
+  },
+  "url": "https://t.me/WEB3_AGGREGATOR/423067"
+ }
+}

@@ -1,0 +1,46 @@
+{
+ "id": "gen-1790196420-18iTfiHssVi32X0DktuN",
+ "object": "chat.completion",
+ "created": 1790196420,
+ "model": "deepseek/deepseek-v4-flash",
+ "provider": "Baidu",
+ "system_fingerprint": null,
+ "service_tier": null,
+ "choices": [
+  {
+   "index": 0,
+   "logprobs": null,
+   "finish_reason": "stop",
+   "native_finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "content": "{\n  \"labels\": [\n    {\n      \"id\": \"telegram:15:422908#s21\",\n      \"kind\": \"event\",\n      \"actor\": null,\n      \"action\": \"alert\",\n      \"object\": \"Arc chain\",\n      \"qualifiers\": {},\n      \"origin\": \"retelling\",\n      \"source_role\": \"participant\",\n      \"verification_status\": \"unverified\",\n      \"quote\": \"В щитпосте алертники по Arc чейну работают уже месяц+, отсигналило все раннеры, токен $LONG повторные алерты с 140к вплоть до 5М.\",\n      \"span\": [0, 130]\n    },\n    {\n      \"id\": \"telegram:11:96716#s0\",\n      \"kind\": \"event\",\n      \"actor\": null,\n      \"action\": \"present\",\n      \"object\": \"Arc launchpad ecosystem\",\n      \"qualifiers\": {},\n      \"origin\": \"own\",\n      \"source_role\": \"editorial\",\n      \"verification_status\": \"unverified\",\n      \"quote\": \"📊 Экосистема лаунчпадов Arc.\",\n      \"span\": [0, 30]\n    },\n    {\n      \"id\": \"telegram:15:422923#s0\",\n      \"kind\": \"event\",\n      \"actor\": null,\n      \"action\": \"announce\",\n      \"object\": \"Arc Launchpad Ecosystem mainnet\",\n      \"qualifiers\": {\"event_date\": \"Sep 16\"},\n      \"origin\": \"own\",\n      \"source_role\": \"editorial\",\n      \"verification_status\": \"unverified\",\n      \"quote\": \"Arc Launchpad Ecosytem. Mainnet Goes Live Sep 16\",\n      \"span\": [0, 50]\n    },\n    {\n      \"id\": \"telegram:15:422923#s1\",\n      \"kind\": \"event\",\n      \"actor\": null,\n      \"action\": \"map\",\n      \"object\": \"Arc launchpads\",\n      \"qualifiers\": {},\n      \"origin\": \"own\",\n      \"source_role\": \"editorial\",\n      \"verification_status\": \"unverified\",\n      \"quote\": \"We mapped every Arc launchpad we could verify, sorted alphabetically, with a clickable X handle for each and flags on the ones still on waitlist, testnet, or running repurposed old accounts. This is Part 1 of the Arc Ecosystem series.\",\n      \"span\": [0, 240]\n    },\n    {\n      \"id\": \"telegram:15:422923#s2\",\n      \"kind\": \"event\",\n      \"actor\": null,\n      \"action\": \"provide\",\n      \"object\": \"full breakdown link\",\n      \"qualifiers\": {},\n      \"origin\": \"own\",\n      \"source_role\": \"editorial\",\n      \"verification_status\": \"unverified\",\n      \"quote\": \"Full breakdown  👉 cryptodiffer.com/feed/other/arc-launchpad-ecosystem-every-launchpad-before-the-sep-16-mainnet\",\n      \"span\": [0, 110]\n    },\n    {\n      \"id\": \"telegram:15:422924#s0\",\n      \"kind\": \"event\",\n      \"actor\": null,\n      \"action\": \"suggest\",\n      \"object\": \"Arc\",\n      \"qualifiers\": {},\n      \"origin\": \"own\",\n      \"source_role\": \"participant\",\n      \"verification_status\": \"unverified\",\n      \"quote\": \"по arc можно поглянуть на:\",\n      \"span\": [0, 26]\n    },\n    {\n      \"id\": \"telegram:15:422924#s1\",\n      \"kind\": \"event\",\n      \"actor\": null,\n      \"action\": \"describe\",\n      \"object\": \"Flipt.fun\",\n      \"qualifiers\": {},\n      \"origin\": \"own\",\n      \"source_role\": \"participant\",\n      \"verification_status\": \"unverified\",\n      \"quote\": \"Flipt.fun - лаунчпад на arc, тестнет запустили на 48 часов, можно потыкать + для создателей токенов выделено 5к$ в кредитах, форма\",\n      \"span\": [0, 130]\n    },\n    {\n      \"id\": \"telegram:15:422924#s2\",\n      \"kind\": \"event\",\n      \"actor\": null,\n      \"action\": \"describe\",\n      \"object\": \"Minara.fun\",\n      \"qualifiers\": {},\n      \"origin\": \"own\",\n      \"source_role\": \"participant\",\n      \"verification_status\": \"unverified\",\n      \"quote\": \"Minara.fun - на arc, так же можно потрейдить в тестнете, тестовые токены тут берем, для создателей токенов выделены награды. Плюс для early обещают ог по волюму, возможно будет насып, как и в vibe, просто стоит в каждой проекте актив проявить, токен создать и потрейдить, к чему приведет поглянем.\",\n      \"span\": [0, 280]\n    },\n    {\n      \"id\": \"telegram:1:7135#s0\",\n      \"kind\": \"event\",\n      \"actor\": null,\n      \"action\": \"present\",\n      \"object\": \"ARC ecosystem\",\n      \"qualifiers\": {},\n      \"origin\": \"own\",\n      \"source_role\": \"editorial\",\n      \"verification_status\": \"unverified\",\n      \"quote\": \"ARC / Вся экосистема в одном месте 😏\",\n      \"span\": [0, 35]\n    },\n    {\n      \"id\": \"telegram:1:7135#s1\",\n      \"kind\": \"event\",\n      \"actor\": null,\n      \"action\": \"announce\",\n      \"object\": \"Arc Mainnet\",\n      \"qualifiers\": {},\n      \"origin\": \"own\",\n      \"source_role\": \"editorial\",\n      \"verification_status\": \"unverified\",\n      \"quote\": \"Arc Mainnet уже близко, поэтому собрали все инфраструктурные проекты, которые стоит добавить в watchlist.\",\n      \"span\": [0, 100]\n    },\n    {\n      \"id\": \"telegram:1:7135#s2\",\n      \"kind\": \"event\",\n      \"actor\": null,\n      \"action\": \"list\",\n      \"object\": \"Arc ecosystem projects\",\n      \"qualifiers\": {},\n      \"origin\": \"own\",\n      \"source_role\": \"editorial\",\n      \"verification_status\": \"unverified\",\n      \"quote\": \"Trading / Launchpads:\\n• Minara: launchpad на Arc;\\n• Hibachi: FX-биржа (spot + perps);\\n• Tower: агрегатор стейбл ликвидности по всем DEX Arc;\\n• Act.fun: launchpad + DEX.\\n• Circlewarp: omnichain-пад с одной bonding curve для всех сетей через CCTP Intent; \\n• ArcDEXScan: скринер всех USDC пулов + запуск сразу в залоченный Uniswap V3.\\n• Flipt: bonding-curve пад;\\n• The Cusp: launchpad + DEX.\\n• KON: DEX-агрегатор по всем пулам Arc + встроенный CCTP-бридж стейблов;\\n• Klik: omnichain permissionless launchpad;\\n• Sharc: пад + скринер + OTC;\\n• Archemist: launchpad + DEX;\\n• Lift: мемкоин-лаунчпад только под Arc;\\n• Tolly Labs: launchpad + терминал;\\n• chart.zone: тулза для отслеживания токенов; \\n• Warp: пад + терминал на Arc;\\n• DYOR Swap: мультичейн пад + DEX: на Arc режимы V2 и V3.\",\n      \"span\": [0, 680]\n    },\n    {\n      \"id\": \"telegram:1:7135#s4\",\n      \"kind\": \"event\",\n      \"actor\": null,\n      \"action\": \"list\",\n      \"object\": \"other Arc applications\",\n      \"qualifiers\": {},\n      \"origin\": \"own\",\n      \"source_role\": \"editorial\",\n      \"verification_status\": \"unverified\",\n      \"quote\": \"Другие приложения: \\n• Unstable: OTC для стейблов;\\n• Stubly: AI agents.\\n• OpenSea: NFT support с первого дня.\\n• Uniswap + Aerodrome: ожидаются с поддержкой Arc day one.\",\n      \"span\": [0, 180]\n    }\n  ]\n}",
+    "refusal": null,
+    "reasoning": null
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 2115,
+  "completion_tokens": 1905,
+  "total_tokens": 4020,
+  "cost": 0.000469497,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.000469497,
+   "upstream_inference_prompt_cost": 0.0001675926,
+   "upstream_inference_completions_cost": 0.0003019044
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

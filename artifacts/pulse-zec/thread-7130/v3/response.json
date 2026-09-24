@@ -1,0 +1,46 @@
+{
+ "id": "gen-1790184446-PAlcBnZbA1LYXmAtNxK9",
+ "object": "chat.completion",
+ "created": 1790184446,
+ "model": "deepseek/deepseek-v4-flash",
+ "provider": "DeepInfra",
+ "system_fingerprint": null,
+ "service_tier": null,
+ "choices": [
+  {
+   "index": 0,
+   "logprobs": null,
+   "finish_reason": "stop",
+   "native_finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "content": "{\"labels\": [{\"id\": \"571138\", \"relevance\": \"unrelated\", \"aspect\": null, \"kind\": \"other\", \"summary\": null, \"quote\": null, \"context_ids\": []}, {\"id\": \"571142\", \"relevance\": \"unrelated\", \"aspect\": null, \"kind\": \"other\", \"summary\": null, \"quote\": null, \"context_ids\": []}, {\"id\": \"571143\", \"relevance\": \"unrelated\", \"aspect\": null, \"kind\": \"other\", \"summary\": null, \"quote\": null, \"context_ids\": []}, {\"id\": \"571145\", \"relevance\": \"unrelated\", \"aspect\": null, \"kind\": \"other\", \"summary\": null, \"quote\": null, \"context_ids\": []}, {\"id\": \"571146\", \"relevance\": \"unrelated\", \"aspect\": null, \"kind\": \"other\", \"summary\": null, \"quote\": null, \"context_ids\": []}, {\"id\": \"571148\", \"relevance\": \"unrelated\", \"aspect\": null, \"kind\": \"other\", \"summary\": null, \"quote\": null, \"context_ids\": []}, {\"id\": \"571149\", \"relevance\": \"unrelated\", \"aspect\": null, \"kind\": \"other\", \"summary\": null, \"quote\": null, \"context_ids\": []}, {\"id\": \"571159\", \"relevance\": \"unrelated\", \"aspect\": null, \"kind\": \"other\", \"summary\": null, \"quote\": null, \"context_ids\": []}, {\"id\": \"571222\", \"relevance\": \"unrelated\", \"aspect\": null, \"kind\": \"other\", \"summary\": null, \"quote\": null, \"context_ids\": []}, {\"id\": \"571238\", \"relevance\": \"unrelated\", \"aspect\": null, \"kind\": \"other\", \"summary\": null, \"quote\": null, \"context_ids\": []}, {\"id\": \"571250\", \"relevance\": \"unrelated\", \"aspect\": null, \"kind\": \"other\", \"summary\": null, \"quote\": null, \"context_ids\": []}, {\"id\": \"571251\", \"relevance\": \"unrelated\", \"aspect\": null, \"kind\": \"other\", \"summary\": null, \"quote\": null, \"context_ids\": []}]}",
+    "refusal": null,
+    "reasoning": null
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 2192,
+  "completion_tokens": 510,
+  "total_tokens": 2702,
+  "cost": 0.000252216,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 512,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.000252216,
+   "upstream_inference_prompt_cost": 0.000160416,
+   "upstream_inference_completions_cost": 9.18e-05
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

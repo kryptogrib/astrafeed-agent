@@ -1,0 +1,26 @@
+{
+ "link": "https://t.me/icodrops_sergey/2432",
+ "model_labels": "artifacts/pulse-zec/thread-2432/v3/labels.json",
+ "corrections": "artifacts/pulse-zec/thread-2432/v3/demo/corrections.json",
+ "reviewer": null,
+ "published": [
+  {
+   "id": "150645",
+   "relevance": "relevant",
+   "aspect": "market",
+   "kind": "opinion",
+   "summary": "Иронизирует, что речь идёт либо о hype, либо о zec.",
+   "quote": "То бишь hype или zec 😁",
+   "context_ids": [
+    "post"
+   ],
+   "link": "https://t.me/icodrops_sergey/2432?comment=150645",
+   "corrected": false,
+   "borderline": false
+  }
+ ],
+ "held_for_review": {
+  "reason": "relevant_not_grounded на метках модели",
+  "labels": []
+ }
+}

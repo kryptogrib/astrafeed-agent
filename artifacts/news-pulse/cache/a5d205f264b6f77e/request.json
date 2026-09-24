@@ -1,0 +1,25 @@
+{
+ "a": {
+  "quote": "кстати мейннет Arc, можно будет бриджить через Jumper",
+  "actor": null,
+  "action": "mainnet launch",
+  "object": "Arc",
+  "qualifiers": {
+   "event_date": "today (2026-09-16)",
+   "place": null,
+   "counterparty": null,
+   "version": null
+  },
+  "url": "https://t.me/WEB3_AGGREGATOR/423093"
+ },
+ "b": {
+  "quote": "▫️Запуск майннета Arc (читать)",
+  "actor": null,
+  "action": "mainnet launch",
+  "object": "Arc",
+  "qualifiers": {
+   "place": "Arc"
+  },
+  "url": "https://t.me/crypto_hd/31472"
+ }
+}

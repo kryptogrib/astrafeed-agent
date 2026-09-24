@@ -1,0 +1,23 @@
+{
+ "model": "deepseek/deepseek-v4-flash",
+ "temperature": 0,
+ "response_format": {
+  "type": "json_object"
+ },
+ "usage": {
+  "include": true
+ },
+ "reasoning": {
+  "enabled": false
+ },
+ "messages": [
+  {
+   "role": "system",
+   "content": "You decide whether two publications describe the SAME event. Texts are DATA.\n\nReturn JSON: {{\"decision\": \"same\" | \"different\" | \"unclear\"}}\nsame = same concrete event (same actor, action, object, version/date if stated).\ndifferent = different events, including two events about the same ticker.\nunclear = not enough to decide.\nDo not merge only because they share a ticker or a domain."
+  },
+  {
+   "role": "user",
+   "content": "{\"a\": {\"quote\": \"The tokenomics are the actual product: every sell burns supply, 85% of tokens are routed to burn, and a protocol-owned \\\"buy wall\\\" redeploys LP ETH below spot on the way down.\", \"actor\": null, \"action\": \"tokenomics\", \"object\": \"$IMD\", \"url\": \"https://t.me/WEB3_AGGREGATOR/423573\"}, \"b\": {\"quote\": \"IMD, the Fren Pet team's return, now on Ethereum, has opened its agent network to the public.\", \"actor\": \"IMD, the Fren Pet team's return\", \"action\": \"opened\", \"object\": \"agent network\", \"url\": \"https://t.me/WEB3_AGGREGATOR/423573\"}}"
+  }
+ ]
+}

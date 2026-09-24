@@ -1,0 +1,11 @@
+{
+ "link": "https://t.me/whitelist1/7130",
+ "model_labels": "artifacts/pulse-zec/thread-7130/v3/labels.json",
+ "corrections": "artifacts/pulse-zec/thread-7130/v3/demo/corrections.json",
+ "reviewer": null,
+ "published": [],
+ "held_for_review": {
+  "reason": "relevant_not_grounded на метках модели",
+  "labels": []
+ }
+}

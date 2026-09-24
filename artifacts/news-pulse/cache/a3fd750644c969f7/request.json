@@ -1,0 +1,22 @@
+{
+ "a": {
+  "quote": "#Zcash #ZEC #NFT #privacy 👀",
+  "actor": null,
+  "action": "highlight_topic",
+  "object": "Zcash",
+  "qualifiers": {
+   "version": "ZEC",
+   "place": "NFT",
+   "counterparty": "privacy"
+  },
+  "url": "https://t.me/WEB3_AGGREGATOR/423606"
+ },
+ "b": {
+  "quote": "Zcash хайпует, но NFT в мейннет нет. Разбираемся, кто и за что платит",
+  "actor": "Zcash",
+  "action": "hype",
+  "object": "NFT",
+  "qualifiers": {},
+  "url": "https://t.me/WEB3_AGGREGATOR/423606"
+ }
+}

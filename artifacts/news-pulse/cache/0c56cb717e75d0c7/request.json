@@ -1,0 +1,17 @@
+{
+ "segments": [
+  {
+   "id": "telegram:18:31368#s4",
+   "text": "+ подключили ChatGPT Astra 6, Claude Fable 5.1 и GROK 4.6 - топовые нейронки озвучили свои вердикты по Zcash и предложили рассмотреть другие проекты.\n\n",
+   "mentions": [
+    {
+     "text": "Zcash",
+     "status": "confirmed"
+    }
+   ],
+   "kind_hint": "post",
+   "url": "https://t.me/crypto_hd/31368",
+   "time": "2026-09-10T17:04:12+00:00"
+  }
+ ]
+}

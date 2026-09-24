@@ -1,0 +1,32 @@
+{
+ "choices": [
+  {
+   "message": {
+    "content": "{\"labels\": [{\"id\": \"telegram:15:423204#s12\", \"kind\": \"promo_service\", \"actor\": null, \"action\": \"Выставить там желаемый бид\", \"object\": null, \"qualifiers\": {\"amount\": \"0.15 ZEC\"}, \"origin\": \"own\", \"source_role\": \"author\", \"verification_status\": \"unverified\", \"topic_role\": \"context\", \"quote\": \"2. Выставить там желаемый бид (учтите, что 0.15 ZEC биды на 99% не пройдут)\", \"span\": [0, 78]}]}"
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 1898,
+  "completion_tokens": 1886,
+  "total_tokens": 3784,
+  "cost": 0.0004026932,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 1556,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.0004026932,
+   "upstream_inference_prompt_cost": 5.94412e-05,
+   "upstream_inference_completions_cost": 0.000343252
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

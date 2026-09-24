@@ -1,0 +1,22 @@
+{
+ "a": {
+  "quote": "Официальная презентация запуска Arc начнется сегодня в 18:30 мск.",
+  "actor": null,
+  "action": "official presentation",
+  "object": "Arc launch",
+  "qualifiers": {
+   "event_date": "today at 18:30 MSK"
+  },
+  "url": "https://t.me/crypto_hd/31448"
+ },
+ "b": {
+  "quote": "😇 Вчера запустился новый блокчейн под названием ARC, где уже появляются первые проекты, активности мемы и т.п.",
+  "actor": "ARC",
+  "action": "запустился",
+  "object": "новый блокчейн",
+  "qualifiers": {
+   "time": "вчера"
+  },
+  "url": "https://t.me/WEB3_AGGREGATOR/423219"
+ }
+}

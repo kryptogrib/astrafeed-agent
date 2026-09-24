@@ -1,0 +1,23 @@
+{
+ "a": {
+  "quote": "Arc запущен",
+  "actor": null,
+  "action": "launched",
+  "object": "Arc",
+  "qualifiers": {},
+  "url": "https://t.me/WEB3_AGGREGATOR/423150"
+ },
+ "b": {
+  "quote": "Сегодня, время после запуска Arc;",
+  "actor": null,
+  "action": "launch",
+  "object": "Arc",
+  "qualifiers": {
+   "version": null,
+   "event_date": "today",
+   "place": null,
+   "counterparty": null
+  },
+  "url": "https://t.me/whitelist1/7139"
+ }
+}

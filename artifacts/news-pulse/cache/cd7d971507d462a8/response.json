@@ -1,0 +1,32 @@
+{
+ "choices": [
+  {
+   "message": {
+    "content": "{\"labels\": [{\"id\": \"telegram:1:7153#s3\", \"kind\": \"event\", \"actor\": \"1inch\", \"action\": \"supports network\", \"object\": \"Arc\", \"qualifiers\": {}, \"origin\": \"own\", \"source_role\": \"official\", \"verification_status\": \"source_statement\", \"topic_role\": \"subject\", \"quote\": \"1inch Swap: Arc поддерживается 1inch с первого дня в качестве launch partner;\\n1inch Business: пользователи с  активной подпиской могут сразу использовать API;  \\n1inch Aqua также теперь работает на всех 4 сетях.\\n\\n\", \"span\": [0, 175]}]}"
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 2098,
+  "completion_tokens": 1992,
+  "total_tokens": 4090,
+  "cost": 0.00043510628,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.00043510628,
+   "upstream_inference_prompt_cost": 0.00015009092,
+   "upstream_inference_completions_cost": 0.00028501536
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

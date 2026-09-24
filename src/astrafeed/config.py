@@ -10,6 +10,22 @@ import yaml
 from pydantic import BaseModel, Field
 
 
+def load_dotenv(path: Path) -> None:
+    """Fill os.environ from a KEY=VALUE file; real environment variables win.
+
+    Deliberately minimal (no interpolation, no export keyword) so `make login`,
+    which writes TELEGRAM_SESSION into .env, works without extra dependencies.
+    """
+    if not path.exists():
+        return
+    for line in path.read_text(encoding="utf-8").splitlines():
+        line = line.strip()
+        if not line or line.startswith("#") or "=" not in line:
+            continue
+        key, value = line.split("=", 1)
+        os.environ.setdefault(key.strip(), value.strip().strip("'\""))
+
+
 class TelegramCfg(BaseModel):
     api_id: int = 0
     api_hash: str = ""
@@ -26,6 +42,7 @@ class OpenRouterCfg(BaseModel):
     score_coverage_retries: int = 2
     score_token_limit_param: Literal["max_tokens", "max_completion_tokens"] | None = None
     score_max_tokens: int | None = None
+    embedding_model: str = "openai/text-embedding-3-small"
 
 
 class PrefilterCfg(BaseModel):
@@ -42,6 +59,18 @@ class AuditSettings(BaseModel):
     start_wait_seconds: float = Field(default=0.025, gt=0)
     cleanup_limit: int = Field(default=100, gt=0)
     cleanup_seconds: float = Field(default=60, gt=0)
+
+
+class AgendaSettings(BaseModel):
+    extract_concurrency: int = Field(default=12, ge=1, le=32)
+    assign_concurrency: int = Field(default=16, ge=1, le=32)
+    backfill_batch_size: int = Field(default=128, ge=1, le=256)
+    cycle_post_limit: int = Field(default=128, ge=1, le=256)
+    assignment_mode: Literal["auto", "strict", "relaxed"] = "auto"
+    merge_cosine_threshold: float = Field(default=0.92, ge=0, le=1)
+    # Discussion groups the account may join per cycle to read comments under
+    # agenda posts. Joining acts on the user's Telegram account; 0 is read-only.
+    discussion_joins_per_cycle: int = Field(default=3, ge=0, le=10)
 
 
 class Settings(BaseModel):
@@ -65,12 +94,17 @@ class Settings(BaseModel):
     openrouter: OpenRouterCfg = Field(default_factory=OpenRouterCfg)
     prefilter: PrefilterCfg = Field(default_factory=PrefilterCfg)
     channels: list[str] = Field(default_factory=list)
+    # Public channels without comments: posts only, used as the "news" side of Pulse.
+    news_channels: list[str] = Field(default_factory=list)
+    rss_feeds: list[str] = Field(default_factory=list)
     interests: list[str] = Field(default_factory=lambda: ["crypto markets"])
     audit: AuditSettings = Field(default_factory=AuditSettings)
+    agenda: AgendaSettings = Field(default_factory=AgendaSettings)
 
     @classmethod
     def load(cls, path: str | Path = "config.yaml") -> Settings:
         config_path = Path(path)
+        load_dotenv(config_path.parent / ".env")
         values = yaml.safe_load(config_path.read_text()) if config_path.exists() else {}
         values = values or {}
         # Environment variables take precedence over the YAML file.

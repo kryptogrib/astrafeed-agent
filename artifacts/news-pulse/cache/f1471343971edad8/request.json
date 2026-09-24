@@ -1,0 +1,22 @@
+{
+ "a": {
+  "quote": "Завтра ARC паблик майнет",
+  "actor": "ARC",
+  "action": "launch",
+  "object": "public mainnet",
+  "qualifiers": {
+   "event_date": "завтра"
+  },
+  "url": "https://t.me/WEB3_AGGREGATOR/423067"
+ },
+ "b": {
+  "quote": "Granted, yes there were people early new Arc 1-2 months before, today it begins \"officially\" via public (few hours basically only)",
+  "actor": "Arc",
+  "action": "begins officially",
+  "object": "public launch",
+  "qualifiers": {
+   "event_date": "today"
+  },
+  "url": "https://t.me/PowsGemCalls/48975"
+ }
+}

@@ -1,0 +1,17 @@
+{
+ "segments": [
+  {
+   "id": "telegram:15:422959#s1",
+   "text": "The Standard Reserve went live today, an onchain reserve protocol built around ETH flows, using an OlympusDAO-style design with a hard-capped 1B STANDARD supply.\n\n",
+   "mentions": [
+    {
+     "text": "ETH",
+     "status": "confirmed"
+    }
+   ],
+   "kind_hint": "post",
+   "url": "https://t.me/WEB3_AGGREGATOR/422959",
+   "time": "2026-09-14T17:09:37+00:00"
+  }
+ ]
+}

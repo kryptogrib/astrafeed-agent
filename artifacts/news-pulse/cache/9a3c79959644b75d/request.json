@@ -1,0 +1,21 @@
+{
+ "a": {
+  "quote": "USDC это деньги и газ, а ARC это актив сети, не акция Circle и не доля в резервах.",
+  "actor": null,
+  "action": "clarify",
+  "object": "ARC token",
+  "qualifiers": {},
+  "url": "https://t.me/WEB3_AGGREGATOR/422853"
+ },
+ "b": {
+  "quote": "Сегодня (спасибо за поправку @intelligent_ua) кстати мейннет Arc, можно будет бриджить через Jumper.",
+  "actor": "Arc",
+  "action": "mainnet launch",
+  "object": "Arc",
+  "qualifiers": {
+   "event_date": "today",
+   "place": "Jumper bridge"
+  },
+  "url": "https://t.me/CryptoEarnImp/10991"
+ }
+}

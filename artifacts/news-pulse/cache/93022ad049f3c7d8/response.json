@@ -1,0 +1,32 @@
+{
+ "choices": [
+  {
+   "message": {
+    "content": "{\"labels\": [{\"id\": \"telegram:15:423491#s14\", \"kind\": \"event\", \"actor\": \"market\", \"action\": \"price based on\", \"object\": \"ZEC hype\", \"qualifiers\": {\"place\": \"NEAR\"}, \"origin\": \"own\", \"source_role\": \"editorial\", \"verification_status\": \"source_statement\", \"topic_role\": \"subject\", \"quote\": \"Проблема заключается в том, что сам чейн как убежище для DeFi выглядит скромно: TVL $190 млн, из которых всего $80 млн стейблов. Рынок платит не за деньги, находящиеся на NEAR, а за гипотезу, что сделки продолжат идти через него. Среди рисков важнее всего то, что спрос держится на ZEC-хайпе и может уйти к конкурентам и агрегаторам. Десятки миллионов комиссий в год пока не оправдывают капу крупного L1, а история серийных пивотов подрывает доверие к очередной стратегии.\", \"span\": [0, 477]}]}"
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 1976,
+  "completion_tokens": 1942,
+  "total_tokens": 3918,
+  "cost": 0.000404573008,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 256,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.000404573008,
+   "upstream_inference_prompt_cost": 0.000126711648,
+   "upstream_inference_completions_cost": 0.00027786136
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

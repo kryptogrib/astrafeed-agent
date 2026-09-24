@@ -1,0 +1,21 @@
+{
+ "a": {
+  "quote": "Circle's Arc went public on September 16 and pulled 167.6K active wallets on day one – 12x the 13.9K from the day before, when the chain was still in private mainnet with ~100 institutional builders.",
+  "actor": "Circle",
+  "action": "launch",
+  "object": "Arc",
+  "qualifiers": {
+   "event_date": "September 16",
+   "version": "167.6K active wallets on day one – 12x the 13.9K from the day before, when the chain was still in private mainnet with ~100 institutional builders"
+  },
+  "url": "https://t.me/WEB3_AGGREGATOR/423197"
+ },
+ "b": {
+  "quote": "Arc запущен",
+  "actor": "unknown",
+  "action": "launched",
+  "object": "Arc",
+  "qualifiers": {},
+  "url": "https://t.me/WEB3_AGGREGATOR/423150"
+ }
+}

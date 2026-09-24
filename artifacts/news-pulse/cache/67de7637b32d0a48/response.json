@@ -1,0 +1,46 @@
+{
+ "id": "gen-1790197285-psBACWym57uUcNDR1AVI",
+ "object": "chat.completion",
+ "created": 1790197285,
+ "model": "deepseek/deepseek-v4-flash",
+ "provider": "DeepInfra",
+ "system_fingerprint": null,
+ "service_tier": null,
+ "choices": [
+  {
+   "index": 0,
+   "logprobs": null,
+   "finish_reason": "stop",
+   "native_finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "content": "{\"labels\": [{\"id\": \"telegram:15:423648#s1\", \"kind\": \"event\", \"actor\": null, \"action\": \"went live\", \"object\": \"USDC-native L1\", \"qualifiers\": {\"version\": null, \"event_date\": \"Sept 16\", \"place\": null, \"counterparty\": null}, \"origin\": \"retelling\", \"source_role\": \"editorial\", \"verification_status\": \"unverified\", \"quote\": \"A USDC-native L1 backed by BlackRock, Visa and Mastercard went live Sept 16.\", \"span\": [0, 76]}]}",
+    "refusal": null,
+    "reasoning": null
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 435,
+  "completion_tokens": 137,
+  "total_tokens": 572,
+  "cost": 6.381e-05,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 6.381e-05,
+   "upstream_inference_prompt_cost": 3.915e-05,
+   "upstream_inference_completions_cost": 2.466e-05
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

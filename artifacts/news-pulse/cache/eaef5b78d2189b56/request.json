@@ -1,0 +1,17 @@
+{
+ "segments": [
+  {
+   "id": "telegram:2:5296:c:379891#s0",
+   "text": "на кошеле 7 баксов в эфире сети robinhood",
+   "mentions": [
+    {
+     "text": "эфире",
+     "status": "ambiguous"
+    }
+   ],
+   "kind_hint": "comment",
+   "url": "https://t.me/don_invest/5296?comment=379891",
+   "time": "2026-09-13T03:23:47+00:00"
+  }
+ ]
+}

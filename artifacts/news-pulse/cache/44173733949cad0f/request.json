@@ -1,0 +1,23 @@
+{
+ "a": {
+  "quote": "utility-NFT, копит комиссии внутри себя; минт через OpenSea, не ZEC L1",
+  "actor": null,
+  "action": "utility-NFT, копит комиссии внутри себя; минт через OpenSea, не ZEC L1",
+  "object": "utility-NFT",
+  "qualifiers": {},
+  "url": "https://t.me/whitelist1/7149"
+ },
+ "b": {
+  "quote": "6969 пиксельных лягушек на ZEC, free mint. Минимум 0.007 ZEC на газ;",
+  "actor": null,
+  "action": "announcement of free mint",
+  "object": "6969 pixel frogs on ZEC",
+  "qualifiers": {
+   "version": null,
+   "event_date": null,
+   "place": null,
+   "counterparty": null
+  },
+  "url": "https://t.me/whitelist1/7149"
+ }
+}

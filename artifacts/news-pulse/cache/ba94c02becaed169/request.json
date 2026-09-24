@@ -1,0 +1,17 @@
+{
+ "segments": [
+  {
+   "id": "telegram:15:422949#s12",
+   "text": "🟢 BitMine добрала 28 086 ETH, всего 5,93 млн\n",
+   "mentions": [
+    {
+     "text": "ETH",
+     "status": "confirmed"
+    }
+   ],
+   "kind_hint": "post",
+   "url": "https://t.me/WEB3_AGGREGATOR/422949",
+   "time": "2026-09-14T14:42:54+00:00"
+  }
+ ]
+}

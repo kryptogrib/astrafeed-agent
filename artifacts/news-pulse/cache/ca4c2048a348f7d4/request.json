@@ -1,0 +1,21 @@
+{
+ "a": {
+  "quote": "Лента забита минтами и вайтлистами на ZEC? Одни говорят, что это новая мета, другие - что это вообще не NFT. Деньги при этом ходят настоящие. Разберём, как устроено.",
+  "actor": null,
+  "action": "discuss",
+  "object": "mints and whitelists on ZEC",
+  "qualifiers": {},
+  "url": "https://t.me/WEB3_AGGREGATOR/423606"
+ },
+ "b": {
+  "quote": "$ZCAT это токен на Solana, который платит холдерам в ZEC, к NFT на Zcash отношения не имеет. BITFOOTS минтится через Zcash, а инскрипцию отдаёт на биткоине через Ordinals. Надпись Zcash NFT не значит, что актив лежит в Zcash.",
+  "actor": "$ZCAT",
+  "action": "pay",
+  "object": "holders",
+  "qualifiers": {
+   "version": "ZEC",
+   "counterparty": "Solana"
+  },
+  "url": "https://t.me/WEB3_AGGREGATOR/423606"
+ }
+}

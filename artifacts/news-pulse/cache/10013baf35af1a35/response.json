@@ -1,0 +1,32 @@
+{
+ "choices": [
+  {
+   "message": {
+    "content": "{\"labels\": [{\"id\": \"telegram:18:31503#s6\", \"kind\": \"event\", \"actor\": \"Кит «0x72e0»\", \"action\": \"меняет HYPE на ETH\", \"object\": \"440,000 HYPE, 12,250 ETH\", \"qualifiers\": {\"version\": null, \"event_date\": null, \"place\": \"FalconX\", \"counterparty\": null}, \"origin\": \"retelling\", \"source_role\": \"author\", \"verification_status\": \"source_statement\", \"topic_role\": \"subject\", \"quote\": \"➤ Кит «0x72e0», вероятно, меняет HYPE на ETH. Он перевел 440,000 HYPE ($36m) в FalconX, после чего вывел 12,250 ETH ($30,1m).\", \"span\": [0, 120]}]}"
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 1910,
+  "completion_tokens": 2292,
+  "total_tokens": 4202,
+  "cost": 0.00046458076,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.00046458076,
+   "upstream_inference_prompt_cost": 0.0001366414,
+   "upstream_inference_completions_cost": 0.00032793936
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

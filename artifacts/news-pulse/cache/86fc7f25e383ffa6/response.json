@@ -1,0 +1,32 @@
+{
+ "choices": [
+  {
+   "message": {
+    "content": "{\"labels\": [{\"id\": \"telegram:6:2426#s0\", \"kind\": \"event\", \"actor\": null, \"action\": \"reaches 9th position\", \"object\": \"ZEC\", \"qualifiers\": {\"ranking\": \"9th in crypto top\"}, \"origin\": \"retelling\", \"source_role\": \"editorial\", \"verification_status\": \"unverified\", \"topic_role\": \"subject\", \"quote\": \"ZEC уже 9 позиция в ТОПе крипты\", \"span\": [0, 31]}]}"
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 1764,
+  "completion_tokens": 1540,
+  "total_tokens": 3304,
+  "cost": 0.00066052,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.00066052,
+   "upstream_inference_prompt_cost": 0.00022932,
+   "upstream_inference_completions_cost": 0.0004312
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

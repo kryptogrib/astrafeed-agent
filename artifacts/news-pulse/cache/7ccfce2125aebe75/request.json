@@ -1,0 +1,17 @@
+{
+ "segments": [
+  {
+   "id": "telegram:21:21099#s30",
+   "text": "  • Прогноз цены Ethereum: давление на поддержку после блокировки регулирования в Сенате США\n",
+   "mentions": [
+    {
+     "text": "Ethereum",
+     "status": "confirmed"
+    }
+   ],
+   "kind_hint": "post",
+   "url": "https://t.me/rawa_imagination/21099",
+   "time": "2026-09-16T08:20:20+00:00"
+  }
+ ]
+}

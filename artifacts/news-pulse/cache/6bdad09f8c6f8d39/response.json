@@ -1,0 +1,32 @@
+{
+ "choices": [
+  {
+   "message": {
+    "content": "{\"labels\": [{\"id\": \"telegram:15:423143#s5\", \"kind\": \"event\", \"actor\": \"Circle\", \"action\": \"launched mainnet\", \"object\": \"Arc\", \"qualifiers\": {\"event_date\": \"2026-09-16\", \"place\": null, \"counterparty\": null}, \"origin\": \"retelling\", \"source_role\": \"editorial\", \"verification_status\": \"source_statement\", \"topic_role\": \"subject\", \"quote\": \"🪙 Circle запустила мейннет Arc — сеть уже принимает транзакции, а за первые два часа в неё завели более $370 млн USDC.\", \"span\": [0, 119]}]}"
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 1737,
+  "completion_tokens": 1540,
+  "total_tokens": 3277,
+  "cost": 0.000645708,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 256,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.000645708,
+   "upstream_inference_prompt_cost": 0.000214508,
+   "upstream_inference_completions_cost": 0.0004312
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

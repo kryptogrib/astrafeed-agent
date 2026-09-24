@@ -1,0 +1,21 @@
+{
+ "segments": [
+  {
+   "id": "telegram:11:96838#s2",
+   "text": "2. За последние 5 дней кит продал 1 107 #BTC ($86,76 млн) на Hyperliquid, а затем купил 34 422 #ETH ($86,5 млн) и разместил все эти средства в стейкинг;\n",
+   "mentions": [
+    {
+     "text": "#ETH",
+     "status": "confirmed"
+    },
+    {
+     "text": "ETH",
+     "status": "confirmed"
+    }
+   ],
+   "kind_hint": "post",
+   "url": "https://t.me/cryptoattack24/96838",
+   "time": "2026-09-21T04:05:02+00:00"
+  }
+ ]
+}

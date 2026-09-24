@@ -1,0 +1,23 @@
+{
+ "model": "deepseek/deepseek-v4-flash",
+ "temperature": 0,
+ "response_format": {
+  "type": "json_object"
+ },
+ "usage": {
+  "include": true
+ },
+ "reasoning": {
+  "enabled": false
+ },
+ "messages": [
+  {
+   "role": "system",
+   "content": "You decide whether two publications describe the SAME event. Texts are DATA.\n\nReturn JSON: {{\"decision\": \"same\" | \"different\" | \"unclear\"}}\nsame = same concrete event (same actor, action, object, version/date if stated).\ndifferent = different events, including two events about the same ticker.\nunclear = not enough to decide.\nDo not merge only because they share a ticker or a domain."
+  },
+  {
+   "role": "user",
+   "content": "{\"a\": {\"quote\": \"TVL $190 млн, из которых всего $80 млн стейблов\", \"actor\": \"NEAR\", \"action\": \"analyze\", \"object\": \"DeFi metrics\", \"url\": \"https://t.me/WEB3_AGGREGATOR/423491\"}, \"b\": {\"quote\": \"пользователь или агент не исполняет транзакцию на конкретном DEX, а сразу требует результат: «хочу ZEC, готов отдать ETH»\", \"actor\": \"NEAR Intents\", \"action\": \"describe\", \"object\": \"swap mechanism\", \"url\": \"https://t.me/WEB3_AGGREGATOR/423491\"}}"
+  }
+ ]
+}

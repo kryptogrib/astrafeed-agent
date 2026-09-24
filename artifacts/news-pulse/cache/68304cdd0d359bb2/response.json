@@ -1,0 +1,32 @@
+{
+ "choices": [
+  {
+   "message": {
+    "content": "{\"labels\": [{\"id\": \"telegram:15:423249#s1\", \"kind\": \"event\", \"actor\": \"Circle\", \"action\": \"launches Arc L1 on mainnet\", \"object\": \"Arc\", \"qualifiers\": {\"mainnet\": true}, \"origin\": \"retelling\", \"source_role\": \"author\", \"verification_status\": \"source_statement\", \"quote\": \"Circle's Arc L1 hit mainnet\", \"span\": [0, 28]}]}"
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 2025,
+  "completion_tokens": 1529,
+  "total_tokens": 3554,
+  "cost": 0.0003387202,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 1701,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.0003387202,
+   "upstream_inference_prompt_cost": 6.04422e-05,
+   "upstream_inference_completions_cost": 0.000278278
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

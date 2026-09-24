@@ -1,0 +1,17 @@
+{
+ "segments": [
+  {
+   "id": "telegram:1:7151#s3",
+   "text": "• BITFOOTS: 303 1/1 · $5 в ZEC · заявки до 21 сен 17:00 МСК · mint на этой неделе; \n",
+   "mentions": [
+    {
+     "text": "ZEC",
+     "status": "confirmed"
+    }
+   ],
+   "kind_hint": "post",
+   "url": "https://t.me/whitelist1/7151",
+   "time": "2026-09-21T10:30:17+00:00"
+  }
+ ]
+}

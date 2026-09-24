@@ -1,0 +1,32 @@
+{
+ "choices": [
+  {
+   "message": {
+    "content": "{\"labels\": [{\"id\": \"telegram:15:423486#s3\", \"kind\": \"event\", \"actor\": null, \"action\": \"обсуждается внедрение\", \"object\": \"ETH\", \"qualifiers\": {\"place\": \"протокол Ethereum\"}, \"origin\": \"own\", \"source_role\": \"author\", \"verification_status\": \"unverified\", \"topic_role\": \"subject\", \"quote\": \"Впереди у него появляется ещё один потенциально сильный нарратив - приватность. Уже обсуждается внедрение нативных приватных переводов ETH и ERC-20 через общий shielded pool на уровне протокола. По смыслу это движение в ту же сторону, что и shielded-платежи Zcash, только встроенное в гораздо более широкую экосистему Ethereum.\", \"span\": [0, 330]}]}"
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 1942,
+  "completion_tokens": 1778,
+  "total_tokens": 3720,
+  "cost": 0.00039332692,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.00039332692,
+   "upstream_inference_prompt_cost": 0.00013893068,
+   "upstream_inference_completions_cost": 0.00025439624
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

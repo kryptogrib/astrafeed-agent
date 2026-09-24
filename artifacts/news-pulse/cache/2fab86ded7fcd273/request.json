@@ -1,0 +1,17 @@
+{
+ "segments": [
+  {
+   "id": "telegram:1:7151#s12",
+   "text": "• Wick on Zec: аккаунт @wickonzec не находится · в твоём списке было 999 free;  \n",
+   "mentions": [
+    {
+     "text": "Zec",
+     "status": "confirmed"
+    }
+   ],
+   "kind_hint": "post",
+   "url": "https://t.me/whitelist1/7151",
+   "time": "2026-09-21T10:30:17+00:00"
+  }
+ ]
+}

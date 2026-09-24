@@ -1,0 +1,26 @@
+{
+ "a": {
+  "quote": "• ZADDR: 2,800 faces · 0.02 ZEC · 21 сен · WL 16:00 МСК (чекер) · public 22:00 МСК (3/wallet);",
+  "actor": "ZADDR",
+  "action": "mint scheduled",
+  "object": "ZEC",
+  "qualifiers": {
+   "version": null,
+   "event_date": "2026-09-21",
+   "place": null,
+   "counterparty": null
+  },
+  "url": "https://t.me/whitelist1/7151"
+ },
+ "b": {
+  "quote": "🔘Подаем заявку в WL новой коллекции Zaddr (необходимо подключить X). Минт уже 21 сентября, mint price: 0.02 zec, 2,800 NFTs.",
+  "actor": null,
+  "action": "Подаем заявку в WL новой коллекции Zaddr",
+  "object": "Zaddr",
+  "qualifiers": {
+   "event_date": "21 сентября",
+   "place": "X"
+  },
+  "url": "https://t.me/whitelist1/7146"
+ }
+}

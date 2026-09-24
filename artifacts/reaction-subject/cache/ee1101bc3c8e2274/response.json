@@ -1,0 +1,46 @@
+{
+ "id": "gen-1790247259-Me4Mx9SjfFsXxe72abQi",
+ "object": "chat.completion",
+ "created": 1790247259,
+ "model": "deepseek/deepseek-v4-flash",
+ "provider": "Parasail",
+ "system_fingerprint": null,
+ "service_tier": null,
+ "choices": [
+  {
+   "index": 0,
+   "logprobs": null,
+   "finish_reason": "stop",
+   "native_finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "content": "{\n  \"items\": [\n    {\n      \"id\": \"zec|https://t.me/whitelist1/7144?comment=571779\",\n      \"target\": \"other_subject\",\n      \"target_id\": null,\n      \"comment_fragment\": \"Добро пожаловать в чат Whitelist Media\",\n      \"context_fragment\": \"\",\n      \"why\": \"Bot greeting, not reacting to post content.\"\n    },\n    {\n      \"id\": \"zec|https://t.me/whitelist1/7144?comment=571781\",\n      \"target\": \"unclear\",\n      \"target_id\": null,\n      \"comment_fragment\": \"\",\n      \"context_fragment\": \"\",\n      \"why\": \"Vague emotion in a digest; subject unclear.\"\n    },\n    {\n      \"id\": \"zec|https://t.me/whitelist1/7144?comment=571784\",\n      \"target\": \"event\",\n      \"target_id\": null,\n      \"comment_fragment\": \"сбора кукурузки\",\n      \"context_fragment\": \"фармим Corn Stalks, из них выбиваем Golden Corn\",\n      \"why\": \"Refers to Yield Fields farming event.\"\n    },\n    {\n      \"id\": \"zec|https://t.me/whitelist1/7144?comment=571796\",\n      \"target\": \"event\",\n      \"target_id\": null,\n      \"comment_fragment\": \"затраты для топа\",\n      \"context_fragment\": \"Гриндим WL в жирном проекте на Robinhood — Yield Fields\",\n      \"why\": \"Asks about costs for top players in Yield Fields.\"\n    },\n    {\n      \"id\": \"zec|https://t.me/whitelist1/7144?comment=571797\",\n      \"target\": \"event\",\n      \"target_id\": null,\n      \"comment_fragment\": \"бесплатные ключи потратить и надеяться на рафл\",\n      \"context_fragment\": \"Гриндим WL в жирном проекте на Robinhood — Yield Fields\",\n      \"why\": \"Explains free key usage for Yield Fields raffle.\"\n    }\n  ]\n}",
+    "refusal": null,
+    "reasoning": null
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 1415,
+  "completion_tokens": 475,
+  "total_tokens": 1890,
+  "cost": 0.0003311,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.0003311,
+   "upstream_inference_prompt_cost": 0.0001981,
+   "upstream_inference_completions_cost": 0.000133
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

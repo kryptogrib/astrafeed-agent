@@ -1,0 +1,21 @@
+{
+ "segments": [
+  {
+   "id": "telegram:15:423134#s2",
+   "text": "Фиг его, не хочется обольщаться, другие посты и по 0.16 - 0.24 $ZEC за штуку\n\n",
+   "mentions": [
+    {
+     "text": "$ZEC",
+     "status": "confirmed"
+    },
+    {
+     "text": "ZEC",
+     "status": "confirmed"
+    }
+   ],
+   "kind_hint": "post",
+   "url": "https://t.me/WEB3_AGGREGATOR/423134",
+   "time": "2026-09-16T18:40:50+00:00"
+  }
+ ]
+}

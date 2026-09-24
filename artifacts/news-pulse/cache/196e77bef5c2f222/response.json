@@ -1,0 +1,32 @@
+{
+ "choices": [
+  {
+   "message": {
+    "content": "{\"labels\": [{\"id\": \"telegram:15:423054#s2\", \"kind\": \"event\", \"actor\": \"ZEC\", \"action\": \"вырос с $1.000 до $60.000 за год\", \"object\": \"ZEC\", \"qualifiers\": {\"event_date\": \"год назад\"}, \"origin\": \"retelling\", \"source_role\": \"author\", \"verification_status\": \"unverified\", \"quote\": \"Если б ты купил ZEC год назад на $1.000, то сейчас это было бы $60.000\", \"span\": [0, 70]}]}"
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 2116,
+  "completion_tokens": 1816,
+  "total_tokens": 3932,
+  "cost": 0.0003937024,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 1777,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.0003937024,
+   "upstream_inference_prompt_cost": 6.31904e-05,
+   "upstream_inference_completions_cost": 0.000330512
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

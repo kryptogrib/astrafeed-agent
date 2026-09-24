@@ -1,0 +1,25 @@
+{
+ "a": {
+  "quote": "Arc выходит в Mainnet уже сегодня",
+  "actor": "Arc",
+  "action": "выходит в Mainnet",
+  "object": "Mainnet",
+  "qualifiers": {
+   "version": null,
+   "event_date": "сегодня",
+   "place": null,
+   "counterparty": null
+  },
+  "url": "https://t.me/whitelist1/7138"
+ },
+ "b": {
+  "quote": "ARC: токены которые я взял и почему - подготовка к паблик мейннету 16 сентября",
+  "actor": "ARC",
+  "action": "prepare for public mainnet",
+  "object": "public mainnet",
+  "qualifiers": {
+   "event_date": "16 сентября"
+  },
+  "url": "https://t.me/WEB3_AGGREGATOR/422903"
+ }
+}

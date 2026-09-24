@@ -1,0 +1,21 @@
+{
+ "segments": [
+  {
+   "id": "telegram:15:423443#s2",
+   "text": "Один из таких проектов - Zeckers.  Выглядит потенциально интересно, главная фишка которого, что каждый NFT должен давать владельцу долю в механике, которая распределяет $ZEC из treasury\n\n",
+   "mentions": [
+    {
+     "text": "$ZEC",
+     "status": "confirmed"
+    },
+    {
+     "text": "ZEC",
+     "status": "confirmed"
+    }
+   ],
+   "kind_hint": "post",
+   "url": "https://t.me/WEB3_AGGREGATOR/423443",
+   "time": "2026-09-21T08:07:15+00:00"
+  }
+ ]
+}

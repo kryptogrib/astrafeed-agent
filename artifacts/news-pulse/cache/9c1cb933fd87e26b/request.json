@@ -1,0 +1,26 @@
+{
+ "a": {
+  "quote": "Вчера Circle, эмитент стейблкоина USDC, запустила мейннет Arc — собственный блокчейн (L1) под платежи и токенизированные активы.",
+  "actor": "Circle",
+  "action": "запустила мейннет",
+  "object": "Arc",
+  "qualifiers": {
+   "time": "вчера",
+   "counterparty": "Circle"
+  },
+  "url": "https://t.me/WEB3_AGGREGATOR/423227"
+ },
+ "b": {
+  "quote": "Arc выходит в Mainnet уже сегодня",
+  "actor": "Arc",
+  "action": "выходит в Mainnet",
+  "object": "Mainnet",
+  "qualifiers": {
+   "version": null,
+   "event_date": "сегодня",
+   "place": null,
+   "counterparty": null
+  },
+  "url": "https://t.me/whitelist1/7138"
+ }
+}

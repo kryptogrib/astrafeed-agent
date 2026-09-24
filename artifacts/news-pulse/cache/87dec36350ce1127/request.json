@@ -1,0 +1,17 @@
+{
+ "segments": [
+  {
+   "id": "telegram:10:385538#s1",
+   "text": "ZCash запланировал на 5 ноября обновление, которое ускорит формирования блоков в сети и платежи в 3 раза -  до 25 сек\n\n",
+   "mentions": [
+    {
+     "text": "ZCash",
+     "status": "confirmed"
+    }
+   ],
+   "kind_hint": "post",
+   "url": "https://t.me/markettwits/385538",
+   "time": "2026-09-21T06:04:32+00:00"
+  }
+ ]
+}

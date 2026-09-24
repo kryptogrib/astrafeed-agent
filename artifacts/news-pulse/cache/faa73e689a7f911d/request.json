@@ -1,0 +1,22 @@
+{
+ "a": {
+  "quote": "Завтра ARC паблик майнет",
+  "actor": "ARC",
+  "action": "launch",
+  "object": "public mainnet",
+  "qualifiers": {
+   "event_date": "завтра"
+  },
+  "url": "https://t.me/WEB3_AGGREGATOR/423067"
+ },
+ "b": {
+  "quote": "👍Напомним, что Arc выходит в Mainnet уже сегодня, а вместе с ним и многие NFT коллекции, сверяемся с постом.",
+  "actor": "Arc",
+  "action": "launches",
+  "object": "Mainnet",
+  "qualifiers": {
+   "event_date": "today"
+  },
+  "url": "https://t.me/whitelist1/7138"
+ }
+}

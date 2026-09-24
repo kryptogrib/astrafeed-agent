@@ -1,0 +1,20 @@
+{
+ "a": {
+  "quote": "⛓️Arc при запуске майннета сминтили 10 млрд. токенов $ARC, на данный момент нет информации для чего, т.к. в оплате газа они не участвуют, нет листинга и нет заявленного использования.",
+  "actor": "Arc",
+  "action": "minted",
+  "object": "10 billion $ARC tokens",
+  "qualifiers": {},
+  "url": "https://t.me/WEB3_AGGREGATOR/423252"
+ },
+ "b": {
+  "quote": "🔴Arc сминтили 10 млрд токенов $ARC в Mainnet. Сама же команда пишет, что это техническая необходимость, а не подготовка к дропу. При этом, в X сами байтят холдеров Architect ролей.",
+  "actor": "Arc",
+  "action": "minted 10 billion tokens in Mainnet",
+  "object": "$ARC",
+  "qualifiers": {
+   "version": "Mainnet"
+  },
+  "url": "https://t.me/whitelist1/7141"
+ }
+}

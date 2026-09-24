@@ -1,0 +1,17 @@
+{
+ "segments": [
+  {
+   "id": "telegram:2:5296:c:379897#s0",
+   "text": "Дак там же написано цена минта 0,16 eth примерно, 55$ маловато будет.",
+   "mentions": [
+    {
+     "text": "eth",
+     "status": "confirmed"
+    }
+   ],
+   "kind_hint": "comment",
+   "url": "https://t.me/don_invest/5296?comment=379897",
+   "time": "2026-09-13T05:20:07+00:00"
+  }
+ ]
+}

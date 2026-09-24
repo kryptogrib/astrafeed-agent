@@ -1,0 +1,357 @@
+{
+ "link": "https://t.me/icodrops_sergey/2426",
+ "model_labels": "artifacts/pulse-zec/thread-2426/v3/labels.json",
+ "corrections": "artifacts/pulse-zec/thread-2426/v3/demo/corrections.json",
+ "reviewer": null,
+ "published": [
+  {
+   "id": "150547",
+   "relevance": "relevant",
+   "aspect": "market",
+   "kind": "opinion",
+   "summary": "Считает, что FOMO уже у всех, и ждёт отката.",
+   "quote": "Фомо уже у всех, ждем отката",
+   "context_ids": [
+    "post"
+   ],
+   "name_candidate": null,
+   "link": "https://t.me/icodrops_sergey/2426?comment=150547",
+   "corrected": false,
+   "borderline": false
+  },
+  {
+   "id": "150548",
+   "relevance": "relevant",
+   "aspect": "market",
+   "kind": "opinion",
+   "summary": "Иронично замечает, что нашли время загонять хомяков на самом ATH после x3.",
+   "quote": "Нашёл когда загонять хомяков, на самом АТН, после х3",
+   "context_ids": [
+    "post"
+   ],
+   "name_candidate": null,
+   "link": "https://t.me/icodrops_sergey/2426?comment=150548",
+   "corrected": false,
+   "borderline": false
+  },
+  {
+   "id": "150549",
+   "relevance": "relevant",
+   "aspect": "market",
+   "kind": "opinion",
+   "summary": "Заявляет, что хейтеры уничтожены.",
+   "quote": "ХЕЙТЕРЫ УНИЧТОЖЕНЫ",
+   "context_ids": [
+    "post"
+   ],
+   "name_candidate": null,
+   "link": "https://t.me/icodrops_sergey/2426?comment=150549",
+   "corrected": false,
+   "borderline": false
+  },
+  {
+   "id": "150550",
+   "relevance": "relevant",
+   "aspect": "market",
+   "kind": "opinion",
+   "summary": "Считает, что FOMO на около трёх иксах нет, а будет, если цена достигнет 5k.",
+   "quote": "Да какое фомо на около трех иксах. Если он будет 5к стоить, то тогда можно будет говорить о фомоебле",
+   "context_ids": [
+    "post"
+   ],
+   "name_candidate": null,
+   "link": "https://t.me/icodrops_sergey/2426?comment=150550",
+   "corrected": false,
+   "borderline": false
+  },
+  {
+   "id": "150551",
+   "relevance": "relevant",
+   "aspect": "market",
+   "kind": "opinion",
+   "summary": "Считает, что сейчас время лонга с хорошим плечом.",
+   "quote": "время лонга с хорошим плечом",
+   "context_ids": [
+    "post"
+   ],
+   "name_candidate": null,
+   "link": "https://t.me/icodrops_sergey/2426?comment=150551",
+   "corrected": false,
+   "borderline": false
+  },
+  {
+   "id": "150552",
+   "relevance": "relevant",
+   "aspect": "market",
+   "kind": "opinion",
+   "summary": "Иронично предполагает, что скоро шорт ZEC озолотит поколение.",
+   "quote": "Скоро шорт зека озолотит поколение..",
+   "context_ids": [
+    "post"
+   ],
+   "name_candidate": null,
+   "link": "https://t.me/icodrops_sergey/2426?comment=150552",
+   "corrected": false,
+   "borderline": false
+  },
+  {
+   "id": "150554",
+   "relevance": "relevant",
+   "aspect": "market",
+   "kind": "opinion",
+   "summary": "Считает, что всё будет как в 2017 году.",
+   "quote": "все как в 2017 будет",
+   "context_ids": [
+    "post"
+   ],
+   "name_candidate": null,
+   "link": "https://t.me/icodrops_sergey/2426?comment=150554",
+   "corrected": false,
+   "borderline": false
+  },
+  {
+   "id": "150555",
+   "relevance": "relevant",
+   "aspect": "market",
+   "kind": "opinion",
+   "summary": "Говорит, что хейтеры сели на бутылку.",
+   "quote": "Хейтеры сели на бутылку",
+   "context_ids": [
+    "post"
+   ],
+   "name_candidate": null,
+   "link": "https://t.me/icodrops_sergey/2426?comment=150555",
+   "corrected": false,
+   "borderline": false
+  },
+  {
+   "id": "150556",
+   "relevance": "relevant",
+   "aspect": "market",
+   "kind": "experience",
+   "summary": "Рассказывает, что Серёга первый раз купил по 150, и цена падала до 125.",
+   "quote": "Серёга первый раз купил по 150 и он падал до 125",
+   "context_ids": [
+    "150550"
+   ],
+   "name_candidate": null,
+   "link": "https://t.me/icodrops_sergey/2426?comment=150556",
+   "corrected": false,
+   "borderline": false
+  },
+  {
+   "id": "150557",
+   "relevance": "relevant",
+   "aspect": "market",
+   "kind": "opinion",
+   "summary": "Утверждает, что от дна было 12 иксов.",
+   "quote": "12 иксов от дна",
+   "context_ids": [
+    "150550"
+   ],
+   "name_candidate": null,
+   "link": "https://t.me/icodrops_sergey/2426?comment=150557",
+   "corrected": false,
+   "borderline": false
+  },
+  {
+   "id": "150560",
+   "relevance": "relevant",
+   "aspect": "market",
+   "kind": "experience",
+   "summary": "Говорит, что ZEC уже показывают по телевизору.",
+   "quote": "да. уже по телеку показывают",
+   "context_ids": [
+    "post"
+   ],
+   "name_candidate": null,
+   "link": "https://t.me/icodrops_sergey/2426?comment=150560",
+   "corrected": false,
+   "borderline": false
+  },
+  {
+   "id": "150563",
+   "relevance": "relevant",
+   "aspect": "market",
+   "kind": "opinion",
+   "summary": "Прогнозирует цену 20k, но не сразу.",
+   "quote": "20к мой прогноз, но не сразу, хотя зависит от обстоятельств",
+   "context_ids": [
+    "post"
+   ],
+   "name_candidate": null,
+   "link": "https://t.me/icodrops_sergey/2426?comment=150563",
+   "corrected": false,
+   "borderline": false
+  },
+  {
+   "id": "150564",
+   "relevance": "relevant",
+   "aspect": "market",
+   "kind": "opinion",
+   "summary": "Считает, что 70k вполне реально, за битком пойдут, но придётся подождать.",
+   "quote": "Я думаю 70к вполне реально, за битком пойдем, но придется подождать конечно",
+   "context_ids": [
+    "150563"
+   ],
+   "name_candidate": null,
+   "link": "https://t.me/icodrops_sergey/2426?comment=150564",
+   "corrected": false,
+   "borderline": false
+  },
+  {
+   "id": "150566",
+   "relevance": "relevant",
+   "aspect": "market",
+   "kind": "opinion",
+   "summary": "Считает, что 70k будет, если все начнут закрывать чейны и уйдут в приватность, а ZEC поведёт за собой.",
+   "quote": "Это если все начнут чейны закрывать и в приватность уйдут, а зек как ледокол всех за собой поведет.",
+   "context_ids": [
+    "150564"
+   ],
+   "name_candidate": null,
+   "link": "https://t.me/icodrops_sergey/2426?comment=150566",
+   "corrected": false,
+   "borderline": false
+  },
+  {
+   "id": "150567",
+   "relevance": "relevant",
+   "aspect": "market",
+   "kind": "opinion",
+   "summary": "Считает, что всем всё равно на ZEC.",
+   "quote": "#мнекажетсявсемпохуй",
+   "context_ids": [
+    "post"
+   ],
+   "name_candidate": null,
+   "link": "https://t.me/icodrops_sergey/2426?comment=150567",
+   "corrected": false,
+   "borderline": false
+  },
+  {
+   "id": "150568",
+   "relevance": "relevant",
+   "aspect": "market",
+   "kind": "opinion",
+   "summary": "Считает, что пока всем всё равно, есть потенциал на иксы с текущих.",
+   "quote": "пока всем похуи, есть потенциал на иксы с текуших",
+   "context_ids": [
+    "150567"
+   ],
+   "name_candidate": null,
+   "link": "https://t.me/icodrops_sergey/2426?comment=150568",
+   "corrected": false,
+   "borderline": false
+  },
+  {
+   "id": "150569",
+   "relevance": "relevant",
+   "aspect": "market",
+   "kind": "opinion",
+   "summary": "Считает, что DASH ещё покажет себя как младший брат ZEC.",
+   "quote": "Я думаю DASH тоже себя ещё покажет как младший брат от ZEC",
+   "context_ids": [
+    "post"
+   ],
+   "name_candidate": null,
+   "link": "https://t.me/icodrops_sergey/2426?comment=150569",
+   "corrected": false,
+   "borderline": false
+  },
+  {
+   "id": "150571",
+   "relevance": "relevant",
+   "aspect": "market",
+   "kind": "opinion",
+   "summary": "Считает ZEC раздутым мыльным пузырём.",
+   "quote": "Раздутый мыльный пузырь",
+   "context_ids": [
+    "post"
+   ],
+   "name_candidate": null,
+   "link": "https://t.me/icodrops_sergey/2426?comment=150571",
+   "corrected": false,
+   "borderline": false
+  },
+  {
+   "id": "150572",
+   "relevance": "relevant",
+   "aspect": "market",
+   "kind": "opinion",
+   "summary": "Иронично называет ZEC дырявым ледоколом, который пойдёт на дно.",
+   "quote": "Дырявый ледокол на дно если только..",
+   "context_ids": [
+    "150566"
+   ],
+   "name_candidate": null,
+   "link": "https://t.me/icodrops_sergey/2426?comment=150572",
+   "corrected": false,
+   "borderline": false
+  },
+  {
+   "id": "150573",
+   "relevance": "relevant",
+   "aspect": "market",
+   "kind": "opinion",
+   "summary": "Спрашивает, что изменит покупка сейчас для x2 или x5 от текущих цен.",
+   "quote": "Нам то что с того. Покупать сейчас что бы сделать х2 на $100 ну даже х5 от текущих будет... Это что то поменяет",
+   "context_ids": [
+    "150557"
+   ],
+   "name_candidate": null,
+   "link": "https://t.me/icodrops_sergey/2426?comment=150573",
+   "corrected": false,
+   "borderline": false
+  },
+  {
+   "id": "150574",
+   "relevance": "relevant",
+   "aspect": "market",
+   "kind": "experience",
+   "summary": "Объясняет, что ответил про FOMO на 3 икса, когда их уже больше 10, и что Серёга просто флексит.",
+   "quote": "С этой стороны конечно нет, Серёга просто флексит вином Я ответил про фомо на 3 икса, когда их больше 10 уже",
+   "context_ids": [
+    "150573"
+   ],
+   "name_candidate": null,
+   "link": "https://t.me/icodrops_sergey/2426?comment=150574",
+   "corrected": false,
+   "borderline": false
+  },
+  {
+   "id": "150576",
+   "relevance": "relevant",
+   "aspect": "market",
+   "kind": "experience",
+   "summary": "Указывает, что сигнал был по ссылке.",
+   "quote": "сигнал был тут https://t.me/icodrops_sergey/2105",
+   "context_ids": [
+    "150548"
+   ],
+   "name_candidate": null,
+   "link": "https://t.me/icodrops_sergey/2426?comment=150576",
+   "corrected": false,
+   "borderline": false
+  },
+  {
+   "id": "150651",
+   "relevance": "relevant",
+   "aspect": "technology",
+   "kind": "opinion",
+   "summary": "Не видит будущего за ZEC, так как приватность отсутствует, а весь криминал на Monero.",
+   "quote": "Не вижу пока будущего за zec, весь криминал сидит онли на монеро. Вся приватность только там пока что. Приватность в зикеше отсутствует.",
+   "context_ids": [
+    "post"
+   ],
+   "name_candidate": null,
+   "link": "https://t.me/icodrops_sergey/2426?comment=150651",
+   "corrected": false,
+   "borderline": false
+  }
+ ],
+ "held_for_review": {
+  "reason": "relevant_not_grounded на метках модели",
+  "labels": []
+ }
+}

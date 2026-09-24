@@ -1,0 +1,17 @@
+{
+ "segments": [
+  {
+   "id": "telegram:18:31433#s2",
+   "text": "У кита на бирже Binance ликвидировало лонг на $11,7m одним ордером (в паре ETH/USDT).\n\n",
+   "mentions": [
+    {
+     "text": "ETH",
+     "status": "confirmed"
+    }
+   ],
+   "kind_hint": "post",
+   "url": "https://t.me/crypto_hd/31433",
+   "time": "2026-09-15T14:59:53+00:00"
+  }
+ ]
+}

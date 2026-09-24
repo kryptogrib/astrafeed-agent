@@ -1,0 +1,37 @@
+{
+ "db_md5": "1c714bad0d7dd7e07d1f2c5032fd8dce",
+ "window": "2026-09-08T11:41:29.797109+00:00..2026-09-24T11:41:29.797109+00:00",
+ "threads": 26,
+ "comments": 112,
+ "by_kind": {
+  "topic_shift": 18,
+  "news": 8
+ },
+ "comments_by_kind": {
+  "topic_shift": 74,
+  "news": 38
+ },
+ "by_topic": {
+  "zec": 5,
+  "eth": 10,
+  "arc": 11
+ },
+ "by_channel": {
+  "@CoinMetrika": 2,
+  "@DeFi_learn": 1,
+  "@Nat_Selection": 4,
+  "@NewBitFuture": 1,
+  "@maxshitpostit": 10,
+  "@sellnotbuych": 2,
+  "@shtanga0x": 1,
+  "@tradeinvestAndCat": 3,
+  "@workIncrypts": 2
+ },
+ "missing_parent": 3,
+ "nontext_parent": 3,
+ "dropped_before_sampling": {},
+ "dedup": {
+  "min_chars": 30,
+  "jaccard_5gram": 0.8
+ }
+}

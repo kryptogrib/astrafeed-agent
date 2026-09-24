@@ -1,0 +1,46 @@
+{
+ "id": "gen-1790190993-qA1O5bS2h4FBzb4KfU9x",
+ "object": "chat.completion",
+ "created": 1790190993,
+ "model": "deepseek/deepseek-v4-flash",
+ "provider": "GMICloud",
+ "system_fingerprint": null,
+ "service_tier": null,
+ "choices": [
+  {
+   "index": 0,
+   "logprobs": null,
+   "finish_reason": "stop",
+   "native_finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "content": "{\"labels\": [{\"id\": \"telegram:15:422904#s4\", \"kind\": \"event\", \"actor\": \"author\", \"action\": \"announces free mint on ZEC with 11 spots and warns about rugs\", \"object\": \"ZEC free mint\", \"qualifiers\": {\"event_date\": \"next few days\", \"place\": \"Zcash ecosystem\"}, \"origin\": \"own\", \"source_role\": \"author\", \"verification_status\": \"unverified\", \"quote\": \"Freemint on ZEC 11 spots.\", \"span\": [0, 25]}, {\"id\": \"telegram:15:422974#s3\", \"kind\": \"author_position\", \"actor\": \"author\", \"action\": \"expresses belief that market is on the verge of a bull run\", \"object\": \"market sentiment\", \"qualifiers\": {}, \"origin\": \"own\", \"source_role\": \"author\", \"verification_status\": \"unverified\", \"quote\": \"Почитал я чатики, полистал ленту и есть острое ощущение, что мы сейчас находимся на пороге жирной бычки.\", \"span\": [0, 118]}, {\"id\": \"telegram:15:422974#s6\", \"kind\": \"author_position\", \"actor\": \"author\", \"action\": \"lists $ZEC as part of a narrative and gives it a score of 5\", \"object\": \"$ZEC\", \"qualifiers\": {\"version\": \"narrative\"}, \"origin\": \"own\", \"source_role\": \"author\", \"verification_status\": \"unverified\", \"quote\": \"Попадает в ИИ нарратив и ZEC нарратив\", \"span\": [0, 38]}, {\"id\": \"telegram:15:422977#s5\", \"kind\": \"author_position\", \"actor\": \"author\", \"action\": \"makes a bet on NFT meta around zcash\", \"object\": \"zcash NFT meta\", \"qualifiers\": {}, \"origin\": \"own\", \"source_role\": \"author\", \"verification_status\": \"unverified\", \"quote\": \"Я прям делаю еще ставку на разгон нфт меты во круг zcash, там тож движ интересный начинается\", \"span\": [0, 88]}, {\"id\": \"telegram:15:423011#s0\", \"kind\": \"event\", \"actor\": \"author\", \"action\": \"announces mint of punks on ZEC today with public at 18 MSK and price details\", \"object\": \"ZEC punks mint\", \"qualifiers\": {\"event_date\": \"2026-09-15\", \"place\": \"public\", \"counterparty\": \"MP 0.015 zec ~18$ + fee ~$10\"}, \"origin\": \"own\", \"source_role\": \"author\", \"verification_status\": \"unverified\", \"quote\": \"Сегодня еще минт панков на ZEC\", \"span\": [0, 30]}, {\"id\": \"telegram:15:423037#s1\", \"kind\": \"event\", \"actor\": \"author\", \"action\": \"reminds about auction opening in 12 minutes and requirements\", \"object\": \"auction\", \"qualifiers\": {\"event_date\": \"in 12 minutes\", \"place\": \"auction\", \"counterparty\": \"wallet noir, ZEC, 48 hours\"}, \"origin\": \"own\", \"source_role\": \"author\", \"verification_status\": \"unverified\", \"quote\": \"нужен кошелек ноир, ZEC, акцион 48 часов.\", \"span\": [0, 42]}, {\"id\": \"telegram:7:12225#s12\", \"kind\": \"event\", \"actor\": \"author\", \"action\": \"explains auction is calculated in ZEC but can be entered with other assets via NEAR Intents\", \"object\": \"auction\", \"qualifiers\": {\"counterparty\": \"NEAR Intents\"}, \"origin\": \"own\", \"source_role\": \"author\", \"verification_status\": \"unverified\", \"quote\": \"Аукцион рассчитывается в ZEC, но через NEAR Intents можно зайти ETH, SOL, BTC, стейблами и другими активами - система сама конвертирует их в ZEC.\", \"span\": [0, 130]}, {\"id\": \"telegram:15:423054#s0\", \"kind\": \"event\", \"actor\": \"author\", \"action\": \"introduces topic about Zcash ecosystem\", \"object\": \"Zcash ecosystem\", \"qualifiers\": {}, \"origin\": \"own\", \"source_role\": \"author\", \"verification_status\": \"unverified\", \"quote\": \"Про экосистему Zcash\", \"span\": [0, 20]}, {\"id\": \"telegram:15:423054#s2\", \"kind\": \"event\", \"actor\": \"author\", \"action\": \"states hypothetical return on ZEC investment\", \"object\": \"ZEC investment\", \"qualifiers\": {\"version\": \"hypothetical\"}, \"origin\": \"own\", \"source_role\": \"author\", \"verification_status\": \"unverified\", \"quote\": \"Если б ты купил ZEC год назад на $1.000, то сейчас это было бы $60.000\", \"span\": [0, 70]}, {\"id\": \"telegram:15:423054#s4\", \"kind\": \"author_position\", \"actor\": \"author\", \"action\": \"praises someone on Ancem for public bets in VVV, ZEC, and HYPE\", \"object\": \"Ancem person\", \"qualifiers\": {\"counterparty\": \"Ancem\"}, \"origin\": \"own\", \"source_role\": \"author\", \"verification_status\": \"unverified\", \"quote\": \"Тип буквально сделал публичные ставки в VVV, ZEC и HYPE и не прогадал\", \"span\": [0, 80]}, {\"id\": \"telegram:15:423054#s18\", \"kind\": \"event\", \"actor\": \"author\", \"action\": \"describes ZEC-paired with 3% fee and ZEC buyback for ZCAT holders\", \"object\": \"ZEC-paired\", \"qualifiers\": {\"counterparty\": \"ZCAT holders\"}, \"origin\": \"own\", \"source_role\": \"author\", \"verification_status\": \"unverified\", \"quote\": \"ZEC-paired\", \"span\": [0, 10]}, {\"id\": \"telegram:15:423054#s19\", \"kind\": \"event\", \"actor\": \"author\", \"action\": \"compares to INDEX with exposure on ZEC and mentions TACZ strategy\", \"object\": \"INDEX and TACZ\", \"qualifiers\": {\"counterparty\": \"ZEC\"}, \"origin\": \"own\", \"source_role\": \"author\", \"verification_status\": \"unverified\", \"quote\": \"Ну короче INDEX, только с exposure на ZEC.\", \"span\": [0, 40]}\n]}",
+    "refusal": null,
+    "reasoning": null
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 2583,
+  "completion_tokens": 1538,
+  "total_tokens": 4121,
+  "cost": 0.0003513874,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 2247,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.0003513874,
+   "upstream_inference_prompt_cost": 7.14714e-05,
+   "upstream_inference_completions_cost": 0.000279916
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

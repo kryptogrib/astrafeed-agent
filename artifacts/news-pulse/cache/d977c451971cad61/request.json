@@ -1,0 +1,21 @@
+{
+ "segments": [
+  {
+   "id": "telegram:15:423244#s1",
+   "text": "Arc has introduced Arc Studio, an AI coding agent that turns natural-language prompts into full-stack onchain applications, including frontend interfaces, backend logic, and smart contracts.\n\n",
+   "mentions": [
+    {
+     "text": "Arc",
+     "status": "confirmed"
+    },
+    {
+     "text": "Arc",
+     "status": "confirmed"
+    }
+   ],
+   "kind_hint": "post",
+   "url": "https://t.me/WEB3_AGGREGATOR/423244",
+   "time": "2026-09-17T18:31:20+00:00"
+  }
+ ]
+}

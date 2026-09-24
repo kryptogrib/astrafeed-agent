@@ -1,0 +1,18 @@
+{
+ "a": {
+  "quote": "Arc Introduces AI Coding Agent for Onchain App Development",
+  "actor": "Arc",
+  "action": "introduces",
+  "object": "AI Coding Agent for Onchain App Development",
+  "qualifiers": {},
+  "url": "https://t.me/WEB3_AGGREGATOR/423244"
+ },
+ "b": {
+  "quote": "Studio is built around Arc and Circle’s infrastructure, with integrations for CCTP, Gateway, Wallets, and other stablecoin tools. Generated apps can be tested across nine EVM chains, including Arc, Ethereum, Base, Avalanche, Arbitrum, and Unichain, while the resulting code can be exported into developers’ own repositories.",
+  "actor": "Studio",
+  "action": "is built around",
+  "object": "Arc and Circle’s infrastructure",
+  "qualifiers": {},
+  "url": "https://t.me/WEB3_AGGREGATOR/423244"
+ }
+}

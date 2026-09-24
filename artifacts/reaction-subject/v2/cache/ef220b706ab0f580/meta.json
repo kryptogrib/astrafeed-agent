@@ -1,0 +1,33 @@
+{
+ "prompt_sha256": "5c596d0f863ff4bd",
+ "input_sha256": "57fc48660d3ebb2c",
+ "model": "deepseek/deepseek-v4-flash",
+ "schema": "reaction-subject/v2",
+ "db_md5": "8618099125a806df376354286ccd982e",
+ "provider_pinned": null,
+ "seconds": 4.2,
+ "provider_actual": "DigitalOcean",
+ "usage": {
+  "prompt_tokens": 1255,
+  "completion_tokens": 48,
+  "total_tokens": 1303,
+  "cost": 0.000132398,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.000132398,
+   "upstream_inference_prompt_cost": 0.00012299,
+   "upstream_inference_completions_cost": 9.408e-06
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

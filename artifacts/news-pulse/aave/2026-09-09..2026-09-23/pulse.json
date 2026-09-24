@@ -1,0 +1,537 @@
+{
+  "topic": "aave",
+  "window": {
+    "requested": "2026-09-09..2026-09-23",
+    "start": "2026-09-09T00:00:00+00:00",
+    "end": "2026-09-24T00:00:00+00:00",
+    "cutoff": "2026-09-24T00:00:00+00:00",
+    "previous": "2026-08-25..2026-09-08",
+    "mode": "publication_replay"
+  },
+  "status": "ok",
+  "events": [
+    {
+      "event_id": "e1-4bdb4a742211eda9",
+      "headline": "#Aave: теперь принимает золото в качестве обеспечения 🤔",
+      "counts": {
+        "events": 1,
+        "publications": 1,
+        "channels": 1,
+        "known_authors": 0,
+        "unknown_authors": 1,
+        "found_origins": 0,
+        "reprints": 1,
+        "unknown_origin": 0
+      },
+      "actor": "Aave",
+      "action": "accepts gold as collateral",
+      "object": "gold",
+      "qualifiers": {},
+      "members": [
+        {
+          "obs_id": "telegram:3:6912#s0",
+          "publication_id": "telegram:3:6912",
+          "source_id": 3,
+          "author_id": null,
+          "published_at": "2026-09-11T12:02:26+00:00",
+          "url": "https://t.me/Slavik_investor_updates/6912",
+          "quote": "#Aave: теперь принимает золото в качестве обеспечения 🤔",
+          "span": [
+            0,
+            55
+          ],
+          "origin": "retelling"
+        }
+      ]
+    },
+    {
+      "event_id": "e2-0fb0504ab639e4c9",
+      "headline": "• Aave Proposes Custodied Collateral Lending for Institutions",
+      "counts": {
+        "events": 1,
+        "publications": 1,
+        "channels": 1,
+        "known_authors": 0,
+        "unknown_authors": 1,
+        "found_origins": 0,
+        "reprints": 1,
+        "unknown_origin": 0
+      },
+      "actor": "Aave",
+      "action": "proposes",
+      "object": "custodied collateral lending for institutions",
+      "qualifiers": {},
+      "members": [
+        {
+          "obs_id": "telegram:15:423460#s6",
+          "publication_id": "telegram:15:423460",
+          "source_id": 15,
+          "author_id": null,
+          "published_at": "2026-09-21T09:46:54+00:00",
+          "url": "https://t.me/WEB3_AGGREGATOR/423460",
+          "quote": "• Aave Proposes Custodied Collateral Lending for Institutions",
+          "span": [
+            382,
+            443
+          ],
+          "origin": "retelling"
+        }
+      ]
+    },
+    {
+      "event_id": "e3-8de96fd645de5fd5",
+      "headline": "🟢 Aave предлагает займы под кастодиальный BTC",
+      "counts": {
+        "events": 1,
+        "publications": 1,
+        "channels": 1,
+        "known_authors": 0,
+        "unknown_authors": 1,
+        "found_origins": 0,
+        "reprints": 1,
+        "unknown_origin": 0
+      },
+      "actor": "Aave",
+      "action": "предлагает",
+      "object": "займы под кастодиальный BTC",
+      "qualifiers": {},
+      "members": [
+        {
+          "obs_id": "telegram:15:423533#s17",
+          "publication_id": "telegram:15:423533",
+          "source_id": 15,
+          "author_id": null,
+          "published_at": "2026-09-21T20:47:03+00:00",
+          "url": "https://t.me/WEB3_AGGREGATOR/423533",
+          "quote": "🟢 Aave предлагает займы под кастодиальный BTC",
+          "span": [
+            785,
+            830
+          ],
+          "origin": "retelling"
+        }
+      ]
+    }
+  ],
+  "distribution_and_positions": [
+    {
+      "obs_id": "telegram:3:6912#s1",
+      "publication_id": "telegram:3:6912",
+      "kind": "author_position",
+      "text": "Aave - самый крупный лендинг протокол в крипте.",
+      "quote": "Aave - самый крупный лендинг протокол в крипте.",
+      "url": "https://t.me/Slavik_investor_updates/6912",
+      "origin": "own",
+      "source_role": "author"
+    },
+    {
+      "obs_id": "telegram:15:422974#s15",
+      "publication_id": "telegram:15:422974",
+      "kind": "author_position",
+      "text": "10. $AAVE (1) - безоговорочный лидер он-чейн кредитных протоколов. После взлома доверие к нему не пропало у людей(у меня пропало).",
+      "quote": "10. $AAVE (1) - безоговорочный лидер он-чейн кредитных протоколов. После взлома доверие к нему не пропало у людей(у меня пропало).",
+      "url": "https://t.me/WEB3_AGGREGATOR/422974",
+      "origin": "own",
+      "source_role": "author"
+    },
+    {
+      "obs_id": "telegram:15:423227#s14",
+      "publication_id": "telegram:15:423227",
+      "kind": "author_position",
+      "text": "слой банков BNY и HSBC, Aave и токенизированных активов живёт отдельно от казино.",
+      "quote": "слой банков BNY и HSBC, Aave и токенизированных активов живёт отдельно от казино.",
+      "url": "https://t.me/WEB3_AGGREGATOR/423227",
+      "origin": "own",
+      "source_role": "author"
+    }
+  ],
+  "discussion": [
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "Там у хайпера если что фри позицию раздают 1к юсдт с 3 плечом за холд 2к юсдт на балансе просто",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/Slavik_investor_updates/6912?comment=138020",
+      "quote": "Там у хайпера если что фри позицию раздают 1к юсдт с 3 плечом за холд 2к юсдт на балансе просто"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/Slavik_investor_updates/6912?comment=138021",
+      "quote": ""
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "xaut давно же был на v4",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/Slavik_investor_updates/6912?comment=138023",
+      "quote": "xaut давно же был на v4"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "Золото? Вот это поворот!",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/Slavik_investor_updates/6912?comment=138045",
+      "quote": "Золото? Вот это поворот!"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "Вот это поворот, золото в крипте, ждем дальше",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/Slavik_investor_updates/6912?comment=138053",
+      "quote": "Вот это поворот, золото в крипте, ждем дальше"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "Вот это поворот, золото в крипте, интересно",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/Slavik_investor_updates/6912?comment=138078",
+      "quote": "Вот это поворот, золото в крипте, интересно"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "вот бы сейчас пивка бахнуть",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/krasnovcrypto/3754?comment=284537",
+      "quote": "вот бы сейчас пивка бахнуть"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "Вот правильный комментарий )",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/krasnovcrypto/3754?comment=284540",
+      "quote": "Вот правильный комментарий )"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "Самое то 😅",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/krasnovcrypto/3754?comment=284541",
+      "quote": "Самое то 😅"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "5к транзакцій как монаде набивать не будем больше ?😁",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/krasnovcrypto/3754?comment=284547",
+      "quote": "5к транзакцій как монаде набивать не будем больше ?😁"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "Можно и 10к набить 😅",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/krasnovcrypto/3754?comment=284548",
+      "quote": "Можно и 10к набить 😅"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "я там вообще нихера не набивал и не делал и дали дроп",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/krasnovcrypto/3754?comment=284549",
+      "quote": "я там вообще нихера не набивал и не делал и дали дроп"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "Так да, там же раздали за активности в других экосистемах )",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/krasnovcrypto/3754?comment=284550",
+      "quote": "Так да, там же раздали за активности в других экосистемах )"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "не, там походу раздали умным, кто не делал monad - у того есть мозги, тем и раздали 😂",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/krasnovcrypto/3754?comment=284552",
+      "quote": "не, там походу раздали умным, кто не делал monad - у того есть мозги, тем и раздали 😂"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "забей хер на арк)",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/krasnovcrypto/3754?comment=284568",
+      "quote": "забей хер на арк)"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "заебал, он тебя в жопу случайно наткнул?😂",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/krasnovcrypto/3754?comment=284582",
+      "quote": "заебал, он тебя в жопу случайно наткнул?😂"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "Ты пид.р наткнулся на х.й и твоё очко ушло в зрительный зал бесплатно 😂",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/krasnovcrypto/3754?comment=284583",
+      "quote": "Ты пид.р наткнулся на х.й и твоё очко ушло в зрительный зал бесплатно 😂"
+    }
+  ],
+  "changes": {
+    "previous_window": "2026-08-25..2026-09-08",
+    "previous_events": [],
+    "events_appeared": [
+      "Aave|accepts gold as collateral|gold|#Aave: теперь принимает золото в качестве обеспечения 🤔",
+      "Aave|proposes|custodied collateral lending for institutions|• Aave Proposes Custodied Collateral Lending for Institutions",
+      "Aave|предлагает|займы под кастодиальный BTC|🟢 Aave предлагает займы под кастодиальный BTC"
+    ],
+    "events_gone": [],
+    "topic_comments": 17,
+    "previous_topic_comments": 0,
+    "source_coverage": {
+      "added_channels": [
+        "1",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "18",
+        "19",
+        "2",
+        "20",
+        "21",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "removed_channels": [],
+      "current_channels": 20,
+      "previous_channels": 0
+    }
+  },
+  "short_observations": [
+    "#Aave: теперь принимает золото в качестве обеспечения 🤔",
+    "• Aave Proposes Custodied Collateral Lending for Institutions",
+    "🟢 Aave предлагает займы под кастодиальный BTC"
+  ],
+  "coverage": {
+    "publications": 13985,
+    "comments": 1689,
+    "channels": 20,
+    "topic_publications": 3,
+    "not_processed": 0,
+    "db_md5": "8618099125a806df376354286ccd982e",
+    "cutoff": "2026-09-24T00:00:00+00:00"
+  },
+  "limitations": [
+    "Режим publication_replay: discovered_at в снимке отсутствует, «впервые системой» не заявляется.",
+    "Роль источника unknown: в базе нет редакционного реестра.",
+    "Неизвестные авторы не объединяются.",
+    "Отсечено после cutoff 2026-09-24T00:00:00+00:00: 0."
+  ],
+  "evidence": [
+    {
+      "id": "telegram:3:6912#s0",
+      "url": "https://t.me/Slavik_investor_updates/6912",
+      "quote": "#Aave: теперь принимает золото в качестве обеспечения 🤔",
+      "span": [
+        0,
+        55
+      ],
+      "publication_id": "telegram:3:6912"
+    },
+    {
+      "id": "telegram:15:423460#s6",
+      "url": "https://t.me/WEB3_AGGREGATOR/423460",
+      "quote": "• Aave Proposes Custodied Collateral Lending for Institutions",
+      "span": [
+        382,
+        443
+      ],
+      "publication_id": "telegram:15:423460"
+    },
+    {
+      "id": "telegram:15:423533#s17",
+      "url": "https://t.me/WEB3_AGGREGATOR/423533",
+      "quote": "🟢 Aave предлагает займы под кастодиальный BTC",
+      "span": [
+        785,
+        830
+      ],
+      "publication_id": "telegram:15:423533"
+    },
+    {
+      "id": "telegram:3:6912#s1",
+      "url": "https://t.me/Slavik_investor_updates/6912",
+      "quote": "Aave - самый крупный лендинг протокол в крипте.",
+      "span": [
+        57,
+        104
+      ],
+      "publication_id": "telegram:3:6912"
+    },
+    {
+      "id": "telegram:15:422853#s9",
+      "url": "https://t.me/WEB3_AGGREGATOR/422853",
+      "quote": "В экосистеме на день первый заявлены Aave, Morpho, Uniswap, Aerodrome, FalconX, Galaxy и несколько институциональных маркетмейкеров.",
+      "span": [
+        2211,
+        2343
+      ],
+      "publication_id": "telegram:15:422853"
+    },
+    {
+      "id": "telegram:15:422974#s15",
+      "url": "https://t.me/WEB3_AGGREGATOR/422974",
+      "quote": "10. $AAVE (1) - безоговорочный лидер он-чейн кредитных протоколов. После взлома доверие к нему не пропало у людей(у меня пропало).",
+      "span": [
+        2688,
+        2818
+      ],
+      "publication_id": "telegram:15:422974"
+    },
+    {
+      "id": "telegram:13:3754#s2",
+      "url": "https://t.me/krasnovcrypto/3754",
+      "quote": "В экосистеме уже есть Uniswap, Aave, Morpho, Aerodrome и другие крупные проекты.",
+      "span": [
+        200,
+        280
+      ],
+      "publication_id": "telegram:13:3754"
+    },
+    {
+      "id": "telegram:15:423197#s2",
+      "url": "https://t.me/WEB3_AGGREGATOR/423197",
+      "quote": "Day-one access came via Binance Wallet, OKX, MetaMask and Kraken, with Aave, Morpho and Uniswap live from the start.",
+      "span": [
+        395,
+        511
+      ],
+      "publication_id": "telegram:15:423197"
+    },
+    {
+      "id": "telegram:15:423227#s14",
+      "url": "https://t.me/WEB3_AGGREGATOR/423227",
+      "quote": "слой банков BNY и HSBC, Aave и токенизированных активов живёт отдельно от казино.",
+      "span": [
+        2297,
+        2378
+      ],
+      "publication_id": "telegram:15:423227"
+    },
+    {
+      "id": "telegram:15:423244#s3",
+      "url": "https://t.me/WEB3_AGGREGATOR/423244",
+      "quote": "with integrations across protocols including Aave, Morpho, and Uniswap.",
+      "span": [
+        706,
+        777
+      ],
+      "publication_id": "telegram:15:423244"
+    },
+    {
+      "id": "https://t.me/Slavik_investor_updates/6912?comment=138020",
+      "url": "https://t.me/Slavik_investor_updates/6912?comment=138020",
+      "quote": "Там у хайпера если что фри позицию раздают 1к юсдт с 3 плечом за холд 2к юсдт на балансе просто"
+    },
+    {
+      "id": "https://t.me/Slavik_investor_updates/6912?comment=138023",
+      "url": "https://t.me/Slavik_investor_updates/6912?comment=138023",
+      "quote": "xaut давно же был на v4"
+    },
+    {
+      "id": "https://t.me/Slavik_investor_updates/6912?comment=138045",
+      "url": "https://t.me/Slavik_investor_updates/6912?comment=138045",
+      "quote": "Золото? Вот это поворот!"
+    },
+    {
+      "id": "https://t.me/Slavik_investor_updates/6912?comment=138053",
+      "url": "https://t.me/Slavik_investor_updates/6912?comment=138053",
+      "quote": "Вот это поворот, золото в крипте, ждем дальше"
+    },
+    {
+      "id": "https://t.me/Slavik_investor_updates/6912?comment=138078",
+      "url": "https://t.me/Slavik_investor_updates/6912?comment=138078",
+      "quote": "Вот это поворот, золото в крипте, интересно"
+    },
+    {
+      "id": "https://t.me/krasnovcrypto/3754?comment=284537",
+      "url": "https://t.me/krasnovcrypto/3754?comment=284537",
+      "quote": "вот бы сейчас пивка бахнуть"
+    },
+    {
+      "id": "https://t.me/krasnovcrypto/3754?comment=284540",
+      "url": "https://t.me/krasnovcrypto/3754?comment=284540",
+      "quote": "Вот правильный комментарий )"
+    },
+    {
+      "id": "https://t.me/krasnovcrypto/3754?comment=284541",
+      "url": "https://t.me/krasnovcrypto/3754?comment=284541",
+      "quote": "Самое то 😅"
+    },
+    {
+      "id": "https://t.me/krasnovcrypto/3754?comment=284547",
+      "url": "https://t.me/krasnovcrypto/3754?comment=284547",
+      "quote": "5к транзакцій как монаде набивать не будем больше ?😁"
+    },
+    {
+      "id": "https://t.me/krasnovcrypto/3754?comment=284548",
+      "url": "https://t.me/krasnovcrypto/3754?comment=284548",
+      "quote": "Можно и 10к набить 😅"
+    },
+    {
+      "id": "https://t.me/krasnovcrypto/3754?comment=284549",
+      "url": "https://t.me/krasnovcrypto/3754?comment=284549",
+      "quote": "я там вообще нихера не набивал и не делал и дали дроп"
+    },
+    {
+      "id": "https://t.me/krasnovcrypto/3754?comment=284550",
+      "url": "https://t.me/krasnovcrypto/3754?comment=284550",
+      "quote": "Так да, там же раздали за активности в других экосистемах )"
+    },
+    {
+      "id": "https://t.me/krasnovcrypto/3754?comment=284552",
+      "url": "https://t.me/krasnovcrypto/3754?comment=284552",
+      "quote": "не, там походу раздали умным, кто не делал monad - у того есть мозги, тем и раздали 😂"
+    },
+    {
+      "id": "https://t.me/krasnovcrypto/3754?comment=284568",
+      "url": "https://t.me/krasnovcrypto/3754?comment=284568",
+      "quote": "забей хер на арк)"
+    },
+    {
+      "id": "https://t.me/krasnovcrypto/3754?comment=284582",
+      "url": "https://t.me/krasnovcrypto/3754?comment=284582",
+      "quote": "заебал, он тебя в жопу случайно наткнул?😂"
+    },
+    {
+      "id": "https://t.me/krasnovcrypto/3754?comment=284583",
+      "url": "https://t.me/krasnovcrypto/3754?comment=284583",
+      "quote": "Ты пид.р наткнулся на х.й и твоё очко ушло в зрительный зал бесплатно 😂"
+    }
+  ],
+  "spend_usd": 0.0,
+  "numbers_by": "code",
+  "brief_markdown": "# Pulse (news-first): aave, окно 2026-09-09 – 2026-09-23\n\n## Коротко\n\n- #Aave: теперь принимает золото в качестве обеспечения 🤔\n- • Aave Proposes Custodied Collateral Lending for Institutions\n- 🟢 Aave предлагает займы под кастодиальный BTC\n\n## События и заявления\n\n- **#Aave: теперь принимает золото в качестве обеспечения 🤔**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/Slavik_investor_updates/6912: «#Aave: теперь принимает золото в качестве обеспечения 🤔»\n- **• Aave Proposes Custodied Collateral Lending for Institutions**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/423460: «• Aave Proposes Custodied Collateral Lending for Institutions»\n- **🟢 Aave предлагает займы под кастодиальный BTC**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/423533: «🟢 Aave предлагает займы под кастодиальный BTC»\n\n## Кто распространяет информацию и какие позиции\n\n- Aave - самый крупный лендинг протокол в крипте.\n  https://t.me/Slavik_investor_updates/6912\n- 10. $AAVE (1) - безоговорочный лидер он-чейн кредитных протоколов. После взлома доверие к нему не пропало у людей(у меня пропало).\n  https://t.me/WEB3_AGGREGATOR/422974\n- слой банков BNY и HSBC, Aave и токенизированных активов живёт отдельно от казино.\n  https://t.me/WEB3_AGGREGATOR/423227\n\n## Вопросы, аргументы и опыт участников\n\n- Там у хайпера если что фри позицию раздают 1к юсдт с 3 плечом за холд 2к юсдт на балансе просто\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/Slavik_investor_updates/6912?comment=138020\n- \n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/Slavik_investor_updates/6912?comment=138021\n- xaut давно же был на v4\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/Slavik_investor_updates/6912?comment=138023\n- Золото? Вот это поворот!\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/Slavik_investor_updates/6912?comment=138045\n- Вот это поворот, золото в крипте, ждем дальше\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/Slavik_investor_updates/6912?comment=138053\n- Вот это поворот, золото в крипте, интересно\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/Slavik_investor_updates/6912?comment=138078\n- вот бы сейчас пивка бахнуть\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/krasnovcrypto/3754?comment=284537\n- Вот правильный комментарий )\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/krasnovcrypto/3754?comment=284540\n- Самое то 😅\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/krasnovcrypto/3754?comment=284541\n- 5к транзакцій как монаде набивать не будем больше ?😁\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/krasnovcrypto/3754?comment=284547\n- Можно и 10к набить 😅\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/krasnovcrypto/3754?comment=284548\n- я там вообще нихера не набивал и не делал и дали дроп\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/krasnovcrypto/3754?comment=284549\n- Так да, там же раздали за активности в других экосистемах )\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/krasnovcrypto/3754?comment=284550\n- не, там походу раздали умным, кто не делал monad - у того есть мозги, тем и раздали 😂\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/krasnovcrypto/3754?comment=284552\n- забей хер на арк)\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/krasnovcrypto/3754?comment=284568\n- заебал, он тебя в жопу случайно наткнул?😂\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/krasnovcrypto/3754?comment=284582\n- Ты пид.р наткнулся на х.й и твоё очко ушло в зрительный зал бесплатно 😂\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/krasnovcrypto/3754?comment=284583\n\n## Изменения относительно предыдущего периода\n\n- Появившиеся события: 3.\n- Исчезнувшие события: 0.\n- Изменение охвата источников: +20 / −0 каналов.\n- Комментарии по теме: 17 в текущем окне, 0 в предыдущем.\n\n## Охват и ограничения\n\n- Публикации 13985, комментарии 1689, каналы 20.\n- Режим publication_replay: discovered_at в снимке отсутствует, «впервые системой» не заявляется.\n- Роль источника unknown: в базе нет редакционного реестра.\n- Неизвестные авторы не объединяются.\n- Отсечено после cutoff 2026-09-24T00:00:00+00:00: 0.\n\n## Основания\n\n- https://t.me/Slavik_investor_updates/6912: «#Aave: теперь принимает золото в качестве обеспечения 🤔»\n- https://t.me/WEB3_AGGREGATOR/423460: «• Aave Proposes Custodied Collateral Lending for Institutions»\n- https://t.me/WEB3_AGGREGATOR/423533: «🟢 Aave предлагает займы под кастодиальный BTC»\n- https://t.me/Slavik_investor_updates/6912: «Aave - самый крупный лендинг протокол в крипте.»\n- https://t.me/WEB3_AGGREGATOR/422853: «В экосистеме на день первый заявлены Aave, Morpho, Uniswap, Aerodrome, FalconX, Galaxy и несколько институциональных маркетмейкеров.»\n- https://t.me/WEB3_AGGREGATOR/422974: «10. $AAVE (1) - безоговорочный лидер он-чейн кредитных протоколов. После взлома доверие к нему не пропало у людей(у меня пропало).»\n- https://t.me/krasnovcrypto/3754: «В экосистеме уже есть Uniswap, Aave, Morpho, Aerodrome и другие крупные проекты.»\n- https://t.me/WEB3_AGGREGATOR/423197: «Day-one access came via Binance Wallet, OKX, MetaMask and Kraken, with Aave, Morpho and Uniswap live from the start.»\n- https://t.me/WEB3_AGGREGATOR/423227: «слой банков BNY и HSBC, Aave и токенизированных активов живёт отдельно от казино.»\n- https://t.me/WEB3_AGGREGATOR/423244: «with integrations across protocols including Aave, Morpho, and Uniswap.»\n- https://t.me/Slavik_investor_updates/6912?comment=138020: «Там у хайпера если что фри позицию раздают 1к юсдт с 3 плечом за холд 2к юсдт на балансе просто»\n- https://t.me/Slavik_investor_updates/6912?comment=138023: «xaut давно же был на v4»\n- https://t.me/Slavik_investor_updates/6912?comment=138045: «Золото? Вот это поворот!»\n- https://t.me/Slavik_investor_updates/6912?comment=138053: «Вот это поворот, золото в крипте, ждем дальше»\n- https://t.me/Slavik_investor_updates/6912?comment=138078: «Вот это поворот, золото в крипте, интересно»\n- https://t.me/krasnovcrypto/3754?comment=284537: «вот бы сейчас пивка бахнуть»\n- https://t.me/krasnovcrypto/3754?comment=284540: «Вот правильный комментарий )»\n- https://t.me/krasnovcrypto/3754?comment=284541: «Самое то 😅»\n- https://t.me/krasnovcrypto/3754?comment=284547: «5к транзакцій как монаде набивать не будем больше ?😁»\n- https://t.me/krasnovcrypto/3754?comment=284548: «Можно и 10к набить 😅»\n",
+  "model": "deepseek/deepseek-v4-flash",
+  "llm": {
+    "calls": 0,
+    "cache_hits": 13,
+    "spent_usd": 0.0,
+    "errors": []
+  }
+}

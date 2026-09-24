@@ -1,0 +1,17 @@
+{
+ "segments": [
+  {
+   "id": "telegram:18:31511#s3",
+   "text": "Ранее: сделка по ZEC\n\n",
+   "mentions": [
+    {
+     "text": "ZEC",
+     "status": "confirmed"
+    }
+   ],
+   "kind_hint": "post",
+   "url": "https://t.me/crypto_hd/31511",
+   "time": "2026-09-18T18:41:49+00:00"
+  }
+ ]
+}

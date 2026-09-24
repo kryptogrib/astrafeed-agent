@@ -1,0 +1,46 @@
+{
+ "id": "gen-1790198279-Qezq4NlxkhSdGwczkadA",
+ "object": "chat.completion",
+ "created": 1790198279,
+ "model": "deepseek/deepseek-v4-flash",
+ "provider": "Azure",
+ "system_fingerprint": null,
+ "service_tier": null,
+ "choices": [
+  {
+   "index": 0,
+   "logprobs": null,
+   "finish_reason": "stop",
+   "native_finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "content": "{\"labels\": [\n  {\n    \"id\": \"telegram:15:423134#s1\",\n    \"kind\": \"participant_reaction\",\n    \"actor\": null,\n    \"action\": \"asks norm of price\",\n    \"object\": null,\n    \"qualifiers\": {},\n    \"origin\": \"unknown\",\n    \"source_role\": \"unknown\",\n    \"verification_status\": \"unverified\",\n    \"quote\": \"Норм ли то что типы в аукцион грузят с расчетом по 9-10 $ZEC за 1 NFT?!\",\n    \"span\": [0, 77]\n  },\n  {\n    \"id\": \"telegram:15:423134#s2\",\n    \"kind\": \"participant_reaction\",\n    \"actor\": null,\n    \"action\": \"gives example of other prices\",\n    \"object\": null,\n    \"qualifiers\": {},\n    \"origin\": \"unknown\",\n    \"source_role\": \"unknown\",\n    \"verification_status\": \"unverified\",\n    \"quote\": \"Фиг его, не хочется обольщаться, другие посты и по 0.16 - 0.24 $ZEC за штуку\",\n    \"span\": [0, 77]\n  },\n  {\n    \"id\": \"telegram:15:423134#s5\",\n    \"kind\": \"participant_reaction\",\n    \"actor\": null,\n    \"action\": \"mentions FOMO and ZEC rising\",\n    \"object\": null,\n    \"qualifiers\": {},\n    \"origin\": \"unknown\",\n    \"source_role\": \"unknown\",\n    \"verification_status\": \"unverified\",\n    \"quote\": \"Но оч много фомо постов с ожиданиями, то что еще и $ZEC растет\",\n    \"span\": [0, 64]\n  },\n  {\n    \"id\": \"telegram:15:423137#s0\",\n    \"kind\": \"promo_service\",\n    \"actor\": null,\n    \"action\": \"announces tier list of upcoming projects\",\n    \"object\": null,\n    \"qualifiers\": {},\n    \"origin\": \"unknown\",\n    \"source_role\": \"unknown\",\n    \"verification_status\": \"unverified\",\n    \"quote\": \"Тир-лист предстоящих проектов в экосистеме ZEC\",\n    \"span\": [0, 49]\n  },\n  {\n    \"id\": \"telegram:15:423142#s1\",\n    \"kind\": \"participant_reaction\",\n    \"actor\": null,\n    \"action\": \"describes interesting collections on several platforms\",\n    \"object\": null,\n    \"qualifiers\": {},\n    \"origin\": \"unknown\",\n    \"source_role\": \"unknown\",\n    \"verification_status\": \"unverified\",\n    \"quote\": \"😐 На самом деле сейчас несется че то очень интересное, потому что и на Robinhood и на Arc и на Zcash, стали выходить коллекции, причем не для виду, а реально с кучей иксов. ну вы сами знаете.\",\n    \"span\": [0, 173]\n  },\n  {\n    \"id\": \"telegram:15:423147#s0\",\n    \"kind\": \"participant_reaction\",\n    \"actor\": null,\n    \"action\": \"states thought about Zcash ecosystem\",\n    \"object\": null,\n    \"qualifiers\": {},\n    \"origin\": \"unknown\",\n    \"source_role\": \"unknown\",\n    \"verification_status\": \"unverified\",\n    \"quote\": \"Мысль по Zcash экосистеме\",\n    \"span\": [0, 24]\n  },\n  {\n    \"id\": \"telegram:15:423147#s2\",\n    \"kind\": \"event\",\n    \"actor\": null,\n    \"action\": \"predicts ecosystem warming\",\n    \"object\": \"Zcash ecosystem\",\n    \"qualifiers\": {\"version\": \"ZEC expected to keep rising, ZCAT expected to rise\"},\n    \"origin\": \"unknown\",\n    \"source_role\": \"unknown\",\n    \"verification_status\": \"unverified\",\n    \"quote\": \"И пока этот круг не случится у нас будет разогрев всей экосистемы Zcash, а значит $ZEC продолжит расти, тот же ZCAT продолжит расти и так далее. Можно рассмотреть аккуратный лонг, но с консервативными фиксами.\",\n    \"span\": [0, 194]\n  },\n  {\n    \"id\": \"telegram:15:423150#s9\",\n    \"kind\": \"promo_service\",\n    \"actor\": null,\n    \"action\": \"provides list of things to do in Zcash\",\n    \"object\": null,\n    \"qualifiers\": {},\n    \"origin\": \"unknown\",\n    \"source_role\": \"unknown\",\n    \"verification_status\": \"unverified\",\n    \"quote\": \"• Тут список того, что поделать в Zcash\",\n    \"span\": [0, 40]\n  },\n  {\n    \"id\": \"telegram:15:423159#s0\",\n    \"kind\": \"participant_reaction\",\n    \"actor\": null,\n    \"action\": \"advises to pre-fund wallet\",\n    \"object\": null,\n    \"qualifiers\": {},\n    \"origin\": \"unknown\",\n    \"source_role\": \"unknown\",\n    \"verification_status\": \"unverified\",\n    \"quote\": \"Кто хантит влки в zec, закиньте заранее балик на кош хотя бы баксов 10+ для прогретости\",\n    \"span\": [0, 75]\n  },\n  {\n    \"id\": \"telegram:12:4871#s1\",\n    \"kind\": \"event\",\n    \"actor\": \"Он (implied a trader)\",\n    \"action\": \"shorted ZEC and had unrealized profit on vulnerability rumors\",\n    \"object\": \"ZEC\",\n    \"qualifiers\": {\"event_date\": \"early summer of 2026 (context)\", \"counterparty\": \"market\"},\n    \"origin\": \"retelling\",\n    \"source_role\": \"editorial\",\n    \"verification_status\": \"unverified\",\n    \"quote\": \"Он шортил ZEC еще в в начале лета, был в плюсе на $20М после слухов о уязвимости в системе шилдинга ZEC, но не зафиксировал прибыль, а удержал позицию.\",\n    \"span\": [0, 162]\n  },\n  {\n    \"id\": \"telegram:10:385132#s1\",\n    \"kind\": \"event\",\n    \"actor\": null,\n    \"action\": \"analysts report on ZEC anonymity and price\",\n    \"object\": \"ZEC\",\n    \"qualifiers\": {\"version\": \"ZEC price > $1300\", \"place\": \"USA (CIA HQ neighborhood implied)\"},\n    \"origin\": \"retelling\",\n    \"source_role\": \"editorial\",\n    \"verification_status\": \"unverified\",\n    \"quote\": \"Популярнейший анонимный токен ZEC анонимного проекта ZCash с юридическим офисом в одном квартале от штаб-квартиры ЦРУ в США становится еще анонимнее при цене > $1300 — аналитики\",\n    \"span\": [0, 178]\n  },\n  {\n    \"id\": \"telegram:14:8099#s0\",\n    \"kind\": \"participant_reaction\",\n    \"actor\": null,\n    \"action\": \"greets with ZEC price\",\n    \"object\": \"ZEC\",\n    \"qualifiers\": {\"version\": \"ZEC = $1400\"},\n    \"origin\": \"unknown\",\n    \"source_role\": \"unknown\",\n    \"verification_status\": \"unverified\",\n    \"quote\": \"#zec = 1400$ say GM 🏆\",\n    \"span\": [0, 22]\n  }\n]}",
+    "refusal": null,
+    "reasoning": null
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 1835,
+  "completion_tokens": 1722,
+  "total_tokens": 3557,
+  "cost": 0.00134967,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.00134967,
+   "upstream_inference_prompt_cost": 0.00038535,
+   "upstream_inference_completions_cost": 0.00096432
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

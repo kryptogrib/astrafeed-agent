@@ -1,0 +1,32 @@
+{
+ "choices": [
+  {
+   "message": {
+    "content": "{\"labels\": [{\"id\": \"telegram:15:423316#s1\", \"kind\": \"event\", \"actor\": null, \"action\": \"price surge and market cap ranking\", \"object\": \"ZEC\", \"qualifiers\": {\"event_date\": \"2026-09-18\", \"place\": \"market\"}, \"origin\": \"retelling\", \"source_role\": \"author\", \"verification_status\": \"unverified\", \"quote\": \"ZEC разогнался до ~$1463, влетел на #9 по капитализации (~$24.8 млрд) и пробивал $1500. За месяц +160%, за год почти в 26X (+~2500%)\", \"span\": [0, 0]}]}"
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 2492,
+  "completion_tokens": 1731,
+  "total_tokens": 4223,
+  "cost": 0.0003949036,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 2018,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.0003949036,
+   "upstream_inference_prompt_cost": 7.98616e-05,
+   "upstream_inference_completions_cost": 0.000315042
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

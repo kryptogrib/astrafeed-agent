@@ -1,0 +1,53 @@
+# PRELIMINARY agent labels (not human, not independent) for https://t.me/rawa_imagination/21055, contract v2.
+# Written by the agent before the v2 model run; the agent also saw the v1 model output. Topic = ETH.
+# unrelated with evidence_ids = related discussion (continues the post / an ancestor). Rules: pulse_label_instructions.md
+comment_id	topic_relation	mention	subject	evidence_ids	aspect	claim	stance	borderline	note
+342461	unrelated		BTC lagging ETH	post		BTC is stagnating	support	1	another asset contrasted with the post's ETH move -> related
+342462	direct	эфира	shorts above ETH price	342462	market	many shorts to be liquidated above the ETH price	support		
+342463	unrelated		BTC role in altseason	342461		in altseason BTC only needs not to fall	support		
+342464	unclear		author's closed short				unclear	1	short on what is not said; the author's other messages are about ETH
+342465	unrelated		alts outgrowing BTC	342463			unclear		question
+342466	contextual		source of ETH volume	post	market		unclear		question about the post's 'colossal volume'
+342467	unrelated		Fed rate cut and alts	342465		alts can outgrow BTC if the Fed cuts 2%	support		
+342468	contextual		source of ETH volume	342466,post	market	the ETH volume is spot buying	support		
+342469	unrelated						unclear		banter
+342470	unrelated		BTC role in altseason	342465		for altseason BTC only needs to stay flat	support		
+342471	unrelated		spot buying of alts	post		spot buyers bought the local alt dip	support		
+342472	unrelated						unclear		banter
+342473	unrelated		declaring altseason	342470		altseason has started	unclear	1	joke, sarcasm ambiguous
+342474	unrelated		altseason timing	342473		it is too early to declare altseason	support		
+342476	unrelated		altseason timing	342473		altseason is possible from now to January	support		
+342477	unrelated		altseason timing	342476		a month is too short for 15-20x alt recovery	support		
+342478	unrelated		altseason for junk alts	342477		altseason for junk alts needs helicopter money	support		
+342479	unrelated		L2 and DOT	342478			unclear		
+342482	direct	эфир	L2 vs ETH	342482	technology	L2s and DOT are dubious since ETH does the same	support		
+342483	unrelated		altseason timing	342477		indicators are more reliable than timings	support		
+342484	direct	эфир	ETH at 10k	342484	market	ETH at 10k would be acceptable	support	1	wish rather than thesis
+342485	contextual		ETH at 10k	342484	market	ETH 10k is possible in ~2 years after BTC 300k+	support		
+342486	unrelated		altseason conditions	342485		BTC not falling was said to be enough	unclear	1	ironic reply; v1 had contextual
+342487	contextual		ETH at 10k	342485,342484	market	ETH at 10k is a long wait	support		
+342488	unrelated		primary altseason	342486		primary altseason is modest, not the cycle's burst	support		
+342489	direct	эфир	ETH in this altseason stage	342489	market	ETH breakout is the first stage of altseason	unclear	1	sceptical question; stance to the post's thesis unclear
+342490	contextual		ETH in this altseason stage	342489	market	ETH reaching 4k in this stage would be good	support		
+342491	unrelated		BTC at 300k stage	342490			unclear		question
+342492	unrelated		BTC at 300k stage	342491			unclear		joke about Saylor
+342497	unrelated		waiting for macro data	342467		traders keep postponing positions until the next macro event	support		sarcastic quote
+342498	contextual		ETH 4h chart pattern	post	market	ETH will draw a Bart Simpson pattern on 4h	support		
+342507	direct	ETH	buying ETH after it rises	342507	market	people recommend ETH only after it has risen	support	1	sarcasm
+342508	unrelated						unclear		reaction to the joke
+342510	unrelated		tennis				unclear		banter
+342511	unrelated		tennis				unclear		banter
+342512	unrelated		tennis				unclear		banter
+342514	unrelated						unclear		banter
+342516	unrelated						unclear		banter
+342518	unrelated						unclear		banter
+342520	unrelated		tennis				unclear		banter
+342521	unrelated						unclear		banter
+342522	unrelated						unclear		banter
+342526	contextual		2500 level	post	market	2500 must hold on the daily close	unclear		question to the post
+342528	unrelated		money philosophy				unclear		banter
+342529	unrelated		money philosophy				unclear		banter
+342531	unrelated		money philosophy				unclear		banter
+342537	contextual		2500 level	342526,post	market	2500 must hold on the daily close	support		
+342557	contextual		breakout vs liquidity grab	post	market	the current move is a liquidity grab, not a breakout	support		opposes the post
+342558	contextual		position on Wyckoff chart	342557	market		unclear	1	relevance clear from parent; the position itself is in the image

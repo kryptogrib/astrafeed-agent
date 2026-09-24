@@ -1,0 +1,25 @@
+{
+ "a": {
+  "quote": "Сегодня (спасибо за поправку @intelligent_ua) кстати мейннет Arc",
+  "actor": "Arc",
+  "action": "будет мейннет",
+  "object": "мейннет Arc",
+  "qualifiers": {
+   "version": null,
+   "event_date": "Сегодня",
+   "place": null,
+   "counterparty": null
+  },
+  "url": "https://t.me/WEB3_AGGREGATOR/423093"
+ },
+ "b": {
+  "quote": "ARC: токены которые я взял и почему - подготовка к паблик мейннету 16 сентября",
+  "actor": "ARC",
+  "action": "prepare for public mainnet",
+  "object": "public mainnet",
+  "qualifiers": {
+   "event_date": "16 сентября"
+  },
+  "url": "https://t.me/WEB3_AGGREGATOR/422903"
+ }
+}

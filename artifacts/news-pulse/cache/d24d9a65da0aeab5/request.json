@@ -1,0 +1,22 @@
+{
+ "segments": [
+  {
+   "id": "telegram:18:31561#s5",
+   "text": "▫️#ZEC = +$2,360,000.\n",
+   "mentions": [
+    {
+     "text": "#ZEC",
+     "status": "confirmed"
+    },
+    {
+     "text": "ZEC",
+     "status": "confirmed"
+    }
+   ],
+   "kind_hint": "post",
+   "url": "https://t.me/crypto_hd/31561",
+   "time": "2026-09-22T13:10:11+00:00",
+   "context": "🧐 SV: Финпотоки крипто-ETF за вчерашний день."
+  }
+ ]
+}

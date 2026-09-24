@@ -1,0 +1,21 @@
+{
+ "segments": [
+  {
+   "id": "telegram:11:96776#s2",
+   "text": "2. 0x3F2c вывел 2 500 #ETH ($6,02 млн) с Binance после 9 месяцев бездействия.",
+   "mentions": [
+    {
+     "text": "#ETH",
+     "status": "confirmed"
+    },
+    {
+     "text": "ETH",
+     "status": "confirmed"
+    }
+   ],
+   "kind_hint": "post",
+   "url": "https://t.me/cryptoattack24/96776",
+   "time": "2026-09-17T05:43:01+00:00"
+  }
+ ]
+}

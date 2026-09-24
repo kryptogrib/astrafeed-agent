@@ -1,0 +1,3834 @@
+{
+  "sample_status": null,
+  "sample_counts": {
+    "posts": 43,
+    "comments": 24,
+    "pairs": 24
+  },
+  "note": "Маленькая выборка — демо-проверка, не доказательство качества на всех данных. Общий балл не вычисляется.",
+  "db_md5_before": "8618099125a806df376354286ccd982e",
+  "db_md5_after": "8618099125a806df376354286ccd982e",
+  "sha256_verified": {
+    "posts.jsonl": "5d1adfda8b2f87969c424510f63adbef0ad24ba71f41b859a354f2c9dd24a6dd",
+    "comments.jsonl": "e727e64954ef1890b717bcb9557b7264ea29269b46963d80cbba6321bb351bb4",
+    "pairs.jsonl": "742883eec2f702cf2015bc2d03ed58115cb95becbb3ce7398d8b811fb1c23eed",
+    "README.md": "02dee71625be2c45fa9f90018ac410618807151ba8236c49dd2d6c0b2e64ad4b",
+    "sample.py": "a84dba06b86654614da6f0c6d3b2d1e46eada24ac95f2343585192c662076ea0"
+  },
+  "missing_inputs": [
+    "Отсутствует artifacts/news-pulse/eth/2026-09-17..2026-09-19/decisions.json",
+    "Отсутствует artifacts/news-pulse/zec/2026-09-17..2026-09-19/decisions.json"
+  ],
+  "runs": [
+    "artifacts/news-pulse/aave/2026-09-22..2026-09-23",
+    "artifacts/news-pulse/arc/2026-09-09..2026-09-23",
+    "artifacts/news-pulse/arc/2026-09-16T11-01-01-00-00..2026-09-17T11-01-01-00-00",
+    "artifacts/news-pulse/eth/2026-09-09..2026-09-23",
+    "artifacts/news-pulse/eth/2026-09-14T12-33-46-00-00..2026-09-21T12-44-54-00-00",
+    "artifacts/news-pulse/eth/2026-09-17..2026-09-19",
+    "artifacts/news-pulse/zec/2026-09-09..2026-09-23",
+    "artifacts/news-pulse/zec/2026-09-16T06-10-19-00-00..2026-09-21T06-04-32-00-00",
+    "artifacts/news-pulse/zec/2026-09-17..2026-09-19"
+  ],
+  "comment_links": {
+    "claimed_event_links": 0,
+    "abstentions": 24,
+    "other_types": 0,
+    "missing": 0,
+    "type:topic_level": 24
+  },
+  "history": [],
+  "conventions": [
+    "Для семантических метрик используется замороженное самое широкое coverage-окно; узкое окно его не заменяет.",
+    "Единица отбора — пара (пост, тема); пары и комментарии также проверяются отдельно по теме.",
+    "Нет решения: false negative для recall, unverified для precision/отрицательных пар. Fail имеет приоритет при наблюдаемом нарушении порога.",
+    "coverage.publications/channels/comments — все записи БД в окне; topic_publications — уникальные selected_news. Групповые счётчики — уникальные публикации, не сегменты.",
+    "Автор берётся только из author_id/author_key БД; канал не подменяет автора. Origin пересчитывается по решениям, его истинность оценивается отдельно.",
+    "Проверка времени охватывает сериализованные записи и ссылки, но не доказывает отсутствие скрытого влияния будущего на LLM."
+  ],
+  "metrics": {
+    "news_precision": {
+      "title": "Точность отбора новостей",
+      "numerator": 27,
+      "denominator": 32,
+      "value": 0.84375,
+      "threshold": 0.95,
+      "status": "fail",
+      "errors": [
+        {
+          "links": [
+            "https://t.me/Defiscamcheck/4878"
+          ],
+          "topic": "zec",
+          "reason": "Решение не совпало с разметкой"
+        },
+        {
+          "links": [
+            "https://t.me/whitelist1/7156"
+          ],
+          "topic": "zec",
+          "reason": "Решение не совпало с разметкой"
+        },
+        {
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/422896"
+          ],
+          "topic": "zec",
+          "reason": "Решение не совпало с разметкой"
+        },
+        {
+          "links": [
+            "https://t.me/crypto_hd/31368"
+          ],
+          "topic": "zec",
+          "reason": "Решение не совпало с разметкой"
+        },
+        {
+          "links": [
+            "https://t.me/crypto_hd/31517"
+          ],
+          "topic": "zec",
+          "reason": "Решение не совпало с разметкой"
+        }
+      ],
+      "missing": [],
+      "note": ""
+    },
+    "news_recall": {
+      "title": "Полнота отбора новостей",
+      "numerator": 27,
+      "denominator": 34,
+      "value": 0.7941176470588235,
+      "threshold": 0.9,
+      "status": "fail",
+      "errors": [
+        {
+          "links": [
+            "https://t.me/icryptocom/8099"
+          ],
+          "topic": "zec",
+          "reason": "Решение не совпало с разметкой"
+        },
+        {
+          "links": [
+            "https://t.me/crypto_hd/31561"
+          ],
+          "topic": "eth",
+          "reason": "Решение не совпало с разметкой"
+        },
+        {
+          "links": [
+            "https://t.me/rawa_imagination/21051"
+          ],
+          "topic": "eth",
+          "reason": "Решение не совпало с разметкой"
+        },
+        {
+          "links": [
+            "https://t.me/rawa_imagination/21117"
+          ],
+          "topic": "eth",
+          "reason": "Решение не совпало с разметкой"
+        },
+        {
+          "links": [
+            "https://t.me/rawa_imagination/21127"
+          ],
+          "topic": "eth",
+          "reason": "Решение не совпало с разметкой"
+        },
+        {
+          "links": [
+            "https://t.me/rawa_imagination/21151"
+          ],
+          "topic": "eth",
+          "reason": "Решение не совпало с разметкой"
+        },
+        {
+          "links": [
+            "https://t.me/rawa_imagination/21158"
+          ],
+          "topic": "eth",
+          "reason": "Решение не совпало с разметкой"
+        }
+      ],
+      "missing": [],
+      "note": ""
+    },
+    "false_merge": {
+      "title": "Ошибочное объединение отрицательных пар",
+      "numerator": 0,
+      "denominator": 12,
+      "value": 0.0,
+      "threshold": "= 0 ошибок",
+      "status": "pass",
+      "errors": [],
+      "missing": [],
+      "note": ""
+    },
+    "same_event_recall": {
+      "title": "Полнота объединения положительных пар",
+      "numerator": 1,
+      "denominator": 12,
+      "value": 0.08333333333333333,
+      "threshold": 0.9,
+      "status": "fail",
+      "errors": [
+        {
+          "pair": "tune-pair-01",
+          "topic": "eth",
+          "links": [
+            "https://t.me/cryptoattack24/96773",
+            "https://t.me/rawa_imagination/21109"
+          ],
+          "common_event_ids": []
+        },
+        {
+          "pair": "tune-pair-02",
+          "topic": "eth",
+          "links": [
+            "https://t.me/cryptoattack24/96795",
+            "https://t.me/rawa_imagination/21117"
+          ],
+          "common_event_ids": []
+        },
+        {
+          "pair": "tune-pair-03",
+          "topic": "eth",
+          "links": [
+            "https://t.me/cryptoattack24/96819",
+            "https://t.me/rawa_imagination/21121"
+          ],
+          "common_event_ids": []
+        },
+        {
+          "pair": "tune-pair-04",
+          "topic": "eth",
+          "links": [
+            "https://t.me/cryptoattack24/96862",
+            "https://t.me/rawa_imagination/21151"
+          ],
+          "common_event_ids": []
+        },
+        {
+          "pair": "tune-pair-05",
+          "topic": "eth",
+          "links": [
+            "https://t.me/cryptoattack24/96890",
+            "https://t.me/rawa_imagination/21158"
+          ],
+          "common_event_ids": []
+        },
+        {
+          "pair": "tune-pair-06",
+          "topic": "eth",
+          "links": [
+            "https://t.me/cryptoattack24/96862",
+            "https://t.me/crypto_hd/31561"
+          ],
+          "common_event_ids": []
+        },
+        {
+          "pair": "tune-pair-07",
+          "topic": "eth",
+          "links": [
+            "https://t.me/crypto_hd/31561",
+            "https://t.me/rawa_imagination/21151"
+          ],
+          "common_event_ids": []
+        },
+        {
+          "pair": "tune-pair-08",
+          "topic": "eth",
+          "links": [
+            "https://t.me/cryptoattack24/96819",
+            "https://t.me/rawa_imagination/21127"
+          ],
+          "common_event_ids": []
+        },
+        {
+          "pair": "tune-pair-09",
+          "topic": "zec",
+          "links": [
+            "https://t.me/whitelist1/7150",
+            "https://t.me/WEB3_AGGREGATOR/423534"
+          ],
+          "common_event_ids": []
+        },
+        {
+          "pair": "tune-pair-10",
+          "topic": "zec",
+          "links": [
+            "https://t.me/whitelist1/7151",
+            "https://t.me/whitelist1/7152"
+          ],
+          "common_event_ids": []
+        },
+        {
+          "pair": "tune-pair-11",
+          "topic": "zec",
+          "links": [
+            "https://t.me/cryptoattack24/96796",
+            "https://t.me/crypto_hd/31503"
+          ],
+          "common_event_ids": []
+        }
+      ],
+      "missing": [],
+      "note": ""
+    },
+    "comment_event_precision": {
+      "title": "Правильность заявленных связей комментарий → событие",
+      "numerator": 0,
+      "denominator": 0,
+      "value": null,
+      "threshold": 0.9,
+      "status": "unverified",
+      "errors": [],
+      "missing": [],
+      "note": ""
+    },
+    "future_leakage": {
+      "title": "Записи и ссылки вне окна",
+      "numerator": 0,
+      "denominator": 19912,
+      "value": 0.0,
+      "threshold": "= 0 ошибок",
+      "status": "unverified",
+      "errors": [],
+      "missing": [
+        {
+          "run": "artifacts/news-pulse/eth/2026-09-17..2026-09-19",
+          "reason": "Нет decisions.json"
+        },
+        {
+          "run": "artifacts/news-pulse/zec/2026-09-17..2026-09-19",
+          "reason": "Нет decisions.json"
+        },
+        "Отсутствует artifacts/news-pulse/eth/2026-09-17..2026-09-19/decisions.json",
+        "Отсутствует artifacts/news-pulse/zec/2026-09-17..2026-09-19/decisions.json"
+      ],
+      "note": "Числитель — нарушения; знаменатель — проверенные вхождения времени/ссылок. Включает время < start; явная предыстория отдельно."
+    },
+    "boundary": {
+      "title": "Граничные пробы [start,end)",
+      "numerator": 0,
+      "denominator": 0,
+      "value": null,
+      "threshold": 1,
+      "status": "unverified",
+      "errors": [],
+      "missing": [],
+      "note": ""
+    },
+    "numeric_aggregates": {
+      "title": "Правильность числовых агрегатов",
+      "numerator": 11512,
+      "denominator": 11770,
+      "value": 0.9780798640611724,
+      "threshold": 1,
+      "status": "fail",
+      "errors": [
+        {
+          "run": "artifacts/news-pulse/arc/2026-09-09..2026-09-23",
+          "path": "coverage.topic_publications",
+          "actual": 163,
+          "expected": 77,
+          "links": []
+        },
+        {
+          "run": "artifacts/news-pulse/arc/2026-09-09..2026-09-23",
+          "path": "pulse.e7-22b42433f32828c2.counts.found_origins",
+          "actual": 0,
+          "expected": 1,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/422864"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/arc/2026-09-09..2026-09-23",
+          "path": "decisions.e7-22b42433f32828c2.n_reprints",
+          "actual": 1,
+          "expected": 0,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/422864"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/arc/2026-09-09..2026-09-23",
+          "path": "pulse.e7-22b42433f32828c2.counts.reprints",
+          "actual": 1,
+          "expected": 0,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/422864"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/arc/2026-09-09..2026-09-23",
+          "path": "decisions.e7-22b42433f32828c2.found_origins",
+          "actual": [],
+          "expected": [
+            "https://t.me/WEB3_AGGREGATOR/422864"
+          ],
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/422864"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/arc/2026-09-09..2026-09-23",
+          "path": "pulse.e8-90c23fd28093f866.counts.unknown_authors",
+          "actual": 6,
+          "expected": 4,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/422875",
+            "https://t.me/WEB3_AGGREGATOR/422881",
+            "https://t.me/WEB3_AGGREGATOR/422890",
+            "https://t.me/cryptoattack24/96700"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/arc/2026-09-09..2026-09-23",
+          "path": "pulse.e8-90c23fd28093f866.counts.found_origins",
+          "actual": 6,
+          "expected": 4,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/422875",
+            "https://t.me/WEB3_AGGREGATOR/422881",
+            "https://t.me/WEB3_AGGREGATOR/422890",
+            "https://t.me/cryptoattack24/96700"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/arc/2026-09-09..2026-09-23",
+          "path": "pulse.e14-404fcfb394d23199.counts.unknown_authors",
+          "actual": 2,
+          "expected": 1,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/422908"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/arc/2026-09-09..2026-09-23",
+          "path": "decisions.e14-404fcfb394d23199.n_reprints",
+          "actual": 1,
+          "expected": 0,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/422908"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/arc/2026-09-09..2026-09-23",
+          "path": "pulse.e14-404fcfb394d23199.counts.reprints",
+          "actual": 1,
+          "expected": 0,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/422908"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/arc/2026-09-09..2026-09-23",
+          "path": "pulse.e15-973a1583a4f608e0.counts.unknown_authors",
+          "actual": 2,
+          "expected": 1,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/422908"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/arc/2026-09-09..2026-09-23",
+          "path": "decisions.e15-973a1583a4f608e0.n_reprints",
+          "actual": 1,
+          "expected": 0,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/422908"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/arc/2026-09-09..2026-09-23",
+          "path": "pulse.e15-973a1583a4f608e0.counts.reprints",
+          "actual": 1,
+          "expected": 0,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/422908"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/arc/2026-09-09..2026-09-23",
+          "path": "pulse.e16-9c92264eab36d2e6.counts.unknown_authors",
+          "actual": 2,
+          "expected": 1,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/422908"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/arc/2026-09-09..2026-09-23",
+          "path": "decisions.e16-9c92264eab36d2e6.n_reprints",
+          "actual": 1,
+          "expected": 0,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/422908"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/arc/2026-09-09..2026-09-23",
+          "path": "pulse.e16-9c92264eab36d2e6.counts.reprints",
+          "actual": 1,
+          "expected": 0,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/422908"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/arc/2026-09-09..2026-09-23",
+          "path": "pulse.e17-e082de458c806ee3.counts.found_origins",
+          "actual": 0,
+          "expected": 1,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/422908"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/arc/2026-09-09..2026-09-23",
+          "path": "decisions.e17-e082de458c806ee3.n_reprints",
+          "actual": 1,
+          "expected": 0,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/422908"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/arc/2026-09-09..2026-09-23",
+          "path": "pulse.e17-e082de458c806ee3.counts.reprints",
+          "actual": 1,
+          "expected": 0,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/422908"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/arc/2026-09-09..2026-09-23",
+          "path": "decisions.e17-e082de458c806ee3.found_origins",
+          "actual": [],
+          "expected": [
+            "https://t.me/WEB3_AGGREGATOR/422908"
+          ],
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/422908"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/arc/2026-09-09..2026-09-23",
+          "path": "pulse.e21-16f78728ce8e3b83.counts.unknown_authors",
+          "actual": 2,
+          "expected": 1,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/422923"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/arc/2026-09-09..2026-09-23",
+          "path": "pulse.e21-16f78728ce8e3b83.counts.found_origins",
+          "actual": 2,
+          "expected": 1,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/422923"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/arc/2026-09-09..2026-09-23",
+          "path": "pulse.e25-e19f408c075bdc35.counts.unknown_authors",
+          "actual": 3,
+          "expected": 1,
+          "links": [
+            "https://t.me/whitelist1/7135"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/arc/2026-09-09..2026-09-23",
+          "path": "pulse.e25-e19f408c075bdc35.counts.found_origins",
+          "actual": 3,
+          "expected": 1,
+          "links": [
+            "https://t.me/whitelist1/7135"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/arc/2026-09-09..2026-09-23",
+          "path": "pulse.e26-88529cb7a1df6223.counts.unknown_authors",
+          "actual": 2,
+          "expected": 1,
+          "links": [
+            "https://t.me/whitelist1/7135"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/arc/2026-09-09..2026-09-23",
+          "path": "decisions.e26-88529cb7a1df6223.n_reprints",
+          "actual": 1,
+          "expected": 0,
+          "links": [
+            "https://t.me/whitelist1/7135"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/arc/2026-09-09..2026-09-23",
+          "path": "pulse.e26-88529cb7a1df6223.counts.reprints",
+          "actual": 1,
+          "expected": 0,
+          "links": [
+            "https://t.me/whitelist1/7135"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/arc/2026-09-09..2026-09-23",
+          "path": "pulse.e29-7c75f8da91a1694f.counts.unknown_authors",
+          "actual": 2,
+          "expected": 1,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/422986"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/arc/2026-09-09..2026-09-23",
+          "path": "decisions.e29-7c75f8da91a1694f.n_reprints",
+          "actual": 2,
+          "expected": 1,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/422986"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/arc/2026-09-09..2026-09-23",
+          "path": "pulse.e29-7c75f8da91a1694f.counts.reprints",
+          "actual": 2,
+          "expected": 1,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/422986"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/arc/2026-09-09..2026-09-23",
+          "path": "pulse.e46-6e3370cdcd3a20a2.counts.unknown_authors",
+          "actual": 2,
+          "expected": 1,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/423100"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/arc/2026-09-09..2026-09-23",
+          "path": "pulse.e46-6e3370cdcd3a20a2.counts.found_origins",
+          "actual": 2,
+          "expected": 1,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/423100"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/arc/2026-09-09..2026-09-23",
+          "path": "pulse.e53-016e829b1d954627.counts.unknown_authors",
+          "actual": 2,
+          "expected": 1,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/423117"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/arc/2026-09-09..2026-09-23",
+          "path": "pulse.e53-016e829b1d954627.counts.found_origins",
+          "actual": 2,
+          "expected": 1,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/423117"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/arc/2026-09-09..2026-09-23",
+          "path": "pulse.e59-fc76b3cacccdad42.counts.unknown_authors",
+          "actual": 2,
+          "expected": 1,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/423151"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/arc/2026-09-09..2026-09-23",
+          "path": "pulse.e59-fc76b3cacccdad42.counts.found_origins",
+          "actual": 2,
+          "expected": 1,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/423151"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/arc/2026-09-09..2026-09-23",
+          "path": "pulse.e73-47c4ef28758dec5b.counts.unknown_authors",
+          "actual": 2,
+          "expected": 1,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/423244"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/arc/2026-09-09..2026-09-23",
+          "path": "decisions.e73-47c4ef28758dec5b.n_reprints",
+          "actual": 2,
+          "expected": 1,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/423244"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/arc/2026-09-09..2026-09-23",
+          "path": "pulse.e73-47c4ef28758dec5b.counts.reprints",
+          "actual": 2,
+          "expected": 1,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/423244"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/arc/2026-09-09..2026-09-23",
+          "path": "pulse.e77-ee2be10c2dc48116.counts.unknown_authors",
+          "actual": 2,
+          "expected": 1,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/423252"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/arc/2026-09-09..2026-09-23",
+          "path": "pulse.e77-ee2be10c2dc48116.counts.found_origins",
+          "actual": 2,
+          "expected": 1,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/423252"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/arc/2026-09-16T11-01-01-00-00..2026-09-17T11-01-01-00-00",
+          "path": "coverage.topic_publications",
+          "actual": 52,
+          "expected": 29,
+          "links": []
+        },
+        {
+          "run": "artifacts/news-pulse/arc/2026-09-16T11-01-01-00-00..2026-09-17T11-01-01-00-00",
+          "path": "pulse.e3-8a75dfb4c419fe87.counts.unknown_authors",
+          "actual": 2,
+          "expected": 1,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/423100"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/arc/2026-09-16T11-01-01-00-00..2026-09-17T11-01-01-00-00",
+          "path": "pulse.e3-8a75dfb4c419fe87.counts.found_origins",
+          "actual": 1,
+          "expected": 0,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/423100"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/arc/2026-09-16T11-01-01-00-00..2026-09-17T11-01-01-00-00",
+          "path": "decisions.e3-8a75dfb4c419fe87.found_origins",
+          "actual": [
+            "https://t.me/WEB3_AGGREGATOR/423100"
+          ],
+          "expected": [],
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/423100"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/arc/2026-09-16T11-01-01-00-00..2026-09-17T11-01-01-00-00",
+          "path": "pulse.e4-6e3370cdcd3a20a2.counts.unknown_authors",
+          "actual": 2,
+          "expected": 1,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/423100"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/arc/2026-09-16T11-01-01-00-00..2026-09-17T11-01-01-00-00",
+          "path": "pulse.e4-6e3370cdcd3a20a2.counts.found_origins",
+          "actual": 2,
+          "expected": 0,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/423100"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/arc/2026-09-16T11-01-01-00-00..2026-09-17T11-01-01-00-00",
+          "path": "decisions.e4-6e3370cdcd3a20a2.n_reprints",
+          "actual": 0,
+          "expected": 1,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/423100"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/arc/2026-09-16T11-01-01-00-00..2026-09-17T11-01-01-00-00",
+          "path": "pulse.e4-6e3370cdcd3a20a2.counts.reprints",
+          "actual": 0,
+          "expected": 1,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/423100"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/arc/2026-09-16T11-01-01-00-00..2026-09-17T11-01-01-00-00",
+          "path": "decisions.e4-6e3370cdcd3a20a2.found_origins",
+          "actual": [
+            "https://t.me/WEB3_AGGREGATOR/423100"
+          ],
+          "expected": [],
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/423100"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/arc/2026-09-16T11-01-01-00-00..2026-09-17T11-01-01-00-00",
+          "path": "pulse.e20-fc76b3cacccdad42.counts.unknown_authors",
+          "actual": 2,
+          "expected": 1,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/423151"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/arc/2026-09-16T11-01-01-00-00..2026-09-17T11-01-01-00-00",
+          "path": "decisions.e20-fc76b3cacccdad42.n_unknown_origin",
+          "actual": 2,
+          "expected": 1,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/423151"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/arc/2026-09-16T11-01-01-00-00..2026-09-17T11-01-01-00-00",
+          "path": "pulse.e20-fc76b3cacccdad42.counts.unknown_origin",
+          "actual": 2,
+          "expected": 1,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/423151"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/eth/2026-09-09..2026-09-23",
+          "path": "coverage.topic_publications",
+          "actual": 324,
+          "expected": 200,
+          "links": []
+        },
+        {
+          "run": "artifacts/news-pulse/eth/2026-09-09..2026-09-23",
+          "path": "pulse.e12-73023517f884f322.counts.unknown_authors",
+          "actual": 2,
+          "expected": 1,
+          "links": [
+            "https://t.me/rawa_imagination/21038"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/eth/2026-09-09..2026-09-23",
+          "path": "decisions.e12-73023517f884f322.n_unknown_origin",
+          "actual": 1,
+          "expected": 0,
+          "links": [
+            "https://t.me/rawa_imagination/21038"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/eth/2026-09-09..2026-09-23",
+          "path": "pulse.e12-73023517f884f322.counts.unknown_origin",
+          "actual": 1,
+          "expected": 0,
+          "links": [
+            "https://t.me/rawa_imagination/21038"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/eth/2026-09-09..2026-09-23",
+          "path": "pulse.e20-82b5b1f337480d15.counts.unknown_authors",
+          "actual": 2,
+          "expected": 1,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/422716"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/eth/2026-09-09..2026-09-23",
+          "path": "decisions.e20-82b5b1f337480d15.n_unknown_origin",
+          "actual": 2,
+          "expected": 1,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/422716"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/eth/2026-09-09..2026-09-23",
+          "path": "pulse.e20-82b5b1f337480d15.counts.unknown_origin",
+          "actual": 2,
+          "expected": 1,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/422716"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/eth/2026-09-09..2026-09-23",
+          "path": "decisions.e21-1887f0929ee5fc89.n_reprints",
+          "actual": 1,
+          "expected": 0,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/422716"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/eth/2026-09-09..2026-09-23",
+          "path": "pulse.e21-1887f0929ee5fc89.counts.reprints",
+          "actual": 1,
+          "expected": 0,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/422716"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/eth/2026-09-09..2026-09-23",
+          "path": "decisions.e21-1887f0929ee5fc89.n_unknown_origin",
+          "actual": 0,
+          "expected": 1,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/422716"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/eth/2026-09-09..2026-09-23",
+          "path": "pulse.e21-1887f0929ee5fc89.counts.unknown_origin",
+          "actual": 0,
+          "expected": 1,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/422716"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/eth/2026-09-09..2026-09-23",
+          "path": "pulse.e24-c5789369b62148d8.counts.found_origins",
+          "actual": 1,
+          "expected": 0,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/422727"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/eth/2026-09-09..2026-09-23",
+          "path": "decisions.e24-c5789369b62148d8.n_reprints",
+          "actual": 0,
+          "expected": 1,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/422727"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/eth/2026-09-09..2026-09-23",
+          "path": "pulse.e24-c5789369b62148d8.counts.reprints",
+          "actual": 0,
+          "expected": 1,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/422727"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/eth/2026-09-09..2026-09-23",
+          "path": "decisions.e24-c5789369b62148d8.found_origins",
+          "actual": [
+            "https://t.me/WEB3_AGGREGATOR/422727"
+          ],
+          "expected": [],
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/422727"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/eth/2026-09-09..2026-09-23",
+          "path": "pulse.e80-66c13803e6f5dcc6.counts.unknown_authors",
+          "actual": 3,
+          "expected": 1,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/422959"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/eth/2026-09-09..2026-09-23",
+          "path": "pulse.e80-66c13803e6f5dcc6.counts.found_origins",
+          "actual": 3,
+          "expected": 1,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/422959"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/eth/2026-09-09..2026-09-23",
+          "path": "pulse.e102-e54cfdccf7a9af09.counts.unknown_authors",
+          "actual": 2,
+          "expected": 1,
+          "links": [
+            "https://t.me/crypto_hd/31434"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/eth/2026-09-09..2026-09-23",
+          "path": "pulse.e102-e54cfdccf7a9af09.counts.found_origins",
+          "actual": 2,
+          "expected": 1,
+          "links": [
+            "https://t.me/crypto_hd/31434"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/eth/2026-09-09..2026-09-23",
+          "path": "pulse.e114-4a80791d4d373ca9.counts.unknown_authors",
+          "actual": 2,
+          "expected": 1,
+          "links": [
+            "https://t.me/rawa_imagination/21099"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/eth/2026-09-09..2026-09-23",
+          "path": "decisions.e114-4a80791d4d373ca9.n_reprints",
+          "actual": 2,
+          "expected": 1,
+          "links": [
+            "https://t.me/rawa_imagination/21099"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/eth/2026-09-09..2026-09-23",
+          "path": "pulse.e114-4a80791d4d373ca9.counts.reprints",
+          "actual": 2,
+          "expected": 1,
+          "links": [
+            "https://t.me/rawa_imagination/21099"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/eth/2026-09-09..2026-09-23",
+          "path": "pulse.e120-082c10a3e41004ce.counts.unknown_authors",
+          "actual": 2,
+          "expected": 1,
+          "links": [
+            "https://t.me/crypto_hd/31457"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/eth/2026-09-09..2026-09-23",
+          "path": "decisions.e120-082c10a3e41004ce.n_reprints",
+          "actual": 2,
+          "expected": 1,
+          "links": [
+            "https://t.me/crypto_hd/31457"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/eth/2026-09-09..2026-09-23",
+          "path": "pulse.e120-082c10a3e41004ce.counts.reprints",
+          "actual": 2,
+          "expected": 1,
+          "links": [
+            "https://t.me/crypto_hd/31457"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/eth/2026-09-09..2026-09-23",
+          "path": "pulse.e132-73a28409f802189b.counts.found_origins",
+          "actual": 1,
+          "expected": 0,
+          "links": [
+            "https://t.me/crypto_hd/31476"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/eth/2026-09-09..2026-09-23",
+          "path": "decisions.e132-73a28409f802189b.n_reprints",
+          "actual": 0,
+          "expected": 1,
+          "links": [
+            "https://t.me/crypto_hd/31476"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/eth/2026-09-09..2026-09-23",
+          "path": "pulse.e132-73a28409f802189b.counts.reprints",
+          "actual": 0,
+          "expected": 1,
+          "links": [
+            "https://t.me/crypto_hd/31476"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/eth/2026-09-09..2026-09-23",
+          "path": "decisions.e132-73a28409f802189b.found_origins",
+          "actual": [
+            "https://t.me/crypto_hd/31476"
+          ],
+          "expected": [],
+          "links": [
+            "https://t.me/crypto_hd/31476"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/eth/2026-09-09..2026-09-23",
+          "path": "pulse.e140-ccb3348375727b67.counts.unknown_authors",
+          "actual": 2,
+          "expected": 1,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/423249"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/eth/2026-09-09..2026-09-23",
+          "path": "pulse.e140-ccb3348375727b67.counts.found_origins",
+          "actual": 2,
+          "expected": 1,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/423249"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/eth/2026-09-09..2026-09-23",
+          "path": "pulse.e143-d57ff52e9ff96871.counts.found_origins",
+          "actual": 0,
+          "expected": 1,
+          "links": [
+            "https://t.me/cryptoattack24/96795"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/eth/2026-09-09..2026-09-23",
+          "path": "decisions.e143-d57ff52e9ff96871.n_reprints",
+          "actual": 1,
+          "expected": 0,
+          "links": [
+            "https://t.me/cryptoattack24/96795"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/eth/2026-09-09..2026-09-23",
+          "path": "pulse.e143-d57ff52e9ff96871.counts.reprints",
+          "actual": 1,
+          "expected": 0,
+          "links": [
+            "https://t.me/cryptoattack24/96795"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/eth/2026-09-09..2026-09-23",
+          "path": "decisions.e143-d57ff52e9ff96871.found_origins",
+          "actual": [],
+          "expected": [
+            "https://t.me/cryptoattack24/96795"
+          ],
+          "links": [
+            "https://t.me/cryptoattack24/96795"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/eth/2026-09-09..2026-09-23",
+          "path": "pulse.e167-bac60b19c932c9f7.counts.unknown_authors",
+          "actual": 2,
+          "expected": 1,
+          "links": [
+            "https://t.me/rawa_imagination/21126"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/eth/2026-09-09..2026-09-23",
+          "path": "pulse.e167-bac60b19c932c9f7.counts.found_origins",
+          "actual": 2,
+          "expected": 1,
+          "links": [
+            "https://t.me/rawa_imagination/21126"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/eth/2026-09-09..2026-09-23",
+          "path": "pulse.e180-de601007cbbd0021.counts.unknown_authors",
+          "actual": 2,
+          "expected": 1,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/423462"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/eth/2026-09-09..2026-09-23",
+          "path": "decisions.e180-de601007cbbd0021.n_reprints",
+          "actual": 2,
+          "expected": 1,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/423462"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/eth/2026-09-09..2026-09-23",
+          "path": "pulse.e180-de601007cbbd0021.counts.reprints",
+          "actual": 2,
+          "expected": 1,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/423462"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/eth/2026-09-09..2026-09-23",
+          "path": "pulse.e190-214105df9740c721.counts.found_origins",
+          "actual": 0,
+          "expected": 1,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/423486"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/eth/2026-09-09..2026-09-23",
+          "path": "decisions.e190-214105df9740c721.n_reprints",
+          "actual": 1,
+          "expected": 0,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/423486"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/eth/2026-09-09..2026-09-23",
+          "path": "pulse.e190-214105df9740c721.counts.reprints",
+          "actual": 1,
+          "expected": 0,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/423486"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/eth/2026-09-09..2026-09-23",
+          "path": "decisions.e190-214105df9740c721.found_origins",
+          "actual": [],
+          "expected": [
+            "https://t.me/WEB3_AGGREGATOR/423486"
+          ],
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/423486"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/eth/2026-09-09..2026-09-23",
+          "path": "pulse.e191-8e897d7cf4cc9e5a.counts.found_origins",
+          "actual": 0,
+          "expected": 1,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/423486"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/eth/2026-09-09..2026-09-23",
+          "path": "decisions.e191-8e897d7cf4cc9e5a.n_reprints",
+          "actual": 1,
+          "expected": 0,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/423486"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/eth/2026-09-09..2026-09-23",
+          "path": "pulse.e191-8e897d7cf4cc9e5a.counts.reprints",
+          "actual": 1,
+          "expected": 0,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/423486"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/eth/2026-09-09..2026-09-23",
+          "path": "decisions.e191-8e897d7cf4cc9e5a.found_origins",
+          "actual": [],
+          "expected": [
+            "https://t.me/WEB3_AGGREGATOR/423486"
+          ],
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/423486"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/eth/2026-09-09..2026-09-23",
+          "path": "pulse.e192-4135e6e469d135c8.counts.found_origins",
+          "actual": 0,
+          "expected": 1,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/423486"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/eth/2026-09-09..2026-09-23",
+          "path": "decisions.e192-4135e6e469d135c8.n_reprints",
+          "actual": 1,
+          "expected": 0,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/423486"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/eth/2026-09-09..2026-09-23",
+          "path": "pulse.e192-4135e6e469d135c8.counts.reprints",
+          "actual": 1,
+          "expected": 0,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/423486"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/eth/2026-09-09..2026-09-23",
+          "path": "decisions.e192-4135e6e469d135c8.found_origins",
+          "actual": [],
+          "expected": [
+            "https://t.me/WEB3_AGGREGATOR/423486"
+          ],
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/423486"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/eth/2026-09-09..2026-09-23",
+          "path": "pulse.e194-6c9ebc2a9189c3e3.counts.found_origins",
+          "actual": 1,
+          "expected": 0,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/423491"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/eth/2026-09-09..2026-09-23",
+          "path": "decisions.e194-6c9ebc2a9189c3e3.n_reprints",
+          "actual": 0,
+          "expected": 1,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/423491"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/eth/2026-09-09..2026-09-23",
+          "path": "pulse.e194-6c9ebc2a9189c3e3.counts.reprints",
+          "actual": 0,
+          "expected": 1,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/423491"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/eth/2026-09-09..2026-09-23",
+          "path": "decisions.e194-6c9ebc2a9189c3e3.found_origins",
+          "actual": [
+            "https://t.me/WEB3_AGGREGATOR/423491"
+          ],
+          "expected": [],
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/423491"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/eth/2026-09-09..2026-09-23",
+          "path": "pulse.e220-f9edb4e95b2ba139.counts.unknown_authors",
+          "actual": 2,
+          "expected": 1,
+          "links": [
+            "https://t.me/cryptoattack24/96890"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/eth/2026-09-09..2026-09-23",
+          "path": "decisions.e220-f9edb4e95b2ba139.n_reprints",
+          "actual": 2,
+          "expected": 1,
+          "links": [
+            "https://t.me/cryptoattack24/96890"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/eth/2026-09-09..2026-09-23",
+          "path": "pulse.e220-f9edb4e95b2ba139.counts.reprints",
+          "actual": 2,
+          "expected": 1,
+          "links": [
+            "https://t.me/cryptoattack24/96890"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/eth/2026-09-14T12-33-46-00-00..2026-09-21T12-44-54-00-00",
+          "path": "coverage.topic_publications",
+          "actual": 149,
+          "expected": 100,
+          "links": []
+        },
+        {
+          "run": "artifacts/news-pulse/eth/2026-09-14T12-33-46-00-00..2026-09-21T12-44-54-00-00",
+          "path": "pulse.e12-66c13803e6f5dcc6.counts.unknown_authors",
+          "actual": 2,
+          "expected": 1,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/422959"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/eth/2026-09-14T12-33-46-00-00..2026-09-21T12-44-54-00-00",
+          "path": "decisions.e12-66c13803e6f5dcc6.n_reprints",
+          "actual": 2,
+          "expected": 1,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/422959"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/eth/2026-09-14T12-33-46-00-00..2026-09-21T12-44-54-00-00",
+          "path": "pulse.e12-66c13803e6f5dcc6.counts.reprints",
+          "actual": 2,
+          "expected": 1,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/422959"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/eth/2026-09-14T12-33-46-00-00..2026-09-21T12-44-54-00-00",
+          "path": "decisions.e19-e36d939aea9f7b50.n_reprints",
+          "actual": 0,
+          "expected": 1,
+          "links": [
+            "https://t.me/spidersjournal/18913"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/eth/2026-09-14T12-33-46-00-00..2026-09-21T12-44-54-00-00",
+          "path": "pulse.e19-e36d939aea9f7b50.counts.reprints",
+          "actual": 0,
+          "expected": 1,
+          "links": [
+            "https://t.me/spidersjournal/18913"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/eth/2026-09-14T12-33-46-00-00..2026-09-21T12-44-54-00-00",
+          "path": "decisions.e19-e36d939aea9f7b50.n_unknown_origin",
+          "actual": 1,
+          "expected": 0,
+          "links": [
+            "https://t.me/spidersjournal/18913"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/eth/2026-09-14T12-33-46-00-00..2026-09-21T12-44-54-00-00",
+          "path": "pulse.e19-e36d939aea9f7b50.counts.unknown_origin",
+          "actual": 1,
+          "expected": 0,
+          "links": [
+            "https://t.me/spidersjournal/18913"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/eth/2026-09-14T12-33-46-00-00..2026-09-21T12-44-54-00-00",
+          "path": "decisions.e33-0214b32ee97f5b0e.n_reprints",
+          "actual": 0,
+          "expected": 2,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/423051",
+            "https://t.me/moni_talks/12225"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/eth/2026-09-14T12-33-46-00-00..2026-09-21T12-44-54-00-00",
+          "path": "pulse.e33-0214b32ee97f5b0e.counts.reprints",
+          "actual": 0,
+          "expected": 2,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/423051",
+            "https://t.me/moni_talks/12225"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/eth/2026-09-14T12-33-46-00-00..2026-09-21T12-44-54-00-00",
+          "path": "decisions.e33-0214b32ee97f5b0e.n_unknown_origin",
+          "actual": 2,
+          "expected": 0,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/423051",
+            "https://t.me/moni_talks/12225"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/eth/2026-09-14T12-33-46-00-00..2026-09-21T12-44-54-00-00",
+          "path": "pulse.e33-0214b32ee97f5b0e.counts.unknown_origin",
+          "actual": 2,
+          "expected": 0,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/423051",
+            "https://t.me/moni_talks/12225"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/eth/2026-09-14T12-33-46-00-00..2026-09-21T12-44-54-00-00",
+          "path": "pulse.e49-35468ac9257fbf2b.counts.unknown_authors",
+          "actual": 2,
+          "expected": 1,
+          "links": [
+            "https://t.me/crypto_hd/31457"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/eth/2026-09-14T12-33-46-00-00..2026-09-21T12-44-54-00-00",
+          "path": "decisions.e49-35468ac9257fbf2b.n_reprints",
+          "actual": 2,
+          "expected": 1,
+          "links": [
+            "https://t.me/crypto_hd/31457"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/eth/2026-09-14T12-33-46-00-00..2026-09-21T12-44-54-00-00",
+          "path": "pulse.e49-35468ac9257fbf2b.counts.reprints",
+          "actual": 2,
+          "expected": 1,
+          "links": [
+            "https://t.me/crypto_hd/31457"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/eth/2026-09-14T12-33-46-00-00..2026-09-21T12-44-54-00-00",
+          "path": "pulse.e62-73a28409f802189b.counts.found_origins",
+          "actual": 1,
+          "expected": 0,
+          "links": [
+            "https://t.me/crypto_hd/31476"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/eth/2026-09-14T12-33-46-00-00..2026-09-21T12-44-54-00-00",
+          "path": "decisions.e62-73a28409f802189b.n_reprints",
+          "actual": 0,
+          "expected": 1,
+          "links": [
+            "https://t.me/crypto_hd/31476"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/eth/2026-09-14T12-33-46-00-00..2026-09-21T12-44-54-00-00",
+          "path": "pulse.e62-73a28409f802189b.counts.reprints",
+          "actual": 0,
+          "expected": 1,
+          "links": [
+            "https://t.me/crypto_hd/31476"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/eth/2026-09-14T12-33-46-00-00..2026-09-21T12-44-54-00-00",
+          "path": "decisions.e62-73a28409f802189b.found_origins",
+          "actual": [
+            "https://t.me/crypto_hd/31476"
+          ],
+          "expected": [],
+          "links": [
+            "https://t.me/crypto_hd/31476"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/eth/2026-09-14T12-33-46-00-00..2026-09-21T12-44-54-00-00",
+          "path": "pulse.e69-1b1b8d85d0809f34.counts.unknown_authors",
+          "actual": 2,
+          "expected": 1,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/423249"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/eth/2026-09-14T12-33-46-00-00..2026-09-21T12-44-54-00-00",
+          "path": "decisions.e69-1b1b8d85d0809f34.n_reprints",
+          "actual": 2,
+          "expected": 1,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/423249"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/eth/2026-09-14T12-33-46-00-00..2026-09-21T12-44-54-00-00",
+          "path": "pulse.e69-1b1b8d85d0809f34.counts.reprints",
+          "actual": 2,
+          "expected": 1,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/423249"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/eth/2026-09-14T12-33-46-00-00..2026-09-21T12-44-54-00-00",
+          "path": "decisions.e97-82ecaa6ca7cc3ec2.n_reprints",
+          "actual": 1,
+          "expected": 0,
+          "links": [
+            "https://t.me/rawa_imagination/21126"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/eth/2026-09-14T12-33-46-00-00..2026-09-21T12-44-54-00-00",
+          "path": "pulse.e97-82ecaa6ca7cc3ec2.counts.reprints",
+          "actual": 1,
+          "expected": 0,
+          "links": [
+            "https://t.me/rawa_imagination/21126"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/eth/2026-09-14T12-33-46-00-00..2026-09-21T12-44-54-00-00",
+          "path": "decisions.e97-82ecaa6ca7cc3ec2.n_unknown_origin",
+          "actual": 0,
+          "expected": 1,
+          "links": [
+            "https://t.me/rawa_imagination/21126"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/eth/2026-09-14T12-33-46-00-00..2026-09-21T12-44-54-00-00",
+          "path": "pulse.e97-82ecaa6ca7cc3ec2.counts.unknown_origin",
+          "actual": 0,
+          "expected": 1,
+          "links": [
+            "https://t.me/rawa_imagination/21126"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/eth/2026-09-14T12-33-46-00-00..2026-09-21T12-44-54-00-00",
+          "path": "pulse.e100-28952caa1756900e.counts.unknown_authors",
+          "actual": 2,
+          "expected": 1,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/423399"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/eth/2026-09-14T12-33-46-00-00..2026-09-21T12-44-54-00-00",
+          "path": "decisions.e100-28952caa1756900e.n_reprints",
+          "actual": 2,
+          "expected": 1,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/423399"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/eth/2026-09-14T12-33-46-00-00..2026-09-21T12-44-54-00-00",
+          "path": "pulse.e100-28952caa1756900e.counts.reprints",
+          "actual": 2,
+          "expected": 1,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/423399"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/eth/2026-09-14T12-33-46-00-00..2026-09-21T12-44-54-00-00",
+          "path": "pulse.e108-833ae36cd4bdc767.counts.unknown_authors",
+          "actual": 2,
+          "expected": 1,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/423462"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/eth/2026-09-14T12-33-46-00-00..2026-09-21T12-44-54-00-00",
+          "path": "decisions.e108-833ae36cd4bdc767.n_reprints",
+          "actual": 2,
+          "expected": 1,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/423462"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/eth/2026-09-14T12-33-46-00-00..2026-09-21T12-44-54-00-00",
+          "path": "pulse.e108-833ae36cd4bdc767.counts.reprints",
+          "actual": 2,
+          "expected": 1,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/423462"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/zec/2026-09-09..2026-09-23",
+          "path": "coverage.topic_publications",
+          "actual": 221,
+          "expected": 116,
+          "links": []
+        },
+        {
+          "run": "artifacts/news-pulse/zec/2026-09-09..2026-09-23",
+          "path": "decisions.e3-971d32ab6b572c62.n_reprints",
+          "actual": 0,
+          "expected": 1,
+          "links": [
+            "https://t.me/crypto_hd/31368"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/zec/2026-09-09..2026-09-23",
+          "path": "pulse.e3-971d32ab6b572c62.counts.reprints",
+          "actual": 0,
+          "expected": 1,
+          "links": [
+            "https://t.me/crypto_hd/31368"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/zec/2026-09-09..2026-09-23",
+          "path": "decisions.e3-971d32ab6b572c62.n_unknown_origin",
+          "actual": 1,
+          "expected": 0,
+          "links": [
+            "https://t.me/crypto_hd/31368"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/zec/2026-09-09..2026-09-23",
+          "path": "pulse.e3-971d32ab6b572c62.counts.unknown_origin",
+          "actual": 1,
+          "expected": 0,
+          "links": [
+            "https://t.me/crypto_hd/31368"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/zec/2026-09-09..2026-09-23",
+          "path": "decisions.e4-ac0f45885f27c970.n_reprints",
+          "actual": 0,
+          "expected": 2,
+          "links": [
+            "https://t.me/Defiscamcheck/4864",
+            "https://t.me/WEB3_AGGREGATOR/422763"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/zec/2026-09-09..2026-09-23",
+          "path": "pulse.e4-ac0f45885f27c970.counts.reprints",
+          "actual": 0,
+          "expected": 2,
+          "links": [
+            "https://t.me/Defiscamcheck/4864",
+            "https://t.me/WEB3_AGGREGATOR/422763"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/zec/2026-09-09..2026-09-23",
+          "path": "decisions.e4-ac0f45885f27c970.n_unknown_origin",
+          "actual": 2,
+          "expected": 0,
+          "links": [
+            "https://t.me/Defiscamcheck/4864",
+            "https://t.me/WEB3_AGGREGATOR/422763"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/zec/2026-09-09..2026-09-23",
+          "path": "pulse.e4-ac0f45885f27c970.counts.unknown_origin",
+          "actual": 2,
+          "expected": 0,
+          "links": [
+            "https://t.me/Defiscamcheck/4864",
+            "https://t.me/WEB3_AGGREGATOR/422763"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/zec/2026-09-09..2026-09-23",
+          "path": "pulse.e17-6725051e7f89c31d.counts.unknown_authors",
+          "actual": 2,
+          "expected": 1,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/423054"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/zec/2026-09-09..2026-09-23",
+          "path": "decisions.e17-6725051e7f89c31d.n_reprints",
+          "actual": 1,
+          "expected": 0,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/423054"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/zec/2026-09-09..2026-09-23",
+          "path": "pulse.e17-6725051e7f89c31d.counts.reprints",
+          "actual": 1,
+          "expected": 0,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/423054"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/zec/2026-09-09..2026-09-23",
+          "path": "pulse.e18-a3c0fab7151541aa.counts.found_origins",
+          "actual": 0,
+          "expected": 1,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/423054"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/zec/2026-09-09..2026-09-23",
+          "path": "decisions.e18-a3c0fab7151541aa.n_reprints",
+          "actual": 1,
+          "expected": 0,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/423054"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/zec/2026-09-09..2026-09-23",
+          "path": "pulse.e18-a3c0fab7151541aa.counts.reprints",
+          "actual": 1,
+          "expected": 0,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/423054"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/zec/2026-09-09..2026-09-23",
+          "path": "decisions.e18-a3c0fab7151541aa.found_origins",
+          "actual": [],
+          "expected": [
+            "https://t.me/WEB3_AGGREGATOR/423054"
+          ],
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/423054"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/zec/2026-09-09..2026-09-23",
+          "path": "pulse.e20-b763e88877c22058.counts.found_origins",
+          "actual": 0,
+          "expected": 1,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/423054"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/zec/2026-09-09..2026-09-23",
+          "path": "decisions.e20-b763e88877c22058.n_reprints",
+          "actual": 1,
+          "expected": 0,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/423054"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/zec/2026-09-09..2026-09-23",
+          "path": "pulse.e20-b763e88877c22058.counts.reprints",
+          "actual": 1,
+          "expected": 0,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/423054"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/zec/2026-09-09..2026-09-23",
+          "path": "decisions.e20-b763e88877c22058.found_origins",
+          "actual": [],
+          "expected": [
+            "https://t.me/WEB3_AGGREGATOR/423054"
+          ],
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/423054"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/zec/2026-09-09..2026-09-23",
+          "path": "pulse.e34-6b3a56c4451e89dd.counts.found_origins",
+          "actual": 1,
+          "expected": 0,
+          "links": [
+            "https://t.me/crypto_hd/31476"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/zec/2026-09-09..2026-09-23",
+          "path": "decisions.e34-6b3a56c4451e89dd.n_reprints",
+          "actual": 0,
+          "expected": 1,
+          "links": [
+            "https://t.me/crypto_hd/31476"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/zec/2026-09-09..2026-09-23",
+          "path": "pulse.e34-6b3a56c4451e89dd.counts.reprints",
+          "actual": 0,
+          "expected": 1,
+          "links": [
+            "https://t.me/crypto_hd/31476"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/zec/2026-09-09..2026-09-23",
+          "path": "decisions.e34-6b3a56c4451e89dd.found_origins",
+          "actual": [
+            "https://t.me/crypto_hd/31476"
+          ],
+          "expected": [],
+          "links": [
+            "https://t.me/crypto_hd/31476"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/zec/2026-09-09..2026-09-23",
+          "path": "pulse.e38-ffc17b4e4f13ed92.counts.unknown_authors",
+          "actual": 2,
+          "expected": 1,
+          "links": [
+            "https://t.me/crypto_hd/31484"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/zec/2026-09-09..2026-09-23",
+          "path": "pulse.e38-ffc17b4e4f13ed92.counts.found_origins",
+          "actual": 2,
+          "expected": 1,
+          "links": [
+            "https://t.me/crypto_hd/31484"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/zec/2026-09-09..2026-09-23",
+          "path": "pulse.e61-c7b91c81e0131a7b.counts.unknown_authors",
+          "actual": 3,
+          "expected": 1,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/423315"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/zec/2026-09-09..2026-09-23",
+          "path": "decisions.e61-c7b91c81e0131a7b.n_unknown_origin",
+          "actual": 3,
+          "expected": 1,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/423315"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/zec/2026-09-09..2026-09-23",
+          "path": "pulse.e61-c7b91c81e0131a7b.counts.unknown_origin",
+          "actual": 3,
+          "expected": 1,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/423315"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/zec/2026-09-09..2026-09-23",
+          "path": "pulse.e62-d88b56862e4c8afd.counts.unknown_authors",
+          "actual": 3,
+          "expected": 1,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/423316"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/zec/2026-09-09..2026-09-23",
+          "path": "decisions.e62-d88b56862e4c8afd.n_reprints",
+          "actual": 2,
+          "expected": 0,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/423316"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/zec/2026-09-09..2026-09-23",
+          "path": "pulse.e62-d88b56862e4c8afd.counts.reprints",
+          "actual": 2,
+          "expected": 0,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/423316"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/zec/2026-09-09..2026-09-23",
+          "path": "decisions.e63-5a98b5b841cf7d8f.n_reprints",
+          "actual": 1,
+          "expected": 0,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/423316"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/zec/2026-09-09..2026-09-23",
+          "path": "pulse.e63-5a98b5b841cf7d8f.counts.reprints",
+          "actual": 1,
+          "expected": 0,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/423316"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/zec/2026-09-09..2026-09-23",
+          "path": "decisions.e63-5a98b5b841cf7d8f.n_unknown_origin",
+          "actual": 0,
+          "expected": 1,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/423316"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/zec/2026-09-09..2026-09-23",
+          "path": "pulse.e63-5a98b5b841cf7d8f.counts.unknown_origin",
+          "actual": 0,
+          "expected": 1,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/423316"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/zec/2026-09-09..2026-09-23",
+          "path": "decisions.e64-3b4cd34bf36b1935.n_reprints",
+          "actual": 1,
+          "expected": 0,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/423316"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/zec/2026-09-09..2026-09-23",
+          "path": "pulse.e64-3b4cd34bf36b1935.counts.reprints",
+          "actual": 1,
+          "expected": 0,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/423316"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/zec/2026-09-09..2026-09-23",
+          "path": "decisions.e64-3b4cd34bf36b1935.n_unknown_origin",
+          "actual": 0,
+          "expected": 1,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/423316"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/zec/2026-09-09..2026-09-23",
+          "path": "pulse.e64-3b4cd34bf36b1935.counts.unknown_origin",
+          "actual": 0,
+          "expected": 1,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/423316"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/zec/2026-09-09..2026-09-23",
+          "path": "pulse.e80-a01178250b644dc1.counts.unknown_authors",
+          "actual": 2,
+          "expected": 1,
+          "links": [
+            "https://t.me/Defiscamcheck/4873"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/zec/2026-09-09..2026-09-23",
+          "path": "pulse.e80-a01178250b644dc1.counts.found_origins",
+          "actual": 2,
+          "expected": 1,
+          "links": [
+            "https://t.me/Defiscamcheck/4873"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/zec/2026-09-09..2026-09-23",
+          "path": "pulse.e84-a01178250b644dc1.counts.unknown_authors",
+          "actual": 2,
+          "expected": 1,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/423360"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/zec/2026-09-09..2026-09-23",
+          "path": "pulse.e84-a01178250b644dc1.counts.found_origins",
+          "actual": 2,
+          "expected": 1,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/423360"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/zec/2026-09-09..2026-09-23",
+          "path": "decisions.e86-9e44c58cc44b5092.n_reprints",
+          "actual": 1,
+          "expected": 0,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/423362"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/zec/2026-09-09..2026-09-23",
+          "path": "pulse.e86-9e44c58cc44b5092.counts.reprints",
+          "actual": 1,
+          "expected": 0,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/423362"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/zec/2026-09-09..2026-09-23",
+          "path": "decisions.e86-9e44c58cc44b5092.n_unknown_origin",
+          "actual": 0,
+          "expected": 1,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/423362"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/zec/2026-09-09..2026-09-23",
+          "path": "pulse.e86-9e44c58cc44b5092.counts.unknown_origin",
+          "actual": 0,
+          "expected": 1,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/423362"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/zec/2026-09-09..2026-09-23",
+          "path": "pulse.e104-ee68fd1f0d990054.counts.unknown_authors",
+          "actual": 2,
+          "expected": 1,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/423441"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/zec/2026-09-09..2026-09-23",
+          "path": "decisions.e104-ee68fd1f0d990054.n_unknown_origin",
+          "actual": 1,
+          "expected": 0,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/423441"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/zec/2026-09-09..2026-09-23",
+          "path": "pulse.e104-ee68fd1f0d990054.counts.unknown_origin",
+          "actual": 1,
+          "expected": 0,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/423441"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/zec/2026-09-09..2026-09-23",
+          "path": "pulse.e105-e3785ee6e408a419.counts.found_origins",
+          "actual": 0,
+          "expected": 1,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/423441"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/zec/2026-09-09..2026-09-23",
+          "path": "decisions.e105-e3785ee6e408a419.n_unknown_origin",
+          "actual": 1,
+          "expected": 0,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/423441"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/zec/2026-09-09..2026-09-23",
+          "path": "pulse.e105-e3785ee6e408a419.counts.unknown_origin",
+          "actual": 1,
+          "expected": 0,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/423441"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/zec/2026-09-09..2026-09-23",
+          "path": "decisions.e105-e3785ee6e408a419.found_origins",
+          "actual": [],
+          "expected": [
+            "https://t.me/WEB3_AGGREGATOR/423441"
+          ],
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/423441"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/zec/2026-09-09..2026-09-23",
+          "path": "decisions.e108-8494c169af5ec96a.n_reprints",
+          "actual": 1,
+          "expected": 0,
+          "links": [
+            "https://t.me/markettwits/385538"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/zec/2026-09-09..2026-09-23",
+          "path": "pulse.e108-8494c169af5ec96a.counts.reprints",
+          "actual": 1,
+          "expected": 0,
+          "links": [
+            "https://t.me/markettwits/385538"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/zec/2026-09-09..2026-09-23",
+          "path": "decisions.e108-8494c169af5ec96a.n_unknown_origin",
+          "actual": 0,
+          "expected": 1,
+          "links": [
+            "https://t.me/markettwits/385538"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/zec/2026-09-09..2026-09-23",
+          "path": "pulse.e108-8494c169af5ec96a.counts.unknown_origin",
+          "actual": 0,
+          "expected": 1,
+          "links": [
+            "https://t.me/markettwits/385538"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/zec/2026-09-09..2026-09-23",
+          "path": "decisions.e109-2d0dd397f65da950.n_reprints",
+          "actual": 1,
+          "expected": 0,
+          "links": [
+            "https://t.me/markettwits/385538"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/zec/2026-09-09..2026-09-23",
+          "path": "pulse.e109-2d0dd397f65da950.counts.reprints",
+          "actual": 1,
+          "expected": 0,
+          "links": [
+            "https://t.me/markettwits/385538"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/zec/2026-09-09..2026-09-23",
+          "path": "decisions.e109-2d0dd397f65da950.n_unknown_origin",
+          "actual": 0,
+          "expected": 1,
+          "links": [
+            "https://t.me/markettwits/385538"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/zec/2026-09-09..2026-09-23",
+          "path": "pulse.e109-2d0dd397f65da950.counts.unknown_origin",
+          "actual": 0,
+          "expected": 1,
+          "links": [
+            "https://t.me/markettwits/385538"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/zec/2026-09-09..2026-09-23",
+          "path": "pulse.e122-bd230e73c42da7a6.counts.unknown_authors",
+          "actual": 2,
+          "expected": 1,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/423488"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/zec/2026-09-09..2026-09-23",
+          "path": "decisions.e122-bd230e73c42da7a6.n_reprints",
+          "actual": 2,
+          "expected": 1,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/423488"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/zec/2026-09-09..2026-09-23",
+          "path": "pulse.e122-bd230e73c42da7a6.counts.reprints",
+          "actual": 2,
+          "expected": 1,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/423488"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/zec/2026-09-09..2026-09-23",
+          "path": "pulse.e129-876cb86f25cacfe3.counts.unknown_authors",
+          "actual": 2,
+          "expected": 1,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/423506"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/zec/2026-09-09..2026-09-23",
+          "path": "pulse.e129-876cb86f25cacfe3.counts.found_origins",
+          "actual": 2,
+          "expected": 0,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/423506"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/zec/2026-09-09..2026-09-23",
+          "path": "decisions.e129-876cb86f25cacfe3.n_reprints",
+          "actual": 0,
+          "expected": 1,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/423506"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/zec/2026-09-09..2026-09-23",
+          "path": "pulse.e129-876cb86f25cacfe3.counts.reprints",
+          "actual": 0,
+          "expected": 1,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/423506"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/zec/2026-09-09..2026-09-23",
+          "path": "decisions.e129-876cb86f25cacfe3.found_origins",
+          "actual": [
+            "https://t.me/WEB3_AGGREGATOR/423506"
+          ],
+          "expected": [],
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/423506"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/zec/2026-09-09..2026-09-23",
+          "path": "pulse.e130-a2017af155651dcb.counts.unknown_authors",
+          "actual": 2,
+          "expected": 1,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/423506"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/zec/2026-09-09..2026-09-23",
+          "path": "pulse.e130-a2017af155651dcb.counts.found_origins",
+          "actual": 1,
+          "expected": 0,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/423506"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/zec/2026-09-09..2026-09-23",
+          "path": "decisions.e130-a2017af155651dcb.found_origins",
+          "actual": [
+            "https://t.me/WEB3_AGGREGATOR/423506"
+          ],
+          "expected": [],
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/423506"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/zec/2026-09-09..2026-09-23",
+          "path": "pulse.e146-0b7d431d19eb08f2.counts.unknown_authors",
+          "actual": 3,
+          "expected": 1,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/423606"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/zec/2026-09-09..2026-09-23",
+          "path": "decisions.e146-0b7d431d19eb08f2.n_reprints",
+          "actual": 2,
+          "expected": 0,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/423606"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/zec/2026-09-09..2026-09-23",
+          "path": "pulse.e146-0b7d431d19eb08f2.counts.reprints",
+          "actual": 2,
+          "expected": 0,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/423606"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/zec/2026-09-09..2026-09-23",
+          "path": "decisions.e147-b267d67ceebe60db.n_reprints",
+          "actual": 1,
+          "expected": 0,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/423606"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/zec/2026-09-09..2026-09-23",
+          "path": "pulse.e147-b267d67ceebe60db.counts.reprints",
+          "actual": 1,
+          "expected": 0,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/423606"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/zec/2026-09-09..2026-09-23",
+          "path": "decisions.e147-b267d67ceebe60db.n_unknown_origin",
+          "actual": 0,
+          "expected": 1,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/423606"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/zec/2026-09-09..2026-09-23",
+          "path": "pulse.e147-b267d67ceebe60db.counts.unknown_origin",
+          "actual": 0,
+          "expected": 1,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/423606"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/zec/2026-09-09..2026-09-23",
+          "path": "decisions.e148-f377aa4e826bdaf7.n_reprints",
+          "actual": 1,
+          "expected": 0,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/423606"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/zec/2026-09-09..2026-09-23",
+          "path": "pulse.e148-f377aa4e826bdaf7.counts.reprints",
+          "actual": 1,
+          "expected": 0,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/423606"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/zec/2026-09-09..2026-09-23",
+          "path": "decisions.e148-f377aa4e826bdaf7.n_unknown_origin",
+          "actual": 0,
+          "expected": 1,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/423606"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/zec/2026-09-09..2026-09-23",
+          "path": "pulse.e148-f377aa4e826bdaf7.counts.unknown_origin",
+          "actual": 0,
+          "expected": 1,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/423606"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/zec/2026-09-09..2026-09-23",
+          "path": "decisions.e149-b46902bb8c2875d9.n_reprints",
+          "actual": 1,
+          "expected": 0,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/423606"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/zec/2026-09-09..2026-09-23",
+          "path": "pulse.e149-b46902bb8c2875d9.counts.reprints",
+          "actual": 1,
+          "expected": 0,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/423606"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/zec/2026-09-09..2026-09-23",
+          "path": "decisions.e149-b46902bb8c2875d9.n_unknown_origin",
+          "actual": 0,
+          "expected": 1,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/423606"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/zec/2026-09-09..2026-09-23",
+          "path": "pulse.e149-b46902bb8c2875d9.counts.unknown_origin",
+          "actual": 0,
+          "expected": 1,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/423606"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/zec/2026-09-09..2026-09-23",
+          "path": "decisions.e150-a9254976e2b50adf.n_reprints",
+          "actual": 1,
+          "expected": 0,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/423606"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/zec/2026-09-09..2026-09-23",
+          "path": "pulse.e150-a9254976e2b50adf.counts.reprints",
+          "actual": 1,
+          "expected": 0,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/423606"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/zec/2026-09-09..2026-09-23",
+          "path": "decisions.e150-a9254976e2b50adf.n_unknown_origin",
+          "actual": 0,
+          "expected": 1,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/423606"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/zec/2026-09-09..2026-09-23",
+          "path": "pulse.e150-a9254976e2b50adf.counts.unknown_origin",
+          "actual": 0,
+          "expected": 1,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/423606"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/zec/2026-09-09..2026-09-23",
+          "path": "decisions.e151-4a18d08909169790.n_reprints",
+          "actual": 1,
+          "expected": 0,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/423606"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/zec/2026-09-09..2026-09-23",
+          "path": "pulse.e151-4a18d08909169790.counts.reprints",
+          "actual": 1,
+          "expected": 0,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/423606"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/zec/2026-09-09..2026-09-23",
+          "path": "decisions.e151-4a18d08909169790.n_unknown_origin",
+          "actual": 0,
+          "expected": 1,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/423606"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/zec/2026-09-09..2026-09-23",
+          "path": "pulse.e151-4a18d08909169790.counts.unknown_origin",
+          "actual": 0,
+          "expected": 1,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/423606"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/zec/2026-09-16T06-10-19-00-00..2026-09-21T06-04-32-00-00",
+          "path": "coverage.topic_publications",
+          "actual": 122,
+          "expected": 71,
+          "links": []
+        },
+        {
+          "run": "artifacts/news-pulse/zec/2026-09-16T06-10-19-00-00..2026-09-21T06-04-32-00-00",
+          "path": "pulse.e11-cbe062b0da67e3df.counts.unknown_authors",
+          "actual": 2,
+          "expected": 1,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/423204"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/zec/2026-09-16T06-10-19-00-00..2026-09-21T06-04-32-00-00",
+          "path": "decisions.e11-cbe062b0da67e3df.n_reprints",
+          "actual": 2,
+          "expected": 1,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/423204"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/zec/2026-09-16T06-10-19-00-00..2026-09-21T06-04-32-00-00",
+          "path": "pulse.e11-cbe062b0da67e3df.counts.reprints",
+          "actual": 2,
+          "expected": 1,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/423204"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/zec/2026-09-16T06-10-19-00-00..2026-09-21T06-04-32-00-00",
+          "path": "pulse.e12-ffc17b4e4f13ed92.counts.unknown_authors",
+          "actual": 3,
+          "expected": 1,
+          "links": [
+            "https://t.me/crypto_hd/31484"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/zec/2026-09-16T06-10-19-00-00..2026-09-21T06-04-32-00-00",
+          "path": "decisions.e12-ffc17b4e4f13ed92.n_reprints",
+          "actual": 3,
+          "expected": 1,
+          "links": [
+            "https://t.me/crypto_hd/31484"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/zec/2026-09-16T06-10-19-00-00..2026-09-21T06-04-32-00-00",
+          "path": "pulse.e12-ffc17b4e4f13ed92.counts.reprints",
+          "actual": 3,
+          "expected": 1,
+          "links": [
+            "https://t.me/crypto_hd/31484"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/zec/2026-09-16T06-10-19-00-00..2026-09-21T06-04-32-00-00",
+          "path": "pulse.e25-105292f1b15b7551.counts.unknown_authors",
+          "actual": 2,
+          "expected": 1,
+          "links": [
+            "https://t.me/cryptoattack24/96794"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/zec/2026-09-16T06-10-19-00-00..2026-09-21T06-04-32-00-00",
+          "path": "decisions.e25-105292f1b15b7551.n_reprints",
+          "actual": 2,
+          "expected": 1,
+          "links": [
+            "https://t.me/cryptoattack24/96794"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/zec/2026-09-16T06-10-19-00-00..2026-09-21T06-04-32-00-00",
+          "path": "pulse.e25-105292f1b15b7551.counts.reprints",
+          "actual": 2,
+          "expected": 1,
+          "links": [
+            "https://t.me/cryptoattack24/96794"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/zec/2026-09-16T06-10-19-00-00..2026-09-21T06-04-32-00-00",
+          "path": "pulse.e34-d88b56862e4c8afd.counts.unknown_authors",
+          "actual": 2,
+          "expected": 1,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/423316"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/zec/2026-09-16T06-10-19-00-00..2026-09-21T06-04-32-00-00",
+          "path": "decisions.e34-d88b56862e4c8afd.n_reprints",
+          "actual": 2,
+          "expected": 1,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/423316"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/zec/2026-09-16T06-10-19-00-00..2026-09-21T06-04-32-00-00",
+          "path": "pulse.e34-d88b56862e4c8afd.counts.reprints",
+          "actual": 2,
+          "expected": 1,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/423316"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/zec/2026-09-16T06-10-19-00-00..2026-09-21T06-04-32-00-00",
+          "path": "pulse.e51-a01178250b644dc1.counts.unknown_authors",
+          "actual": 2,
+          "expected": 1,
+          "links": [
+            "https://t.me/Defiscamcheck/4873"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/zec/2026-09-16T06-10-19-00-00..2026-09-21T06-04-32-00-00",
+          "path": "pulse.e51-a01178250b644dc1.counts.found_origins",
+          "actual": 2,
+          "expected": 1,
+          "links": [
+            "https://t.me/Defiscamcheck/4873"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/zec/2026-09-16T06-10-19-00-00..2026-09-21T06-04-32-00-00",
+          "path": "pulse.e55-a01178250b644dc1.counts.unknown_authors",
+          "actual": 2,
+          "expected": 1,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/423360"
+          ]
+        },
+        {
+          "run": "artifacts/news-pulse/zec/2026-09-16T06-10-19-00-00..2026-09-21T06-04-32-00-00",
+          "path": "pulse.e55-a01178250b644dc1.counts.found_origins",
+          "actual": 2,
+          "expected": 1,
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/423360"
+          ]
+        }
+      ],
+      "missing": [
+        {
+          "run": "artifacts/news-pulse/eth/2026-09-17..2026-09-19",
+          "reason": "Без decisions нельзя пересчитать отбор и группы"
+        },
+        {
+          "run": "artifacts/news-pulse/zec/2026-09-17..2026-09-19",
+          "reason": "Без decisions нельзя пересчитать отбор и группы"
+        },
+        "Отсутствует artifacts/news-pulse/eth/2026-09-17..2026-09-19/decisions.json",
+        "Отсутствует artifacts/news-pulse/zec/2026-09-17..2026-09-19/decisions.json"
+      ],
+      "note": ""
+    },
+    "brief_grounding": {
+      "title": "Подтверждённость фактов брифа",
+      "numerator": 0,
+      "denominator": 0,
+      "value": null,
+      "threshold": 0.95,
+      "status": "unverified",
+      "errors": [],
+      "missing": [],
+      "note": "ручная проверка; задача D2"
+    },
+    "fabrications": {
+      "title": "Выдуманные цены, даты, авторство, официальное подтверждение",
+      "numerator": 0,
+      "denominator": 0,
+      "value": null,
+      "threshold": "= 0 ошибок",
+      "status": "unverified",
+      "errors": [],
+      "missing": [],
+      "note": "ручная проверка; задача D2"
+    },
+    "segments": {
+      "title": "Согласие сегментных классов",
+      "numerator": 3,
+      "denominator": 43,
+      "value": 0.06976744186046512,
+      "threshold": null,
+      "status": "unverified",
+      "errors": [
+        {
+          "links": [
+            "https://t.me/whitelist1/7150"
+          ],
+          "topic": "zec",
+          "reason": "Решение не совпало с разметкой",
+          "expected": [
+            "event",
+            "promo_service",
+            "redistribution"
+          ],
+          "actual": [
+            "event"
+          ]
+        },
+        {
+          "links": [
+            "https://t.me/whitelist1/7151"
+          ],
+          "topic": "zec",
+          "reason": "Решение не совпало с разметкой",
+          "expected": [
+            "event",
+            "promo_service",
+            "redistribution"
+          ],
+          "actual": [
+            "event",
+            "promo_service"
+          ]
+        },
+        {
+          "links": [
+            "https://t.me/whitelist1/7152"
+          ],
+          "topic": "zec",
+          "reason": "Решение не совпало с разметкой",
+          "expected": [
+            "event",
+            "promo_service",
+            "redistribution"
+          ],
+          "actual": [
+            "event"
+          ]
+        },
+        {
+          "links": [
+            "https://t.me/Defiscamcheck/4878"
+          ],
+          "topic": "zec",
+          "reason": "Решение не совпало с разметкой",
+          "expected": [
+            "author_position",
+            "event"
+          ],
+          "actual": [
+            "event"
+          ]
+        },
+        {
+          "links": [
+            "https://t.me/cryptoattack24/96747"
+          ],
+          "topic": "eth",
+          "reason": "Решение не совпало с разметкой",
+          "expected": [
+            "event",
+            "redistribution"
+          ],
+          "actual": [
+            "event"
+          ]
+        },
+        {
+          "links": [
+            "https://t.me/cryptoattack24/96773"
+          ],
+          "topic": "eth",
+          "reason": "Решение не совпало с разметкой",
+          "expected": [
+            "event",
+            "redistribution"
+          ],
+          "actual": [
+            "event"
+          ]
+        },
+        {
+          "links": [
+            "https://t.me/cryptoattack24/96794"
+          ],
+          "topic": "zec",
+          "reason": "Решение не совпало с разметкой",
+          "expected": [
+            "event",
+            "redistribution"
+          ],
+          "actual": [
+            "event"
+          ]
+        },
+        {
+          "links": [
+            "https://t.me/cryptoattack24/96795"
+          ],
+          "topic": "eth",
+          "reason": "Решение не совпало с разметкой",
+          "expected": [
+            "event",
+            "redistribution"
+          ],
+          "actual": [
+            "event"
+          ]
+        },
+        {
+          "links": [
+            "https://t.me/cryptoattack24/96796"
+          ],
+          "topic": "zec",
+          "reason": "Решение не совпало с разметкой",
+          "expected": [
+            "event",
+            "redistribution"
+          ],
+          "actual": [
+            "event",
+            "promo_service"
+          ]
+        },
+        {
+          "links": [
+            "https://t.me/cryptoattack24/96819"
+          ],
+          "topic": "eth",
+          "reason": "Решение не совпало с разметкой",
+          "expected": [
+            "event",
+            "redistribution"
+          ],
+          "actual": [
+            "event"
+          ]
+        },
+        {
+          "links": [
+            "https://t.me/cryptoattack24/96824"
+          ],
+          "topic": "zec",
+          "reason": "Решение не совпало с разметкой",
+          "expected": [
+            "event",
+            "redistribution"
+          ],
+          "actual": [
+            "event"
+          ]
+        },
+        {
+          "links": [
+            "https://t.me/cryptoattack24/96827"
+          ],
+          "topic": "eth",
+          "reason": "Решение не совпало с разметкой",
+          "expected": [
+            "event",
+            "redistribution"
+          ],
+          "actual": [
+            "event"
+          ]
+        },
+        {
+          "links": [
+            "https://t.me/cryptoattack24/96837"
+          ],
+          "topic": "eth",
+          "reason": "Решение не совпало с разметкой",
+          "expected": [
+            "event",
+            "redistribution"
+          ],
+          "actual": [
+            "event"
+          ]
+        },
+        {
+          "links": [
+            "https://t.me/cryptoattack24/96838"
+          ],
+          "topic": "zec",
+          "reason": "Решение не совпало с разметкой",
+          "expected": [
+            "event",
+            "redistribution"
+          ],
+          "actual": [
+            "event"
+          ]
+        },
+        {
+          "links": [
+            "https://t.me/cryptoattack24/96862"
+          ],
+          "topic": "eth",
+          "reason": "Решение не совпало с разметкой",
+          "expected": [
+            "event",
+            "redistribution"
+          ],
+          "actual": [
+            "event"
+          ]
+        },
+        {
+          "links": [
+            "https://t.me/cryptoattack24/96890"
+          ],
+          "topic": "eth",
+          "reason": "Решение не совпало с разметкой",
+          "expected": [
+            "event",
+            "redistribution"
+          ],
+          "actual": [
+            "event"
+          ]
+        },
+        {
+          "links": [
+            "https://t.me/cryptonftded/3267"
+          ],
+          "topic": "eth",
+          "reason": "Решение не совпало с разметкой",
+          "expected": [
+            "author_position",
+            "event",
+            "promo_service"
+          ],
+          "actual": [
+            "event",
+            "participant_reaction",
+            "promo_service"
+          ]
+        },
+        {
+          "links": [
+            "https://t.me/whitelist1/7156"
+          ],
+          "topic": "zec",
+          "reason": "Решение не совпало с разметкой",
+          "expected": [
+            "author_position",
+            "promo_service"
+          ],
+          "actual": [
+            "event"
+          ]
+        },
+        {
+          "links": [
+            "https://t.me/icryptocom/8099"
+          ],
+          "topic": "zec",
+          "reason": "Решение не совпало с разметкой",
+          "expected": [
+            "event"
+          ],
+          "actual": [
+            "promo_service"
+          ]
+        },
+        {
+          "links": [
+            "https://t.me/Slavik_investor_updates/6910"
+          ],
+          "topic": "eth",
+          "reason": "Решение не совпало с разметкой",
+          "expected": [
+            "author_position",
+            "event",
+            "redistribution"
+          ],
+          "actual": [
+            "event"
+          ]
+        },
+        {
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/422896"
+          ],
+          "topic": "zec",
+          "reason": "Решение не совпало с разметкой",
+          "expected": [
+            "promo_service"
+          ],
+          "actual": [
+            "event"
+          ]
+        },
+        {
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/422902"
+          ],
+          "topic": "zec",
+          "reason": "Решение не совпало с разметкой",
+          "expected": [
+            "event",
+            "redistribution"
+          ],
+          "actual": [
+            "event"
+          ]
+        },
+        {
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/423011"
+          ],
+          "topic": "zec",
+          "reason": "Решение не совпало с разметкой",
+          "expected": [
+            "event",
+            "promo_service"
+          ],
+          "actual": [
+            "event"
+          ]
+        },
+        {
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/423316"
+          ],
+          "topic": "zec",
+          "reason": "Решение не совпало с разметкой",
+          "expected": [
+            "author_position",
+            "event",
+            "promo_service",
+            "redistribution"
+          ],
+          "actual": [
+            "event"
+          ]
+        },
+        {
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/423395"
+          ],
+          "topic": "eth",
+          "reason": "Решение не совпало с разметкой",
+          "expected": [
+            "event",
+            "redistribution"
+          ],
+          "actual": [
+            "event"
+          ]
+        },
+        {
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/423534"
+          ],
+          "topic": "zec",
+          "reason": "Решение не совпало с разметкой",
+          "expected": [
+            "event",
+            "promo_service",
+            "redistribution"
+          ],
+          "actual": [
+            "event"
+          ]
+        },
+        {
+          "links": [
+            "https://t.me/crypto_hd/31368"
+          ],
+          "topic": "zec",
+          "reason": "Решение не совпало с разметкой",
+          "expected": [
+            "promo_service"
+          ],
+          "actual": [
+            "event",
+            "promo_service"
+          ]
+        },
+        {
+          "links": [
+            "https://t.me/crypto_hd/31503"
+          ],
+          "topic": "zec",
+          "reason": "Решение не совпало с разметкой",
+          "expected": [
+            "event",
+            "redistribution"
+          ],
+          "actual": [
+            "event"
+          ]
+        },
+        {
+          "links": [
+            "https://t.me/crypto_hd/31517"
+          ],
+          "topic": "zec",
+          "reason": "Решение не совпало с разметкой",
+          "expected": [
+            "event",
+            "promo_service"
+          ],
+          "actual": [
+            "event"
+          ]
+        },
+        {
+          "links": [
+            "https://t.me/crypto_hd/31561"
+          ],
+          "topic": "eth",
+          "reason": "Решение не совпало с разметкой",
+          "expected": [
+            "event",
+            "redistribution"
+          ],
+          "actual": [
+            "promo_service"
+          ]
+        },
+        {
+          "links": [
+            "https://t.me/rawa_imagination/21039"
+          ],
+          "topic": "eth",
+          "reason": "Решение не совпало с разметкой",
+          "expected": [
+            "event",
+            "promo_service",
+            "redistribution"
+          ],
+          "actual": [
+            "event",
+            "promo_service"
+          ]
+        },
+        {
+          "links": [
+            "https://t.me/rawa_imagination/21051"
+          ],
+          "topic": "eth",
+          "reason": "Решение не совпало с разметкой",
+          "expected": [
+            "event",
+            "promo_service",
+            "redistribution"
+          ],
+          "actual": [
+            "promo_service"
+          ]
+        },
+        {
+          "links": [
+            "https://t.me/rawa_imagination/21055"
+          ],
+          "topic": "eth",
+          "reason": "Решение не совпало с разметкой",
+          "expected": [
+            "author_position"
+          ],
+          "actual": [
+            "promo_service"
+          ]
+        },
+        {
+          "links": [
+            "https://t.me/rawa_imagination/21060"
+          ],
+          "topic": "eth",
+          "reason": "Решение не совпало с разметкой",
+          "expected": [
+            "event",
+            "promo_service",
+            "redistribution"
+          ],
+          "actual": [
+            "event",
+            "promo_service"
+          ]
+        },
+        {
+          "links": [
+            "https://t.me/rawa_imagination/21109"
+          ],
+          "topic": "eth",
+          "reason": "Решение не совпало с разметкой",
+          "expected": [
+            "event",
+            "promo_service",
+            "redistribution"
+          ],
+          "actual": [
+            "event",
+            "promo_service"
+          ]
+        },
+        {
+          "links": [
+            "https://t.me/rawa_imagination/21117"
+          ],
+          "topic": "eth",
+          "reason": "Решение не совпало с разметкой",
+          "expected": [
+            "event",
+            "promo_service",
+            "redistribution"
+          ],
+          "actual": [
+            "promo_service"
+          ]
+        },
+        {
+          "links": [
+            "https://t.me/rawa_imagination/21121"
+          ],
+          "topic": "eth",
+          "reason": "Решение не совпало с разметкой",
+          "expected": [
+            "event",
+            "promo_service",
+            "redistribution"
+          ],
+          "actual": [
+            "event",
+            "promo_service"
+          ]
+        },
+        {
+          "links": [
+            "https://t.me/rawa_imagination/21127"
+          ],
+          "topic": "eth",
+          "reason": "Решение не совпало с разметкой",
+          "expected": [
+            "event",
+            "promo_service",
+            "redistribution"
+          ],
+          "actual": [
+            "promo_service"
+          ]
+        },
+        {
+          "links": [
+            "https://t.me/rawa_imagination/21151"
+          ],
+          "topic": "eth",
+          "reason": "Решение не совпало с разметкой",
+          "expected": [
+            "event",
+            "promo_service",
+            "redistribution"
+          ],
+          "actual": [
+            "promo_service"
+          ]
+        },
+        {
+          "links": [
+            "https://t.me/rawa_imagination/21158"
+          ],
+          "topic": "eth",
+          "reason": "Решение не совпало с разметкой",
+          "expected": [
+            "event",
+            "promo_service",
+            "redistribution"
+          ],
+          "actual": [
+            "promo_service"
+          ]
+        }
+      ],
+      "missing": [],
+      "note": "Информативно, без порога; segments — точное совпадение множества классов поста, без оценки границ."
+    },
+    "origin": {
+      "title": "Согласие происхождения",
+      "numerator": 10,
+      "denominator": 43,
+      "value": 0.23255813953488372,
+      "threshold": null,
+      "status": "unverified",
+      "errors": [
+        {
+          "links": [
+            "https://t.me/whitelist1/7150"
+          ],
+          "topic": "zec",
+          "reason": "Решение не совпало с разметкой",
+          "expected": "retelling",
+          "actual": "unknown"
+        },
+        {
+          "links": [
+            "https://t.me/whitelist1/7151"
+          ],
+          "topic": "zec",
+          "reason": "Решение не совпало с разметкой",
+          "expected": "retelling",
+          "actual": "own"
+        },
+        {
+          "links": [
+            "https://t.me/whitelist1/7152"
+          ],
+          "topic": "zec",
+          "reason": "Решение не совпало с разметкой",
+          "expected": "retelling",
+          "actual": "own"
+        },
+        {
+          "links": [
+            "https://t.me/Defiscamcheck/4878"
+          ],
+          "topic": "zec",
+          "reason": "Решение не совпало с разметкой",
+          "expected": "own",
+          "actual": "retelling"
+        },
+        {
+          "links": [
+            "https://t.me/cryptoattack24/96747"
+          ],
+          "topic": "eth",
+          "reason": "Решение не совпало с разметкой",
+          "expected": "retelling",
+          "actual": "unknown"
+        },
+        {
+          "links": [
+            "https://t.me/cryptoattack24/96773"
+          ],
+          "topic": "eth",
+          "reason": "Решение не совпало с разметкой",
+          "expected": "retelling",
+          "actual": "own"
+        },
+        {
+          "links": [
+            "https://t.me/cryptoattack24/96795"
+          ],
+          "topic": "eth",
+          "reason": "Решение не совпало с разметкой",
+          "expected": "retelling",
+          "actual": "own"
+        },
+        {
+          "links": [
+            "https://t.me/cryptoattack24/96819"
+          ],
+          "topic": "eth",
+          "reason": "Решение не совпало с разметкой",
+          "expected": "retelling",
+          "actual": "own"
+        },
+        {
+          "links": [
+            "https://t.me/cryptoattack24/96827"
+          ],
+          "topic": "eth",
+          "reason": "Решение не совпало с разметкой",
+          "expected": "repost",
+          "actual": "own"
+        },
+        {
+          "links": [
+            "https://t.me/cryptoattack24/96837"
+          ],
+          "topic": "eth",
+          "reason": "Решение не совпало с разметкой",
+          "expected": "retelling",
+          "actual": "own"
+        },
+        {
+          "links": [
+            "https://t.me/cryptonftded/3265"
+          ],
+          "topic": "eth",
+          "reason": "Решение не совпало с разметкой",
+          "expected": "own",
+          "actual": "unknown"
+        },
+        {
+          "links": [
+            "https://t.me/cryptonftded/3266"
+          ],
+          "topic": "eth",
+          "reason": "Решение не совпало с разметкой",
+          "expected": "own",
+          "actual": "unknown"
+        },
+        {
+          "links": [
+            "https://t.me/cryptonftded/3267"
+          ],
+          "topic": "eth",
+          "reason": "Решение не совпало с разметкой",
+          "expected": "retelling",
+          "actual": "own"
+        },
+        {
+          "links": [
+            "https://t.me/cryptonftded/3269"
+          ],
+          "topic": "eth",
+          "reason": "Решение не совпало с разметкой",
+          "expected": "own",
+          "actual": "unknown"
+        },
+        {
+          "links": [
+            "https://t.me/whitelist1/7156"
+          ],
+          "topic": "zec",
+          "reason": "Решение не совпало с разметкой",
+          "expected": "own",
+          "actual": "retelling"
+        },
+        {
+          "links": [
+            "https://t.me/icryptocom/8099"
+          ],
+          "topic": "zec",
+          "reason": "Решение не совпало с разметкой",
+          "expected": "own",
+          "actual": "unknown"
+        },
+        {
+          "links": [
+            "https://t.me/Slavik_investor_updates/6910"
+          ],
+          "topic": "eth",
+          "reason": "Решение не совпало с разметкой",
+          "expected": "retelling",
+          "actual": "unknown"
+        },
+        {
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/422896"
+          ],
+          "topic": "zec",
+          "reason": "Решение не совпало с разметкой",
+          "expected": "unknown",
+          "actual": "own"
+        },
+        {
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/422902"
+          ],
+          "topic": "zec",
+          "reason": "Решение не совпало с разметкой",
+          "expected": "retelling",
+          "actual": "own"
+        },
+        {
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/423316"
+          ],
+          "topic": "zec",
+          "reason": "Решение не совпало с разметкой",
+          "expected": "retelling",
+          "actual": "unknown"
+        },
+        {
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/423395"
+          ],
+          "topic": "eth",
+          "reason": "Решение не совпало с разметкой",
+          "expected": "repost",
+          "actual": "own"
+        },
+        {
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/423534"
+          ],
+          "topic": "zec",
+          "reason": "Решение не совпало с разметкой",
+          "expected": "retelling",
+          "actual": "own"
+        },
+        {
+          "links": [
+            "https://t.me/crypto_hd/31368"
+          ],
+          "topic": "zec",
+          "reason": "Решение не совпало с разметкой",
+          "expected": "own",
+          "actual": "retelling"
+        },
+        {
+          "links": [
+            "https://t.me/crypto_hd/31561"
+          ],
+          "topic": "eth",
+          "reason": "Решение не совпало с разметкой",
+          "expected": "retelling",
+          "actual": "unknown"
+        },
+        {
+          "links": [
+            "https://t.me/rawa_imagination/21039"
+          ],
+          "topic": "eth",
+          "reason": "Решение не совпало с разметкой",
+          "expected": "retelling",
+          "actual": "unknown"
+        },
+        {
+          "links": [
+            "https://t.me/rawa_imagination/21051"
+          ],
+          "topic": "eth",
+          "reason": "Решение не совпало с разметкой",
+          "expected": "retelling",
+          "actual": "unknown"
+        },
+        {
+          "links": [
+            "https://t.me/rawa_imagination/21060"
+          ],
+          "topic": "eth",
+          "reason": "Решение не совпало с разметкой",
+          "expected": "retelling",
+          "actual": "own"
+        },
+        {
+          "links": [
+            "https://t.me/rawa_imagination/21109"
+          ],
+          "topic": "eth",
+          "reason": "Решение не совпало с разметкой",
+          "expected": "retelling",
+          "actual": "own"
+        },
+        {
+          "links": [
+            "https://t.me/rawa_imagination/21117"
+          ],
+          "topic": "eth",
+          "reason": "Решение не совпало с разметкой",
+          "expected": "retelling",
+          "actual": "unknown"
+        },
+        {
+          "links": [
+            "https://t.me/rawa_imagination/21121"
+          ],
+          "topic": "eth",
+          "reason": "Решение не совпало с разметкой",
+          "expected": "retelling",
+          "actual": "own"
+        },
+        {
+          "links": [
+            "https://t.me/rawa_imagination/21127"
+          ],
+          "topic": "eth",
+          "reason": "Решение не совпало с разметкой",
+          "expected": "retelling",
+          "actual": "unknown"
+        },
+        {
+          "links": [
+            "https://t.me/rawa_imagination/21151"
+          ],
+          "topic": "eth",
+          "reason": "Решение не совпало с разметкой",
+          "expected": "retelling",
+          "actual": "unknown"
+        },
+        {
+          "links": [
+            "https://t.me/rawa_imagination/21158"
+          ],
+          "topic": "eth",
+          "reason": "Решение не совпало с разметкой",
+          "expected": "retelling",
+          "actual": "unknown"
+        }
+      ],
+      "missing": [],
+      "note": "Информативно, без порога; segments — точное совпадение множества классов поста, без оценки границ."
+    },
+    "source_role": {
+      "title": "Согласие роли источника",
+      "numerator": 22,
+      "denominator": 43,
+      "value": 0.5116279069767442,
+      "threshold": null,
+      "status": "unverified",
+      "errors": [
+        {
+          "links": [
+            "https://t.me/whitelist1/7150"
+          ],
+          "topic": "zec",
+          "reason": "Решение не совпало с разметкой",
+          "expected": "editorial",
+          "actual": "unknown"
+        },
+        {
+          "links": [
+            "https://t.me/whitelist1/7152"
+          ],
+          "topic": "zec",
+          "reason": "Решение не совпало с разметкой",
+          "expected": "editorial",
+          "actual": "author"
+        },
+        {
+          "links": [
+            "https://t.me/cryptoattack24/96795"
+          ],
+          "topic": "eth",
+          "reason": "Решение не совпало с разметкой",
+          "expected": "editorial",
+          "actual": "author"
+        },
+        {
+          "links": [
+            "https://t.me/cryptonftded/3265"
+          ],
+          "topic": "eth",
+          "reason": "Решение не совпало с разметкой",
+          "expected": "author",
+          "actual": "unknown"
+        },
+        {
+          "links": [
+            "https://t.me/cryptonftded/3266"
+          ],
+          "topic": "eth",
+          "reason": "Решение не совпало с разметкой",
+          "expected": "author",
+          "actual": "unknown"
+        },
+        {
+          "links": [
+            "https://t.me/cryptonftded/3267"
+          ],
+          "topic": "eth",
+          "reason": "Решение не совпало с разметкой",
+          "expected": "author",
+          "actual": "editorial"
+        },
+        {
+          "links": [
+            "https://t.me/cryptonftded/3269"
+          ],
+          "topic": "eth",
+          "reason": "Решение не совпало с разметкой",
+          "expected": "author",
+          "actual": "unknown"
+        },
+        {
+          "links": [
+            "https://t.me/whitelist1/7156"
+          ],
+          "topic": "zec",
+          "reason": "Решение не совпало с разметкой",
+          "expected": "editorial",
+          "actual": "author"
+        },
+        {
+          "links": [
+            "https://t.me/icryptocom/8099"
+          ],
+          "topic": "zec",
+          "reason": "Решение не совпало с разметкой",
+          "expected": "author",
+          "actual": "unknown"
+        },
+        {
+          "links": [
+            "https://t.me/Slavik_investor_updates/6910"
+          ],
+          "topic": "eth",
+          "reason": "Решение не совпало с разметкой",
+          "expected": "author",
+          "actual": "unknown"
+        },
+        {
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/422896"
+          ],
+          "topic": "zec",
+          "reason": "Решение не совпало с разметкой",
+          "expected": "unknown",
+          "actual": "author"
+        },
+        {
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/423316"
+          ],
+          "topic": "zec",
+          "reason": "Решение не совпало с разметкой",
+          "expected": "author",
+          "actual": "unknown"
+        },
+        {
+          "links": [
+            "https://t.me/WEB3_AGGREGATOR/423534"
+          ],
+          "topic": "zec",
+          "reason": "Решение не совпало с разметкой",
+          "expected": "editorial",
+          "actual": "author"
+        },
+        {
+          "links": [
+            "https://t.me/crypto_hd/31517"
+          ],
+          "topic": "zec",
+          "reason": "Решение не совпало с разметкой",
+          "expected": "editorial",
+          "actual": "author"
+        },
+        {
+          "links": [
+            "https://t.me/crypto_hd/31561"
+          ],
+          "topic": "eth",
+          "reason": "Решение не совпало с разметкой",
+          "expected": "editorial",
+          "actual": "unknown"
+        },
+        {
+          "links": [
+            "https://t.me/rawa_imagination/21039"
+          ],
+          "topic": "eth",
+          "reason": "Решение не совпало с разметкой",
+          "expected": "editorial",
+          "actual": "unknown"
+        },
+        {
+          "links": [
+            "https://t.me/rawa_imagination/21051"
+          ],
+          "topic": "eth",
+          "reason": "Решение не совпало с разметкой",
+          "expected": "editorial",
+          "actual": "unknown"
+        },
+        {
+          "links": [
+            "https://t.me/rawa_imagination/21117"
+          ],
+          "topic": "eth",
+          "reason": "Решение не совпало с разметкой",
+          "expected": "editorial",
+          "actual": "unknown"
+        },
+        {
+          "links": [
+            "https://t.me/rawa_imagination/21127"
+          ],
+          "topic": "eth",
+          "reason": "Решение не совпало с разметкой",
+          "expected": "editorial",
+          "actual": "unknown"
+        },
+        {
+          "links": [
+            "https://t.me/rawa_imagination/21151"
+          ],
+          "topic": "eth",
+          "reason": "Решение не совпало с разметкой",
+          "expected": "editorial",
+          "actual": "unknown"
+        },
+        {
+          "links": [
+            "https://t.me/rawa_imagination/21158"
+          ],
+          "topic": "eth",
+          "reason": "Решение не совпало с разметкой",
+          "expected": "editorial",
+          "actual": "unknown"
+        }
+      ],
+      "missing": [],
+      "note": "Информативно, без порога; segments — точное совпадение множества классов поста, без оценки границ."
+    }
+  }
+}

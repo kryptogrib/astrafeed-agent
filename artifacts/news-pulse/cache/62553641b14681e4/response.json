@@ -1,0 +1,46 @@
+{
+ "id": "gen-1790194348-y6yM2tAsFig12xBlI9rz",
+ "object": "chat.completion",
+ "created": 1790194348,
+ "model": "deepseek/deepseek-v4-flash",
+ "provider": "DigitalOcean",
+ "system_fingerprint": null,
+ "service_tier": null,
+ "choices": [
+  {
+   "index": 0,
+   "logprobs": null,
+   "finish_reason": "stop",
+   "native_finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "content": "{\"labels\": [\n  {\n    \"id\": \"telegram:11:96795#s1\",\n    \"kind\": \"event\",\n    \"actor\": null,\n    \"action\": \"net outflow\",\n    \"object\": \"спотовых ETH-ETF\",\n    \"qualifiers\": {\"amount\": \"$39.3 млн\"},\n    \"origin\": \"retelling\",\n    \"source_role\": \"editorial\",\n    \"verification_status\": \"source_statement\",\n    \"quote\": \"Общий чистый отток спотовых ETH-ETF составил $39,3 млн.\",\n    \"span\": [0, 59]\n  },\n  {\n    \"id\": \"telegram:15:423264#s0\",\n    \"kind\": \"event\",\n    \"actor\": \"@nostrafinance\",\n    \"action\": \"reported\",\n    \"object\": \"that a manipulated NSTR oracle price allowed a single account to borrow ~$3.5M in ETH, STRK, USDC, USDT, WBTC, and DAI against NSTR collateral on Nostra's #Starknet money market\",\n    \"qualifiers\": {},\n    \"origin\": \"retelling\",\n    \"source_role\": \"editorial\",\n    \"verification_status\": \"source_statement\",\n    \"quote\": \"@nostrafinance has reported that a manipulated NSTR oracle price allowed a single account to borrow ~$3.5M in ETH, STRK, USDC, USDT, WBTC, and DAI against NSTR collateral on Nostra's #Starknet money market.\\n\\n\",\n    \"span\": [0, 198]\n  },\n  {\n    \"id\": \"telegram:13:3756#s0\",\n    \"kind\": \"participant_reaction\",\n    \"actor\": \"автор\",\n    \"action\": \"тестирует бота\",\n    \"object\": \"на ETH\",\n    \"qualifiers\": {},\n    \"origin\": \"own\",\n    \"source_role\": \"author\",\n    \"verification_status\": \"unverified\",\n    \"quote\": \"Тестирую бота на ETH ⚪️\\n\\n\",\n    \"span\": [0, 27]\n  },\n  {\n    \"id\": \"telegram:13:3756#s1\",\n    \"kind\": \"participant_reaction\",\n    \"actor\": \"автор\",\n    \"action\": \"запустил бота\",\n    \"object\": \"на Ethereum\",\n    \"qualifiers\": {\"amount\": \"$100\"},\n    \"origin\": \"own\",\n    \"source_role\": \"author\",\n    \"verification_status\": \"unverified\",\n    \"quote\": \"Запустил бота на Ethereum всего на $100. Хотелось посмотреть, как стратегия поведет себя именно вживую, а не только на бэктесте.\\n\\n\",\n    \"span\": [0, 128]\n  },\n  {\n    \"id\": \"telegram:21:21117#s2\",\n    \"kind\": \"promo_service\",\n    \"actor\": null,\n    \"action\": \"funding rates display\",\n    \"object\": \"ETH funding rates on Binance and Bybit\",\n    \"qualifiers\": {},\n    \"origin\": \"own\",\n    \"source_role\": \"editorial\",\n    \"verification_status\": \"unverified\",\n    \"quote\": \"🔄 ФАНДИНГ (🐂 = быки платят медведям):\\n  BTC: Binance: +0.0065% 🐂 | Bybit: +0.0100% 🐂\\n  ETH: Binance: +0.0091% 🐂 | Bybit: +0.0100% 🐂\\n\\n\",\n    \"span\": [0, 116]\n  },\n  {\n    \"id\": \"telegram:18:31503#s2\",\n    \"kind\": \"event\",\n    \"actor\": \"Bitcoin OG insider\",\n    \"action\": \"exhibited order for long and sold ETH\",\n    \"object\": \"35,000 ETH\",\n    \"qualifiers\": {\"amount\": \"$87.5m\", \"price\": \"~$2500\"},\n    \"origin\": \"retelling\",\n    \"source_role\": \"editorial\",\n    \"verification_status\": \"source_statement\",\n    \"quote\": \"➤ Инсайдер Bitcoin OG выставил ордер на открытие лонга на 2450 BTC (~$190m) по цене $78,000. Также он продал 35,000 ETH ($87,5m) по цене ~$2500 и направил часть средств на увеличение обеспечения убыточного шорта по ZEC. \\n\\n\",\n    \"span\": [0, 207]\n  },\n  {\n    \"id\": \"telegram:18:31503#s4\",\n    \"kind\": \"event\",\n    \"actor\": \"11 новых кошельков, вероятно принадлежащих одному киту\",\n    \"action\": \"sold BTC and bought ETH\",\n    \"object\": \"18,780 ETH\",\n    \"qualifiers\": {\"amount\": \"$45.8m\", \"counterparty\": \"Hyperliquid\"},\n    \"origin\": \"retelling\",\n    \"source_role\": \"editorial\",\n    \"verification_status\": \"source_statement\",\n    \"quote\": \"➤ 11 новых кошельков, вероятно принадлежащих одному киту, за последние три дня продали 602 BTC за $45,8m на Hyperliquid и купили 18,780 ETH на ту же сумму.\\n\\n\",\n    \"span\": [0, 155]\n  },\n  {\n    \"id\": \"telegram:18:31503#s6\",\n    \"kind\": \"event\",\n    \"actor\": \"Кит «0x72e0»\",\n    \"action\": \"меняет HYPE на ETH\",\n    \"object\": \"12,250 ETH\",\n    \"qualifiers\": {\"amount\": \"$30,1m\", \"counterparty\": \"FalconX\"},\n    \"origin\": \"retelling\",\n    \"source_role\": \"editorial\",\n    \"verification_status\": \"source_statement\",\n    \"quote\": \"➤ Кит «0x72e0», вероятно, меняет HYPE на ETH. Он перевел 440,000 HYPE ($36m) в FalconX, после чего вывел 12,250 ETH ($30,1m).\\n\\n\",\n    \"span\": [0, 129]\n  },\n  {\n    \"id\": \"telegram:18:31503#s7\",\n    \"kind\": \"event\",\n    \"actor\": \"Четыре новых кошелька одного кита/институционала\",\n    \"action\": \"купили ETH и отправили в стейкинг\",\n    \"object\": \"6972 ETH\",\n    \"qualifiers\": {\"amount\": \"$17,15m\", \"price\": \"$2460,69\"},\n    \"origin\": \"retelling\",\n    \"source_role\": \"editorial\",\n    \"verification_status\": \"source_statement\",\n    \"quote\": \"➤ Четыре новых кошелька одного кита/институционала купили 6972 ETH ($17,15m) по средней цене $2460,69 и отправили всю позицию в стейкинг.\\n\\n\",\n    \"span\": [0, 134]\n  },\n  {\n    \"id\": \"telegram:18:31504#s3\",\n    \"kind\": \"event\",\n    \"actor\": null,\n    \"action\": \"said\",\n    \"object\": \"что инвесторы ошибались по поводу Ethereum\",\n    \"qualifiers\": {},\n    \"origin\": \"retelling\",\n    \"source_role\": \"editorial\",\n    \"verification_status\": \"source_statement\",\n    \"quote\": \"По его словам, инвесторы ошибались, считая, что Ethereum станет единым стандартом для институционального рынка. Сейчас компании рассматривают разные блокчейны, и победитель пока не определен.\\n\\n\",\n    \"span\": [0, 170]\n  },\n  {\n    \"id\": \"telegram:15:423294#s2\",\n    \"kind\": \"event\",\n    \"actor\": null,\n    \"action\": \"имеют коллекцию и запуск фапает\",\n    \"object\": \"коллекция по эфиру\",\n    \"qualifiers\": {},\n    \"origin\": \"retelling\",\n    \"source_role\": \"editorial\",\n    \"verification_status\": \"unverified\",\n    \"quote\": \"1. У них есть уже коллекция почти по эфиру.\\n2. На предстоящий запуск фапает весь твитак.\\n\\n\",\n    \"span\": [0, 72]\n  },\n  {\n    \"id\": \"telegram:18:31509#s1\",\n    \"kind\": \"event\",\n    \"actor\": null,\n    \"action\": \"почему \\\"мертвый\\\" L2 ETH дает иксы?\",\n    \"object\": \"Arbitrum (L2 ETH)\",\n    \"qualifiers\": {},\n    \"origin\": \"own\",\n    \"source_role\": \"editorial\",\n    \"verification_status\": \"unverified\",\n    \"quote\": \"🚀 Arbitrum: почему \\\"мертвый\\\" L2 ETH дает иксы? \\n\\n\",\n    \"span\": [0, 46]\n  }\n]}",
+    "refusal": null,
+    "reasoning": null
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 1854,
+  "completion_tokens": 2044,
+  "total_tokens": 3898,
+  "cost": 0.000582316,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.000582316,
+   "upstream_inference_prompt_cost": 0.000181692,
+   "upstream_inference_completions_cost": 0.000400624
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

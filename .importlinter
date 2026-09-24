@@ -1,0 +1,29 @@
+[importlinter]
+root_package = astrafeed
+
+[importlinter:contract:domain]
+name = Domain does not import adapters or application
+type = forbidden
+source_modules =
+    astrafeed.domain
+forbidden_modules =
+    astrafeed.adapters
+    astrafeed.application
+
+[importlinter:contract:ports]
+name = Ports do not import adapters or application
+type = forbidden
+source_modules =
+    astrafeed.ports
+forbidden_modules =
+    astrafeed.adapters
+    astrafeed.application
+
+[importlinter:contract:http-read]
+name = HTTP reads do not import the cycle or LLM adapters
+type = forbidden
+source_modules =
+    astrafeed.adapters.http
+forbidden_modules =
+    astrafeed.application.agenda_cycle
+    astrafeed.adapters.llm

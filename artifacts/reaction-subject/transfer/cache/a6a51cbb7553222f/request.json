@@ -1,0 +1,17 @@
+{
+ "segments": [
+  {
+   "id": "telegram:5:2259#s4",
+   "text": "🔵 USDG: Pendle стал крупнейшим держателем на Ethereum (27,9% supply), рост с $0 до $121M менее чем за 2 мес. \n",
+   "mentions": [
+    {
+     "text": "Ethereum",
+     "status": "confirmed"
+    }
+   ],
+   "kind_hint": "post",
+   "url": "https://t.me/NewBitFuture/2259",
+   "time": "2026-09-23T13:19:18+00:00"
+  }
+ ]
+}

@@ -1,0 +1,164 @@
+{
+  "timezone": "UTC",
+  "interval": "[start,end)",
+  "topics": {
+    "zec": {
+      "windows": [
+        {
+          "id": "zec-coverage",
+          "start": "2026-09-09T00:00:00+00:00",
+          "end": "2026-09-24T00:00:00+00:00"
+        },
+        {
+          "id": "zec-boundary",
+          "start": "2026-09-16T06:10:19+00:00",
+          "end": "2026-09-21T06:04:32+00:00"
+        }
+      ],
+      "boundary_cases": [
+        {
+          "post_ref": "p745",
+          "timestamp": "2026-09-21T06:04:32+00:00",
+          "probes": [
+            {
+              "start": "2026-09-09T00:00:00+00:00",
+              "end": "2026-09-21T06:04:31+00:00",
+              "expected_included": false
+            },
+            {
+              "start": "2026-09-09T00:00:00+00:00",
+              "end": "2026-09-21T06:04:32+00:00",
+              "expected_included": false
+            },
+            {
+              "start": "2026-09-09T00:00:00+00:00",
+              "end": "2026-09-21T06:04:33+00:00",
+              "expected_included": true
+            }
+          ],
+          "start_equal_included": true
+        },
+        {
+          "post_ref": "p1909",
+          "timestamp": "2026-09-16T06:10:19+00:00",
+          "probes": [
+            {
+              "start": "2026-09-09T00:00:00+00:00",
+              "end": "2026-09-16T06:10:18+00:00",
+              "expected_included": false
+            },
+            {
+              "start": "2026-09-09T00:00:00+00:00",
+              "end": "2026-09-16T06:10:19+00:00",
+              "expected_included": false
+            },
+            {
+              "start": "2026-09-09T00:00:00+00:00",
+              "end": "2026-09-16T06:10:20+00:00",
+              "expected_included": true
+            }
+          ],
+          "start_equal_included": true
+        }
+      ]
+    },
+    "eth": {
+      "windows": [
+        {
+          "id": "eth-coverage",
+          "start": "2026-09-09T00:00:00+00:00",
+          "end": "2026-09-24T00:00:00+00:00"
+        },
+        {
+          "id": "eth-boundary",
+          "start": "2026-09-14T12:33:46+00:00",
+          "end": "2026-09-21T12:44:54+00:00"
+        }
+      ],
+      "boundary_cases": [
+        {
+          "post_ref": "p810",
+          "timestamp": "2026-09-21T12:44:54+00:00",
+          "probes": [
+            {
+              "start": "2026-09-09T00:00:00+00:00",
+              "end": "2026-09-21T12:44:53+00:00",
+              "expected_included": false
+            },
+            {
+              "start": "2026-09-09T00:00:00+00:00",
+              "end": "2026-09-21T12:44:54+00:00",
+              "expected_included": false
+            },
+            {
+              "start": "2026-09-09T00:00:00+00:00",
+              "end": "2026-09-21T12:44:55+00:00",
+              "expected_included": true
+            }
+          ],
+          "start_equal_included": true
+        },
+        {
+          "post_ref": "p8548",
+          "timestamp": "2026-09-14T12:33:46+00:00",
+          "probes": [
+            {
+              "start": "2026-09-09T00:00:00+00:00",
+              "end": "2026-09-14T12:33:45+00:00",
+              "expected_included": false
+            },
+            {
+              "start": "2026-09-09T00:00:00+00:00",
+              "end": "2026-09-14T12:33:46+00:00",
+              "expected_included": false
+            },
+            {
+              "start": "2026-09-09T00:00:00+00:00",
+              "end": "2026-09-14T12:33:47+00:00",
+              "expected_included": true
+            }
+          ],
+          "start_equal_included": true
+        }
+      ]
+    },
+    "arc": {
+      "windows": [
+        {
+          "id": "arc-coverage",
+          "start": "2026-09-09T00:00:00+00:00",
+          "end": "2026-09-24T00:00:00+00:00"
+        },
+        {
+          "id": "arc-boundary",
+          "start": "2026-09-16T11:01:01+00:00",
+          "end": "2026-09-17T11:01:01+00:00"
+        }
+      ],
+      "boundary_cases": [
+        {
+          "post_ref": "p3",
+          "timestamp": "2026-09-16T11:01:01+00:00",
+          "probes": [
+            {
+              "start": "2026-09-09T00:00:00+00:00",
+              "end": "2026-09-16T11:01:00+00:00",
+              "expected_included": false
+            },
+            {
+              "start": "2026-09-09T00:00:00+00:00",
+              "end": "2026-09-16T11:01:01+00:00",
+              "expected_included": false
+            },
+            {
+              "start": "2026-09-09T00:00:00+00:00",
+              "end": "2026-09-16T11:01:02+00:00",
+              "expected_included": true
+            }
+          ],
+          "start_equal_included": true
+        }
+      ]
+    }
+  }
+}

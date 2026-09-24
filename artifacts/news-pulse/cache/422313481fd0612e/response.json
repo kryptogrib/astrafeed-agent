@@ -1,0 +1,46 @@
+{
+ "id": "gen-1790198495-cd3XP0aPQE7kqYwaqhl9",
+ "object": "chat.completion",
+ "created": 1790198495,
+ "model": "deepseek/deepseek-v4-flash",
+ "provider": "Baidu",
+ "system_fingerprint": null,
+ "service_tier": null,
+ "choices": [
+  {
+   "index": 0,
+   "logprobs": null,
+   "finish_reason": "stop",
+   "native_finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "content": "{\"labels\": [{\"id\": \"telegram:20:49106#s0\", \"kind\": \"event\", \"actor\": \"Leo\", \"action\": \"bought more of $worth and reaped\", \"object\": \"ZEC long\", \"qualifiers\": {\"version\": null, \"event_date\": null, \"place\": null, \"counterparty\": null}, \"origin\": \"own\", \"source_role\": \"author\", \"verification_status\": \"unverified\", \"quote\": \"Leo is up 1.6m from his ZEC long and bought more of $worth and I know i sold the bottom like a chud so i reaped here\", \"span\": [0, 117]}, {\"id\": \"telegram:18:31490#s0\", \"kind\": \"event\", \"actor\": \"Лудоманы с Polymarket\", \"action\": \"expect ZEC above $2000 by end of 2026\", \"object\": \"ZEC price prediction\", \"qualifiers\": {\"version\": null, \"event_date\": \"2026-12-31\", \"place\": null, \"counterparty\": null}, \"origin\": \"retelling\", \"source_role\": \"editorial\", \"verification_status\": \"source_statement\", \"quote\": \"😯 Лудоманы с Polymarket ожидают #ZEC выше $2000 до конца 2026 года. \\n\", \"span\": [0, 62]}, {\"id\": \"telegram:15:423248#s0\", \"kind\": \"event\", \"actor\": null, \"action\": \"list of NFTs on ZEC\", \"object\": \"NFT list\", \"qualifiers\": {\"version\": null, \"event_date\": null, \"place\": null, \"counterparty\": null}, \"origin\": \"own\", \"source_role\": \"author\", \"verification_status\": \"unverified\", \"quote\": \"Списочек NFT на $ZEC\\n\\n\", \"span\": [0, 21]}, {\"id\": \"telegram:15:423250#s10\", \"kind\": \"event\", \"actor\": null, \"action\": \"pump of ZEC\", \"object\": \"ZEC\", \"qualifiers\": {\"version\": null, \"event_date\": null, \"place\": null, \"counterparty\": null}, \"origin\": \"own\", \"source_role\": \"author\", \"verification_status\": \"unverified\", \"quote\": \"🚀 Памп #ZEC\\n\", \"span\": [0, 12]}, {\"id\": \"telegram:18:31493#s1\", \"kind\": \"event\", \"actor\": null, \"action\": \"idea of classic TA pattern cup and handle on ZEC with target $3100+\", \"object\": \"ZEC\", \"qualifiers\": {\"version\": null, \"event_date\": null, \"place\": null, \"counterparty\": null}, \"origin\": \"own\", \"source_role\": \"editorial\", \"verification_status\": \"unverified\", \"quote\": \"☕️ Идея с отработкой классической фигуры ТА «чашка с ручкой» на ZEC (с целью в $3100+).\\n\\n\", \"span\": [0, 82]}, {\"id\": \"telegram:18:31494#s1\", \"kind\": \"event\", \"actor\": null, \"action\": \"growth of Zcash\", \"object\": \"Zcash\", \"qualifiers\": {\"version\": null, \"event_date\": null, \"place\": null, \"counterparty\": null}, \"origin\": \"own\", \"source_role\": \"editorial\", \"verification_status\": \"unverified\", \"quote\": \"▫️Рост Zcash (читать)\\n\\n\", \"span\": [0, 22]}, {\"id\": \"telegram:18:31494#s8\", \"kind\": \"event\", \"actor\": null, \"action\": \"Zcash accelerated 3 times\", \"object\": \"Zcash\", \"qualifiers\": {\"version\": null, \"event_date\": null, \"place\": null, \"counterparty\": null}, \"origin\": \"own\", \"source_role\": \"editorial\", \"verification_status\": \"unverified\", \"quote\": \"▫️Zcash ускорят в 3 раза (читать)\\n\\n\", \"span\": [0, 32]}, {\"id\": \"telegram:18:31494#s11\", \"kind\": \"event\", \"actor\": \"CEO StarkWare\", \"action\": \"about ZEC\", \"object\": \"ZEC\", \"qualifiers\": {\"version\": null, \"event_date\": null, \"place\": null, \"counterparty\": null}, \"origin\": \"own\", \"source_role\": \"editorial\", \"verification_status\": \"unverified\", \"quote\": \"▫️CEO StarkWare о ZEC (читать)\\n\\n\", \"span\": [0, 28]}, {\"id\": \"telegram:18:31494#s13\", \"kind\": \"event\", \"actor\": null, \"action\": \"forecast for ZEC\", \"object\": \"ZEC\", \"qualifiers\": {\"version\": null, \"event_date\": null, \"place\": null, \"counterparty\": null}, \"origin\": \"own\", \"source_role\": \"editorial\", \"verification_status\": \"unverified\", \"quote\": \"▫️Прогноз по ZEC (читать)\\n\\n\", \"span\": [0, 25]}, {\"id\": \"telegram:18:31494#s16\", \"kind\": \"event\", \"actor\": null, \"action\": \"wet dreams - ZEC\", \"object\": \"ZEC\", \"qualifiers\": {\"version\": null, \"event_date\": null, \"place\": null, \"counterparty\": null}, \"origin\": \"own\", \"source_role\": \"editorial\", \"verification_status\": \"unverified\", \"quote\": \"▫️Влажные мечты - ZEC (читать)\\n\\n\", \"span\": [0, 30]}, {\"id\": \"telegram:15:423256#s1\", \"kind\": \"event\", \"actor\": null, \"action\": \"filling WL for token drop from Bitx project, promising something like brc-20 standard on Bitcoin only for ZEC and token drop for those who filled WL\", \"object\": \"ZEC\", \"qualifiers\": {\"version\": null, \"event_date\": null, \"place\": null, \"counterparty\": \"Bitx\"}, \"origin\": \"own\", \"source_role\": \"author\", \"verification_status\": \"unverified\", \"quote\": \"Заполняем WL на дроп токена от проекта Bitx. Обещают чето типа стандарта brc-20 на битке только для ZEC и дроп токенов тем кто заполнил влку.\\n\\n\", \"span\": [0, 140]}, {\"id\": \"telegram:11:96794#s1\", \"kind\": \"event\", \"actor\": \"he\", \"action\": \"short on ZEC destroyed his profit and he is on verge of liquidation\", \"object\": \"ZEC short position\", \"qualifiers\": {\"version\": null, \"event_date\": null, \"place\": null, \"counterparty\": null}, \"origin\": \"own\", \"source_role\": \"author\", \"verification_status\": \"unverified\", \"quote\": \"Но шорт по #ZEC уничтожил всю его прибыль, и сейчас он находится на грани ликвидации.\\n\\n\", \"span\": [0, 80]}]}",
+    "refusal": null,
+    "reasoning": null
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 1626,
+  "completion_tokens": 1649,
+  "total_tokens": 3275,
+  "cost": 0.00039017776,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.00039017776,
+   "upstream_inference_prompt_cost": 0.00012884424,
+   "upstream_inference_completions_cost": 0.00026133352
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

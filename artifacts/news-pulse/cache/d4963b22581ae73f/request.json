@@ -1,0 +1,17 @@
+{
+ "segments": [
+  {
+   "id": "telegram:15:422660#s1",
+   "text": "Consensys plans to split MetaMask into an independent company, separating its wallet business from its Ethereum infrastructure and institutional operations by the end of 2026.\n\n",
+   "mentions": [
+    {
+     "text": "Ethereum",
+     "status": "confirmed"
+    }
+   ],
+   "kind_hint": "post",
+   "url": "https://t.me/WEB3_AGGREGATOR/422660",
+   "time": "2026-09-09T20:30:20+00:00"
+  }
+ ]
+}

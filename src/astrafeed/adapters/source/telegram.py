@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import asyncio
 import logging
-from collections.abc import Awaitable, Callable
+from collections.abc import Awaitable, Callable, Sequence
 from datetime import UTC, datetime, timedelta
 from enum import Enum
 from typing import Any, TypeVar
@@ -93,12 +93,27 @@ def _reason_for(*, status: CommentStatus, access: _Access, error: Exception | No
     return ""
 
 
+def public_username(entity: Any) -> str | None:
+    """Primary public @username of a Telegram peer, or None if it has none.
+
+    Peers with several (e.g. collectible Fragment) usernames leave ``username``
+    empty and list them in ``usernames``; the first active one is the handle.
+    """
+    username = getattr(entity, "username", None)
+    if username:
+        return username
+    for extra in getattr(entity, "usernames", None) or []:
+        if getattr(extra, "active", False) and getattr(extra, "username", None):
+            return extra.username
+    return None
+
+
 def dialog_to_subscription(dialog: Any) -> Subscription:
     """Map a Telethon dialog to a Subscription. Pure: no network, no Telethon
     import. Public channels get an ``@username`` ref; private ones (no username)
     fall back to an id-based ref so they remain referenceable."""
     entity = dialog.entity
-    username = getattr(entity, "username", None)
+    username = public_username(entity)
     entity_id = getattr(entity, "id", None)
     ref = f"@{username}" if username else f"id:{entity_id}"
     title = dialog.name or getattr(entity, "title", "") or ref
@@ -146,7 +161,7 @@ def _forward_origin(msg: Any) -> tuple[str | None, str | None]:
     if forward is None:
         return None, None
     chat = getattr(forward, "chat", None)
-    username = getattr(chat, "username", None)
+    username = public_username(chat)
     title = getattr(chat, "title", None)
     if username and title:
         return normalize_channel_ref(username), title
@@ -368,11 +383,12 @@ class TelegramSource:
 
         async def _run() -> PublicChannel:
             entity = await self._client.get_entity(public)
-            if not isinstance(entity, TelegramChannel) or not entity.username:
+            username = public_username(entity)
+            if not isinstance(entity, TelegramChannel) or not username:
                 raise SourceUnavailableError("channel is not a public source")
             # An entity cache hit alone does not establish history access.
             await self._client.get_messages(entity, limit=1)
-            return PublicChannel(int(entity.id), f"@{entity.username}", entity.title)
+            return PublicChannel(int(entity.id), f"@{username}", entity.title)
 
         try:
             return await self._with_reconnect(_run)
@@ -398,7 +414,7 @@ class TelegramSource:
         async def _run() -> WindowRead:
             try:
                 entity = await self._client.get_entity(_entity_ref(f"id:{telegram_id}"))
-                username = getattr(entity, "username", None)
+                username = public_username(entity)
                 if not username:
                     return WindowRead(
                         items=(),
@@ -444,6 +460,25 @@ class TelegramSource:
 
         return await self._with_reconnect(_run)
 
+    async def read_posts(self, telegram_id: int, ids: Sequence[int]) -> list[Item]:
+        """Refresh already published posts so edits can invalidate stale quotes."""
+        if not ids:
+            return []
+
+        async def _run() -> list[Item]:
+            entity = await self._client.get_entity(_entity_ref(f"id:{telegram_id}"))
+            username = public_username(entity)
+            if not username:
+                return []
+            messages = await self._client.get_messages(entity, ids=list(ids))
+            return [
+                message_to_item(msg, channel_ref=f"@{username}", channel_username=username)
+                for msg in messages
+                if msg is not None and getattr(msg, "date", None) is not None
+            ]
+
+        return await self._with_reconnect(_run)
+
     async def list_subscribed_channels(self) -> list[Subscription]:
         async def _run() -> list[Subscription]:
             subs: list[Subscription] = []
@@ -452,6 +487,27 @@ class TelegramSource:
                     continue
                 subs.append(dialog_to_subscription(dialog))
             return subs
+
+        return await self._with_reconnect(_run)
+
+    async def reply_counts(self, channel_ref: str, post_ids: Sequence[str]) -> dict[str, int]:
+        """Telegram's own comment counter per post, 100 posts per request.
+
+        Much cheaper than reading threads: a collector rereads only threads whose
+        counter moved. Posts without a discussion (``replies`` is None) and
+        deleted posts are omitted from the result.
+        """
+        ids = [int(p) for p in post_ids if p.isdigit()]
+
+        async def _run() -> dict[str, int]:
+            entity = await self._client.get_entity(_entity_ref(channel_ref))
+            counts: dict[str, int] = {}
+            for offset in range(0, len(ids), 100):
+                for msg in await self._client.get_messages(entity, ids=ids[offset : offset + 100]):
+                    replies = getattr(msg, "replies", None) if msg is not None else None
+                    if replies is not None:
+                        counts[str(msg.id)] = int(replies.replies or 0)
+            return counts
 
         return await self._with_reconnect(_run)
 

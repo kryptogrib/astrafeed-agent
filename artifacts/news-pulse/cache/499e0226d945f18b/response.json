@@ -1,0 +1,32 @@
+{
+ "choices": [
+  {
+   "message": {
+    "content": "{\"labels\": [{\"id\": \"telegram:15:422774#s4\", \"kind\": \"event\", \"actor\": \"attacker\", \"action\": \"exploited\", \"object\": \"Symbiosis Finance on BSC\", \"qualifiers\": {\"version\": null, \"event_date\": null, \"place\": \"BSC, Ethereum Uni V4\", \"counterparty\": null}, \"origin\": \"retelling\", \"source_role\": \"editorial\", \"verification_status\": \"source_statement\", \"quote\": \"- an ongoing exploit on @symbiosis_fi on BSC. Signed BridgeV2 receive minted ~2^62 raw syBTC (8 decimals; face value ~46.1B) to a fresh EOA; same beneficiary dumped ~4.39 WBTC on Ethereum Uni V4. ~$336k realized WBTC proceeds so far.\", \"span\": [0, 247]}]}"
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 1808,
+  "completion_tokens": 2036,
+  "total_tokens": 3844,
+  "cost": 0.0008232,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.0008232,
+   "upstream_inference_prompt_cost": 0.00025312,
+   "upstream_inference_completions_cost": 0.00057008
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

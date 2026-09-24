@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "status": "заморожено; предварительная агентская разметка",
+  "db_md5": "8618099125a806df376354286ccd982e",
+  "sha256": {
+    "posts.jsonl": "fe8362d93db3cac9d02338f0fb23cc35919eeb18984755a21609c4b2d51c328f",
+    "comments.jsonl": "d18a2d82a1237a9a463634fb37dc5425080b8ec9aaf44a29a681fe1f31cbba53",
+    "pairs.jsonl": "8109dff564a3df861043da3cbef8264d9d8007b195f7b70616bf5628e58d6acb",
+    "windows.json": "da067a0f89ad1d8b7b1fe5877af528ff21c984441a70ca9608d24a799bf153d0",
+    "holdout.json": "68fb5c2f0f1d27e45a3c450e18e4b3dd90140b0012fbb4b37122f9e428735e02",
+    "README.md": "290dcb54690b9a80f45f3f31bb1648b6a848ac8d22965193afd07b5b919c9f19",
+    "sample.py": "b5ad3c404ac6d5d85d52e95e969b4ee1bbe04bc083692a9155ff6ee80c26cb73"
+  }
+}

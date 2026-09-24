@@ -1,0 +1,32 @@
+{
+ "choices": [
+  {
+   "message": {
+    "content": "{\"labels\": [{\"id\": \"telegram:15:422908#s5\", \"kind\": \"event\", \"actor\": \"площадка\", \"action\": \"забриджила\", \"object\": \"акции Circle\", \"qualifiers\": {\"version\": \"35%+ доступных\", \"event_date\": \"За последние часы\", \"place\": \"Arc цепочку\", \"counterparty\": \"Robinhood\"}, \"origin\": \"retelling\", \"source_role\": \"author\", \"verification_status\": \"unverified\", \"quote\": \"За последние часы площадка забриджила 35%+ доступных акций Circle из Robinhood цепочки в Arc цепочку, такой вот ажиотаж.\", \"span\": [0, 120]}]}"
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 1669,
+  "completion_tokens": 1891,
+  "total_tokens": 3560,
+  "cost": 0.00076314,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.00076314,
+   "upstream_inference_prompt_cost": 0.00023366,
+   "upstream_inference_completions_cost": 0.00052948
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

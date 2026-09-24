@@ -1,0 +1,185 @@
+{
+  "db_md5_before": "8618099125a806df376354286ccd982e",
+  "db_md5_after": "8618099125a806df376354286ccd982e",
+  "claims": 17959,
+  "grounded": 17959,
+  "grounding_rate": 1.0,
+  "fabricated_numbers": 0,
+  "runs": [
+    {
+      "run": "artifacts/news-pulse/aave/2026-09-09..2026-09-23",
+      "claims": 94,
+      "grounded": 94,
+      "fabricated_numbers": 0,
+      "failures": []
+    },
+    {
+      "run": "artifacts/news-pulse/aave/2026-09-22..2026-09-23",
+      "claims": 1,
+      "grounded": 1,
+      "fabricated_numbers": 0,
+      "failures": []
+    },
+    {
+      "run": "artifacts/news-pulse/arc/2026-09-09..2026-09-23",
+      "claims": 863,
+      "grounded": 863,
+      "fabricated_numbers": 0,
+      "failures": []
+    },
+    {
+      "run": "artifacts/news-pulse/arc/2026-09-09T00-00-00-00-00..2026-09-16T11-01-00-00-00",
+      "claims": 361,
+      "grounded": 361,
+      "fabricated_numbers": 0,
+      "failures": []
+    },
+    {
+      "run": "artifacts/news-pulse/arc/2026-09-09T00-00-00-00-00..2026-09-16T11-01-01-00-00",
+      "claims": 361,
+      "grounded": 361,
+      "fabricated_numbers": 0,
+      "failures": []
+    },
+    {
+      "run": "artifacts/news-pulse/arc/2026-09-09T00-00-00-00-00..2026-09-16T11-01-02-00-00",
+      "claims": 362,
+      "grounded": 362,
+      "fabricated_numbers": 0,
+      "failures": []
+    },
+    {
+      "run": "artifacts/news-pulse/arc/2026-09-16T11-01-01-00-00..2026-09-17T11-01-01-00-00",
+      "claims": 329,
+      "grounded": 329,
+      "fabricated_numbers": 0,
+      "failures": []
+    },
+    {
+      "run": "artifacts/news-pulse/eth/2026-09-09..2026-09-23",
+      "claims": 1927,
+      "grounded": 1927,
+      "fabricated_numbers": 0,
+      "failures": []
+    },
+    {
+      "run": "artifacts/news-pulse/eth/2026-09-09T00-00-00-00-00..2026-09-14T12-33-45-00-00",
+      "claims": 642,
+      "grounded": 642,
+      "fabricated_numbers": 0,
+      "failures": []
+    },
+    {
+      "run": "artifacts/news-pulse/eth/2026-09-09T00-00-00-00-00..2026-09-14T12-33-46-00-00",
+      "claims": 642,
+      "grounded": 642,
+      "fabricated_numbers": 0,
+      "failures": []
+    },
+    {
+      "run": "artifacts/news-pulse/eth/2026-09-09T00-00-00-00-00..2026-09-14T12-33-47-00-00",
+      "claims": 654,
+      "grounded": 654,
+      "fabricated_numbers": 0,
+      "failures": []
+    },
+    {
+      "run": "artifacts/news-pulse/eth/2026-09-09T00-00-00-00-00..2026-09-21T12-44-53-00-00",
+      "claims": 1504,
+      "grounded": 1504,
+      "fabricated_numbers": 0,
+      "failures": []
+    },
+    {
+      "run": "artifacts/news-pulse/eth/2026-09-09T00-00-00-00-00..2026-09-21T12-44-54-00-00",
+      "claims": 1504,
+      "grounded": 1504,
+      "fabricated_numbers": 0,
+      "failures": []
+    },
+    {
+      "run": "artifacts/news-pulse/eth/2026-09-09T00-00-00-00-00..2026-09-21T12-44-55-00-00",
+      "claims": 1514,
+      "grounded": 1514,
+      "fabricated_numbers": 0,
+      "failures": []
+    },
+    {
+      "run": "artifacts/news-pulse/eth/2026-09-14T12-33-46-00-00..2026-09-21T12-44-54-00-00",
+      "claims": 866,
+      "grounded": 866,
+      "fabricated_numbers": 0,
+      "failures": []
+    },
+    {
+      "run": "artifacts/news-pulse/eth/2026-09-17..2026-09-19",
+      "claims": 215,
+      "grounded": 215,
+      "fabricated_numbers": 0,
+      "failures": []
+    },
+    {
+      "run": "artifacts/news-pulse/zec/2026-09-09..2026-09-23",
+      "claims": 1493,
+      "grounded": 1493,
+      "fabricated_numbers": 0,
+      "failures": []
+    },
+    {
+      "run": "artifacts/news-pulse/zec/2026-09-09T00-00-00-00-00..2026-09-16T06-10-18-00-00",
+      "claims": 156,
+      "grounded": 156,
+      "fabricated_numbers": 0,
+      "failures": []
+    },
+    {
+      "run": "artifacts/news-pulse/zec/2026-09-09T00-00-00-00-00..2026-09-16T06-10-19-00-00",
+      "claims": 156,
+      "grounded": 156,
+      "fabricated_numbers": 0,
+      "failures": []
+    },
+    {
+      "run": "artifacts/news-pulse/zec/2026-09-09T00-00-00-00-00..2026-09-16T06-10-20-00-00",
+      "claims": 160,
+      "grounded": 160,
+      "fabricated_numbers": 0,
+      "failures": []
+    },
+    {
+      "run": "artifacts/news-pulse/zec/2026-09-09T00-00-00-00-00..2026-09-21T06-04-31-00-00",
+      "claims": 946,
+      "grounded": 946,
+      "fabricated_numbers": 0,
+      "failures": []
+    },
+    {
+      "run": "artifacts/news-pulse/zec/2026-09-09T00-00-00-00-00..2026-09-21T06-04-32-00-00",
+      "claims": 946,
+      "grounded": 946,
+      "fabricated_numbers": 0,
+      "failures": []
+    },
+    {
+      "run": "artifacts/news-pulse/zec/2026-09-09T00-00-00-00-00..2026-09-21T06-04-33-00-00",
+      "claims": 956,
+      "grounded": 956,
+      "fabricated_numbers": 0,
+      "failures": []
+    },
+    {
+      "run": "artifacts/news-pulse/zec/2026-09-16T06-10-19-00-00..2026-09-21T06-04-32-00-00",
+      "claims": 798,
+      "grounded": 798,
+      "fabricated_numbers": 0,
+      "failures": []
+    },
+    {
+      "run": "artifacts/news-pulse/zec/2026-09-17..2026-09-19",
+      "claims": 509,
+      "grounded": 509,
+      "fabricated_numbers": 0,
+      "failures": []
+    }
+  ]
+}

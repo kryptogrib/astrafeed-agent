@@ -1,0 +1,21 @@
+{
+ "segments": [
+  {
+   "id": "telegram:18:31490#s0",
+   "text": "😯 Лудоманы с Polymarket ожидают #ZEC выше $2000 до конца 2026 года. \n",
+   "mentions": [
+    {
+     "text": "#ZEC",
+     "status": "confirmed"
+    },
+    {
+     "text": "ZEC",
+     "status": "confirmed"
+    }
+   ],
+   "kind_hint": "post",
+   "url": "https://t.me/crypto_hd/31490",
+   "time": "2026-09-17T19:37:05+00:00"
+  }
+ ]
+}

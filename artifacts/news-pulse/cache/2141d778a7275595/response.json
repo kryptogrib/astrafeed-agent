@@ -1,0 +1,32 @@
+{
+ "choices": [
+  {
+   "message": {
+    "content": "{\"labels\": [{\"id\": \"telegram:1:7149#s8\", \"kind\": \"event\", \"actor\": null, \"action\": \"Токен-стандарт ZRC20 на Zcash, задания в X + ZEC-кошелек, заявки скоро закрывают\", \"object\": \"токен-стандарт ZRC20\", \"qualifiers\": {}, \"origin\": \"unknown\", \"source_role\": \"unknown\", \"verification_status\": \"unverified\", \"topic_role\": \"subject\", \"quote\": \"• Токен-стандарт ZRC20 на Zcash, задания в X + ZEC-кошелек, заявки скоро закрывают;  \\n\", \"span\": [0, 87]}]}"
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 1859,
+  "completion_tokens": 2023,
+  "total_tokens": 3882,
+  "cost": 0.00057869,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.00057869,
+   "upstream_inference_prompt_cost": 0.000182182,
+   "upstream_inference_completions_cost": 0.000396508
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

@@ -1,0 +1,32 @@
+{
+ "choices": [
+  {
+   "message": {
+    "content": "{\"labels\": [{\"id\": \"telegram:15:423415#s5\", \"kind\": \"author_position\", \"actor\": null, \"action\": \"opinion\", \"object\": \"Zcash project\", \"qualifiers\": {}, \"origin\": \"own\", \"source_role\": \"editorial\", \"verification_status\": \"unverified\", \"quote\": \"Один из самых сильных по хайпу. Идея вокруг приватных Zcash-адресов, identity и WL-механик.\", \"span\": [0, 0]}]}"
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 1810,
+  "completion_tokens": 1476,
+  "total_tokens": 3286,
+  "cost": 0.000638008,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 256,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.000638008,
+   "upstream_inference_prompt_cost": 0.000224728,
+   "upstream_inference_completions_cost": 0.00041328
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "a": {
+  "quote": "🟣Arc Fly — минт состоится сегодня на OpenSea, будет фри минт на 7.777 NFT",
+  "actor": "Arc Fly",
+  "action": "mint today on OpenSea",
+  "object": "Arc",
+  "qualifiers": {
+   "event_date": "сегодня (2026-09-16)",
+   "place": "OpenSea"
+  },
+  "url": "https://t.me/WEB3_AGGREGATOR/423153"
+ },
+ "b": {
+  "quote": "Вчера Circle, эмитент стейблкоина USDC, запустила мейннет Arc — собственный блокчейн (L1) под платежи и токенизированные активы.\nГлава компании Джереми Аллер назвал это запуском «более значимым, чем сам USDC». А через сутки главным продуктом сети оказались мем-щитки 🫣.",
+  "actor": "Circle",
+  "action": "launched",
+  "object": "майннет Arc",
+  "qualifiers": {
+   "event_date": "вчера"
+  },
+  "url": "https://t.me/WEB3_AGGREGATOR/423227"
+ }
+}

@@ -1,0 +1,17 @@
+{
+ "segments": [
+  {
+   "id": "telegram:1:7135#s42",
+   "text": "Fomo будет работать на Arc с первого дня, поэтому регаемся. \n\n",
+   "mentions": [
+    {
+     "text": "Arc",
+     "status": "confirmed"
+    }
+   ],
+   "kind_hint": "post",
+   "url": "https://t.me/whitelist1/7135",
+   "time": "2026-09-14T12:04:00+00:00"
+  }
+ ]
+}

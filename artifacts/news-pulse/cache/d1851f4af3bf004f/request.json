@@ -1,0 +1,17 @@
+{
+ "segments": [
+  {
+   "id": "telegram:2:5296:c:379890#s0",
+   "text": "Чет не врубаюсь. Вроде бы намайнил, пишет:\nNot sent\nNot enough ether for the price and the gas",
+   "mentions": [
+    {
+     "text": "ether",
+     "status": "confirmed"
+    }
+   ],
+   "kind_hint": "comment",
+   "url": "https://t.me/don_invest/5296?comment=379890",
+   "time": "2026-09-13T03:23:11+00:00"
+  }
+ ]
+}

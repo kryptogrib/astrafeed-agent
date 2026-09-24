@@ -1,0 +1,46 @@
+{
+ "id": "gen-1790249621-ZABxT8XwJ5dVzLtgNYqI",
+ "object": "chat.completion",
+ "created": 1790249621,
+ "model": "deepseek/deepseek-v4-flash",
+ "provider": "GMICloud",
+ "system_fingerprint": null,
+ "service_tier": null,
+ "choices": [
+  {
+   "index": 0,
+   "logprobs": null,
+   "finish_reason": "stop",
+   "native_finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "content": "{\n  \"target\": \"other_subject\",\n  \"target_id\": null,\n  \"comment_fragment\": \"У меня было серебро, и я переживал что не успел докачать полтора уровня до золота. Выходит, зря переживал))\",\n  \"context_fragment\": \"ахаха, линера днище. помню тот ажиотаж с ролями: \\\"у меня золото\\\", \\\" а у меня платина\\\"... хотя и сам был в той лодке))\",\n  \"why\": \"Comment reacts to Linera's failure, not Zcash or Zaddr.\"\n}",
+    "refusal": null,
+    "reasoning": null
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 1063,
+  "completion_tokens": 136,
+  "total_tokens": 1199,
+  "cost": 6.55746e-05,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 768,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 6.55746e-05,
+   "upstream_inference_prompt_cost": 4.08226e-05,
+   "upstream_inference_completions_cost": 2.4752e-05
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

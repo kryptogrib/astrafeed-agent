@@ -1,0 +1,23 @@
+{
+ "a": {
+  "quote": "Приватная коллекция на Zcash: арт публичный. Саплай/цена не раскрыты;",
+  "actor": null,
+  "action": "announcement of private collection",
+  "object": "private collection on Zcash",
+  "qualifiers": {
+   "version": null,
+   "event_date": null,
+   "place": null,
+   "counterparty": null
+  },
+  "url": "https://t.me/whitelist1/7149"
+ },
+ "b": {
+  "quote": "Токен-стандарт ZRC20 на Zcash, задания в X + ZEC-кошелек, заявки скоро закрывают",
+  "actor": null,
+  "action": "Токен-стандарт ZRC20 на Zcash, задания в X + ZEC-кошелек, заявки скоро закрывают",
+  "object": "ZRC20",
+  "qualifiers": {},
+  "url": "https://t.me/whitelist1/7149"
+ }
+}

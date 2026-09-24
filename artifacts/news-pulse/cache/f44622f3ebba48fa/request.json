@@ -1,0 +1,24 @@
+{
+ "a": {
+  "quote": "🟣Arc Fly — минт состоится сегодня на OpenSea, будет фри минт на 7.777 NFT",
+  "actor": "Arc Fly",
+  "action": "mint",
+  "object": "NFT",
+  "qualifiers": {
+   "event_date": "today",
+   "place": "OpenSea"
+  },
+  "url": "https://t.me/WEB3_AGGREGATOR/423153"
+ },
+ "b": {
+  "quote": "• Сегодня, время после запуска Arc;",
+  "actor": null,
+  "action": "launch",
+  "object": "Arc",
+  "qualifiers": {
+   "event_date": "Сегодня",
+   "version": "после запуска"
+  },
+  "url": "https://t.me/whitelist1/7139"
+ }
+}

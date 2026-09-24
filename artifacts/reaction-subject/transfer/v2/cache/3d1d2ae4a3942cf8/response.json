@@ -1,0 +1,46 @@
+{
+ "id": "gen-1790251780-qK0L82qcGXJKZCThtuVM",
+ "object": "chat.completion",
+ "created": 1790251780,
+ "model": "deepseek/deepseek-v4-flash",
+ "provider": "Novita",
+ "system_fingerprint": null,
+ "service_tier": null,
+ "choices": [
+  {
+   "index": 0,
+   "logprobs": null,
+   "finish_reason": "stop",
+   "native_finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "content": "{\"target\": \"other_subject\", \"target_id\": null, \"comment_fragment\": \"Тоже подсел на эти говноминты на рх\", \"context_fragment\": \"Подобное в рх делаю, говно минты в 1-2$ профита\", \"why\": \"Comment focuses on RH mints, not Arc; switches subject from requested topic.\"}",
+    "refusal": null,
+    "reasoning": null
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 739,
+  "completion_tokens": 84,
+  "total_tokens": 823,
+  "cost": 0.00012698,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.00012698,
+   "upstream_inference_prompt_cost": 0.00010346,
+   "upstream_inference_completions_cost": 2.352e-05
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

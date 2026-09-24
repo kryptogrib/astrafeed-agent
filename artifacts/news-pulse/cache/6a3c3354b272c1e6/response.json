@@ -1,0 +1,32 @@
+{
+ "choices": [
+  {
+   "message": {
+    "content": "{\"labels\": [{\"id\": \"telegram:15:422875#s6\", \"kind\": \"event\", \"actor\": \"Arc\", \"action\": \"launch mainnet\", \"object\": \"mainnet\", \"qualifiers\": {\"event_date\": \"16 сентября\"}, \"origin\": \"own\", \"source_role\": \"unknown\", \"verification_status\": \"unverified\", \"quote\": \"Arc - L1-сеть от Circle с $222M инвестиций ориентированная на USDC, запустит майннет 16 сентября.\", \"span\": [0, 97]}]}"
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 1832,
+  "completion_tokens": 1810,
+  "total_tokens": 3642,
+  "cost": 0.000730568,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.000730568,
+   "upstream_inference_prompt_cost": 0.000245488,
+   "upstream_inference_completions_cost": 0.00048508
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

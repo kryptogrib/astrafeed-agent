@@ -1,0 +1,11 @@
+# Frozen research dumps from the earlier Token Brief / news-pulse probes.
+# Keep them in git as evidence; hide them from language and review stats.
+artifacts/news-pulse/** linguist-generated=true
+artifacts/reaction-subject/** linguist-generated=true
+artifacts/news-eval/** linguist-generated=true
+artifacts/news-tune/** linguist-generated=true
+artifacts/pulse-zec/** linguist-generated=true
+artifacts/pulse-eth/** linguist-generated=true
+artifacts/comment-review/** linguist-generated=true
+artifacts/entity-candidates/** linguist-generated=true
+artifacts/pulse-critique/** linguist-generated=true

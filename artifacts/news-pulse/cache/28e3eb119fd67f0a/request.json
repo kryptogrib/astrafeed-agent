@@ -1,0 +1,21 @@
+{
+ "segments": [
+  {
+   "id": "telegram:11:96782#s0",
+   "text": "🕵️‍♂️ BlackRock перевели на Coinbase Prime 54 096 #ETH (131,7 млн $) и 2 015 #BTC (153,8 млн $).",
+   "mentions": [
+    {
+     "text": "#ETH",
+     "status": "confirmed"
+    },
+    {
+     "text": "ETH",
+     "status": "confirmed"
+    }
+   ],
+   "kind_hint": "post",
+   "url": "https://t.me/cryptoattack24/96782",
+   "time": "2026-09-17T12:16:32+00:00"
+  }
+ ]
+}

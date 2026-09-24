@@ -1,0 +1,23 @@
+{
+ "a": {
+  "quote": "Ethereum хочет ускорить базовый ритм сети — предложение EIP-8198 должно сделать длительность слота настраиваемой вместо жёстких 12 секунд, чтобы затем постепенно сокращать её.",
+  "actor": "Ethereum",
+  "action": "хочет ускорить базовый ритм сети",
+  "object": "предложение EIP-8198",
+  "qualifiers": {
+   "event_date": "2026-09-18"
+  },
+  "url": "https://t.me/WEB3_AGGREGATOR/423312"
+ },
+ "b": {
+  "quote": "📍Сегодня экспирация в опционах на BTC и ETH! (Deribit)",
+  "actor": null,
+  "action": "expiration",
+  "object": "options on BTC and ETH",
+  "qualifiers": {
+   "event_date": "today",
+   "place": "Deribit"
+  },
+  "url": "https://t.me/crypto_hd/31498"
+ }
+}

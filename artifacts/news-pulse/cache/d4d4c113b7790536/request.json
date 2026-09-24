@@ -1,0 +1,17 @@
+{
+ "segments": [
+  {
+   "id": "telegram:15:423083#s0",
+   "text": "Starknet поняли, что на эфире им ловить нечего, уходят на биткоин 😂\n\n",
+   "mentions": [
+    {
+     "text": "эфире",
+     "status": "ambiguous"
+    }
+   ],
+   "kind_hint": "post",
+   "url": "https://t.me/WEB3_AGGREGATOR/423083",
+   "time": "2026-09-16T11:00:42+00:00"
+  }
+ ]
+}

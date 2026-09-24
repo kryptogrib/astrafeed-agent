@@ -1,0 +1,22 @@
+{
+ "a": {
+  "quote": "Сегодня, 16 сентября, Circle запустила мейннет Arc и сразу подключила его к Agent Stack, набору инструментов, который с 11 мая дает ИИ-агенту собственный кошелек.",
+  "actor": "Circle",
+  "action": "launched",
+  "object": "Arc mainnet",
+  "qualifiers": {
+   "event_date": "2026-09-16"
+  },
+  "url": "https://t.me/WEB3_AGGREGATOR/423105"
+ },
+ "b": {
+  "quote": "Первый день мэйннета ARC",
+  "actor": null,
+  "action": "first day of mainnet",
+  "object": "ARC",
+  "qualifiers": {
+   "event_date": "текущая дата поста (2026-09-16)"
+  },
+  "url": "https://t.me/WEB3_AGGREGATOR/423153"
+ }
+}

@@ -1,0 +1,32 @@
+{
+ "choices": [
+  {
+   "message": {
+    "content": "{\"labels\": [{\"id\": \"telegram:10:384699#s2\", \"kind\": \"event\", \"actor\": \"BitMine\", \"action\": \"holdings\", \"object\": \"ETH\", \"qualifiers\": {\"amount\": \"5.96 million\", \"percentage\": \"4.9%\"}, \"origin\": \"retelling\", \"source_role\": \"unknown\", \"verification_status\": \"unverified\", \"quote\": \"на балансе уже более 5.96 млн ETH (около 4.9% общего предложения)\", \"span\": [0, 66]}]}"
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 1756,
+  "completion_tokens": 1487,
+  "total_tokens": 3243,
+  "cost": 0.000633528,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 256,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.000633528,
+   "upstream_inference_prompt_cost": 0.000217168,
+   "upstream_inference_completions_cost": 0.00041636
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

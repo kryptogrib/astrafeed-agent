@@ -1,0 +1,53 @@
+# PRELIMINARY agent labels (not human, not independent), thread 21055, contract v3 (relevance, aspect only).
+# Derived from pulse_thread_prelim_21055.tsv (v2) before the v3 model run: direct/contextual -> relevant, related/unrelated -> unrelated,
+# unclear -> unclear, payment -> usage; per-reply adjustments are noted. The agent had seen the v2 model output.
+comment_id	relevance	aspect	borderline	note
+342461	unrelated		1	another asset contrasted with the post's ETH move -> related
+342462	relevant	market		
+342463	unrelated			
+342464	unclear		1	short on what is not said; the author's other messages are about ETH
+342465	unrelated			question
+342466	relevant	market		question about the post's 'colossal volume'
+342467	unrelated			
+342468	relevant	market		
+342469	unrelated			banter
+342470	unrelated			
+342471	unrelated			
+342472	unrelated			banter
+342473	unrelated		1	joke, sarcasm ambiguous
+342474	unrelated			
+342476	unrelated			
+342477	unrelated			
+342478	unrelated			
+342479	unrelated			
+342482	relevant	technology		
+342483	unrelated			
+342484	relevant	market	1	wish rather than thesis
+342485	relevant	market		
+342486	unrelated		1	ironic reply; v1 had contextual
+342487	relevant	market		
+342488	unrelated			
+342489	relevant	market	1	sceptical question; stance to the post's thesis unclear
+342490	relevant	market		
+342491	unrelated			question
+342492	unrelated			joke about Saylor
+342497	unrelated			sarcastic quote
+342498	relevant	market		
+342507	relevant	market	1	sarcasm
+342508	unrelated			reaction to the joke
+342510	unrelated			banter
+342511	unrelated			banter
+342512	unrelated			banter
+342514	unrelated			banter
+342516	unrelated			banter
+342518	unrelated			banter
+342520	unrelated			banter
+342521	unrelated			banter
+342522	unrelated			banter
+342526	relevant	market		question to the post
+342528	unrelated			banter
+342529	unrelated			banter
+342531	unrelated			banter
+342537	relevant	market		
+342557	relevant	market		opposes the post
+342558	relevant	market	1	relevance clear from parent; the position itself is in the image

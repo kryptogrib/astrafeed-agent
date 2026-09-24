@@ -1,0 +1,26 @@
+{
+ "a": {
+  "quote": "The protocol routes ETH fees into vaults, protocol-owned liquidity and the team, and pairs STANDARD against ETH in a hooked Uniswap v4 pool.",
+  "actor": "Standard Reserve",
+  "action": "routes ETH fees",
+  "object": "into vaults, POL, team",
+  "qualifiers": {
+   "mechanism": "pairs STANDARD against ETH in Uniswap v4 pool",
+   "access": "Charters, 1,000 Genesis Charters, allowlist mint, Dutch auction"
+  },
+  "url": "https://t.me/WEB3_AGGREGATOR/422959"
+ },
+ "b": {
+  "quote": "IMD tries to do the opposite: every sell burns its own supply, stakers earn from those burns, and the whole thing is meant to bankroll 2,000 AI agents running on-chain. It's Fren Pet, the old Base tamagotchi, reborn on Ethereum with a self-funding economy bolted on",
+  "actor": "IMD token",
+  "action": "launch",
+  "object": "self-funding economy on Ethereum",
+  "qualifiers": {
+   "version": null,
+   "event_date": null,
+   "place": "Ethereum",
+   "counterparty": null
+  },
+  "url": "https://t.me/WEB3_AGGREGATOR/422992"
+ }
+}

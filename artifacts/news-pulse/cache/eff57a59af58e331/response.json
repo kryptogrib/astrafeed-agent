@@ -1,0 +1,32 @@
+{
+ "choices": [
+  {
+   "message": {
+    "content": "{\"labels\": [{\"id\": \"telegram:15:423427#s12\", \"kind\": \"event\", \"actor\": \"Bitx\", \"action\": \"launched WL registration\", \"object\": \"ZRC20 token drop\", \"qualifiers\": {\"counterparty\": \"Zcash wallet\"}, \"origin\": \"retelling\", \"source_role\": \"unknown\", \"verification_status\": \"unverified\", \"quote\": \"🛡️Bitx запустили регистрацию в WL на дроп токенов стандарта ZRC20. Для участия нужно выполнить задания в Х и оставить кошелёк Zcash.\", \"span\": [0, 130]}]}"
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 1847,
+  "completion_tokens": 1567,
+  "total_tokens": 3414,
+  "cost": 0.0003443622,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 1496,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.0003443622,
+   "upstream_inference_prompt_cost": 5.91682e-05,
+   "upstream_inference_completions_cost": 0.000285194
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "segments": [
+  {
+   "id": "telegram:11:96735#s1",
+   "text": "1. Два кошелька, которые более года были неактивны (возможно, принадлежащие одному и тому же киту), перевели на OKX 14 700 #ETH ($36,94 млн);\n",
+   "mentions": [
+    {
+     "text": "#ETH",
+     "status": "confirmed"
+    },
+    {
+     "text": "ETH",
+     "status": "confirmed"
+    }
+   ],
+   "kind_hint": "post",
+   "url": "https://t.me/cryptoattack24/96735",
+   "time": "2026-09-15T05:07:01+00:00"
+  }
+ ]
+}

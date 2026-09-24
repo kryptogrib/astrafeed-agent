@@ -1,0 +1,17 @@
+# Optional overlay: public HTTPS for the OKX.AI A2MCP listing via a named
+# Cloudflare Tunnel.
+#   docker compose -f docker-compose.yml -f docker-compose.tunnel.yml up -d
+#
+# In the Cloudflare dashboard the tunnel's public hostname must target
+# http://app:8000 (Docker DNS), not localhost. Set CLOUDFLARE_TUNNEL_TOKEN
+# in .env (the misspelled COUDFLARE_TUNNEL_TOKEN is accepted too).
+services:
+  tunnel:
+    image: cloudflare/cloudflared:latest
+    restart: unless-stopped
+    command: tunnel --no-autoupdate run
+    environment:
+      TUNNEL_TOKEN: ${CLOUDFLARE_TUNNEL_TOKEN:-${COUDFLARE_TUNNEL_TOKEN:?set CLOUDFLARE_TUNNEL_TOKEN in .env}}
+    depends_on:
+      app:
+        condition: service_healthy

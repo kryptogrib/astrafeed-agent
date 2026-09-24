@@ -1,0 +1,23 @@
+{
+ "a": {
+  "quote": "Innovation Exemption от SEC, которые сказали: \"Мы сами всех отрегулируем, на ближайшие лет 5\"",
+  "actor": "SEC",
+  "action": "announced Innovation Exemption",
+  "object": "on-chain stocks",
+  "qualifiers": {
+   "event_date": "2026-09-18",
+   "place": "US"
+  },
+  "url": "https://t.me/WEB3_AGGREGATOR/423319"
+ },
+ "b": {
+  "quote": "В связи с большим количеством минтов на чейне Zcash, остро стал вопрос депа в саму сеть",
+  "actor": "users",
+  "action": "minting on Zcash chain",
+  "object": "Zcash chain",
+  "qualifiers": {
+   "event_date": "2026-09-18"
+  },
+  "url": "https://t.me/WEB3_AGGREGATOR/423315"
+ }
+}

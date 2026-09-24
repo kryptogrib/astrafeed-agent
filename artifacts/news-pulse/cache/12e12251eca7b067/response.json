@@ -1,0 +1,32 @@
+{
+ "choices": [
+  {
+   "message": {
+    "content": "{\"labels\": [{\"id\": \"telegram:15:423415#s8\", \"kind\": \"event\", \"actor\": null, \"action\": null, \"object\": null, \"qualifiers\": {}, \"origin\": \"unknown\", \"source_role\": \"unknown\", \"verification_status\": \"unverified\", \"topic_role\": \"context\", \"quote\": \"3. Zec Frogs — https://x.com/zecfrogs\", \"span\": [0, 35]}]}"
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 1804,
+  "completion_tokens": 1457,
+  "total_tokens": 3261,
+  "cost": 0.000406188,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 256,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.000406188,
+   "upstream_inference_prompt_cost": 0.000143928,
+   "upstream_inference_completions_cost": 0.00026226
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

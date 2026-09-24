@@ -1,0 +1,17 @@
+{
+ "segments": [
+  {
+   "id": "telegram:18:31468#s1",
+   "text": "Один из топовых трейдеров Axiom стал жертвой фишинговой атаки и лишился денег при попытке перевести активы в Arc.\n\n",
+   "mentions": [
+    {
+     "text": "Arc",
+     "status": "confirmed"
+    }
+   ],
+   "kind_hint": "post",
+   "url": "https://t.me/crypto_hd/31468",
+   "time": "2026-09-16T20:42:33+00:00"
+  }
+ ]
+}

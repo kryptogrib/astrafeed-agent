@@ -1,0 +1,46 @@
+{
+ "id": "gen-1790247092-lGbut9w2JFjq0lGjeEP8",
+ "object": "chat.completion",
+ "created": 1790247092,
+ "model": "deepseek/deepseek-v4-flash",
+ "provider": "Azure",
+ "system_fingerprint": null,
+ "service_tier": null,
+ "choices": [
+  {
+   "index": 0,
+   "logprobs": null,
+   "finish_reason": "stop",
+   "native_finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "content": "{\"items\": [{\"id\": \"zec|https://t.me/icodrops_sergey/2432?comment=150645\", \"target\": \"other_subject\", \"target_id\": null, \"comment_fragment\": \"hype или zec\", \"context_fragment\": \"\", \"why\": \"Mentions HYPE and ZEC, not events or theses from post\"}]}",
+    "refusal": null,
+    "reasoning": null
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 699,
+  "completion_tokens": 88,
+  "total_tokens": 787,
+  "cost": 0.00019607,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.00019607,
+   "upstream_inference_prompt_cost": 0.00014679,
+   "upstream_inference_completions_cost": 4.928e-05
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

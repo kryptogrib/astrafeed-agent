@@ -1,0 +1,32 @@
+{
+ "choices": [
+  {
+   "message": {
+    "content": "{\"labels\": [{\"id\": \"telegram:9:1042745#s20\", \"kind\": \"event\", \"actor\": \"BitMine\", \"action\": \"expanded ETH holdings\", \"object\": \"ETH\", \"qualifiers\": {}, \"origin\": \"retelling\", \"source_role\": \"editorial\", \"verification_status\": \"source_statement\", \"quote\": \"Strategy/other treasuries keep buying — Strategy added 950 BTC; Strive also bought BTC, while BitMine expanded ETH holdings\", \"span\": [0, 117]}]}"
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 2005,
+  "completion_tokens": 1756,
+  "total_tokens": 3761,
+  "cost": 0.00079811,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 256,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.00079811,
+   "upstream_inference_prompt_cost": 0.00027131,
+   "upstream_inference_completions_cost": 0.0005268
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

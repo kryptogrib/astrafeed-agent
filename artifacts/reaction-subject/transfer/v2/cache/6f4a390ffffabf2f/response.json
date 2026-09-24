@@ -1,0 +1,46 @@
+{
+ "id": "gen-1790251650-mZSuenffQxdNwi6JjlDj",
+ "object": "chat.completion",
+ "created": 1790251650,
+ "model": "deepseek/deepseek-v4-flash",
+ "provider": "Venice",
+ "system_fingerprint": null,
+ "service_tier": "default",
+ "choices": [
+  {
+   "index": 0,
+   "logprobs": null,
+   "finish_reason": "stop",
+   "native_finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "content": "{\"target\": \"other_subject\", \"target_id\": null, \"comment_fragment\": \"Это не беспонтовщина. Это, по сути, токен Лаунчапада LONG. У них своего токена не будет. И AI ставка именно на него. Плюс еще ряд механик. Очень интересная история...\", \"context_fragment\": \"\", \"why\": \"Comment discusses a token LONG, not the requested topic Zcash.\"}",
+    "refusal": null,
+    "reasoning": null
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 1980,
+  "completion_tokens": 100,
+  "total_tokens": 2080,
+  "cost": 0.000190806,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 256,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.000190806,
+   "upstream_inference_prompt_cost": 0.000171556,
+   "upstream_inference_completions_cost": 1.925e-05
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

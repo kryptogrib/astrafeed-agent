@@ -1,0 +1,32 @@
+{
+ "choices": [
+  {
+   "message": {
+    "content": "{\"labels\": [{\"id\": \"telegram:15:422949#s15\", \"kind\": \"event\", \"actor\": \"Ethereum\", \"action\": \"plan to become quantum-resistant L1 by 2029\", \"object\": \"network upgrade\", \"qualifiers\": {\"date\": \"2029\"}, \"origin\": \"own\", \"source_role\": \"author\", \"verification_status\": \"source_statement\", \"topic_role\": \"subject\", \"quote\": \"🟢 Ethereum метит в квантово-стойкий L1 к 2029 году\", \"span\": [0, 56]}]}"
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 1914,
+  "completion_tokens": 1925,
+  "total_tokens": 3839,
+  "cost": 0.000564872,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.000564872,
+   "upstream_inference_prompt_cost": 0.000187572,
+   "upstream_inference_completions_cost": 0.0003773
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

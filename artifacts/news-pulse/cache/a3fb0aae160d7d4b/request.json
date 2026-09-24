@@ -1,0 +1,25 @@
+{
+ "a": {
+  "quote": "Today there will be a liquidity clash. ARC SZN???",
+  "actor": null,
+  "action": "будет",
+  "object": "liquidity clash",
+  "qualifiers": {
+   "version": null,
+   "event_date": "Today",
+   "place": null,
+   "counterparty": null
+  },
+  "url": "https://t.me/WEB3_AGGREGATOR/423070"
+ },
+ "b": {
+  "quote": "I’ll be waiting for these mints today:\nOwl Arc\nThe One - freemint on arc\n8Bitard",
+  "actor": "Owl Arc",
+  "action": "mint",
+  "object": "NFT",
+  "qualifiers": {
+   "event_date": "today"
+  },
+  "url": "https://t.me/WEB3_AGGREGATOR/423169"
+ }
+}

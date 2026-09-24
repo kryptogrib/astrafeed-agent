@@ -1,0 +1,21 @@
+{
+ "segments": [
+  {
+   "id": "telegram:10:384699#s0",
+   "text": "✴️🇺🇸#BMNR #ETH #cot #крипто \n",
+   "mentions": [
+    {
+     "text": "#ETH",
+     "status": "confirmed"
+    },
+    {
+     "text": "ETH",
+     "status": "confirmed"
+    }
+   ],
+   "kind_hint": "post",
+   "url": "https://t.me/markettwits/384699",
+   "time": "2026-09-14T12:33:46+00:00"
+  }
+ ]
+}

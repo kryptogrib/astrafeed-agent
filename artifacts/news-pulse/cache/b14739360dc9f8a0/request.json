@@ -1,0 +1,17 @@
+{
+ "segments": [
+  {
+   "id": "telegram:15:422774#s4",
+   "text": "- an ongoing exploit on @symbiosis_fi on BSC. Signed BridgeV2 receive minted ~2^62 raw syBTC (8 decimals; face value ~46.1B) to a fresh EOA; same beneficiary dumped ~4.39 WBTC on Ethereum Uni V4. ~$336k realized WBTC proceeds so far.\n",
+   "mentions": [
+    {
+     "text": "Ethereum",
+     "status": "confirmed"
+    }
+   ],
+   "kind_hint": "post",
+   "url": "https://t.me/WEB3_AGGREGATOR/422774",
+   "time": "2026-09-11T09:28:09+00:00"
+  }
+ ]
+}

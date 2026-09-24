@@ -1,0 +1,22 @@
+{
+ "a": {
+  "quote": "ARC: токены которые я взял и почему - подготовка к паблик мейннету 16 сентября",
+  "actor": "ARC",
+  "action": "подготовка к паблик мейннету",
+  "object": "паблик мейннет",
+  "qualifiers": {
+   "event_date": "16 сентября"
+  },
+  "url": "https://t.me/WEB3_AGGREGATOR/422903"
+ },
+ "b": {
+  "quote": "Arc запустит майннет 16 сентября",
+  "actor": "Arc",
+  "action": "запустит",
+  "object": "майннет",
+  "qualifiers": {
+   "event_date": "16 сентября"
+  },
+  "url": "https://t.me/WEB3_AGGREGATOR/422875"
+ }
+}

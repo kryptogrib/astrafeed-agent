@@ -1,0 +1,86 @@
+# PRELIMINARY agent labels (not human) for https://t.me/don_invest/5296, contract v2, written before the model run.
+# The human sheet is pulse_label_sheet_5296.tsv and does not contain these labels. Topic = ETH.
+# related = unrelated with evidence_ids (continues the post / an ancestor; here the post is about NFT mining, not ETH).
+comment_id	topic_relation	mention	subject	evidence_ids	aspect	claim	stance	borderline	note
+379741	unrelated		GPU too weak	post			unclear		
+379744	unrelated		GPU too weak	post			unclear		
+379745	unrelated		GPU load while mining	post			unclear		question
+379746	unrelated		GPU joke	379744			unclear		
+379750	unrelated		moderation				unclear		
+379752	unclear						unclear	image only	
+379747	unrelated		GPU load and time to mint	379745			unclear		
+379748	unrelated		GPU temperature	379745			unclear		
+379753	unrelated		farms take all mints	379741			unclear		
+379754	unrelated		GPU temperature	379748			unclear		question
+379755	unrelated		renting a server	post			unclear		
+379758	unrelated		renting a server	379755			unclear		
+379759	unrelated		GPU temperature	379754		88 degrees is too hot for a 10h mint	support		
+379760	unrelated		stop mining	post		it is worth switching off	support		
+379761	unrelated		late to the mint	post		we are too late	support		
+379762	unrelated		farms	379753			unclear		
+379763	unrelated		farms	379762		the whale probably rented GPUs knowing the launch	support		
+379764	unrelated		mining idea	post		the idea is interesting	support		
+379766	unclear						unclear	image only	
+379767	unrelated		what GPUs mine	post			unclear	1	refers to the image above
+379768	unrelated		GPU load	post			unclear		
+379769	unrelated		mint odds	post		the odds are too low to bother	support		
+379770	unrelated		which GPU	379769			unclear		
+379774	unrelated		moderation				unclear		
+379775	unrelated		servers for future mints	379767			unclear		
+379776	unrelated		moderation				unclear		
+379777	unrelated		moderation				unclear		
+379778	unclear						unclear	image only, in a banter chain	
+379779	unrelated		moderation				unclear		
+379782	unrelated		renting 5090 servers	379775		hourly rent of 5090 can pay off	support		
+379792	unrelated		GPU load	post			unclear	1	parent missing
+379794	unrelated		GPU temperature	post		80-90 degrees is not worth it	support		
+379796	direct	eth	NFT price in ETH	379796	other		unclear	1	parent missing; price of the NFT quoted in ETH: ETH as unit of account, neither ETH market nor spending
+379797	unrelated		collection link	post			unclear	1	parent missing
+379798	unrelated		thermal paste	post			unclear	1	parent missing
+379800	unrelated		renting data-centre servers	post			unclear		joke
+379802	unclear		1				unclear	parent missing	
+379804	unrelated		mining competition	post		competition keeps growing	support	1	parent missing
+379807	unrelated		mint randomness	post			unclear	1	parent missing
+379817	unclear						unclear	parent missing	
+379820	unclear		1				unclear	parent missing	
+379823	unclear						unclear	parent missing	
+379824	unclear						unclear	parent missing	
+379846	unrelated		scam warning				unclear		
+379847	unclear						unclear	question with image	
+379848	unclear		1				unclear	answer to an image question	
+379849	unrelated		scam moderation				unclear		
+379851	unrelated		scam moderation				unclear		
+379852	unrelated		scam moderation				unclear		
+379878	unrelated		scam moderation				unclear		
+379879	unrelated		mining difficulty	post		difficulty grows so a 5070 needs a month	support		
+379880	unrelated		mining competition	379879			unclear		
+379890	direct	ether	not enough ETH to mint	379890	payment		unclear		error: not enough ether for price and gas
+379891	direct	эфире	ETH wallet balance	379891	payment		unclear		
+379892	contextual		mint price vs balance	379891	payment	the mint costs more than the wallet holds	support	1	advice
+379893	unrelated		where to see the mint price	post			unclear	1	follows 379892 in time, but replies to the post
+379895	contextual		not enough ETH to mint	379890	payment	$55 is not enough to mint	support		
+379896	unrelated		mint error	post			unclear	1	same error as 379890, but replies to the post
+379897	direct	eth	mint price	379897	payment	$55 is not enough for the ~0.16 ETH mint	support		
+379898	unrelated		project is a scam	post		the project is made to take people's money	support		
+379899	unrelated		funding the mint	379898			unclear	1	deposit to mint; ETH implied by 379895/379897, not in its reply chain
+379904	unrelated		checking wallet balance	post			unclear		
+379905	unrelated		project is a scam	post		better not to get involved	support		
+379908	unrelated		minted, now selling	post			unclear		
+379909	direct	eth	NFT floor in ETH	379909	other	selling will be hard, floor fell from 0.16 to 0.14	support	1	NFT price in ETH: unit of account
+379911	unrelated		mint cost and GPU	379908			unclear		question
+379912	unrelated		mint price	post		minting is no longer profitable	support	1	'0.16+' without unit; ETH implied by same author's 379897, not in chain
+379913	unrelated		how many minted	379911			unclear		
+379914	unrelated		burning the NFT	379912			unclear		
+379918	unrelated		mint speed	379913			unclear		
+379919	unrelated		first-day profit	379918		minting paid off only on the first day	support		
+379920	unrelated		mint speed	379918			unclear		
+379927	unrelated		mint vs floor	379914		the floor and mint price should have been checked	support		
+379928	unrelated		mint vs floor	379927			unclear		
+379929	unrelated		loss	379914			unclear		
+379931	unrelated		loss	379914			unclear		question
+379933	unrelated		time to mint	post			unclear		
+379937	unrelated		mint on 1070 Ti	post			unclear		
+379938	unrelated		network competition	379937		there is no competition in the network	support		
+379939	unrelated		mint vs floor	379938		the mint price equals the OpenSea floor	support		
+379940	unrelated		mint vs floor	379939		the mint price is above the floor	support		
+379999	unrelated		traffic ad				unclear		

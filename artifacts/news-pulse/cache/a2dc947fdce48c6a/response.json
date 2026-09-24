@@ -1,0 +1,32 @@
+{
+ "choices": [
+  {
+   "message": {
+    "content": "{\"labels\": [{\"id\": \"telegram:18:31547#s0\", \"kind\": \"participant_reaction\", \"actor\": \"Трейдеры\", \"action\": \"активно ставят на рост\", \"object\": \"BTC и ETH\", \"qualifiers\": {}, \"origin\": \"own\", \"source_role\": \"editorial\", \"verification_status\": \"unverified\", \"quote\": \"Трейдеры активно ставят на рост BTC и ETH – залетают в лонг (карта ликвидаций)\", \"span\": [0, 76]}]}"
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 1932,
+  "completion_tokens": 1612,
+  "total_tokens": 3544,
+  "cost": 0.0004772292,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 256,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.0004772292,
+   "upstream_inference_prompt_cost": 0.0001669192,
+   "upstream_inference_completions_cost": 0.00031031
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

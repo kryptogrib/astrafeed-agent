@@ -1,0 +1,17 @@
+{
+ "segments": [
+  {
+   "id": "telegram:21:21068#s7",
+   "text": "- Фон с прошлой недели: Harmony сворачивает сеть и переносит ONE на Ethereum, Liquid вернула средства после взлома, Cozy Finance на Optimism атакован повторно (~$170K). Хвост этих историй ещё может давать точечные движения.\n",
+   "mentions": [
+    {
+     "text": "Ethereum",
+     "status": "confirmed"
+    }
+   ],
+   "kind_hint": "post",
+   "url": "https://t.me/rawa_imagination/21068",
+   "time": "2026-09-13T11:02:01+00:00"
+  }
+ ]
+}

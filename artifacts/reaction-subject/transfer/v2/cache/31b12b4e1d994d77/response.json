@@ -1,0 +1,46 @@
+{
+ "id": "gen-1790251433-EtLJwiBWS34GvpkGgQVZ",
+ "object": "chat.completion",
+ "created": 1790251433,
+ "model": "deepseek/deepseek-v4-flash",
+ "provider": "DeepInfra",
+ "system_fingerprint": null,
+ "service_tier": "default",
+ "choices": [
+  {
+   "index": 0,
+   "logprobs": null,
+   "finish_reason": "stop",
+   "native_finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "content": "{\"target\": \"other_subject\", \"target_id\": null, \"comment_fragment\": \"поставь себя на место проекта и ответь на вопрос - зачем тебе тратить бабки на сибилов?\", \"context_fragment\": \"\", \"why\": \"Comment discusses airdrop farming (sybils), not Zcash or post content.\"}",
+    "refusal": null,
+    "reasoning": null
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 1045,
+  "completion_tokens": 77,
+  "total_tokens": 1122,
+  "cost": 5.2614e-05,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 768,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 5.2614e-05,
+   "upstream_inference_prompt_cost": 3.8754e-05,
+   "upstream_inference_completions_cost": 1.386e-05
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

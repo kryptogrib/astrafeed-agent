@@ -1,0 +1,32 @@
+{
+ "choices": [
+  {
+   "message": {
+    "content": "{\"labels\": [{\"id\": \"telegram:10:384763#s1\", \"kind\": \"event\", \"actor\": null, \"action\": \"decreased to 11-year low\", \"object\": \"ETH exchange reserves\", \"qualifiers\": {\"timeframe\": \"11 years\"}, \"origin\": \"retelling\", \"source_role\": \"editorial\", \"verification_status\": \"unverified\", \"quote\": \"Запасы ETH на биржах снизились до минимума за 11 лет\", \"span\": [0, 55]}]}"
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 1845,
+  "completion_tokens": 1618,
+  "total_tokens": 3463,
+  "cost": 0.0003522974,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 1512,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.0003522974,
+   "upstream_inference_prompt_cost": 5.78214e-05,
+   "upstream_inference_completions_cost": 0.000294476
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

@@ -1,0 +1,46 @@
+{
+ "id": "gen-1790253708-H8HII5IUPu8wiSXgKuZR",
+ "object": "chat.completion",
+ "created": 1790253708,
+ "model": "deepseek/deepseek-v4-flash",
+ "provider": "Parasail",
+ "system_fingerprint": null,
+ "service_tier": null,
+ "choices": [
+  {
+   "index": 0,
+   "logprobs": null,
+   "finish_reason": "stop",
+   "native_finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "content": "{\n  \"theses\": [\n    {\n      \"quote\": \"Если AAVE получит хотя бы 10% кастоди крипты перечисленных выше фондов, то это кратный рост доходов протокола.\",\n      \"start\": 2820,\n      \"end\": 2916,\n      \"kind\": \"forecast\",\n      \"topic_role\": \"context\",\n      \"why\": \"Forecast about AAVE growth via Arc custody\"\n    },\n    {\n      \"quote\": \"Arc это чейн не про лудки, а про что-то на подобии Canton, только без непонятной подковерной игры инсайдеров.\",\n      \"start\": 2934,\n      \"end\": 3045,\n      \"kind\": \"evaluation\",\n      \"topic_role\": \"subject\",\n      \"why\": \"Author evaluates Arc as institutional, not gambling\"\n    },\n    {\n      \"quote\": \"Dawn аналог usdAI, но с более интересными и, кажется, жизнеспособными механиками.\",\n      \"start\": 3055,\n      \"end\": 3125,\n      \"kind\": \"evaluation\",\n      \"topic_role\": \"unrelated\",\n      \"why\": \"Evaluation of Dawn vs usdAI mechanics\"\n    }\n  ],\n  \"truncated\": false\n}",
+    "refusal": null,
+    "reasoning": null
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 2005,
+  "completion_tokens": 286,
+  "total_tokens": 2291,
+  "cost": 0.00036078,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.00036078,
+   "upstream_inference_prompt_cost": 0.0002807,
+   "upstream_inference_completions_cost": 8.008e-05
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

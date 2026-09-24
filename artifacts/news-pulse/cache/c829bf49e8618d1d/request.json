@@ -1,0 +1,17 @@
+{
+ "segments": [
+  {
+   "id": "telegram:1:7130#s44",
+   "text": "• 1,555 панков на Zcash; \n",
+   "mentions": [
+    {
+     "text": "Zcash",
+     "status": "confirmed"
+    }
+   ],
+   "kind_hint": "post",
+   "url": "https://t.me/whitelist1/7130",
+   "time": "2026-09-11T12:04:59+00:00"
+  }
+ ]
+}

@@ -1,0 +1,15 @@
+{
+  "topic": "eth",
+  "window": "2026-09-09T00:00:00+00:00..2026-09-21T12:44:53+00:00",
+  "created_at": "2026-09-24T10:04:49.505976+00:00",
+  "db_md5": "8618099125a806df376354286ccd982e",
+  "model": "deepseek/deepseek-v4-flash",
+  "spend_usd": 0.0,
+  "status": "ok",
+  "files": [
+    "pulse.json",
+    "brief.md",
+    "manifest.json",
+    "decisions.json"
+  ]
+}

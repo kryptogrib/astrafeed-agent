@@ -1,0 +1,32 @@
+{
+ "choices": [
+  {
+   "message": {
+    "content": "{\"labels\": [{\"id\": \"telegram:18:31368#s4\", \"kind\": \"event\", \"actor\": \"ChatGPT Astra 6, Claude Fable 5.1 и GROK 4.6\", \"action\": \"озвучили свои вердикты\", \"object\": \"Zcash\", \"qualifiers\": {}, \"origin\": \"unknown\", \"source_role\": \"unknown\", \"verification_status\": \"unverified\", \"topic_role\": \"subject\", \"quote\": \"+ подключили ChatGPT Astra 6, Claude Fable 5.1 и GROK 4.6 - топовые нейронки озвучили свои вердикты по Zcash и предложили рассмотреть другие проекты.\", \"span\": [0, 131]}]}"
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 2258,
+  "completion_tokens": 2187,
+  "total_tokens": 4445,
+  "cost": 0.00047445328,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.00047445328,
+   "upstream_inference_prompt_cost": 0.00016153732,
+   "upstream_inference_completions_cost": 0.00031291596
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

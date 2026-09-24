@@ -1,0 +1,46 @@
+{
+ "id": "gen-1790253667-lwejc4X89zoslVBThBif",
+ "object": "chat.completion",
+ "created": 1790253667,
+ "model": "deepseek/deepseek-v4-flash",
+ "provider": "DigitalOcean",
+ "system_fingerprint": null,
+ "service_tier": null,
+ "choices": [
+  {
+   "index": 0,
+   "logprobs": null,
+   "finish_reason": "stop",
+   "native_finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "content": "{\n  \"theses\": [\n    {\n      \"quote\": \"арк как раз благодаря копикам и инфлам выглядит сильно интереснее\",\n      \"start\": 65,\n      \"end\": 106,\n      \"kind\": \"evaluation\",\n      \"topic_role\": \"subject\",\n      \"why\": \"Author claims Arc looks stronger due to copycats and inflation\"\n    },\n    {\n      \"quote\": \"скорее всего щитки попампятся еще недельку, максимум две, а потом обратно вернемся в родную гавань\",\n      \"start\": 466,\n      \"end\": 541,\n      \"kind\": \"forecast\",\n      \"topic_role\": \"subject\",\n      \"why\": \"Author predicts Arc shitcoins will pump then dump in 1-2 weeks\"\n    },\n    {\n      \"quote\": \"Как будто не ошибка сейчас вернуться на Робингуд и откупить то, что сильно скорректировалось - $INDEX, $MEME, $BONER, мб еще что-нибудь большое\",\n      \"start\": 653,\n      \"end\": 756,\n      \"kind\": \"advice\",\n      \"topic_role\": \"context\",\n      \"why\": \"Author advises buying corrected Robinhood tokens alongside Arc\"\n    }\n  ],\n  \"truncated\": false\n}",
+    "refusal": null,
+    "reasoning": null
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 1333,
+  "completion_tokens": 290,
+  "total_tokens": 1623,
+  "cost": 0.000187474,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.000187474,
+   "upstream_inference_prompt_cost": 0.000130634,
+   "upstream_inference_completions_cost": 5.684e-05
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

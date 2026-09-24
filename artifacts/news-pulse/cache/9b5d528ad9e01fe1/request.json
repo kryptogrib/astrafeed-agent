@@ -1,0 +1,25 @@
+{
+ "a": {
+  "quote": "The Standard Reserve went live today, an onchain reserve protocol built around ETH flows, using an OlympusDAO-style design with a hard-capped 1B STANDARD supply.",
+  "actor": "Standard Reserve",
+  "action": "go live",
+  "object": "onchain reserve protocol",
+  "qualifiers": {
+   "version": "1B STANDARD supply"
+  },
+  "url": "https://t.me/WEB3_AGGREGATOR/422959"
+ },
+ "b": {
+  "quote": "Мосбиржа запускает бессрочные фьючерсы на индексы #BTC, #ETH, #SOL, #XRP и #TRX для квалифицированных инвесторов",
+  "actor": "Мосбиржа",
+  "action": "launch",
+  "object": "бессрочные фьючерсы на индексы #ETH",
+  "qualifiers": {
+   "version": null,
+   "event_date": null,
+   "place": null,
+   "counterparty": "квалифицированные инвесторы"
+  },
+  "url": "https://t.me/WEB3_AGGREGATOR/423395"
+ }
+}

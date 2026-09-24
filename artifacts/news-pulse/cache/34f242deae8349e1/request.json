@@ -1,0 +1,17 @@
+{
+ "segments": [
+  {
+   "id": "telegram:18:31448#s5",
+   "text": "Официальная презентация запуска Arc начнется сегодня в 18:30 мск. \n\n",
+   "mentions": [
+    {
+     "text": "Arc",
+     "status": "confirmed"
+    }
+   ],
+   "kind_hint": "post",
+   "url": "https://t.me/crypto_hd/31448",
+   "time": "2026-09-16T05:27:05+00:00"
+  }
+ ]
+}

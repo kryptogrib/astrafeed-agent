@@ -1,0 +1,21 @@
+{
+ "a": {
+  "quote": "utility-NFT, копит комиссии внутри себя; минт через OpenSea, не ZEC L1",
+  "actor": null,
+  "action": "utility-NFT, копит комиссии внутри себя; минт через OpenSea, не ZEC L1",
+  "object": "utility-NFT",
+  "qualifiers": {},
+  "url": "https://t.me/whitelist1/7149"
+ },
+ "b": {
+  "quote": "2,800 рукописных пиксельных NFT на Zcash. Цена 0.02 ZEC. WL: 1 на кошелек, public: 3 на кошелек",
+  "actor": null,
+  "action": "2,800 рукописных пиксельных NFT на Zcash. Цена 0.02 ZEC. WL: 1 на кошелек, public: 3 на кошелек",
+  "object": "NFT",
+  "qualifiers": {
+   "price": "0.02 ZEC",
+   "supply": "2800"
+  },
+  "url": "https://t.me/whitelist1/7149"
+ }
+}

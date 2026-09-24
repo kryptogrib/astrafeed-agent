@@ -1,0 +1,33 @@
+{
+ "prompt_sha256": "5c596d0f863ff4bd",
+ "input_sha256": "9dacdf3a4500c4db",
+ "model": "deepseek/deepseek-v4-flash",
+ "schema": "reaction-subject/v2",
+ "db_md5": "1c714bad0d7dd7e07d1f2c5032fd8dce",
+ "provider_pinned": null,
+ "seconds": 2.9,
+ "provider_actual": "Venice",
+ "usage": {
+  "prompt_tokens": 1965,
+  "completion_tokens": 80,
+  "total_tokens": 2045,
+  "cost": 6.7235e-05,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 1792,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 6.7235e-05,
+   "upstream_inference_prompt_cost": 5.1835e-05,
+   "upstream_inference_completions_cost": 1.54e-05
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

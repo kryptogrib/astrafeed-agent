@@ -1,0 +1,7 @@
+{
+ "prompt_version": "v2-mention-subject-claim",
+ "prompt_sha256": "16382a0f0c59f7f8",
+ "input_sha256": "5ac840fccc088004",
+ "model": "deepseek/deepseek-v4-flash",
+ "seconds": 46.2
+}

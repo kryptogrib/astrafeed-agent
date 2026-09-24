@@ -1,0 +1,21 @@
+{
+ "segments": [
+  {
+   "id": "telegram:15:423121#s0",
+   "text": "Я вам просто напоминаю, что в 18 по Москве официально ARC запускают и вы уже сейчас можете абсолютно бесплатно создавать свои мемы на https://arc.openfair.app/\n\n",
+   "mentions": [
+    {
+     "text": "ARC",
+     "status": "confirmed"
+    },
+    {
+     "text": "arc",
+     "status": "confirmed"
+    }
+   ],
+   "kind_hint": "post",
+   "url": "https://t.me/WEB3_AGGREGATOR/423121",
+   "time": "2026-09-16T16:33:30+00:00"
+  }
+ ]
+}

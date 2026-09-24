@@ -1,0 +1,17 @@
+{
+ "segments": [
+  {
+   "id": "telegram:18:31363#s3",
+   "text": "У кита на бирже Bitget ликвидировало лонг на $22,63m одним ордером (в паре ETH/USDT).\n\n",
+   "mentions": [
+    {
+     "text": "ETH",
+     "status": "confirmed"
+    }
+   ],
+   "kind_hint": "post",
+   "url": "https://t.me/crypto_hd/31363",
+   "time": "2026-09-10T12:48:23+00:00"
+  }
+ ]
+}

@@ -1,0 +1,17 @@
+{
+ "segments": [
+  {
+   "id": "telegram:21:21086#s30",
+   "text": "  • Курс Ethereum обошел биткоин по росту на 20% с июня. Какие перспективы\n",
+   "mentions": [
+    {
+     "text": "Ethereum",
+     "status": "confirmed"
+    }
+   ],
+   "kind_hint": "post",
+   "url": "https://t.me/rawa_imagination/21086",
+   "time": "2026-09-15T08:14:22+00:00"
+  }
+ ]
+}

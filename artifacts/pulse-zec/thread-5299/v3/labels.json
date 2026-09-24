@@ -1,0 +1,334 @@
+[
+ {
+  "id": "380287",
+  "relevance": "relevant",
+  "aspect": "other",
+  "kind": "opinion",
+  "summary": "Предлагает добавить ещё бигфутов в подборку.",
+  "quote": "Я бы докинул ещё бигфутов",
+  "context_ids": [
+   "post"
+  ],
+  "name_candidate": null
+ },
+ {
+  "id": "380288",
+  "relevance": "relevant",
+  "aspect": "other",
+  "kind": "question",
+  "summary": "Просит ссылку на бигфутов.",
+  "quote": "Давай линк",
+  "context_ids": [
+   "380287"
+  ],
+  "name_candidate": null
+ },
+ {
+  "id": "380289",
+  "relevance": "relevant",
+  "aspect": "other",
+  "kind": "experience",
+  "summary": "Делится ссылкой на бигфутов и сомневается, не поздно ли.",
+  "quote": "https://x.com/BITFOOTS_ Но тут дедлайн сегодня, не знаю не поздно ли",
+  "context_ids": [
+   "380288"
+  ],
+  "name_candidate": null
+ },
+ {
+  "id": "380294",
+  "relevance": "relevant",
+  "aspect": "other",
+  "kind": "experience",
+  "summary": "Сообщает, что в zeclers дедлайн через 4 часа, так что не поздно.",
+  "quote": "в zeclers дедлайн 4 часа, так что не поздно",
+  "context_ids": [
+   "380289"
+  ],
+  "name_candidate": null
+ },
+ {
+  "id": "380295",
+  "relevance": "relevant",
+  "aspect": "other",
+  "kind": "question",
+  "summary": "Спрашивает, нужно ли просто подключить кошелёк.",
+  "quote": "Тут просто кош подключить?",
+  "context_ids": [
+   "380288"
+  ],
+  "name_candidate": null
+ },
+ {
+  "id": "380296",
+  "relevance": "relevant",
+  "aspect": "usage",
+  "kind": "experience",
+  "summary": "Делится ссылкой на список кошельков Zcash.",
+  "quote": "https://z.cash/ecosystem/?wallets=#tag-wallets",
+  "context_ids": [],
+  "name_candidate": null
+ },
+ {
+  "id": "380300",
+  "relevance": "unrelated",
+  "aspect": null,
+  "kind": "other",
+  "summary": null,
+  "quote": null,
+  "context_ids": [],
+  "name_candidate": null
+ },
+ {
+  "id": "380318",
+  "relevance": "relevant",
+  "aspect": "usage",
+  "kind": "question",
+  "summary": "Спрашивает, тот же ли это кошелёк (Zodl).",
+  "quote": "Этот же кош?",
+  "context_ids": [
+   "post"
+  ],
+  "name_candidate": null
+ },
+ {
+  "id": "380319",
+  "relevance": "relevant",
+  "aspect": "usage",
+  "kind": "experience",
+  "summary": "Подтверждает, что кошелёк тот же.",
+  "quote": "Да",
+  "context_ids": [
+   "380318"
+  ],
+  "name_candidate": null
+ },
+ {
+  "id": "380326",
+  "relevance": "relevant",
+  "aspect": "usage",
+  "kind": "experience",
+  "summary": "Говорит, что пользуется этим кошельком и он удобный.",
+  "quote": "Я с ним, удобный",
+  "context_ids": [
+   "380318"
+  ],
+  "name_candidate": null
+ },
+ {
+  "id": "380335",
+  "relevance": "relevant",
+  "aspect": "other",
+  "kind": "experience",
+  "summary": "Делится ссылкой на чекер для zeckers и желает удачи.",
+  "quote": "тут уже чекер есть, удачи - https://www.zeckers.xyz/mint",
+  "context_ids": [
+   "post"
+  ],
+  "name_candidate": null
+ },
+ {
+  "id": "380336",
+  "relevance": "relevant",
+  "aspect": "usage",
+  "kind": "question",
+  "summary": "Спрашивает, почему сайт просит другой кошелёк, если он подключал Zodl.",
+  "quote": "А почему просит другой кош? Если я все подключал к zodl",
+  "context_ids": [
+   "380335"
+  ],
+  "name_candidate": null
+ },
+ {
+  "id": "380337",
+  "relevance": "relevant",
+  "aspect": "other",
+  "kind": "experience",
+  "summary": "Сожалеет, что не успел, форма уже закрыта.",
+  "quote": "не успел, уже закрыта была форма , эх...",
+  "context_ids": [
+   "380335"
+  ],
+  "name_candidate": null
+ },
+ {
+  "id": "380338",
+  "relevance": "relevant",
+  "aspect": "other",
+  "kind": "experience",
+  "summary": "Обновляет подборку, добавляет ZecVision и OttoClub.",
+  "quote": "upd. добавил - 9. ZecVision 10. OttoClub",
+  "context_ids": [
+   "post"
+  ],
+  "name_candidate": null
+ },
+ {
+  "id": "380347",
+  "relevance": "relevant",
+  "aspect": "other",
+  "kind": "question",
+  "summary": "Спрашивает, нормально ли, что OttoClub требует ETH-кошелёк для ZEC-проекта.",
+  "quote": "ottoclub ETH кошелёк требует - это нормально для Zec проекта?",
+  "context_ids": [
+   "380338"
+  ],
+  "name_candidate": null
+ },
+ {
+  "id": "380348",
+  "relevance": "relevant",
+  "aspect": "other",
+  "kind": "opinion",
+  "summary": "Считает, что OttoClub вроде не ZEC.",
+  "quote": "Это не зек вроде",
+  "context_ids": [
+   "380347"
+  ],
+  "name_candidate": null
+ },
+ {
+  "id": "380349",
+  "relevance": "relevant",
+  "aspect": "other",
+  "kind": "experience",
+  "summary": "Подтверждает, что нужно вводить EVM-кошелёк.",
+  "quote": "да, evm кош вводим",
+  "context_ids": [
+   "380347"
+  ],
+  "name_candidate": null
+ },
+ {
+  "id": "380350",
+  "relevance": "relevant",
+  "aspect": "other",
+  "kind": "question",
+  "summary": "Спрашивает, как узнать результаты прохождения WL.",
+  "quote": "Как узнать о результатах? Смотреть там где проходил?",
+  "context_ids": [
+   "post"
+  ],
+  "name_candidate": null
+ },
+ {
+  "id": "380352",
+  "relevance": "relevant",
+  "aspect": "usage",
+  "kind": "opinion",
+  "summary": "Советует сделать кошелёк noir, так как он лучше всего подходит для NFT и WL на ZEC.",
+  "quote": "Лучше сделайте кош. noir Он под NFT и WL лучше всего подходит для ZEC",
+  "context_ids": [
+   "post"
+  ],
+  "name_candidate": null
+ },
+ {
+  "id": "380353",
+  "relevance": "relevant",
+  "aspect": "usage",
+  "kind": "experience",
+  "summary": "Соглашается и говорит, что на телефоне использует Zodl, в Chrome — noir.",
+  "quote": "Согласен, на телефоне зодл, в хроме ноир",
+  "context_ids": [
+   "380352"
+  ],
+  "name_candidate": null
+ },
+ {
+  "id": "380354",
+  "relevance": "relevant",
+  "aspect": "usage",
+  "kind": "experience",
+  "summary": "Отмечает, что платформы сами сейчас советуют noir и он стоит по умолчанию.",
+  "quote": "Его даже платформы сами сейчас советуют, он по умолчанию у них стоит.",
+  "context_ids": [
+   "380353"
+  ],
+  "name_candidate": null
+ },
+ {
+  "id": "380355",
+  "relevance": "relevant",
+  "aspect": "usage",
+  "kind": "experience",
+  "summary": "Рассказывает, что пришлось установить noir для WL в \"Mint a ZADDR\" и теперь понимает, что его все рекомендуют.",
+  "quote": "Взял WL сегодня в \"Mint a ZADDR\" Так вот пришлось noir устанавливать! Потом почитал про него более подробно и понял, что они все сейчас его рекомендуют.",
+  "context_ids": [
+   "380353"
+  ],
+  "name_candidate": null
+ },
+ {
+  "id": "380360",
+  "relevance": "relevant",
+  "aspect": "other",
+  "kind": "question",
+  "summary": "Спрашивает, где смотреть, прошёл ли в WL, и обязательно ли ставить noir, если нет доступа с компа.",
+  "quote": "Так а че где смотреть прошел в wl или нет? Надо по любому noir ставить ? С компа нет возможности зайти просто",
+  "context_ids": [
+   "380353"
+  ],
+  "name_candidate": null
+ },
+ {
+  "id": "380361",
+  "relevance": "relevant",
+  "aspect": "other",
+  "kind": "experience",
+  "summary": "Отвечает, что noir для удобства, а по WL нужно смотреть по проектам, куда подавался.",
+  "quote": "Ноир для удобства По вл нужно смотреть по проектам куда подавался",
+  "context_ids": [
+   "380360"
+  ],
+  "name_candidate": null
+ },
+ {
+  "id": "380362",
+  "relevance": "relevant",
+  "aspect": "other",
+  "kind": "question",
+  "summary": "Спрашивает, где проверить WL для zeccer, не видит, куда вставить кошелёк.",
+  "quote": "Ну zeccer уже минт идет по wl,где там проверять? Не вижу куда кошель вставить",
+  "context_ids": [
+   "380361"
+  ],
+  "name_candidate": null
+ },
+ {
+  "id": "380363",
+  "relevance": "relevant",
+  "aspect": "other",
+  "kind": "experience",
+  "summary": "Сообщает, что окно WL в 72 часа закончилось, результаты и детали минта на X.",
+  "quote": "The 72 hour whitelist window has ended. Whitelist results and mint details are posted on X.",
+  "context_ids": [
+   "380362"
+  ],
+  "name_candidate": null
+ },
+ {
+  "id": "380369",
+  "relevance": "relevant",
+  "aspect": "other",
+  "kind": "experience",
+  "summary": "Обновляет подборку, добавляет Wizards.",
+  "quote": "upd. / добавил - 11. Wizards",
+  "context_ids": [
+   "post"
+  ],
+  "name_candidate": null
+ },
+ {
+  "id": "380370",
+  "relevance": "relevant",
+  "aspect": "other",
+  "kind": "opinion",
+  "summary": "Считает, что zeckers — скам, так как нет ни одной продажи.",
+  "quote": "Кажется скам, ни одной продажи",
+  "context_ids": [
+   "380335"
+  ],
+  "name_candidate": null
+ }
+]

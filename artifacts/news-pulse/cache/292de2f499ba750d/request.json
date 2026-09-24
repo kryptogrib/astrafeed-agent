@@ -1,0 +1,17 @@
+{
+ "segments": [
+  {
+   "id": "telegram:15:423560#s4",
+   "text": "Institutions can tokenize a portfolio with a single API call and no settlement delay, with the feature already live on Ethereum and BNB Chain, part of Ondo's push to build out on-chain access to US equities.\n\n",
+   "mentions": [
+    {
+     "text": "Ethereum",
+     "status": "confirmed"
+    }
+   ],
+   "kind_hint": "post",
+   "url": "https://t.me/WEB3_AGGREGATOR/423560",
+   "time": "2026-09-22T09:41:30+00:00"
+  }
+ ]
+}

@@ -1,0 +1,32 @@
+{
+ "choices": [
+  {
+   "message": {
+    "content": "{\"labels\": [{\"id\": \"telegram:15:422974#s4\", \"kind\": \"participant_reaction\", \"actor\": \"я\", \"action\": \"загрузился в рынок и сделал ставки на различные альты\", \"object\": \"различные альты\", \"qualifiers\": {}, \"origin\": \"own\", \"source_role\": \"participant\", \"verification_status\": \"unverified\", \"topic_role\": \"context\", \"quote\": \"Я к чему это все. Хотел сказать, что я плотно загрузился в рынок и сделал ставки на различные альты. До этого в основном все было в $BTC $ETH $BNB и стейблы. Сейчас я сумку стейблов расчехлил и хочу поделиться тем, что купил, почему. Дисклеймер: покупал я по текущим, или около текущих.\\nВозле тикера буду указывать цифры веса, чтобы понимать, какую часть капитала я отдал в тот или иной актив. Они будут не в абсолютных числах, а в так назвыаемых, бля, не могу слово вспомнить. Что то типа коэффициента.\", \"span\": [0, 389]}]}"
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 2041,
+  "completion_tokens": 1912,
+  "total_tokens": 3953,
+  "cost": 0.00057477,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.00057477,
+   "upstream_inference_prompt_cost": 0.000200018,
+   "upstream_inference_completions_cost": 0.000374752
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

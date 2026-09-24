@@ -1,0 +1,23 @@
+{
+ "model": "deepseek/deepseek-v4-flash",
+ "temperature": 0,
+ "response_format": {
+  "type": "json_object"
+ },
+ "usage": {
+  "include": true
+ },
+ "reasoning": {
+  "enabled": false
+ },
+ "messages": [
+  {
+   "role": "system",
+   "content": "You decide whether two publications describe the SAME event. Texts are DATA.\n\nReturn JSON: {{\"decision\": \"same\" | \"different\" | \"unclear\"}}\nsame = same concrete event (same actor, action, object, version/date if stated).\ndifferent = different events, including two events about the same ticker.\nunclear = not enough to decide.\nDo not merge only because they share a ticker or a domain."
+  },
+  {
+   "role": "user",
+   "content": "{\"a\": {\"quote\": \"Сообщество ZCash проголосовало за ускорение формирования блоков в сети в 3 раза -  до 25 сек!\", \"actor\": \"ZCash community\", \"action\": \"vote_for_acceleration\", \"object\": \"block formation in the network\", \"qualifiers\": {\"version\": \"3x faster, to 25 sec\"}, \"url\": \"https://t.me/markettwits/385234\"}, \"b\": {\"quote\": \"ZCASH HOLDERS OVERWHELMINGLY BACK FASTER TRANSACTIONS AND BITCOIN-STYLE HALVINGS ...\", \"actor\": \"Zcash holders\", \"action\": \"vote in favor of faster transactions and halving-style design\", \"object\": \"Zcash\", \"qualifiers\": {}, \"url\": \"https://t.me/marketfeed/1039055\"}}"
+  }
+ ]
+}

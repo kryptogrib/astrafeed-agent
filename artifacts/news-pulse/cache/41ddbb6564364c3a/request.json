@@ -1,0 +1,33 @@
+{
+ "segments": [
+  {
+   "id": "telegram:15:423316#s5",
+   "text": "Мэтт Хуанг, сооснователь фонда Paradigm, назвал Zec «приватным дополнением к BTC» и раскрыл, что фирма инвестировала в лабораторию разработки Zcash (ZODL) и держит $ZEC.\nВ том же сид-раунде на $25+ млн подобралась неплохая компания — a16z crypto, Coinbase Ventures и Winklevoss Capital.\nПлюс ко всему — обозначена дата апгрейда сети ZEC под названием NU7: мейннет 5 ноября, блоки ускоряют с 75 до 25 секунд, халвинги сохраняют.\nА с 25 августа еще и торгуется спотовый ETF Grayscale ZCSH (~$727 млн активов).\nТак что катализаторы выглядят вполне настоящими.\n\n",
+   "mentions": [
+    {
+     "text": "Zec",
+     "status": "confirmed"
+    },
+    {
+     "text": "Zcash",
+     "status": "confirmed"
+    },
+    {
+     "text": "$ZEC",
+     "status": "confirmed"
+    },
+    {
+     "text": "ZEC",
+     "status": "confirmed"
+    },
+    {
+     "text": "ZEC",
+     "status": "confirmed"
+    }
+   ],
+   "kind_hint": "post",
+   "url": "https://t.me/WEB3_AGGREGATOR/423316",
+   "time": "2026-09-18T18:37:14+00:00"
+  }
+ ]
+}

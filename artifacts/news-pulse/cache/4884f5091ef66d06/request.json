@@ -1,0 +1,26 @@
+{
+ "a": {
+  "quote": "1INCH GOES LIVE ON CIRCLE’S ARC — SWAPS, WALLET & AQUA FROM DAY ONE ...",
+  "actor": "1inch",
+  "action": "went live",
+  "object": "on Arc",
+  "qualifiers": {
+   "version": null,
+   "event_date": "2026-09-16",
+   "place": null,
+   "counterparty": null
+  },
+  "url": "https://t.me/marketfeed/1039356"
+ },
+ "b": {
+  "quote": "Вчера Circle, эмитент стейблкоина USDC, запустила мейннет Arc — собственный блокчейн (L1) под платежи и токенизированные активы.",
+  "actor": "Circle",
+  "action": "запустила мейннет",
+  "object": "Arc",
+  "qualifiers": {
+   "time": "вчера",
+   "counterparty": "Circle"
+  },
+  "url": "https://t.me/WEB3_AGGREGATOR/423227"
+ }
+}

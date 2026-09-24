@@ -1,0 +1,46 @@
+{
+ "id": "gen-1790247183-NZRsSKmllxYf1aT8yGkF",
+ "object": "chat.completion",
+ "created": 1790247183,
+ "model": "deepseek/deepseek-v4-flash",
+ "provider": "DeepInfra",
+ "system_fingerprint": null,
+ "service_tier": "default",
+ "choices": [
+  {
+   "index": 0,
+   "logprobs": null,
+   "finish_reason": "stop",
+   "native_finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "content": "{\"items\": [{\"id\": \"eth|https://t.me/whitelist1/7130?comment=571142\", \"target\": \"other_subject\", \"target_id\": null, \"comment_fragment\": \"сейчас за Hazels слежу, топ-500 за GTD звучит как нормальная мотивация\", \"context_fragment\": \"Hazels: \\n• 5555 NFT; \\n• NFT дает доступ в Attention Layer, лаунчпад фриминтов;\\n• Социальные задания на странице до 22 сентября (Топ-500 получают GTD);\\n•  WL на остальные 5,000 еще не раздали.\", \"why\": \"Comment names a collection from the digest, not a reported event.\"}, {\"id\": \"eth|https://t.me/whitelist1/7130?comment=571143\", \"target\": \"other_subject\", \"target_id\": null, \"comment_fragment\": \"Kageuri норм еще\", \"context_fragment\": \"\", \"why\": \"Mentions a collection not listed in the post.\"}, {\"id\": \"eth|https://t.me/whitelist1/7130?comment=571159\", \"target\": \"other_subject\", \"target_id\": null, \"comment_fragment\": \"От дудлес будет нфт на робингуде, фришка\", \"context_fragment\": \"\", \"why\": \"Mentions a collection not listed in the post.\"}, {\"id\": \"eth|https://t.me/whitelist1/7130?comment=571222\", \"target\": \"other_subject\", \"target_id\": null, \"comment_fragment\": \"минт для GTD будет $50\", \"context_fragment\": \"сейчас за Hazels слежу, топ-500 за GTD звучит как нормальная мотивация\", \"why\": \"Replies to a comment about Hazels, not to a post event.\"}, {\"id\": \"eth|https://t.me/whitelist1/7130?comment=571250\", \"target\": \"other_subject\", \"target_id\": null, \"comment_fragment\": \"Это отличная рубрика, спасибо, так бы пропустил, что уже  есть ВЛ на jpeg frens.🫂\", \"context_fragment\": \"Jpeg Frens: \\n• ~9–10k на ETH. PFP + будущий burn/forge; \\n• Подаем заявку на Community Frenlist.\", \"why\": \"Comment names a collection from the digest, not a reported event.\"}, {\"id\": \"eth|https://t.me/whitelist1/7130?comment=571251\", \"target\": \"other_subject\", \"target_id\": null, \"comment_fragment\": \"рады слышать\", \"context_fragment\": \"Это отличная рубрика, спасибо, так бы пропустил, что уже  есть ВЛ на jpeg frens.🫂\", \"why\": \"Replies to a comment about the digest, not to a post event.\"}]}",
+    "refusal": null,
+    "reasoning": null
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 1733,
+  "completion_tokens": 682,
+  "total_tokens": 2415,
+  "cost": 0.000241866,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 512,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.000241866,
+   "upstream_inference_prompt_cost": 0.000119106,
+   "upstream_inference_completions_cost": 0.00012276
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

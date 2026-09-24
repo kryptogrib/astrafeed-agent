@@ -1,0 +1,46 @@
+{
+ "id": "gen-1790198645-Lv6XynSqut989OcVancc",
+ "object": "chat.completion",
+ "created": 1790198645,
+ "model": "deepseek/deepseek-v4-flash",
+ "provider": "Mancer 2",
+ "system_fingerprint": null,
+ "service_tier": null,
+ "choices": [
+  {
+   "index": 0,
+   "logprobs": null,
+   "finish_reason": "stop",
+   "native_finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "content": "{\"labels\": [\n  {\n    \"id\": \"telegram:15:423375#s0\",\n    \"kind\": \"event\",\n    \"actor\": null,\n    \"action\": \"release\",\n    \"object\": \"0.3 ZEC Puppets\",\n    \"qualifiers\": {},\n    \"origin\": \"unknown\",\n    \"source_role\": \"unknown\",\n    \"verification_status\": \"unverified\",\n    \"quote\": \"0.3 ZEC Puppets вышли\",\n    \"span\": [0, 22]\n  },\n  {\n    \"id\": \"telegram:15:423375#s3\",\n    \"kind\": \"event\",\n    \"actor\": null,\n    \"action\": \"release\",\n    \"object\": \"ZEC NFT\",\n    \"qualifiers\": {\"event_date\": \"21 числа 13:00 UTC\"},\n    \"origin\": \"unknown\",\n    \"source_role\": \"unknown\",\n    \"verification_status\": \"unverified\",\n    \"quote\": \"выходят они 21 числа 13:00 UTC WL - инфа\",\n    \"span\": [37, 76]\n  },\n  {\n    \"id\": \"telegram:15:423375#s4\",\n    \"kind\": \"redistribution\",\n    \"actor\": null,\n    \"action\": \"price change\",\n    \"object\": \"ZkSnarks\",\n    \"qualifiers\": {\"version\": \"1.39 ZEC\"},\n    \"origin\": \"unknown\",\n    \"source_role\": \"unknown\",\n    \"verification_status\": \"unverified\",\n    \"quote\": \"упали до 1.39 ZEC\",\n    \"span\": [30, 47]\n  },\n  {\n    \"id\": \"telegram:15:423379#s8\",\n    \"kind\": \"promo_service\",\n    \"actor\": null,\n    \"action\": \"promotion\",\n    \"object\": \"NFT-коллекции на Zcash\",\n    \"qualifiers\": {},\n    \"origin\": \"unknown\",\n    \"source_role\": \"unknown\",\n    \"verification_status\": \"unverified\",\n    \"quote\": \"хайпить NFT-коллекции на Zcash\",\n    \"span\": [27, 58]\n  },\n  {\n    \"id\": \"telegram:15:423379#s9\",\n    \"kind\": \"event\",\n    \"actor\": null,\n    \"action\": \"mint\",\n    \"object\": \"ZecFrogs\",\n    \"qualifiers\": {\"event_date\": \"21 сентября в 20:00 мск\"},\n    \"origin\": \"unknown\",\n    \"source_role\": \"unknown\",\n    \"verification_status\": \"unverified\",\n    \"quote\": \"Бесплатный минт пройдёт 21 сентября в 20:00 мск\",\n    \"span\": [42, 85]\n  },\n  {\n    \"id\": \"telegram:15:423398#s0\",\n    \"kind\": \"event\",\n    \"actor\": \"DeGods\",\n    \"action\": \"move\",\n    \"object\": \"Zcash\",\n    \"qualifiers\": {},\n    \"origin\": \"unknown\",\n    \"source_role\": \"unknown\",\n    \"verification_status\": \"unverified\",\n    \"quote\": \"DeGods переезжают на на Zcash\",\n    \"span\": [0, 30]\n  },\n  {\n    \"id\": \"telegram:1:7149#s4\",\n    \"kind\": \"event\",\n    \"actor\": null,\n    \"action\": \"mint\",\n    \"object\": \"2,800 рукописных пиксельных NFT на Zcash\",\n    \"qualifiers\": {\"version\": \"0.02 ZEC\"},\n    \"origin\": \"unknown\",\n    \"source_role\": \"unknown\",\n    \"verification_status\": \"unverified\",\n    \"quote\": \"Цена 0.02 ZEC\",\n    \"span\": [42, 56]\n  },\n  {\n    \"id\": \"telegram:1:7149#s8\",\n    \"kind\": \"event\",\n    \"actor\": null,\n    \"action\": \"launch\",\n    \"object\": \"Токен-стандарт ZRC20 на Zcash\",\n    \"qualifiers\": {},\n    \"origin\": \"unknown\",\n    \"source_role\": \"unknown\",\n    \"verification_status\": \"unverified\",\n    \"quote\": \"Токен-стандарт ZRC20 на Zcash\",\n    \"span\": [2, 33]\n  },\n  {\n    \"id\": \"telegram:1:7149#s12\",\n    \"kind\": \"event\",\n    \"actor\": null,\n    \"action\": \"mint\",\n    \"object\": \"utility-NFT\",\n    \"qualifiers\": {},\n    \"origin\": \"unknown\",\n    \"source_role\": \"unknown\",\n    \"verification_status\": \"unverified\",\n    \"quote\": \"минт через OpenSea, не ZEC L1\",\n    \"span\": [30, 58]\n  },\n  {\n    \"id\": \"telegram:1:7149#s20\",\n    \"kind\": \"event\",\n    \"actor\": null,\n    \"action\": \"mint\",\n    \"object\": \"3 333 пиксельных кота на Zcash\",\n    \"qualifiers\": {},\n    \"origin\": \"unknown\",\n    \"source_role\": \"unknown\",\n    \"verification_status\": \"unverified\",\n    \"quote\": \"3 333 пиксельных кота на Zcash\",\n    \"span\": [2, 33]\n  },\n  {\n    \"id\": \"telegram:1:7149#s24\",\n    \"kind\": \"event\",\n    \"actor\": null,\n    \"action\": \"mint\",\n    \"object\": \"Клубные NFT-выдры\",\n    \"qualifiers\": {},\n    \"origin\": \"unknown\",\n    \"source_role\": \"unknown\",\n    \"verification_status\": \"unverified\",\n    \"quote\": \"Кошелек ETH, не ZEC\",\n    \"span\": [24, 43]\n  },\n  {\n    \"id\": \"telegram:1:7149#s26\",\n    \"kind\": \"event\",\n    \"actor\": null,\n    \"action\": \"mention\",\n    \"object\": \"ZEC Frogs\",\n    \"qualifiers\": {},\n    \"origin\": \"unknown\",\n    \"source_role\": \"unknown\",\n    \"verification_status\": \"unverified\",\n    \"quote\": \"ZEC Frogs\",\n    \"span\": [0, 9]\n  }\n]}",
+    "refusal": null,
+    "reasoning": null
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 1693,
+  "completion_tokens": 1400,
+  "total_tokens": 3093,
+  "cost": 0.00102,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.00102,
+   "upstream_inference_prompt_cost": 0.00032114420507600304,
+   "upstream_inference_completions_cost": 0.000698855794923997
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

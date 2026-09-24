@@ -1,0 +1,23 @@
+{
+ "a": {
+  "quote": "Studio is built around Arc and Circle’s infrastructure, with integrations for CCTP, Gateway, Wallets, and other stablecoin tools.",
+  "actor": "Arc",
+  "action": "built",
+  "object": "Studio",
+  "qualifiers": {
+   "place": "around Arc and Circle’s infrastructure",
+   "counterparty": "CCTP, Gateway, Wallets"
+  },
+  "url": "https://t.me/WEB3_AGGREGATOR/423244"
+ },
+ "b": {
+  "quote": "Arc Introduces AI Coding Agent for Onchain App Development",
+  "actor": "Arc",
+  "action": "introduces",
+  "object": "AI Coding Agent",
+  "qualifiers": {
+   "version": "for Onchain App Development"
+  },
+  "url": "https://t.me/WEB3_AGGREGATOR/423244"
+ }
+}

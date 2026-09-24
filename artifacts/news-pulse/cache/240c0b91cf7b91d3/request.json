@@ -1,0 +1,17 @@
+{
+ "segments": [
+  {
+   "id": "telegram:15:423294#s2",
+   "text": "1. У них есть уже коллекция почти по эфиру.\n",
+   "mentions": [
+    {
+     "text": "эфиру",
+     "status": "ambiguous"
+    }
+   ],
+   "kind_hint": "post",
+   "url": "https://t.me/WEB3_AGGREGATOR/423294",
+   "time": "2026-09-18T14:55:21+00:00"
+  }
+ ]
+}

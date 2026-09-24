@@ -1,0 +1,46 @@
+{
+ "id": "gen-1790190796-gYcPtIiGhHoiUpg3ueBg",
+ "object": "chat.completion",
+ "created": 1790190796,
+ "model": "deepseek/deepseek-v4-flash",
+ "provider": "Novita",
+ "system_fingerprint": null,
+ "service_tier": null,
+ "choices": [
+  {
+   "index": 0,
+   "logprobs": null,
+   "finish_reason": "stop",
+   "native_finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "content": "{\"labels\": [{\"id\": \"telegram:11:96796#s2\", \"kind\": \"event\", \"actor\": \"t1fXjw\", \"action\": \"withdrew from exchanges\", \"object\": \"7,081 ZEC ($10.29 million)\", \"qualifiers\": {\"amount\": \"7,081 ZEC\", \"value_usd\": \"$10.29 million\", \"timeframe\": \"last 2 days\"}, \"origin\": \"retelling\", \"source_role\": \"editorial\", \"verification_status\": \"unverified\", \"quote\": \"За последние 2 дня t1fXjw вывел с бирж 7 081 #ZEC ($10,29 млн);\", \"span\": [0, 66]}, {\"id\": \"telegram:1:7144#s5\", \"kind\": \"promo_service\", \"actor\": \"Bitx project\", \"action\": \"announced whitelist for token drop\", \"object\": \"ZEC token drop\", \"qualifiers\": {\"platform\": \"ZEC\", \"requirements\": \"simple tasks and ZEC wallet\"}, \"origin\": \"own\", \"source_role\": \"author\", \"verification_status\": \"unverified\", \"quote\": \"👍Заполняем WL на дроп токена от проекта Bitx на ZEC. Потребуется выполнить простые задания и ZEC кошелек.\", \"span\": [0, 91]}, {\"id\": \"telegram:15:423274#s3\", \"kind\": \"participant_reaction\", \"actor\": \"author\", \"action\": \"reported pending status\", \"object\": \"ZEC projects\", \"qualifiers\": {}, \"origin\": \"own\", \"source_role\": \"participant\", \"verification_status\": \"unverified\", \"quote\": \"У меня Pending на остальных ZEC проектах...\", \"span\": [0, 40]}, {\"id\": \"telegram:11:96809#s0\", \"kind\": \"event\", \"actor\": \"Managing partner of Dragonfly\", \"action\": \"proposed to wind down Zcash developer fund\", \"object\": \"Zcash developer fund\", \"qualifiers\": {\"reason\": \"fund is large enough and risks being politicized\", \"source\": \"cointelegraph\"}, \"origin\": \"retelling\", \"source_role\": \"editorial\", \"verification_status\": \"unverified\", \"quote\": \"🤔 #ZEC Управляющий партнер Dragonfly предложил свернуть деятельность фонда разработчиков Zcash, утверждая, что фонд достаточно велик, чтобы финансировать оставшуюся работу над Zcash, и что он рискует быть «политизированным». cointelegraph\", \"span\": [0, 190]}, {\"id\": \"telegram:18:31503#s2\", \"kind\": \"event\", \"actor\": \"Bitcoin OG insider\", \"action\": \"placed long order and sold ETH, increased short margin\", \"object\": \"ZEC short position\", \"qualifiers\": {\"btc_order\": \"2450 BTC (~$190m) at $78,000\", \"eth_sale\": \"35,000 ETH ($87.5m) at ~$2500\", \"action_on_zec\": \"increased margin of losing short\"}, \"origin\": \"retelling\", \"source_role\": \"editorial\", \"verification_status\": \"unverified\", \"quote\": \"➤ Инсайдер Bitcoin OG выставил ордер на открытие лонга на 2450 BTC (~$190m) по цене $78,000. Также он продал 35,000 ETH ($87,5m) по цене ~$2500 и направил часть средств на увеличение обеспечения убыточного шорта по ZEC.\", \"span\": [0, 190]}, {\"id\": \"telegram:18:31503#s5\", \"kind\": \"event\", \"actor\": \"Four new wallets\", \"action\": \"withdrew from exchanges\", \"object\": \"32,293 ZEC (~$46.2m)\", \"qualifiers\": {\"amount\": \"32,293 ZEC\", \"value_usd\": \"~$46.2m\", \"exchanges\": \"Binance and others\"}, \"origin\": \"retelling\", \"source_role\": \"editorial\", \"verification_status\": \"unverified\", \"quote\": \"➤ Киты активно накапливают ZEC. Четыре новых кошелька вывели с Binance и других бирж 32,293 ZEC (~$46,2m).\", \"span\": [0, 105]}, {\"id\": \"telegram:9:1041046#s0\", \"kind\": \"event\", \"actor\": \"Zcash project\", \"action\": \"targets November upgrade\", \"object\": \"private payments speed improvement\", \"qualifiers\": {\"upgrade_month\": \"November\", \"improvement\": \"up to three times faster\"}, \"origin\": \"retelling\", \"source_role\": \"editorial\", \"verification_status\": \"unverified\", \"quote\": \"ZCASH TARGETS NOVEMBER UPGRADE TO MAKE PRIVATE PAYMENTS UP TO THREE TIMES FASTER ...\", \"span\": [0, 82]}, {\"id\": \"telegram:15:423298#s1\", \"kind\": \"event\", \"actor\": \"Zecmart marketplace\", \"action\": \"launching NFT collection mint\", \"object\": \"555 NFT free mint\", \"qualifiers\": {\"collection\": \"Zecmart\", \"supply\": \"555 NFT\", \"cost\": \"only ZEC network fee\", \"twitter_weak\": true, \"not_scam_likely\": \"Zcash noted them in 2023\"}, \"origin\": \"own\", \"source_role\": \"participant\", \"verification_status\": \"unverified\", \"quote\": \"Короче, маркетплейс Zecmart запускает минт своей коллекции. Твиттер слабый, но скорее всего не скам, так как Zcash отмечал их у себя на странице, еще в 2023 году. Будет фри минт на 555 NFT, из затрат - только немного $ZEC на комиссию сети.\", \"span\": [0, 190]}, {\"id\": \"telegram:15:423299#s2\", \"kind\": \"event\", \"actor\": \"Zecmart\", \"action\": \"announced collection details\", \"object\": \"3333 supply, ZEC Blockchain, mint price TBD\", \"qualifiers\": {\"supply\": \"3333\", \"blockchain\": \"ZEC\", \"mint_price\": \"TBD\"}, \"origin\": \"own\", \"source_role\": \"participant\", \"verification_status\": \"unverified\", \"quote\": \"3333 supply \\nZEC Blockchain\\nMint price TBD\", \"span\": [0, 42]}, {\"id\": \"telegram:15:423300#s1\", \"kind\": \"participant_reaction\", \"actor\": \"author\", \"action\": \"commented on missing information\", \"object\": \"ZEC project news\", \"qualifiers\": {\"link\": \"ТЫК\"}, \"origin\": \"own\", \"source_role\": \"participant\", \"verification_status\": \"unverified\", \"quote\": \"что-то мимо меня вчера инфа прошла, да и я чет ток в ZEC погрузился, но вот инфа -> ТЫК\", \"span\": [0, 78]}, {\"id\": \"telegram:7:12227#s1\", \"kind\": \"author_position\", \"actor\": \"author\", \"action\": \"expressed opinion on Bitcoin and ZEC\", \"object\": \"market conditions and SEC exemption\", \"qualifiers\": {\"bitcoin\": \"bullish\", \"zec\": \"stronger\", \"sec_exemption\": \"Innovation Exemption\", \"onchain_stocks\": \"green flag\", \"robinhood_winner\": true}, \"origin\": \"own\", \"source_role\": \"author\", \"verification_status\": \"unverified\", \"quote\": \"Биток продолжает показывает бычьи яйца, не такие конечно как ZEC. Одним из факторов конечно же стал Innovation Exemption от SEC, которые сказали: \\\"Мы сами всех отрегулируем, на ближайшие лет 5\\\". Вы уже наверное изучали, но если кратко - ончейн-акциям дают зеленый флаг (но не всем), и бОльший победитель тут конечно Робингуд, и наши щитки в паре с акциями (например, $AI).\", \"span\": [0, 290]}, {\"id\": \"telegram:15:423315#s0\", \"kind\": \"promo_service\", \"actor\": \"author\", \"action\": \"asked how to deposit quickly and cheaply\", \"object\": \"Zcash network\", \"qualifiers\": {\"topic\": \"deposit method\"}, \"origin\": \"own\", \"source_role\": \"participant\", \"verification_status\": \"unverified\", \"quote\": \"$ZEC - как быстро и дешево депнуть в Zcash? ☕️\", \"span\": [0, 48]}]}",
+    "refusal": null,
+    "reasoning": null
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 2027,
+  "completion_tokens": 2014,
+  "total_tokens": 4041,
+  "cost": 0.0008477,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.0008477,
+   "upstream_inference_prompt_cost": 0.00028378,
+   "upstream_inference_completions_cost": 0.00056392
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

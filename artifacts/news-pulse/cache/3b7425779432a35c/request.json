@@ -1,0 +1,21 @@
+{
+ "segments": [
+  {
+   "id": "telegram:11:96749#s2",
+   "text": "2. Кит обменял 512 #WBTC ($38,64 млн) и 354 #cbBTC ($26,73 млн) на 26 924 #ETH ($64,57 млн).",
+   "mentions": [
+    {
+     "text": "#ETH",
+     "status": "confirmed"
+    },
+    {
+     "text": "ETH",
+     "status": "confirmed"
+    }
+   ],
+   "kind_hint": "post",
+   "url": "https://t.me/cryptoattack24/96749",
+   "time": "2026-09-16T05:07:01+00:00"
+  }
+ ]
+}

@@ -1,0 +1,23 @@
+{
+ "a": {
+  "quote": "Бесплатный минт пройдёт 21 сентября в 20:00 мск",
+  "actor": "ZecFrogs",
+  "action": "бесплатный минт пройдёт 21 сентября в 20:00 мск",
+  "object": "ZecFrogs",
+  "qualifiers": {
+   "event_date": "2026-09-21T20:00:00+03:00"
+  },
+  "url": "https://t.me/WEB3_AGGREGATOR/423379"
+ },
+ "b": {
+  "quote": "▫️#ZEC = +$2,360,000.",
+  "actor": null,
+  "action": "report",
+  "object": "ZEC ETF net flow",
+  "qualifiers": {
+   "counterparty": "ETF",
+   "event_date": "2026-09-21"
+  },
+  "url": "https://t.me/crypto_hd/31561"
+ }
+}

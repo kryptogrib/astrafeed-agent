@@ -1,0 +1,17 @@
+{
+ "segments": [
+  {
+   "id": "telegram:15:423427#s12",
+   "text": "🛡️Bitx запустили регистрацию в WL на дроп токенов стандарта ZRC20. Для участия нужно выполнить задания в Х и оставить кошелёк Zcash.\n",
+   "mentions": [
+    {
+     "text": "Zcash",
+     "status": "confirmed"
+    }
+   ],
+   "kind_hint": "post",
+   "url": "https://t.me/WEB3_AGGREGATOR/423427",
+   "time": "2026-09-20T18:06:09+00:00"
+  }
+ ]
+}

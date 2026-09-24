@@ -1,0 +1,21 @@
+{
+ "segments": [
+  {
+   "id": "telegram:12:4873#s0",
+   "text": "Гарретт Буллиш (в убытке на $35М по шорту Zec на Hyperliquid) показал свой спот адрес Zec\n\n",
+   "mentions": [
+    {
+     "text": "Zec",
+     "status": "confirmed"
+    },
+    {
+     "text": "Zec",
+     "status": "confirmed"
+    }
+   ],
+   "kind_hint": "post",
+   "url": "https://t.me/Defiscamcheck/4873",
+   "time": "2026-09-19T10:34:17+00:00"
+  }
+ ]
+}

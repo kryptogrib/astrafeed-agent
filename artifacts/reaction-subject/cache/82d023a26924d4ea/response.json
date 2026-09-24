@@ -1,0 +1,46 @@
+{
+ "id": "gen-1790247226-OjxmVTaKUiW5YUbrlZkh",
+ "object": "chat.completion",
+ "created": 1790247226,
+ "model": "deepseek/deepseek-v4-flash",
+ "provider": "AtlasCloud",
+ "system_fingerprint": null,
+ "service_tier": null,
+ "choices": [
+  {
+   "index": 0,
+   "logprobs": null,
+   "finish_reason": "stop",
+   "native_finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "content": "{\n  \"items\": [\n    {\n      \"id\": \"arc|https://t.me/whitelist1/7138?comment=571567\",\n      \"verdict\": \"reject\",\n      \"fragment\": \"Вчера зарегался на одном аккаунте и на нем показывает, что Registration closes in: 02:47:00\",\n      \"why\": \"Comment is about registration timer, not about Arc Mainnet launch.\"\n    },\n    {\n      \"id\": \"arc|https://t.me/whitelist1/7138?comment=571572\",\n      \"verdict\": \"keep\",\n      \"fragment\": \"Во сколько Arc запуск? Никто не знает\",\n      \"why\": \"Comment directly asks about the launch time of Arc.\"\n    },\n    {\n      \"id\": \"arc|https://t.me/whitelist1/7138?comment=571581\",\n      \"verdict\": \"reject\",\n      \"fragment\": \"будешь гемблить ?\",\n      \"why\": \"Comment is about gambling, not about Arc Mainnet launch.\"\n    }\n  ]\n}",
+    "refusal": null,
+    "reasoning": null
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 1072,
+  "completion_tokens": 242,
+  "total_tokens": 1314,
+  "cost": 0.00021784,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.00021784,
+   "upstream_inference_prompt_cost": 0.00015008,
+   "upstream_inference_completions_cost": 6.776e-05
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

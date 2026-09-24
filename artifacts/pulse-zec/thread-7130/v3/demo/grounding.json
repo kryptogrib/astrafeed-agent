@@ -1,0 +1,31 @@
+{
+ "model_input": {
+  "request": "artifacts/pulse-zec/thread-7130/v3/request.json",
+  "input_sha256": "671c0b7050b7243c",
+  "mentions": {
+   "post": [
+    {
+     "text": "Zcash",
+     "status": "confirmed"
+    }
+   ]
+  },
+  "held_if_published_on_it": []
+ },
+ "publication": {
+  "grounding_version": "headline-hashtag/2026-09-24",
+  "classifier_sha256": "b471a79b80634986",
+  "mentions": {
+   "post": [
+    {
+     "text": "Zcash",
+     "status": "confirmed"
+    }
+   ]
+  },
+  "held": []
+ },
+ "mentions_changed": [],
+ "released_by_new_grounding": [],
+ "held_by_new_grounding": []
+}

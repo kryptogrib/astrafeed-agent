@@ -1,0 +1,18 @@
+{
+ "a": {
+  "quote": "🟠50 коллекций на Arc",
+  "actor": "Arc",
+  "action": "collection count",
+  "object": "50 collections",
+  "qualifiers": {},
+  "url": "https://t.me/cryptomokakke/961"
+ },
+ "b": {
+  "quote": "🟠Arc mainnet",
+  "actor": "Arc",
+  "action": "mainnet",
+  "object": null,
+  "qualifiers": {},
+  "url": "https://t.me/cryptomokakke/961"
+ }
+}

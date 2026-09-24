@@ -1,0 +1,22 @@
+{
+ "a": {
+  "quote": "Arc, the stablecoin-native Layer-1 built by Circle, launched its public mainnet, positioning itself as an \"Economic OS for the internet\" with USDC as the native gas token and deterministic sub-second finality.",
+  "actor": "Circle",
+  "action": "launched",
+  "object": "Arc",
+  "qualifiers": {
+   "event_date": "2026-09-16"
+  },
+  "url": "https://t.me/WEB3_AGGREGATOR/423100"
+ },
+ "b": {
+  "quote": "• Early on Arc — A chance to launch from day one in a new ecosystem built around stablecoins and global finance. Arc is built by Circle, with founding validators including BlackRock, Visa, Mastercard, DTCC, ICE (owner of the NYSE), Galaxy and more.",
+  "actor": null,
+  "action": "early on Arc — chance to launch from day one",
+  "object": "Arc",
+  "qualifiers": {
+   "place": "Arc"
+  },
+  "url": "https://t.me/spidersjournal/19007"
+ }
+}

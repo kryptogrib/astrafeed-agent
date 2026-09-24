@@ -1,0 +1,32 @@
+{
+ "choices": [
+  {
+   "message": {
+    "content": "{\"labels\": [{\"id\": \"telegram:15:423250#s7\", \"kind\": \"event\", \"actor\": \"BlackRock\", \"action\": \"transfer\", \"object\": \"ETH\", \"qualifiers\": {\"version\": null, \"event_date\": null, \"place\": \"Coinbase Prime\", \"counterparty\": null}, \"origin\": \"retelling\", \"source_role\": \"editorial\", \"verification_status\": \"source_statement\", \"quote\": \"BlackRock перевели на Coinbase Prime 54 096 #ETH (131,7 млн $) и 2 015 #BTC (153,8 млн $)\", \"span\": [0, 88]}]}"
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 1841,
+  "completion_tokens": 1699,
+  "total_tokens": 3540,
+  "cost": 0.0004851861,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 256,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.0004851861,
+   "upstream_inference_prompt_cost": 0.0001581286,
+   "upstream_inference_completions_cost": 0.0003270575
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

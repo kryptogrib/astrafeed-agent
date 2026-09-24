@@ -1,0 +1,17 @@
+{
+ "segments": [
+  {
+   "id": "telegram:9:1043301#s2",
+   "text": "• ETHEREUM \n",
+   "mentions": [
+    {
+     "text": "ETHEREUM",
+     "status": "confirmed"
+    }
+   ],
+   "kind_hint": "post",
+   "url": "https://t.me/marketfeed/1043301",
+   "time": "2026-09-22T15:08:22+00:00"
+  }
+ ]
+}

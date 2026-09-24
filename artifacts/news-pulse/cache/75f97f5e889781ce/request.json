@@ -1,0 +1,28 @@
+{
+ "a": {
+  "quote": "🇷🇺 Мосбиржа 22 сентября запустит бессрочные фьючерсы на индексы #BTC, #ETH, #SOL, #XRP и #TRX для квалифицированных инвесторов",
+  "actor": "Мосбиржа",
+  "action": "запустит",
+  "object": "бессрочные фьючерсы на индексы #BTC, #ETH, #SOL, #XRP и #TRX",
+  "qualifiers": {
+   "version": null,
+   "event_date": "22 сентября",
+   "place": null,
+   "counterparty": "квалифицированные инвесторы"
+  },
+  "url": "https://t.me/WEB3_AGGREGATOR/423158"
+ },
+ "b": {
+  "quote": "С 22 сентября квалифицированные инвесторы смогут торговать вечными фьючерсами на индексы #BTC, #ETH, #SOL, #XRP и #TRX.",
+  "actor": null,
+  "action": "launch",
+  "object": "вечные фьючерсы на индексы",
+  "qualifiers": {
+   "version": null,
+   "event_date": "22 сентября",
+   "place": null,
+   "counterparty": null
+  },
+  "url": "https://t.me/crypto_hd/31450"
+ }
+}

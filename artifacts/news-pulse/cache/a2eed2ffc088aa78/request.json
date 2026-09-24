@@ -1,0 +1,20 @@
+{
+ "a": {
+  "quote": "До Arc mainnet остались считаные дни",
+  "actor": null,
+  "action": "anticipate",
+  "object": "Arc mainnet",
+  "qualifiers": {},
+  "url": "https://t.me/WEB3_AGGREGATOR/422864"
+ },
+ "b": {
+  "quote": "Также, Fomo о котором рассказывал ранее, вместе с Opensea, обещали поддерживать Arc с первого дня майнета, мемчикам и нфт быть! 🙏",
+  "actor": "Fomo и Opensea",
+  "action": "обещали поддерживать",
+  "object": "Arc",
+  "qualifiers": {
+   "event_date": "с первого дня майнета"
+  },
+  "url": "https://t.me/WEB3_AGGREGATOR/422864"
+ }
+}
