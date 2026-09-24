@@ -3,10 +3,15 @@ from collections.abc import Awaitable, Callable
 from typing import Any, Literal
 
 from fastapi import FastAPI, HTTPException, Request
-from fastapi.responses import JSONResponse, PlainTextResponse
+from fastapi.responses import HTMLResponse, JSONResponse, PlainTextResponse
 
 from astrafeed.adapters.http.a2mcp import mount_a2mcp
-from astrafeed.application.agenda_query import AgendaNotFound, AgendaPreparing
+from astrafeed.application.agenda_query import (
+    AgendaNotFound,
+    AgendaPreparing,
+    render_agenda_html,
+    render_story_html,
+)
 
 PulseFn = Callable[[str, str | None], dict[str, Any]]
 """Pulse(topic, window) -> payload.
@@ -116,10 +121,12 @@ def create_app(
 
         @app.get("/agenda", response_model=None)
         async def get_agenda(
-            format: Literal["json", "md"] = "json",
+            format: Literal["json", "md", "html"] = "json",
             snapshot_id: str | None = None,
-        ) -> dict[str, Any] | PlainTextResponse:
+        ) -> dict[str, Any] | PlainTextResponse | HTMLResponse:
             result = await _call_async(agenda, snapshot_id=snapshot_id)
+            if format == "html":
+                return HTMLResponse(render_agenda_html(result))
             if format == "md":
                 return _markdown(result["brief_markdown"])
             return result
@@ -150,10 +157,12 @@ def create_app(
         @app.get("/stories/{story_id}", response_model=None)
         async def get_story(
             story_id: str,
-            format: Literal["json", "md"] = "json",
+            format: Literal["json", "md", "html"] = "json",
             snapshot_id: str | None = None,
-        ) -> dict[str, Any] | PlainTextResponse:
+        ) -> dict[str, Any] | PlainTextResponse | HTMLResponse:
             result = await _call_async(story, story_id=story_id, snapshot_id=snapshot_id)
+            if format == "html":
+                return HTMLResponse(render_story_html(result))
             if format == "md":
                 return _markdown(result["brief_markdown"])
             return result

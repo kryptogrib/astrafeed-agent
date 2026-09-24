@@ -113,6 +113,20 @@ async def test_agenda_search_story_share_one_snapshot():
     md = await _get(app, "/agenda?format=md")
     assert md.headers["content-type"].startswith("text/markdown")
     assert "Потоки ETH ETF" in md.text
+    assert "**2 канала** · ↑ +2 за сутки" in md.text
+    assert "Пишут: [@alpha](https://t.me/alpha/10)" in md.text
+    assert "> «Отток ETH ETF составил 120 млн.» — [@alpha](https://t.me/alpha/10)" in md.text
+
+    page = await _get(app, "/agenda?format=html")
+    assert page.headers["content-type"].startswith("text/html")
+    assert '<a href="/stories/st-eth?format=html&amp;snapshot_id=snap-demo">' in page.text
+    assert '<a href="https://t.me/alpha/10">@alpha</a>' in page.text
+
+    story_page = await _get(app, "/stories/st-eth?format=html")
+    assert "<h1>Потоки ETH ETF</h1>" in story_page.text
+    assert "Посты" in story_page.text
+    story_md = await _get(app, "/stories/st-eth?format=md")
+    assert "## Посты" in story_md.text
 
     found = await _get(app, "/stories/search?q=Потоки%20ETH%20ETF")
     assert found.json()["hits"][0]["story_id"] == "st-eth"
@@ -142,3 +156,40 @@ async def test_preparing_is_503_and_old_apis_remain():
     assert r.status_code == 503
     assert r.json()["status"] == "preparing"
     assert (await _get(app, "/pulse?topic=zec")).status_code == 200
+
+
+def test_agenda_page_escapes_text_and_drops_unsafe_links():
+    from astrafeed.application.agenda_query import render_agenda_html
+
+    payload = {
+        "snapshot_id": "snap",
+        "t": "2026-09-25T12:00:00+00:00",
+        "stale": True,
+        "limitations": ["processing_in_progress"],
+        "coverage": {
+            "channels_ok": 3,
+            "channels_failed": 0,
+            "publications_total": 10,
+            "publications_processed": 8,
+        },
+        "stories": [
+            {
+                "story_id": "s1",
+                "title": "<script>x</script>",
+                "entities": ["HYPE"],
+                "current_channels": 1,
+                "growth": None,
+                "first_seen": "2026-09-25T09:14:00+00:00",
+                "explanation": "a & b",
+                "claims": [{"quote": "</blockquote>", "channel": "@c", "link": "javascript:1"}],
+            }
+        ],
+    }
+
+    page = render_agenda_html(payload)
+
+    assert "<script>x" not in page and "&lt;script&gt;x" in page
+    assert "a &amp; b" in page and "&lt;/blockquote&gt;" in page
+    assert "javascript:" not in page
+    assert "снимок устарел; обработка ещё идёт" in page
+    assert "рост н/д" in page and "впервые 25.09 09:14 UTC" in page
