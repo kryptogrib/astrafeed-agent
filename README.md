@@ -1,14 +1,14 @@
-# Crowd Pulse
+# AstraFeed
 
 **Live agenda of crypto Telegram channels for AI agents, published as an OKX.AI A2MCP service.**
 
-Crowd Pulse reads public Telegram channels, groups posts into stories, and every cycle publishes a snapshot: which stories are new or growing over the last 24 hours compared with the previous 24 hours, what the channels claim, and links to the original posts. An agent calls one endpoint and gets a verifiable answer. It gets no sentiment score and no trading advice.
+AstraFeed reads public Telegram channels, groups posts into stories, and every cycle publishes a snapshot: which stories are new or growing over the last 24 hours compared with the previous 24 hours, what the channels claim, and links to the original posts. An agent calls one endpoint and gets a verifiable answer. It gets no sentiment score and no trading advice.
 
 Submitted to **OKX Dev Day 2026, track "Build a Company" (OKX AI)**.
 
 | | |
 |---|---|
-| Live endpoint | `POST https://cutememe.lol/a2mcp/crowd-pulse` |
+| Live endpoint | `POST https://cutememe.lol/a2mcp/astrafeed` |
 | Health | `GET https://cutememe.lol/healthz` |
 | OKX.AI listing | _pending review_ |
 | Demo video | _link_ |
@@ -17,17 +17,17 @@ Submitted to **OKX Dev Day 2026, track "Build a Company" (OKX AI)**.
 
 ```sh
 # Agenda of the current snapshot (the empty body is also what the OKX review sends)
-curl -X POST https://cutememe.lol/a2mcp/crowd-pulse
+curl -X POST https://cutememe.lol/a2mcp/astrafeed
 
 # Search stories, then open one card on the same snapshot
-curl -X POST https://cutememe.lol/a2mcp/crowd-pulse \
+curl -X POST https://cutememe.lol/a2mcp/astrafeed \
   -H 'content-type: application/json' -d '{"query": "ETH"}'
-curl -X POST https://cutememe.lol/a2mcp/crowd-pulse \
+curl -X POST https://cutememe.lol/a2mcp/astrafeed \
   -H 'content-type: application/json' \
   -d '{"story_id": "st-...", "snapshot_id": "snap-..."}'
 
 # Human-readable Markdown brief instead of JSON
-curl -X POST https://cutememe.lol/a2mcp/crowd-pulse \
+curl -X POST https://cutememe.lol/a2mcp/astrafeed \
   -H 'content-type: application/json' -d '{"format": "md"}'
 ```
 
@@ -41,7 +41,7 @@ Request fields, all optional:
 | `limit` | Search results, 1–50 (default 10) |
 | `format` | `json` (default) or `md` |
 
-The response is `{"service": "crowd-pulse", "action": "agenda" | "search" | "story", "result": {...}}`. Before the first snapshot the service answers `503 {"status": "preparing"}`. Plain REST mirrors of the same data are `GET /agenda`, `GET /stories/search?q=` and `GET /stories/{id}`.
+The response is `{"service": "astrafeed", "action": "agenda" | "search" | "story", "result": {...}}`. Before the first snapshot the service answers `503 {"status": "preparing"}`. Plain REST mirrors of the same data are `GET /agenda`, `GET /stories/search?q=` and `GET /stories/{id}`.
 
 ## How it works
 
@@ -50,7 +50,7 @@ Telegram channels ──collect──▶ SQLite queue ──LLM extract + assign
                                                                         │
                         snapshot (atomic, per cycle) ◀── growth vs previous 24h
                                   │
-             /a2mcp/crowd-pulse · /agenda · /stories  (read-only, no LLM on request)
+             /a2mcp/astrafeed · /agenda · /stories  (read-only, no LLM on request)
 ```
 
 - **Verifiable output.** Every quoted claim is an exact substring of the stored post (`text[start:end]`), and every story links to its `t.me` sources. A quote shows that a channel said something. It does not show that the event happened. The channel count measures spread, not independent confirmation.

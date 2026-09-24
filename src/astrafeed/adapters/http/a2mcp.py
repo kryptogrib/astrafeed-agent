@@ -13,10 +13,10 @@ from fastapi import Body, FastAPI, HTTPException
 from fastapi.responses import PlainTextResponse
 from pydantic import BaseModel, Field
 
-A2MCP_PATH = "/a2mcp/crowd-pulse"
+A2MCP_PATH = "/a2mcp/astrafeed"
 
 
-class CrowdPulseRequest(BaseModel):
+class AstraFeedRequest(BaseModel):
     query: str | None = Field(
         None, description="Search stories by title, entity, alias or claim text."
     )
@@ -38,10 +38,10 @@ def mount_a2mcp(
     """`call` is app.py's _call_async, so errors map to the same HTTP codes as REST."""
 
     @app.post(A2MCP_PATH, response_model=None)
-    async def crowd_pulse(
-        req: Annotated[CrowdPulseRequest | None, Body()] = None,
+    async def astrafeed(
+        req: Annotated[AstraFeedRequest | None, Body()] = None,
     ) -> dict[str, Any] | PlainTextResponse:
-        req = req or CrowdPulseRequest()
+        req = req or AstraFeedRequest()
         if req.query and req.story_id:
             raise HTTPException(status_code=422, detail="pass query or story_id, not both")
         if req.story_id:
@@ -63,4 +63,4 @@ def mount_a2mcp(
             return PlainTextResponse(
                 result["brief_markdown"], media_type="text/markdown; charset=utf-8"
             )
-        return {"service": "crowd-pulse", "action": action, "result": result}
+        return {"service": "astrafeed", "action": action, "result": result}

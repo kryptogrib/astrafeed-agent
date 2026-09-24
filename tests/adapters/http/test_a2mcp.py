@@ -43,7 +43,7 @@ async def _post(app, url: str, **kwargs):
 
 async def test_bare_post_returns_agenda_for_okx_self_check():
     # OKX A2MCP review runs `curl -i -X POST <endpoint>` with no body and expects 200.
-    r = await _post(await _app(), "/a2mcp/crowd-pulse")
+    r = await _post(await _app(), "/a2mcp/astrafeed")
     assert r.status_code == 200
     body = r.json()
     assert body["action"] == "agenda"
@@ -53,14 +53,14 @@ async def test_bare_post_returns_agenda_for_okx_self_check():
 
 async def test_search_then_story_on_the_same_snapshot():
     app = await _app()
-    found = await _post(app, "/a2mcp/crowd-pulse", json={"query": "ETH"})
+    found = await _post(app, "/a2mcp/astrafeed", json={"query": "ETH"})
     assert found.json()["action"] == "search"
     hit = found.json()["result"]["hits"][0]
     assert hit["story_id"] == "st-eth"
 
     card = await _post(
         app,
-        "/a2mcp/crowd-pulse",
+        "/a2mcp/astrafeed",
         json={"story_id": hit["story_id"], "snapshot_id": found.json()["result"]["snapshot_id"]},
     )
     assert card.json()["action"] == "story"
@@ -69,13 +69,13 @@ async def test_search_then_story_on_the_same_snapshot():
 
 async def test_markdown_format_and_errors():
     app = await _app()
-    md = await _post(app, "/a2mcp/crowd-pulse", json={"format": "md"})
+    md = await _post(app, "/a2mcp/astrafeed", json={"format": "md"})
     assert md.headers["content-type"].startswith("text/markdown")
     assert "Потоки ETH ETF" in md.text
 
-    both = await _post(app, "/a2mcp/crowd-pulse", json={"query": "ETH", "story_id": "st-eth"})
+    both = await _post(app, "/a2mcp/astrafeed", json={"query": "ETH", "story_id": "st-eth"})
     assert both.status_code == 422
-    assert (await _post(app, "/a2mcp/crowd-pulse", json={"story_id": "nope"})).status_code == 404
+    assert (await _post(app, "/a2mcp/astrafeed", json={"story_id": "nope"})).status_code == 404
 
 
 async def test_preparing_stays_503():
@@ -83,12 +83,12 @@ async def test_preparing_stays_503():
         raise AgendaPreparing("preparing")
 
     app = create_app(agenda=preparing, stories_search=preparing, story=preparing)
-    r = await _post(app, "/a2mcp/crowd-pulse")
+    r = await _post(app, "/a2mcp/astrafeed")
     assert r.status_code == 503
     assert r.json()["status"] == "preparing"
 
 
-@pytest.mark.parametrize("path", ["/a2mcp/crowd-pulse"])
+@pytest.mark.parametrize("path", ["/a2mcp/astrafeed"])
 async def test_not_mounted_without_agenda(path):
     app = create_app(pulse=lambda topic, window=None: {"brief_markdown": "x"})
     assert (await _post(app, path)).status_code in (404, 405)

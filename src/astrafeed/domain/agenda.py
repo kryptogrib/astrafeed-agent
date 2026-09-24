@@ -1,4 +1,4 @@
-"""Crowd Pulse agenda: publications, claims, stories, and comparable windows.
+"""AstraFeed agenda: publications, claims, stories, and comparable windows.
 
 Four separate notions: entity (Ethereum), story (ETH ETF flows), event
 (outflow on a date), position (author reads the outflow as weak demand).

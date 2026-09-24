@@ -70,7 +70,7 @@ def create_app(
     health: HealthFn | None = None,
 ) -> FastAPI:
     """info is added to /healthz as is (e.g. commit and data fingerprint of a demo run)."""
-    app = FastAPI(title="AstraFeed Token Brief")
+    app = FastAPI(title="AstraFeed")
 
     @app.exception_handler(AgendaPreparing)
     async def preparing_handler(_request: Request, _exc: AgendaPreparing) -> JSONResponse:
