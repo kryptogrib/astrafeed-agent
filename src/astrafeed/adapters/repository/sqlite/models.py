@@ -44,6 +44,16 @@ class RawItemRow(Base):
     payload: Mapped[str]
 
 
+class XpozThreadRow(Base):
+    __tablename__ = "xpoz_thread"
+    post_id: Mapped[str] = mapped_column(String, primary_key=True)
+    reply_count: Mapped[int] = mapped_column(default=0)
+    fetched: Mapped[bool] = mapped_column(default=False)
+    fetched_at: Mapped[datetime | None] = mapped_column(UtcDateTime(), default=None)
+    comments_json: Mapped[str] = mapped_column(default="[]")
+    truncated: Mapped[bool] = mapped_column(default=False)
+
+
 class SourceIngestionStateRow(Base):
     __tablename__ = "source_ingestion_state"
     source_id: Mapped[int] = mapped_column(ForeignKey("source.id"), primary_key=True)

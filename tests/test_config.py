@@ -1,6 +1,11 @@
 from astrafeed.config import Settings
 
 
+def test_xpoz_accounts_are_loaded_as_a_separate_source_list():
+    settings = Settings.model_validate({"xpoz_accounts": ["@WuBlockchain"]})
+    assert settings.xpoz_accounts == ["@WuBlockchain"]
+
+
 def test_default_language_is_english(tmp_path):
     assert Settings.load(tmp_path / "missing.yaml").language == "en"
 
