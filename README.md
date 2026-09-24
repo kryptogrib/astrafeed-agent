@@ -6,7 +6,7 @@
 
 AstraFeed turns posts from 38 selected public channels into a live agenda for humans and AI agents. It groups posts into stories, compares the last 24 hours with the previous 24, and links every displayed claim to its original Telegram post. The same published snapshot is available as a readable page, JSON, Markdown, and an OKX.AI A2MCP service.
 
-**[Open the live agenda](https://cutememe.lol/agenda?format=html)** · **[Check the live service](https://cutememe.lol/healthz)** · [Source code](https://github.com/kryptogrib/astrafeed-agent)
+**[Open the live agenda](https://cutememe.lol/agenda?format=html)** · **[Watch the 2:56 demo](docs/submission/astrafeed-demo.mp4)** · [Check the live service](https://cutememe.lol/healthz)
 
 Built for **OKX Dev Day 2026 · Build a Company / OKX AI**. A2MCP endpoint: `POST https://cutememe.lol/a2mcp/astrafeed`. OKX.AI agent **#13877** has a free service submitted; its marketplace listing is **under review as of 25 Sep 2026**.
 
@@ -15,7 +15,7 @@ Built for **OKX Dev Day 2026 · Build a Company / OKX AI**. A2MCP endpoint: `POS
 | [Live agenda](https://cutememe.lol/agenda?format=html) | Public HTTPS |
 | [A2MCP](https://cutememe.lol/a2mcp/astrafeed) | Empty `POST` returns the agenda; open the URL in a browser for the curl |
 | [OKX.AI #13877](https://www.okx.ai/agents/13877) | Free service submitted; marketplace card still in review |
-| Demo video | Coming next; the live agenda is the walkthrough until then |
+| [Demo video](docs/submission/astrafeed-demo.mp4) | 2:56 narrated product and A2MCP walkthrough |
 
 The callable integration is the HTTPS endpoint. The marketplace card is the same service after OKX publishes it.
 
@@ -119,9 +119,8 @@ An agent saves the returned `snapshot_id`, then requests
 The delta contains new/updated cards and changes in sources, quotes and sourcing
 labels. An unavailable baseline returns the full agenda with
 `baseline_unavailable`. `snapshot_id` can still pin the target of the comparison.
-This is in the current tree; the public host only answers it after that commit
-is deployed (`GET /healthz` → `commit`). Until then a live call ignores the
-field and returns the full agenda.
+The public host supports this on deployed commits; check `GET /healthz` →
+`commit` when comparing an older pinned snapshot with a newer live one.
 [Response fields, examples and limits](docs/snapshot-changes.md).
 
 ## How it works
