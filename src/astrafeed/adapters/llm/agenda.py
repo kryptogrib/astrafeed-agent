@@ -213,7 +213,7 @@ class OpenRouterAssigner:
             model=self._model,
             response_model=AssignmentSchema,
             max_tokens=ASSIGN_MAX_TOKENS,
-            extra_body={"reasoning": {"enabled": False}},
+            extra_body={"reasoning": {"enabled": False}, "provider": {"sort": "throughput"}},
             messages=[
                 {"role": "system", "content": ASSIGN_PROMPT},
                 {"role": "user", "content": _assignment_user(**kwargs)},

@@ -58,6 +58,7 @@ async def test_agenda_chat_calls_disable_hidden_reasoning(monkeypatch):
 
     for call in (extraction_call, assignment_call):
         assert call.await_args.kwargs["extra_body"]["reasoning"] == {"enabled": False}
+    assert assignment_call.await_args.kwargs["extra_body"]["provider"] == {"sort": "throughput"}
 
 
 @pytest.mark.asyncio
