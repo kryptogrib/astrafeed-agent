@@ -61,7 +61,8 @@ def _supported_link(
     correct entity label or similar embedding cannot repair an unrelated quote.
     """
     quote = link.quote.strip()
-    if not quote or quote not in pub.text or _VAGUE_STORY.search(title) or ";" in title:
+    if (not quote or quote not in pub.text or _VAGUE_STORY.search(title)
+        or ";" in title or re.match(r"WATCH LIVE\b", quote, re.I)):
         return False
     before_quote = pub.text[: pub.text.index(quote)]
     # A bullet under a future-plan heading is not evidence of a completed launch.
