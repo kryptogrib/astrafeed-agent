@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import asyncio
 import json
 from collections.abc import Sequence
 from dataclasses import dataclass
@@ -191,15 +192,18 @@ class OpenRouterExtractor:
         self._model = model
 
     async def extract(self, text: str) -> ExtractionResult:
-        raw = await self._client.chat.completions.create(
-            model=self._model,
-            response_model=ExtractionSchema,
-            extra_body={"reasoning": {"enabled": False}},
-            messages=[
-                {"role": "system", "content": EXTRACT_PROMPT},
-                {"role": "user", "content": text},
-            ],
-        )
+        async with asyncio.timeout(60):
+            raw = await self._client.chat.completions.create(
+                model=self._model,
+                response_model=ExtractionSchema,
+                max_retries=2,
+                timeout=45,
+                extra_body={"reasoning": {"enabled": False}, "provider": {"sort": "throughput"}},
+                messages=[
+                    {"role": "system", "content": EXTRACT_PROMPT},
+                    {"role": "user", "content": text},
+                ],
+            )
         return schema_to_extraction(text, raw)
 
 
