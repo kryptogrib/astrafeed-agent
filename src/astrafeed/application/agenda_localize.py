@@ -18,7 +18,7 @@ from astrafeed.domain.agenda import (
     Snapshot,
     StoryCard,
     StoryDetail,
-    numbers_are_grounded,
+    numbers_in,
 )
 from astrafeed.ports.agenda import Translator
 
@@ -31,6 +31,15 @@ CACHE_LIMIT = 5000
 
 def needs_translation(text: str) -> bool:
     return bool(text) and _CYRILLIC.search(text) is not None
+
+
+def _grounded_numbers(text: str, evidence: list[str]) -> bool:
+    def canonical(number: str) -> str:
+        # Decimal punctuation changes in translation; thousands separators do not.
+        return number.replace(",", ".") if re.fullmatch(r"\d+[,.]\d{1,2}", number) else number
+
+    allowed = {canonical(number) for quote in evidence for number in numbers_in(quote)}
+    return all(canonical(number) in allowed for number in numbers_in(text))
 
 
 class EnglishLocalizer:
@@ -85,7 +94,7 @@ class EnglishLocalizer:
     def _english(self, text: str, evidence: list[str] | None = None) -> str:
         """Translation of a non-English text, or "" when none is needed or known."""
         translated = self._cache.get(text, "") if needs_translation(text) else ""
-        if translated and evidence is not None and not numbers_are_grounded(translated, evidence):
+        if translated and evidence is not None and not _grounded_numbers(translated, evidence):
             return ""
         return translated
 

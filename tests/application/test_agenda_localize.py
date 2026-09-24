@@ -143,3 +143,10 @@ async def test_translated_headline_and_explanation_cannot_invent_numbers():
     assert card.title == "Потоки ETH ETF"
     assert card.explanation == QUOTE
     assert card.claims[0].translation == ""
+
+
+def test_decimal_comma_and_point_are_the_same_grounded_number():
+    localizer = EnglishLocalizer(Translator())
+    source = "Payy, возможно, взломан на $1,83 млн."
+    localizer._cache[source] = "Payy may have been hacked for $1.83 million."
+    assert localizer._english(source, [source]) == localizer._cache[source]
