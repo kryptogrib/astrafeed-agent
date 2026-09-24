@@ -83,9 +83,7 @@ def select_assignment_context(
 ) -> tuple[list[Entity], list[Story], list[Event]]:
     candidate_keys = {(item.publication_id, item.fragment_index) for item in candidates}
     matched_links = [
-        link
-        for link in links
-        if (link.publication_id, link.fragment_index) in candidate_keys
+        link for link in links if (link.publication_id, link.fragment_index) in candidate_keys
     ]
     story_ids = {link.story_id for link in matched_links}
     event_ids = {link.event_id for link in matched_links if link.event_id}
@@ -207,12 +205,15 @@ async def assign_publication(
         except Exception:
             await store.enqueue(publication.publication_id, "assign_error")
             return
+        story = _resolve_story(assignment, stories, publication)
+        if story is None:
+            if getattr(assignment, "story_decision", None) != "ambiguous":
+                await store.enqueue(publication.publication_id, "assign_error")
+                return
+            continue
         chosen_entities = _apply_entities(entities, assignment)
         for entity in chosen_entities:
             await store.save_entity(entity)
-        story = _resolve_story(assignment, stories, publication)
-        if story is None:
-            continue
         await store.save_story(story)
         event_id = _resolve_event(assignment, story.story_id, events)
         if event_id:
@@ -250,7 +251,9 @@ def _resolve_story(
         for story in stories:
             if story.story_id == assignment.story_id:
                 return story
-    title = assignment.title_ru or assignment.boundary or "Сюжет"
+    title = assignment.title_ru.strip()
+    if title.casefold() in {"", "сюжет"}:
+        return None
     story_id = assignment.story_id or _stable_id("st", title)
     return Story(
         story_id=story_id,

@@ -236,6 +236,7 @@ async def _agenda_poll(
                 assigner=assigner,
                 now=now,
                 collect=collect,
+                extract_concurrency=cfg.agenda.extract_concurrency,
             )
             if snapshot is None:
                 _log.warning("agenda cycle did not publish (budget or incomplete)")

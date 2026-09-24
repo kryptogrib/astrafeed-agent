@@ -1,3 +1,4 @@
+import asyncio
 from datetime import UTC, datetime, timedelta
 
 import pytest
@@ -44,7 +45,7 @@ class Reader:
 
 class Extractor:
     async def extract(self, text: str) -> ExtractionResult:
-        quote = text[: min(20, len(text))] or text
+        quote = text
         return ExtractionResult(
             reuse_key=analysis_reuse_key(text_hash(text)),
             text_hash=text_hash(text),
@@ -132,6 +133,136 @@ async def test_cycle_publishes_snapshot_and_restart_does_not_duplicate():
 
 
 @pytest.mark.asyncio
+async def test_extraction_overlaps_but_assignment_stays_chronological():
+    store = InMemoryAgendaStore()
+    t = datetime(2026, 9, 24, 12, tzinfo=UTC)
+    texts = [f"Отток ETH ETF номер {number} сегодня." for number in range(3)]
+
+    class ConcurrentExtractor(Extractor):
+        active = 0
+        maximum = 0
+
+        async def extract(self, text):
+            self.active += 1
+            self.maximum = max(self.maximum, self.active)
+            await asyncio.sleep(0.01)
+            self.active -= 1
+            return await super().extract(text)
+
+    class RecordingAssigner(Assigner):
+        def __init__(self):
+            self.order = []
+
+        async def assign(self, **kwargs):
+            self.order.append(kwargs["fragment"].text)
+            return await super().assign(**kwargs)
+
+    extractor = ConcurrentExtractor()
+    assigner = RecordingAssigner()
+    await run_cycle(
+        store,
+        reader=Reader(
+            {
+                1: [
+                    _item("@a", str(index), text, t - timedelta(hours=3 - index))
+                    for index, text in enumerate(texts)
+                ]
+            }
+        ),
+        source_ids=[1],
+        extractor=extractor,
+        embedder=Embedder(),
+        assigner=assigner,
+        now=t,
+        extract_concurrency=2,
+    )
+
+    assert extractor.maximum == 2
+    assert assigner.order == texts
+
+
+@pytest.mark.asyncio
+async def test_concurrent_extraction_reuses_identical_text():
+    store = InMemoryAgendaStore()
+    t = datetime(2026, 9, 24, 12, tzinfo=UTC)
+    quote = "Отток ETH ETF составил 120 млн сегодня."
+
+    class CountingExtractor(Extractor):
+        calls = 0
+
+        async def extract(self, text):
+            self.calls += 1
+            await asyncio.sleep(0.01)
+            return await super().extract(text)
+
+    extractor = CountingExtractor()
+    await run_cycle(
+        store,
+        reader=Reader(
+            {
+                1: [_item("@a", "1", quote, t - timedelta(hours=2))],
+                2: [_item("@b", "2", quote, t - timedelta(hours=1))],
+            }
+        ),
+        source_ids=[1, 2],
+        extractor=extractor,
+        embedder=Embedder(),
+        assigner=Assigner(),
+        now=t,
+        extract_concurrency=2,
+    )
+
+    assert extractor.calls == 1
+
+
+@pytest.mark.asyncio
+async def test_extraction_budget_block_preserves_last_snapshot():
+    store = InMemoryAgendaStore()
+    t = datetime(2026, 9, 24, 12, tzinfo=UTC)
+    initial = await run_cycle(
+        store,
+        reader=Reader(
+            {1: [_item("@a", "1", "Отток ETH ETF сегодня утром.", t - timedelta(hours=2))]}
+        ),
+        source_ids=[1],
+        extractor=Extractor(),
+        embedder=Embedder(),
+        assigner=Assigner(),
+        now=t,
+    )
+    assert initial is not None
+
+    class BlockedExtractor:
+        async def extract(self, text):
+            raise BudgetExceeded("Daily global LLM budget exhausted")
+
+    blocked = await run_cycle(
+        store,
+        reader=Reader(
+            {
+                1: [
+                    _item("@a", "1", "Отток ETH ETF сегодня утром.", t - timedelta(hours=2)),
+                    _item(
+                        "@a", "2", "Новый отток ETH ETF сегодня вечером.", t - timedelta(hours=1)
+                    ),
+                ]
+            }
+        ),
+        source_ids=[1],
+        extractor=BlockedExtractor(),
+        embedder=Embedder(),
+        assigner=Assigner(),
+        now=t + timedelta(minutes=5),
+        extract_concurrency=2,
+    )
+
+    assert blocked is None
+    assert (await store.get_snapshot(None)).snapshot_id == initial.snapshot_id
+    assert store.queue_reason("1:2") == "new"
+    assert (await store.get_cycle_state()).budget_blocked is True
+
+
+@pytest.mark.asyncio
 async def test_budget_block_keeps_last_snapshot_and_queue():
     store = InMemoryAgendaStore()
     t = datetime(2026, 9, 24, 12, tzinfo=UTC)
@@ -187,21 +318,20 @@ async def test_provider_error_detail_does_not_leak_into_cycle_health():
         async def assign(self, **kwargs):
             raise RuntimeError("SECRET_POST_CONTENT: full provider completion")
 
-    with pytest.raises(RuntimeError):
-        await run_cycle(
-            store,
-            reader=Reader({1: [_item("@a", "1", "Отток ETH ETF.", t - timedelta(hours=1))]}),
-            source_ids=[1],
-            extractor=Extractor(),
-            embedder=Embedder(),
-            assigner=LeakyAssigner(),
-            now=t,
-        )
+    await run_cycle(
+        store,
+        reader=Reader({1: [_item("@a", "1", "Отток ETH ETF сегодня.", t - timedelta(hours=1))]}),
+        source_ids=[1],
+        extractor=Extractor(),
+        embedder=Embedder(),
+        assigner=LeakyAssigner(),
+        now=t,
+    )
 
     state = await store.get_cycle_state()
-    assert "RuntimeError" in state.last_error
+    assert state.last_error == ""
     assert "SECRET_POST_CONTENT" not in state.last_error
-    assert len(state.last_error) < 200
+    assert store.queue_reason("1:1") == "assign_error"
 
 
 @pytest.mark.asyncio
@@ -211,9 +341,7 @@ async def test_health_redacts_legacy_persisted_provider_error():
     state.last_error = "<failed_attempts>\nSECRET_POST_CONTENT: full completion\n</failed_attempts>"
     await store.set_cycle_state(state)
 
-    payload = await cycle_health(
-        store, now=datetime(2026, 9, 24, 12, tzinfo=UTC), commit="test"
-    )
+    payload = await cycle_health(store, now=datetime(2026, 9, 24, 12, tzinfo=UTC), commit="test")
 
     assert payload["cycle"]["last_error"] == "analysis_error"
     assert "SECRET_POST_CONTENT" not in str(payload)

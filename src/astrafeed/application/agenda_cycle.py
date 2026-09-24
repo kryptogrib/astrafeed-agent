@@ -1,12 +1,15 @@
-"""Sequential agenda cycle: collect → analyze posts → publish a snapshot.
+"""Agenda cycle: collect → concurrent extraction → ordered assignment → snapshot.
 
 HTTP handlers never enter this module. Paid calls stay in extract/embed/assign.
 """
 
 from __future__ import annotations
 
+import asyncio
+import logging
 from collections.abc import Awaitable, Callable, Sequence
 from datetime import datetime
+from time import perf_counter
 from typing import Protocol
 
 from astrafeed.application.agenda_assign import assign_publication
@@ -14,9 +17,12 @@ from astrafeed.application.agenda_extract import analyze_publication
 from astrafeed.application.agenda_query import health_payload
 from astrafeed.application.agenda_snapshot import build_snapshot, publish_snapshot
 from astrafeed.domain.agenda import (
+    CLASSIFIER_VERSION,
     LOOKBACK,
+    ExtractionResult,
     PublicationVersion,
     Snapshot,
+    analysis_reuse_key,
     publication_id,
     text_hash,
     windows_at,
@@ -26,6 +32,7 @@ from astrafeed.domain.spend_budget import BudgetExceeded
 from astrafeed.ports.agenda import AgendaStore, Embedder, OpenExtractor, StoryAssigner
 
 CollectFn = Callable[[datetime, datetime], Awaitable[None]]
+_log = logging.getLogger(__name__)
 
 
 class WindowReader(Protocol):
@@ -104,7 +111,10 @@ async def run_cycle(
     assigner: StoryAssigner,
     now: datetime,
     collect: CollectFn | None = None,
+    extract_concurrency: int = 12,
 ) -> Snapshot | None:
+    if extract_concurrency < 1:
+        raise ValueError("extract_concurrency must be positive")
     state = await store.get_cycle_state()
     state.phase = "collect"
     state.budget_blocked = False
@@ -126,14 +136,50 @@ async def run_cycle(
             if latest is not None and latest.source_id in source_set:
                 pending.append(latest)
         pending.sort(key=lambda pub: (pub.published_at, pub.publication_id))
-        for publication in pending:
-            extraction = await analyze_publication(store, extractor, publication)
-            if extraction.status == "error":
-                continue
-            if extraction.status == "empty":
-                await store.mark_processed(publication.publication_id)
-                continue
-            await assign_publication(store, embedder, assigner, publication, extraction)
+        semaphore = asyncio.Semaphore(extract_concurrency)
+        reuse_locks: dict[str, asyncio.Lock] = {}
+        extract_seconds = 0.0
+        assign_seconds = 0.0
+        pipeline_started = perf_counter()
+
+        async def extract_one(publication: PublicationVersion) -> ExtractionResult:
+            nonlocal extract_seconds
+            key = analysis_reuse_key(publication.text_hash, CLASSIFIER_VERSION)
+            async with reuse_locks.setdefault(key, asyncio.Lock()), semaphore:
+                started = perf_counter()
+                try:
+                    return await analyze_publication(store, extractor, publication)
+                finally:
+                    extract_seconds += perf_counter() - started
+
+        tasks = [asyncio.create_task(extract_one(pub)) for pub in pending]
+        try:
+            for publication, task in zip(pending, tasks, strict=True):
+                extraction = await task
+                if extraction.status == "error":
+                    continue
+                if extraction.status == "empty":
+                    await store.mark_processed(publication.publication_id)
+                    continue
+                started = perf_counter()
+                try:
+                    await assign_publication(store, embedder, assigner, publication, extraction)
+                finally:
+                    assign_seconds += perf_counter() - started
+        finally:
+            for task in tasks:
+                if not task.done():
+                    task.cancel()
+            await asyncio.gather(*tasks, return_exceptions=True)
+            _log.info(
+                "agenda analyze posts=%d extract_seconds=%.1f assign_seconds=%.1f "
+                "wall_seconds=%.1f concurrency=%d",
+                len(pending),
+                extract_seconds,
+                assign_seconds,
+                perf_counter() - pipeline_started,
+                extract_concurrency,
+            )
 
         state.last_analyze_at = now
         state.phase = "snapshot"

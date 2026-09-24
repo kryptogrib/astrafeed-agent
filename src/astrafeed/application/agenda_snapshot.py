@@ -2,9 +2,11 @@
 
 from __future__ import annotations
 
+import re
 from collections import defaultdict
 from datetime import datetime
 
+from astrafeed.application.agenda_extract import claim_is_noise
 from astrafeed.domain.agenda import (
     ClaimCard,
     CoverageInfo,
@@ -58,26 +60,62 @@ def _hashes(pubs: list[PublicationVersion]) -> list[str]:
     return [pub.text_hash for pub in pubs]
 
 
-def _explanation(claims: list[ClaimCard]) -> str:
-    parts = [claim.paraphrase_ru or claim.quote for claim in claims[:3]]
-    text = " ".join(part for part in parts if part)
-    quotes = [claim.quote for claim in claims]
-    if text and not numbers_are_grounded(text, quotes):
-        return " ".join(quotes[:2])
-    return text
+def _explanation(claims: list[ClaimCard], title: str) -> str:
+    for claim in claims:
+        text = claim.paraphrase_ru or claim.quote
+        if text and numbers_are_grounded(text, [claim.quote]):
+            return text
+    return title
+
+
+def _title_terms(title: str) -> set[str]:
+    latin = {word.casefold() for word in re.findall(r"[A-Za-z][A-Za-z0-9]{2,}", title)}
+    if latin:
+        return latin
+    generic = {"возможно", "сегодня", "токен", "рынок", "крипто", "миллион", "миллиарда"}
+    return {
+        word.casefold()
+        for word in re.findall(r"[А-Яа-яЁё]{5,}", title)
+        if word.casefold() not in generic
+    }
 
 
 def _claim_cards(
     links: list[StoryLink],
     publications: dict[str, PublicationVersion],
     window: tuple[datetime, datetime],
+    title: str,
 ) -> list[ClaimCard]:
-    cards: list[ClaimCard] = []
-    seen_channels: set[str] = set()
+    candidates: list[tuple[int, StoryLink, PublicationVersion]] = []
+    terms = _title_terms(title)
     for link in links:
         pub = publications.get(link.publication_id)
         if pub is None or not in_window(pub.published_at, window):
             continue
+        words = {
+            word.casefold()
+            for word in re.findall(r"[A-Za-zА-Яа-яЁё0-9]+", link.quote + " " + link.paraphrase_ru)
+        }
+        candidates.append((len(terms & words), link, pub))
+    if any(score > 0 for score, _, _ in candidates):
+        candidates = [candidate for candidate in candidates if candidate[0] > 0]
+    candidates.sort(key=lambda candidate: candidate[0], reverse=True)
+    chosen: list[tuple[int, StoryLink, PublicationVersion]] = []
+    seen_channels: set[str] = set()
+    for candidate in candidates:
+        channel = candidate[2].channel_ref
+        if channel not in seen_channels:
+            chosen.append(candidate)
+            seen_channels.add(channel)
+        if len(chosen) >= 3:
+            break
+    for candidate in candidates:
+        if len(chosen) >= 3:
+            break
+        if candidate not in chosen:
+            chosen.append(candidate)
+    cards: list[ClaimCard] = []
+    for _, link, pub in chosen:
         paraphrase = link.paraphrase_ru
         if paraphrase and not numbers_are_grounded(paraphrase, [link.quote]):
             paraphrase = link.quote
@@ -90,11 +128,7 @@ def _claim_cards(
             channel_ref=pub.channel_ref,
             published_at=pub.published_at,
         )
-        if pub.channel_ref not in seen_channels or len(cards) < 3:
-            cards.append(card)
-            seen_channels.add(pub.channel_ref)
-        if len(cards) >= 3:
-            break
+        cards.append(card)
     return cards
 
 
@@ -120,7 +154,8 @@ async def build_snapshot(
     all_links = await store.links_for_publications(set(by_id))
     links_by_story: dict[str, list[StoryLink]] = defaultdict(list)
     for link in all_links:
-        links_by_story[link.story_id].append(link)
+        if not claim_is_noise(link.quote):
+            links_by_story[link.story_id].append(link)
     comparable = comparable_channel_ids(coverage_states)
     details: dict[str, StoryDetail] = {}
     cards: list[dict] = []
@@ -141,7 +176,7 @@ async def build_snapshot(
         )
         hashes = _hashes(current_all)
         exact_repeats = max(0, len(hashes) - len(set(hashes)))
-        claim_cards = _claim_cards(links, by_id, current)
+        claim_cards = _claim_cards(links, by_id, current, story.title_ru)
         entity_names = []
         for link in links:
             for entity_id in link.entity_ids:
@@ -185,7 +220,7 @@ async def build_snapshot(
             growth_null_reason=reason,
             first_seen=story.first_seen,
             freshness=freshness,
-            explanation=_explanation(claim_cards),
+            explanation=_explanation(claim_cards, story.title_ru),
             claims=tuple(claim_cards),
             publications=len(current_all),
             exact_repeats=exact_repeats,
@@ -214,7 +249,7 @@ async def build_snapshot(
                 "current_channels": card.current_channels,
                 "previous_channels": card.previous_channels,
                 "freshness": card.freshness,
-                "eligible": True,
+                "eligible": story.title_ru.strip().casefold() not in {"", "сюжет"},
                 "card": card,
             }
         )

@@ -2,6 +2,8 @@
 
 from __future__ import annotations
 
+import re
+
 from astrafeed.domain.agenda import (
     CLASSIFIER_VERSION,
     Claim,
@@ -12,7 +14,22 @@ from astrafeed.domain.agenda import (
     resolve_quote_span,
     resolve_relative_when,
 )
+from astrafeed.domain.spend_budget import BudgetExceeded
 from astrafeed.ports.agenda import AgendaStore, OpenExtractor
+
+
+def claim_is_noise(quote: str, *, is_ad: bool = False) -> bool:
+    """Reject snippets that cannot support a story card or channel vote."""
+    if is_ad:
+        return True
+    stripped = quote.strip()
+    if len(re.findall(r"[^\W_]+", stripped, flags=re.UNICODE)) < 4:
+        return True
+    lowered = stripped.casefold()
+    if lowered.startswith(("ранее:", "previously:", "топ дня", "дайджест дня")):
+        return True
+    bullet_count = len(re.findall(r"(?m)^\s*[-•]\s+", stripped))
+    return bullet_count >= 2 and not re.search(r"[.!?](?:\s|$)", stripped)
 
 
 def verify_fragment(text: str, fragment: Fragment) -> Fragment:
@@ -22,6 +39,8 @@ def verify_fragment(text: str, fragment: Fragment) -> Fragment:
         if span is None:
             continue
         start, end = span
+        if claim_is_noise(text[start:end], is_ad=fragment.is_ad or claim.is_ad):
+            continue
         claims.append(
             Claim(
                 kind=claim.kind,
@@ -108,6 +127,8 @@ async def analyze_publication(
     if cached is None:
         try:
             raw = await extractor.extract(publication.text)
+        except BudgetExceeded:
+            raise
         except Exception as exc:
             failed = ExtractionResult(
                 reuse_key=reuse_key,

@@ -165,7 +165,11 @@ def select_agenda(
     Full compare with no new/growing stories → empty. Too few comparable
     channels → multi-channel stories without a growth claim.
     """
-    multi = [c for c in cards if int(c.get("current_channels") or 0) >= MIN_CHANNELS]
+    multi = [
+        c
+        for c in cards
+        if c.get("eligible", True) and int(c.get("current_channels") or 0) >= MIN_CHANNELS
+    ]
     ranked = rank_agenda_stories([{**c, "eligible": True} for c in multi])
     if comparable_count < MIN_CHANNELS:
         return ranked[:AGENDA_LIMIT], "limited_no_growth_claim"

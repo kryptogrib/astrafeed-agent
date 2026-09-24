@@ -61,6 +61,10 @@ class AuditSettings(BaseModel):
     cleanup_seconds: float = Field(default=60, gt=0)
 
 
+class AgendaSettings(BaseModel):
+    extract_concurrency: int = Field(default=12, ge=1, le=32)
+
+
 class Settings(BaseModel):
     database_url: str = "sqlite+aiosqlite:///astrafeed.db"
     language: str = "en"
@@ -86,6 +90,7 @@ class Settings(BaseModel):
     news_channels: list[str] = Field(default_factory=list)
     interests: list[str] = Field(default_factory=lambda: ["crypto markets"])
     audit: AuditSettings = Field(default_factory=AuditSettings)
+    agenda: AgendaSettings = Field(default_factory=AgendaSettings)
 
     @classmethod
     def load(cls, path: str | Path = "config.yaml") -> Settings:
