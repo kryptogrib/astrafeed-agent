@@ -232,8 +232,20 @@ async def _agenda_poll(
             or now - cycle_state.last_collect_at >= timedelta(seconds=cfg.poll_seconds)
         )
         if collect_due or not source_ids:
-            await _ensure_connected(client)
-            source_ids = await _resolve_union(coordinator, [*cfg.channels, *cfg.news_channels])
+            try:
+                await _ensure_connected(client)
+                source_ids = await _resolve_union(
+                    coordinator, [*cfg.channels, *cfg.news_channels]
+                )
+            except Exception as exc:
+                _log.error("agenda source resolution failed: %s", type(exc).__name__)
+                source_ids = []
+            if not source_ids:
+                cycle_state.last_error = "source_unavailable"
+                cycle_state.phase = "idle"
+                await agenda.set_cycle_state(cycle_state)
+                await asyncio.sleep(cfg.poll_seconds)
+                continue
 
         async def collect(start: datetime, end: datetime, ids: list[int] = source_ids) -> None:
             if ids:

@@ -40,6 +40,23 @@ async def test_three_identical_analysis_failures_stay_in_coverage_queue_without_
     assert await store.retryable_ids() == ["post"]
 
 
+@pytest.mark.asyncio
+async def test_no_resolved_sources_cannot_replace_a_useful_snapshot():
+    store = InMemoryAgendaStore()
+    now = datetime(2026, 9, 24, 12, tzinfo=UTC)
+    with pytest.raises(ValueError, match="resolved source"):
+        await run_cycle(
+            store,
+            reader=None,
+            source_ids=[],
+            extractor=None,
+            embedder=None,
+            assigner=None,
+            now=now,
+        )
+    assert await store.get_snapshot(None) is None
+
+
 def _item(source: str, external: str, text: str, when: datetime) -> SourceItem:
     return SourceItem(
         channel_ref=source,

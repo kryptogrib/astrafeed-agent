@@ -158,6 +158,8 @@ async def run_cycle(
     max_posts_per_cycle: int | None = None,
     ingest: bool = True,
 ) -> Snapshot | None:
+    if not source_ids:
+        raise ValueError("agenda requires at least one resolved source")
     if extract_concurrency < 1:
         raise ValueError("extract_concurrency must be positive")
     if assign_concurrency < 1:
