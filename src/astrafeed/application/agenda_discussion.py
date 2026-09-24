@@ -143,7 +143,9 @@ class DiscussionEnricher:
                 comments.append(CommentQuote(text[:500], comment.link or pub.link, pub.channel_ref))
         comments = comments[: self._max_comments]
         if len(comments) < MIN_COMMENTS_TO_SUMMARIZE:
-            return Discussion(comment_count=total, read_count=len(comments))
+            # Too few to summarize: let the longest comments speak for themselves.
+            longest = sorted(comments, key=lambda c: len(c.text), reverse=True)[:3]
+            return Discussion(comment_count=total, read_count=len(comments), quotes=tuple(longest))
         digest = await self._summarizer.summarize(card.title, [c.text for c in comments])
         quotes = tuple(
             comments[i] for i in dict.fromkeys(digest.quote_indices) if 0 <= i < len(comments)

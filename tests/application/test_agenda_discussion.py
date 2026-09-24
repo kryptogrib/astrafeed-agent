@@ -184,5 +184,8 @@ async def test_few_comments_are_counted_but_not_summarized():
     snapshot = await DiscussionEnricher(reader, summarizer).enrich(_snapshot("s"), T)
 
     assert summarizer.calls == []
-    assert snapshot.agenda[0].discussion.read_count == 3
+    discussion = snapshot.agenda[0].discussion
+    assert discussion.read_count == 3
+    assert discussion.points == ()
+    assert {q.text for q in discussion.quotes} == set(COMMENTS[:3])
     assert replace(snapshot.agenda[0], discussion=None) == _snapshot("s").agenda[0]
