@@ -6,6 +6,7 @@ import pytest
 from astrafeed.adapters.repository.memory_agenda import InMemoryAgendaStore
 from astrafeed.application import agenda_assign
 from astrafeed.application.agenda_assign import (
+    CandidateIndex,
     assign_publication,
     assign_speculative_batch,
     find_candidates,
@@ -218,6 +219,9 @@ def test_candidates_are_union_of_semantic_and_lexical_top_ten():
     assert any(i.startswith("lex-") for i in ids)
     assert len(found) <= 20
     assert "q" not in ids
+    assert [item.publication_id for item in CandidateIndex(pool).find(query)] == [
+        item.publication_id for item in found
+    ]
 
 
 @pytest.mark.asyncio

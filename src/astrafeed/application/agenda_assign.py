@@ -10,6 +10,8 @@ from dataclasses import dataclass, replace
 from time import perf_counter
 from typing import Literal
 
+import numpy as np
+
 from astrafeed.domain.agenda import (
     CANDIDATE_K,
     LOOKBACK,
@@ -73,6 +75,62 @@ def find_candidates(
         seen.add(key)
         merged.append(item)
     return merged
+
+
+class CandidateIndex:
+    """Reuse vector normalization and lexical tokens across a frozen batch."""
+
+    def __init__(self, pool: Sequence[IndexedFragment]) -> None:
+        self.items = tuple(pool)
+        self.tokens = tuple(
+            lexical_tokens(item.text, item.claim_text, *item.entity_surfaces) for item in self.items
+        )
+        dimensions = {len(item.vector or []) for item in self.items}
+        self.matrix = None
+        self.norms = None
+        if len(dimensions) == 1 and 0 not in dimensions:
+            self.matrix = np.asarray([item.vector for item in self.items], dtype=np.float64)
+            self.norms = np.linalg.norm(self.matrix, axis=1)
+
+    def find(self, query: IndexedFragment) -> list[IndexedFragment]:
+        eligible = [
+            index
+            for index, item in enumerate(self.items)
+            if query.published_at - LOOKBACK <= item.published_at < query.published_at
+            and not (
+                item.publication_id == query.publication_id
+                and item.fragment_index == query.fragment_index
+            )
+        ]
+        if self.matrix is None or self.norms is None or not query.vector:
+            pool = [self.items[index] for index in eligible]
+            return find_candidates(query, pool)
+        vector = np.asarray(query.vector, dtype=np.float64)
+        if vector.shape[0] != self.matrix.shape[1]:
+            pool = [self.items[index] for index in eligible]
+            return find_candidates(query, pool)
+        denominator = self.norms * np.linalg.norm(vector)
+        scores = np.divide(
+            self.matrix @ vector,
+            denominator,
+            out=np.zeros(len(self.items), dtype=np.float64),
+            where=denominator != 0,
+        )
+        semantic = sorted(eligible, key=lambda index: scores[index], reverse=True)[:CANDIDATE_K]
+        query_tokens = lexical_tokens(query.text, query.claim_text, *query.entity_surfaces)
+        lexical_scores = {index: len(query_tokens & self.tokens[index]) for index in eligible}
+        lexical = sorted(
+            (index for index in eligible if lexical_scores[index] > 0),
+            key=lambda index: lexical_scores[index],
+            reverse=True,
+        )[:CANDIDATE_K]
+        seen: set[int] = set()
+        merged = []
+        for index in (*semantic, *lexical):
+            if index not in seen:
+                seen.add(index)
+                merged.append(self.items[index])
+        return merged
 
 
 def _claim_text(fragment: Fragment) -> str:
@@ -186,13 +244,17 @@ def _context_from_state(
     entities: Sequence[Entity],
     stories: Sequence[Story],
     events: Sequence[Event],
+    candidate_index: CandidateIndex | None = None,
 ) -> AssignmentContext:
-    earlier = [
-        item
-        for item in pool
-        if indexed.published_at - LOOKBACK <= item.published_at < indexed.published_at
-    ]
-    candidates = find_candidates(indexed, earlier)
+    if candidate_index is None:
+        earlier = [
+            item
+            for item in pool
+            if indexed.published_at - LOOKBACK <= item.published_at < indexed.published_at
+        ]
+        candidates = find_candidates(indexed, earlier)
+    else:
+        candidates = candidate_index.find(indexed)
     selected_entities, selected_stories, selected_events = select_assignment_context(
         indexed, candidates, links, entities, stories, events
     )
@@ -399,6 +461,7 @@ async def assign_speculative_batch(
     frozen_entities = tuple(entities)
     frozen_stories = tuple(stories)
     frozen_events = tuple(events)
+    frozen_candidate_index = CandidateIndex(frozen_pool) if not strict else None
     indexed_by_key = {(item.publication_id, item.fragment_index): item for item in pool}
     entity_names = {entity.entity_id: entity.canonical_name.casefold() for entity in entities}
     story_keys: dict[str, set[str]] = {
@@ -493,6 +556,7 @@ async def assign_speculative_batch(
                 frozen_entities,
                 frozen_stories,
                 frozen_events,
+                frozen_candidate_index,
             )
             possible = (
                 _context_from_state(
