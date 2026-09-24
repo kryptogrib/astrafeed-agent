@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import asyncio
 import json
 from dataclasses import fields, is_dataclass
 from datetime import datetime
@@ -112,6 +113,7 @@ def loads(raw: str) -> Any:
 class SqliteAgendaStore:
     def __init__(self, session: async_sessionmaker) -> None:
         self._session = session
+        self._write_lock = asyncio.Lock()
 
     async def ensure_search(self) -> None:
         async with self._session() as session:
@@ -199,7 +201,7 @@ class SqliteAgendaStore:
             return None if row is None else loads(row.payload)
 
     async def _put_json(self, kind: str, item_id: str, value: Any) -> None:
-        async with self._session() as session, session.begin():
+        async with self._write_lock, self._session() as session, session.begin():
             row = await session.get(AgendaJsonRow, (kind, item_id))
             payload = dumps(value)
             if row is None:

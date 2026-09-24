@@ -82,9 +82,15 @@ def _window(value: str) -> timedelta:
 
 
 async def _storage(cfg: Settings):
-    engine = create_async_engine(cfg.database_url)
+    sqlite = cfg.database_url.startswith("sqlite+")
+    engine = create_async_engine(
+        cfg.database_url,
+        connect_args={"timeout": 30} if sqlite else {},
+    )
     async with engine.begin() as conn:
         await conn.run_sync(Base.metadata.create_all)
+        if sqlite:
+            await conn.exec_driver_sql("PRAGMA journal_mode=WAL")
     return engine, async_sessionmaker(engine, expire_on_commit=False)
 
 
