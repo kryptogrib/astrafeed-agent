@@ -4,7 +4,7 @@
 
 **What changed in crypto Telegram, who said it first, and where is the evidence?**
 
-AstraFeed turns posts from 38 curated public Telegram channels and configured RSS and Reddit sources into a live agenda for humans and AI agents. It groups posts into stories, compares the last 24 hours with the previous 24, and links every displayed claim to its original source. The same published snapshot is available as a readable page, JSON, Markdown, and an OKX.AI A2MCP service.
+AstraFeed turns posts from 38 curated public Telegram channels, RSS and Reddit feeds, and selected X accounts into a live agenda for humans and AI agents. It groups posts into stories, compares the last 24 hours with the previous 24, and links every displayed claim to its original source. The same published snapshot is available as a readable page, JSON, Markdown, and an OKX.AI A2MCP service.
 
 **[Open the live agenda](https://cutememe.lol/agenda?format=html)** · **[Watch the 2:56 demo](docs/submission/astrafeed-demo.mp4)** · [Check the live service](https://cutememe.lol/healthz)
 
@@ -40,6 +40,8 @@ The live service and these six files are the product. The earlier Token Brief en
 | paraphrase numbers exist in attached quotes | `tests/domain/test_agenda.py::test_paraphrase_cannot_invent_numbers_absent_from_quotes` |
 | a failed or incomplete channel is not treated as zero | `tests/domain/test_agenda.py::test_comparable_channels_require_complete_processing_of_both_windows` |
 | growth is `null` when the comparable set is too small | `tests/domain/test_agenda.py::test_growth_is_null_when_comparable_set_is_too_small` |
+| off-topic digest claims do not enter the crypto top 10 | `tests/domain/test_agenda.py::test_crypto_agenda_skips_story_without_market_anchor_in_displayed_evidence` |
+| reanalysis preserves previously pinned snapshots | `tests/application/test_agenda_cycle.py::test_cycle_publishes_snapshot_and_restart_does_not_duplicate` |
 | HTTP adapters do not import the cycle or LLM | `tests/adapters/http/test_http_isolation.py::test_http_adapters_do_not_import_llm_or_the_cycle` |
 | domain does not import adapters or application | `.importlinter` contract `domain`, run by `make check` |
 
@@ -100,7 +102,7 @@ The response has `service`, `action` (`agenda`, `search`, or `story`), and `resu
 
 | Field | Meaning |
 |---|---|
-| `current_channels` | Observed Telegram channels or RSS publishers with a story publication in the latest 24-hour window. The field name is retained for API compatibility. |
+| `current_channels` | Observed Telegram channels, RSS publishers, subreddits, or X accounts/search sources with a story publication in the latest 24-hour window. The field name is retained for API compatibility. |
 | `growth` | Change against the preceding 24 hours on channels complete and processed in **both** windows. It can be lower than `current_channels` when one source is still incomplete. Uncomparable data gets `null`, never a fabricated zero. |
 | `independent_channels` / `echo_channels` | A text-similarity split of observed posts. “Independent” means *no near-verbatim copy detected*, not independent verification. |
 | `first_seen` | Publication time of the first post assigned to the story in observed channels. The displayed spread timeline starts with the first linked source in the current window and can begin later. |
@@ -109,7 +111,7 @@ The response has `service`, `action` (`agenda`, `search`, or `story`), and `resu
 | `coverage`, `stale`, `limitations` | What was collected and processed, and what the snapshot cannot support. |
 | `price.verdict` | Code label from OKX spot: did the market move in the hour **before** the first observed post, after it, both, or neither. Context, not causation. |
 
-The watched channels are a curated Russian-language Telegram folder, not a representative sample of the whole market. Quotes in the English report may be machine-translated; JSON retains the original. Search also covers archive stories in their source language; displayed agenda titles are English. Reader comments are unverified and shown as takeaways only when the quoted comment explicitly names a story entity. A comment link opens its parent post or thread when Telegram has no direct comment URL. Silence does not mean agreement. No sentiment score or trading recommendation is produced.
+The watched sources are a curated sample, not a representative sample of the whole market. A top agenda card needs an explicit crypto or market anchor in its displayed title or source quotes; other extracted stories remain searchable. Quotes in the English report may be machine-translated; JSON retains the original. Search also covers archive stories in their source language; displayed agenda titles are English. Reader comments are unverified and shown as takeaways only when the quoted comment explicitly names a story entity. A comment link opens its parent post or thread when Telegram has no direct comment URL. Silence does not mean agreement. No sentiment score or trading recommendation is produced.
 
 ## Poll for changes
 
@@ -119,13 +121,15 @@ An agent saves the returned `snapshot_id`, then requests
 The delta contains new/updated cards and changes in sources, quotes and sourcing
 labels. An unavailable baseline returns the full agenda with
 `baseline_unavailable`. `snapshot_id` can still pin the target of the comparison.
-The public host supports this on deployed commits; check `GET /healthz` →
+Each published ID identifies one immutable report, including when analysis is
+repeated without a new collection. The public host supports this on deployed
+commits; check `GET /healthz` →
 `commit` when comparing an older pinned snapshot with a newer live one.
 [Response fields, examples and limits](docs/snapshot-changes.md).
 
 ## How it works
 
-### RSS news sources
+### Source coverage
 
 Add HTTPS feed URLs under `rss_feeds` in `config.yaml` (the sample config lists
 CoinDesk, The Block, Cointelegraph, Decrypt, Bitcoin Magazine, CryptoSlate,
@@ -148,9 +152,18 @@ does not supply thread comments; the combined feed exposes at most 100 recent
 posts, so a busy interval may have incomplete coverage. The configured
 `https://protos.com/feed` remains in the news RSS list.
 
+Selected X accounts and a broad crypto search are collected through Xpoz when
+`XPOZ_API_KEY` and `xpoz_accounts` are configured. The sample configuration lists
+16 accounts; search runs every 15 minutes and the account scan every 12 hours.
+Up to three new reply threads are inspected per hour, within a 70-thread cap.
+The collector stops paid Xpoz requests when the account falls below 50 credits.
+X coverage is a sampled view of what Xpoz returns; missed posts or replies are
+shown as incomplete coverage rather than counted as silence. See the
+[source setup and limits](docs/research/xpoz-integration.md).
+
 ```mermaid
 flowchart LR
-    A[Public Telegram posts] --> B[Collect and deduplicate]
+    A[Telegram / RSS / Reddit / X posts] --> B[Collect and deduplicate]
     B --> C[Extract claims and group stories]
     C --> D[Check quotes, coverage and 24h growth]
     D --> E[Publish one atomic snapshot]
@@ -161,7 +174,8 @@ Collection and analysis run in the background. Read requests use the published s
 
 ## Run locally
 
-Requires Docker, a Telegram reader account, and an OpenRouter API key.
+Requires Docker, a Telegram reader account, and an OpenRouter API key. An Xpoz
+key is optional for local X collection.
 
 ```sh
 cp .env.example .env            # set TELEGRAM_API_ID/HASH and OPENROUTER_API_KEY
