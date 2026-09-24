@@ -1,8 +1,8 @@
 from __future__ import annotations
 
+import json
 from collections.abc import Sequence
 from dataclasses import dataclass
-import json
 from typing import Any, Literal
 
 from pydantic import BaseModel, Field
@@ -229,10 +229,19 @@ class OpenRouterEmbedder:
 
     async def embed(self, texts: Sequence[str]) -> list[list[float]]:
         response = await self._client.embeddings.create(model=self._model, input=list(texts))
-        return [list(item.embedding) for item in response.data]
+        data = list(response.data)
+        if all(isinstance(getattr(item, "index", None), int) for item in data):
+            data.sort(key=lambda item: item.index)
+            if [item.index for item in data] != list(range(len(texts))):
+                raise ValueError("Embedding response indices do not match the inputs")
+        return [list(item.embedding) for item in data]
 
 
 def _assignment_user(**kwargs: object) -> str:
+    def sequence_arg(name: str) -> Sequence[Any]:
+        value = kwargs.get(name)
+        return value if isinstance(value, Sequence) and not isinstance(value, str) else ()
+
     def fragment_data(value: object, *, candidate: bool = False) -> object:
         if not isinstance(value, IndexedFragment):
             return str(value)
@@ -256,7 +265,7 @@ def _assignment_user(**kwargs: object) -> str:
                     "status": entity.status,
                     "aliases": list(entity.aliases),
                 }
-                for entity in kwargs.get("entities") or []
+                for entity in sequence_arg("entities")
             ],
             "known_stories": [
                 {
@@ -265,7 +274,7 @@ def _assignment_user(**kwargs: object) -> str:
                     "boundary": story.boundary,
                     "first_seen": story.first_seen.isoformat(),
                 }
-                for story in kwargs.get("stories") or []
+                for story in sequence_arg("stories")
             ],
             "known_events": [
                 {
@@ -275,11 +284,11 @@ def _assignment_user(**kwargs: object) -> str:
                     "amount": event.amount,
                     "participants": list(event.participants),
                 }
-                for event in kwargs.get("events") or []
+                for event in sequence_arg("events")
             ],
             "candidates": [
                 fragment_data(item, candidate=True)
-                for item in (kwargs.get("candidates") or [])[:ASSIGN_MAX_CANDIDATES]
+                for item in sequence_arg("candidates")[:ASSIGN_MAX_CANDIDATES]
             ],
         },
         ensure_ascii=False,

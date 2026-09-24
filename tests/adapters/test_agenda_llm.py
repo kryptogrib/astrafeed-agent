@@ -58,3 +58,22 @@ async def test_agenda_chat_calls_disable_hidden_reasoning(monkeypatch):
 
     for call in (extraction_call, assignment_call):
         assert call.await_args.kwargs["extra_body"]["reasoning"] == {"enabled": False}
+
+
+@pytest.mark.asyncio
+async def test_batched_embeddings_follow_input_indices():
+    create = AsyncMock(
+        return_value=SimpleNamespace(
+            data=[
+                SimpleNamespace(index=1, embedding=[0.0, 1.0]),
+                SimpleNamespace(index=0, embedding=[1.0, 0.0]),
+            ]
+        )
+    )
+    embedder = agenda_llm.OpenRouterEmbedder(
+        SimpleNamespace(embeddings=SimpleNamespace(create=create))
+    )
+
+    vectors = await embedder.embed(["first", "second"])
+
+    assert vectors == [[1.0, 0.0], [0.0, 1.0]]
