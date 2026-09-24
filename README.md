@@ -82,7 +82,7 @@ docker compose -f docker-compose.yml -f docker-compose.tunnel.yml up -d
 
 ## Built during the hackathon
 
-The collection engine (Telegram ingestion, filtering, dedup) comes from the earlier AstraFeed Token Brief project; see [PROVENANCE.md](PROVENANCE.md). The work for this hackathon starts after commit `a84b6e3` and is visible in `git log a84b6e3..HEAD`:
+The collection engine (Telegram ingestion, filtering, dedup) comes from the earlier AstraFeed Token Brief project; see [PROVENANCE.md](PROVENANCE.md). The work for this hackathon starts after commit `aa9a275` and is visible in `git log aa9a275..HEAD`:
 
 - the live agenda cycle: story extraction and assignment, 24h-vs-24h growth, atomic snapshots;
 - quote grounding and the coverage rules;
