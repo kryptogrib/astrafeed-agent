@@ -276,7 +276,9 @@ async def health_payload(store: AgendaStore, *, now: datetime, commit: str) -> d
             "last_collect_at": state.last_collect_at.isoformat() if state.last_collect_at else None,
             "last_partial_at": state.last_partial_at.isoformat() if state.last_partial_at else None,
             "last_full_success_at": (
-                state.last_full_success_at.isoformat() if state.last_full_success_at else None
+                (state.last_full_success_at or state.last_success_at).isoformat()
+                if state.last_full_success_at or state.last_success_at
+                else None
             ),
             "queue_depth": queue_depth,
         },

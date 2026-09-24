@@ -88,6 +88,9 @@ class BudgetedClient:
         try:
             actual_cost = float(cost)
         except (TypeError, ValueError):
+            await self._store.fail(reservation, "missing_usage")
             return
         if math.isfinite(actual_cost) and actual_cost >= 0:
             await self._store.settle(reservation, actual_cost)
+        else:
+            await self._store.fail(reservation, "missing_usage")

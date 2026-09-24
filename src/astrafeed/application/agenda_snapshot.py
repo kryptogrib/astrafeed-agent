@@ -34,6 +34,11 @@ _NUMBER = re.compile(r"\d+(?:[.,]\d+)?")
 _PROFANITY = re.compile(r"(?:на[её]б|за[её]б|[её]бан|\bбля|\bхуй|\bху[её]в|\bпизд)", re.I)
 
 
+def _mentions(text: str, name: str) -> bool:
+    value = name.strip().lstrip("$#")
+    return len(value) >= 3 and bool(re.search(rf"(?<!\w){re.escape(value)}(?!\w)", text, re.I))
+
+
 def _supported_link(
     link: StoryLink,
     pub: PublicationVersion,
@@ -60,8 +65,8 @@ def _supported_link(
             None,
         )
         names = (key_entity, *(entity.aliases if entity else ()))
-        if (key_entity.casefold() in title.casefold() or entity is not None) and not any(
-            len(name) >= 3 and name.casefold() in quote.casefold() for name in names
+        if (_mentions(title, key_entity) or entity is not None) and not any(
+            _mentions(quote, name) for name in names
         ):
             return False
     title_numbers = set(_NUMBER.findall(title))
@@ -99,11 +104,11 @@ def _display_title(
     if primary is None:
         return title, ""
     names = (primary.canonical_name, *primary.aliases)
-    if any(name.casefold() in title.casefold() for name in names if len(name) >= 3):
+    if any(_mentions(title, name) for name in names):
         return title, key
     if any(
-        name.casefold() in link.quote.casefold()
-        for name in names if len(name) >= 3
+        _mentions(link.quote, name)
+        for name in names
         for link in links
     ):
         return f"{primary.canonical_name}: {title}", key
