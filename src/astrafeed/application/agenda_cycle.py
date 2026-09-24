@@ -8,7 +8,7 @@ from __future__ import annotations
 import asyncio
 import logging
 from collections.abc import Awaitable, Callable, Sequence
-from datetime import datetime
+from datetime import datetime, timedelta
 from time import perf_counter
 from typing import Protocol
 
@@ -112,14 +112,17 @@ async def run_cycle(
     now: datetime,
     collect: CollectFn | None = None,
     extract_concurrency: int = 12,
+    collection_window: timedelta = LOOKBACK,
 ) -> Snapshot | None:
     if extract_concurrency < 1:
         raise ValueError("extract_concurrency must be positive")
+    if collection_window < LOOKBACK:
+        raise ValueError("collection_window must cover both comparison windows")
     state = await store.get_cycle_state()
     state.phase = "collect"
     state.budget_blocked = False
     await store.set_cycle_state(state)
-    start = now - LOOKBACK
+    start = now - collection_window
     source_set = set(source_ids)
     try:
         if collect is not None:

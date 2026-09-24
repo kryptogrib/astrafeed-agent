@@ -263,6 +263,34 @@ async def test_extraction_budget_block_preserves_last_snapshot():
 
 
 @pytest.mark.asyncio
+async def test_collection_can_cover_72_hours_without_changing_comparison_windows():
+    store = InMemoryAgendaStore()
+    t = datetime(2026, 9, 24, 12, tzinfo=UTC)
+    old = _item("@a", "1", "Старый сюжет ETH ETF сегодня утром.", t - timedelta(hours=60))
+    recent = _item("@a", "2", "Новый сюжет ETH ETF сегодня утром.", t - timedelta(hours=1))
+    collected = []
+
+    async def collect(start, end):
+        collected.append((start, end))
+
+    snapshot = await run_cycle(
+        store,
+        reader=Reader({1: [old, recent]}),
+        source_ids=[1],
+        extractor=Extractor(),
+        embedder=Embedder(),
+        assigner=Assigner(),
+        now=t,
+        collect=collect,
+        collection_window=timedelta(hours=72),
+    )
+
+    assert collected == [(t - timedelta(hours=72), t)]
+    assert await store.latest_publication("1:1") is not None
+    assert snapshot.coverage.publications_total == 1
+
+
+@pytest.mark.asyncio
 async def test_budget_block_keeps_last_snapshot_and_queue():
     store = InMemoryAgendaStore()
     t = datetime(2026, 9, 24, 12, tzinfo=UTC)

@@ -207,7 +207,8 @@ async def _agenda_poll(
     embedder: OpenRouterEmbedder,
     assigner: OpenRouterAssigner,
 ) -> None:
-    reader = TelegramSource(client, backfill_window=LOOKBACK)
+    collection_window = max(LOOKBACK, timedelta(hours=cfg.backfill_hours))
+    reader = TelegramSource(client, backfill_window=collection_window)
     coordinator = IngestionCoordinator(
         posts, reader, resolver=reader, limits=limits_from_settings(cfg)
     )
@@ -237,6 +238,7 @@ async def _agenda_poll(
                 now=now,
                 collect=collect,
                 extract_concurrency=cfg.agenda.extract_concurrency,
+                collection_window=collection_window,
             )
             if snapshot is None:
                 _log.warning("agenda cycle did not publish (budget or incomplete)")
