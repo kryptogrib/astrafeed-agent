@@ -185,14 +185,19 @@ def _figure_groups(quotes: list[tuple[str, str]]) -> tuple[tuple[FigureGroup, ..
 
 
 def tickers(title: str, entities: Iterable[str], texts: Iterable[str]) -> tuple[str, ...]:
-    """Tradable tickers named by the story: explicit $TICKER/(TICKER) or a known project name."""
+    """Tradable tickers named by the story: explicit $TICKER/(TICKER) or a known project name.
+
+    Only the title and quotes count: merged entity lists can carry names from
+    unrelated posts, and a price must follow what the story actually says.
+    """
+    texts = list(texts)
     found: list[str] = []
     for source in (title, *texts):
         for match in _TICKER.finditer(source):
             symbol = match.group(1) or match.group(2)
             if symbol not in _NOT_TICKERS and symbol not in found:
                 found.append(symbol)
-    for name in (*entities, title):
+    for name in (title, *texts):
         for word in re.findall(r"[\w$]+", name.casefold()):
             symbol = _NAME_TICKERS.get(word.lstrip("$"))
             if symbol and symbol not in found:

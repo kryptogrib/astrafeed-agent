@@ -9,6 +9,7 @@ from astrafeed.application.agenda_signals import (
     lead_channels,
     sourcing,
     story_signals,
+    tickers,
     usd_amounts,
 )
 from astrafeed.domain.agenda import (
@@ -175,3 +176,11 @@ def test_unrelated_update_amount_does_not_create_conflict() -> None:
     )
     assert not conflict
     assert groups[0].channels == ("@a", "@b")
+
+
+def test_entities_alone_do_not_add_a_ticker() -> None:
+    assert tickers(
+        "Australia says an OpenAI agent hacked the Medicare portal",
+        ["OpenAI", "ETH", "FTX"],
+        ["Австралия заявляет, что агент OpenAI взломал портал Medicare"],
+    ) == ()
