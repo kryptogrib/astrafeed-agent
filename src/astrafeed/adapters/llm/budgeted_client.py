@@ -1,6 +1,8 @@
 """Gate every completion, including Instructor repairs and research retries."""
 
+import asyncio
 import math
+from contextlib import suppress
 from types import SimpleNamespace
 from typing import Any
 
@@ -48,8 +50,11 @@ class BudgetedClient:
         extra_body["usage"] = {"include": True}
         kwargs["extra_body"] = extra_body
         reservation = await self._store.reserve(self._user_id, self._reservation_amount)
-        # Exceptions/cancellation/crashes leave the durable conservative charge intact.
-        response = await self._client.chat.completions.create(**kwargs)
+        try:
+            response = await self._client.chat.completions.create(**kwargs)
+        except BaseException as exc:
+            await self._record_failure(reservation, exc)
+            raise
         await self._settle(reservation, response)
         return response
 
@@ -58,13 +63,27 @@ class BudgetedClient:
         extra_body["usage"] = {"include": True}
         kwargs["extra_body"] = extra_body
         reservation = await self._store.reserve(self._user_id, self._reservation_amount)
-        response = await self._client.embeddings.create(**kwargs)
+        try:
+            response = await self._client.embeddings.create(**kwargs)
+        except BaseException as exc:
+            await self._record_failure(reservation, exc)
+            raise
         await self._settle(reservation, response)
         return response
+
+    async def _record_failure(self, reservation: str, exc: BaseException) -> None:
+        outcome = (
+            "cancelled" if isinstance(exc, asyncio.CancelledError)
+            else "timeout" if isinstance(exc, TimeoutError)
+            else "error"
+        )
+        with suppress(Exception):
+            await self._store.fail(reservation, outcome)
 
     async def _settle(self, reservation: str, response: Any) -> None:
         cost = getattr(getattr(response, "usage", None), "cost", None)
         if cost is None:
+            await self._store.fail(reservation, "missing_usage")
             return
         try:
             actual_cost = float(cost)

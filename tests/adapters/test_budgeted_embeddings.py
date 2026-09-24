@@ -27,6 +27,9 @@ class FakeBudget:
         self.used += actual_cost - previous
         self.reservations[reservation_id] = actual_cost
 
+    async def fail(self, reservation_id: str, outcome: str) -> None:
+        self.outcome = outcome
+
 
 class FakeOpenAI:
     def __init__(self) -> None:
@@ -64,3 +67,19 @@ async def test_embeddings_go_through_the_same_daily_budget():
     assert response.data[0].embedding == [0.1, 0.2]
     assert openai.calls == 1
     assert budget.used == pytest.approx(0.01)
+
+
+@pytest.mark.asyncio
+async def test_timeout_keeps_charge_and_records_outcome():
+    budget = FakeBudget()
+    openai = FakeOpenAI()
+
+    async def timeout(**kwargs):
+        raise TimeoutError("provider deadline")
+
+    openai.embeddings.create = timeout
+    client = BudgetedClient(openai, store=budget, user_id=0, reservation_amount=0.5)
+    with pytest.raises(TimeoutError):
+        await client.embeddings.create(model="embedding", input="text")
+    assert budget.used == 0.5
+    assert budget.outcome == "timeout"

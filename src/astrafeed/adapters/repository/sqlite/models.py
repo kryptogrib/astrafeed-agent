@@ -69,6 +69,8 @@ class SpendReservationRow(Base):
     day: Mapped[str] = mapped_column(String)
     amount_micros: Mapped[int]
     settled: Mapped[bool] = mapped_column(default=False)
+    created_at: Mapped[datetime | None] = mapped_column(UtcDateTime(), default=None)
+    outcome: Mapped[str | None] = mapped_column(String, default=None)
 
 
 class CommentRow(Base):

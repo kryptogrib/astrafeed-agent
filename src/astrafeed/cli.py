@@ -30,7 +30,10 @@ from astrafeed.adapters.repository.sqlite.agenda import SqliteAgendaStore
 from astrafeed.adapters.repository.sqlite.ingestion import SqliteIngestionStore
 from astrafeed.adapters.repository.sqlite.models import Base
 from astrafeed.adapters.repository.sqlite.pulse import SqliteCommentStore
-from astrafeed.adapters.repository.sqlite.spend_budget import SqliteSpendBudget
+from astrafeed.adapters.repository.sqlite.spend_budget import (
+    SqliteSpendBudget,
+    migrate_spend_reservations,
+)
 from astrafeed.adapters.source.fake import FakeSource
 from astrafeed.adapters.source.telegram import TelegramSource
 from astrafeed.application.agenda_cycle import run_cycle
@@ -90,6 +93,7 @@ async def _storage(cfg: Settings):
     async with engine.begin() as conn:
         await conn.run_sync(Base.metadata.create_all)
         if sqlite:
+            await migrate_spend_reservations(conn)
             await conn.exec_driver_sql("PRAGMA journal_mode=WAL")
     return engine, async_sessionmaker(engine, expire_on_commit=False)
 
@@ -332,7 +336,9 @@ async def _serve(config_path: str) -> None:
         return await story_payload(agenda, story_id, snapshot_id=snapshot_id, now=datetime.now(UTC))
 
     async def health_http() -> dict:
-        return await health_payload(agenda, now=datetime.now(UTC), commit=commit)
+        payload = await health_payload(agenda, now=datetime.now(UTC), commit=commit)
+        payload["spend"] = await SqliteSpendBudget(session).summary()
+        return payload
 
     app = create_app(
         agenda=agenda_http,
