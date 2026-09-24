@@ -105,15 +105,23 @@ class SqliteSpendBudget:
     async def summary(self) -> dict[str, float | int]:
         now = self._clock().astimezone(UTC)
         async with self._session() as session:
-            rows = (await session.scalars(select(SpendReservationRow))).all()
-        unsettled = [row for row in rows if not row.settled]
+            settled_micros = await session.scalar(
+                select(func.coalesce(func.sum(SpendReservationRow.amount_micros), 0)).where(
+                    SpendReservationRow.settled.is_(True)
+                )
+            )
+            unsettled = (
+                await session.scalars(
+                    select(SpendReservationRow).where(SpendReservationRow.settled.is_(False))
+                )
+            ).all()
         active = [
             row for row in unsettled
             if row.outcome == "active" and row.created_at is not None
             and now - row.created_at < timedelta(minutes=5)
         ]
         return {
-            "settled_usd": sum(row.amount_micros for row in rows if row.settled) / 1_000_000,
+            "settled_usd": int(settled_micros or 0) / 1_000_000,
             "unsettled_usd": sum(row.amount_micros for row in unsettled) / 1_000_000,
             "active_count": len(active),
             "timed_out_count": sum(row.outcome == "timeout" for row in unsettled),

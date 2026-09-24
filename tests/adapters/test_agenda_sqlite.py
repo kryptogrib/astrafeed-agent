@@ -144,9 +144,11 @@ async def test_sqlite_finds_latest_nonempty_snapshot(tmp_path):
     )
     try:
         await store.publish_snapshot(useful)
+        assert await store.get_snapshot(None) is useful
         await store.publish_snapshot(
             replace(useful, snapshot_id="snap-20260924T130000Z-p128", agenda=())
         )
+        assert (await store.get_snapshot(None)).snapshot_id == "snap-20260924T130000Z-p128"
         assert await store.latest_nonempty_snapshot() == useful
     finally:
         await engine.dispose()

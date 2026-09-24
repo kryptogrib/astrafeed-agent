@@ -115,6 +115,7 @@ class SqliteAgendaStore:
     def __init__(self, session: async_sessionmaker) -> None:
         self._session = session
         self._write_lock = asyncio.Lock()
+        self._published_cache: Snapshot | None = None
 
     async def ensure_search(self) -> None:
         async with self._session() as session:
@@ -347,16 +348,32 @@ class SqliteAgendaStore:
                         "body": doc.text,
                     },
                 )
+        self._published_cache = snapshot
 
     async def get_snapshot(self, snapshot_id: str | None = None) -> Snapshot | None:
         async with self._session() as session:
             if snapshot_id is None:
-                row = await session.scalar(
-                    select(AgendaSnapshotRow).where(AgendaSnapshotRow.published.is_(True))
+                published_id = await session.scalar(
+                    select(AgendaSnapshotRow.snapshot_id).where(
+                        AgendaSnapshotRow.published.is_(True)
+                    )
                 )
+                if published_id is None:
+                    self._published_cache = None
+                    return None
+                if (self._published_cache is not None
+                    and self._published_cache.snapshot_id == published_id):
+                    return self._published_cache
+                row = await session.get(AgendaSnapshotRow, published_id)
             else:
+                if (self._published_cache is not None
+                    and self._published_cache.snapshot_id == snapshot_id):
+                    return self._published_cache
                 row = await session.get(AgendaSnapshotRow, snapshot_id)
-            return None if row is None else loads(row.payload)
+            snapshot = None if row is None else loads(row.payload)
+            if snapshot_id is None:
+                self._published_cache = snapshot
+            return snapshot
 
     async def latest_nonempty_snapshot(self) -> Snapshot | None:
         async with self._session() as session:
