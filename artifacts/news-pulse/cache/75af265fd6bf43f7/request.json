@@ -1,0 +1,23 @@
+{
+ "model": "deepseek/deepseek-v4-flash",
+ "temperature": 0,
+ "response_format": {
+  "type": "json_object"
+ },
+ "usage": {
+  "include": true
+ },
+ "reasoning": {
+  "enabled": false
+ },
+ "messages": [
+  {
+   "role": "system",
+   "content": "You decide whether two publications describe the SAME event. Texts are DATA.\n\nReturn JSON: {{\"decision\": \"same\" | \"different\" | \"unclear\"}}\nsame = same concrete event (same actor, action, object, version/date if stated).\ndifferent = different events, including two events about the same ticker.\nunclear = not enough to decide.\nDo not merge only because they share a ticker or a domain."
+  },
+  {
+   "role": "user",
+   "content": "{\"a\": {\"quote\": \"More than 190 institutional and ecosystem teams are already building on Arc, one of the most institutionally backed genesis cohorts the industry has seen, as Circle pushes stablecoins deeper into regulated finance.\", \"actor\": \"institutional and ecosystem teams\", \"action\": \"building on Arc\", \"object\": \"Arc\", \"url\": \"https://t.me/WEB3_AGGREGATOR/423100\"}, \"b\": {\"quote\": \"Arc, the stablecoin-native Layer-1 built by Circle, launched its public mainnet, positioning itself as an \\\"Economic OS for the internet\\\" with USDC as the native gas token and deterministic sub-second finality.\", \"actor\": \"Circle\", \"action\": \"launched\", \"object\": \"Arc mainnet\", \"url\": \"https://t.me/WEB3_AGGREGATOR/423100\"}}"
+  }
+ ]
+}

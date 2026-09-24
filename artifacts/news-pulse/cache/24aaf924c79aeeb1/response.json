@@ -1,0 +1,46 @@
+{
+ "id": "gen-1790196382-lQ2agChoPUTEStseBga6",
+ "object": "chat.completion",
+ "created": 1790196382,
+ "model": "deepseek/deepseek-v4-flash",
+ "provider": "Venice",
+ "system_fingerprint": null,
+ "service_tier": null,
+ "choices": [
+  {
+   "index": 0,
+   "logprobs": null,
+   "finish_reason": "stop",
+   "native_finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "content": "{\"labels\": [{\"id\": \"telegram:15:422895#s2\", \"kind\": \"event\", \"actor\": \"Arc\", \"action\": \"added badges and announced mainnet\", \"object\": \"badges and mainnet\", \"qualifiers\": {\"event_date\": \"16 число\", \"place\": null, \"version\": null, \"counterparty\": null}, \"origin\": \"retelling\", \"source_role\": \"author\", \"verification_status\": \"source_statement\", \"quote\": \"Arc - вчера добавили пачку бейджей архитектора, кто набрал более 500+ поинтов, так что гляньте + к этому майннет анонсировали на 16 число, выбиваем waitlist на коллекции которые пушат в X, и проекты с тестнетом протыкать что видите.\", \"span\": [0, 247]}, {\"id\": \"telegram:15:422897#s1\", \"kind\": \"event\", \"actor\": null, \"action\": \"mentioned\", \"object\": \"Arc\", \"qualifiers\": {\"event_date\": null, \"place\": null, \"version\": null, \"counterparty\": null}, \"origin\": \"own\", \"source_role\": \"author\", \"verification_status\": \"unverified\", \"quote\": \"Arc. chart.zone\", \"span\": [199, 214]}, {\"id\": \"telegram:15:422903#s0\", \"kind\": \"event\", \"actor\": \"author\", \"action\": \"prepared tokens for public mainnet\", \"object\": \"tokens\", \"qualifiers\": {\"event_date\": \"16 сентября\", \"place\": null, \"version\": null, \"counterparty\": null}, \"origin\": \"own\", \"source_role\": \"author\", \"verification_status\": \"unverified\", \"quote\": \"ARC: токены которые я взял и почему - подготовка к паблик мейннету 16 сентября\", \"span\": [0, 82]}, {\"id\": \"telegram:15:422903#s1\", \"kind\": \"event\", \"actor\": \"author\", \"action\": \"stated USDC purchase method\", \"object\": \"USDC\", \"qualifiers\": {\"event_date\": null, \"place\": \"ARC network\", \"version\": null, \"counterparty\": \"unstabletrd.com\"}, \"origin\": \"own\", \"source_role\": \"author\", \"verification_status\": \"unverified\", \"quote\": \"На данный момент USDC для покупки мемов в сети ARC можно втарить онли на ОТС - https://www.unstabletrd.com/ (прайс 1.7-1.8 за 1 USDC, процесс автоматический)\", \"span\": [0, 170]}, {\"id\": \"telegram:15:422904#s2\", \"kind\": \"event\", \"actor\": \"ArclingsNFT\", \"action\": \"is a Tier 1 collection on Arc\", \"object\": \"ArclingsNFT\", \"qualifiers\": {\"event_date\": null, \"place\": \"Arc\", \"version\": null, \"counterparty\": null}, \"origin\": \"own\", \"source_role\": \"author\", \"verification_status\": \"unverified\", \"quote\": \"https://x.com/ArclingsNFT - at moment, this is a Tier 1 collection on Arc. I was giving away spots for it, so check your wallets if you won one of my giveaways.\", \"span\": [0, 175]}, {\"id\": \"telegram:15:422908#s0\", \"kind\": \"event\", \"actor\": null, \"action\": \"mentioned\", \"object\": \"ARC\", \"qualifiers\": {\"event_date\": null, \"place\": null, \"version\": null, \"counterparty\": null}, \"origin\": \"own\", \"source_role\": \"author\", \"verification_status\": \"unverified\", \"quote\": \"ARC\", \"span\": [0, 3]}, {\"id\": \"telegram:15:422908#s1\", \"kind\": \"event\", \"actor\": \"Unipcs (Bonk guy)\", \"action\": \"drew attention to ARC chain\", \"object\": \"ARC chain\", \"qualifiers\": {\"event_date\": \"Несколько часов назад\", \"place\": null, \"version\": null, \"counterparty\": null}, \"origin\": \"retelling\", \"source_role\": \"author\", \"verification_status\": \"unverified\", \"quote\": \"Несколько часов назад Unipcs (Bonk guy) , нашумевший #1 трейдер на fomo app обратил внимание аудитории на ARC цепочку.\", \"span\": [0, 127]}, {\"id\": \"telegram:15:422908#s5\", \"kind\": \"event\", \"actor\": \"площадка\", \"action\": \"bridged 35%+ of Circle shares from Robinhood chain to Arc chain\", \"object\": \"Circle shares\", \"qualifiers\": {\"event_date\": \"За последние часы\", \"place\": \"Robinhood chain to Arc chain\", \"version\": null, \"counterparty\": \"Circle\"}, \"origin\": \"retelling\", \"source_role\": \"author\", \"verification_status\": \"unverified\", \"quote\": \"За последние часы площадка забриджила 35%+ доступных акций Circle из Robinhood цепочки в Arc цепочку, такой вот ажиотаж.\", \"span\": [0, 131]}, {\"id\": \"telegram:15:422908#s6\", \"kind\": \"event\", \"actor\": \"Fomo App\", \"action\": \"will integrate ARC in first days of network launch\", \"object\": \"ARC\", \"qualifiers\": {\"event_date\": \"первые дни лаунча сети\", \"place\": null, \"version\": null, \"counterparty\": null}, \"origin\": \"retelling\", \"source_role\": \"author\", \"verification_status\": \"unverified\", \"quote\": \"Fomo App интегрирует ARC в первые дни лаунча сети, соответственно движ гарантирован.\", \"span\": [0, 93]}, {\"id\": \"telegram:15:422908#s9\", \"kind\": \"event\", \"actor\": \"author\", \"action\": \"advised buying USDC in ARC chain for gas\", \"object\": \"USDC\", \"qualifiers\": {\"event_date\": null, \"place\": \"ARC chain\", \"version\": null, \"counterparty\": null}, \"origin\": \"own\", \"source_role\": \"author\", \"verification_status\": \"unverified\", \"quote\": \"1) Покупаем USDC в ARC чейне для газа с наценкой (можно тут либо на других otc)\", \"span\": [0, 82]}, {\"id\": \"telegram:15:422908#s11\", \"kind\": \"event\", \"actor\": \"author\", \"action\": \"advised bridging $CRCL from Robinhood to ARC\", \"object\": \"$CRCL\", \"qualifiers\": {\"event_date\": null, \"place\": \"Robinhood -> ARC\", \"version\": null, \"counterparty\": \"Long площадки\"}, \"origin\": \"own\", \"source_role\": \"author\", \"verification_status\": \"unverified\", \"quote\": \"3.0) Бриджим $CRCL Robinhood -> ARC через бридж Long площадки (тут)\", \"span\": [0, 68]}, {\"id\": \"telegram:15:422908#s12\", \"kind\": \"event\", \"actor\": \"author\", \"action\": \"advised adding ARC network\", \"object\": \"ARC network\", \"qualifiers\": {\"event_date\": null, \"place\": null, \"version\": null, \"counterparty\": null}, \"origin\": \"own\", \"source_role\": \"author\", \"verification_status\": \"unverified\", \"quote\": \"3.1) Добавляем сеть ARC (тут)\", \"span\": [0, 28]}]}",
+    "refusal": null,
+    "reasoning": null
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 1866,
+  "completion_tokens": 1750,
+  "total_tokens": 3616,
+  "cost": 0.0005171306,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.0005171306,
+   "upstream_inference_prompt_cost": 0.0001802556,
+   "upstream_inference_completions_cost": 0.000336875
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

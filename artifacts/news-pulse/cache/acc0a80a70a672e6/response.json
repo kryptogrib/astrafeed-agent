@@ -1,0 +1,32 @@
+{
+ "choices": [
+  {
+   "message": {
+    "content": "{\"labels\": [{\"id\": \"telegram:15:423606#s1\", \"kind\": \"event\", \"actor\": \"Zcash\", \"action\": \"hype\", \"object\": \"NFT\", \"qualifiers\": {}, \"origin\": \"unknown\", \"source_role\": \"unknown\", \"verification_status\": \"unverified\", \"quote\": \"Zcash хайпует, но NFT в мейннет нет. Разбираемся, кто и за что платит\", \"span\": [0, 65]}]}"
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 1910,
+  "completion_tokens": 1729,
+  "total_tokens": 3639,
+  "cost": 0.000526064,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.000526064,
+   "upstream_inference_prompt_cost": 0.00018718,
+   "upstream_inference_completions_cost": 0.000338884
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

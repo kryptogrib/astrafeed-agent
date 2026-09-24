@@ -1,0 +1,17 @@
+{
+ "segments": [
+  {
+   "id": "telegram:21:21038#s31",
+   "text": "  • ETH снижается: оттоки из ETF под управлением Grayscale спровоцировали распродажу\n",
+   "mentions": [
+    {
+     "text": "ETH",
+     "status": "confirmed"
+    }
+   ],
+   "kind_hint": "post",
+   "url": "https://t.me/rawa_imagination/21038",
+   "time": "2026-09-10T08:14:54+00:00"
+  }
+ ]
+}

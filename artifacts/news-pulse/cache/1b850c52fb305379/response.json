@@ -1,0 +1,32 @@
+{
+ "choices": [
+  {
+   "message": {
+    "content": "{\"labels\": [{\"id\": \"telegram:13:3754#s2\", \"kind\": \"event\", \"actor\": null, \"action\": \"announce\", \"object\": \"Arc\", \"qualifiers\": {\"version\": \"L1-сеть от Circle для платежей, стейблкоинов и финансовых приложений\", \"place\": \"экосистема\", \"counterparty\": \"Uniswap, Aave, Morpho, Aerodrome и другие крупные проекты\"}, \"origin\": \"own\", \"source_role\": \"author\", \"verification_status\": \"unverified\", \"quote\": \"Arc — L1-сеть от Circle для платежей, стейблкоинов и финансовых приложений. В экосистеме уже есть Uniswap, Aave, Morpho, Aerodrome и другие крупные проекты.\", \"span\": [0, 155]}]}"
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 1518,
+  "completion_tokens": 1555,
+  "total_tokens": 3073,
+  "cost": 0.00064792,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.00064792,
+   "upstream_inference_prompt_cost": 0.00021252,
+   "upstream_inference_completions_cost": 0.0004354
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

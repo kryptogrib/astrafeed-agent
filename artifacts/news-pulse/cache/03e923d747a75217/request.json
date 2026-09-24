@@ -1,0 +1,23 @@
+{
+ "a": {
+  "quote": "сминтили 10 млрд токенов $ARC в майннете",
+  "actor": "ARC",
+  "action": "mint tokens",
+  "object": "10 billion $ARC tokens",
+  "qualifiers": {},
+  "url": "https://t.me/WEB3_AGGREGATOR/423182"
+ },
+ "b": {
+  "quote": "CIRCLE LAUNCHES ARC MAINNET WITH BLACKROCK AND VISA AMONG VALIDATORS, MINTS 10 BILLION ARC TOKENS ...",
+  "actor": "Circle",
+  "action": "launches",
+  "object": "Arc mainnet",
+  "qualifiers": {
+   "version": null,
+   "event_date": null,
+   "place": null,
+   "counterparty": "BlackRock, Visa"
+  },
+  "url": "https://t.me/marketfeed/1039167"
+ }
+}

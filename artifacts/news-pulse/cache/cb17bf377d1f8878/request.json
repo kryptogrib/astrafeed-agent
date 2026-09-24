@@ -1,0 +1,21 @@
+{
+ "segments": [
+  {
+   "id": "telegram:15:423064#s9",
+   "text": "– кол-во #ETH на биржах достигло 11-летнего минимума\n",
+   "mentions": [
+    {
+     "text": "#ETH",
+     "status": "confirmed"
+    },
+    {
+     "text": "ETH",
+     "status": "confirmed"
+    }
+   ],
+   "kind_hint": "post",
+   "url": "https://t.me/WEB3_AGGREGATOR/423064",
+   "time": "2026-09-15T20:51:21+00:00"
+  }
+ ]
+}

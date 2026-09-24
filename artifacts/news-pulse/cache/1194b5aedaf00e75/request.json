@@ -1,0 +1,25 @@
+{
+ "a": {
+  "quote": "Сегодня (спасибо за поправку @intelligent_ua) кстати мейннет Arc, можно будет бриджить через Jumper.",
+  "actor": null,
+  "action": "launch",
+  "object": "мейннет Arc",
+  "qualifiers": {
+   "event_date": "Сегодня"
+  },
+  "url": "https://t.me/WEB3_AGGREGATOR/423093"
+ },
+ "b": {
+  "quote": "Основная сеть Arc запустилась. Arc и OpenSea запустили бесплатный минт NFT:",
+  "actor": "Arc",
+  "action": "launched",
+  "object": "mainnet",
+  "qualifiers": {
+   "version": "mainnet",
+   "event_date": "2026-09-16",
+   "place": null,
+   "counterparty": "OpenSea"
+  },
+  "url": "https://t.me/WEB3_AGGREGATOR/423117"
+ }
+}

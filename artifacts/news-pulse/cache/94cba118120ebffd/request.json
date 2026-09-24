@@ -1,0 +1,23 @@
+{
+ "a": {
+  "quote": "Сегодня экспирация в опционах на BTC и ETH! (Deribit)",
+  "actor": null,
+  "action": "expiration of options on BTC and ETH",
+  "object": "options on BTC and ETH",
+  "qualifiers": {
+   "event_date": "2026-09-18",
+   "place": "Deribit"
+  },
+  "url": "https://t.me/crypto_hd/31498"
+ },
+ "b": {
+  "quote": "Общий чистый приток спотовых ETH-ETF составил $143,7 млн.",
+  "actor": null,
+  "action": "чистый приток спотовых ETH-ETF",
+  "object": "$143,7 млн",
+  "qualifiers": {
+   "event_date": "2026-09-18"
+  },
+  "url": "https://t.me/cryptoattack24/96819"
+ }
+}

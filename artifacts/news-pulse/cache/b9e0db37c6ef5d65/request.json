@@ -1,0 +1,26 @@
+{
+ "a": {
+  "quote": "Вчера Circle, эмитент стейблкоина USDC, запустила мейннет Arc — собственный блокчейн (L1) под платежи и токенизированные активы.",
+  "actor": "Circle",
+  "action": "запустила мейннет",
+  "object": "Arc",
+  "qualifiers": {
+   "time": "вчера",
+   "counterparty": "Circle"
+  },
+  "url": "https://t.me/WEB3_AGGREGATOR/423227"
+ },
+ "b": {
+  "quote": "RSoft Agentic Bank выиграл онлайн-трек хакатона LabLab x Arc с банком, клиентами которого были боты.",
+  "actor": "RSoft Agentic Bank",
+  "action": "won",
+  "object": "hackathon track",
+  "qualifiers": {
+   "version": null,
+   "event_date": "2026-09-16",
+   "place": "LabLab x Arc",
+   "counterparty": null
+  },
+  "url": "https://t.me/WEB3_AGGREGATOR/423105"
+ }
+}

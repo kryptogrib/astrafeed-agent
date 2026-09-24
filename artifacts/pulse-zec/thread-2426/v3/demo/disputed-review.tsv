@@ -1,0 +1,11 @@
+id	verdict_on_agent_note	decision	source
+150552	заметка верна	направление не установлено (возможна ирония); пересказ исправлен	pulse-zec-personal-review-v3.md
+150566	заметка верна	условие, а не обещание; пересказ исправлен	pulse-zec-personal-review-v3.md
+150564	заметка слишком строгая	«70к» скорее о ZEC; неясно, насколько всерьёз; метка модели оставлена	pulse-zec-personal-review-v3.md
+150567	заметка слишком строгая	хештег отвечает на тезис поста про FOMO, связь с ZEC обоснована; пересказ исправлен	pulse-zec-personal-review-v3.md
+150573	заметка слишком строгая	риторический вопрос — мнение; kind=opinion верно; пересказ исправлен	pulse-zec-personal-review-v3.md
+150556	заметка верна	kind=other, пересказ с атрибуцией «по словам участника»	pulse-zec-personal-review-v3.md
+150576	заметка верна	контекстно релевантно, внешний сигнал не проверен; пересказ исправлен	pulse-zec-personal-review-v3.md
+150652	заметка верна	исключение (unrelated) правильное	pulse-zec-personal-review-v3.md
+150570	заметка верна	исключение правильное (DASH)	pulse-zec-personal-review-v3.md
+150575	заметка верна	исключение правильное (DASH)	pulse-zec-personal-review-v3.md

@@ -1,0 +1,46 @@
+{
+ "id": "gen-1790198717-2wqy6s9KB1fw2PLpImu5",
+ "object": "chat.completion",
+ "created": 1790198717,
+ "model": "deepseek/deepseek-v4-flash",
+ "provider": "DeepInfra",
+ "system_fingerprint": null,
+ "service_tier": null,
+ "choices": [
+  {
+   "index": 0,
+   "logprobs": null,
+   "finish_reason": "stop",
+   "native_finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "content": "{\"labels\": [{\"id\": \"telegram:15:423472#s1\", \"kind\": \"event\", \"actor\": \"Bitx\", \"action\": \"launch_registration\", \"object\": \"whitelist_for_ZRC20_token_drop\", \"qualifiers\": {\"version\": \"ZRC20\"}, \"origin\": \"retelling\", \"source_role\": \"editorial\", \"verification_status\": \"unverified\", \"quote\": \"Bitx запустили регистрацию в WL на дроп токенов стандарта ZRC20. Для участия нужно выполнить задания в Х и оставить кошелёк Zcash.\", \"span\": [0, 131]}, {\"id\": \"telegram:15:423477#s0\", \"kind\": \"event\", \"actor\": \"SUI\", \"action\": \"attempt_to_adopt_narrative\", \"object\": \"privacy_narrative\", \"qualifiers\": {\"counterparty\": [\"ZEC\", \"ZAMA\", \"NEAR\"]}, \"origin\": \"retelling\", \"source_role\": \"editorial\", \"verification_status\": \"unverified\", \"quote\": \"SUI пробует оседлать нарратив конфиденциальности вслед за ZEC, ZAMA и NEAR\", \"span\": [0, 72]}, {\"id\": \"telegram:1:7151#s0\", \"kind\": \"promo_service\", \"actor\": null, \"action\": \"aggregate\", \"object\": \"ZEC_NFT_ecosystem\", \"qualifiers\": {}, \"origin\": \"own\", \"source_role\": \"editorial\", \"verification_status\": \"unverified\", \"quote\": \"NFT / Вся ZEC экосистема в одном месте 😴\", \"span\": [0, 42]}, {\"id\": \"telegram:1:7151#s1\", \"kind\": \"promo_service\", \"actor\": null, \"action\": \"aggregate\", \"object\": \"ZEC_NFT_collections\", \"qualifiers\": {}, \"origin\": \"own\", \"source_role\": \"editorial\", \"verification_status\": \"unverified\", \"quote\": \"Собрали все ZEC коллекции в одном месте, обязательно DYOR.\", \"span\": [0, 56]}, {\"id\": \"telegram:1:7151#s3\", \"kind\": \"event\", \"actor\": \"BITFOOTS\", \"action\": \"mint_announcement\", \"object\": \"NFT_collection\", \"qualifiers\": {\"version\": \"303 1/1\", \"event_date\": \"2026-09-21\", \"place\": \"Moscow time\"}, \"origin\": \"retelling\", \"source_role\": \"editorial\", \"verification_status\": \"unverified\", \"quote\": \"• BITFOOTS: 303 1/1 · $5 в ZEC · заявки до 21 сен 17:00 МСК · mint на этой неделе;\", \"span\": [0, 82]}, {\"id\": \"telegram:1:7151#s4\", \"kind\": \"event\", \"actor\": \"ZADDR\", \"action\": \"mint_announcement\", \"object\": \"NFT_collection\", \"qualifiers\": {\"version\": \"2,800 faces\", \"event_date\": \"2026-09-21\", \"place\": \"Moscow time\"}, \"origin\": \"retelling\", \"source_role\": \"editorial\", \"verification_status\": \"unverified\", \"quote\": \"• ZADDR: 2,800 faces · 0.02 ZEC · 21 сен · WL 16:00 МСК (чекер) · public 22:00 МСК (3/wallet);\", \"span\": [0, 87]}, {\"id\": \"telegram:1:7151#s11\", \"kind\": \"event\", \"actor\": \"ZecFrogs\", \"action\": \"mint_announcement\", \"object\": \"NFT_collection\", \"qualifiers\": {\"version\": \"6,969\", \"event_date\": \"2026-09-21\", \"place\": \"Moscow time\"}, \"origin\": \"retelling\", \"source_role\": \"editorial\", \"verification_status\": \"unverified\", \"quote\": \"• ZecFrogs: 6,969 · FREE · 21 сен 20:00 МСК · 0.007 ZEC на газ (чекер);\", \"span\": [0, 68]}, {\"id\": \"telegram:1:7151#s12\", \"kind\": \"event\", \"actor\": \"Wick on Zec\", \"action\": \"account_not_found\", \"object\": \"Twitter_account\", \"qualifiers\": {}, \"origin\": \"retelling\", \"source_role\": \"editorial\", \"verification_status\": \"unverified\", \"quote\": \"• Wick on Zec: аккаунт @wickonzec не находится · в твоём списке было 999 free;\", \"span\": [0, 72]}, {\"id\": \"telegram:1:7151#s14\", \"kind\": \"event\", \"actor\": \"BoneHead\", \"action\": \"whitelist_announcement\", \"object\": \"NFT_collection\", \"qualifiers\": {\"version\": \"toxic waste of ZEC\"}, \"origin\": \"retelling\", \"source_role\": \"editorial\", \"verification_status\": \"unverified\", \"quote\": \"• BoneHead: toxic waste of ZEC · WL через Discord;\", \"span\": [0, 48]}, {\"id\": \"telegram:1:7151#s17\", \"kind\": \"event\", \"actor\": \"Shielded Wizards\", \"action\": \"mint_announcement\", \"object\": \"NFT_collection\", \"qualifiers\": {\"version\": \"2,100\", \"event_date\": \"2026-09-21\", \"place\": \"Moscow time\"}, \"origin\": \"retelling\", \"source_role\": \"editorial\", \"verification_status\": \"unverified\", \"quote\": \"• Shielded Wizards: 2,100 · 0.001 ZEC · 21 сен 20:00 МСК · WL GTD, дальше FCFS (заявка на WL);\", \"span\": [0, 88]}, {\"id\": \"telegram:1:7151#s18\", \"kind\": \"event\", \"actor\": \"Zec Quotrons\", \"action\": \"announcement\", \"object\": \"NFT_collection\", \"qualifiers\": {\"version\": \"3,333 coming soon\"}, \"origin\": \"retelling\", \"source_role\": \"editorial\", \"verification_status\": \"unverified\", \"quote\": \"• Zec Quotrons: 3,333 coming soon (не 1,000) · даты/цены нет;\", \"span\": [0, 60]}, {\"id\": \"telegram:1:7151#s19\", \"kind\": \"event\", \"actor\": \"Zec Machines\", \"action\": \"announcement\", \"object\": \"NFT_collection\", \"qualifiers\": {\"version\": \"3,000\"}, \"origin\": \"retelling\", \"source_role\": \"editorial\", \"verification_status\": \"unverified\", \"quote\": \"• Zec Machines: 3,000 · даты/цены нет;\", \"span\": [0, 37]}]}",
+    "refusal": null,
+    "reasoning": null
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 1668,
+  "completion_tokens": 1623,
+  "total_tokens": 3291,
+  "cost": 0.00044226,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.00044226,
+   "upstream_inference_prompt_cost": 0.00015012,
+   "upstream_inference_completions_cost": 0.00029214
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

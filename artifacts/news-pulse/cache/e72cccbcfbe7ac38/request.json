@@ -1,0 +1,17 @@
+{
+ "segments": [
+  {
+   "id": "telegram:15:422890#s0",
+   "text": "Arc запустит майннет 16 сентября\n\n",
+   "mentions": [
+    {
+     "text": "Arc",
+     "status": "confirmed"
+    }
+   ],
+   "kind_hint": "post",
+   "url": "https://t.me/WEB3_AGGREGATOR/422890",
+   "time": "2026-09-13T15:14:33+00:00"
+  }
+ ]
+}

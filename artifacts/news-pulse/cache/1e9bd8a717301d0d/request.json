@@ -1,0 +1,22 @@
+{
+ "a": {
+  "quote": "Уже обсуждается внедрение нативных приватных переводов ETH и ERC-20 через общий shielded pool на уровне протокола.",
+  "actor": null,
+  "action": "discussed",
+  "object": "private transfers",
+  "qualifiers": {
+   "version": "native private ETH and ERC-20 transfers via shielded pool"
+  },
+  "url": "https://t.me/WEB3_AGGREGATOR/423486"
+ },
+ "b": {
+  "quote": "акция всё равно обычно показывала повышенную чувствительность к ETH. Например, на нескольких крупных импульсах 2026 года",
+  "actor": "BMNR",
+  "action": "showed",
+  "object": "sensitivity to ETH",
+  "qualifiers": {
+   "event_date": "2026"
+  },
+  "url": "https://t.me/WEB3_AGGREGATOR/423486"
+ }
+}

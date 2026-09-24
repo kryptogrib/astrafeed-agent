@@ -1,0 +1,22 @@
+{
+ "a": {
+  "quote": "Официальная презентация запуска Arc начнется сегодня в 18:30 мск.",
+  "actor": "Circle",
+  "action": "will present",
+  "object": "official presentation of Arc launch",
+  "qualifiers": {
+   "event_date": "today at 18:30 мск"
+  },
+  "url": "https://t.me/crypto_hd/31448"
+ },
+ "b": {
+  "quote": "👍Напомним, что Arc выходит в Mainnet уже сегодня, а вместе с ним и многие NFT коллекции, сверяемся с постом.",
+  "actor": "Arc",
+  "action": "launches",
+  "object": "Mainnet",
+  "qualifiers": {
+   "event_date": "today"
+  },
+  "url": "https://t.me/whitelist1/7138"
+ }
+}

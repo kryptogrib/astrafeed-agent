@@ -1,0 +1,21 @@
+{
+ "a": {
+  "quote": "Fetch.ai has suspended its Ethereum bridge while it investigates and works to contain the fallout. The incident pushes September's crypto hack losses past $333M, with a single attacker responsible for much of this weekend's damage.",
+  "actor": "Fetch.ai",
+  "action": "suspended",
+  "object": "Ethereum bridge",
+  "qualifiers": {},
+  "url": "https://t.me/WEB3_AGGREGATOR/423462"
+ },
+ "b": {
+  "quote": "Around 8.7M FET (~$1.53M) was swept from Fetch.ai's TokenConversionManagerV3 contract on Ethereum, while on NuNet the attacker minted 408.5M NTX (~$452K), sending the token down about 95%. Security firms Blockaid and PeckShield attribute both hits to the same wallet cluster. Fetch.ai says it is also investigating unauthorized AGIX and WMTX mints, raising concerns over token supply across affiliated projects.",
+  "actor": "attacker",
+  "action": "swept, minted",
+  "object": "8.7M FET, 408.5M NTX",
+  "qualifiers": {
+   "version": "~$1.53M, ~$452K",
+   "place": "Ethereum, NuNet"
+  },
+  "url": "https://t.me/WEB3_AGGREGATOR/423462"
+ }
+}

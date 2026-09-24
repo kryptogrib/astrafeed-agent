@@ -1,0 +1,28 @@
+{
+ "a": {
+  "quote": "Торгуешь и держишь ZCAT - получаешь ZEC, BTC мем -> получаешь wBTC и т д.",
+  "actor": "holder of ZCAT",
+  "action": "receive",
+  "object": "ZEC",
+  "qualifiers": {
+   "version": null,
+   "event_date": null,
+   "place": null,
+   "counterparty": null
+  },
+  "url": "https://t.me/WEB3_AGGREGATOR/422763"
+ },
+ "b": {
+  "quote": "На SOL около года появились забридженные токены крупных блокчейнов-проектов / ZEC, HYPE, TAO",
+  "actor": null,
+  "action": "appear",
+  "object": "bridged tokens of major blockchain projects",
+  "qualifiers": {
+   "version": null,
+   "event_date": "about a year ago",
+   "place": "SOL",
+   "counterparty": null
+  },
+  "url": "https://t.me/WEB3_AGGREGATOR/422763"
+ }
+}

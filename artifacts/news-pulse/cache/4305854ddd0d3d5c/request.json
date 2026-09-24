@@ -1,0 +1,21 @@
+{
+ "segments": [
+  {
+   "id": "telegram:9:1036922#s0",
+   "text": "CRYPTO UPDATE:   \n#BITCOIN 77279.00 +0.14%   \n#ETHER 2522.00 +0.06%   \n#BITCOINCASH 226.25 +0.45%   \n#EOS 0.1295 +0%   \n#LITECOIN 54.32 +1.19%   \n#STELLAR 0.1808 +0.5%   \n#DOGECOIN 0.0848 +0%   \n#UNISWAP 6.4145 +1.38%   \n#CHAINLINK 11.5438 +0.35%   \n#POLKADOT 1.0148 -0.97%   \n#SOLANA 101.8200 +0.44%   \n#AVALANCHE 7.4500 +0.81%   \n#NEO 1.686 +0% ...",
+   "mentions": [
+    {
+     "text": "#ETHER",
+     "status": "confirmed"
+    },
+    {
+     "text": "ETHER",
+     "status": "confirmed"
+    }
+   ],
+   "kind_hint": "post",
+   "url": "https://t.me/marketfeed/1036922",
+   "time": "2026-09-13T06:01:42+00:00"
+  }
+ ]
+}

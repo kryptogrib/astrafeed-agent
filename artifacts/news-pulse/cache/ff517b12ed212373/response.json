@@ -1,0 +1,32 @@
+{
+ "choices": [
+  {
+   "message": {
+    "content": "{\"labels\": [{\"id\": \"telegram:15:423064#s21\", \"kind\": \"event\", \"actor\": \"RIZE\", \"action\": \"launch\", \"object\": \"T-RIZE on Arc mainnet\", \"qualifiers\": {}, \"origin\": \"retelling\", \"source_role\": \"unknown\", \"verification_status\": \"unverified\", \"quote\": \"🙋‍♂ #RIZE RIZE выпустит T-RIZE в основной сети Arc\", \"span\": [0, 47]}]}"
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 1521,
+  "completion_tokens": 1483,
+  "total_tokens": 3004,
+  "cost": 0.0005738148,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 256,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.0005738148,
+   "upstream_inference_prompt_cost": 0.0001763708,
+   "upstream_inference_completions_cost": 0.000397444
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

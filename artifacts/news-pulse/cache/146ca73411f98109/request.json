@@ -1,0 +1,28 @@
+{
+ "a": {
+  "quote": "Today there will be a liquidity clash. ARC SZN???",
+  "actor": null,
+  "action": "будет",
+  "object": "liquidity clash",
+  "qualifiers": {
+   "version": null,
+   "event_date": "Today",
+   "place": null,
+   "counterparty": null
+  },
+  "url": "https://t.me/WEB3_AGGREGATOR/423070"
+ },
+ "b": {
+  "quote": "#shorts Забираем бесплатный NFT в сети Arc",
+  "actor": "Arc",
+  "action": "launched",
+  "object": "mainnet",
+  "qualifiers": {
+   "version": "mainnet",
+   "event_date": "2026-09-16",
+   "place": null,
+   "counterparty": null
+  },
+  "url": "https://t.me/WEB3_AGGREGATOR/423117"
+ }
+}

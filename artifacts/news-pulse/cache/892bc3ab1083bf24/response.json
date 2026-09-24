@@ -1,0 +1,32 @@
+{
+ "choices": [
+  {
+   "message": {
+    "content": "{\"labels\": [{\"id\": \"telegram:15:423573#s1\", \"kind\": \"event\", \"actor\": \"IMD, the Fren Pet team's return\", \"action\": \"opened\", \"object\": \"agent network\", \"qualifiers\": {\"place\": \"on Ethereum\"}, \"origin\": \"retelling\", \"source_role\": \"unknown\", \"verification_status\": \"unverified\", \"topic_role\": \"context\", \"quote\": \"IMD, the Fren Pet team's return, now on Ethereum, has opened its agent network to the public. Anyone holding one of 2,000 free-minted NFTs can plug in their own machine and run an agent that writes and reviews Solidity, builds websites and answers on-chain oracle queries.\", \"span\": [0, 260]}]}"
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 1978,
+  "completion_tokens": 1893,
+  "total_tokens": 3871,
+  "cost": 0.00080696,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.00080696,
+   "upstream_inference_prompt_cost": 0.00027692,
+   "upstream_inference_completions_cost": 0.00053004
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

@@ -1,0 +1,46 @@
+{
+ "id": "gen-1790194245-nRA8RbBZRfKyloD31lJq",
+ "object": "chat.completion",
+ "created": 1790194245,
+ "model": "deepseek/deepseek-v4-flash",
+ "provider": "OpenInference",
+ "system_fingerprint": "vllm-dev-ep-17a051ab",
+ "service_tier": null,
+ "choices": [
+  {
+   "index": 0,
+   "logprobs": null,
+   "finish_reason": "stop",
+   "native_finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "content": " {\"labels\": [{\"id\": \"telegram:15:423083#s0\", \"kind\": \"event\", \"actor\": \"Starknet\", \"action\": \"уходят на биткоин\", \"object\": \"Starknet\", \"qualifiers\": {\"place\": \"эфире\"}, \"origin\": \"retelling\", \"source_role\": \"author\", \"verification_status\": \"unverified\", \"quote\": \"Starknet поняли, что на эфире им ловить нечего, уходят на биткоин\", \"span\": [0, 64]}, {\"id\": \"telegram:15:423090#s1\", \"kind\": \"author_position\", \"actor\": \"автор\", \"action\": \"булит\", \"object\": \"Zcash\", \"qualifiers\": {\"counterparty\": \"Zcash\", \"price\": \"$15k\"}, \"origin\": \"own\", \"source_role\": \"author\", \"verification_status\": \"unverified\", \"quote\": \"Я булишь по Zcash вовсе не потому, что токен стоит уже почти как $ETH, а те кто брали его год назад на $250, сейчас имеют $15k\", \"span\": [0, 120]}, {\"id\": \"telegram:18:31454#s1\", \"kind\": \"event\", \"actor\": \"Deutsche Bank\", \"action\": \"позволит клиентам хранить и переводить\", \"object\": \"BTC, ETH и стейблкоины\", \"qualifiers\": {\"place\": \"Deutsche Bank\"}, \"origin\": \"retelling\", \"source_role\": \"editorial\", \"verification_status\": \"source_statement\", \"quote\": \"Крупнейший банк Германии позволит клиентам хранить и переводить #BTC, #ETH и отдельные стейблкоины напрямую через Deutsche Bank.\", \"span\": [0, 104]}, {\"id\": \"telegram:18:31457#s1\", \"kind\": \"event\", \"actor\": \"Хакеры\", \"action\": \"начали использовать Ethereum для управления\", \"object\": \"банковским вирусом\", \"qualifiers\": {}, \"origin\": \"retelling\", \"source_role\": \"editorial\", \"verification_status\": \"unverified\", \"quote\": \"Хакеры начали использовать Ethereum для управления банковским вирусом.\", \"span\": [0, 70]}, {\"id\": \"telegram:18:31457#s4\", \"kind\": \"event\", \"actor\": \"злоумышленники\", \"action\": \"используют смарт-контракты Ethereum для обновления адресов\", \"object\": \"смарт-контракты Ethereum\", \"qualifiers\": {\"place\": \"Ethereum\"}, \"origin\": \"retelling\", \"source_role\": \"editorial\", \"verification_status\": \"unverified\", \"quote\": \"Самое интересное – злоумышленники используют смарт-контракты Ethereum для обновления адресов управляющих серверов и источников загрузки вируса, что усложняет блокировку инфраструктуры.\", \"span\": [0, 150]}, {\"id\": \"telegram:15:423102#s3\", \"kind\": \"event\", \"actor\": \"аукцион\", \"action\": \"проходит в ZEC\", \"object\": \"аукцион\", \"qualifiers\": {\"place\": \"ZEC\", \"counterparty\": \"NEAR\"}, \"origin\": \"retelling\", \"source_role\": \"author\", \"verification_status\": \"unverified\", \"quote\": \"Аукцион проходит в ZEC, но благодаря интеграции с NEAR можно зайти с ETH, SOL, BTC, стейблкоинами и другими активами.\", \"span\": [0, 120]}, {\"id\": \"telegram:15:423126#s1\", \"kind\": \"event\", \"actor\": \"автор\", \"action\": \"минт\", \"object\": \"NFT\", \"qualifiers\": {\"price\": \"0.005 eth\"}, \"origin\": \"own\", \"source_role\": \"author\", \"verification_status\": \"unverified\", \"quote\": \"Mint 0.005 -> floor 0.01 eth\", \"span\": [0, 30]}, {\"id\": \"telegram:15:423129#s3\", \"kind\": \"event\", \"actor\": \"Aerie Capital\", \"action\": \"запустил новый Morpho market\", \"object\": \"Morpho market\", \"qualifiers\": {\"place\": \"Ethereum mainnet\"}, \"origin\": \"retelling\", \"source_role\": \"author\", \"verification_status\": \"unverified\", \"quote\": \"Aerie Capital launched a new Morpho market on Ethereum mainnet, allowing nALPHA, nOPAL, nBASIS, and nFALCON to serve as collateral.\", \"span\": [0, 130]}, {\"id\": \"telegram:15:423152#s1\", \"kind\": \"event\", \"actor\": \"nadoHQ\", \"action\": \"планируют ревилить\", \"object\": \"NFT\", \"qualifiers\": {\"place\": \"OpenSea\", \"price\": \"0.9 ETH\"}, \"origin\": \"retelling\", \"source_role\": \"author\", \"verification_status\": \"unverified\", \"quote\": \"планируют ревилить свои NFT\", \"span\": [0, 30]}, {\"id\": \"telegram:19:19001#s7\", \"kind\": \"event\", \"actor\": \"OGs\", \"action\": \"ранние\", \"object\": \"экосистемы\", \"qualifiers\": {\"place\": \"Bitcoin, Ethereum, Arbitrum\"}, \"origin\": \"retelling\", \"source_role\": \"author\", \"verification_status\": \"unverified\", \"quote\": \"Super early OGs from Bitcoin, Ethereum and Arbitrum ecosystems.\", \"span\": [0, 60]}, {\"id\": \"telegram:15:423158#s2\", \"kind\": \"event\", \"actor\": \"Мосбиржа\", \"action\": \"запустит бессрочные фьючерсы\", \"object\": \"фьючерсы на индексы #BTC, #ETH, #SOL, #XRP и #TRX\", \"qualifiers\": {\"date\": \"22 сентября\", \"place\": \"Мосбиржа\"}, \"origin\": \"retelling\", \"source_role\": \"editorial\", \"verification_status\": \"source_statement\", \"quote\": \"Мосбиржа 22 сентября запустит бессрочные фьючерсы на индексы #BTC, #ETH, #SOL, #XRP и #TRX для квалифицированных инвесторов\", \"span\": [0, 100]}, {\"id\": \"telegram:15:423161#s6\", \"kind\": \"event\", \"actor\": \"OpenSea\", \"action\": \"запуск\", \"object\": \"Mobile\", \"qualifiers\": {\"place\": \"OpenSea\"}, \"origin\": \"retelling\", \"source_role\": \"author\", \"verification_status\": \"unverified\", \"quote\": \"OpenSea Mobile launch — Z£PHYR, K2S, A → Zack, Chris: “very very soon / sooner than you think”, без даты.\", \"span\": [0, 100]}]}",
+    "refusal": null,
+    "reasoning": null
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 2330,
+  "completion_tokens": 1622,
+  "total_tokens": 3952,
+  "cost": 0.00125909,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 1841,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.00125909,
+   "upstream_inference_prompt_cost": 0.00012369,
+   "upstream_inference_completions_cost": 0.0011354
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

@@ -1,0 +1,25 @@
+{
+ "a": {
+  "quote": "• Wick on Zec: аккаунт @wickonzec не находится · в твоём списке было 999 free;",
+  "actor": "Wick on Zec",
+  "action": "account_not_found",
+  "object": "Twitter_account",
+  "qualifiers": {
+   "previous_info": "999 free"
+  },
+  "url": "https://t.me/whitelist1/7151"
+ },
+ "b": {
+  "quote": "• Zec Quotrons: 3,333 coming soon (не 1,000) · даты/цены нет;",
+  "actor": "Zec Quotrons",
+  "action": "announce_upcoming",
+  "object": "NFT_collection",
+  "qualifiers": {
+   "supply": "3,333",
+   "status": "coming soon",
+   "note": "not 1,000",
+   "date_price": "none"
+  },
+  "url": "https://t.me/whitelist1/7151"
+ }
+}

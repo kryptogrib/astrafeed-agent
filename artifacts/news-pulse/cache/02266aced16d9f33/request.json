@@ -1,0 +1,24 @@
+{
+ "a": {
+  "quote": "BITMINE'S ETH HOLDINGS REACHED 5.98 MILLION AFTER ACQUIRING 27,562 TOKENS OVER THE PAST WEEK ...",
+  "actor": "Bitmine",
+  "action": "ETH holdings reached 5.98 million after acquiring 27,562 tokens over past week",
+  "object": "ETH",
+  "qualifiers": {
+   "event_date": "2026-09-21",
+   "place": null,
+   "counterparty": null
+  },
+  "url": "https://t.me/marketfeed/1042392"
+ },
+ "b": {
+  "quote": "Сегодня утром европейские лорды проснулись, бахнули Макалана 76-го года, оценили пятничные притоки в ETF и решили немного закупиться $BTC и $ETH",
+  "actor": "европейские лорды",
+  "action": "проснулись, бахнули Макалана 76-го года, оценили пятничные притоки в ETF и решили немного закупиться $BTC и $ETH",
+  "object": "$BTC и $ETH",
+  "qualifiers": {
+   "event_date": "Сегодня утром"
+  },
+  "url": "https://t.me/rawa_imagination/21141"
+ }
+}

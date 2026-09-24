@@ -1,0 +1,32 @@
+{
+ "choices": [
+  {
+   "message": {
+    "content": "{\"labels\": [{\"id\": \"telegram:15:423219#s1\", \"kind\": \"event\", \"actor\": null, \"action\": \"launched\", \"object\": \"новый блокчейн ARC\", \"qualifiers\": {\"event_date\": \"вчера\"}, \"origin\": \"unknown\", \"source_role\": \"editorial\", \"verification_status\": \"unverified\", \"topic_role\": \"subject\", \"quote\": \"Вчера запустился новый блокчейн под названием ARC, где уже появляются первые проекты, активности мемы и т.п.\", \"span\": [0, 102]}]}"
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 1659,
+  "completion_tokens": 1624,
+  "total_tokens": 3283,
+  "cost": 0.0004608156,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 256,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.0004608156,
+   "upstream_inference_prompt_cost": 0.0001425116,
+   "upstream_inference_completions_cost": 0.000318304
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

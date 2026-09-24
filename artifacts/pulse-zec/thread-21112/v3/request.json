@@ -1,0 +1,29 @@
+{
+ "model": "deepseek/deepseek-v4-flash",
+ "temperature": 0,
+ "response_format": {
+  "type": "json_object"
+ },
+ "usage": {
+  "include": true
+ },
+ "reasoning": {
+  "enabled": false
+ },
+ "messages": [
+  {
+   "role": "system",
+   "content": "You read one Telegram discussion thread. Topic: zec.\n\n`mentions` on the post or on a comment lists words that a separate detector found as names of the\ntopic, with status confirmed or ambiguous (\"эфир\" may also mean a broadcast). Do not decide yourself\nwhich words name the topic; judge whether each reply is about it.\n\nFor EVERY comment return one object:\n  id           the comment id\n  relevance    relevant   the reply is about zec: it names it (see mentions) or continues, through\n                          its reply chain or the post, a message about zec\n               unrelated  another subject, including other coins and the market in general\n               unclear    cannot tell: the only link is a nearby message outside the reply chain,\n                          the parent is missing, or the meaning is in an image you cannot see\n  aspect       only if relevant, else null:\n               market      the price, trading and outlook of zec itself\n               usage       zec used as a currency, means of payment or balance: a price of\n                           something named in zec, mint cost, gas, zec on a wallet\n               technology  the network, upgrades, L2\n               other\n  kind         opinion / question / experience (the author's own fact or action) / other\n  summary      only if relevant, else null: one short sentence in Russian retelling THIS reply.\n               Keep its kind: a question stays a question (\"Спрашивает, …\"), an experience stays a fact.\n               The parent may be used to resolve \"это\" / \"он\", but add no numbers, levels or arguments\n               the reply itself does not state. Sarcasm: say it is ironic, do not retell it literally.\n               If a retelling needs a guess, null.\n  quote        only if relevant, else null: an exact fragment of the reply's own text, copied\n               character for character, on which the summary rests\n  context_ids  \"post\" and/or ids from the reply chain (parent, grandparent, ...) needed to understand\n               the reply; [] if it is clear alone. Never a message that is only nearby in time.\n  name_candidate  a word in the reply that you think names zec but is not in its mentions;\n               null otherwise. It is stored only as a candidate for review.\n\nDo not assume a reply is about zec because the post is; follow the reply chain. A reply to an\noff-topic message may return to zec: judge its own text too.\n\"[media]\" marks an image you cannot see: unclear only when the meaning cannot be understood without it.\nreply_to \"missing:<id>\" means the parent message is not available.\nAnswer with JSON only: {\"labels\": [ ... ]}"
+  },
+  {
+   "role": "user",
+   "content": "{\"post\": {\"id\": \"post\", \"text\": \"#крипто $NEAR\\n\\nПопытка пробоя вверх, в течении года таких было 6 штук и всегда следовал резкий откат.\\n\\nВ этот раз интересно тем, что на прошлой недельной свече было аж 6 сигналов к перекупленности, но они не отработали. Сейчас котировка проколола недельную МА200, а объёмов как таковых ещё не зашло, зато накопилась мощная шортовая братия, которую пока ещё не вынесли.\\n\\nЭто один из моих древних портфельных альтов, который я готов удерживать, но если у вас не так много веры как у меня, можете частично его сдать на этом уровне, если бы был икс я бы половину пофиксил, но у меня пока нет икса, я лишь немного вышел в плюс ( #не_ИИР )\"}, \"comments\": [{\"id\": \"343090\", \"reply_to\": \"post\", \"author\": \"u1\", \"time\": \"19:12\", \"text\": \"так там ещё расти и расти\"}, {\"id\": \"343091\", \"reply_to\": \"343090\", \"author\": \"u2\", \"time\": \"19:25\", \"text\": \"только небо, только ветер, только счастье впереди\"}, {\"id\": \"343092\", \"reply_to\": \"post\", \"author\": \"u3\", \"time\": \"19:40\", \"text\": \"Тоже держу ниар. По структуре очень напоминает zen, zec , ну, по моим параметрам. По коинглас наблюдаю все это время. Даже на 15м почти не было продаж спота. Все покупали спот. Он пробил вверх дневные линейные регрессии 100 и 200. И главное он пробил , пока, 100 недельную регрессии. Он также пробил нисходящий канал гауса, недельный. Как по мне он хорошо пока смотрится. С локальными целями от 3,7 до 5. Глобальными 10 вполне. А если повторять структуру зек, то космос...просто наверное стоп спота сдвигать половину и все.... я еще зен держу, схожая картина по периодам фибоначи. И еще ондо прям локально просится выстрелить. Третий раз на обьемах штурмует 200д. Но конечно волатильная тварь\", \"mentions\": [{\"text\": \"zec\", \"status\": \"confirmed\"}]}, {\"id\": \"343093\", \"reply_to\": \"343092\", \"author\": \"u3\", \"time\": \"19:41\", \"text\": \"Ниар недельный. Если разберетесь😁 [media]\"}, {\"id\": \"343096\", \"reply_to\": \"343093\", \"author\": \"u4\", \"time\": \"19:50\", \"text\": \"Очень красивое, рисуй еще\"}, {\"id\": \"343099\", \"reply_to\": \"343096\", \"author\": \"u3\", \"time\": \"21:19\", \"text\": \"На самом деле вы зря смеетесь. Это три канала линейной регрессии разной величины и они хорошо показывают разворот тренда\"}, {\"id\": \"343360\", \"reply_to\": \"post\", \"author\": \"u5\", \"time\": \"18:50\", \"text\": \"первую часть брал тут. до второго ордера не дошло к сожалению. поэтому щас фиксить не будем [media]\"}, {\"id\": \"343361\", \"reply_to\": \"343360\", \"author\": \"u5\", \"time\": \"18:50\", \"text\": \"а Димону еще иксов десять до безубытка?\"}]}"
+  }
+ ],
+ "provider": {
+  "order": [
+   "DeepInfra"
+  ],
+  "allow_fallbacks": false
+ }
+}

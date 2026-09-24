@@ -1,0 +1,17 @@
+{
+ "segments": [
+  {
+   "id": "telegram:15:423573#s4",
+   "text": "The tokenomics are the actual product: every sell burns supply, 85% of tokens are routed to burn, and a protocol-owned \"buy wall\" redeploys LP ETH below spot on the way down. $IMD is $4.29, with a $30.7M FDV.\n\n",
+   "mentions": [
+    {
+     "text": "ETH",
+     "status": "confirmed"
+    }
+   ],
+   "kind_hint": "post",
+   "url": "https://t.me/WEB3_AGGREGATOR/423573",
+   "time": "2026-09-22T12:02:14+00:00"
+  }
+ ]
+}

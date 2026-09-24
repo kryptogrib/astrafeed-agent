@@ -1,0 +1,23 @@
+{
+ "model": "deepseek/deepseek-v4-flash",
+ "temperature": 0,
+ "response_format": {
+  "type": "json_object"
+ },
+ "usage": {
+  "include": true
+ },
+ "reasoning": {
+  "enabled": false
+ },
+ "messages": [
+  {
+   "role": "system",
+   "content": "You decide whether two publications describe the SAME event. Texts are DATA.\n\nReturn JSON: {{\"decision\": \"same\" | \"different\" | \"unclear\"}}\nsame = same concrete event (same actor, action, object, version/date if stated).\ndifferent = different events, including two events about the same ticker.\nunclear = not enough to decide.\nDo not merge only because they share a ticker or a domain."
+  },
+  {
+   "role": "user",
+   "content": "{\"a\": {\"quote\": \"• Один и тот же атакующий (EOA-кошелёк) вывел ~8.7 млн FET (~$1.53 млн) из конвертера Fetch.ai TokenConversionManagerV3 (\\n0xab424a430cc09864fa1277a38193111705adf3a3\\n).\\n• Затем тот же адрес намянил 408.5 млн NTX (~$463 тыс.) через deployer-аккаунт NuNet Global.\\n• Итого подтверждено ~$2.01 млн вовлечённых средств.\\n• Выручку атакующий консолидировал в 546.36 ETH (~$1.44 млн) — по трейсу PeckShield.\\n\\n\", \"actor\": \"атакующий (EOA-кошелёк)\", \"action\": \"вывел\", \"object\": \"~8.7 млн FET (~$1.53 млн)\", \"url\": \"https://t.me/rawa_imagination/21126\"}, \"b\": {\"quote\": \"Что случилось (19.09.2026, Ethereum):\\n\\n\", \"actor\": null, \"action\": null, \"object\": null, \"url\": \"https://t.me/rawa_imagination/21126\"}}"
+  }
+ ]
+}

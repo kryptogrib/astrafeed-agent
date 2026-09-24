@@ -1,0 +1,25 @@
+{
+ "a": {
+  "quote": "Сегодня, 16 сентября, Circle запустила мейннет Arc и сразу подключила его к Agent Stack, набору инструментов, который с 11 мая дает ИИ-агенту собственный кошелек. Идея простая: если боту нужен сервис, то он сам его находит, платит в USDC и получает результат, а человек решает, сколько и на что можно потратить. Собрать такого агента можно в Arc Studio, лишь описав словами.",
+  "actor": "Circle",
+  "action": "launched",
+  "object": "Arc mainnet and connected to Agent Stack",
+  "qualifiers": {
+   "event_date": "2026-09-16",
+   "tool": "Agent Stack",
+   "since": "2026-05-11"
+  },
+  "url": "https://t.me/WEB3_AGGREGATOR/423105"
+ },
+ "b": {
+  "quote": "Arc Fly — минт состоится сегодня на OpenSea, будет фри минт на 7.777 NFT",
+  "actor": null,
+  "action": "mint",
+  "object": "Arc Fly NFT",
+  "qualifiers": {
+   "event_date": "2026-09-16",
+   "place": "OpenSea"
+  },
+  "url": "https://t.me/WEB3_AGGREGATOR/423153"
+ }
+}

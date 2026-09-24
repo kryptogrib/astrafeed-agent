@@ -1,0 +1,46 @@
+{
+ "id": "gen-1790196888-x7zR5QoIXNHOec6NZWJh",
+ "object": "chat.completion",
+ "created": 1790196888,
+ "model": "deepseek/deepseek-v4-flash",
+ "provider": "DigitalOcean",
+ "system_fingerprint": null,
+ "service_tier": null,
+ "choices": [
+  {
+   "index": 0,
+   "logprobs": null,
+   "finish_reason": "stop",
+   "native_finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "content": "{\n  \"labels\": [\n    {\n      \"id\": \"telegram:15:423227#s16\",\n      \"kind\": \"redistribution\",\n      \"actor\": null,\n      \"action\": null,\n      \"object\": null,\n      \"qualifiers\": {},\n      \"origin\": \"retelling\",\n      \"source_role\": \"unknown\",\n      \"verification_status\": \"unverified\",\n      \"quote\": \"Circle сейчас держит два разных Arc в одном блоке: институциональный слой на $75 млн и мем-биржу на $336 млн\",\n      \"span\": [0, 91]\n    },\n    {\n      \"id\": \"telegram:15:423227#s16\",\n      \"kind\": \"event\",\n      \"actor\": \"Circle\",\n      \"action\": \"holds two different Arc layers in one block\",\n      \"object\": \"Arc instances\",\n      \"qualifiers\": {\"version\": \"institutional layer $75M, mem exchange $336M\"},\n      \"origin\": \"retelling\",\n      \"source_role\": \"unknown\",\n      \"verification_status\": \"unverified\",\n      \"quote\": \"Circle сейчас держит два разных Arc в одном блоке: институциональный слой на $75 млн и мем-биржу на $336 млн\",\n      \"span\": [0, 91]\n    },\n    {\n      \"id\": \"telegram:15:423227#s16\",\n      \"kind\": \"event\",\n      \"actor\": \"retail\",\n      \"action\": \"created mem exchange from the network in a day\",\n      \"object\": \"mem exchange on Arc\",\n      \"qualifiers\": {\"place\": \"on Arc network\", \"event_date\": \"within a day of launch\"},\n      \"origin\": \"retelling\",\n      \"source_role\": \"unknown\",\n      \"verification_status\": \"unverified\",\n      \"quote\": \"второй — тот, что ритейл сделал из сети за сутки, потому что институциям на интеграцию нужен год, а на запуск своего мема хватает минуты\",\n      \"span\": [154, 260]\n    },\n    {\n      \"id\": \"telegram:15:423244#s0\",\n      \"kind\": \"event\",\n      \"actor\": \"Arc\",\n      \"action\": \"introduces AI Coding Agent for onchain app development\",\n      \"object\": \"AI Coding Agent\",\n      \"qualifiers\": {},\n      \"origin\": \"retelling\",\n      \"source_role\": \"unknown\",\n      \"verification_status\": \"source_statement\",\n      \"quote\": \"Arc Introduces AI Coding Agent for Onchain App Development\",\n      \"span\": [0, 58]\n    },\n    {\n      \"id\": \"telegram:15:423244#s1\",\n      \"kind\": \"event\",\n      \"actor\": \"Arc\",\n      \"action\": \"introduces Arc Studio, an AI coding agent\",\n      \"object\": \"Arc Studio\",\n      \"qualifiers\": {\"version\": \"Studio, AI coding agent that turns natural-language prompts into full-stack onchain applications, including frontend interfaces, backend logic, and smart contracts\"},\n      \"origin\": \"retelling\",\n      \"source_role\": \"unknown\",\n      \"verification_status\": \"source_statement\",\n      \"quote\": \"Arc has introduced Arc Studio, an AI coding agent that turns natural-language prompts into full-stack onchain applications, including frontend interfaces, backend logic, and smart contracts\",\n      \"span\": [0, 193]\n    },\n    {\n      \"id\": \"telegram:15:423244#s2\",\n      \"kind\": \"event\",\n      \"actor\": \"Arc Studio\",\n      \"action\": \"is built around Arc and Circle infrastructure, with integrations for CCTP, Gateway, Wallets, and other stablecoin tools\",\n      \"object\": \"Arc Studio\",\n      \"qualifiers\": {\"place\": \"across nine EVM chains including Arc, Ethereum, Base, Avalanche, Arbitrum, Unichain\"},\n      \"origin\": \"retelling\",\n      \"source_role\": \"unknown\",\n      \"verification_status\": \"source_statement\",\n      \"quote\": \"Studio is built around Arc and Circle’s infrastructure, with integrations for CCTP, Gateway, Wallets, and other stablecoin tools. Generated apps can be tested across nine EVM chains, including Arc, Ethereum, Base, Avalanche, Arbitrum, and Unichain, while the resulting code can be exported into developers’ own repositories\",\n      \"span\": [0, 316]\n    },\n    {\n      \"id\": \"telegram:15:423249#s1\",\n      \"kind\": \"event\",\n      \"actor\": \"Circle\",\n      \"action\": \"Arc L1 hit mainnet\",\n      \"object\": \"Arc L1\",\n      \"qualifiers\": {\"version\": \"Arc L1 mainnet launch\"},\n      \"origin\": \"retelling\",\n      \"source_role\": \"unknown\",\n      \"verification_status\": \"source_statement\",\n      \"quote\": \"Circle's Arc L1 hit mainnet\",\n      \"span\": [111, 137]\n    },\n    {\n      \"id\": \"telegram:15:423249#s2\",\n      \"kind\": \"event\",\n      \"actor\": \"Circle\",\n      \"action\": \"Arc, its USDC-gas stablecoin L1, goes live on mainnet\",\n      \"object\": \"Arc (L1)\",\n      \"qualifiers\": {\"version\": \"USDC-gas stablecoin L1 mainnet launch\"},\n      \"origin\": \"retelling\",\n      \"source_role\": \"unknown\",\n      \"verification_status\": \"source_statement\",\n      \"quote\": \"Circle's Arc, its USDC-gas stablecoin L1, goes live on mainnet\",\n      \"span\": [235, 297]\n    },\n    {\n      \"id\": \"telegram:15:423252#s1\",\n      \"kind\": \"event\",\n      \"actor\": \"Arc\",\n      \"action\": \"minted ARC tokens\",\n      \"object\": \"ARC tokens\",\n      \"qualifiers\": {},\n      \"origin\": \"own\",\n      \"source_role\": \"unknown\",\n      \"verification_status\": \"unverified\",\n      \"quote\": \"Arc сминтили токены ARC\",\n      \"span\": [0, 20]\n    },\n    {\n      \"id\": \"telegram:15:423252#s2\",\n      \"kind\": \"event\",\n      \"actor\": \"Arc\",\n      \"action\": \"minted 10 billion ARC tokens at mainnet launch\",\n      \"object\": \"10 billion $ARC tokens\",\n      \"qualifiers\": {\"version\": \"10B tokens minted at mainnet launch, no info on use, not used for gas, no listing, no stated use case\"},\n      \"origin\": \"own\",\n      \"source_role\": \"unknown\",\n      \"verification_status\": \"unverified\",\n      \"quote\": \"Arc при запуске майннета сминтили 10 млрд. токенов $ARC, на данный момент нет информации для чего, т.к. в оплате газа они не участвуют, нет листинга и нет заявленного использования\",\n      \"span\": [0, 141]\n    },\n    {\n      \"id\": \"telegram:15:423286#s8\",\n      \"kind\": \"event\",\n      \"actor\": \"Circle\",\n      \"action\": \"launched mainnet on September 16\",\n      \"object\": \"Arc mainnet\",\n      \"qualifiers\": {\"event_date\": \"September 16\", \"version\": \"validators: BlackRock and Visa; minted 10B ARC; over $370M USDC entered in first two hours\"},\n      \"origin\": \"retelling\",\n      \"source_role\": \"unknown\",\n      \"verification_status\": \"source_statement\",\n      \"quote\": \"16 сентября Circle запустила мейннет: среди валидаторов BlackRock и Visa, отчеканено 10 млрд ARC, за первые два часа в сеть вошло больше $370 млн USDC\",\n      \"span\": [0, 131]\n    },\n    {\n      \"id\": \"telegram:15:423286#s9\",\n      \"kind\": \"event\",\n      \"actor\": \"a trader\",\n      \"action\": \"lost about $600,000 due to a fake Cloudflare verification while trying to bridge to Arc\",\n      \"object\": \"~$600k loss\",\n      \"qualifiers\": {\"event_date\": \"before launch\", \"place\": \"while looking to bridge to Arc\", \"counterparty\": \"malicious actors using fake Cloudflare, script with admin rights on Windows, malicious links in memecoin metadata pulled by aggregators\"},\n      \"origin\": \"retelling\",\n      \"source_role\": \"unknown\",\n      \"verification_status\": \"unverified\",\n      \"quote\": \"накануне запуска накрыло тех, кто к нему готовился: трейдер по собственным словам лишился около $600 тысяч, пока искал способ забриджить в Arc. Фейковая проверка Cloudflare, скрипт с правами администратора в Windows, и дальше чистят весь компьютер. Вредоносные ссылки прятали прямо в метаданных мемкоинов, откуда их тянут агрегаторы - то есть подстава ждала ровно на том шаге, где трейдер как раз и проверяет токен\",\n      \"span\": [119, 583]\n    }\n  ]\n}",
+    "refusal": null,
+    "reasoning": null
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 2248,
+  "completion_tokens": 2037,
+  "total_tokens": 4285,
+  "cost": 0.000619556,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.000619556,
+   "upstream_inference_prompt_cost": 0.000220304,
+   "upstream_inference_completions_cost": 0.000399252
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

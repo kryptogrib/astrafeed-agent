@@ -1,0 +1,28 @@
+{
+ "a": {
+  "quote": "Вчера общий чистый отток спотовых BTC-ETF составил ~$13,2 млн.",
+  "actor": null,
+  "action": "outflow",
+  "object": "BTC-ETF",
+  "qualifiers": {
+   "event_date": "вчера",
+   "place": null,
+   "counterparty": null,
+   "version": null
+  },
+  "url": "https://t.me/cryptoattack24/96696"
+ },
+ "b": {
+  "quote": "📍Сегодня экспирация в опционах на BTC и ETH! (Deribit)",
+  "actor": null,
+  "action": "expiration",
+  "object": "options on BTC and ETH",
+  "qualifiers": {
+   "version": null,
+   "event_date": "today",
+   "place": "Deribit",
+   "counterparty": null
+  },
+  "url": "https://t.me/crypto_hd/31378"
+ }
+}

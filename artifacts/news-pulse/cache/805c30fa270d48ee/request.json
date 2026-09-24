@@ -1,0 +1,22 @@
+{
+ "a": {
+  "quote": "🟢 Почему в мейннет Zcash нет NFT?",
+  "actor": "Zcash",
+  "action": "question_nft_absence",
+  "object": "mainnet of Zcash",
+  "qualifiers": {},
+  "url": "https://t.me/WEB3_AGGREGATOR/423606"
+ },
+ "b": {
+  "quote": "В мейннет Zcash определён ровно один актив - сам ZEC. Механизма выпуска произвольных активов там нет.\nПуть к нему называется ZSA - Zcash Shielded Assets. ZIP 226 и 227 написаны, ZSA прошли security review Least Authority, с августа работает отдельный публичный Testnet-ZSA. Статус спецификаций - Draft. В текущем плане NU7 от 5 ноября ZSA среди заявленных изменений нет. NU7 это не запуск NFT.",
+  "actor": "Zcash mainnet",
+  "action": "define",
+  "object": "exactly one asset",
+  "qualifiers": {
+   "version": "ZEC",
+   "counterparty": "ZSA",
+   "event_date": "NU7 planned November 5"
+  },
+  "url": "https://t.me/WEB3_AGGREGATOR/423606"
+ }
+}

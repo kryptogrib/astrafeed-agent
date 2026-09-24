@@ -1,0 +1,22 @@
+{
+ "a": {
+  "quote": "Официальная презентация запуска Arc начнется сегодня в 18:30 мск.",
+  "actor": "Circle",
+  "action": "will present",
+  "object": "official presentation of Arc launch",
+  "qualifiers": {
+   "event_date": "today at 18:30 мск"
+  },
+  "url": "https://t.me/crypto_hd/31448"
+ },
+ "b": {
+  "quote": "Circle's Arc Stablecoin L1 Goes Live on Mainnet",
+  "actor": "Circle",
+  "action": "launched",
+  "object": "Arc Stablecoin L1",
+  "qualifiers": {
+   "event_date": "2026-09-16"
+  },
+  "url": "https://t.me/WEB3_AGGREGATOR/423100"
+ }
+}

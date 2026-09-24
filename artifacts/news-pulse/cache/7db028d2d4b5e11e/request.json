@@ -1,0 +1,17 @@
+{
+ "segments": [
+  {
+   "id": "telegram:15:423533#s5",
+   "text": "🟢 Arc мейннет запущен, валидируют BlackRock и Visa\n",
+   "mentions": [
+    {
+     "text": "Arc",
+     "status": "confirmed"
+    }
+   ],
+   "kind_hint": "post",
+   "url": "https://t.me/WEB3_AGGREGATOR/423533",
+   "time": "2026-09-21T20:47:03+00:00"
+  }
+ ]
+}

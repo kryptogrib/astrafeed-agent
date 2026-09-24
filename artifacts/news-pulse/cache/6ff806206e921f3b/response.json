@@ -1,0 +1,46 @@
+{
+ "id": "gen-1790193499-e0edWei1DsS72TQ7g0bE",
+ "object": "chat.completion",
+ "created": 1790193499,
+ "model": "deepseek/deepseek-v4-flash",
+ "provider": "GMICloud",
+ "system_fingerprint": null,
+ "service_tier": null,
+ "choices": [
+  {
+   "index": 0,
+   "logprobs": null,
+   "finish_reason": "stop",
+   "native_finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "content": "{\"labels\": [{\"id\": \"telegram:15:423137#s0\", \"kind\": \"promo_service\", \"actor\": null, \"action\": null, \"object\": null, \"qualifiers\": {}, \"origin\": \"unknown\", \"source_role\": \"editorial\", \"verification_status\": \"unverified\", \"quote\": \"Тир-лист предстоящих проектов в экосистеме ZEC\", \"span\": [0, 52]}, {\"id\": \"telegram:15:423142#s1\", \"kind\": \"author_position\", \"actor\": \"author\", \"action\": \"states that collections are coming out on Robinhood, Arc, and Zcash with many x's\", \"object\": \"Zcash\", \"qualifiers\": {\"event_date\": \"now\"}, \"origin\": \"own\", \"source_role\": \"author\", \"verification_status\": \"unverified\", \"quote\": \"На самом деле сейчас несется че то очень интересное, потому что и на Robinhood и на Arc и на Zcash, стали выходить коллекции, причем не для виду, а реально с кучей иксов\", \"span\": [0, 157]}, {\"id\": \"telegram:15:423147#s0\", \"kind\": \"author_position\", \"actor\": \"author\", \"action\": \"expresses a thought about the Zcash ecosystem\", \"object\": \"Zcash\", \"qualifiers\": {}, \"origin\": \"own\", \"source_role\": \"author\", \"verification_status\": \"unverified\", \"quote\": \"Мысль по Zcash экосистеме\", \"span\": [0, 25]}, {\"id\": \"telegram:15:423147#s2\", \"kind\": \"author_position\", \"actor\": \"author\", \"action\": \"predicts that ZEC and ZCAT will continue to grow and suggests a conservative long\", \"object\": \"ZEC\", \"qualifiers\": {}, \"origin\": \"own\", \"source_role\": \"author\", \"verification_status\": \"unverified\", \"quote\": \"И пока этот круг не случится у нас будет разогрев всей экосистемы Zcash, а значит $ZEC продолжит расти, тот же ZCAT продолжит расти и так далее. Можно рассмотреть аккуратный лонг, но с консервативными фиксами.\", \"span\": [0, 190]}, {\"id\": \"telegram:15:423150#s8\", \"kind\": \"promo_service\", \"actor\": null, \"action\": null, \"object\": null, \"qualifiers\": {}, \"origin\": \"unknown\", \"source_role\": \"editorial\", \"verification_status\": \"unverified\", \"quote\": \"Тут список того, что поделать в ИНКе\\n• Тут список того, что поделать в Zcash\", \"span\": [0, 66]}, {\"id\": \"telegram:15:423159#s0\", \"kind\": \"author_position\", \"actor\": \"author\", \"action\": \"advises to pre-fund wallets with at least $10 for airdrop hunting in zec\", \"object\": \"zec\", \"qualifiers\": {}, \"origin\": \"own\", \"source_role\": \"author\", \"verification_status\": \"unverified\", \"quote\": \"Кто хантит влки в zec, закиньте заранее балик на кош хотя бы баксов 10+ для прогретости\", \"span\": [0, 91]}, {\"id\": \"telegram:12:4871#s1\", \"kind\": \"event\", \"actor\": \"he (a trader)\", \"action\": \"shorted ZEC and was in profit by $20M after rumors of a vulnerability in ZEC's shielding system, but did not fix profit and held the position\", \"object\": \"ZEC\", \"qualifiers\": {\"event_date\": \"beginning of summer\", \"counterparty\": \"he\"}, \"origin\": \"retelling\", \"source_role\": \"editorial\", \"verification_status\": \"unverified\", \"quote\": \"Он шортил ZEC еще в в начале лета, был в плюсе на $20М после слухов о уязвимости в системе шилдинга ZEC, но не зафиксировал прибыль, а удержал позицию.\", \"span\": [0, 151]}, {\"id\": \"telegram:10:385132#s1\", \"kind\": \"event\", \"actor\": \"analysts\", \"action\": \"state that ZEC becomes even more anonymous at price > $1300\", \"object\": \"ZEC\", \"qualifiers\": {\"price\": \"> $1300\"}, \"origin\": \"retelling\", \"source_role\": \"editorial\", \"verification_status\": \"unverified\", \"quote\": \"Популярнейший анонимный токен ZEC анонимного проекта ZCash с юридическим офисом в одном квартале от штаб-квартиры ЦРУ в США становится еще анонимнее при цене > $1300 — аналитики\", \"span\": [0, 190]}, {\"id\": \"telegram:18:31476#s2\", \"kind\": \"event\", \"actor\": \"Bitcoin OG\", \"action\": \"increased short on ZEC, currently shorting 37,760 ZEC ($51.5m) with unrealized loss $26m, liquidation price $2632\", \"object\": \"ZEC\", \"qualifiers\": {\"counterparty\": \"Bitcoin OG\", \"price\": \"$2632\"}, \"origin\": \"retelling\", \"source_role\": \"editorial\", \"verification_status\": \"unverified\", \"quote\": \"Bitcoin OG увеличил шорт по ZEC. Сейчас он шортит 37,760 ZEC ($51,5m) с нереализованным убытком $26m. Цена ликвидации = $2632.\", \"span\": [0, 132]}, {\"id\": \"telegram:18:31476#s5\", \"kind\": \"event\", \"actor\": \"whale t1JhvB\", \"action\": \"withdrew 15,300 ZEC ($17.9m) from Binance, OKX, and Kraken\", \"object\": \"ZEC\", \"qualifiers\": {\"counterparty\": \"t1JhvB\", \"place\": \"Binance, OKX, Kraken\"}, \"origin\": \"retelling\", \"source_role\": \"editorial\", \"verification_status\": \"unverified\", \"quote\": \"Кит «t1JhvB» вывел с Binance, OKX и Kraken 15,300 ZEC ($17,9m).\", \"span\": [0, 70]}, {\"id\": \"telegram:15:423183#s1\", \"kind\": \"author_position\", \"actor\": \"author\", \"action\": \"asks if the guys will move or cancel, returning focus to Robinhood + ZEC\", \"object\": \"ZEC\", \"qualifiers\": {}, \"origin\": \"own\", \"source_role\": \"author\", \"verification_status\": \"unverified\", \"quote\": \"Еще подвигаются парни или отмена, возвращаемся к фокусу Robinhood + ZEC?!\", \"span\": [0, 75]}, {\"id\": \"telegram:15:423189#s0\", \"kind\": \"event\", \"actor\": null, \"action\": \"hype auction of zkSNARKs on Zcash\", \"object\": \"Zcash\", \"qualifiers\": {}, \"origin\": \"unknown\", \"source_role\": \"editorial\", \"verification_status\": \"unverified\", \"quote\": \"Хайп аукцион zkSNARKs на зкеше.\", \"span\": [0, 31]}]}",
+    "refusal": null,
+    "reasoning": null
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 1869,
+  "completion_tokens": 1720,
+  "total_tokens": 3589,
+  "cost": 0.0003606694,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 1682,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.0003606694,
+   "upstream_inference_prompt_cost": 4.76294e-05,
+   "upstream_inference_completions_cost": 0.00031304
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

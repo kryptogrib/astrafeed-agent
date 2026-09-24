@@ -1,0 +1,35 @@
+{
+ "a": {
+  "quote": "Arc arrives as a full-stack financial platform rather than a bare chain, shipping assets, applications, interoperability, and Circle platform services from day one. It is EVM-compatible and provides infrastructure for lending and borrowing, trading and liquidity, onchain FX, payments and settlement, tokenized assets, and agentic economic workflows, tied together with CCTP, Gateway, CPN, and StableFX. Eleven founding validators, including BlackRock, Visa, Mastercard, DTCC, and ICE, secure the network.",
+  "actor": "Circle",
+  "action": "shipped",
+  "object": "Arc platform",
+  "qualifiers": {
+   "features": [
+    "EVM-compatible",
+    "CCTP",
+    "Gateway",
+    "CPN",
+    "StableFX"
+   ],
+   "validators": [
+    "BlackRock",
+    "Visa",
+    "Mastercard",
+    "DTCC",
+    "ICE"
+   ]
+  },
+  "url": "https://t.me/WEB3_AGGREGATOR/423100"
+ },
+ "b": {
+  "quote": "Первый день мэйннета ARC",
+  "actor": null,
+  "action": "launch",
+  "object": "ARC mainnet",
+  "qualifiers": {
+   "event_date": "2026-09-16"
+  },
+  "url": "https://t.me/WEB3_AGGREGATOR/423153"
+ }
+}

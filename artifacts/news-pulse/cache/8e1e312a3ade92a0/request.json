@@ -1,0 +1,17 @@
+{
+ "segments": [
+  {
+   "id": "telegram:15:423411#s0",
+   "text": "Вот вам и ZEC мета\n\n",
+   "mentions": [
+    {
+     "text": "ZEC",
+     "status": "confirmed"
+    }
+   ],
+   "kind_hint": "post",
+   "url": "https://t.me/WEB3_AGGREGATOR/423411",
+   "time": "2026-09-20T15:39:54+00:00"
+  }
+ ]
+}

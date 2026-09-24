@@ -1,0 +1,17 @@
+{
+ "segments": [
+  {
+   "id": "telegram:18:31476#s4",
+   "text": "➤ Инвестор «0x0058» потратил 13m USDC на покупку 5368 ETH по средней цене $2422.\n\n",
+   "mentions": [
+    {
+     "text": "ETH",
+     "status": "confirmed"
+    }
+   ],
+   "kind_hint": "post",
+   "url": "https://t.me/crypto_hd/31476",
+   "time": "2026-09-17T06:49:07+00:00"
+  }
+ ]
+}

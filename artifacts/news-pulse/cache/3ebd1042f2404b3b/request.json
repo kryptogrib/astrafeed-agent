@@ -1,0 +1,27 @@
+{
+ "a": {
+  "quote": "Zcash targets November upgrade to make private payments up to three times faster. NU7 would reduce block times to 25 seconds while setting aside at least 60% of transaction fees to supplement mining rewards beginning in 2031.",
+  "actor": "Zcash",
+  "action": "targets upgrade",
+  "object": "upgrade",
+  "qualifiers": {
+   "event_date": null,
+   "place": null,
+   "version": "NU7"
+  },
+  "url": "https://t.me/markettwits/385538"
+ },
+ "b": {
+  "quote": "🟢 Zcash вырос до $1 595 после захода Paradigm",
+  "actor": "Zcash",
+  "action": "рост цены",
+  "object": "Zcash",
+  "qualifiers": {
+   "version": null,
+   "event_date": null,
+   "place": null,
+   "counterparty": "Paradigm"
+  },
+  "url": "https://t.me/WEB3_AGGREGATOR/423533"
+ }
+}

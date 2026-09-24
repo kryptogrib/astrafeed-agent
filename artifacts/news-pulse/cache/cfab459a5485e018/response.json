@@ -1,0 +1,32 @@
+{
+ "choices": [
+  {
+   "message": {
+    "content": "{\"labels\": [{\"id\": \"telegram:1:7156#s21\", \"kind\": \"promo_service\", \"actor\": null, \"action\": null, \"object\": \"pixel NFT collection\", \"qualifiers\": {\"count\": \"1500\", \"mint_date\": \"September 30\", \"platform\": \"OpenSea\", \"mint_price\": \"0.001 ETH\"}, \"origin\": \"unknown\", \"source_role\": \"unknown\", \"verification_status\": \"unverified\", \"topic_role\": \"context\", \"quote\": \"1,500 pixel NFT, минт 30 сентября на OpenSea по 0.001 ETH;\", \"span\": [0, 58]}]}"
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 1985,
+  "completion_tokens": 1649,
+  "total_tokens": 3634,
+  "cost": 0.000710948,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 256,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.000710948,
+   "upstream_inference_prompt_cost": 0.000249228,
+   "upstream_inference_completions_cost": 0.00046172
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

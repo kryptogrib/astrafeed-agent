@@ -1,0 +1,17 @@
+{
+ "segments": [
+  {
+   "id": "telegram:18:31576#s3",
+   "text": "Это позволит повысить масштабируемость и приватность Ethereum.\n\n",
+   "mentions": [
+    {
+     "text": "Ethereum",
+     "status": "confirmed"
+    }
+   ],
+   "kind_hint": "post",
+   "url": "https://t.me/crypto_hd/31576",
+   "time": "2026-09-23T06:11:32+00:00"
+  }
+ ]
+}

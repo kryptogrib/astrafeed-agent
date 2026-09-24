@@ -1,0 +1,21 @@
+{
+ "segments": [
+  {
+   "id": "telegram:11:96794#s1",
+   "text": "Но шорт по #ZEC уничтожил всю его прибыль, и сейчас он находится на грани ликвидации.\n\n",
+   "mentions": [
+    {
+     "text": "#ZEC",
+     "status": "confirmed"
+    },
+    {
+     "text": "ZEC",
+     "status": "confirmed"
+    }
+   ],
+   "kind_hint": "post",
+   "url": "https://t.me/cryptoattack24/96794",
+   "time": "2026-09-18T03:31:00+00:00"
+  }
+ ]
+}

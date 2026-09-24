@@ -1,0 +1,32 @@
+{
+ "choices": [
+  {
+   "message": {
+    "content": "{\"labels\": [{\"id\": \"telegram:10:384251#s2\", \"kind\": \"event\", \"actor\": \"Consensys\", \"action\": \"spun off MetaMask\", \"object\": \"MetaMask\", \"qualifiers\": {\"version\": null, \"event_date\": null, \"place\": null, \"counterparty\": null}, \"origin\": \"own\", \"source_role\": \"editorial\", \"verification_status\": \"unverified\", \"quote\": \"Consensys (разработчик Ethereum и MetaMask) выделил его в отдельную компанию по одноименным брендом \\\"MetaMask\\\"\", \"span\": [0, 0]}]}"
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 1857,
+  "completion_tokens": 1733,
+  "total_tokens": 3590,
+  "cost": 0.00074522,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.00074522,
+   "upstream_inference_prompt_cost": 0.00025998,
+   "upstream_inference_completions_cost": 0.00048524
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

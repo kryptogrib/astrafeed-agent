@@ -1,0 +1,21 @@
+{
+ "segments": [
+  {
+   "id": "telegram:18:31451#s4",
+   "text": "➤ Кит «0x4553» обменял Bitcoin на Ethereum: 512 WBTC ($38,6m) и 354 cbBTC ($26,7m) на 26,924 ETH ($64,6m).\n\n",
+   "mentions": [
+    {
+     "text": "Ethereum",
+     "status": "confirmed"
+    },
+    {
+     "text": "ETH",
+     "status": "confirmed"
+    }
+   ],
+   "kind_hint": "post",
+   "url": "https://t.me/crypto_hd/31451",
+   "time": "2026-09-16T08:29:01+00:00"
+  }
+ ]
+}

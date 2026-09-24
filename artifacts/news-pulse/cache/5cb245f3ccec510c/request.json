@@ -1,0 +1,23 @@
+{
+ "a": {
+  "quote": "• Mimo: story game на Arc, waitlist через X + wallet, будут частью игры.",
+  "actor": null,
+  "action": "launch",
+  "object": "Mimo",
+  "qualifiers": {
+   "place": "Arc",
+   "version": "story game"
+  },
+  "url": "https://t.me/whitelist1/7135"
+ },
+ "b": {
+  "quote": "• Uniswap + Aerodrome: ожидаются с поддержкой Arc day one.",
+  "actor": "Uniswap and Aerodrome",
+  "action": "announce expected support for Arc day one",
+  "object": "Arc",
+  "qualifiers": {
+   "event_date": null
+  },
+  "url": "https://t.me/whitelist1/7135"
+ }
+}

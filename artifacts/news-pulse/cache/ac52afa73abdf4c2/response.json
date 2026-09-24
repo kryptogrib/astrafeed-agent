@@ -1,0 +1,32 @@
+{
+ "choices": [
+  {
+   "message": {
+    "content": "{\"labels\": [{\"id\": \"telegram:15:422959#s2\", \"kind\": \"event\", \"actor\": \"Standard Reserve\", \"action\": \"routes ETH fees\", \"object\": \"into vaults, POL, team\", \"qualifiers\": {\"mechanism\": \"pairs STANDARD against ETH in Uniswap v4 pool\", \"access\": \"Charters, 1,000 Genesis Charters, allowlist mint, Dutch auction\"}, \"origin\": \"own\", \"source_role\": \"editorial\", \"verification_status\": \"unverified\", \"quote\": \"The protocol routes ETH fees into vaults, protocol-owned liquidity and the team, and pairs STANDARD against ETH in a hooked Uniswap v4 pool.\", \"span\": [0, 140]}]}"
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 1899,
+  "completion_tokens": 1715,
+  "total_tokens": 3614,
+  "cost": 0.00074606,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.00074606,
+   "upstream_inference_prompt_cost": 0.00026586,
+   "upstream_inference_completions_cost": 0.0004802
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

@@ -1,0 +1,4158 @@
+{
+  "topic": "arc",
+  "window": {
+    "requested": "2026-09-09..2026-09-23",
+    "start": "2026-09-09T00:00:00+00:00",
+    "end": "2026-09-24T00:00:00+00:00",
+    "cutoff": "2026-09-24T00:00:00+00:00",
+    "previous": "2026-08-25..2026-09-08",
+    "mode": "publication_replay"
+  },
+  "status": "ok",
+  "events": [
+    {
+      "event_id": "e1-c80444c84019282d",
+      "headline": "01:51:53 Про Arc",
+      "counts": {
+        "events": 1,
+        "publications": 1,
+        "channels": 1,
+        "known_authors": 0,
+        "unknown_authors": 1,
+        "found_origins": 1,
+        "reprints": 0,
+        "unknown_origin": 0
+      },
+      "actor": null,
+      "action": "discuss",
+      "object": "Arc",
+      "qualifiers": {},
+      "members": [
+        {
+          "obs_id": "telegram:15:422750#s2",
+          "publication_id": "telegram:15:422750",
+          "source_id": 15,
+          "author_id": null,
+          "published_at": "2026-09-10T20:39:46+00:00",
+          "url": "https://t.me/WEB3_AGGREGATOR/422750",
+          "quote": "01:51:53 Про Arc",
+          "span": [
+            463,
+            479
+          ],
+          "origin": "own"
+        }
+      ]
+    },
+    {
+      "event_id": "e2-76cb66451fe9c651",
+      "headline": "50 коллекций на Arc",
+      "counts": {
+        "events": 1,
+        "publications": 1,
+        "channels": 1,
+        "known_authors": 0,
+        "unknown_authors": 1,
+        "found_origins": 1,
+        "reprints": 0,
+        "unknown_origin": 0
+      },
+      "actor": null,
+      "action": "reach",
+      "object": "50 collections",
+      "qualifiers": {
+        "platform": "Arc"
+      },
+      "members": [
+        {
+          "obs_id": "telegram:15:422826#s0",
+          "publication_id": "telegram:15:422826",
+          "source_id": 15,
+          "author_id": null,
+          "published_at": "2026-09-11T20:10:35+00:00",
+          "url": "https://t.me/WEB3_AGGREGATOR/422826",
+          "quote": "50 коллекций на Arc",
+          "span": [
+            0,
+            19
+          ],
+          "origin": "own"
+        }
+      ]
+    },
+    {
+      "event_id": "e3-e183a9539dc7838b",
+      "headline": "16 сентября Circle запускает Arc, собственный L1.",
+      "counts": {
+        "events": 1,
+        "publications": 6,
+        "channels": 3,
+        "known_authors": 0,
+        "unknown_authors": 6,
+        "found_origins": 2,
+        "reprints": 4,
+        "unknown_origin": 0
+      },
+      "actor": "Circle",
+      "action": "launch",
+      "object": "Arc",
+      "qualifiers": {
+        "event_date": "16 сентября",
+        "version": "L1"
+      },
+      "members": [
+        {
+          "obs_id": "telegram:15:422853#s1",
+          "publication_id": "telegram:15:422853",
+          "source_id": 15,
+          "author_id": null,
+          "published_at": "2026-09-12T15:50:54+00:00",
+          "url": "https://t.me/WEB3_AGGREGATOR/422853",
+          "quote": "16 сентября Circle запускает Arc, собственный L1.",
+          "span": [
+            30,
+            79
+          ],
+          "origin": "own"
+        },
+        {
+          "obs_id": "telegram:3:6918#s3",
+          "publication_id": "telegram:3:6918",
+          "source_id": 3,
+          "author_id": null,
+          "published_at": "2026-09-14T12:42:02+00:00",
+          "url": "https://t.me/Slavik_investor_updates/6918",
+          "quote": "Circle 16 сентября запускает Arc - собственный L1 под стейблкоин-финансы. USDC перестаёт быть просто токеном внутри чужих сетей и становится основой своей экосистемы.",
+          "span": [
+            202,
+            368
+          ],
+          "origin": "retelling"
+        },
+        {
+          "obs_id": "telegram:16:10991#s2",
+          "publication_id": "telegram:16:10991",
+          "source_id": 16,
+          "author_id": null,
+          "published_at": "2026-09-16T09:47:01+00:00",
+          "url": "https://t.me/CryptoEarnImp/10991",
+          "quote": "Сегодня (спасибо за поправку @intelligent_ua) кстати мейннет Arc, можно будет бриджить через Jumper.",
+          "span": [
+            86,
+            186
+          ],
+          "origin": "retelling"
+        },
+        {
+          "obs_id": "telegram:15:423093#s2",
+          "publication_id": "telegram:15:423093",
+          "source_id": 15,
+          "author_id": null,
+          "published_at": "2026-09-16T11:02:14+00:00",
+          "url": "https://t.me/WEB3_AGGREGATOR/423093",
+          "quote": "Сегодня (спасибо за поправку @intelligent_ua) кстати мейннет Arc, можно будет бриджить через Jumper.",
+          "span": [
+            86,
+            186
+          ],
+          "origin": "retelling"
+        },
+        {
+          "obs_id": "telegram:15:423100#s1",
+          "publication_id": "telegram:15:423100",
+          "source_id": 15,
+          "author_id": null,
+          "published_at": "2026-09-16T13:55:06+00:00",
+          "url": "https://t.me/WEB3_AGGREGATOR/423100",
+          "quote": "Arc, the stablecoin-native Layer-1 built by Circle, launched its public mainnet, positioning itself as an \"Economic OS for the internet\" with USDC as the native gas token and deterministic sub-second finality.",
+          "span": [
+            49,
+            258
+          ],
+          "origin": "own"
+        },
+        {
+          "obs_id": "telegram:15:423143#s5",
+          "publication_id": "telegram:15:423143",
+          "source_id": 15,
+          "author_id": null,
+          "published_at": "2026-09-16T18:42:09+00:00",
+          "url": "https://t.me/WEB3_AGGREGATOR/423143",
+          "quote": "🪙 Circle запустила мейннет Arc — сеть уже принимает транзакции, а за первые два часа в неё завели более $370 млн USDC.",
+          "span": [
+            576,
+            694
+          ],
+          "origin": "retelling"
+        }
+      ]
+    },
+    {
+      "event_id": "e4-e742226f8f2370de",
+      "headline": "В мае прошел закрытый пресейл токена ARC, где собрали $222 млн по оценке $3 млрд.",
+      "counts": {
+        "events": 1,
+        "publications": 1,
+        "channels": 1,
+        "known_authors": 0,
+        "unknown_authors": 1,
+        "found_origins": 1,
+        "reprints": 0,
+        "unknown_origin": 0
+      },
+      "actor": "Circle",
+      "action": "hold presale",
+      "object": "ARC token",
+      "qualifiers": {
+        "event_date": "май",
+        "place": "private presale",
+        "counterparty": "BlackRock, a16z, Apollo, ICE, ARK, SBI, Standard Chartered"
+      },
+      "members": [
+        {
+          "obs_id": "telegram:15:422853#s7",
+          "publication_id": "telegram:15:422853",
+          "source_id": 15,
+          "author_id": null,
+          "published_at": "2026-09-12T15:50:54+00:00",
+          "url": "https://t.me/WEB3_AGGREGATOR/422853",
+          "quote": "В мае прошел закрытый пресейл токена ARC, где собрали $222 млн по оценке $3 млрд.",
+          "span": [
+            1708,
+            1789
+          ],
+          "origin": "own"
+        }
+      ]
+    },
+    {
+      "event_id": "e5-4896821e479f7f3e",
+      "headline": "USDC это деньги и газ, а ARC это актив сети, не акция Circle и не доля в резервах.",
+      "counts": {
+        "events": 1,
+        "publications": 1,
+        "channels": 1,
+        "known_authors": 0,
+        "unknown_authors": 1,
+        "found_origins": 1,
+        "reprints": 0,
+        "unknown_origin": 0
+      },
+      "actor": null,
+      "action": "clarify",
+      "object": "ARC token",
+      "qualifiers": {},
+      "members": [
+        {
+          "obs_id": "telegram:15:422853#s8",
+          "publication_id": "telegram:15:422853",
+          "source_id": 15,
+          "author_id": null,
+          "published_at": "2026-09-12T15:50:54+00:00",
+          "url": "https://t.me/WEB3_AGGREGATOR/422853",
+          "quote": "USDC это деньги и газ, а ARC это актив сети, не акция Circle и не доля в резервах.",
+          "span": [
+            1993,
+            2075
+          ],
+          "origin": "own"
+        }
+      ]
+    },
+    {
+      "event_id": "e6-c430e42826035669",
+      "headline": "До Arc mainnet остались считаные дни",
+      "counts": {
+        "events": 1,
+        "publications": 1,
+        "channels": 1,
+        "known_authors": 0,
+        "unknown_authors": 1,
+        "found_origins": 1,
+        "reprints": 0,
+        "unknown_origin": 0
+      },
+      "actor": null,
+      "action": "anticipate",
+      "object": "Arc mainnet",
+      "qualifiers": {},
+      "members": [
+        {
+          "obs_id": "telegram:15:422864#s0",
+          "publication_id": "telegram:15:422864",
+          "source_id": 15,
+          "author_id": null,
+          "published_at": "2026-09-12T16:19:50+00:00",
+          "url": "https://t.me/WEB3_AGGREGATOR/422864",
+          "quote": "До Arc mainnet остались считаные дни",
+          "span": [
+            2,
+            38
+          ],
+          "origin": "own"
+        },
+        {
+          "obs_id": "telegram:15:422864#s2",
+          "publication_id": "telegram:15:422864",
+          "source_id": 15,
+          "author_id": null,
+          "published_at": "2026-09-12T16:19:50+00:00",
+          "url": "https://t.me/WEB3_AGGREGATOR/422864",
+          "quote": "О Arc я рассказывал ранее, так как майнет меньше чем через неделю, самое время освежить транзы и активность, что бы претендовать на дроп",
+          "span": [
+            48,
+            184
+          ],
+          "origin": "own"
+        }
+      ]
+    },
+    {
+      "event_id": "e7-b04611e0b1d88e06",
+      "headline": "Также, Fomo о котором рассказывал ранее, вместе с Opensea, обещали поддерживать Arc с первого дня майнета, мемчикам и нфт быть! 🙏",
+      "counts": {
+        "events": 1,
+        "publications": 1,
+        "channels": 1,
+        "known_authors": 0,
+        "unknown_authors": 1,
+        "found_origins": 1,
+        "reprints": 0,
+        "unknown_origin": 0
+      },
+      "actor": "Fomo и Opensea",
+      "action": "обещали поддерживать",
+      "object": "Arc",
+      "qualifiers": {
+        "event_date": "с первого дня майнета"
+      },
+      "members": [
+        {
+          "obs_id": "telegram:15:422864#s16",
+          "publication_id": "telegram:15:422864",
+          "source_id": 15,
+          "author_id": null,
+          "published_at": "2026-09-12T16:19:50+00:00",
+          "url": "https://t.me/WEB3_AGGREGATOR/422864",
+          "quote": "Также, Fomo о котором рассказывал ранее, вместе с Opensea, обещали поддерживать Arc с первого дня майнета, мемчикам и нфт быть! 🙏",
+          "span": [
+            829,
+            958
+          ],
+          "origin": "retelling"
+        }
+      ]
+    },
+    {
+      "event_id": "e8-9954441c97029b36",
+      "headline": "👍 Запуск основной сети Arc",
+      "counts": {
+        "events": 1,
+        "publications": 1,
+        "channels": 1,
+        "known_authors": 0,
+        "unknown_authors": 1,
+        "found_origins": 1,
+        "reprints": 0,
+        "unknown_origin": 0
+      },
+      "actor": null,
+      "action": "запуск",
+      "object": "основной сети Arc",
+      "qualifiers": {},
+      "members": [
+        {
+          "obs_id": "telegram:11:96700#s18",
+          "publication_id": "telegram:11:96700",
+          "source_id": 11,
+          "author_id": null,
+          "published_at": "2026-09-12T20:57:32+00:00",
+          "url": "https://t.me/cryptoattack24/96700",
+          "quote": "👍 Запуск основной сети Arc",
+          "span": [
+            916,
+            942
+          ],
+          "origin": "own"
+        }
+      ]
+    },
+    {
+      "event_id": "e9-88ea007f27d183a2",
+      "headline": "👍 #OVPP OpenVPP запустит GridProof в основной сети Arc",
+      "counts": {
+        "events": 1,
+        "publications": 2,
+        "channels": 2,
+        "known_authors": 0,
+        "unknown_authors": 2,
+        "found_origins": 2,
+        "reprints": 0,
+        "unknown_origin": 0
+      },
+      "actor": "OpenVPP",
+      "action": "запустит",
+      "object": "GridProof в основной сети Arc",
+      "qualifiers": {},
+      "members": [
+        {
+          "obs_id": "telegram:11:96700#s19",
+          "publication_id": "telegram:11:96700",
+          "source_id": 11,
+          "author_id": null,
+          "published_at": "2026-09-12T20:57:32+00:00",
+          "url": "https://t.me/cryptoattack24/96700",
+          "quote": "👍 #OVPP OpenVPP запустит GridProof в основной сети Arc",
+          "span": [
+            943,
+            997
+          ],
+          "origin": "own"
+        },
+        {
+          "obs_id": "telegram:15:422881#s19",
+          "publication_id": "telegram:15:422881",
+          "source_id": 15,
+          "author_id": null,
+          "published_at": "2026-09-13T07:52:20+00:00",
+          "url": "https://t.me/WEB3_AGGREGATOR/422881",
+          "quote": "👍 #OVPP OpenVPP запустит GridProof в основной сети Arc",
+          "span": [
+            949,
+            1003
+          ],
+          "origin": "own"
+        }
+      ]
+    },
+    {
+      "event_id": "e10-301f9b1929d31676",
+      "headline": "👍 #RIZE RIZE выпустит T-RIZE в основной сети Arc",
+      "counts": {
+        "events": 1,
+        "publications": 2,
+        "channels": 2,
+        "known_authors": 0,
+        "unknown_authors": 2,
+        "found_origins": 2,
+        "reprints": 0,
+        "unknown_origin": 0
+      },
+      "actor": "RIZE",
+      "action": "выпустит",
+      "object": "T-RIZE в основной сети Arc",
+      "qualifiers": {},
+      "members": [
+        {
+          "obs_id": "telegram:11:96700#s20",
+          "publication_id": "telegram:11:96700",
+          "source_id": 11,
+          "author_id": null,
+          "published_at": "2026-09-12T20:57:32+00:00",
+          "url": "https://t.me/cryptoattack24/96700",
+          "quote": "👍 #RIZE RIZE выпустит T-RIZE в основной сети Arc",
+          "span": [
+            998,
+            1046
+          ],
+          "origin": "own"
+        },
+        {
+          "obs_id": "telegram:15:422881#s20",
+          "publication_id": "telegram:15:422881",
+          "source_id": 15,
+          "author_id": null,
+          "published_at": "2026-09-13T07:52:20+00:00",
+          "url": "https://t.me/WEB3_AGGREGATOR/422881",
+          "quote": "👍 #RIZE RIZE выпустит T-RIZE в основной сети Arc",
+          "span": [
+            1004,
+            1052
+          ],
+          "origin": "own"
+        }
+      ]
+    },
+    {
+      "event_id": "e11-27797c93814b6ecc",
+      "headline": "🤝 #TPT TokenPocket Token интегрируется с основной сетью Arc",
+      "counts": {
+        "events": 1,
+        "publications": 3,
+        "channels": 2,
+        "known_authors": 0,
+        "unknown_authors": 3,
+        "found_origins": 2,
+        "reprints": 1,
+        "unknown_origin": 0
+      },
+      "actor": "TokenPocket",
+      "action": "интегрируется с",
+      "object": "основной сетью Arc",
+      "qualifiers": {},
+      "members": [
+        {
+          "obs_id": "telegram:11:96700#s21",
+          "publication_id": "telegram:11:96700",
+          "source_id": 11,
+          "author_id": null,
+          "published_at": "2026-09-12T20:57:32+00:00",
+          "url": "https://t.me/cryptoattack24/96700",
+          "quote": "🤝 #TPT TokenPocket Token интегрируется с основной сетью Arc",
+          "span": [
+            1047,
+            1106
+          ],
+          "origin": "own"
+        },
+        {
+          "obs_id": "telegram:15:422881#s21",
+          "publication_id": "telegram:15:422881",
+          "source_id": 15,
+          "author_id": null,
+          "published_at": "2026-09-13T07:52:20+00:00",
+          "url": "https://t.me/WEB3_AGGREGATOR/422881",
+          "quote": "🤝 #TPT TokenPocket Token интегрируется с основной сетью Arc",
+          "span": [
+            1053,
+            1112
+          ],
+          "origin": "own"
+        },
+        {
+          "obs_id": "telegram:15:423064#s22",
+          "publication_id": "telegram:15:423064",
+          "source_id": 15,
+          "author_id": null,
+          "published_at": "2026-09-15T20:51:21+00:00",
+          "url": "https://t.me/WEB3_AGGREGATOR/423064",
+          "quote": "🤝 #TPT TokenPocket Token интегрируется с основной сетью Arc",
+          "span": [
+            1165,
+            1224
+          ],
+          "origin": "own"
+        }
+      ]
+    },
+    {
+      "event_id": "e12-4ccd67da7ccced2e",
+      "headline": "Arc запустит майннет 16 сентября",
+      "counts": {
+        "events": 1,
+        "publications": 3,
+        "channels": 1,
+        "known_authors": 0,
+        "unknown_authors": 3,
+        "found_origins": 3,
+        "reprints": 0,
+        "unknown_origin": 0
+      },
+      "actor": "Arc",
+      "action": "запустит",
+      "object": "майннет",
+      "qualifiers": {
+        "event_date": "16 сентября"
+      },
+      "members": [
+        {
+          "obs_id": "telegram:15:422875#s5",
+          "publication_id": "telegram:15:422875",
+          "source_id": 15,
+          "author_id": null,
+          "published_at": "2026-09-12T21:07:19+00:00",
+          "url": "https://t.me/WEB3_AGGREGATOR/422875",
+          "quote": "Arc запустит майннет 16 сентября",
+          "span": [
+            426,
+            458
+          ],
+          "origin": "own"
+        },
+        {
+          "obs_id": "telegram:15:422875#s6",
+          "publication_id": "telegram:15:422875",
+          "source_id": 15,
+          "author_id": null,
+          "published_at": "2026-09-12T21:07:19+00:00",
+          "url": "https://t.me/WEB3_AGGREGATOR/422875",
+          "quote": "Arc - L1-сеть от Circle с $222M инвестиций ориентированная на USDC, запустит майннет 16 сентября.",
+          "span": [
+            462,
+            559
+          ],
+          "origin": "own"
+        },
+        {
+          "obs_id": "telegram:15:422890#s0",
+          "publication_id": "telegram:15:422890",
+          "source_id": 15,
+          "author_id": null,
+          "published_at": "2026-09-13T15:14:33+00:00",
+          "url": "https://t.me/WEB3_AGGREGATOR/422890",
+          "quote": "Arc запустит майннет 16 сентября",
+          "span": [
+            0,
+            32
+          ],
+          "origin": "own"
+        },
+        {
+          "obs_id": "telegram:15:422890#s1",
+          "publication_id": "telegram:15:422890",
+          "source_id": 15,
+          "author_id": null,
+          "published_at": "2026-09-13T15:14:33+00:00",
+          "url": "https://t.me/WEB3_AGGREGATOR/422890",
+          "quote": "Arc - L1-сеть от Circle с $222M инвестиций ориентированная на USDC, запустит майннет 16 сентября.",
+          "span": [
+            34,
+            131
+          ],
+          "origin": "own"
+        },
+        {
+          "obs_id": "telegram:15:422903#s0",
+          "publication_id": "telegram:15:422903",
+          "source_id": 15,
+          "author_id": null,
+          "published_at": "2026-09-13T21:41:05+00:00",
+          "url": "https://t.me/WEB3_AGGREGATOR/422903",
+          "quote": "ARC: токены которые я взял и почему - подготовка к паблик мейннету 16 сентября",
+          "span": [
+            0,
+            78
+          ],
+          "origin": "own"
+        }
+      ]
+    },
+    {
+      "event_id": "e13-3b0186787cefa063",
+      "headline": "👍 #AERO Запуск основной сети Arc",
+      "counts": {
+        "events": 1,
+        "publications": 1,
+        "channels": 1,
+        "known_authors": 0,
+        "unknown_authors": 1,
+        "found_origins": 1,
+        "reprints": 0,
+        "unknown_origin": 0
+      },
+      "actor": "Arc",
+      "action": "Запуск",
+      "object": "основной сети",
+      "qualifiers": {},
+      "members": [
+        {
+          "obs_id": "telegram:15:422881#s18",
+          "publication_id": "telegram:15:422881",
+          "source_id": 15,
+          "author_id": null,
+          "published_at": "2026-09-13T07:52:20+00:00",
+          "url": "https://t.me/WEB3_AGGREGATOR/422881",
+          "quote": "👍 #AERO Запуск основной сети Arc",
+          "span": [
+            916,
+            948
+          ],
+          "origin": "own"
+        }
+      ]
+    },
+    {
+      "event_id": "e14-8d5566ec05b28c6c",
+      "headline": "Arc - вчера добавили пачку бейджей архитектора, кто набрал более 500+ поинтов, так что гляньте + к этому майннет анонсировали на 16 число, выбиваем waitlist на коллекции которые…",
+      "counts": {
+        "events": 1,
+        "publications": 1,
+        "channels": 1,
+        "known_authors": 0,
+        "unknown_authors": 1,
+        "found_origins": 1,
+        "reprints": 0,
+        "unknown_origin": 0
+      },
+      "actor": "Arc",
+      "action": "анонсировали",
+      "object": "майннет",
+      "qualifiers": {
+        "event_date": "16 число"
+      },
+      "members": [
+        {
+          "obs_id": "telegram:15:422895#s2",
+          "publication_id": "telegram:15:422895",
+          "source_id": 15,
+          "author_id": null,
+          "published_at": "2026-09-13T15:16:42+00:00",
+          "url": "https://t.me/WEB3_AGGREGATOR/422895",
+          "quote": "Arc - вчера добавили пачку бейджей архитектора, кто набрал более 500+ поинтов, так что гляньте + к этому майннет анонсировали на 16 число, выбиваем waitlist на коллекции которые пушат в X, и проекты с тестнетом протыкать что видите.",
+          "span": [
+            317,
+            549
+          ],
+          "origin": "own"
+        }
+      ]
+    },
+    {
+      "event_id": "e15-d7689af8c78d5b61",
+      "headline": "Несколько часов назад Unipcs (Bonk guy) , нашумевший #1 трейдер на fomo app обратил внимание аудитории на ARC цепочку.",
+      "counts": {
+        "events": 1,
+        "publications": 1,
+        "channels": 1,
+        "known_authors": 0,
+        "unknown_authors": 1,
+        "found_origins": 0,
+        "reprints": 0,
+        "unknown_origin": 1
+      },
+      "actor": "Unipcs (Bonk guy)",
+      "action": "обратил внимание",
+      "object": "аудитории на ARC цепочку",
+      "qualifiers": {},
+      "members": [
+        {
+          "obs_id": "telegram:15:422908#s1",
+          "publication_id": "telegram:15:422908",
+          "source_id": 15,
+          "author_id": null,
+          "published_at": "2026-09-14T06:26:11+00:00",
+          "url": "https://t.me/WEB3_AGGREGATOR/422908",
+          "quote": "Несколько часов назад Unipcs (Bonk guy) , нашумевший #1 трейдер на fomo app обратил внимание аудитории на ARC цепочку.",
+          "span": [
+            5,
+            123
+          ],
+          "origin": "own"
+        }
+      ]
+    },
+    {
+      "event_id": "e16-0ca067f4ec71630b",
+      "headline": "Fomo App интегрирует ARC в первые дни лаунча сети, соответственно движ гарантирован.",
+      "counts": {
+        "events": 1,
+        "publications": 1,
+        "channels": 1,
+        "known_authors": 0,
+        "unknown_authors": 1,
+        "found_origins": 0,
+        "reprints": 0,
+        "unknown_origin": 1
+      },
+      "actor": "Fomo App",
+      "action": "интегрирует",
+      "object": "ARC",
+      "qualifiers": {
+        "timing": "в первые дни лаунча сети"
+      },
+      "members": [
+        {
+          "obs_id": "telegram:15:422908#s6",
+          "publication_id": "telegram:15:422908",
+          "source_id": 15,
+          "author_id": null,
+          "published_at": "2026-09-14T06:26:11+00:00",
+          "url": "https://t.me/WEB3_AGGREGATOR/422908",
+          "quote": "Fomo App интегрирует ARC в первые дни лаунча сети, соответственно движ гарантирован.",
+          "span": [
+            611,
+            695
+          ],
+          "origin": "retelling"
+        }
+      ]
+    },
+    {
+      "event_id": "e17-0bc4e72273a86aa6",
+      "headline": "Arc Launchpad Ecosytem. Mainnet Goes Live Sep 16",
+      "counts": {
+        "events": 1,
+        "publications": 1,
+        "channels": 1,
+        "known_authors": 0,
+        "unknown_authors": 1,
+        "found_origins": 0,
+        "reprints": 1,
+        "unknown_origin": 0
+      },
+      "actor": "Mainnet",
+      "action": "goes live",
+      "object": "Arc",
+      "qualifiers": {
+        "date": "Sep 16"
+      },
+      "members": [
+        {
+          "obs_id": "telegram:15:422923#s0",
+          "publication_id": "telegram:15:422923",
+          "source_id": 15,
+          "author_id": null,
+          "published_at": "2026-09-14T11:14:34+00:00",
+          "url": "https://t.me/WEB3_AGGREGATOR/422923",
+          "quote": "Arc Launchpad Ecosytem. Mainnet Goes Live Sep 16",
+          "span": [
+            0,
+            48
+          ],
+          "origin": "retelling"
+        }
+      ]
+    },
+    {
+      "event_id": "e18-dcf0c45365b311ce",
+      "headline": "Arc Mainnet уже близко, поэтому собрали все инфраструктурные проекты, которые стоит добавить в watchlist.",
+      "counts": {
+        "events": 1,
+        "publications": 2,
+        "channels": 2,
+        "known_authors": 0,
+        "unknown_authors": 2,
+        "found_origins": 2,
+        "reprints": 0,
+        "unknown_origin": 0
+      },
+      "actor": "Arc",
+      "action": "close_to_launch",
+      "object": "Mainnet",
+      "qualifiers": {},
+      "members": [
+        {
+          "obs_id": "telegram:1:7135#s1",
+          "publication_id": "telegram:1:7135",
+          "source_id": 1,
+          "author_id": null,
+          "published_at": "2026-09-14T12:04:00+00:00",
+          "url": "https://t.me/whitelist1/7135",
+          "quote": "Arc Mainnet уже близко, поэтому собрали все инфраструктурные проекты, которые стоит добавить в watchlist.",
+          "span": [
+            38,
+            143
+          ],
+          "origin": "own"
+        },
+        {
+          "obs_id": "telegram:15:423117#s1",
+          "publication_id": "telegram:15:423117",
+          "source_id": 15,
+          "author_id": null,
+          "published_at": "2026-09-16T14:07:04+00:00",
+          "url": "https://t.me/WEB3_AGGREGATOR/423117",
+          "quote": "Основная сеть Arc запустилась. Arc и OpenSea запустили бесплатный минт NFT:",
+          "span": [
+            44,
+            119
+          ],
+          "origin": "own"
+        }
+      ]
+    },
+    {
+      "event_id": "e19-1dd2aec101fbcc79",
+      "headline": "• Arc Citizens: 10,000 fully on-chain identity PFP, запуск планируется 16 сентября;",
+      "counts": {
+        "events": 1,
+        "publications": 1,
+        "channels": 1,
+        "known_authors": 0,
+        "unknown_authors": 1,
+        "found_origins": 1,
+        "reprints": 0,
+        "unknown_origin": 0
+      },
+      "actor": "Arc",
+      "action": "launch",
+      "object": "Arc Citizens",
+      "qualifiers": {
+        "event_date": "16 сентября"
+      },
+      "members": [
+        {
+          "obs_id": "telegram:1:7135#s37",
+          "publication_id": "telegram:1:7135",
+          "source_id": 1,
+          "author_id": null,
+          "published_at": "2026-09-14T12:04:00+00:00",
+          "url": "https://t.me/whitelist1/7135",
+          "quote": "• Arc Citizens: 10,000 fully on-chain identity PFP, запуск планируется 16 сентября;",
+          "span": [
+            1828,
+            1911
+          ],
+          "origin": "retelling"
+        }
+      ]
+    },
+    {
+      "event_id": "e20-d447685456f9187a",
+      "headline": "• Arc Punks: 10,000 punks, запуск 16 сентября, ориентир 0.5 USDC;",
+      "counts": {
+        "events": 1,
+        "publications": 1,
+        "channels": 1,
+        "known_authors": 0,
+        "unknown_authors": 1,
+        "found_origins": 1,
+        "reprints": 0,
+        "unknown_origin": 0
+      },
+      "actor": "Arc",
+      "action": "launch",
+      "object": "Arc Punks",
+      "qualifiers": {
+        "event_date": "16 сентября",
+        "price": "0.5 USDC"
+      },
+      "members": [
+        {
+          "obs_id": "telegram:1:7135#s38",
+          "publication_id": "telegram:1:7135",
+          "source_id": 1,
+          "author_id": null,
+          "published_at": "2026-09-14T12:04:00+00:00",
+          "url": "https://t.me/whitelist1/7135",
+          "quote": "• Arc Punks: 10,000 punks, запуск 16 сентября, ориентир 0.5 USDC;",
+          "span": [
+            1913,
+            1978
+          ],
+          "origin": "retelling"
+        }
+      ]
+    },
+    {
+      "event_id": "e21-7c75f8da91a1694f",
+      "headline": "ARC FLY - FCFS WL рега 😮",
+      "counts": {
+        "events": 1,
+        "publications": 1,
+        "channels": 1,
+        "known_authors": 0,
+        "unknown_authors": 1,
+        "found_origins": 0,
+        "reprints": 1,
+        "unknown_origin": 0
+      },
+      "actor": "ARC FLY",
+      "action": "registration",
+      "object": "FCFS WL",
+      "qualifiers": {},
+      "members": [
+        {
+          "obs_id": "telegram:15:422986#s0",
+          "publication_id": "telegram:15:422986",
+          "source_id": 15,
+          "author_id": null,
+          "published_at": "2026-09-15T09:03:06+00:00",
+          "url": "https://t.me/WEB3_AGGREGATOR/422986",
+          "quote": "ARC FLY - FCFS WL рега 😮",
+          "span": [
+            0,
+            24
+          ],
+          "origin": "retelling"
+        }
+      ]
+    },
+    {
+      "event_id": "e22-51767aa7a816c2cb",
+      "headline": "Завтра ARC паблик майнет",
+      "counts": {
+        "events": 1,
+        "publications": 2,
+        "channels": 2,
+        "known_authors": 0,
+        "unknown_authors": 2,
+        "found_origins": 1,
+        "reprints": 1,
+        "unknown_origin": 0
+      },
+      "actor": "ARC",
+      "action": "launch",
+      "object": "public mainnet",
+      "qualifiers": {
+        "event_date": "завтра"
+      },
+      "members": [
+        {
+          "obs_id": "telegram:15:423067#s0",
+          "publication_id": "telegram:15:423067",
+          "source_id": 15,
+          "author_id": null,
+          "published_at": "2026-09-15T23:14:48+00:00",
+          "url": "https://t.me/WEB3_AGGREGATOR/423067",
+          "quote": "Завтра ARC паблик майнет",
+          "span": [
+            0,
+            24
+          ],
+          "origin": "retelling"
+        },
+        {
+          "obs_id": "telegram:13:3754#s1",
+          "publication_id": "telegram:13:3754",
+          "source_id": 13,
+          "author_id": null,
+          "published_at": "2026-09-16T15:24:57+00:00",
+          "url": "https://t.me/krasnovcrypto/3754",
+          "quote": "Arc запустил публичный mainnet и уже сейчас мы можем делать быстрые активности.",
+          "span": [
+            43,
+            122
+          ],
+          "origin": "own"
+        }
+      ]
+    },
+    {
+      "event_id": "e23-addb36867c004190",
+      "headline": "✴️🇺🇸#CRCL Circle планирует запустить свой блокчейна Arc",
+      "counts": {
+        "events": 1,
+        "publications": 3,
+        "channels": 2,
+        "known_authors": 0,
+        "unknown_authors": 3,
+        "found_origins": 0,
+        "reprints": 3,
+        "unknown_origin": 0
+      },
+      "actor": "Circle",
+      "action": "plans to launch",
+      "object": "blockchain Arc",
+      "qualifiers": {},
+      "members": [
+        {
+          "obs_id": "telegram:10:384943#s14",
+          "publication_id": "telegram:10:384943",
+          "source_id": 10,
+          "author_id": null,
+          "published_at": "2026-09-16T04:01:19+00:00",
+          "url": "https://t.me/markettwits/384943",
+          "quote": "✴️🇺🇸#CRCL Circle планирует запустить свой блокчейна Arc",
+          "span": [
+            800,
+            855
+          ],
+          "origin": "retelling"
+        },
+        {
+          "obs_id": "telegram:18:31448#s1",
+          "publication_id": "telegram:18:31448",
+          "source_id": 18,
+          "author_id": null,
+          "published_at": "2026-09-16T05:27:05+00:00",
+          "url": "https://t.me/crypto_hd/31448",
+          "quote": "⚡ Компания Circle технически запустила майннет блокчейна Arc.",
+          "span": [
+            6,
+            67
+          ],
+          "origin": "retelling"
+        },
+        {
+          "obs_id": "telegram:10:385037#s1",
+          "publication_id": "telegram:10:385037",
+          "source_id": 10,
+          "author_id": null,
+          "published_at": "2026-09-16T10:33:13+00:00",
+          "url": "https://t.me/markettwits/385037",
+          "quote": "Circle запустила свой блокчейна Arc",
+          "span": [
+            20,
+            55
+          ],
+          "origin": "retelling"
+        }
+      ]
+    },
+    {
+      "event_id": "e24-b79a9c89ea4254a0",
+      "headline": "Granted, yes there were people early new Arc 1-2 months before, today it begins \"officially\" via public (few hours basically only)",
+      "counts": {
+        "events": 1,
+        "publications": 4,
+        "channels": 3,
+        "known_authors": 0,
+        "unknown_authors": 4,
+        "found_origins": 3,
+        "reprints": 1,
+        "unknown_origin": 0
+      },
+      "actor": "Arc",
+      "action": "begins officially",
+      "object": "public launch",
+      "qualifiers": {
+        "event_date": "today"
+      },
+      "members": [
+        {
+          "obs_id": "telegram:20:48975#s0",
+          "publication_id": "telegram:20:48975",
+          "source_id": 20,
+          "author_id": null,
+          "published_at": "2026-09-16T05:14:54+00:00",
+          "url": "https://t.me/PowsGemCalls/48975",
+          "quote": "Granted, yes there were people early new Arc 1-2 months before, today it begins \"officially\" via public (few hours basically only)",
+          "span": [
+            0,
+            130
+          ],
+          "origin": "own"
+        },
+        {
+          "obs_id": "telegram:1:7138#s4",
+          "publication_id": "telegram:1:7138",
+          "source_id": 1,
+          "author_id": null,
+          "published_at": "2026-09-16T07:01:49+00:00",
+          "url": "https://t.me/whitelist1/7138",
+          "quote": "👍Напомним, что Arc выходит в Mainnet уже сегодня, а вместе с ним и многие NFT коллекции, сверяемся с постом.",
+          "span": [
+            470,
+            578
+          ],
+          "origin": "retelling"
+        },
+        {
+          "obs_id": "telegram:15:423100#s0",
+          "publication_id": "telegram:15:423100",
+          "source_id": 15,
+          "author_id": null,
+          "published_at": "2026-09-16T13:55:06+00:00",
+          "url": "https://t.me/WEB3_AGGREGATOR/423100",
+          "quote": "Circle's Arc Stablecoin L1 Goes Live on Mainnet",
+          "span": [
+            0,
+            47
+          ],
+          "origin": "own"
+        },
+        {
+          "obs_id": "telegram:15:423153#s0",
+          "publication_id": "telegram:15:423153",
+          "source_id": 15,
+          "author_id": null,
+          "published_at": "2026-09-16T22:31:41+00:00",
+          "url": "https://t.me/WEB3_AGGREGATOR/423153",
+          "quote": "Первый день мэйннета ARC",
+          "span": [
+            2,
+            26
+          ],
+          "origin": "own"
+        }
+      ]
+    },
+    {
+      "event_id": "e25-0ec0399da66e9e28",
+      "headline": "Официальная презентация запуска Arc начнется сегодня в 18:30 мск.",
+      "counts": {
+        "events": 1,
+        "publications": 2,
+        "channels": 2,
+        "known_authors": 0,
+        "unknown_authors": 2,
+        "found_origins": 0,
+        "reprints": 2,
+        "unknown_origin": 0
+      },
+      "actor": "Circle",
+      "action": "will present",
+      "object": "official presentation of Arc launch",
+      "qualifiers": {
+        "event_date": "today at 18:30 мск"
+      },
+      "members": [
+        {
+          "obs_id": "telegram:18:31448#s5",
+          "publication_id": "telegram:18:31448",
+          "source_id": 18,
+          "author_id": null,
+          "published_at": "2026-09-16T05:27:05+00:00",
+          "url": "https://t.me/crypto_hd/31448",
+          "quote": "Официальная презентация запуска Arc начнется сегодня в 18:30 мск.",
+          "span": [
+            398,
+            463
+          ],
+          "origin": "retelling"
+        },
+        {
+          "obs_id": "telegram:15:423286#s8",
+          "publication_id": "telegram:15:423286",
+          "source_id": 15,
+          "author_id": null,
+          "published_at": "2026-09-18T10:51:16+00:00",
+          "url": "https://t.me/WEB3_AGGREGATOR/423286",
+          "quote": "🟢 16 сентября Circle запустила мейннет: среди валидаторов BlackRock и Visa, отчеканено 10 млрд ARC, за первые два часа в сеть вошло больше $370 млн USDC. Звучит громко, но это около 0,05% всего USDC, ликвидность тонкая, спреды заметные, половина приложений сырая.\n",
+          "span": [
+            1516,
+            1780
+          ],
+          "origin": "retelling"
+        }
+      ]
+    },
+    {
+      "event_id": "e26-ae5baa1858a89b9d",
+      "headline": "CIRCLE LAUNCHES ARC MAINNET WITH BLACKROCK AND VISA AMONG VALIDATORS, MINTS 10 BILLION ARC TOKENS ...",
+      "counts": {
+        "events": 1,
+        "publications": 3,
+        "channels": 2,
+        "known_authors": 0,
+        "unknown_authors": 3,
+        "found_origins": 2,
+        "reprints": 1,
+        "unknown_origin": 0
+      },
+      "actor": "Circle",
+      "action": "launches",
+      "object": "Arc mainnet",
+      "qualifiers": {
+        "version": null,
+        "event_date": null,
+        "place": null,
+        "counterparty": "BlackRock, Visa"
+      },
+      "members": [
+        {
+          "obs_id": "telegram:9:1039167#s0",
+          "publication_id": "telegram:9:1039167",
+          "source_id": 9,
+          "author_id": null,
+          "published_at": "2026-09-16T10:31:00+00:00",
+          "url": "https://t.me/marketfeed/1039167",
+          "quote": "CIRCLE LAUNCHES ARC MAINNET WITH BLACKROCK AND VISA AMONG VALIDATORS, MINTS 10 BILLION ARC TOKENS ...",
+          "span": [
+            0,
+            101
+          ],
+          "origin": "own"
+        },
+        {
+          "obs_id": "telegram:9:1039182#s25",
+          "publication_id": "telegram:9:1039182",
+          "source_id": 9,
+          "author_id": null,
+          "published_at": "2026-09-16T11:00:41+00:00",
+          "url": "https://t.me/marketfeed/1039182",
+          "quote": "Circle launched Arc mainnet with BlackRock and Visa among validators; Zcash holders backed faster transactions and halving-style design",
+          "span": [
+            2205,
+            2340
+          ],
+          "origin": "retelling"
+        },
+        {
+          "obs_id": "telegram:15:423105#s1",
+          "publication_id": "telegram:15:423105",
+          "source_id": 15,
+          "author_id": null,
+          "published_at": "2026-09-16T13:57:34+00:00",
+          "url": "https://t.me/WEB3_AGGREGATOR/423105",
+          "quote": "Сегодня, 16 сентября, Circle запустила мейннет Arc и сразу подключила его к Agent Stack, набору инструментов, который с 11 мая дает ИИ-агенту собственный кошелек.",
+          "span": [
+            25,
+            187
+          ],
+          "origin": "own"
+        }
+      ]
+    },
+    {
+      "event_id": "e27-8a766f54fba274d1",
+      "headline": "Arc arrives as a full-stack financial platform rather than a bare chain, shipping assets, applications, interoperability, and Circle platform services from day one.",
+      "counts": {
+        "events": 1,
+        "publications": 1,
+        "channels": 1,
+        "known_authors": 0,
+        "unknown_authors": 1,
+        "found_origins": 1,
+        "reprints": 0,
+        "unknown_origin": 0
+      },
+      "actor": "Arc",
+      "action": "arrives",
+      "object": null,
+      "qualifiers": {},
+      "members": [
+        {
+          "obs_id": "telegram:15:423100#s2",
+          "publication_id": "telegram:15:423100",
+          "source_id": 15,
+          "author_id": null,
+          "published_at": "2026-09-16T13:55:06+00:00",
+          "url": "https://t.me/WEB3_AGGREGATOR/423100",
+          "quote": "Arc arrives as a full-stack financial platform rather than a bare chain, shipping assets, applications, interoperability, and Circle platform services from day one.",
+          "span": [
+            260,
+            424
+          ],
+          "origin": "own"
+        },
+        {
+          "obs_id": "telegram:15:423100#s3",
+          "publication_id": "telegram:15:423100",
+          "source_id": 15,
+          "author_id": null,
+          "published_at": "2026-09-16T13:55:06+00:00",
+          "url": "https://t.me/WEB3_AGGREGATOR/423100",
+          "quote": "More than 190 institutional and ecosystem teams are already building on Arc, one of the most institutionally backed genesis cohorts the industry has seen, as Circle pushes stablecoins deeper into regulated finance.",
+          "span": [
+            767,
+            981
+          ],
+          "origin": "own"
+        }
+      ]
+    },
+    {
+      "event_id": "e28-c9826d15d0d75d44",
+      "headline": "📟Arc | фармим раннюю активность в mainnet",
+      "counts": {
+        "events": 1,
+        "publications": 1,
+        "channels": 1,
+        "known_authors": 0,
+        "unknown_authors": 1,
+        "found_origins": 1,
+        "reprints": 0,
+        "unknown_origin": 0
+      },
+      "actor": null,
+      "action": "farm",
+      "object": "early activity in mainnet",
+      "qualifiers": {},
+      "members": [
+        {
+          "obs_id": "telegram:13:3754#s0",
+          "publication_id": "telegram:13:3754",
+          "source_id": 13,
+          "author_id": null,
+          "published_at": "2026-09-16T15:24:57+00:00",
+          "url": "https://t.me/krasnovcrypto/3754",
+          "quote": "📟Arc | фармим раннюю активность в mainnet",
+          "span": [
+            0,
+            41
+          ],
+          "origin": "own"
+        }
+      ]
+    },
+    {
+      "event_id": "e29-af16fdc54e5e1347",
+      "headline": "Arc — L1-сеть от Circle для платежей, стейблкоинов и финансовых приложений. В экосистеме уже есть Uniswap, Aave, Morpho, Aerodrome и другие крупные проекты.",
+      "counts": {
+        "events": 1,
+        "publications": 1,
+        "channels": 1,
+        "known_authors": 0,
+        "unknown_authors": 1,
+        "found_origins": 1,
+        "reprints": 0,
+        "unknown_origin": 0
+      },
+      "actor": null,
+      "action": "description",
+      "object": "Arc",
+      "qualifiers": {},
+      "members": [
+        {
+          "obs_id": "telegram:13:3754#s2",
+          "publication_id": "telegram:13:3754",
+          "source_id": 13,
+          "author_id": null,
+          "published_at": "2026-09-16T15:24:57+00:00",
+          "url": "https://t.me/krasnovcrypto/3754",
+          "quote": "Arc — L1-сеть от Circle для платежей, стейблкоинов и финансовых приложений. В экосистеме уже есть Uniswap, Aave, Morpho, Aerodrome и другие крупные проекты.",
+          "span": [
+            124,
+            280
+          ],
+          "origin": "own"
+        }
+      ]
+    },
+    {
+      "event_id": "e30-f5dee91bb2f52cb4",
+      "headline": "🔘Бриджим любой актив в USDC в сеть Arc",
+      "counts": {
+        "events": 1,
+        "publications": 1,
+        "channels": 1,
+        "known_authors": 0,
+        "unknown_authors": 1,
+        "found_origins": 1,
+        "reprints": 0,
+        "unknown_origin": 0
+      },
+      "actor": null,
+      "action": "bridge",
+      "object": "any asset to USDC in Arc network",
+      "qualifiers": {},
+      "members": [
+        {
+          "obs_id": "telegram:13:3754#s6",
+          "publication_id": "telegram:13:3754",
+          "source_id": 13,
+          "author_id": null,
+          "published_at": "2026-09-16T15:24:57+00:00",
+          "url": "https://t.me/krasnovcrypto/3754",
+          "quote": "🔘Бриджим любой актив в USDC в сеть Arc",
+          "span": [
+            401,
+            439
+          ],
+          "origin": "own"
+        }
+      ]
+    },
+    {
+      "event_id": "e31-bc95ef671dc0981f",
+      "headline": "Я вам просто напоминаю, что в 18 по Москве официально ARC запускают и вы уже сейчас можете абсолютно бесплатно создавать свои мемы на https://arc.openfair.app/",
+      "counts": {
+        "events": 1,
+        "publications": 1,
+        "channels": 1,
+        "known_authors": 0,
+        "unknown_authors": 1,
+        "found_origins": 1,
+        "reprints": 0,
+        "unknown_origin": 0
+      },
+      "actor": "ARC",
+      "action": "launch",
+      "object": "official launch",
+      "qualifiers": {},
+      "members": [
+        {
+          "obs_id": "telegram:15:423121#s0",
+          "publication_id": "telegram:15:423121",
+          "source_id": 15,
+          "author_id": null,
+          "published_at": "2026-09-16T16:33:30+00:00",
+          "url": "https://t.me/WEB3_AGGREGATOR/423121",
+          "quote": "Я вам просто напоминаю, что в 18 по Москве официально ARC запускают и вы уже сейчас можете абсолютно бесплатно создавать свои мемы на https://arc.openfair.app/",
+          "span": [
+            0,
+            159
+          ],
+          "origin": "own"
+        }
+      ]
+    },
+    {
+      "event_id": "e32-c5cc91bc0559fb7d",
+      "headline": "🔹 Arc Chain Coin Tracking Is Live",
+      "counts": {
+        "events": 1,
+        "publications": 1,
+        "channels": 1,
+        "known_authors": 0,
+        "unknown_authors": 1,
+        "found_origins": 1,
+        "reprints": 0,
+        "unknown_origin": 0
+      },
+      "actor": null,
+      "action": "tracking live",
+      "object": "Arc Chain Coin",
+      "qualifiers": {},
+      "members": [
+        {
+          "obs_id": "telegram:15:423128#s0",
+          "publication_id": "telegram:15:423128",
+          "source_id": 15,
+          "author_id": null,
+          "published_at": "2026-09-16T16:34:44+00:00",
+          "url": "https://t.me/WEB3_AGGREGATOR/423128",
+          "quote": "🔹 Arc Chain Coin Tracking Is Live",
+          "span": [
+            0,
+            33
+          ],
+          "origin": "own"
+        }
+      ]
+    },
+    {
+      "event_id": "e33-525acbc9683eaa9d",
+      "headline": "Arc запущен",
+      "counts": {
+        "events": 1,
+        "publications": 5,
+        "channels": 3,
+        "known_authors": 0,
+        "unknown_authors": 5,
+        "found_origins": 3,
+        "reprints": 2,
+        "unknown_origin": 0
+      },
+      "actor": null,
+      "action": "launched",
+      "object": "Arc",
+      "qualifiers": {},
+      "members": [
+        {
+          "obs_id": "telegram:15:423150#s0",
+          "publication_id": "telegram:15:423150",
+          "source_id": 15,
+          "author_id": null,
+          "published_at": "2026-09-16T20:22:49+00:00",
+          "url": "https://t.me/WEB3_AGGREGATOR/423150",
+          "quote": "Arc запущен",
+          "span": [
+            0,
+            11
+          ],
+          "origin": "own"
+        },
+        {
+          "obs_id": "telegram:18:31472#s2",
+          "publication_id": "telegram:18:31472",
+          "source_id": 18,
+          "author_id": null,
+          "published_at": "2026-09-16T23:00:00+00:00",
+          "url": "https://t.me/crypto_hd/31472",
+          "quote": "▫️Запуск майннета Arc (читать)",
+          "span": [
+            71,
+            101
+          ],
+          "origin": "own"
+        },
+        {
+          "obs_id": "telegram:19:19007#s1",
+          "publication_id": "telegram:19:19007",
+          "source_id": 19,
+          "author_id": null,
+          "published_at": "2026-09-16T23:03:11+00:00",
+          "url": "https://t.me/spidersjournal/19007",
+          "quote": "• Early on Arc — A chance to launch from day one in a new ecosystem built around stablecoins and global finance. Arc is built by Circle, with founding validators including BlackRock, Visa, Mastercard, DTCC, ICE (owner of the NYSE), Galaxy and more.",
+          "span": [
+            39,
+            287
+          ],
+          "origin": "own"
+        },
+        {
+          "obs_id": "telegram:15:423461#s5",
+          "publication_id": "telegram:15:423461",
+          "source_id": 15,
+          "author_id": null,
+          "published_at": "2026-09-21T09:47:41+00:00",
+          "url": "https://t.me/WEB3_AGGREGATOR/423461",
+          "quote": "4⃣ Блокчейн Circle для BlackRock залили мемами — Circle запустила сеть Arc с валидаторами уровня BlackRock и Visa, но за первый день 82% объёма ($336 млн) ушло в мемкоин-лаунчпады, а не в институции. Знакомый сценарий: через 12 часов мемы рухнули на 40–75%.\nЧитать ➡️\n\n",
+          "span": [
+            914,
+            1183
+          ],
+          "origin": "retelling"
+        },
+        {
+          "obs_id": "telegram:15:423533#s5",
+          "publication_id": "telegram:15:423533",
+          "source_id": 15,
+          "author_id": null,
+          "published_at": "2026-09-21T20:47:03+00:00",
+          "url": "https://t.me/WEB3_AGGREGATOR/423533",
+          "quote": "🟢 Arc мейннет запущен, валидируют BlackRock и Visa\n",
+          "span": [
+            230,
+            281
+          ],
+          "origin": "retelling"
+        }
+      ]
+    },
+    {
+      "event_id": "e34-fc76b3cacccdad42",
+      "headline": "🟢Arc вышли в майннет",
+      "counts": {
+        "events": 1,
+        "publications": 1,
+        "channels": 1,
+        "known_authors": 0,
+        "unknown_authors": 1,
+        "found_origins": 1,
+        "reprints": 0,
+        "unknown_origin": 0
+      },
+      "actor": null,
+      "action": "went to mainnet",
+      "object": "Arc",
+      "qualifiers": {},
+      "members": [
+        {
+          "obs_id": "telegram:15:423151#s1",
+          "publication_id": "telegram:15:423151",
+          "source_id": 15,
+          "author_id": null,
+          "published_at": "2026-09-16T20:22:51+00:00",
+          "url": "https://t.me/WEB3_AGGREGATOR/423151",
+          "quote": "🟢Arc вышли в майннет",
+          "span": [
+            23,
+            43
+          ],
+          "origin": "own"
+        },
+        {
+          "obs_id": "telegram:15:423151#s2",
+          "publication_id": "telegram:15:423151",
+          "source_id": 15,
+          "author_id": null,
+          "published_at": "2026-09-16T20:22:51+00:00",
+          "url": "https://t.me/WEB3_AGGREGATOR/423151",
+          "quote": "⛓️Сегодня сеть Arc вышла в майннет, в которой для оплаты газа не нужен отдельный токен, все списывается в $USDC.\nТакже можно сминтить памятный NFT в честь запуска сети на ➡️Opensea, дедлайн 16 сентября 12:00 мск. Подробнее о сети тут.",
+          "span": [
+            45,
+            279
+          ],
+          "origin": "own"
+        }
+      ]
+    },
+    {
+      "event_id": "e35-aae72a40fa53caf6",
+      "headline": "🟣AKA DN404 — первая коллекция на Arc: NFT + ERC-20 в одном активе, а комиссии идут в RWA",
+      "counts": {
+        "events": 1,
+        "publications": 1,
+        "channels": 1,
+        "known_authors": 0,
+        "unknown_authors": 1,
+        "found_origins": 1,
+        "reprints": 0,
+        "unknown_origin": 0
+      },
+      "actor": "AKA DN404",
+      "action": "first collection on Arc",
+      "object": "Arc",
+      "qualifiers": {
+        "version": "DN404",
+        "place": "Arc"
+      },
+      "members": [
+        {
+          "obs_id": "telegram:15:423153#s10",
+          "publication_id": "telegram:15:423153",
+          "source_id": 15,
+          "author_id": null,
+          "published_at": "2026-09-16T22:31:41+00:00",
+          "url": "https://t.me/WEB3_AGGREGATOR/423153",
+          "quote": "🟣AKA DN404 — первая коллекция на Arc: NFT + ERC-20 в одном активе, а комиссии идут в RWA",
+          "span": [
+            468,
+            556
+          ],
+          "origin": "own"
+        }
+      ]
+    },
+    {
+      "event_id": "e36-4d7ac3720cf84b0f",
+      "headline": "🟣Arclings — первая полностью ончейн 1-bit коллекция на Arc",
+      "counts": {
+        "events": 1,
+        "publications": 1,
+        "channels": 1,
+        "known_authors": 0,
+        "unknown_authors": 1,
+        "found_origins": 1,
+        "reprints": 0,
+        "unknown_origin": 0
+      },
+      "actor": "Arclings",
+      "action": "first fully on-chain 1-bit collection on Arc",
+      "object": "Arc",
+      "qualifiers": {
+        "place": "Arc"
+      },
+      "members": [
+        {
+          "obs_id": "telegram:15:423153#s11",
+          "publication_id": "telegram:15:423153",
+          "source_id": 15,
+          "author_id": null,
+          "published_at": "2026-09-16T22:31:41+00:00",
+          "url": "https://t.me/WEB3_AGGREGATOR/423153",
+          "quote": "🟣Arclings — первая полностью ончейн 1-bit коллекция на Arc",
+          "span": [
+            557,
+            615
+          ],
+          "origin": "own"
+        }
+      ]
+    },
+    {
+      "event_id": "e37-419ffa3f9fce6606",
+      "headline": "🟣Arc Fly — минт состоится сегодня на OpenSea, будет фри минт на 7.777 NFT",
+      "counts": {
+        "events": 1,
+        "publications": 1,
+        "channels": 1,
+        "known_authors": 0,
+        "unknown_authors": 1,
+        "found_origins": 1,
+        "reprints": 0,
+        "unknown_origin": 0
+      },
+      "actor": "Arc Fly",
+      "action": "mint today on OpenSea",
+      "object": "Arc",
+      "qualifiers": {
+        "event_date": "сегодня (2026-09-16)",
+        "place": "OpenSea"
+      },
+      "members": [
+        {
+          "obs_id": "telegram:15:423153#s12",
+          "publication_id": "telegram:15:423153",
+          "source_id": 15,
+          "author_id": null,
+          "published_at": "2026-09-16T22:31:41+00:00",
+          "url": "https://t.me/WEB3_AGGREGATOR/423153",
+          "quote": "🟣Arc Fly — минт состоится сегодня на OpenSea, будет фри минт на 7.777 NFT",
+          "span": [
+            616,
+            689
+          ],
+          "origin": "own"
+        }
+      ]
+    },
+    {
+      "event_id": "e38-ed48c18aa3328218",
+      "headline": "Arc — community → Zack: поддержка уже запущена.",
+      "counts": {
+        "events": 1,
+        "publications": 2,
+        "channels": 2,
+        "known_authors": 0,
+        "unknown_authors": 2,
+        "found_origins": 2,
+        "reprints": 0,
+        "unknown_origin": 0
+      },
+      "actor": "Zack",
+      "action": "announced support already launched",
+      "object": "Arc",
+      "qualifiers": {
+        "place": "AMA"
+      },
+      "members": [
+        {
+          "obs_id": "telegram:15:423161#s7",
+          "publication_id": "telegram:15:423161",
+          "source_id": 15,
+          "author_id": null,
+          "published_at": "2026-09-16T22:33:20+00:00",
+          "url": "https://t.me/WEB3_AGGREGATOR/423161",
+          "quote": "Arc — community → Zack: поддержка уже запущена.",
+          "span": [
+            1903,
+            1950
+          ],
+          "origin": "own"
+        },
+        {
+          "obs_id": "telegram:1:7153#s3",
+          "publication_id": "telegram:1:7153",
+          "source_id": 1,
+          "author_id": null,
+          "published_at": "2026-09-22T12:03:25+00:00",
+          "url": "https://t.me/whitelist1/7153",
+          "quote": "1inch Swap: Arc поддерживается 1inch с первого дня в качестве launch partner;\n1inch Business: пользователи с  активной подпиской могут сразу использовать API;  \n1inch Aqua также теперь работает на всех 4 сетях.\n\n",
+          "span": [
+            242,
+            454
+          ],
+          "origin": "own"
+        }
+      ]
+    },
+    {
+      "event_id": "e39-c813add0d14f4b10",
+      "headline": "🔴Arc сминтили 10 млрд токенов $ARC в Mainnet. Сама же команда пишет, что это техническая необходимость, а не подготовка к дропу. При этом, в X сами байтят холдеров Architect ролей.",
+      "counts": {
+        "events": 1,
+        "publications": 3,
+        "channels": 2,
+        "known_authors": 0,
+        "unknown_authors": 3,
+        "found_origins": 1,
+        "reprints": 2,
+        "unknown_origin": 0
+      },
+      "actor": "Arc",
+      "action": "minted 10 billion tokens in Mainnet",
+      "object": "$ARC",
+      "qualifiers": {
+        "version": "Mainnet"
+      },
+      "members": [
+        {
+          "obs_id": "telegram:1:7141#s2",
+          "publication_id": "telegram:1:7141",
+          "source_id": 1,
+          "author_id": null,
+          "published_at": "2026-09-17T07:02:16+00:00",
+          "url": "https://t.me/whitelist1/7141",
+          "quote": "🔴Arc сминтили 10 млрд токенов $ARC в Mainnet. Сама же команда пишет, что это техническая необходимость, а не подготовка к дропу. При этом, в X сами байтят холдеров Architect ролей.",
+          "span": [
+            260,
+            440
+          ],
+          "origin": "own"
+        },
+        {
+          "obs_id": "telegram:15:423182#s0",
+          "publication_id": "telegram:15:423182",
+          "source_id": 15,
+          "author_id": null,
+          "published_at": "2026-09-17T10:11:57+00:00",
+          "url": "https://t.me/WEB3_AGGREGATOR/423182",
+          "quote": "сминтили 10 млрд токенов $ARC в майннете",
+          "span": [
+            217,
+            257
+          ],
+          "origin": "retelling"
+        },
+        {
+          "obs_id": "telegram:15:423252#s2",
+          "publication_id": "telegram:15:423252",
+          "source_id": 15,
+          "author_id": null,
+          "published_at": "2026-09-17T20:54:53+00:00",
+          "url": "https://t.me/WEB3_AGGREGATOR/423252",
+          "quote": "⛓️Arc при запуске майннета сминтили 10 млрд. токенов $ARC, на данный момент нет информации для чего, т.к. в оплате газа они не участвуют, нет листинга и нет заявленного использования.",
+          "span": [
+            49,
+            232
+          ],
+          "origin": "retelling"
+        }
+      ]
+    },
+    {
+      "event_id": "e40-286906c4a81433de",
+      "headline": "👍Extended запустили RWA Trading Competition на $50 тыс. Набиваем PNL, объем, OI и поднимаемся в лидерборде. В награды войдут топ 100 трейдеров, турнир продлится до 29 сентября.…",
+      "counts": {
+        "events": 1,
+        "publications": 1,
+        "channels": 1,
+        "known_authors": 0,
+        "unknown_authors": 1,
+        "found_origins": 1,
+        "reprints": 0,
+        "unknown_origin": 0
+      },
+      "actor": "Extended",
+      "action": "announced transition to Arc",
+      "object": "Arc",
+      "qualifiers": {
+        "event_date": "до 29 сентября",
+        "place": "Extended"
+      },
+      "members": [
+        {
+          "obs_id": "telegram:1:7141#s3",
+          "publication_id": "telegram:1:7141",
+          "source_id": 1,
+          "author_id": null,
+          "published_at": "2026-09-17T07:02:16+00:00",
+          "url": "https://t.me/whitelist1/7141",
+          "quote": "👍Extended запустили RWA Trading Competition на $50 тыс. Набиваем PNL, объем, OI и поднимаемся в лидерборде. В награды войдут топ 100 трейдеров, турнир продлится до 29 сентября. Вместе с этим, Extended объявили о переходе на Arc.",
+          "span": [
+            442,
+            670
+          ],
+          "origin": "own"
+        }
+      ]
+    },
+    {
+      "event_id": "e41-87ae8cd422225c43",
+      "headline": "Arc Hits 168,000 Wallets in First 24 Hours",
+      "counts": {
+        "events": 1,
+        "publications": 1,
+        "channels": 1,
+        "known_authors": 0,
+        "unknown_authors": 1,
+        "found_origins": 0,
+        "reprints": 1,
+        "unknown_origin": 0
+      },
+      "actor": "Arc",
+      "action": "reach",
+      "object": "168,000 wallets",
+      "qualifiers": {
+        "event_date": "first 24 hours",
+        "version": "168000 wallets"
+      },
+      "members": [
+        {
+          "obs_id": "telegram:15:423197#s0",
+          "publication_id": "telegram:15:423197",
+          "source_id": 15,
+          "author_id": null,
+          "published_at": "2026-09-17T12:30:13+00:00",
+          "url": "https://t.me/WEB3_AGGREGATOR/423197",
+          "quote": "Arc Hits 168,000 Wallets in First 24 Hours",
+          "span": [
+            0,
+            42
+          ],
+          "origin": "retelling"
+        }
+      ]
+    },
+    {
+      "event_id": "e42-3990ecb6b139df7e",
+      "headline": "Circle's Arc went public on September 16",
+      "counts": {
+        "events": 1,
+        "publications": 1,
+        "channels": 1,
+        "known_authors": 0,
+        "unknown_authors": 1,
+        "found_origins": 0,
+        "reprints": 1,
+        "unknown_origin": 0
+      },
+      "actor": "Circle's Arc",
+      "action": "go public",
+      "object": "public mainnet",
+      "qualifiers": {
+        "event_date": "September 16"
+      },
+      "members": [
+        {
+          "obs_id": "telegram:15:423197#s1",
+          "publication_id": "telegram:15:423197",
+          "source_id": 15,
+          "author_id": null,
+          "published_at": "2026-09-17T12:30:13+00:00",
+          "url": "https://t.me/WEB3_AGGREGATOR/423197",
+          "quote": "Circle's Arc went public on September 16",
+          "span": [
+            44,
+            84
+          ],
+          "origin": "retelling"
+        }
+      ]
+    },
+    {
+      "event_id": "e43-c1676a8140da42ff",
+      "headline": "ARC открывает официальный стрим запуска из Нью-Йорка",
+      "counts": {
+        "events": 1,
+        "publications": 1,
+        "channels": 1,
+        "known_authors": 0,
+        "unknown_authors": 1,
+        "found_origins": 0,
+        "reprints": 1,
+        "unknown_origin": 0
+      },
+      "actor": "ARC",
+      "action": "open stream",
+      "object": "official launch stream",
+      "qualifiers": {
+        "place": "New York"
+      },
+      "members": [
+        {
+          "obs_id": "telegram:15:423206#s7",
+          "publication_id": "telegram:15:423206",
+          "source_id": 15,
+          "author_id": null,
+          "published_at": "2026-09-17T12:45:43+00:00",
+          "url": "https://t.me/WEB3_AGGREGATOR/423206",
+          "quote": "ARC открывает официальный стрим запуска из Нью-Йорка",
+          "span": [
+            416,
+            468
+          ],
+          "origin": "retelling"
+        }
+      ]
+    },
+    {
+      "event_id": "e44-3c833e3982a20e38",
+      "headline": "все немедленно начинают стаканить свои ARC-мемкойны",
+      "counts": {
+        "events": 1,
+        "publications": 1,
+        "channels": 1,
+        "known_authors": 0,
+        "unknown_authors": 1,
+        "found_origins": 0,
+        "reprints": 1,
+        "unknown_origin": 0
+      },
+      "actor": "everyone",
+      "action": "sell off",
+      "object": "ARC meme coins",
+      "qualifiers": {},
+      "members": [
+        {
+          "obs_id": "telegram:15:423206#s9",
+          "publication_id": "telegram:15:423206",
+          "source_id": 15,
+          "author_id": null,
+          "published_at": "2026-09-17T12:45:43+00:00",
+          "url": "https://t.me/WEB3_AGGREGATOR/423206",
+          "quote": "все немедленно начинают стаканить свои ARC-мемкойны",
+          "span": [
+            629,
+            680
+          ],
+          "origin": "retelling"
+        }
+      ]
+    },
+    {
+      "event_id": "e45-71403fc329aa2e81",
+      "headline": "ARC / Результаты первого дня 😶‍🌫️",
+      "counts": {
+        "events": 1,
+        "publications": 1,
+        "channels": 1,
+        "known_authors": 0,
+        "unknown_authors": 1,
+        "found_origins": 0,
+        "reprints": 0,
+        "unknown_origin": 1
+      },
+      "actor": null,
+      "action": "results first day",
+      "object": "ARC",
+      "qualifiers": {},
+      "members": [
+        {
+          "obs_id": "telegram:1:7143#s0",
+          "publication_id": "telegram:1:7143",
+          "source_id": 1,
+          "author_id": null,
+          "published_at": "2026-09-17T13:03:53+00:00",
+          "url": "https://t.me/whitelist1/7143",
+          "quote": "ARC / Результаты первого дня 😶‍🌫️",
+          "span": [
+            0,
+            33
+          ],
+          "origin": "unknown"
+        }
+      ]
+    },
+    {
+      "event_id": "e46-8908ac0e481a6ee3",
+      "headline": "ARC — путеводитель по новому блокчейну",
+      "counts": {
+        "events": 1,
+        "publications": 1,
+        "channels": 1,
+        "known_authors": 0,
+        "unknown_authors": 1,
+        "found_origins": 0,
+        "reprints": 0,
+        "unknown_origin": 1
+      },
+      "actor": null,
+      "action": "guide published",
+      "object": "ARC",
+      "qualifiers": {},
+      "members": [
+        {
+          "obs_id": "telegram:15:423219#s0",
+          "publication_id": "telegram:15:423219",
+          "source_id": 15,
+          "author_id": null,
+          "published_at": "2026-09-17T15:10:00+00:00",
+          "url": "https://t.me/WEB3_AGGREGATOR/423219",
+          "quote": "ARC — путеводитель по новому блокчейну",
+          "span": [
+            0,
+            38
+          ],
+          "origin": "unknown"
+        }
+      ]
+    },
+    {
+      "event_id": "e47-8512d43c5e51018a",
+      "headline": "Вчера запустился новый блокчейн под названием ARC, где уже появляются первые проекты, активности мемы и т.п.",
+      "counts": {
+        "events": 1,
+        "publications": 1,
+        "channels": 1,
+        "known_authors": 0,
+        "unknown_authors": 1,
+        "found_origins": 0,
+        "reprints": 0,
+        "unknown_origin": 1
+      },
+      "actor": null,
+      "action": "launched",
+      "object": "новый блокчейн ARC",
+      "qualifiers": {
+        "event_date": "вчера"
+      },
+      "members": [
+        {
+          "obs_id": "telegram:15:423219#s1",
+          "publication_id": "telegram:15:423219",
+          "source_id": 15,
+          "author_id": null,
+          "published_at": "2026-09-17T15:10:00+00:00",
+          "url": "https://t.me/WEB3_AGGREGATOR/423219",
+          "quote": "Вчера запустился новый блокчейн под названием ARC, где уже появляются первые проекты, активности мемы и т.п.",
+          "span": [
+            42,
+            150
+          ],
+          "origin": "unknown"
+        }
+      ]
+    },
+    {
+      "event_id": "e48-8f04af3be10dd5e7",
+      "headline": "Вчера Circle, эмитент стейблкоина USDC, запустила мейннет Arc — собственный блокчейн (L1) под платежи и токенизированные активы.",
+      "counts": {
+        "events": 1,
+        "publications": 1,
+        "channels": 1,
+        "known_authors": 0,
+        "unknown_authors": 1,
+        "found_origins": 0,
+        "reprints": 0,
+        "unknown_origin": 1
+      },
+      "actor": "Circle",
+      "action": "launched",
+      "object": "майннет Arc",
+      "qualifiers": {
+        "event_date": "вчера"
+      },
+      "members": [
+        {
+          "obs_id": "telegram:15:423227#s1",
+          "publication_id": "telegram:15:423227",
+          "source_id": 15,
+          "author_id": null,
+          "published_at": "2026-09-17T17:40:23+00:00",
+          "url": "https://t.me/WEB3_AGGREGATOR/423227",
+          "quote": "Вчера Circle, эмитент стейблкоина USDC, запустила мейннет Arc — собственный блокчейн (L1) под платежи и токенизированные активы.\nГлава компании Джереми Аллер назвал это запуском «более значимым, чем сам USDC». А через сутки главным продуктом сети оказались мем-щитки 🫣.",
+          "span": [
+            75,
+            344
+          ],
+          "origin": "unknown"
+        },
+        {
+          "obs_id": "telegram:15:423227#s12",
+          "publication_id": "telegram:15:423227",
+          "source_id": 15,
+          "author_id": null,
+          "published_at": "2026-09-17T17:40:23+00:00",
+          "url": "https://t.me/WEB3_AGGREGATOR/423227",
+          "quote": "Arc идёт тем же путём, только стартовал крупнее первого дня Robinhood в 720 раз.",
+          "span": [
+            2017,
+            2097
+          ],
+          "origin": "retelling"
+        }
+      ]
+    },
+    {
+      "event_id": "e49-675b636d5e15e03c",
+      "headline": "82% в мемах — не ошибка инфраструктуры, а обычная спекуляция ритейла на старте. Институционалы ведь ставили валидаторы явно не для того, чтобы гонять мемасы (hope so 😋): слой…",
+      "counts": {
+        "events": 1,
+        "publications": 1,
+        "channels": 1,
+        "known_authors": 0,
+        "unknown_authors": 1,
+        "found_origins": 0,
+        "reprints": 0,
+        "unknown_origin": 1
+      },
+      "actor": null,
+      "action": null,
+      "object": null,
+      "qualifiers": {},
+      "members": [
+        {
+          "obs_id": "telegram:15:423227#s14",
+          "publication_id": "telegram:15:423227",
+          "source_id": 15,
+          "author_id": null,
+          "published_at": "2026-09-17T17:40:23+00:00",
+          "url": "https://t.me/WEB3_AGGREGATOR/423227",
+          "quote": "82% в мемах — не ошибка инфраструктуры, а обычная спекуляция ритейла на старте. Институционалы ведь ставили валидаторы явно не для того, чтобы гонять мемасы (hope so 😋): слой банков BNY и HSBC, Aave и токенизированных активов живёт отдельно от казино.\nДа и часть «обвала» — не мошенничество. Пока мост в другие сети не открыли, USDC внутри Arc было мало, и он стоил дороже обычного — оттого и цены токенов держались завышенными. Открыли мост — USDC хлынул в сеть, наценка схлопнулась, а с ней просели и токены. Это отчасти возврат стейбла к норме.",
+          "span": [
+            2127,
+            2674
+          ],
+          "origin": "retelling"
+        }
+      ]
+    },
+    {
+      "event_id": "e50-9d3b16af13a3f5c8",
+      "headline": "🪙Circle сейчас держит два разных Arc в одном блоке: институциональный слой на $75 млн и мем-биржу на $336 млн.",
+      "counts": {
+        "events": 1,
+        "publications": 1,
+        "channels": 1,
+        "known_authors": 0,
+        "unknown_authors": 1,
+        "found_origins": 0,
+        "reprints": 0,
+        "unknown_origin": 1
+      },
+      "actor": "Circle",
+      "action": "holds",
+      "object": "two different Arc in one block",
+      "qualifiers": {},
+      "members": [
+        {
+          "obs_id": "telegram:15:423227#s16",
+          "publication_id": "telegram:15:423227",
+          "source_id": 15,
+          "author_id": null,
+          "published_at": "2026-09-17T17:40:23+00:00",
+          "url": "https://t.me/WEB3_AGGREGATOR/423227",
+          "quote": "🪙Circle сейчас держит два разных Arc в одном блоке: институциональный слой на $75 млн и мем-биржу на $336 млн.",
+          "span": [
+            2697,
+            2807
+          ],
+          "origin": "retelling"
+        }
+      ]
+    },
+    {
+      "event_id": "e51-79fafd51b8992714",
+      "headline": "Первый — тот, ради чего год уговаривали BlackRock и Visa; второй — тот, что ритейл сделал из сети за сутки, потому что институциям на интеграцию нужен год, а на запуск своего мема…",
+      "counts": {
+        "events": 1,
+        "publications": 1,
+        "channels": 1,
+        "known_authors": 0,
+        "unknown_authors": 1,
+        "found_origins": 0,
+        "reprints": 0,
+        "unknown_origin": 1
+      },
+      "actor": null,
+      "action": null,
+      "object": null,
+      "qualifiers": {},
+      "members": [
+        {
+          "obs_id": "telegram:15:423227#s17",
+          "publication_id": "telegram:15:423227",
+          "source_id": 15,
+          "author_id": null,
+          "published_at": "2026-09-17T17:40:23+00:00",
+          "url": "https://t.me/WEB3_AGGREGATOR/423227",
+          "quote": "Первый — тот, ради чего год уговаривали BlackRock и Visa; второй — тот, что ритейл сделал из сети за сутки, потому что институциям на интеграцию нужен год, а на запуск своего мема хватает минуты.\nКоторый из этих двух Arc доживёт до второго месяца — единственный правильный вопрос по итогам этого запуска.",
+          "span": [
+            2808,
+            3112
+          ],
+          "origin": "retelling"
+        }
+      ]
+    },
+    {
+      "event_id": "e52-47c4ef28758dec5b",
+      "headline": "Arc Introduces AI Coding Agent for Onchain App Development",
+      "counts": {
+        "events": 1,
+        "publications": 1,
+        "channels": 1,
+        "known_authors": 0,
+        "unknown_authors": 1,
+        "found_origins": 0,
+        "reprints": 1,
+        "unknown_origin": 0
+      },
+      "actor": "Arc",
+      "action": "introduces",
+      "object": "AI Coding Agent for Onchain App Development",
+      "qualifiers": {},
+      "members": [
+        {
+          "obs_id": "telegram:15:423244#s0",
+          "publication_id": "telegram:15:423244",
+          "source_id": 15,
+          "author_id": null,
+          "published_at": "2026-09-17T18:31:20+00:00",
+          "url": "https://t.me/WEB3_AGGREGATOR/423244",
+          "quote": "Arc Introduces AI Coding Agent for Onchain App Development",
+          "span": [
+            0,
+            58
+          ],
+          "origin": "retelling"
+        },
+        {
+          "obs_id": "telegram:15:423244#s1",
+          "publication_id": "telegram:15:423244",
+          "source_id": 15,
+          "author_id": null,
+          "published_at": "2026-09-17T18:31:20+00:00",
+          "url": "https://t.me/WEB3_AGGREGATOR/423244",
+          "quote": "Arc has introduced Arc Studio, an AI coding agent that turns natural-language prompts into full-stack onchain applications, including frontend interfaces, backend logic, and smart contracts.",
+          "span": [
+            60,
+            250
+          ],
+          "origin": "retelling"
+        }
+      ]
+    },
+    {
+      "event_id": "e53-0fea3d7cdaa532bf",
+      "headline": "Studio is built around Arc and Circle’s infrastructure, with integrations for CCTP, Gateway, Wallets, and other stablecoin tools. Generated apps can be tested across nine EVM…",
+      "counts": {
+        "events": 1,
+        "publications": 1,
+        "channels": 1,
+        "known_authors": 0,
+        "unknown_authors": 1,
+        "found_origins": 0,
+        "reprints": 1,
+        "unknown_origin": 0
+      },
+      "actor": "Studio",
+      "action": "is built around",
+      "object": "Arc and Circle’s infrastructure",
+      "qualifiers": {},
+      "members": [
+        {
+          "obs_id": "telegram:15:423244#s2",
+          "publication_id": "telegram:15:423244",
+          "source_id": 15,
+          "author_id": null,
+          "published_at": "2026-09-17T18:31:20+00:00",
+          "url": "https://t.me/WEB3_AGGREGATOR/423244",
+          "quote": "Studio is built around Arc and Circle’s infrastructure, with integrations for CCTP, Gateway, Wallets, and other stablecoin tools. Generated apps can be tested across nine EVM chains, including Arc, Ethereum, Base, Avalanche, Arbitrum, and Unichain, while the resulting code can be exported into developers’ own repositories.",
+          "span": [
+            252,
+            576
+          ],
+          "origin": "retelling"
+        }
+      ]
+    },
+    {
+      "event_id": "e54-1b1b8d85d0809f34",
+      "headline": "Wall Street kept walking in: S&P Global agreed to buy OpenZeppelin, the firm securing $37T in smart contracts, Deutsche Bank went live with institutional BTC/ETH custody, and…",
+      "counts": {
+        "events": 1,
+        "publications": 1,
+        "channels": 1,
+        "known_authors": 0,
+        "unknown_authors": 1,
+        "found_origins": 0,
+        "reprints": 1,
+        "unknown_origin": 0
+      },
+      "actor": "Circle's Arc L1",
+      "action": "hit mainnet",
+      "object": null,
+      "qualifiers": {},
+      "members": [
+        {
+          "obs_id": "telegram:15:423249#s1",
+          "publication_id": "telegram:15:423249",
+          "source_id": 15,
+          "author_id": null,
+          "published_at": "2026-09-17T20:54:12+00:00",
+          "url": "https://t.me/WEB3_AGGREGATOR/423249",
+          "quote": "Wall Street kept walking in: S&P Global agreed to buy OpenZeppelin, the firm securing $37T in smart contracts, Deutsche Bank went live with institutional BTC/ETH custody, and Circle's Arc L1 hit mainnet; while crypto's courtroom pile grew, from DOJ charges against two Robinhood engineers to Celsius's $495M suit against BitMEX.",
+          "span": [
+            49,
+            377
+          ],
+          "origin": "retelling"
+        },
+        {
+          "obs_id": "telegram:15:423249#s5",
+          "publication_id": "telegram:15:423249",
+          "source_id": 15,
+          "author_id": null,
+          "published_at": "2026-09-17T20:54:12+00:00",
+          "url": "https://t.me/WEB3_AGGREGATOR/423249",
+          "quote": "— Circle's Arc, its USDC-gas stablecoin L1, goes live on mainnet",
+          "span": [
+            511,
+            575
+          ],
+          "origin": "retelling"
+        }
+      ]
+    },
+    {
+      "event_id": "e55-d1cfe16486fc9379",
+      "headline": "🟢Arc сминтили токены ARC",
+      "counts": {
+        "events": 1,
+        "publications": 1,
+        "channels": 1,
+        "known_authors": 0,
+        "unknown_authors": 1,
+        "found_origins": 0,
+        "reprints": 1,
+        "unknown_origin": 0
+      },
+      "actor": "Arc",
+      "action": "minted",
+      "object": "ARC tokens",
+      "qualifiers": {},
+      "members": [
+        {
+          "obs_id": "telegram:15:423252#s1",
+          "publication_id": "telegram:15:423252",
+          "source_id": 15,
+          "author_id": null,
+          "published_at": "2026-09-17T20:54:53+00:00",
+          "url": "https://t.me/WEB3_AGGREGATOR/423252",
+          "quote": "🟢Arc сминтили токены ARC",
+          "span": [
+            23,
+            47
+          ],
+          "origin": "retelling"
+        }
+      ]
+    },
+    {
+      "event_id": "e56-54d455f671306106",
+      "headline": "За сентябрь 1inch добавили 4 новых сети:",
+      "counts": {
+        "events": 1,
+        "publications": 1,
+        "channels": 1,
+        "known_authors": 0,
+        "unknown_authors": 1,
+        "found_origins": 1,
+        "reprints": 0,
+        "unknown_origin": 0
+      },
+      "actor": "1inch",
+      "action": "added network",
+      "object": "Arc",
+      "qualifiers": {},
+      "members": [
+        {
+          "obs_id": "telegram:1:7153#s1",
+          "publication_id": "telegram:1:7153",
+          "source_id": 1,
+          "author_id": null,
+          "published_at": "2026-09-22T12:03:25+00:00",
+          "url": "https://t.me/whitelist1/7153",
+          "quote": "За сентябрь 1inch добавили 4 новых сети:\nArc, HyperEVM, Monad и Cronos.\n\n",
+          "span": [
+            45,
+            118
+          ],
+          "origin": "own"
+        }
+      ]
+    }
+  ],
+  "distribution_and_positions": [
+    {
+      "obs_id": "telegram:20:48822#s0",
+      "publication_id": "telegram:20:48822",
+      "kind": "author_position",
+      "text": "how to navigate the start of the bull/end of bear arc.",
+      "quote": "how to navigate the start of the bull/end of bear arc.",
+      "url": "https://t.me/PowsGemCalls/48822",
+      "origin": "own",
+      "source_role": "author"
+    },
+    {
+      "obs_id": "telegram:20:48823#s0",
+      "publication_id": "telegram:20:48823",
+      "kind": "author_position",
+      "text": "Final reflection post of what i learned about myself in this new arc",
+      "quote": "Final reflection post of what i learned about myself in this new arc",
+      "url": "https://t.me/PowsGemCalls/48823",
+      "origin": "own",
+      "source_role": "author"
+    },
+    {
+      "obs_id": "telegram:20:48913#s0",
+      "publication_id": "telegram:20:48913",
+      "kind": "author_position",
+      "text": "New arc as we transition to Q4 soon. Have a great weekend gents !",
+      "quote": "New arc as we transition to Q4 soon. Have a great weekend gents !",
+      "url": "https://t.me/PowsGemCalls/48913",
+      "origin": "own",
+      "source_role": "author"
+    },
+    {
+      "obs_id": "telegram:15:422871#s0",
+      "publication_id": "telegram:15:422871",
+      "kind": "author_position",
+      "text": "Потенциальные ставки на Arc",
+      "quote": "Потенциальные ставки на Arc",
+      "url": "https://t.me/WEB3_AGGREGATOR/422871",
+      "origin": "own",
+      "source_role": "editorial"
+    },
+    {
+      "obs_id": "telegram:19:18984#s1",
+      "publication_id": "telegram:19:18984",
+      "kind": "author_position",
+      "text": "she’s head of product at arc and circle",
+      "quote": "she’s head of product at arc and circle",
+      "url": "https://t.me/spidersjournal/18984",
+      "origin": "own",
+      "source_role": "author"
+    },
+    {
+      "obs_id": "telegram:15:423142#s1",
+      "publication_id": "telegram:15:423142",
+      "kind": "author_position",
+      "text": "😐 На самом деле сейчас несется че то очень интересное, потому что и на Robinhood и на Arc и на Zcash, стали выходить коллекции, причем не для виду, а реально с кучей иксов. ну вы сами знаете.",
+      "quote": "😐 На самом деле сейчас несется че то очень интересное, потому что и на Robinhood и на Arc и на Zcash, стали выходить коллекции, причем не для виду, а реально с кучей иксов. ну вы сами знаете.",
+      "url": "https://t.me/WEB3_AGGREGATOR/423142",
+      "origin": "own",
+      "source_role": "author"
+    },
+    {
+      "obs_id": "telegram:15:423150#s11",
+      "publication_id": "telegram:15:423150",
+      "kind": "author_position",
+      "text": "По поводу самого арка - Тут предыдущий список того, что есть на Arc, но там уже на всём сотни процентов плюса. Из того, что не подсвечивал, но тоже может быть интересно:",
+      "quote": "По поводу самого арка - Тут предыдущий список того, что есть на Arc, но там уже на всём сотни процентов плюса. Из того, что не подсвечивал, но тоже может быть интересно:",
+      "url": "https://t.me/WEB3_AGGREGATOR/423150",
+      "origin": "own",
+      "source_role": "author"
+    },
+    {
+      "obs_id": "telegram:15:423227#s3",
+      "publication_id": "telegram:15:423227",
+      "kind": "author_position",
+      "text": "Самое необычное у Arc — валидаторы.\nБлоки печатают не анонимы, а BlackRock, Visa, Mastercard, DTCC, Standard Chartered, Galaxy, ICE, MoneyGram и другие — 11 крупнейших имён традиционных финансов.",
+      "quote": "Самое необычное у Arc — валидаторы.\nБлоки печатают не анонимы, а BlackRock, Visa, Mastercard, DTCC, Standard Chartered, Galaxy, ICE, MoneyGram и другие — 11 крупнейших имён традиционных финансов.",
+      "url": "https://t.me/WEB3_AGGREGATOR/423227",
+      "origin": "unknown",
+      "source_role": "editorial"
+    }
+  ],
+  "discussion": [
+    {
+      "target": "other_subject",
+      "target_id": null,
+      "text": "По багз от анвалт кто-то понял механику распределения гарантов? Я примерно понял, что на каждую коллекцию партнёра будет определённое количество спотов, то бишь даже на стадии гаранта будет фкфс. Но так ли это на самом деле?",
+      "basis": "предмет реплики — сторонний сервис/коллекция экосистемы, не событие темы",
+      "url": "https://t.me/whitelist1/7130?comment=571146",
+      "quote": "По багз от анвалт кто-то понял механику распределения гарантов? Я примерно понял, что на каждую коллекцию партнёра будет определённое количество спотов, то бишь даже на стадии гара"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "Во сколько Arc запуск? Никто не знает",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/whitelist1/7138?comment=571572",
+      "quote": "Во сколько Arc запуск? Никто не знает"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "https://dexscreener.com/arc",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/whitelist1/7138?comment=571576",
+      "quote": "https://dexscreener.com/arc"
+    },
+    {
+      "target": "other_subject",
+      "target_id": null,
+      "text": "так пока хайповых коллекций и не вышло, не?",
+      "basis": "предмет реплики — сторонний сервис/коллекция экосистемы, не событие темы",
+      "url": "https://t.me/whitelist1/7139?comment=571605",
+      "quote": "так пока хайповых коллекций и не вышло, не?"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "arcadians уменьшили саплай и цену поменяли были",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/whitelist1/7139?comment=571615",
+      "quote": "arcadians уменьшили саплай и цену поменяли были"
+    },
+    {
+      "target": "other_subject",
+      "target_id": null,
+      "text": "скам значит",
+      "basis": "предмет реплики — сторонний сервис/коллекция экосистемы, не событие темы",
+      "url": "https://t.me/whitelist1/7139?comment=571617",
+      "quote": "скам значит"
+    },
+    {
+      "target": "other_subject",
+      "target_id": null,
+      "text": "у арклингс сайт вообще лежит)",
+      "basis": "предмет реплики — сторонний сервис/коллекция экосистемы, не событие темы",
+      "url": "https://t.me/whitelist1/7139?comment=571620",
+      "quote": "у арклингс сайт вообще лежит)"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "https://opensea.io/collection/onchainsharc-791982284",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/whitelist1/7139?comment=571626",
+      "quote": "https://opensea.io/collection/onchainsharc-791982284"
+    },
+    {
+      "target": "other_subject",
+      "target_id": null,
+      "text": "А я чет отвлекся и забы(и) л из-за их сайта глючного",
+      "basis": "предмет реплики — сторонний сервис/коллекция экосистемы, не событие темы",
+      "url": "https://t.me/whitelist1/7139?comment=571649",
+      "quote": "А я чет отвлекся и забы(и) л из-за их сайта глючного"
+    },
+    {
+      "target": "other_subject",
+      "target_id": null,
+      "text": "АКА отлично покормили, а вот Arclings походу заскамили на 12 баксов",
+      "basis": "предмет реплики — сторонний сервис/коллекция экосистемы, не событие темы",
+      "url": "https://t.me/whitelist1/7143?comment=571726",
+      "quote": "АКА отлично покормили, а вот Arclings походу заскамили на 12 баксов"
+    },
+    {
+      "target": "project",
+      "target_id": null,
+      "text": "💹 #NEAR +107% с начала сентября. \n\n➟ В NEAR сделали фьючерсы на базе Hyperliquid приватными по умолчанию.\n\n➟ После роста объема активов в приватной инфраструктуре NEAR выше $70m – проект сделал снепшот для раздачи 333,333 наградных токенов.",
+      "basis": "вопрос или оценка по проекту в целом, не по конкретной новости",
+      "url": "https://t.me/rawa_imagination/21118?comment=343272",
+      "quote": "💹 #NEAR +107% с начала сентября. \n\n➟ В NEAR сделали фьючерсы на базе Hyperliquid приватными по умолчанию.\n\n➟ После роста объема активов в приватной инфраструктуре NEAR выше $70m – "
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "Может я не до конца понимаю, но по мне, так как раз наоборот - достаточно узкоспециализированное применение у него. Потому что он рассчитывает вероятности вариантов, и на их основе выбирает наилучший. Этакий \"диспетчер\". Поэтому он хорош в ",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/icodrops_sergey/2427?comment=150626",
+      "quote": "Может я не до конца понимаю, но по мне, так как раз наоборот - достаточно узкоспециализированное применение у него. Потому что он рассчитывает вероятности вариантов, и на их основе"
+    }
+  ],
+  "changes": {
+    "previous_window": "2026-08-25..2026-09-08",
+    "events_appeared": [
+      "1inch|added network|Arc|За сентябрь 1inch добавили 4 новых сети:",
+      "AKA DN404|first collection on Arc|Arc|🟣AKA DN404 — первая коллекция на Arc: NFT + ERC-20 в одном активе, а комиссии идут в RWA",
+      "ARC FLY|registration|FCFS WL|ARC FLY - FCFS WL рега 😮",
+      "ARC|launch|official launch|Я вам просто напоминаю, что в 18 по Москве официально ARC запускают и вы уже сейчас можете абсолютно бесплатно создавать свои мемы на https://arc.openfair.app/",
+      "ARC|launch|public mainnet|Завтра ARC паблик майнет",
+      "ARC|open stream|official launch stream|ARC открывает официальный стрим запуска из Нью-Йорка",
+      "Arc Fly|mint today on OpenSea|Arc|🟣Arc Fly — минт состоится сегодня на OpenSea, будет фри минт на 7.777 NFT",
+      "Arclings|first fully on-chain 1-bit collection on Arc|Arc|🟣Arclings — первая полностью ончейн 1-bit коллекция на Arc",
+      "Arc|arrives||Arc arrives as a full-stack financial platform rather than a bare chain, shipping assets, applications, interoperability, and Circle platform services from day one.",
+      "Arc|begins officially|public launch|Granted, yes there were people early new Arc 1-2 months before, today it begins \"officially\" via public (few hours basically only)",
+      "Arc|close_to_launch|Mainnet|Arc Mainnet уже близко, поэтому собрали все инфраструктурные проекты, которые стоит добавить в watchlist.",
+      "Arc|introduces|AI Coding Agent for Onchain App Development|Arc Introduces AI Coding Agent for Onchain App Development",
+      "Arc|launch|Arc Citizens|• Arc Citizens: 10,000 fully on-chain identity PFP, запуск планируется 16 сентября;",
+      "Arc|launch|Arc Punks|• Arc Punks: 10,000 punks, запуск 16 сентября, ориентир 0.5 USDC;",
+      "Arc|minted 10 billion tokens in Mainnet|$ARC|🔴Arc сминтили 10 млрд токенов $ARC в Mainnet. Сама же команда пишет, что это техническая необходимость, а не подготовка к дропу. При этом, в X сами байтят холдеров Architect ролей.",
+      "Arc|minted|ARC tokens|🟢Arc сминтили токены ARC",
+      "Arc|reach|168,000 wallets|Arc Hits 168,000 Wallets in First 24 Hours",
+      "Arc|Запуск|основной сети|👍 #AERO Запуск основной сети Arc",
+      "Arc|анонсировали|майннет|Arc - вчера добавили пачку бейджей архитектора, кто набрал более 500+ поинтов, так что гляньте + к этому майннет анонсировали на 16 число, выбиваем waitlist на коллекции которые…",
+      "Arc|запустит|майннет|Arc запустит майннет 16 сентября",
+      "Circle's Arc L1|hit mainnet||Wall Street kept walking in: S&P Global agreed to buy OpenZeppelin, the firm securing $37T in smart contracts, Deutsche Bank went live with institutional BTC/ETH custody, and…",
+      "Circle's Arc|go public|public mainnet|Circle's Arc went public on September 16",
+      "Circle|hold presale|ARC token|В мае прошел закрытый пресейл токена ARC, где собрали $222 млн по оценке $3 млрд.",
+      "Circle|holds|two different Arc in one block|🪙Circle сейчас держит два разных Arc в одном блоке: институциональный слой на $75 млн и мем-биржу на $336 млн.",
+      "Circle|launched|майннет Arc|Вчера Circle, эмитент стейблкоина USDC, запустила мейннет Arc — собственный блокчейн (L1) под платежи и токенизированные активы.",
+      "Circle|launches|Arc mainnet|CIRCLE LAUNCHES ARC MAINNET WITH BLACKROCK AND VISA AMONG VALIDATORS, MINTS 10 BILLION ARC TOKENS ...",
+      "Circle|launch|Arc|16 сентября Circle запускает Arc, собственный L1.",
+      "Circle|plans to launch|blockchain Arc|✴️🇺🇸#CRCL Circle планирует запустить свой блокчейна Arc",
+      "Circle|will present|official presentation of Arc launch|Официальная презентация запуска Arc начнется сегодня в 18:30 мск.",
+      "Extended|announced transition to Arc|Arc|👍Extended запустили RWA Trading Competition на $50 тыс. Набиваем PNL, объем, OI и поднимаемся в лидерборде. В награды войдут топ 100 трейдеров, турнир продлится до 29 сентября.…",
+      "Fomo App|интегрирует|ARC|Fomo App интегрирует ARC в первые дни лаунча сети, соответственно движ гарантирован.",
+      "Fomo и Opensea|обещали поддерживать|Arc|Также, Fomo о котором рассказывал ранее, вместе с Opensea, обещали поддерживать Arc с первого дня майнета, мемчикам и нфт быть! 🙏",
+      "Mainnet|goes live|Arc|Arc Launchpad Ecosytem. Mainnet Goes Live Sep 16",
+      "OpenVPP|запустит|GridProof в основной сети Arc|👍 #OVPP OpenVPP запустит GridProof в основной сети Arc",
+      "RIZE|выпустит|T-RIZE в основной сети Arc|👍 #RIZE RIZE выпустит T-RIZE в основной сети Arc",
+      "Studio|is built around|Arc and Circle’s infrastructure|Studio is built around Arc and Circle’s infrastructure, with integrations for CCTP, Gateway, Wallets, and other stablecoin tools. Generated apps can be tested across nine EVM…",
+      "TokenPocket|интегрируется с|основной сетью Arc|🤝 #TPT TokenPocket Token интегрируется с основной сетью Arc",
+      "Unipcs (Bonk guy)|обратил внимание|аудитории на ARC цепочку|Несколько часов назад Unipcs (Bonk guy) , нашумевший #1 трейдер на fomo app обратил внимание аудитории на ARC цепочку.",
+      "Zack|announced support already launched|Arc|Arc — community → Zack: поддержка уже запущена.",
+      "everyone|sell off|ARC meme coins|все немедленно начинают стаканить свои ARC-мемкойны",
+      "|anticipate|Arc mainnet|До Arc mainnet остались считаные дни",
+      "|bridge|any asset to USDC in Arc network|🔘Бриджим любой актив в USDC в сеть Arc",
+      "|clarify|ARC token|USDC это деньги и газ, а ARC это актив сети, не акция Circle и не доля в резервах.",
+      "|description|Arc|Arc — L1-сеть от Circle для платежей, стейблкоинов и финансовых приложений. В экосистеме уже есть Uniswap, Aave, Morpho, Aerodrome и другие крупные проекты.",
+      "|discuss|Arc|01:51:53 Про Arc",
+      "|farm|early activity in mainnet|📟Arc | фармим раннюю активность в mainnet",
+      "|guide published|ARC|ARC — путеводитель по новому блокчейну",
+      "|launched|Arc|Arc запущен",
+      "|launched|новый блокчейн ARC|Вчера запустился новый блокчейн под названием ARC, где уже появляются первые проекты, активности мемы и т.п.",
+      "|reach|50 collections|50 коллекций на Arc",
+      "|results first day|ARC|ARC / Результаты первого дня 😶‍🌫️",
+      "|tracking live|Arc Chain Coin|🔹 Arc Chain Coin Tracking Is Live",
+      "|went to mainnet|Arc|🟢Arc вышли в майннет",
+      "|||82% в мемах — не ошибка инфраструктуры, а обычная спекуляция ритейла на старте. Институционалы ведь ставили валидаторы явно не для того, чтобы гонять мемасы (hope so 😋): слой…",
+      "|||Первый — тот, ради чего год уговаривали BlackRock и Visa; второй — тот, что ритейл сделал из сети за сутки, потому что институциям на интеграцию нужен год, а на запуск своего мема…",
+      "|запуск|основной сети Arc|👍 Запуск основной сети Arc"
+    ],
+    "events_gone": [],
+    "discussion_comments": 1689,
+    "previous_comments": 0,
+    "source_coverage": {
+      "added_channels": [
+        "@CryptoEarnImp",
+        "@Defiscamcheck",
+        "@PowsGemCalls",
+        "@Slavik_investor_updates",
+        "@WEB3_AGGREGATOR",
+        "@badfriend_loops",
+        "@crypto_hd",
+        "@cryptoattack24",
+        "@cryptonftded",
+        "@don_invest",
+        "@icodrops_sergey",
+        "@icryptocom",
+        "@krasnovcrypto",
+        "@marketfeed",
+        "@markettwits",
+        "@moni_talks",
+        "@rawa_imagination",
+        "@slavik_investor",
+        "@spidersjournal",
+        "@whitelist1"
+      ],
+      "removed_channels": [],
+      "current_channels": 20,
+      "previous_channels": 0
+    }
+  },
+  "short_observations": [
+    "16 сентября Circle запускает Arc, собственный L1.",
+    "Arc запущен",
+    "Granted, yes there were people early new Arc 1-2 months before, today it begins \"officially\" via public (few hours basically only)",
+    "🤝 #TPT TokenPocket Token интегрируется с основной сетью Arc",
+    "✴️🇺🇸#CRCL Circle планирует запустить свой блокчейна Arc"
+  ],
+  "coverage": {
+    "publications": 13985,
+    "comments": 1689,
+    "channels": 20,
+    "topic_publications": 53,
+    "not_processed": 0,
+    "db_md5": "8618099125a806df376354286ccd982e",
+    "cutoff": "2026-09-24T00:00:00+00:00"
+  },
+  "limitations": [
+    "Режим publication_replay: discovered_at в снимке отсутствует, «впервые системой» не заявляется.",
+    "Роль источника unknown: в базе нет редакционного реестра.",
+    "Неизвестные авторы не объединяются.",
+    "Отсечено после cutoff 2026-09-24T00:00:00+00:00: 0."
+  ],
+  "evidence": [
+    {
+      "id": "telegram:15:422750#s2",
+      "url": "https://t.me/WEB3_AGGREGATOR/422750",
+      "quote": "01:51:53 Про Arc",
+      "span": [
+        463,
+        479
+      ],
+      "publication_id": "telegram:15:422750"
+    },
+    {
+      "id": "telegram:15:422826#s0",
+      "url": "https://t.me/WEB3_AGGREGATOR/422826",
+      "quote": "50 коллекций на Arc",
+      "span": [
+        0,
+        19
+      ],
+      "publication_id": "telegram:15:422826"
+    },
+    {
+      "id": "telegram:15:422853#s1",
+      "url": "https://t.me/WEB3_AGGREGATOR/422853",
+      "quote": "16 сентября Circle запускает Arc, собственный L1.",
+      "span": [
+        30,
+        79
+      ],
+      "publication_id": "telegram:15:422853"
+    },
+    {
+      "id": "telegram:3:6918#s3",
+      "url": "https://t.me/Slavik_investor_updates/6918",
+      "quote": "Circle 16 сентября запускает Arc - собственный L1 под стейблкоин-финансы. USDC перестаёт быть просто токеном внутри чужих сетей и становится основой своей экосистемы.",
+      "span": [
+        202,
+        368
+      ],
+      "publication_id": "telegram:3:6918"
+    },
+    {
+      "id": "telegram:16:10991#s2",
+      "url": "https://t.me/CryptoEarnImp/10991",
+      "quote": "Сегодня (спасибо за поправку @intelligent_ua) кстати мейннет Arc, можно будет бриджить через Jumper.",
+      "span": [
+        86,
+        186
+      ],
+      "publication_id": "telegram:16:10991"
+    },
+    {
+      "id": "telegram:15:423093#s2",
+      "url": "https://t.me/WEB3_AGGREGATOR/423093",
+      "quote": "Сегодня (спасибо за поправку @intelligent_ua) кстати мейннет Arc, можно будет бриджить через Jumper.",
+      "span": [
+        86,
+        186
+      ],
+      "publication_id": "telegram:15:423093"
+    },
+    {
+      "id": "telegram:15:423100#s1",
+      "url": "https://t.me/WEB3_AGGREGATOR/423100",
+      "quote": "Arc, the stablecoin-native Layer-1 built by Circle, launched its public mainnet, positioning itself as an \"Economic OS for the internet\" with USDC as the native gas token and deterministic sub-second finality.",
+      "span": [
+        49,
+        258
+      ],
+      "publication_id": "telegram:15:423100"
+    },
+    {
+      "id": "telegram:15:423143#s5",
+      "url": "https://t.me/WEB3_AGGREGATOR/423143",
+      "quote": "🪙 Circle запустила мейннет Arc — сеть уже принимает транзакции, а за первые два часа в неё завели более $370 млн USDC.",
+      "span": [
+        576,
+        694
+      ],
+      "publication_id": "telegram:15:423143"
+    },
+    {
+      "id": "telegram:15:422853#s7",
+      "url": "https://t.me/WEB3_AGGREGATOR/422853",
+      "quote": "В мае прошел закрытый пресейл токена ARC, где собрали $222 млн по оценке $3 млрд.",
+      "span": [
+        1708,
+        1789
+      ],
+      "publication_id": "telegram:15:422853"
+    },
+    {
+      "id": "telegram:15:422853#s8",
+      "url": "https://t.me/WEB3_AGGREGATOR/422853",
+      "quote": "USDC это деньги и газ, а ARC это актив сети, не акция Circle и не доля в резервах.",
+      "span": [
+        1993,
+        2075
+      ],
+      "publication_id": "telegram:15:422853"
+    },
+    {
+      "id": "telegram:15:422864#s0",
+      "url": "https://t.me/WEB3_AGGREGATOR/422864",
+      "quote": "До Arc mainnet остались считаные дни",
+      "span": [
+        2,
+        38
+      ],
+      "publication_id": "telegram:15:422864"
+    },
+    {
+      "id": "telegram:15:422864#s2",
+      "url": "https://t.me/WEB3_AGGREGATOR/422864",
+      "quote": "О Arc я рассказывал ранее, так как майнет меньше чем через неделю, самое время освежить транзы и активность, что бы претендовать на дроп",
+      "span": [
+        48,
+        184
+      ],
+      "publication_id": "telegram:15:422864"
+    },
+    {
+      "id": "telegram:15:422864#s16",
+      "url": "https://t.me/WEB3_AGGREGATOR/422864",
+      "quote": "Также, Fomo о котором рассказывал ранее, вместе с Opensea, обещали поддерживать Arc с первого дня майнета, мемчикам и нфт быть! 🙏",
+      "span": [
+        829,
+        958
+      ],
+      "publication_id": "telegram:15:422864"
+    },
+    {
+      "id": "telegram:11:96700#s18",
+      "url": "https://t.me/cryptoattack24/96700",
+      "quote": "👍 Запуск основной сети Arc",
+      "span": [
+        916,
+        942
+      ],
+      "publication_id": "telegram:11:96700"
+    },
+    {
+      "id": "telegram:11:96700#s19",
+      "url": "https://t.me/cryptoattack24/96700",
+      "quote": "👍 #OVPP OpenVPP запустит GridProof в основной сети Arc",
+      "span": [
+        943,
+        997
+      ],
+      "publication_id": "telegram:11:96700"
+    },
+    {
+      "id": "telegram:15:422881#s19",
+      "url": "https://t.me/WEB3_AGGREGATOR/422881",
+      "quote": "👍 #OVPP OpenVPP запустит GridProof в основной сети Arc",
+      "span": [
+        949,
+        1003
+      ],
+      "publication_id": "telegram:15:422881"
+    },
+    {
+      "id": "telegram:11:96700#s20",
+      "url": "https://t.me/cryptoattack24/96700",
+      "quote": "👍 #RIZE RIZE выпустит T-RIZE в основной сети Arc",
+      "span": [
+        998,
+        1046
+      ],
+      "publication_id": "telegram:11:96700"
+    },
+    {
+      "id": "telegram:15:422881#s20",
+      "url": "https://t.me/WEB3_AGGREGATOR/422881",
+      "quote": "👍 #RIZE RIZE выпустит T-RIZE в основной сети Arc",
+      "span": [
+        1004,
+        1052
+      ],
+      "publication_id": "telegram:15:422881"
+    },
+    {
+      "id": "telegram:11:96700#s21",
+      "url": "https://t.me/cryptoattack24/96700",
+      "quote": "🤝 #TPT TokenPocket Token интегрируется с основной сетью Arc",
+      "span": [
+        1047,
+        1106
+      ],
+      "publication_id": "telegram:11:96700"
+    },
+    {
+      "id": "telegram:15:422881#s21",
+      "url": "https://t.me/WEB3_AGGREGATOR/422881",
+      "quote": "🤝 #TPT TokenPocket Token интегрируется с основной сетью Arc",
+      "span": [
+        1053,
+        1112
+      ],
+      "publication_id": "telegram:15:422881"
+    },
+    {
+      "id": "telegram:15:423064#s22",
+      "url": "https://t.me/WEB3_AGGREGATOR/423064",
+      "quote": "🤝 #TPT TokenPocket Token интегрируется с основной сетью Arc",
+      "span": [
+        1165,
+        1224
+      ],
+      "publication_id": "telegram:15:423064"
+    },
+    {
+      "id": "telegram:15:422875#s5",
+      "url": "https://t.me/WEB3_AGGREGATOR/422875",
+      "quote": "Arc запустит майннет 16 сентября",
+      "span": [
+        426,
+        458
+      ],
+      "publication_id": "telegram:15:422875"
+    },
+    {
+      "id": "telegram:15:422875#s6",
+      "url": "https://t.me/WEB3_AGGREGATOR/422875",
+      "quote": "Arc - L1-сеть от Circle с $222M инвестиций ориентированная на USDC, запустит майннет 16 сентября.",
+      "span": [
+        462,
+        559
+      ],
+      "publication_id": "telegram:15:422875"
+    },
+    {
+      "id": "telegram:15:422890#s0",
+      "url": "https://t.me/WEB3_AGGREGATOR/422890",
+      "quote": "Arc запустит майннет 16 сентября",
+      "span": [
+        0,
+        32
+      ],
+      "publication_id": "telegram:15:422890"
+    },
+    {
+      "id": "telegram:15:422890#s1",
+      "url": "https://t.me/WEB3_AGGREGATOR/422890",
+      "quote": "Arc - L1-сеть от Circle с $222M инвестиций ориентированная на USDC, запустит майннет 16 сентября.",
+      "span": [
+        34,
+        131
+      ],
+      "publication_id": "telegram:15:422890"
+    },
+    {
+      "id": "telegram:15:422903#s0",
+      "url": "https://t.me/WEB3_AGGREGATOR/422903",
+      "quote": "ARC: токены которые я взял и почему - подготовка к паблик мейннету 16 сентября",
+      "span": [
+        0,
+        78
+      ],
+      "publication_id": "telegram:15:422903"
+    },
+    {
+      "id": "telegram:15:422881#s18",
+      "url": "https://t.me/WEB3_AGGREGATOR/422881",
+      "quote": "👍 #AERO Запуск основной сети Arc",
+      "span": [
+        916,
+        948
+      ],
+      "publication_id": "telegram:15:422881"
+    },
+    {
+      "id": "telegram:15:422895#s2",
+      "url": "https://t.me/WEB3_AGGREGATOR/422895",
+      "quote": "Arc - вчера добавили пачку бейджей архитектора, кто набрал более 500+ поинтов, так что гляньте + к этому майннет анонсировали на 16 число, выбиваем waitlist на коллекции которые пушат в X, и проекты с тестнетом протыкать что видите.",
+      "span": [
+        317,
+        549
+      ],
+      "publication_id": "telegram:15:422895"
+    },
+    {
+      "id": "telegram:15:422908#s1",
+      "url": "https://t.me/WEB3_AGGREGATOR/422908",
+      "quote": "Несколько часов назад Unipcs (Bonk guy) , нашумевший #1 трейдер на fomo app обратил внимание аудитории на ARC цепочку.",
+      "span": [
+        5,
+        123
+      ],
+      "publication_id": "telegram:15:422908"
+    },
+    {
+      "id": "telegram:15:422908#s6",
+      "url": "https://t.me/WEB3_AGGREGATOR/422908",
+      "quote": "Fomo App интегрирует ARC в первые дни лаунча сети, соответственно движ гарантирован.",
+      "span": [
+        611,
+        695
+      ],
+      "publication_id": "telegram:15:422908"
+    },
+    {
+      "id": "telegram:15:422923#s0",
+      "url": "https://t.me/WEB3_AGGREGATOR/422923",
+      "quote": "Arc Launchpad Ecosytem. Mainnet Goes Live Sep 16",
+      "span": [
+        0,
+        48
+      ],
+      "publication_id": "telegram:15:422923"
+    },
+    {
+      "id": "telegram:1:7135#s1",
+      "url": "https://t.me/whitelist1/7135",
+      "quote": "Arc Mainnet уже близко, поэтому собрали все инфраструктурные проекты, которые стоит добавить в watchlist.",
+      "span": [
+        38,
+        143
+      ],
+      "publication_id": "telegram:1:7135"
+    },
+    {
+      "id": "telegram:15:423117#s1",
+      "url": "https://t.me/WEB3_AGGREGATOR/423117",
+      "quote": "Основная сеть Arc запустилась. Arc и OpenSea запустили бесплатный минт NFT:",
+      "span": [
+        44,
+        119
+      ],
+      "publication_id": "telegram:15:423117"
+    },
+    {
+      "id": "telegram:1:7135#s37",
+      "url": "https://t.me/whitelist1/7135",
+      "quote": "• Arc Citizens: 10,000 fully on-chain identity PFP, запуск планируется 16 сентября;",
+      "span": [
+        1828,
+        1911
+      ],
+      "publication_id": "telegram:1:7135"
+    },
+    {
+      "id": "telegram:1:7135#s38",
+      "url": "https://t.me/whitelist1/7135",
+      "quote": "• Arc Punks: 10,000 punks, запуск 16 сентября, ориентир 0.5 USDC;",
+      "span": [
+        1913,
+        1978
+      ],
+      "publication_id": "telegram:1:7135"
+    },
+    {
+      "id": "telegram:15:422986#s0",
+      "url": "https://t.me/WEB3_AGGREGATOR/422986",
+      "quote": "ARC FLY - FCFS WL рега 😮",
+      "span": [
+        0,
+        24
+      ],
+      "publication_id": "telegram:15:422986"
+    },
+    {
+      "id": "telegram:15:423067#s0",
+      "url": "https://t.me/WEB3_AGGREGATOR/423067",
+      "quote": "Завтра ARC паблик майнет",
+      "span": [
+        0,
+        24
+      ],
+      "publication_id": "telegram:15:423067"
+    },
+    {
+      "id": "telegram:13:3754#s1",
+      "url": "https://t.me/krasnovcrypto/3754",
+      "quote": "Arc запустил публичный mainnet и уже сейчас мы можем делать быстрые активности.",
+      "span": [
+        43,
+        122
+      ],
+      "publication_id": "telegram:13:3754"
+    },
+    {
+      "id": "telegram:10:384943#s14",
+      "url": "https://t.me/markettwits/384943",
+      "quote": "✴️🇺🇸#CRCL Circle планирует запустить свой блокчейна Arc",
+      "span": [
+        800,
+        855
+      ],
+      "publication_id": "telegram:10:384943"
+    },
+    {
+      "id": "telegram:18:31448#s1",
+      "url": "https://t.me/crypto_hd/31448",
+      "quote": "⚡ Компания Circle технически запустила майннет блокчейна Arc.",
+      "span": [
+        6,
+        67
+      ],
+      "publication_id": "telegram:18:31448"
+    },
+    {
+      "id": "telegram:10:385037#s1",
+      "url": "https://t.me/markettwits/385037",
+      "quote": "Circle запустила свой блокчейна Arc",
+      "span": [
+        20,
+        55
+      ],
+      "publication_id": "telegram:10:385037"
+    },
+    {
+      "id": "telegram:20:48975#s0",
+      "url": "https://t.me/PowsGemCalls/48975",
+      "quote": "Granted, yes there were people early new Arc 1-2 months before, today it begins \"officially\" via public (few hours basically only)",
+      "span": [
+        0,
+        130
+      ],
+      "publication_id": "telegram:20:48975"
+    },
+    {
+      "id": "telegram:1:7138#s4",
+      "url": "https://t.me/whitelist1/7138",
+      "quote": "👍Напомним, что Arc выходит в Mainnet уже сегодня, а вместе с ним и многие NFT коллекции, сверяемся с постом.",
+      "span": [
+        470,
+        578
+      ],
+      "publication_id": "telegram:1:7138"
+    },
+    {
+      "id": "telegram:15:423100#s0",
+      "url": "https://t.me/WEB3_AGGREGATOR/423100",
+      "quote": "Circle's Arc Stablecoin L1 Goes Live on Mainnet",
+      "span": [
+        0,
+        47
+      ],
+      "publication_id": "telegram:15:423100"
+    },
+    {
+      "id": "telegram:15:423153#s0",
+      "url": "https://t.me/WEB3_AGGREGATOR/423153",
+      "quote": "Первый день мэйннета ARC",
+      "span": [
+        2,
+        26
+      ],
+      "publication_id": "telegram:15:423153"
+    },
+    {
+      "id": "telegram:18:31448#s5",
+      "url": "https://t.me/crypto_hd/31448",
+      "quote": "Официальная презентация запуска Arc начнется сегодня в 18:30 мск.",
+      "span": [
+        398,
+        463
+      ],
+      "publication_id": "telegram:18:31448"
+    },
+    {
+      "id": "telegram:15:423286#s8",
+      "url": "https://t.me/WEB3_AGGREGATOR/423286",
+      "quote": "🟢 16 сентября Circle запустила мейннет: среди валидаторов BlackRock и Visa, отчеканено 10 млрд ARC, за первые два часа в сеть вошло больше $370 млн USDC. Звучит громко, но это около 0,05% всего USDC, ликвидность тонкая, спреды заметные, половина приложений сырая.\n",
+      "span": [
+        1516,
+        1780
+      ],
+      "publication_id": "telegram:15:423286"
+    },
+    {
+      "id": "telegram:9:1039167#s0",
+      "url": "https://t.me/marketfeed/1039167",
+      "quote": "CIRCLE LAUNCHES ARC MAINNET WITH BLACKROCK AND VISA AMONG VALIDATORS, MINTS 10 BILLION ARC TOKENS ...",
+      "span": [
+        0,
+        101
+      ],
+      "publication_id": "telegram:9:1039167"
+    },
+    {
+      "id": "telegram:9:1039182#s25",
+      "url": "https://t.me/marketfeed/1039182",
+      "quote": "Circle launched Arc mainnet with BlackRock and Visa among validators; Zcash holders backed faster transactions and halving-style design",
+      "span": [
+        2205,
+        2340
+      ],
+      "publication_id": "telegram:9:1039182"
+    },
+    {
+      "id": "telegram:15:423105#s1",
+      "url": "https://t.me/WEB3_AGGREGATOR/423105",
+      "quote": "Сегодня, 16 сентября, Circle запустила мейннет Arc и сразу подключила его к Agent Stack, набору инструментов, который с 11 мая дает ИИ-агенту собственный кошелек.",
+      "span": [
+        25,
+        187
+      ],
+      "publication_id": "telegram:15:423105"
+    },
+    {
+      "id": "telegram:15:423100#s2",
+      "url": "https://t.me/WEB3_AGGREGATOR/423100",
+      "quote": "Arc arrives as a full-stack financial platform rather than a bare chain, shipping assets, applications, interoperability, and Circle platform services from day one.",
+      "span": [
+        260,
+        424
+      ],
+      "publication_id": "telegram:15:423100"
+    },
+    {
+      "id": "telegram:15:423100#s3",
+      "url": "https://t.me/WEB3_AGGREGATOR/423100",
+      "quote": "More than 190 institutional and ecosystem teams are already building on Arc, one of the most institutionally backed genesis cohorts the industry has seen, as Circle pushes stablecoins deeper into regulated finance.",
+      "span": [
+        767,
+        981
+      ],
+      "publication_id": "telegram:15:423100"
+    },
+    {
+      "id": "telegram:13:3754#s0",
+      "url": "https://t.me/krasnovcrypto/3754",
+      "quote": "📟Arc | фармим раннюю активность в mainnet",
+      "span": [
+        0,
+        41
+      ],
+      "publication_id": "telegram:13:3754"
+    },
+    {
+      "id": "telegram:13:3754#s2",
+      "url": "https://t.me/krasnovcrypto/3754",
+      "quote": "Arc — L1-сеть от Circle для платежей, стейблкоинов и финансовых приложений. В экосистеме уже есть Uniswap, Aave, Morpho, Aerodrome и другие крупные проекты.",
+      "span": [
+        124,
+        280
+      ],
+      "publication_id": "telegram:13:3754"
+    },
+    {
+      "id": "telegram:13:3754#s6",
+      "url": "https://t.me/krasnovcrypto/3754",
+      "quote": "🔘Бриджим любой актив в USDC в сеть Arc",
+      "span": [
+        401,
+        439
+      ],
+      "publication_id": "telegram:13:3754"
+    },
+    {
+      "id": "telegram:15:423121#s0",
+      "url": "https://t.me/WEB3_AGGREGATOR/423121",
+      "quote": "Я вам просто напоминаю, что в 18 по Москве официально ARC запускают и вы уже сейчас можете абсолютно бесплатно создавать свои мемы на https://arc.openfair.app/",
+      "span": [
+        0,
+        159
+      ],
+      "publication_id": "telegram:15:423121"
+    },
+    {
+      "id": "telegram:15:423128#s0",
+      "url": "https://t.me/WEB3_AGGREGATOR/423128",
+      "quote": "🔹 Arc Chain Coin Tracking Is Live",
+      "span": [
+        0,
+        33
+      ],
+      "publication_id": "telegram:15:423128"
+    },
+    {
+      "id": "telegram:15:423150#s0",
+      "url": "https://t.me/WEB3_AGGREGATOR/423150",
+      "quote": "Arc запущен",
+      "span": [
+        0,
+        11
+      ],
+      "publication_id": "telegram:15:423150"
+    },
+    {
+      "id": "telegram:18:31472#s2",
+      "url": "https://t.me/crypto_hd/31472",
+      "quote": "▫️Запуск майннета Arc (читать)",
+      "span": [
+        71,
+        101
+      ],
+      "publication_id": "telegram:18:31472"
+    },
+    {
+      "id": "telegram:19:19007#s1",
+      "url": "https://t.me/spidersjournal/19007",
+      "quote": "• Early on Arc — A chance to launch from day one in a new ecosystem built around stablecoins and global finance. Arc is built by Circle, with founding validators including BlackRock, Visa, Mastercard, DTCC, ICE (owner of the NYSE), Galaxy and more.",
+      "span": [
+        39,
+        287
+      ],
+      "publication_id": "telegram:19:19007"
+    },
+    {
+      "id": "telegram:15:423461#s5",
+      "url": "https://t.me/WEB3_AGGREGATOR/423461",
+      "quote": "4⃣ Блокчейн Circle для BlackRock залили мемами — Circle запустила сеть Arc с валидаторами уровня BlackRock и Visa, но за первый день 82% объёма ($336 млн) ушло в мемкоин-лаунчпады, а не в институции. Знакомый сценарий: через 12 часов мемы рухнули на 40–75%.\nЧитать ➡️\n\n",
+      "span": [
+        914,
+        1183
+      ],
+      "publication_id": "telegram:15:423461"
+    },
+    {
+      "id": "telegram:15:423533#s5",
+      "url": "https://t.me/WEB3_AGGREGATOR/423533",
+      "quote": "🟢 Arc мейннет запущен, валидируют BlackRock и Visa\n",
+      "span": [
+        230,
+        281
+      ],
+      "publication_id": "telegram:15:423533"
+    },
+    {
+      "id": "telegram:15:423151#s1",
+      "url": "https://t.me/WEB3_AGGREGATOR/423151",
+      "quote": "🟢Arc вышли в майннет",
+      "span": [
+        23,
+        43
+      ],
+      "publication_id": "telegram:15:423151"
+    },
+    {
+      "id": "telegram:15:423151#s2",
+      "url": "https://t.me/WEB3_AGGREGATOR/423151",
+      "quote": "⛓️Сегодня сеть Arc вышла в майннет, в которой для оплаты газа не нужен отдельный токен, все списывается в $USDC.\nТакже можно сминтить памятный NFT в честь запуска сети на ➡️Opensea, дедлайн 16 сентября 12:00 мск. Подробнее о сети тут.",
+      "span": [
+        45,
+        279
+      ],
+      "publication_id": "telegram:15:423151"
+    },
+    {
+      "id": "telegram:15:423153#s10",
+      "url": "https://t.me/WEB3_AGGREGATOR/423153",
+      "quote": "🟣AKA DN404 — первая коллекция на Arc: NFT + ERC-20 в одном активе, а комиссии идут в RWA",
+      "span": [
+        468,
+        556
+      ],
+      "publication_id": "telegram:15:423153"
+    },
+    {
+      "id": "telegram:15:423153#s11",
+      "url": "https://t.me/WEB3_AGGREGATOR/423153",
+      "quote": "🟣Arclings — первая полностью ончейн 1-bit коллекция на Arc",
+      "span": [
+        557,
+        615
+      ],
+      "publication_id": "telegram:15:423153"
+    },
+    {
+      "id": "telegram:15:423153#s12",
+      "url": "https://t.me/WEB3_AGGREGATOR/423153",
+      "quote": "🟣Arc Fly — минт состоится сегодня на OpenSea, будет фри минт на 7.777 NFT",
+      "span": [
+        616,
+        689
+      ],
+      "publication_id": "telegram:15:423153"
+    },
+    {
+      "id": "telegram:15:423161#s7",
+      "url": "https://t.me/WEB3_AGGREGATOR/423161",
+      "quote": "Arc — community → Zack: поддержка уже запущена.",
+      "span": [
+        1903,
+        1950
+      ],
+      "publication_id": "telegram:15:423161"
+    },
+    {
+      "id": "telegram:1:7153#s3",
+      "url": "https://t.me/whitelist1/7153",
+      "quote": "1inch Swap: Arc поддерживается 1inch с первого дня в качестве launch partner;\n1inch Business: пользователи с  активной подпиской могут сразу использовать API;  \n1inch Aqua также теперь работает на всех 4 сетях.\n\n",
+      "span": [
+        242,
+        454
+      ],
+      "publication_id": "telegram:1:7153"
+    },
+    {
+      "id": "telegram:1:7141#s2",
+      "url": "https://t.me/whitelist1/7141",
+      "quote": "🔴Arc сминтили 10 млрд токенов $ARC в Mainnet. Сама же команда пишет, что это техническая необходимость, а не подготовка к дропу. При этом, в X сами байтят холдеров Architect ролей.",
+      "span": [
+        260,
+        440
+      ],
+      "publication_id": "telegram:1:7141"
+    },
+    {
+      "id": "telegram:15:423182#s0",
+      "url": "https://t.me/WEB3_AGGREGATOR/423182",
+      "quote": "сминтили 10 млрд токенов $ARC в майннете",
+      "span": [
+        217,
+        257
+      ],
+      "publication_id": "telegram:15:423182"
+    },
+    {
+      "id": "telegram:15:423252#s2",
+      "url": "https://t.me/WEB3_AGGREGATOR/423252",
+      "quote": "⛓️Arc при запуске майннета сминтили 10 млрд. токенов $ARC, на данный момент нет информации для чего, т.к. в оплате газа они не участвуют, нет листинга и нет заявленного использования.",
+      "span": [
+        49,
+        232
+      ],
+      "publication_id": "telegram:15:423252"
+    },
+    {
+      "id": "telegram:1:7141#s3",
+      "url": "https://t.me/whitelist1/7141",
+      "quote": "👍Extended запустили RWA Trading Competition на $50 тыс. Набиваем PNL, объем, OI и поднимаемся в лидерборде. В награды войдут топ 100 трейдеров, турнир продлится до 29 сентября. Вместе с этим, Extended объявили о переходе на Arc.",
+      "span": [
+        442,
+        670
+      ],
+      "publication_id": "telegram:1:7141"
+    },
+    {
+      "id": "telegram:15:423197#s0",
+      "url": "https://t.me/WEB3_AGGREGATOR/423197",
+      "quote": "Arc Hits 168,000 Wallets in First 24 Hours",
+      "span": [
+        0,
+        42
+      ],
+      "publication_id": "telegram:15:423197"
+    },
+    {
+      "id": "telegram:15:423197#s1",
+      "url": "https://t.me/WEB3_AGGREGATOR/423197",
+      "quote": "Circle's Arc went public on September 16",
+      "span": [
+        44,
+        84
+      ],
+      "publication_id": "telegram:15:423197"
+    },
+    {
+      "id": "telegram:15:423206#s7",
+      "url": "https://t.me/WEB3_AGGREGATOR/423206",
+      "quote": "ARC открывает официальный стрим запуска из Нью-Йорка",
+      "span": [
+        416,
+        468
+      ],
+      "publication_id": "telegram:15:423206"
+    },
+    {
+      "id": "telegram:15:423206#s9",
+      "url": "https://t.me/WEB3_AGGREGATOR/423206",
+      "quote": "все немедленно начинают стаканить свои ARC-мемкойны",
+      "span": [
+        629,
+        680
+      ],
+      "publication_id": "telegram:15:423206"
+    },
+    {
+      "id": "telegram:1:7143#s0",
+      "url": "https://t.me/whitelist1/7143",
+      "quote": "ARC / Результаты первого дня 😶‍🌫️",
+      "span": [
+        0,
+        33
+      ],
+      "publication_id": "telegram:1:7143"
+    },
+    {
+      "id": "telegram:15:423219#s0",
+      "url": "https://t.me/WEB3_AGGREGATOR/423219",
+      "quote": "ARC — путеводитель по новому блокчейну",
+      "span": [
+        0,
+        38
+      ],
+      "publication_id": "telegram:15:423219"
+    },
+    {
+      "id": "telegram:15:423219#s1",
+      "url": "https://t.me/WEB3_AGGREGATOR/423219",
+      "quote": "Вчера запустился новый блокчейн под названием ARC, где уже появляются первые проекты, активности мемы и т.п.",
+      "span": [
+        42,
+        150
+      ],
+      "publication_id": "telegram:15:423219"
+    },
+    {
+      "id": "telegram:15:423227#s1",
+      "url": "https://t.me/WEB3_AGGREGATOR/423227",
+      "quote": "Вчера Circle, эмитент стейблкоина USDC, запустила мейннет Arc — собственный блокчейн (L1) под платежи и токенизированные активы.\nГлава компании Джереми Аллер назвал это запуском «более значимым, чем сам USDC». А через сутки главным продуктом сети оказались мем-щитки 🫣.",
+      "span": [
+        75,
+        344
+      ],
+      "publication_id": "telegram:15:423227"
+    },
+    {
+      "id": "telegram:15:423227#s12",
+      "url": "https://t.me/WEB3_AGGREGATOR/423227",
+      "quote": "Arc идёт тем же путём, только стартовал крупнее первого дня Robinhood в 720 раз.",
+      "span": [
+        2017,
+        2097
+      ],
+      "publication_id": "telegram:15:423227"
+    },
+    {
+      "id": "telegram:15:423227#s14",
+      "url": "https://t.me/WEB3_AGGREGATOR/423227",
+      "quote": "82% в мемах — не ошибка инфраструктуры, а обычная спекуляция ритейла на старте. Институционалы ведь ставили валидаторы явно не для того, чтобы гонять мемасы (hope so 😋): слой банков BNY и HSBC, Aave и токенизированных активов живёт отдельно от казино.\nДа и часть «обвала» — не мошенничество. Пока мост в другие сети не открыли, USDC внутри Arc было мало, и он стоил дороже обычного — оттого и цены токенов держались завышенными. Открыли мост — USDC хлынул в сеть, наценка схлопнулась, а с ней просели и токены. Это отчасти возврат стейбла к норме.",
+      "span": [
+        2127,
+        2674
+      ],
+      "publication_id": "telegram:15:423227"
+    },
+    {
+      "id": "telegram:15:423227#s16",
+      "url": "https://t.me/WEB3_AGGREGATOR/423227",
+      "quote": "🪙Circle сейчас держит два разных Arc в одном блоке: институциональный слой на $75 млн и мем-биржу на $336 млн.",
+      "span": [
+        2697,
+        2807
+      ],
+      "publication_id": "telegram:15:423227"
+    },
+    {
+      "id": "telegram:15:423227#s17",
+      "url": "https://t.me/WEB3_AGGREGATOR/423227",
+      "quote": "Первый — тот, ради чего год уговаривали BlackRock и Visa; второй — тот, что ритейл сделал из сети за сутки, потому что институциям на интеграцию нужен год, а на запуск своего мема хватает минуты.\nКоторый из этих двух Arc доживёт до второго месяца — единственный правильный вопрос по итогам этого запуска.",
+      "span": [
+        2808,
+        3112
+      ],
+      "publication_id": "telegram:15:423227"
+    },
+    {
+      "id": "telegram:15:423244#s0",
+      "url": "https://t.me/WEB3_AGGREGATOR/423244",
+      "quote": "Arc Introduces AI Coding Agent for Onchain App Development",
+      "span": [
+        0,
+        58
+      ],
+      "publication_id": "telegram:15:423244"
+    },
+    {
+      "id": "telegram:15:423244#s1",
+      "url": "https://t.me/WEB3_AGGREGATOR/423244",
+      "quote": "Arc has introduced Arc Studio, an AI coding agent that turns natural-language prompts into full-stack onchain applications, including frontend interfaces, backend logic, and smart contracts.",
+      "span": [
+        60,
+        250
+      ],
+      "publication_id": "telegram:15:423244"
+    },
+    {
+      "id": "telegram:15:423244#s2",
+      "url": "https://t.me/WEB3_AGGREGATOR/423244",
+      "quote": "Studio is built around Arc and Circle’s infrastructure, with integrations for CCTP, Gateway, Wallets, and other stablecoin tools. Generated apps can be tested across nine EVM chains, including Arc, Ethereum, Base, Avalanche, Arbitrum, and Unichain, while the resulting code can be exported into developers’ own repositories.",
+      "span": [
+        252,
+        576
+      ],
+      "publication_id": "telegram:15:423244"
+    },
+    {
+      "id": "telegram:15:423249#s1",
+      "url": "https://t.me/WEB3_AGGREGATOR/423249",
+      "quote": "Wall Street kept walking in: S&P Global agreed to buy OpenZeppelin, the firm securing $37T in smart contracts, Deutsche Bank went live with institutional BTC/ETH custody, and Circle's Arc L1 hit mainnet; while crypto's courtroom pile grew, from DOJ charges against two Robinhood engineers to Celsius's $495M suit against BitMEX.",
+      "span": [
+        49,
+        377
+      ],
+      "publication_id": "telegram:15:423249"
+    },
+    {
+      "id": "telegram:15:423249#s5",
+      "url": "https://t.me/WEB3_AGGREGATOR/423249",
+      "quote": "— Circle's Arc, its USDC-gas stablecoin L1, goes live on mainnet",
+      "span": [
+        511,
+        575
+      ],
+      "publication_id": "telegram:15:423249"
+    },
+    {
+      "id": "telegram:15:423252#s1",
+      "url": "https://t.me/WEB3_AGGREGATOR/423252",
+      "quote": "🟢Arc сминтили токены ARC",
+      "span": [
+        23,
+        47
+      ],
+      "publication_id": "telegram:15:423252"
+    },
+    {
+      "id": "telegram:1:7153#s1",
+      "url": "https://t.me/whitelist1/7153",
+      "quote": "За сентябрь 1inch добавили 4 новых сети:\nArc, HyperEVM, Monad и Cronos.\n\n",
+      "span": [
+        45,
+        118
+      ],
+      "publication_id": "telegram:1:7153"
+    },
+    {
+      "id": "telegram:20:48822#s0",
+      "url": "https://t.me/PowsGemCalls/48822",
+      "quote": "how to navigate the start of the bull/end of bear arc.",
+      "span": [
+        103,
+        157
+      ],
+      "publication_id": "telegram:20:48822"
+    },
+    {
+      "id": "telegram:20:48823#s0",
+      "url": "https://t.me/PowsGemCalls/48823",
+      "quote": "Final reflection post of what i learned about myself in this new arc",
+      "span": [
+        0,
+        68
+      ],
+      "publication_id": "telegram:20:48823"
+    },
+    {
+      "id": "telegram:1:7130#s39",
+      "url": "https://t.me/whitelist1/7130",
+      "quote": "• DN404 в Arc;",
+      "span": [
+        1494,
+        1508
+      ],
+      "publication_id": "telegram:1:7130"
+    },
+    {
+      "id": "telegram:20:48913#s0",
+      "url": "https://t.me/PowsGemCalls/48913",
+      "quote": "New arc as we transition to Q4 soon. Have a great weekend gents !",
+      "span": [
+        0,
+        65
+      ],
+      "publication_id": "telegram:20:48913"
+    },
+    {
+      "id": "telegram:15:422871#s0",
+      "url": "https://t.me/WEB3_AGGREGATOR/422871",
+      "quote": "Потенциальные ставки на Arc",
+      "span": [
+        0,
+        27
+      ],
+      "publication_id": "telegram:15:422871"
+    },
+    {
+      "id": "telegram:15:422897#s1",
+      "url": "https://t.me/WEB3_AGGREGATOR/422897",
+      "quote": "Arc. chart.zone",
+      "span": [
+        321,
+        336
+      ],
+      "publication_id": "telegram:15:422897"
+    },
+    {
+      "id": "telegram:15:422903#s1",
+      "url": "https://t.me/WEB3_AGGREGATOR/422903",
+      "quote": "На данный момент USDC для покупки мемов в сети ARC можно втарить онли на ОТС - https://www.unstabletrd.com/ (прайс 1.7-1.8 за 1 USDC, процесс автоматический)",
+      "span": [
+        80,
+        237
+      ],
+      "publication_id": "telegram:15:422903"
+    },
+    {
+      "id": "telegram:15:422904#s2",
+      "url": "https://t.me/WEB3_AGGREGATOR/422904",
+      "quote": "https://x.com/ArclingsNFT - at moment, this is a Tier 1 collection on Arc. I was giving away spots for it, so check your wallets if you won one of my giveaways.",
+      "span": [
+        66,
+        226
+      ],
+      "publication_id": "telegram:15:422904"
+    },
+    {
+      "id": "telegram:15:422908#s0",
+      "url": "https://t.me/WEB3_AGGREGATOR/422908",
+      "quote": "ARC",
+      "span": [
+        0,
+        3
+      ],
+      "publication_id": "telegram:15:422908"
+    },
+    {
+      "id": "telegram:15:422908#s5",
+      "url": "https://t.me/WEB3_AGGREGATOR/422908",
+      "quote": "За последние часы площадка забриджила 35%+ доступных акций Circle из Robinhood цепочки в Arc цепочку, такой вот ажиотаж.",
+      "span": [
+        489,
+        609
+      ],
+      "publication_id": "telegram:15:422908"
+    },
+    {
+      "id": "telegram:15:422908#s21",
+      "url": "https://t.me/WEB3_AGGREGATOR/422908",
+      "quote": "В щитпосте алертники по Arc чейну работают уже месяц+, отсигналило все раннеры, токен $LONG повторные алерты с 140к вплоть до 5М.",
+      "span": [
+        1707,
+        1836
+      ],
+      "publication_id": "telegram:15:422908"
+    },
+    {
+      "id": "telegram:15:422924#s1",
+      "url": "https://t.me/WEB3_AGGREGATOR/422924",
+      "quote": "Flipt.fun - лаунчпад на arc, тестнет запустили на 48 часов, можно потыкать + для создателей токенов выделено 5к$ в кредитах, форма",
+      "span": [
+        28,
+        158
+      ],
+      "publication_id": "telegram:15:422924"
+    },
+    {
+      "id": "telegram:1:7135#s25",
+      "url": "https://t.me/whitelist1/7135",
+      "quote": "• Uniswap + Aerodrome: ожидаются с поддержкой Arc day one.",
+      "span": [
+        1100,
+        1158
+      ],
+      "publication_id": "telegram:1:7135"
+    },
+    {
+      "id": "telegram:1:7135#s29",
+      "url": "https://t.me/whitelist1/7135",
+      "quote": "• Arclings: 6,283 fully on-chain 1-bit SVG, mint на день Arc Mainnet, 16 сентября;",
+      "span": [
+        1318,
+        1400
+      ],
+      "publication_id": "telegram:1:7135"
+    },
+    {
+      "id": "telegram:1:7135#s41",
+      "url": "https://t.me/whitelist1/7135",
+      "quote": "• Mimo: story game на Arc, waitlist через X + wallet, будут частью игры.",
+      "span": [
+        2109,
+        2181
+      ],
+      "publication_id": "telegram:1:7135"
+    },
+    {
+      "id": "telegram:1:7135#s42",
+      "url": "https://t.me/whitelist1/7135",
+      "quote": "Fomo будет работать на Arc с первого дня, поэтому регаемся.",
+      "span": [
+        2183,
+        2242
+      ],
+      "publication_id": "telegram:1:7135"
+    },
+    {
+      "id": "telegram:15:422985#s3",
+      "url": "https://t.me/WEB3_AGGREGATOR/422985",
+      "quote": "> Flipt.fun - лаунчпад по arc, активен тестнет, обещают 3 рарности нфт раздать за активности, включая 5к$ в кредитах для 30 человек в майннете, для создания токена, многим в чате включая и меня, написали в X, поглянем что с этого выйдет.",
+      "span": [
+        153,
+        390
+      ],
+      "publication_id": "telegram:15:422985"
+    },
+    {
+      "id": "telegram:15:422986#s1",
+      "url": "https://t.me/WEB3_AGGREGATOR/422986",
+      "quote": "😐 Думаю все шарят за новость об оцифрованном мозге мухи. Под хайп этой истории одна NFT коллекция на ARC запустила FCFS WL регу на будущий минт коллекции.",
+      "span": [
+        26,
+        180
+      ],
+      "publication_id": "telegram:15:422986"
+    },
+    {
+      "id": "telegram:15:423064#s19",
+      "url": "https://t.me/WEB3_AGGREGATOR/423064",
+      "quote": "🙋‍♂ #AERO Запуск основной сети Arc",
+      "span": [
+        1022,
+        1056
+      ],
+      "publication_id": "telegram:15:423064"
+    },
+    {
+      "id": "telegram:15:423064#s20",
+      "url": "https://t.me/WEB3_AGGREGATOR/423064",
+      "quote": "🙋‍♂ #OVPP OpenVPP запустит GridProof в основной сети Arc",
+      "span": [
+        1057,
+        1113
+      ],
+      "publication_id": "telegram:15:423064"
+    },
+    {
+      "id": "telegram:15:423064#s21",
+      "url": "https://t.me/WEB3_AGGREGATOR/423064",
+      "quote": "🙋‍♂ #RIZE RIZE выпустит T-RIZE в основной сети Arc",
+      "span": [
+        1114,
+        1164
+      ],
+      "publication_id": "telegram:15:423064"
+    },
+    {
+      "id": "telegram:11:96753#s0",
+      "url": "https://t.me/cryptoattack24/96753",
+      "quote": "💰 Трейдер заработал $361 тыс на #ARGUS в сети Arc Chain — прибыль х302!",
+      "span": [
+        0,
+        71
+      ],
+      "publication_id": "telegram:11:96753"
+    },
+    {
+      "id": "telegram:1:7139#s18",
+      "url": "https://t.me/whitelist1/7139",
+      "quote": "Сегодня, время после запуска Arc;",
+      "span": [
+        513,
+        546
+      ],
+      "publication_id": "telegram:1:7139"
+    },
+    {
+      "id": "telegram:15:423087#s0",
+      "url": "https://t.me/WEB3_AGGREGATOR/423087",
+      "quote": "Бридж на ARC уже норм работает",
+      "span": [
+        0,
+        30
+      ],
+      "publication_id": "telegram:15:423087"
+    },
+    {
+      "id": "telegram:19:18971#s3",
+      "url": "https://t.me/spidersjournal/18971",
+      "quote": "Inus are one of the most battle-tested memes in crypto, and $CINU actually has lore behind the name — it’s Circle Inu deployed on Arc, Circle’s own chain.",
+      "span": [
+        146,
+        300
+      ],
+      "publication_id": "telegram:19:18971"
+    },
+    {
+      "id": "telegram:19:18971#s4",
+      "url": "https://t.me/spidersjournal/18971",
+      "quote": "Circle → Arc → Inu.",
+      "span": [
+        302,
+        321
+      ],
+      "publication_id": "telegram:19:18971"
+    },
+    {
+      "id": "telegram:15:423105#s7",
+      "url": "https://t.me/WEB3_AGGREGATOR/423105",
+      "quote": "Если агент работает на Arc, то ему приходится проще, чем в других сетях.",
+      "span": [
+        2039,
+        2111
+      ],
+      "publication_id": "telegram:15:423105"
+    },
+    {
+      "id": "telegram:15:423105#s9",
+      "url": "https://t.me/WEB3_AGGREGATOR/423105",
+      "quote": "RSoft Agentic Bank выиграл онлайн-трек хакатона LabLab x Arc с банком, клиентами которого были боты.",
+      "span": [
+        2860,
+        2960
+      ],
+      "publication_id": "telegram:15:423105"
+    },
+    {
+      "id": "telegram:15:423107#s1",
+      "url": "https://t.me/WEB3_AGGREGATOR/423107",
+      "quote": "пачка проектиков под фаст ресерч, 1/2 часа до запусков, всеобщий чек. ARC",
+      "span": [
+        51,
+        124
+      ],
+      "publication_id": "telegram:15:423107"
+    },
+    {
+      "id": "telegram:4:829#s10",
+      "url": "https://t.me/badfriend_loops/829",
+      "quote": "• работать с Uniswap v3/v4 и Pancake v3 в большинстве нужных сетей, включая Robinhood и Arc (если он не сдохнет);",
+      "span": [
+        1152,
+        1265
+      ],
+      "publication_id": "telegram:4:829"
+    },
+    {
+      "id": "telegram:15:423117#s0",
+      "url": "https://t.me/WEB3_AGGREGATOR/423117",
+      "quote": "#shorts Забираем бесплатный NFT в сети Arc",
+      "span": [
+        0,
+        42
+      ],
+      "publication_id": "telegram:15:423117"
+    },
+    {
+      "id": "telegram:9:1039356#s0",
+      "url": "https://t.me/marketfeed/1039356",
+      "quote": "1INCH GOES LIVE ON CIRCLE’S ARC — SWAPS, WALLET & AQUA FROM DAY ONE ...",
+      "span": [
+        0,
+        71
+      ],
+      "publication_id": "telegram:9:1039356"
+    },
+    {
+      "id": "telegram:19:18984#s1",
+      "url": "https://t.me/spidersjournal/18984",
+      "quote": "she’s head of product at arc and circle",
+      "span": [
+        32,
+        71
+      ],
+      "publication_id": "telegram:19:18984"
+    },
+    {
+      "id": "telegram:15:423142#s1",
+      "url": "https://t.me/WEB3_AGGREGATOR/423142",
+      "quote": "😐 На самом деле сейчас несется че то очень интересное, потому что и на Robinhood и на Arc и на Zcash, стали выходить коллекции, причем не для виду, а реально с кучей иксов. ну вы сами знаете.",
+      "span": [
+        22,
+        213
+      ],
+      "publication_id": "telegram:15:423142"
+    },
+    {
+      "id": "telegram:15:423150#s11",
+      "url": "https://t.me/WEB3_AGGREGATOR/423150",
+      "quote": "По поводу самого арка - Тут предыдущий список того, что есть на Arc, но там уже на всём сотни процентов плюса. Из того, что не подсвечивал, но тоже может быть интересно:",
+      "span": [
+        1791,
+        1960
+      ],
+      "publication_id": "telegram:15:423150"
+    },
+    {
+      "id": "telegram:18:31468#s1",
+      "url": "https://t.me/crypto_hd/31468",
+      "quote": "Один из топовых трейдеров Axiom стал жертвой фишинговой атаки и лишился денег при попытке перевести активы в Arc.",
+      "span": [
+        75,
+        188
+      ],
+      "publication_id": "telegram:18:31468"
+    },
+    {
+      "id": "telegram:15:423227#s3",
+      "url": "https://t.me/WEB3_AGGREGATOR/423227",
+      "quote": "Самое необычное у Arc — валидаторы.\nБлоки печатают не анонимы, а BlackRock, Visa, Mastercard, DTCC, Standard Chartered, Galaxy, ICE, MoneyGram и другие — 11 крупнейших имён традиционных финансов.",
+      "span": [
+        372,
+        567
+      ],
+      "publication_id": "telegram:15:423227"
+    },
+    {
+      "id": "telegram:15:423227#s13",
+      "url": "https://t.me/WEB3_AGGREGATOR/423227",
+      "quote": "🤔 Почему хоронить Arc рано",
+      "span": [
+        2099,
+        2125
+      ],
+      "publication_id": "telegram:15:423227"
+    },
+    {
+      "id": "telegram:15:423286#s9",
+      "url": "https://t.me/WEB3_AGGREGATOR/423286",
+      "quote": "☠️ Мем-сезона по сценарию Robinhood Chain в первые сутки не случилось. Зато накануне запуска накрыло тех, кто к нему готовился: трейдер по собственным словам лишился около $600 тысяч, пока искал способ забриджить в Arc. Фейковая проверка Cloudflare, скрипт с правами администратора в Windows, и дальше чистят весь компьютер. Вредоносные ссылки прятали прямо в метаданных мемкоинов, откуда их тянут агрегаторы - то есть подстава ждала ровно на том шаге, где трейдер как раз и проверяет токен. Ровно та схема, про которую мы писали отдельно.\n\n",
+      "span": [
+        1781,
+        2322
+      ],
+      "publication_id": "telegram:15:423286"
+    },
+    {
+      "id": "https://t.me/whitelist1/7130?comment=571146",
+      "url": "https://t.me/whitelist1/7130?comment=571146",
+      "quote": "По багз от анвалт кто-то понял механику распределения гарантов? Я примерно понял, что на каждую коллекцию партнёра будет определённое количество спотов, то бишь даже на стадии гара"
+    },
+    {
+      "id": "https://t.me/whitelist1/7138?comment=571572",
+      "url": "https://t.me/whitelist1/7138?comment=571572",
+      "quote": "Во сколько Arc запуск? Никто не знает"
+    },
+    {
+      "id": "https://t.me/whitelist1/7138?comment=571576",
+      "url": "https://t.me/whitelist1/7138?comment=571576",
+      "quote": "https://dexscreener.com/arc"
+    },
+    {
+      "id": "https://t.me/whitelist1/7139?comment=571605",
+      "url": "https://t.me/whitelist1/7139?comment=571605",
+      "quote": "так пока хайповых коллекций и не вышло, не?"
+    },
+    {
+      "id": "https://t.me/whitelist1/7139?comment=571615",
+      "url": "https://t.me/whitelist1/7139?comment=571615",
+      "quote": "arcadians уменьшили саплай и цену поменяли были"
+    },
+    {
+      "id": "https://t.me/whitelist1/7139?comment=571617",
+      "url": "https://t.me/whitelist1/7139?comment=571617",
+      "quote": "скам значит"
+    },
+    {
+      "id": "https://t.me/whitelist1/7139?comment=571620",
+      "url": "https://t.me/whitelist1/7139?comment=571620",
+      "quote": "у арклингс сайт вообще лежит)"
+    },
+    {
+      "id": "https://t.me/whitelist1/7139?comment=571626",
+      "url": "https://t.me/whitelist1/7139?comment=571626",
+      "quote": "https://opensea.io/collection/onchainsharc-791982284"
+    },
+    {
+      "id": "https://t.me/whitelist1/7139?comment=571649",
+      "url": "https://t.me/whitelist1/7139?comment=571649",
+      "quote": "А я чет отвлекся и забы(и) л из-за их сайта глючного"
+    },
+    {
+      "id": "https://t.me/whitelist1/7143?comment=571726",
+      "url": "https://t.me/whitelist1/7143?comment=571726",
+      "quote": "АКА отлично покормили, а вот Arclings походу заскамили на 12 баксов"
+    },
+    {
+      "id": "https://t.me/rawa_imagination/21118?comment=343272",
+      "url": "https://t.me/rawa_imagination/21118?comment=343272",
+      "quote": "💹 #NEAR +107% с начала сентября. \n\n➟ В NEAR сделали фьючерсы на базе Hyperliquid приватными по умолчанию.\n\n➟ После роста объема активов в приватной инфраструктуре NEAR выше $70m – "
+    },
+    {
+      "id": "https://t.me/icodrops_sergey/2427?comment=150626",
+      "url": "https://t.me/icodrops_sergey/2427?comment=150626",
+      "quote": "Может я не до конца понимаю, но по мне, так как раз наоборот - достаточно узкоспециализированное применение у него. Потому что он рассчитывает вероятности вариантов, и на их основе"
+    }
+  ],
+  "spend_usd": 0.0,
+  "numbers_by": "code",
+  "brief_markdown": "# Pulse (news-first): arc, окно 2026-09-09 – 2026-09-23\n\n## Коротко\n\n- 16 сентября Circle запускает Arc, собственный L1.\n- Arc запущен\n- Granted, yes there were people early new Arc 1-2 months before, today it begins \"officially\" via public (few hours basically only)\n- 🤝 #TPT TokenPocket Token интегрируется с основной сетью Arc\n- ✴️🇺🇸#CRCL Circle планирует запустить свой блокчейна Arc\n\n## События и заявления\n\n- **01:51:53 Про Arc**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/422750: «01:51:53 Про Arc»\n- **50 коллекций на Arc**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/422826: «50 коллекций на Arc»\n- **16 сентября Circle запускает Arc, собственный L1.**\n  публикации 6, каналы 3, известные авторы 0, первоисточники 2, перепечатки 4, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/422853: «16 сентября Circle запускает Arc, собственный L1.»\n  - https://t.me/Slavik_investor_updates/6918: «Circle 16 сентября запускает Arc - собственный L1 под стейблкоин-финансы. USDC перестаёт быть просто токеном внутри чужих сетей и становится основой своей экоси»\n  - https://t.me/CryptoEarnImp/10991: «Сегодня (спасибо за поправку @intelligent_ua) кстати мейннет Arc, можно будет бриджить через Jumper.»\n- **В мае прошел закрытый пресейл токена ARC, где собрали $222 млн по оценке $3 млрд.**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/422853: «В мае прошел закрытый пресейл токена ARC, где собрали $222 млн по оценке $3 млрд.»\n- **USDC это деньги и газ, а ARC это актив сети, не акция Circle и не доля в резервах.**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/422853: «USDC это деньги и газ, а ARC это актив сети, не акция Circle и не доля в резервах.»\n- **До Arc mainnet остались считаные дни**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/422864: «До Arc mainnet остались считаные дни»\n  - https://t.me/WEB3_AGGREGATOR/422864: «О Arc я рассказывал ранее, так как майнет меньше чем через неделю, самое время освежить транзы и активность, что бы претендовать на дроп»\n- **Также, Fomo о котором рассказывал ранее, вместе с Opensea, обещали поддерживать Arc с первого дня майнета, мемчикам и нфт быть! 🙏**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/422864: «Также, Fomo о котором рассказывал ранее, вместе с Opensea, обещали поддерживать Arc с первого дня майнета, мемчикам и нфт быть! 🙏»\n- **👍 Запуск основной сети Arc**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/cryptoattack24/96700: «👍 Запуск основной сети Arc»\n- **👍 #OVPP OpenVPP запустит GridProof в основной сети Arc**\n  публикации 2, каналы 2, известные авторы 0, первоисточники 2, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/cryptoattack24/96700: «👍 #OVPP OpenVPP запустит GridProof в основной сети Arc»\n  - https://t.me/WEB3_AGGREGATOR/422881: «👍 #OVPP OpenVPP запустит GridProof в основной сети Arc»\n- **👍 #RIZE RIZE выпустит T-RIZE в основной сети Arc**\n  публикации 2, каналы 2, известные авторы 0, первоисточники 2, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/cryptoattack24/96700: «👍 #RIZE RIZE выпустит T-RIZE в основной сети Arc»\n  - https://t.me/WEB3_AGGREGATOR/422881: «👍 #RIZE RIZE выпустит T-RIZE в основной сети Arc»\n- **🤝 #TPT TokenPocket Token интегрируется с основной сетью Arc**\n  публикации 3, каналы 2, известные авторы 0, первоисточники 2, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/cryptoattack24/96700: «🤝 #TPT TokenPocket Token интегрируется с основной сетью Arc»\n  - https://t.me/WEB3_AGGREGATOR/422881: «🤝 #TPT TokenPocket Token интегрируется с основной сетью Arc»\n  - https://t.me/WEB3_AGGREGATOR/423064: «🤝 #TPT TokenPocket Token интегрируется с основной сетью Arc»\n- **Arc запустит майннет 16 сентября**\n  публикации 3, каналы 1, известные авторы 0, первоисточники 3, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/422875: «Arc запустит майннет 16 сентября»\n  - https://t.me/WEB3_AGGREGATOR/422875: «Arc - L1-сеть от Circle с $222M инвестиций ориентированная на USDC, запустит майннет 16 сентября.»\n  - https://t.me/WEB3_AGGREGATOR/422890: «Arc запустит майннет 16 сентября»\n- **👍 #AERO Запуск основной сети Arc**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/422881: «👍 #AERO Запуск основной сети Arc»\n- **Arc - вчера добавили пачку бейджей архитектора, кто набрал более 500+ поинтов, так что гляньте + к этому майннет анонсировали на 16 число, выбиваем waitlist на коллекции которые…**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/422895: «Arc - вчера добавили пачку бейджей архитектора, кто набрал более 500+ поинтов, так что гляньте + к этому майннет анонсировали на 16 число, выбиваем waitlist на »\n- **Несколько часов назад Unipcs (Bonk guy) , нашумевший #1 трейдер на fomo app обратил внимание аудитории на ARC цепочку.**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 0, неизвестное происхождение 1.\n  - https://t.me/WEB3_AGGREGATOR/422908: «Несколько часов назад Unipcs (Bonk guy) , нашумевший #1 трейдер на fomo app обратил внимание аудитории на ARC цепочку.»\n- **Fomo App интегрирует ARC в первые дни лаунча сети, соответственно движ гарантирован.**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 0, неизвестное происхождение 1.\n  - https://t.me/WEB3_AGGREGATOR/422908: «Fomo App интегрирует ARC в первые дни лаунча сети, соответственно движ гарантирован.»\n- **Arc Launchpad Ecosytem. Mainnet Goes Live Sep 16**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/422923: «Arc Launchpad Ecosytem. Mainnet Goes Live Sep 16»\n- **Arc Mainnet уже близко, поэтому собрали все инфраструктурные проекты, которые стоит добавить в watchlist.**\n  публикации 2, каналы 2, известные авторы 0, первоисточники 2, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/whitelist1/7135: «Arc Mainnet уже близко, поэтому собрали все инфраструктурные проекты, которые стоит добавить в watchlist.»\n  - https://t.me/WEB3_AGGREGATOR/423117: «Основная сеть Arc запустилась. Arc и OpenSea запустили бесплатный минт NFT:»\n- **• Arc Citizens: 10,000 fully on-chain identity PFP, запуск планируется 16 сентября;**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/whitelist1/7135: «• Arc Citizens: 10,000 fully on-chain identity PFP, запуск планируется 16 сентября;»\n- **• Arc Punks: 10,000 punks, запуск 16 сентября, ориентир 0.5 USDC;**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/whitelist1/7135: «• Arc Punks: 10,000 punks, запуск 16 сентября, ориентир 0.5 USDC;»\n- **ARC FLY - FCFS WL рега 😮**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/422986: «ARC FLY - FCFS WL рега 😮»\n- **Завтра ARC паблик майнет**\n  публикации 2, каналы 2, известные авторы 0, первоисточники 1, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/423067: «Завтра ARC паблик майнет»\n  - https://t.me/krasnovcrypto/3754: «Arc запустил публичный mainnet и уже сейчас мы можем делать быстрые активности.»\n- **✴️🇺🇸#CRCL Circle планирует запустить свой блокчейна Arc**\n  публикации 3, каналы 2, известные авторы 0, первоисточники 0, перепечатки 3, неизвестное происхождение 0.\n  - https://t.me/markettwits/384943: «✴️🇺🇸#CRCL Circle планирует запустить свой блокчейна Arc»\n  - https://t.me/crypto_hd/31448: «⚡ Компания Circle технически запустила майннет блокчейна Arc.»\n  - https://t.me/markettwits/385037: «Circle запустила свой блокчейна Arc»\n- **Granted, yes there were people early new Arc 1-2 months before, today it begins \"officially\" via public (few hours basically only)**\n  публикации 4, каналы 3, известные авторы 0, первоисточники 3, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/PowsGemCalls/48975: «Granted, yes there were people early new Arc 1-2 months before, today it begins \"officially\" via public (few hours basically only)»\n  - https://t.me/whitelist1/7138: «👍Напомним, что Arc выходит в Mainnet уже сегодня, а вместе с ним и многие NFT коллекции, сверяемся с постом.»\n  - https://t.me/WEB3_AGGREGATOR/423100: «Circle's Arc Stablecoin L1 Goes Live on Mainnet»\n- **Официальная презентация запуска Arc начнется сегодня в 18:30 мск.**\n  публикации 2, каналы 2, известные авторы 0, первоисточники 0, перепечатки 2, неизвестное происхождение 0.\n  - https://t.me/crypto_hd/31448: «Официальная презентация запуска Arc начнется сегодня в 18:30 мск.»\n  - https://t.me/WEB3_AGGREGATOR/423286: «🟢 16 сентября Circle запустила мейннет: среди валидаторов BlackRock и Visa, отчеканено 10 млрд ARC, за первые два часа в сеть вошло больше $370 млн USDC. Звучит»\n- **CIRCLE LAUNCHES ARC MAINNET WITH BLACKROCK AND VISA AMONG VALIDATORS, MINTS 10 BILLION ARC TOKENS ...**\n  публикации 3, каналы 2, известные авторы 0, первоисточники 2, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/marketfeed/1039167: «CIRCLE LAUNCHES ARC MAINNET WITH BLACKROCK AND VISA AMONG VALIDATORS, MINTS 10 BILLION ARC TOKENS ...»\n  - https://t.me/marketfeed/1039182: «Circle launched Arc mainnet with BlackRock and Visa among validators; Zcash holders backed faster transactions and halving-style design»\n  - https://t.me/WEB3_AGGREGATOR/423105: «Сегодня, 16 сентября, Circle запустила мейннет Arc и сразу подключила его к Agent Stack, набору инструментов, который с 11 мая дает ИИ-агенту собственный кошеле»\n- **Arc arrives as a full-stack financial platform rather than a bare chain, shipping assets, applications, interoperability, and Circle platform services from day one.**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/423100: «Arc arrives as a full-stack financial platform rather than a bare chain, shipping assets, applications, interoperability, and Circle platform services from day »\n  - https://t.me/WEB3_AGGREGATOR/423100: «More than 190 institutional and ecosystem teams are already building on Arc, one of the most institutionally backed genesis cohorts the industry has seen, as Ci»\n- **📟Arc | фармим раннюю активность в mainnet**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/krasnovcrypto/3754: «📟Arc | фармим раннюю активность в mainnet»\n- **Arc — L1-сеть от Circle для платежей, стейблкоинов и финансовых приложений. В экосистеме уже есть Uniswap, Aave, Morpho, Aerodrome и другие крупные проекты.**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/krasnovcrypto/3754: «Arc — L1-сеть от Circle для платежей, стейблкоинов и финансовых приложений. В экосистеме уже есть Uniswap, Aave, Morpho, Aerodrome и другие крупные проекты.»\n- **🔘Бриджим любой актив в USDC в сеть Arc**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/krasnovcrypto/3754: «🔘Бриджим любой актив в USDC в сеть Arc»\n- **Я вам просто напоминаю, что в 18 по Москве официально ARC запускают и вы уже сейчас можете абсолютно бесплатно создавать свои мемы на https://arc.openfair.app/**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/423121: «Я вам просто напоминаю, что в 18 по Москве официально ARC запускают и вы уже сейчас можете абсолютно бесплатно создавать свои мемы на https://arc.openfair.app/»\n- **🔹 Arc Chain Coin Tracking Is Live**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/423128: «🔹 Arc Chain Coin Tracking Is Live»\n- **Arc запущен**\n  публикации 5, каналы 3, известные авторы 0, первоисточники 3, перепечатки 2, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/423150: «Arc запущен»\n  - https://t.me/crypto_hd/31472: «▫️Запуск майннета Arc (читать)»\n  - https://t.me/spidersjournal/19007: «• Early on Arc — A chance to launch from day one in a new ecosystem built around stablecoins and global finance. Arc is built by Circle, with founding validator»\n- **🟢Arc вышли в майннет**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/423151: «🟢Arc вышли в майннет»\n  - https://t.me/WEB3_AGGREGATOR/423151: «⛓️Сегодня сеть Arc вышла в майннет, в которой для оплаты газа не нужен отдельный токен, все списывается в $USDC.\nТакже можно сминтить памятный NFT в честь запус»\n- **🟣AKA DN404 — первая коллекция на Arc: NFT + ERC-20 в одном активе, а комиссии идут в RWA**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/423153: «🟣AKA DN404 — первая коллекция на Arc: NFT + ERC-20 в одном активе, а комиссии идут в RWA»\n- **🟣Arclings — первая полностью ончейн 1-bit коллекция на Arc**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/423153: «🟣Arclings — первая полностью ончейн 1-bit коллекция на Arc»\n- **🟣Arc Fly — минт состоится сегодня на OpenSea, будет фри минт на 7.777 NFT**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/423153: «🟣Arc Fly — минт состоится сегодня на OpenSea, будет фри минт на 7.777 NFT»\n- **Arc — community → Zack: поддержка уже запущена.**\n  публикации 2, каналы 2, известные авторы 0, первоисточники 2, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/423161: «Arc — community → Zack: поддержка уже запущена.»\n  - https://t.me/whitelist1/7153: «1inch Swap: Arc поддерживается 1inch с первого дня в качестве launch partner;\n1inch Business: пользователи с  активной подпиской могут сразу использовать API;  »\n- **🔴Arc сминтили 10 млрд токенов $ARC в Mainnet. Сама же команда пишет, что это техническая необходимость, а не подготовка к дропу. При этом, в X сами байтят холдеров Architect ролей.**\n  публикации 3, каналы 2, известные авторы 0, первоисточники 1, перепечатки 2, неизвестное происхождение 0.\n  - https://t.me/whitelist1/7141: «🔴Arc сминтили 10 млрд токенов $ARC в Mainnet. Сама же команда пишет, что это техническая необходимость, а не подготовка к дропу. При этом, в X сами байтят холде»\n  - https://t.me/WEB3_AGGREGATOR/423182: «сминтили 10 млрд токенов $ARC в майннете»\n  - https://t.me/WEB3_AGGREGATOR/423252: «⛓️Arc при запуске майннета сминтили 10 млрд. токенов $ARC, на данный момент нет информации для чего, т.к. в оплате газа они не участвуют, нет листинга и нет зая»\n- **👍Extended запустили RWA Trading Competition на $50 тыс. Набиваем PNL, объем, OI и поднимаемся в лидерборде. В награды войдут топ 100 трейдеров, турнир продлится до 29 сентября.…**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/whitelist1/7141: «👍Extended запустили RWA Trading Competition на $50 тыс. Набиваем PNL, объем, OI и поднимаемся в лидерборде. В награды войдут топ 100 трейдеров, турнир продлится»\n- **Arc Hits 168,000 Wallets in First 24 Hours**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/423197: «Arc Hits 168,000 Wallets in First 24 Hours»\n- **Circle's Arc went public on September 16**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/423197: «Circle's Arc went public on September 16»\n- **ARC открывает официальный стрим запуска из Нью-Йорка**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/423206: «ARC открывает официальный стрим запуска из Нью-Йорка»\n- **все немедленно начинают стаканить свои ARC-мемкойны**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/423206: «все немедленно начинают стаканить свои ARC-мемкойны»\n- **ARC / Результаты первого дня 😶‍🌫️**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 0, неизвестное происхождение 1.\n  - https://t.me/whitelist1/7143: «ARC / Результаты первого дня 😶‍🌫️»\n- **ARC — путеводитель по новому блокчейну**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 0, неизвестное происхождение 1.\n  - https://t.me/WEB3_AGGREGATOR/423219: «ARC — путеводитель по новому блокчейну»\n- **Вчера запустился новый блокчейн под названием ARC, где уже появляются первые проекты, активности мемы и т.п.**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 0, неизвестное происхождение 1.\n  - https://t.me/WEB3_AGGREGATOR/423219: «Вчера запустился новый блокчейн под названием ARC, где уже появляются первые проекты, активности мемы и т.п.»\n- **Вчера Circle, эмитент стейблкоина USDC, запустила мейннет Arc — собственный блокчейн (L1) под платежи и токенизированные активы.**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 0, неизвестное происхождение 1.\n  - https://t.me/WEB3_AGGREGATOR/423227: «Вчера Circle, эмитент стейблкоина USDC, запустила мейннет Arc — собственный блокчейн (L1) под платежи и токенизированные активы.\nГлава компании Джереми Аллер на»\n  - https://t.me/WEB3_AGGREGATOR/423227: «Arc идёт тем же путём, только стартовал крупнее первого дня Robinhood в 720 раз.»\n- **82% в мемах — не ошибка инфраструктуры, а обычная спекуляция ритейла на старте. Институционалы ведь ставили валидаторы явно не для того, чтобы гонять мемасы (hope so 😋): слой…**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 0, неизвестное происхождение 1.\n  - https://t.me/WEB3_AGGREGATOR/423227: «82% в мемах — не ошибка инфраструктуры, а обычная спекуляция ритейла на старте. Институционалы ведь ставили валидаторы явно не для того, чтобы гонять мемасы (ho»\n- **🪙Circle сейчас держит два разных Arc в одном блоке: институциональный слой на $75 млн и мем-биржу на $336 млн.**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 0, неизвестное происхождение 1.\n  - https://t.me/WEB3_AGGREGATOR/423227: «🪙Circle сейчас держит два разных Arc в одном блоке: институциональный слой на $75 млн и мем-биржу на $336 млн.»\n- **Первый — тот, ради чего год уговаривали BlackRock и Visa; второй — тот, что ритейл сделал из сети за сутки, потому что институциям на интеграцию нужен год, а на запуск своего мема…**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 0, неизвестное происхождение 1.\n  - https://t.me/WEB3_AGGREGATOR/423227: «Первый — тот, ради чего год уговаривали BlackRock и Visa; второй — тот, что ритейл сделал из сети за сутки, потому что институциям на интеграцию нужен год, а на»\n- **Arc Introduces AI Coding Agent for Onchain App Development**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/423244: «Arc Introduces AI Coding Agent for Onchain App Development»\n  - https://t.me/WEB3_AGGREGATOR/423244: «Arc has introduced Arc Studio, an AI coding agent that turns natural-language prompts into full-stack onchain applications, including frontend interfaces, backe»\n- **Studio is built around Arc and Circle’s infrastructure, with integrations for CCTP, Gateway, Wallets, and other stablecoin tools. Generated apps can be tested across nine EVM…**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/423244: «Studio is built around Arc and Circle’s infrastructure, with integrations for CCTP, Gateway, Wallets, and other stablecoin tools. Generated apps can be tested a»\n- **Wall Street kept walking in: S&P Global agreed to buy OpenZeppelin, the firm securing $37T in smart contracts, Deutsche Bank went live with institutional BTC/ETH custody, and…**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/423249: «Wall Street kept walking in: S&P Global agreed to buy OpenZeppelin, the firm securing $37T in smart contracts, Deutsche Bank went live with institutional BTC/ET»\n  - https://t.me/WEB3_AGGREGATOR/423249: «— Circle's Arc, its USDC-gas stablecoin L1, goes live on mainnet»\n- **🟢Arc сминтили токены ARC**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/423252: «🟢Arc сминтили токены ARC»\n- **За сентябрь 1inch добавили 4 новых сети:**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/whitelist1/7153: «За сентябрь 1inch добавили 4 новых сети:\nArc, HyperEVM, Monad и Cronos.\n\n»\n\n## Кто распространяет информацию и какие позиции\n\n- how to navigate the start of the bull/end of bear arc.\n  https://t.me/PowsGemCalls/48822\n- Final reflection post of what i learned about myself in this new arc\n  https://t.me/PowsGemCalls/48823\n- New arc as we transition to Q4 soon. Have a great weekend gents !\n  https://t.me/PowsGemCalls/48913\n- Потенциальные ставки на Arc\n  https://t.me/WEB3_AGGREGATOR/422871\n- she’s head of product at arc and circle\n  https://t.me/spidersjournal/18984\n- 😐 На самом деле сейчас несется че то очень интересное, потому что и на Robinhood и на Arc и на Zcash, стали выходить коллекции, причем не для виду, а реально с кучей иксов. ну вы сами знаете.\n  https://t.me/WEB3_AGGREGATOR/423142\n- По поводу самого арка - Тут предыдущий список того, что есть на Arc, но там уже на всём сотни процентов плюса. Из того, что не подсвечивал, но тоже может быть интересно:\n  https://t.me/WEB3_AGGREGATOR/423150\n- Самое необычное у Arc — валидаторы.\nБлоки печатают не анонимы, а BlackRock, Visa, Mastercard, DTCC, Standard Chartered, Galaxy, ICE, MoneyGram и другие — 11 крупнейших имён традиционных финансов.\n  https://t.me/WEB3_AGGREGATOR/423227\n\n## Вопросы, аргументы и опыт участников\n\n- По багз от анвалт кто-то понял механику распределения гарантов? Я примерно понял, что на каждую коллекцию партнёра будет определённое количество спотов, то бишь даже на стадии гаранта будет фкфс. Но так ли это на самом деле?\n  основание: предмет реплики — сторонний сервис/коллекция экосистемы, не событие темы\n  https://t.me/whitelist1/7130?comment=571146\n- Во сколько Arc запуск? Никто не знает\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7138?comment=571572\n- https://dexscreener.com/arc\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7138?comment=571576\n- так пока хайповых коллекций и не вышло, не?\n  основание: предмет реплики — сторонний сервис/коллекция экосистемы, не событие темы\n  https://t.me/whitelist1/7139?comment=571605\n- arcadians уменьшили саплай и цену поменяли были\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7139?comment=571615\n- скам значит\n  основание: предмет реплики — сторонний сервис/коллекция экосистемы, не событие темы\n  https://t.me/whitelist1/7139?comment=571617\n- у арклингс сайт вообще лежит)\n  основание: предмет реплики — сторонний сервис/коллекция экосистемы, не событие темы\n  https://t.me/whitelist1/7139?comment=571620\n- https://opensea.io/collection/onchainsharc-791982284\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/whitelist1/7139?comment=571626\n- А я чет отвлекся и забы(и) л из-за их сайта глючного\n  основание: предмет реплики — сторонний сервис/коллекция экосистемы, не событие темы\n  https://t.me/whitelist1/7139?comment=571649\n- АКА отлично покормили, а вот Arclings походу заскамили на 12 баксов\n  основание: предмет реплики — сторонний сервис/коллекция экосистемы, не событие темы\n  https://t.me/whitelist1/7143?comment=571726\n- 💹 #NEAR +107% с начала сентября. \n\n➟ В NEAR сделали фьючерсы на базе Hyperliquid приватными по умолчанию.\n\n➟ После роста объема активов в приватной инфраструктуре NEAR выше $70m – проект сделал снепшот для раздачи 333,333 наградных токенов.\n  основание: вопрос или оценка по проекту в целом, не по конкретной новости\n  https://t.me/rawa_imagination/21118?comment=343272\n- Может я не до конца понимаю, но по мне, так как раз наоборот - достаточно узкоспециализированное применение у него. Потому что он рассчитывает вероятности вариантов, и на их основе выбирает наилучший. Этакий \"диспетчер\". Поэтому он хорош в \n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/icodrops_sergey/2427?comment=150626\n\n## Изменения относительно предыдущего периода\n\n- Появившиеся события: 56.\n- Исчезнувшие события: 0.\n- Изменение охвата источников: +20 / −0 каналов.\n- Комментарии в текущем окне: 1689.\n\n## Охват и ограничения\n\n- Публикации 13985, комментарии 1689, каналы 20.\n- Режим publication_replay: discovered_at в снимке отсутствует, «впервые системой» не заявляется.\n- Роль источника unknown: в базе нет редакционного реестра.\n- Неизвестные авторы не объединяются.\n- Отсечено после cutoff 2026-09-24T00:00:00+00:00: 0.\n\n## Основания\n\n- https://t.me/WEB3_AGGREGATOR/422750: «01:51:53 Про Arc»\n- https://t.me/WEB3_AGGREGATOR/422826: «50 коллекций на Arc»\n- https://t.me/WEB3_AGGREGATOR/422853: «16 сентября Circle запускает Arc, собственный L1.»\n- https://t.me/Slavik_investor_updates/6918: «Circle 16 сентября запускает Arc - собственный L1 под стейблкоин-финансы. USDC перестаёт быть просто токеном внутри чужих сетей и становится основой своей экоси»\n- https://t.me/CryptoEarnImp/10991: «Сегодня (спасибо за поправку @intelligent_ua) кстати мейннет Arc, можно будет бриджить через Jumper.»\n- https://t.me/WEB3_AGGREGATOR/423093: «Сегодня (спасибо за поправку @intelligent_ua) кстати мейннет Arc, можно будет бриджить через Jumper.»\n- https://t.me/WEB3_AGGREGATOR/423100: «Arc, the stablecoin-native Layer-1 built by Circle, launched its public mainnet, positioning itself as an \"Economic OS for the internet\" with USDC as the native»\n- https://t.me/WEB3_AGGREGATOR/423143: «🪙 Circle запустила мейннет Arc — сеть уже принимает транзакции, а за первые два часа в неё завели более $370 млн USDC.»\n- https://t.me/WEB3_AGGREGATOR/422853: «В мае прошел закрытый пресейл токена ARC, где собрали $222 млн по оценке $3 млрд.»\n- https://t.me/WEB3_AGGREGATOR/422853: «USDC это деньги и газ, а ARC это актив сети, не акция Circle и не доля в резервах.»\n- https://t.me/WEB3_AGGREGATOR/422864: «До Arc mainnet остались считаные дни»\n- https://t.me/WEB3_AGGREGATOR/422864: «О Arc я рассказывал ранее, так как майнет меньше чем через неделю, самое время освежить транзы и активность, что бы претендовать на дроп»\n- https://t.me/WEB3_AGGREGATOR/422864: «Также, Fomo о котором рассказывал ранее, вместе с Opensea, обещали поддерживать Arc с первого дня майнета, мемчикам и нфт быть! 🙏»\n- https://t.me/cryptoattack24/96700: «👍 Запуск основной сети Arc»\n- https://t.me/cryptoattack24/96700: «👍 #OVPP OpenVPP запустит GridProof в основной сети Arc»\n- https://t.me/WEB3_AGGREGATOR/422881: «👍 #OVPP OpenVPP запустит GridProof в основной сети Arc»\n- https://t.me/cryptoattack24/96700: «👍 #RIZE RIZE выпустит T-RIZE в основной сети Arc»\n- https://t.me/WEB3_AGGREGATOR/422881: «👍 #RIZE RIZE выпустит T-RIZE в основной сети Arc»\n- https://t.me/cryptoattack24/96700: «🤝 #TPT TokenPocket Token интегрируется с основной сетью Arc»\n- https://t.me/WEB3_AGGREGATOR/422881: «🤝 #TPT TokenPocket Token интегрируется с основной сетью Arc»\n",
+  "model": "deepseek/deepseek-v4-flash",
+  "llm": {
+    "calls": 0,
+    "cache_hits": 348,
+    "spent_usd": 0.0,
+    "errors": []
+  }
+}

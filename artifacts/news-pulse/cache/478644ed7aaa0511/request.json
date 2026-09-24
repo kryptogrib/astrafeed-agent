@@ -1,0 +1,17 @@
+{
+ "segments": [
+  {
+   "id": "telegram:1:7138#s4",
+   "text": "👍Напомним, что Arc выходит в Mainnet уже сегодня, а вместе с ним и многие NFT коллекции, сверяемся с постом. \n",
+   "mentions": [
+    {
+     "text": "Arc",
+     "status": "confirmed"
+    }
+   ],
+   "kind_hint": "post",
+   "url": "https://t.me/whitelist1/7138",
+   "time": "2026-09-16T07:01:49+00:00"
+  }
+ ]
+}

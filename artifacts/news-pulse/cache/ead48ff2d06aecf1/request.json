@@ -1,0 +1,17 @@
+{
+ "segments": [
+  {
+   "id": "telegram:1:7130#s39",
+   "text": "• DN404 в Arc; \n",
+   "mentions": [
+    {
+     "text": "Arc",
+     "status": "confirmed"
+    }
+   ],
+   "kind_hint": "post",
+   "url": "https://t.me/whitelist1/7130",
+   "time": "2026-09-11T12:04:59+00:00"
+  }
+ ]
+}

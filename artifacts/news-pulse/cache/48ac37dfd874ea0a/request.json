@@ -1,0 +1,21 @@
+{
+ "segments": [
+  {
+   "id": "telegram:11:96837#s0",
+   "text": "📊 #BTC #ETH #ETF На прошлой неделе (с 14 по 18 августа) общий чистый приток спотовых BTC-ETF составил ~$6,21 млн; \n",
+   "mentions": [
+    {
+     "text": "#ETH",
+     "status": "confirmed"
+    },
+    {
+     "text": "ETH",
+     "status": "confirmed"
+    }
+   ],
+   "kind_hint": "post",
+   "url": "https://t.me/cryptoattack24/96837",
+   "time": "2026-09-21T03:53:01+00:00"
+  }
+ ]
+}

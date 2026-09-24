@@ -1,0 +1,45 @@
+{
+ "segments": [
+  {
+   "id": "telegram:15:423315#s7",
+   "text": "• Выводите с Gate, комиссия будет 0.001 $ZEC (но минималка на вывод 0.01 $ZEC), или же с MEXC, тут комса на вывод - 0.005 $ZEC (на том же Бинансе или OKX комиссия будет 0.01 $ZEC, а это прям грабеж);\n",
+   "mentions": [
+    {
+     "text": "$ZEC",
+     "status": "confirmed"
+    },
+    {
+     "text": "ZEC",
+     "status": "confirmed"
+    },
+    {
+     "text": "$ZEC",
+     "status": "confirmed"
+    },
+    {
+     "text": "ZEC",
+     "status": "confirmed"
+    },
+    {
+     "text": "$ZEC",
+     "status": "confirmed"
+    },
+    {
+     "text": "ZEC",
+     "status": "confirmed"
+    },
+    {
+     "text": "$ZEC",
+     "status": "confirmed"
+    },
+    {
+     "text": "ZEC",
+     "status": "confirmed"
+    }
+   ],
+   "kind_hint": "post",
+   "url": "https://t.me/WEB3_AGGREGATOR/423315",
+   "time": "2026-09-18T18:37:10+00:00"
+  }
+ ]
+}

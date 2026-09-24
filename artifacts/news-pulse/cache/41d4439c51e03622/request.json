@@ -1,0 +1,25 @@
+{
+ "a": {
+  "quote": "Общий чистый приток спотовых ETH-ETF составил $162,2 млн.",
+  "actor": null,
+  "action": "чистый приток",
+  "object": "спотовые ETH-ETF",
+  "qualifiers": {
+   "amount": "$162,2 млн"
+  },
+  "url": "https://t.me/cryptoattack24/96890"
+ },
+ "b": {
+  "quote": "Вчера общий чистый приток спотовых BTC-ETF составил ~$159,5 млн.",
+  "actor": null,
+  "action": "net inflow",
+  "object": "spot BTC-ETF",
+  "qualifiers": {
+   "version": null,
+   "event_date": "вчера",
+   "place": null,
+   "counterparty": null
+  },
+  "url": "https://t.me/cryptoattack24/96795"
+ }
+}

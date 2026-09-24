@@ -1,0 +1,25 @@
+{
+ "a": {
+  "quote": "Общий чистый отток спотовых ETH-ETF составил $224,1 млн.",
+  "actor": "null",
+  "action": "net outflow from spot ETH ETFs",
+  "object": "ETH ETFs",
+  "qualifiers": {
+   "version": "$224.1 million",
+   "event_date": "2026-09-16T04:21:01+00:00",
+   "place": "null"
+  },
+  "url": "https://t.me/cryptoattack24/96773"
+ },
+ "b": {
+  "quote": "Самое интересное – злоумышленники используют смарт-контракты Ethereum для обновления адресов управляющих серверов и источников загрузки вируса, что усложняет блокировку инфраструктуры.",
+  "actor": "attackers",
+  "action": "use",
+  "object": "Ethereum smart contracts",
+  "qualifiers": {
+   "event_date": "2026-09-16T12:55:11+00:00",
+   "place": "null"
+  },
+  "url": "https://t.me/crypto_hd/31457"
+ }
+}

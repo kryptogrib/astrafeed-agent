@@ -1,0 +1,46 @@
+{
+ "id": "gen-1790194760-FBoGGaExw28YA6SzTLAY",
+ "object": "chat.completion",
+ "created": 1790194760,
+ "model": "deepseek/deepseek-v4-flash",
+ "provider": "Venice",
+ "system_fingerprint": null,
+ "service_tier": null,
+ "choices": [
+  {
+   "index": 0,
+   "logprobs": null,
+   "finish_reason": "stop",
+   "native_finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "content": "{\"labels\": [{\"id\": \"telegram:9:1043837#s0\", \"kind\": \"promo_service\", \"actor\": null, \"action\": \"reports\", \"object\": \"ETH options max pain price\", \"qualifiers\": {\"price\": \"$2,250\", \"notional_value\": \"$2.13 billion\", \"put_call_ratio\": \"0.61\"}, \"origin\": \"own\", \"source_role\": \"editorial\", \"verification_status\": \"unverified\", \"quote\": \"ETHEREUM MAX PAIN PRICE $2,250, $2.13 BILLION NOTIONAL VALUE, PUT/CALL RATIO 0.61\", \"span\": [0, 82]}, {\"id\": \"telegram:18:31580#s3\", \"kind\": \"author_position\", \"actor\": null, \"action\": \"predicts\", \"object\": \"ETH demand increase\", \"qualifiers\": {\"event_date\": null, \"place\": null, \"counterparty\": null}, \"origin\": \"own\", \"source_role\": \"editorial\", \"verification_status\": \"unverified\", \"quote\": \"Рост таких платежей может увеличить спрос на блокчейн-инфраструктуру и нативные токены сетей, включая ETH, через комиссии, валидаторов и спрос на блокспейс.\", \"span\": [0, 155]}, {\"id\": \"telegram:21:21158#s2\", \"kind\": \"promo_service\", \"actor\": null, \"action\": \"reports\", \"object\": \"ETH funding rate\", \"qualifiers\": {\"binance\": \"+0.0047%\", \"bybit\": \"+0.0023%\"}, \"origin\": \"own\", \"source_role\": \"editorial\", \"verification_status\": \"unverified\", \"quote\": \"ETH: Binance: +0.0047% 🐂 | Bybit: +0.0023% 🐂\", \"span\": [0, 55]}, {\"id\": \"telegram:15:423633#s2\", \"kind\": \"promo_service\", \"actor\": null, \"action\": \"reports\", \"object\": \"Ethereum price\", \"qualifiers\": {\"price\": \"$2,740\", \"change\": \"+0.54%\"}, \"origin\": \"own\", \"source_role\": \"editorial\", \"verification_status\": \"unverified\", \"quote\": \"Ethereum: $2,740 +0.54%\", \"span\": [0, 25]}, {\"id\": \"telegram:15:423634#s0\", \"kind\": \"event\", \"actor\": \"Vitalik Buterin\", \"action\": \"announced\", \"object\": \"major Ethereum changes\", \"qualifiers\": {\"event_date\": \"within 2 years\", \"place\": null, \"counterparty\": null}, \"origin\": \"retelling\", \"source_role\": \"editorial\", \"verification_status\": \"source_statement\", \"quote\": \"Виталик Бутерин анонсировал масштабные изменения Ethereum в ближайшие 2 года.\", \"span\": [0, 80]}, {\"id\": \"telegram:15:423646#s2\", \"kind\": \"event\", \"actor\": \"Flare\", \"action\": \"accepted\", \"object\": \"FXRP as collateral on Morpho on Ethereum\", \"qualifiers\": {\"event_date\": \"early August\", \"place\": \"Ethereum\", \"counterparty\": \"Morpho\"}, \"origin\": \"own\", \"source_role\": \"editorial\", \"verification_status\": \"unverified\", \"quote\": \"FXRP, Flare's wrapped XRP, is the first XRP-based asset accepted as collateral in a major on-chain lending market, an institutionally curated $280M RLUSD vault built on Morpho on Ethereum and live since early August.\", \"span\": [0, 200]}, {\"id\": \"telegram:1:7156#s4\", \"kind\": \"event\", \"actor\": null, \"action\": \"announces\", \"object\": \"Trace NFT mint on Ethereum\", \"qualifiers\": {\"price\": \"0.0033 ETH\", \"event_date\": null, \"place\": \"Ethereum\", \"counterparty\": null}, \"origin\": \"own\", \"source_role\": \"editorial\", \"verification_status\": \"unverified\", \"quote\": \"7,777 onchain ASCII NFT на Ethereum. Минт 0.0033 ETH\", \"span\": [0, 50]}, {\"id\": \"telegram:1:7156#s7\", \"kind\": \"event\", \"actor\": null, \"action\": \"announces\", \"object\": \"Inscription133 NFT mint\", \"qualifiers\": {\"price\": \"0.001 ETH\", \"event_date\": \"30 сентября\", \"place\": \"OpenSea\", \"counterparty\": null}, \"origin\": \"own\", \"source_role\": \"editorial\", \"verification_status\": \"unverified\", \"quote\": \"1,500 pixel NFT, минт 30 сентября на OpenSea по 0.001 ETH\", \"span\": [0, 50]}, {\"id\": \"telegram:1:7156#s9\", \"kind\": \"event\", \"actor\": null, \"action\": \"announces\", \"object\": \"ZTHAcademy NFT on Ethereum\", \"qualifiers\": {\"event_date\": null, \"place\": \"Ethereum\", \"counterparty\": null}, \"origin\": \"own\", \"source_role\": \"editorial\", \"verification_status\": \"unverified\", \"quote\": \"8,000 Ethereum NFT с dynamic traits и burn/Closet.\", \"span\": [0, 50]}, {\"id\": \"telegram:5:3265:c:186728#s0\", \"kind\": \"participant_reaction\", \"actor\": \"Satoshi's Tears Raph\", \"action\": \"changed opinion\", \"object\": \"BTC and altseason\", \"qualifiers\": {\"event_date\": null, \"place\": null, \"counterparty\": null}, \"origin\": \"own\", \"source_role\": \"participant\", \"verification_status\": \"unverified\", \"quote\": \"The universe has cleared up so much that even Satoshi's Tears Raph has changed his tune and now believes in BTC and the Altseason!\", \"span\": [0, 100]}, {\"id\": \"telegram:5:3266:c:186840#s0\", \"kind\": \"participant_reaction\", \"actor\": null, \"action\": \"comments\", \"object\": \"market movement and ETH price\", \"qualifiers\": {\"price\": \"$2,608\", \"event_date\": null, \"place\": null, \"counterparty\": null}, \"origin\": \"own\", \"source_role\": \"participant\", \"verification_status\": \"unverified\", \"quote\": \"BTC $78,725 🔹ETH $2,608 (!) 🪙TON $1.37\", \"span\": [0, 50]}, {\"id\": \"telegram:8:2469:c:284102#s0\", \"kind\": \"participant_reaction\", \"actor\": null, \"action\": \"expresses hope\", \"object\": \"ETH price recovery to $3k\", \"qualifiers\": {\"price\": \"$3,000\", \"event_date\": null, \"place\": null, \"counterparty\": null}, \"origin\": \"own\", \"source_role\": \"participant\", \"verification_status\": \"unverified\", \"quote\": \"До 3к эфир подарочно выглядит\", \"span\": [0, 30]}]}",
+    "refusal": null,
+    "reasoning": null
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 2103,
+  "completion_tokens": 1662,
+  "total_tokens": 3765,
+  "cost": 0.0005230848,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.0005230848,
+   "upstream_inference_prompt_cost": 0.0002031498,
+   "upstream_inference_completions_cost": 0.000319935
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

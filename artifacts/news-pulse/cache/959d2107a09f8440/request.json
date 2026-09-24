@@ -1,0 +1,25 @@
+{
+ "segments": [
+  {
+   "id": "telegram:11:96755#s0",
+   "text": "🙅‍♂️ #ETH Ethereum и Base отказались от разработки общего стандарта кошельков после нескольких месяцев переговоров. coindesk.com",
+   "mentions": [
+    {
+     "text": "#ETH",
+     "status": "confirmed"
+    },
+    {
+     "text": "ETH",
+     "status": "confirmed"
+    },
+    {
+     "text": "Ethereum",
+     "status": "confirmed"
+    }
+   ],
+   "kind_hint": "post",
+   "url": "https://t.me/cryptoattack24/96755",
+   "time": "2026-09-16T08:30:46+00:00"
+  }
+ ]
+}

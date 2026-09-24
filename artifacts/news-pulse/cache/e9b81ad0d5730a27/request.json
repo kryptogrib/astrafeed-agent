@@ -1,0 +1,28 @@
+{
+ "a": {
+  "quote": "1INCH GOES LIVE ON CIRCLE’S ARC — SWAPS, WALLET & AQUA FROM DAY ONE ...",
+  "actor": "1inch",
+  "action": "went live",
+  "object": "on Arc",
+  "qualifiers": {
+   "version": null,
+   "event_date": "2026-09-16",
+   "place": null,
+   "counterparty": null
+  },
+  "url": "https://t.me/marketfeed/1039356"
+ },
+ "b": {
+  "quote": "Основная сеть Arc запустилась. Arc и OpenSea запустили бесплатный минт NFT:",
+  "actor": "Arc",
+  "action": "launched",
+  "object": "mainnet",
+  "qualifiers": {
+   "version": "mainnet",
+   "event_date": "2026-09-16",
+   "place": null,
+   "counterparty": "OpenSea"
+  },
+  "url": "https://t.me/WEB3_AGGREGATOR/423117"
+ }
+}

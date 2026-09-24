@@ -1,8 +1,9 @@
-# Публикуемый набор ETH: https://t.me/don_invest/5296
+# Публикуемый набор (ethereum,eth,ether): https://t.me/don_invest/5296
 
 Исходная разметка модели: `artifacts/pulse-eth/thread-5296/v3/labels.json` (не меняется).
 Исправления: `artifacts/pulse-eth/thread-5296/v3/demo/corrections.json` — агентская проверка 2026-09-24, не человеческая. Помечены «испр.».
 Опубликовано 7, отложено на проверку 14 (флаг relevant_not_grounded).
+Опора публикации: `headline-hashtag/2026-09-24`. Совпадает с опорой во входе модели.
 
 | id | aspect | kind | пересказ | цитата | испр. |
 |---|---|---|---|---|---|

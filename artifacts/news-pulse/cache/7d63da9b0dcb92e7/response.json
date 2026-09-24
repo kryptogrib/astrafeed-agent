@@ -1,0 +1,46 @@
+{
+ "id": "gen-1790195485-fmdDt32cfWgYPnkaE6J1",
+ "object": "chat.completion",
+ "created": 1790195485,
+ "model": "deepseek/deepseek-v4-flash",
+ "provider": "DeepInfra",
+ "system_fingerprint": null,
+ "service_tier": null,
+ "choices": [
+  {
+   "index": 0,
+   "logprobs": null,
+   "finish_reason": "stop",
+   "native_finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "content": "{\"labels\": [{\"id\": \"telegram:13:3756#s1\", \"kind\": \"event\", \"actor\": \"author\", \"action\": \"launch\", \"object\": \"bot\", \"qualifiers\": {\"version\": \"Ethereum\", \"event_date\": null, \"place\": null, \"counterparty\": null}, \"origin\": \"own\", \"source_role\": \"author\", \"verification_status\": \"source_statement\", \"quote\": \"Запустил бота на Ethereum всего на $100.\", \"span\": [0, 48]}, {\"id\": \"telegram:21:21117#s2\", \"kind\": \"promo_service\", \"actor\": null, \"action\": \"display\", \"object\": \"funding rates\", \"qualifiers\": {\"version\": null, \"event_date\": null, \"place\": null, \"counterparty\": null}, \"origin\": \"own\", \"source_role\": \"editorial\", \"verification_status\": \"unverified\", \"quote\": \"🔄 ФАНДИНГ (🐂 = быки платят медведям):\\n  BTC: Binance: +0.0065% 🐂 | Bybit: +0.0100% 🐂\\n  ETH: Binance: +0.0091% 🐂 | Bybit: +0.0100% 🐂\", \"span\": [0, 107]}, {\"id\": \"telegram:18:31503#s2\", \"kind\": \"event\", \"actor\": \"Bitcoin OG insider\", \"action\": \"place order\", \"object\": \"long position\", \"qualifiers\": {\"version\": \"BTC\", \"event_date\": null, \"place\": null, \"counterparty\": null}, \"origin\": \"retelling\", \"source_role\": \"editorial\", \"verification_status\": \"source_statement\", \"quote\": \"Инсайдер Bitcoin OG выставил ордер на открытие лонга на 2450 BTC (~$190m) по цене $78,000.\", \"span\": [0, 97]}, {\"id\": \"telegram:18:31503#s4\", \"kind\": \"event\", \"actor\": \"whale (11 wallets)\", \"action\": \"sell\", \"object\": \"BTC\", \"qualifiers\": {\"version\": null, \"event_date\": \"last three days\", \"place\": \"Hyperliquid\", \"counterparty\": null}, \"origin\": \"retelling\", \"source_role\": \"editorial\", \"verification_status\": \"source_statement\", \"quote\": \"11 новых кошельков, вероятно принадлежащих одному киту, за последние три дня продали 602 BTC за $45,8m на Hyperliquid и купили 18,780 ETH на ту же сумму.\", \"span\": [0, 148]}, {\"id\": \"telegram:18:31503#s6\", \"kind\": \"event\", \"actor\": \"whale 0x72e0\", \"action\": \"transfer\", \"object\": \"HYPE\", \"qualifiers\": {\"version\": null, \"event_date\": null, \"place\": \"FalconX\", \"counterparty\": null}, \"origin\": \"retelling\", \"source_role\": \"editorial\", \"verification_status\": \"source_statement\", \"quote\": \"Кит «0x72e0», вероятно, меняет HYPE на ETH. Он перевел 440,000 HYPE ($36m) в FalconX, после чего вывел 12,250 ETH ($30,1m).\", \"span\": [0, 120]}, {\"id\": \"telegram:18:31503#s7\", \"kind\": \"event\", \"actor\": \"whale/institutional (4 wallets)\", \"action\": \"buy\", \"object\": \"ETH\", \"qualifiers\": {\"version\": null, \"event_date\": null, \"place\": null, \"counterparty\": null}, \"origin\": \"retelling\", \"source_role\": \"editorial\", \"verification_status\": \"source_statement\", \"quote\": \"Четыре новых кошелька одного кита/институционала купили 6972 ETH ($17,15m) по средней цене $2460,69 и отправили всю позицию в стейкинг.\", \"span\": [0, 120]}, {\"id\": \"telegram:18:31504#s3\", \"kind\": \"event\", \"actor\": \"he (speaker)\", \"action\": \"state\", \"object\": \"opinion\", \"qualifiers\": {\"version\": \"Ethereum\", \"event_date\": null, \"place\": null, \"counterparty\": null}, \"origin\": \"retelling\", \"source_role\": \"editorial\", \"verification_status\": \"source_statement\", \"quote\": \"По его словам, инвесторы ошибались, считая, что Ethereum станет единым стандартом для институционального рынка.\", \"span\": [0, 100]}, {\"id\": \"telegram:15:423294#s2\", \"kind\": \"event\", \"actor\": \"they\", \"action\": \"have\", \"object\": \"collection\", \"qualifiers\": {\"version\": \"эфиру\", \"event_date\": null, \"place\": null, \"counterparty\": null}, \"origin\": \"own\", \"source_role\": \"author\", \"verification_status\": \"source_statement\", \"quote\": \"У них есть уже коллекция почти по эфиру.\", \"span\": [0, 42]}, {\"id\": \"telegram:18:31509#s1\", \"kind\": \"promo_service\", \"actor\": null, \"action\": \"promote\", \"object\": \"article\", \"qualifiers\": {\"version\": \"Arbitrum\", \"event_date\": null, \"place\": null, \"counterparty\": null}, \"origin\": \"own\", \"source_role\": \"editorial\", \"verification_status\": \"unverified\", \"quote\": \"🚀 Arbitrum: почему \\\"мертвый\\\" L2 ETH дает иксы?\", \"span\": [0, 47]}, {\"id\": \"telegram:15:423312#s0\", \"kind\": \"event\", \"actor\": \"Ethereum\", \"action\": \"propose\", \"object\": \"EIP-8198\", \"qualifiers\": {\"version\": null, \"event_date\": null, \"place\": null, \"counterparty\": null}, \"origin\": \"retelling\", \"source_role\": \"editorial\", \"verification_status\": \"source_statement\", \"quote\": \"Ethereum хочет ускорить базовый ритм сети — предложение EIP-8198 должно сделать длительность слота настраиваемой вместо жёстких 12 секунд, чтобы затем постепенно сокращать её.\", \"span\": [0, 150]}, {\"id\": \"telegram:15:423312#s1\", \"kind\": \"event\", \"actor\": \"Ethereum Foundation\", \"action\": \"include\", \"object\": \"initiative\", \"qualifiers\": {\"version\": null, \"event_date\": null, \"place\": null, \"counterparty\": null}, \"origin\": \"retelling\", \"source_role\": \"editorial\", \"verification_status\": \"source_statement\", \"quote\": \"Ethereum Foundation уже включила инициативу в B-tier для Hegotá.\", \"span\": [0, 65]}, {\"id\": \"telegram:18:31516#s1\", \"kind\": \"promo_service\", \"actor\": null, \"action\": \"promote\", \"object\": \"article\", \"qualifiers\": {\"version\": \"Arbitrum\", \"event_date\": null, \"place\": null, \"counterparty\": null}, \"origin\": \"own\", \"source_role\": \"editorial\", \"verification_status\": \"unverified\", \"quote\": \"❕Arbitrum (ARB): почему \\\"мертвый\\\" L2 ETH дает иксы? - статья\", \"span\": [0, 60]}]}",
+    "refusal": null,
+    "reasoning": null
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 1907,
+  "completion_tokens": 1761,
+  "total_tokens": 3668,
+  "cost": 0.00048861,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.00048861,
+   "upstream_inference_prompt_cost": 0.00017163,
+   "upstream_inference_completions_cost": 0.00031698
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

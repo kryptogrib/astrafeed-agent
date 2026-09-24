@@ -1,0 +1,23 @@
+{
+ "a": {
+  "quote": "Circle's Arc L1 hit mainnet",
+  "actor": "Circle",
+  "action": "hit mainnet",
+  "object": "Arc L1",
+  "qualifiers": {
+   "version": "mainnet"
+  },
+  "url": "https://t.me/WEB3_AGGREGATOR/423249"
+ },
+ "b": {
+  "quote": "Вчера Circle, эмитент стейблкоина USDC, запустила мейннет Arc — собственный блокчейн (L1) под платежи и токенизированные активы.",
+  "actor": "Circle",
+  "action": "launched mainnet",
+  "object": "Arc",
+  "qualifiers": {
+   "version": "mainnet",
+   "event_date": "yesterday"
+  },
+  "url": "https://t.me/WEB3_AGGREGATOR/423227"
+ }
+}

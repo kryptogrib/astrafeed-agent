@@ -1,0 +1,20 @@
+{
+ "a": {
+  "quote": "• Binance / Zcash — WSJ said Lagarde helped block Binance’s Europe push; Zcash targets a November privacy-payments upgrade.",
+  "actor": "WSJ",
+  "action": "said",
+  "object": "Lagarde helped block Binance’s Europe push; Zcash targets a November privacy-payments upgrade",
+  "qualifiers": {},
+  "url": "https://t.me/marketfeed/1041289"
+ },
+ "b": {
+  "quote": "Сообщество Zcash поддержало сокращение времени формирования блока с 75 до 25 секунд.",
+  "actor": "Zcash community",
+  "action": "support reduction",
+  "object": "block time",
+  "qualifiers": {
+   "version": "from 75 to 25 seconds"
+  },
+  "url": "https://t.me/crypto_hd/31484"
+ }
+}

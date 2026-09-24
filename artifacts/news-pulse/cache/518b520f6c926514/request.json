@@ -1,0 +1,21 @@
+{
+ "segments": [
+  {
+   "id": "telegram:21:21078#s1",
+   "text": "$BMNR скупила уже 4,9% всего $ETH - остался всего 0,1% до цели. \n\n",
+   "mentions": [
+    {
+     "text": "$ETH",
+     "status": "confirmed"
+    },
+    {
+     "text": "ETH",
+     "status": "confirmed"
+    }
+   ],
+   "kind_hint": "post",
+   "url": "https://t.me/rawa_imagination/21078",
+   "time": "2026-09-14T12:37:44+00:00"
+  }
+ ]
+}

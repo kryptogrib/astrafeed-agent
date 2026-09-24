@@ -1,0 +1,17 @@
+{
+ "segments": [
+  {
+   "id": "telegram:15:423497#s2",
+   "text": "00:00 Начало. Мысли по рынку\n14:30 $PONS и $CASHCAT\n25:55 Смотрим мемы на Robinhood\n27:03 $MEME и $ZZZ\n30:45 $RKST\n33:52 $PONS vs $STONKS\n44:13 ETH, BNB и другие крупные активы\n",
+   "mentions": [
+    {
+     "text": "ETH",
+     "status": "confirmed"
+    }
+   ],
+   "kind_hint": "post",
+   "url": "https://t.me/WEB3_AGGREGATOR/423497",
+   "time": "2026-09-21T13:38:08+00:00"
+  }
+ ]
+}

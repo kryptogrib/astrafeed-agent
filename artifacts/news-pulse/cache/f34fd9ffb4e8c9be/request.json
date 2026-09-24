@@ -1,0 +1,26 @@
+{
+ "a": {
+  "quote": "6969 пиксельных лягушек на ZEC, free mint. Минимум 0.007 ZEC на газ;",
+  "actor": null,
+  "action": "announcement of free mint",
+  "object": "6969 pixel frogs on ZEC",
+  "qualifiers": {
+   "version": null,
+   "event_date": null,
+   "place": null,
+   "counterparty": null
+  },
+  "url": "https://t.me/whitelist1/7149"
+ },
+ "b": {
+  "quote": "2,800 рукописных пиксельных NFT на Zcash. Цена 0.02 ZEC. WL: 1 на кошелек, public: 3 на кошелек",
+  "actor": null,
+  "action": "2,800 рукописных пиксельных NFT на Zcash. Цена 0.02 ZEC. WL: 1 на кошелек, public: 3 на кошелек",
+  "object": "NFT",
+  "qualifiers": {
+   "price": "0.02 ZEC",
+   "supply": "2800"
+  },
+  "url": "https://t.me/whitelist1/7149"
+ }
+}

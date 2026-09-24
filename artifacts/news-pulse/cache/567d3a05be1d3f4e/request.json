@@ -1,0 +1,22 @@
+{
+ "a": {
+  "quote": "AKA DN404 — первая коллекция на Arc: NFT + ERC-20 в одном активе, а комиссии идут в RWA",
+  "actor": "unknown",
+  "action": "first collection on Arc",
+  "object": "AKA DN404",
+  "qualifiers": {
+   "place": "Arc"
+  },
+  "url": "https://t.me/WEB3_AGGREGATOR/423153"
+ },
+ "b": {
+  "quote": "Arclings — первая полностью ончейн 1-bit коллекция на Arc",
+  "actor": "unknown",
+  "action": "first on-chain collection",
+  "object": "Arclings",
+  "qualifiers": {
+   "place": "Arc"
+  },
+  "url": "https://t.me/WEB3_AGGREGATOR/423153"
+ }
+}

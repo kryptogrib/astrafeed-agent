@@ -1,0 +1,25 @@
+{
+ "segments": [
+  {
+   "id": "telegram:11:96730#s0",
+   "text": "📉 #ETH Santiment: количество ETH на биржах достигло 11-летнего минимума.",
+   "mentions": [
+    {
+     "text": "#ETH",
+     "status": "confirmed"
+    },
+    {
+     "text": "ETH",
+     "status": "confirmed"
+    },
+    {
+     "text": "ETH",
+     "status": "confirmed"
+    }
+   ],
+   "kind_hint": "post",
+   "url": "https://t.me/cryptoattack24/96730",
+   "time": "2026-09-15T03:51:01+00:00"
+  }
+ ]
+}

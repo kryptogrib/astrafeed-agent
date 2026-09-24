@@ -1,0 +1,32 @@
+{
+ "choices": [
+  {
+   "message": {
+    "content": "{\"labels\": [{\"id\": \"telegram:15:423462#s1\", \"kind\": \"event\", \"actor\": \"attacker\", \"action\": \"drained\", \"object\": \"Fetch.ai's Ethereum token converter\", \"qualifiers\": {\"version\": \"leaked signing key, reused same key to hit NuNet, roughly $2M across two AI projects\"}, \"origin\": \"own\", \"source_role\": \"editorial\", \"verification_status\": \"unverified\", \"quote\": \"An attacker used a leaked signing key to drain Fetch.ai's Ethereum token converter, then reused the same key to hit NuNet, walking away with roughly $2M across the two AI projects in one coordinated attack.\", \"span\": [0, 199]}]}"
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 1932,
+  "completion_tokens": 1826,
+  "total_tokens": 3758,
+  "cost": 0.000409679872,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 256,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.000409679872,
+   "upstream_inference_prompt_cost": 0.000131543552,
+   "upstream_inference_completions_cost": 0.00027813632
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

@@ -1,0 +1,25 @@
+{
+ "a": {
+  "quote": "Circle's Arc Stablecoin L1 Goes Live on Mainnet",
+  "actor": "Circle",
+  "action": "launch",
+  "object": "Arc Stablecoin L1",
+  "qualifiers": {
+   "event_date": "Goes Live on Mainnet"
+  },
+  "url": "https://t.me/WEB3_AGGREGATOR/423100"
+ },
+ "b": {
+  "quote": "More than 190 institutional and ecosystem teams are already building on Arc, one of the most institutionally backed genesis cohorts the industry has seen, as Circle pushes stablecoins deeper into regulated finance.",
+  "actor": "Circle",
+  "action": "announced",
+  "object": "Arc",
+  "qualifiers": {
+   "version": null,
+   "event_date": "2026-09-16",
+   "place": null,
+   "counterparty": null
+  },
+  "url": "https://t.me/WEB3_AGGREGATOR/423100"
+ }
+}

@@ -1,0 +1,46 @@
+{
+ "id": "gen-1790195404-yO7A5CkrZ8leiKY9mHgD",
+ "object": "chat.completion",
+ "created": 1790195404,
+ "model": "deepseek/deepseek-v4-flash",
+ "provider": "Alibaba",
+ "system_fingerprint": null,
+ "service_tier": null,
+ "choices": [
+  {
+   "index": 0,
+   "logprobs": null,
+   "finish_reason": "stop",
+   "native_finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "content": "{\n  \"labels\": [\n    {\n      \"id\": \"telegram:18:31457#s4\",\n      \"kind\": \"event\",\n      \"actor\": \"злоумышленники\",\n      \"action\": \"используют\",\n      \"object\": \"смарт-контракты Ethereum\",\n      \"qualifiers\": {},\n      \"origin\": \"retelling\",\n      \"source_role\": \"editorial\",\n      \"verification_status\": \"unverified\",\n      \"quote\": \"злоумышленники используют смарт-контракты Ethereum для обновления адресов управляющих серверов и источников загрузки вируса\",\n      \"span\": [0, 155]\n    },\n    {\n      \"id\": \"telegram:15:423102#s3\",\n      \"kind\": \"event\",\n      \"actor\": \"система\",\n      \"action\": \"конвертирует\",\n      \"object\": \"депозит\",\n      \"qualifiers\": {\"counterparty\": \"ZEC\"},\n      \"origin\": \"own\",\n      \"source_role\": \"author\",\n      \"verification_status\": \"source_statement\",\n      \"quote\": \"Система сама конвертирует депозит в ZEC\",\n      \"span\": [131, 170]\n    },\n    {\n      \"id\": \"telegram:15:423126#s1\",\n      \"kind\": \"event\",\n      \"actor\": null,\n      \"action\": \"mint\",\n      \"object\": \"NFT\",\n      \"qualifiers\": {\"version\": \"0.005\", \"place\": \"floor 0.01 eth\"},\n      \"origin\": \"own\",\n      \"source_role\": \"author\",\n      \"verification_status\": \"source_statement\",\n      \"quote\": \"Mint 0.005 -> floor 0.01 eth\",\n      \"span\": [17, 42]\n    },\n    {\n      \"id\": \"telegram:15:423129#s3\",\n      \"kind\": \"event\",\n      \"actor\": \"Aerie Capital\",\n      \"action\": \"launched\",\n      \"object\": \"new Morpho market on Ethereum mainnet\",\n      \"qualifiers\": {},\n      \"origin\": \"retelling\",\n      \"source_role\": \"editorial\",\n      \"verification_status\": \"unverified\",\n      \"quote\": \"Aerie Capital launched a new Morpho market on Ethereum mainnet\",\n      \"span\": [14, 72]\n    },\n    {\n      \"id\": \"telegram:15:423152#s1\",\n      \"kind\": \"event\",\n      \"actor\": null,\n      \"action\": \"reveal\",\n      \"object\": \"NFT\",\n      \"qualifiers\": {\"place\": \"флор 0.9 ETH\"},\n      \"origin\": \"retelling\",\n      \"source_role\": \"editorial\",\n      \"verification_status\": \"unverified\",\n      \"quote\": \"планируют ревилить свои NFT\",\n      \"span\": [0, 26]\n    },\n    {\n      \"id\": \"telegram:19:19001#s7\",\n      \"kind\": \"event\",\n      \"actor\": null,\n      \"action\": \"pre-sale\",\n      \"object\": \"token\",\n      \"qualifiers\": {\"counterparty\": \"Bitcoin, Ethereum and Arbitrum ecosystems\"},\n      \"origin\": \"own\",\n      \"source_role\": \"author\",\n      \"verification_status\": \"source_statement\",\n      \"quote\": \"Super early OGs from Bitcoin, Ethereum and Arbitrum ecosystems. Semi-fair launch and a super favorable pre-sale for early pirates ready to plunder!\",\n      \"span\": [0, 140]\n    },\n    {\n      \"id\": \"telegram:15:423158#s2\",\n      \"kind\": \"event\",\n      \"actor\": \"Мосбиржа\",\n      \"action\": \"запустит\",\n      \"object\": \"бессрочные фьючерсы на индексы #BTC, #ETH, #SOL, #XRP и #TRX\",\n      \"qualifiers\": {\"event_date\": \"22 сентября\"},\n      \"origin\": \"retelling\",\n      \"source_role\": \"editorial\",\n      \"verification_status\": \"unverified\",\n      \"quote\": \"Мосбиржа 22 сентября запустит бессрочные фьючерсы на индексы #BTC, #ETH, #SOL, #XRP и #TRX для квалифицированных инвесторов\",\n      \"span\": [0, 107]\n    },\n    {\n      \"id\": \"telegram:15:423161#s6\",\n      \"kind\": \"event\",\n      \"actor\": \"Zack\",\n      \"action\": \"ответил\",\n      \"object\": \"вопросы сообщества\",\n      \"qualifiers\": {},\n      \"origin\": \"retelling\",\n      \"source_role\": \"editorial\",\n      \"verification_status\": \"unverified\",\n      \"quote\": \"Zack: обновлений и сроков не будет.\",\n      \"span\": [0, 0]\n    },\n    {\n      \"id\": \"telegram:18:31472#s8\",\n      \"kind\": \"event\",\n      \"actor\": null,\n      \"action\": \"читать\",\n      \"object\": \"статья\",\n      \"qualifiers\": {},\n      \"origin\": \"own\",\n      \"source_role\": \"editorial\",\n      \"verification_status\": \"unverified\",\n      \"quote\": \"Ethereum и банковский вирус (читать)\",\n      \"span\": [0, 35]\n    },\n    {\n      \"id\": \"telegram:11:96773#s0\",\n      \"kind\": \"event\",\n      \"actor\": null,\n      \"action\": \"чистый отток\",\n      \"object\": \"спотовых BTC-ETF\",\n      \"qualifiers\": {\"version\": \"$295,9 млн\"},\n      \"origin\": \"retelling\",\n      \"source_role\": \"editorial\",\n      \"verification_status\": \"unverified\",\n      \"quote\": \"Вчера общий чистый отток спотовых BTC-ETF составил ~$295,9 млн.\",\n      \"span\": [0, 60]\n    },\n    {\n      \"id\": \"telegram:11:96773#s1\",\n      \"kind\": \"event\",\n      \"actor\": null,\n      \"action\": \"чистый отток\",\n      \"object\": \"спотовых ETH-ETF\",\n      \"qualifiers\": {\"version\": \"$224,1 млн\"},\n      \"origin\": \"retelling\",\n      \"source_role\": \"editorial\",\n      \"verification_status\": \"unverified\",\n      \"quote\": \"Общий чистый отток спотовых ETH-ETF составил $224,1 млн.\",\n      \"span\": [0, 52]\n    },\n    {\n      \"id\": \"telegram:18:31473#s2\",\n      \"kind\": \"event\",\n      \"actor\": \"Основатель Ethereum\",\n      \"action\": \"не согласен\",\n      \"object\": \"мнение\",\n      \"qualifiers\": {},\n      \"origin\": \"retelling\",\n      \"source_role\": \"editorial\",\n      \"verification_status\": \"unverified\",\n      \"quote\": \"Основатель Ethereum не согласен с мнением, что развитие AI неизбежно приведет к массовым взломам.\",\n      \"span\": [0, 100]\n    }\n  ]\n}",
+    "refusal": null,
+    "reasoning": null
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 2264,
+  "completion_tokens": 1594,
+  "total_tokens": 3858,
+  "cost": 0.000730568,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.000730568,
+   "upstream_inference_prompt_cost": 0.000303376,
+   "upstream_inference_completions_cost": 0.000427192
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

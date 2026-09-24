@@ -1,0 +1,17 @@
+{
+ "segments": [
+  {
+   "id": "telegram:1:7143#s10",
+   "text": "Arc Punks: \n",
+   "mentions": [
+    {
+     "text": "Arc",
+     "status": "confirmed"
+    }
+   ],
+   "kind_hint": "post",
+   "url": "https://t.me/whitelist1/7143",
+   "time": "2026-09-17T13:03:53+00:00"
+  }
+ ]
+}

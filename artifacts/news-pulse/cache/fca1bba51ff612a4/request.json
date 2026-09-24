@@ -1,0 +1,25 @@
+{
+ "a": {
+  "quote": "• Arclings: 6,283 fully on-chain 1-bit SVG, mint на день Arc Mainnet, 16 сентября;",
+  "actor": "Arclings",
+  "action": "mint on Arc Mainnet day",
+  "object": "Arclings NFTs",
+  "qualifiers": {
+   "event_date": "16 сентября"
+  },
+  "url": "https://t.me/whitelist1/7135"
+ },
+ "b": {
+  "quote": "More than 190 institutional and ecosystem teams are already building on Arc, one of the most institutionally backed genesis cohorts the industry has seen, as Circle pushes stablecoins deeper into regulated finance.",
+  "actor": "Circle",
+  "action": "announced",
+  "object": "Arc",
+  "qualifiers": {
+   "version": null,
+   "event_date": "2026-09-16",
+   "place": null,
+   "counterparty": null
+  },
+  "url": "https://t.me/WEB3_AGGREGATOR/423100"
+ }
+}

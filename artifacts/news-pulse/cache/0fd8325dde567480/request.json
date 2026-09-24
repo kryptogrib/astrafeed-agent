@@ -1,0 +1,26 @@
+{
+ "a": {
+  "quote": "Circle запустила мейннет Arc — сеть уже принимает транзакции, а за первые два часа в неё завели более $370 млн USDC.",
+  "actor": "Circle",
+  "action": "launched mainnet",
+  "object": "Arc",
+  "qualifiers": {
+   "event_date": "2026-09-16",
+   "place": "network"
+  },
+  "url": "https://t.me/WEB3_AGGREGATOR/423143"
+ },
+ "b": {
+  "quote": "Основная сеть Arc запустилась. Arc и OpenSea запустили бесплатный минт NFT:",
+  "actor": "Arc",
+  "action": "launched",
+  "object": "mainnet",
+  "qualifiers": {
+   "version": "mainnet",
+   "event_date": "2026-09-16",
+   "place": null,
+   "counterparty": "OpenSea"
+  },
+  "url": "https://t.me/WEB3_AGGREGATOR/423117"
+ }
+}

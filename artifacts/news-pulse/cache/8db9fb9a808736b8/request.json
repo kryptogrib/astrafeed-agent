@@ -1,0 +1,17 @@
+{
+ "segments": [
+  {
+   "id": "telegram:18:31386#s1",
+   "text": "У кита на бирже Hyperliquid ликвидировало шорт на $20,3m одним ордером (в паре ETH/USD).\n\n",
+   "mentions": [
+    {
+     "text": "ETH",
+     "status": "confirmed"
+    }
+   ],
+   "kind_hint": "post",
+   "url": "https://t.me/crypto_hd/31386",
+   "time": "2026-09-11T14:08:53+00:00"
+  }
+ ]
+}

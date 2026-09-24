@@ -1,0 +1,25 @@
+{
+ "segments": [
+  {
+   "id": "telegram:15:423328#s5",
+   "text": "👨‍💻 #ZEC Управляющий партнер Dragonfly предложил свернуть деятельность фонда разработчиков Zcash\n",
+   "mentions": [
+    {
+     "text": "#ZEC",
+     "status": "confirmed"
+    },
+    {
+     "text": "ZEC",
+     "status": "confirmed"
+    },
+    {
+     "text": "Zcash",
+     "status": "confirmed"
+    }
+   ],
+   "kind_hint": "post",
+   "url": "https://t.me/WEB3_AGGREGATOR/423328",
+   "time": "2026-09-18T20:22:19+00:00"
+  }
+ ]
+}

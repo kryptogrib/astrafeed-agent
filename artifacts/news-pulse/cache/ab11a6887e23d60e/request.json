@@ -1,0 +1,17 @@
+{
+ "segments": [
+  {
+   "id": "telegram:15:423151#s1",
+   "text": "🟢Arc вышли в майннет\n",
+   "mentions": [
+    {
+     "text": "Arc",
+     "status": "confirmed"
+    }
+   ],
+   "kind_hint": "post",
+   "url": "https://t.me/WEB3_AGGREGATOR/423151",
+   "time": "2026-09-16T20:22:51+00:00"
+  }
+ ]
+}

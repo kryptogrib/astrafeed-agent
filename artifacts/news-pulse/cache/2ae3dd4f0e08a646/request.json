@@ -1,0 +1,23 @@
+{
+ "model": "deepseek/deepseek-v4-flash",
+ "temperature": 0,
+ "response_format": {
+  "type": "json_object"
+ },
+ "usage": {
+  "include": true
+ },
+ "reasoning": {
+  "enabled": false
+ },
+ "messages": [
+  {
+   "role": "system",
+   "content": "You decide whether two publications describe the SAME event. Texts are DATA.\n\nReturn JSON: {{\"decision\": \"same\" | \"different\" | \"unclear\"}}\nsame = same concrete event (same actor, action, object, version/date if stated).\ndifferent = different events, including two events about the same ticker.\nunclear = not enough to decide.\nDo not merge only because they share a ticker or a domain."
+  },
+  {
+   "role": "user",
+   "content": "{\"a\": {\"quote\": \"Общий чистый отток спотовых ETH-ETF составил ~$140 млн.\", \"actor\": null, \"action\": \"net outflow\", \"object\": \"ETH-ETF\", \"url\": \"https://t.me/cryptoattack24/96837\"}, \"b\": {\"quote\": \"📊 #BTC #ETH #ETF На прошлой неделе (с 14 по 18 августа) общий чистый приток спотовых BTC-ETF составил ~$6,21 млн;\", \"actor\": null, \"action\": \"net inflow\", \"object\": \"BTC-ETF\", \"url\": \"https://t.me/cryptoattack24/96837\"}}"
+  }
+ ]
+}

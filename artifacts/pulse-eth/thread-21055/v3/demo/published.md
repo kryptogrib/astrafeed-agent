@@ -1,8 +1,9 @@
-# Публикуемый набор ETH: https://t.me/rawa_imagination/21055
+# Публикуемый набор (ethereum,eth,ether): https://t.me/rawa_imagination/21055
 
 Исходная разметка модели: `artifacts/pulse-eth/thread-21055/v3/labels.json` (не меняется).
 Исправления: `artifacts/pulse-eth/thread-21055/v3/demo/corrections.json` — агентская проверка 2026-09-24, не человеческая. Помечены «испр.».
 Опубликовано 14, отложено на проверку 0 (флаг relevant_not_grounded).
+Опора публикации: `headline-hashtag/2026-09-24`. Совпадает с опорой во входе модели.
 
 | id | aspect | kind | пересказ | цитата | испр. |
 |---|---|---|---|---|---|

@@ -1,0 +1,24 @@
+{
+ "a": {
+  "quote": "• Bitcoin breaks out; ETH also firmer — BTC hit an all-time high zone while short liquidations surged",
+  "actor": null,
+  "action": "Bitcoin breaks out; ETH firmer; BTC hit all-time high zone; short liquidations surged",
+  "object": "Bitcoin, ETH",
+  "qualifiers": {
+   "event_date": "2026-09-21",
+   "place": null,
+   "counterparty": null
+  },
+  "url": "https://t.me/marketfeed/1042279"
+ },
+ "b": {
+  "quote": "Сегодня утром европейские лорды проснулись, бахнули Макалана 76-го года, оценили пятничные притоки в ETF и решили немного закупиться $BTC и $ETH",
+  "actor": "европейские лорды",
+  "action": "проснулись, бахнули Макалана 76-го года, оценили пятничные притоки в ETF и решили немного закупиться $BTC и $ETH",
+  "object": "$BTC и $ETH",
+  "qualifiers": {
+   "event_date": "Сегодня утром"
+  },
+  "url": "https://t.me/rawa_imagination/21141"
+ }
+}

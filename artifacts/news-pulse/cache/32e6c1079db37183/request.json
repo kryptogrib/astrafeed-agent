@@ -1,0 +1,17 @@
+{
+ "segments": [
+  {
+   "id": "telegram:1:7152#s3",
+   "text": "🔘Сегодня в 20:00 по МСК пройдет минт CypherSquad NFT на ZEC. Минт Free, потребуется только на минт. Доступ проверяем в чекере.\n",
+   "mentions": [
+    {
+     "text": "ZEC",
+     "status": "confirmed"
+    }
+   ],
+   "kind_hint": "post",
+   "url": "https://t.me/whitelist1/7152",
+   "time": "2026-09-22T07:01:03+00:00"
+  }
+ ]
+}

@@ -1,0 +1,17 @@
+{
+ "segments": [
+  {
+   "id": "telegram:9:1042745#s20",
+   "text": "• Strategy/other treasuries keep buying — Strategy added 950 BTC; Strive also bought BTC, while BitMine expanded ETH holdings.\n",
+   "mentions": [
+    {
+     "text": "ETH",
+     "status": "confirmed"
+    }
+   ],
+   "kind_hint": "post",
+   "url": "https://t.me/marketfeed/1042745",
+   "time": "2026-09-21T20:30:29+00:00"
+  }
+ ]
+}

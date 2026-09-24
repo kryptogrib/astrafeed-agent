@@ -1,0 +1,25 @@
+{
+ "a": {
+  "quote": "выходят они 21 числа 13:00 UTC WL - инфа",
+  "actor": "ZEC NFT",
+  "action": "выходят 21 числа 13:00 UTC",
+  "object": "ZEC NFT",
+  "qualifiers": {
+   "event_date": "2026-09-21T13:00:00Z"
+  },
+  "url": "https://t.me/WEB3_AGGREGATOR/423375"
+ },
+ "b": {
+  "quote": "• ZecFrogs: 6,969 · FREE · 21 сен 20:00 МСК · 0.007 ZEC на газ (чекер);",
+  "actor": "ZecFrogs",
+  "action": "announce_mint",
+  "object": "NFT_collection",
+  "qualifiers": {
+   "supply": "6,969",
+   "price": "FREE",
+   "date": "2026-09-21T17:00:00Z",
+   "gas_fee": "0.007 ZEC"
+  },
+  "url": "https://t.me/whitelist1/7151"
+ }
+}

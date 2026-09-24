@@ -1,0 +1,28 @@
+{
+ "a": {
+  "quote": "📟Arc | фармим раннюю активность в mainnet",
+  "actor": "Arc",
+  "action": "launched",
+  "object": "mainnet",
+  "qualifiers": {
+   "version": "mainnet",
+   "event_date": "2026-09-16",
+   "place": null,
+   "counterparty": null
+  },
+  "url": "https://t.me/krasnovcrypto/3754"
+ },
+ "b": {
+  "quote": "RSoft Agentic Bank выиграл онлайн-трек хакатона LabLab x Arc с банком, клиентами которого были боты.",
+  "actor": "RSoft Agentic Bank",
+  "action": "won",
+  "object": "hackathon track",
+  "qualifiers": {
+   "version": null,
+   "event_date": "2026-09-16",
+   "place": "LabLab x Arc",
+   "counterparty": null
+  },
+  "url": "https://t.me/WEB3_AGGREGATOR/423105"
+ }
+}

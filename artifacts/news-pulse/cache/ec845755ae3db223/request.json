@@ -1,0 +1,26 @@
+{
+ "a": {
+  "quote": "🔘Подаем заявку в WL новой коллекции Zaddr (необходимо подключить X). Минт уже 21 сентября, mint price: 0.02 zec, 2,800 NFTs.",
+  "actor": null,
+  "action": "Подаем заявку в WL новой коллекции Zaddr",
+  "object": "Zaddr",
+  "qualifiers": {
+   "event_date": "21 сентября",
+   "place": "X"
+  },
+  "url": "https://t.me/whitelist1/7146"
+ },
+ "b": {
+  "quote": "Bitx запустили регистрацию в WL на дроп токенов стандарта ZRC20. Для участия нужно выполнить задания в Х и оставить кошелёк Zcash.",
+  "actor": "Bitx",
+  "action": "launched WL registration for ZRC20 token drop",
+  "object": "Zcash",
+  "qualifiers": {
+   "version": null,
+   "event_date": "2026-09-21",
+   "place": null,
+   "counterparty": null
+  },
+  "url": "https://t.me/WEB3_AGGREGATOR/423472"
+ }
+}

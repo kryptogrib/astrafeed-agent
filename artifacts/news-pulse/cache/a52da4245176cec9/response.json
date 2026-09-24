@@ -1,0 +1,46 @@
+{
+ "id": "gen-1790194221-POyEWaJzrk5Z21iAHoSb",
+ "object": "chat.completion",
+ "created": 1790194221,
+ "model": "deepseek/deepseek-v4-flash",
+ "provider": "Novita",
+ "system_fingerprint": null,
+ "service_tier": null,
+ "choices": [
+  {
+   "index": 0,
+   "logprobs": null,
+   "finish_reason": "stop",
+   "native_finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "content": "{\"labels\": [{\"id\": \"telegram:1:7137#s5\", \"kind\": \"promo_service\", \"actor\": null, \"action\": null, \"object\": null, \"qualifiers\": {}, \"origin\": \"own\", \"source_role\": \"author\", \"verification_status\": \"unverified\", \"quote\": \"Как получить TMF Pass (нужен, чтобы сминтить 2 Seat по 0.01 ETH):\", \"span\": [0, 66]}, {\"id\": \"telegram:18:31433#s2\", \"kind\": \"event\", \"actor\": \"кит на бирже Binance\", \"action\": \"ликвидировало лонг\", \"object\": \"лонг на $11,7m\", \"qualifiers\": {\"counterparty\": \"ETH/USDT\", \"place\": \"Binance\"}, \"origin\": \"own\", \"source_role\": \"editorial\", \"verification_status\": \"unverified\", \"quote\": \"У кита на бирже Binance ликвидировало лонг на $11,7m одним ордером (в паре ETH/USDT).\", \"span\": [0, 84]}, {\"id\": \"telegram:18:31434#s1\", \"kind\": \"event\", \"actor\": \"CryptoQuant\", \"action\": \"указывает на завершение медвежьего рынка\", \"object\": \"MVRV Ethereum\", \"qualifiers\": {}, \"origin\": \"own\", \"source_role\": \"editorial\", \"verification_status\": \"unverified\", \"quote\": \"🐃 CryptoQuant: MVRV Ethereum указывает на завершение медвежьего рынка.\", \"span\": [0, 76]}, {\"id\": \"telegram:18:31434#s2\", \"kind\": \"event\", \"actor\": \"индикатор MVRV\", \"action\": \"опускался и восстановился\", \"object\": \"MVRV\", \"qualifiers\": {\"version\": \"0,65\", \"event_date\": \"прошлые циклы\"}, \"origin\": \"own\", \"source_role\": \"editorial\", \"verification_status\": \"unverified\", \"quote\": \"Индикатор опускался примерно до 0,65, после чего восстановился выше 1. В прошлых циклах похожий сброс MVRV происходил в районе рыночного дна и предшествовал восстановлению ETH.\", \"span\": [0, 166]}, {\"id\": \"telegram:18:31434#s3\", \"kind\": \"author_position\", \"actor\": null, \"action\": null, \"object\": null, \"qualifiers\": {}, \"origin\": \"own\", \"source_role\": \"editorial\", \"verification_status\": \"unverified\", \"quote\": \"MVRV – соотношение рыночной стоимости ETH к реализованной стоимости. Значение ниже 1 означает, что в среднем монеты находятся в убытке, выше 1 – в прибыли.\", \"span\": [0, 151]}, {\"id\": \"telegram:15:423030#s12\", \"kind\": \"promo_service\", \"actor\": null, \"action\": null, \"object\": null, \"qualifiers\": {}, \"origin\": \"own\", \"source_role\": \"author\", \"verification_status\": \"unverified\", \"quote\": \"🟣Выполняем задания и после сможем 2 NFT по 0.01 ETH\", \"span\": [0, 57]}, {\"id\": \"telegram:3:6921#s2\", \"kind\": \"event\", \"actor\": \"казначейский совет Balancer\", \"action\": \"вынес на голосование план закрытия\", \"object\": \"план закрытия\", \"qualifiers\": {\"place\": \"Ethereum\", \"event_date\": \"2020\"}, \"origin\": \"own\", \"source_role\": \"editorial\", \"verification_status\": \"unverified\", \"quote\": \"Balancer - один из старейших DEX на Ethereum, работает с 2020, пережил не один цикл. Теперь казначейский совет вынес на голосование план закрытия.\", \"span\": [0, 145]}, {\"id\": \"telegram:18:31438#s2\", \"kind\": \"event\", \"actor\": null, \"action\": null, \"object\": null, \"qualifiers\": {}, \"origin\": \"own\", \"source_role\": \"editorial\", \"verification_status\": \"unverified\", \"quote\": \"1. Wrapped Bitcoin (на Optimism) #WBTC\\n2. Basic Attention Token #BAT\\n3. Humanity Protocol #H\\n4. WhiteBIT Coin #WBT\\n5. Sentient #SENT\\n6. The Sandbox #SAND\\n7. Virtuals Protocol #VIRTUAL\\n8. Kelp DAO Restaked ETH #RSETH\\n9. Chiliz #CHZ\\n10. Mantle #MNT\", \"span\": [0, 220]}, {\"id\": \"telegram:7:12225#s4\", \"kind\": \"event\", \"actor\": \"Создатель Unipeg\", \"action\": \"решил запустить новый эксперимент с NFT\", \"object\": \"Hypercars\", \"qualifiers\": {\"version\": \"ERC-721\"}, \"origin\": \"own\", \"source_role\": \"author\", \"verification_status\": \"unverified\", \"quote\": \"➖Создатель Unipeg решил запустить новый эксперимент с NFT, но слегка с другой идеей. Hypercars - это машинки, 3д модель которых хранится в контракте. Тут нет идеи сделать ликвидный токен и дробить нфт. Тут обычный ERC-721, но каждая NFT имеет свой backing в виде ETH, чтобы ты всегда мог ее слить. Звучит интересно, но где искать профит - пока не ясно.\", \"span\": [0, 286]}, {\"id\": \"telegram:7:12225#s12\", \"kind\": \"event\", \"actor\": \"аукцион\", \"action\": \"рассчитывается в ZEC\", \"object\": \"аукцион\", \"qualifiers\": {\"counterparty\": \"NEAR Intents\", \"place\": \"ZEC\"}, \"origin\": \"own\", \"source_role\": \"author\", \"verification_status\": \"unverified\", \"quote\": \"Аукцион рассчитывается в ZEC, но через NEAR Intents можно зайти ETH, SOL, BTC, стейблами и другими активами - система сама конвертирует их в ZEC. Выглядит интересно и уже привлекло достаточно внимания инфлов.\", \"span\": [0, 190]}, {\"id\": \"telegram:15:423060#s5\", \"kind\": \"event\", \"actor\": null, \"action\": null, \"object\": null, \"qualifiers\": {}, \"origin\": \"own\", \"source_role\": \"author\", \"verification_status\": \"unverified\", \"quote\": \"ETH Mainnet, Robinhood, Abstract, Base, ApeChain, Polygon, BNB.\\nДальше: Ink, HyperEVM, ZKsync и другие. Подключение новой сети ничего не стоит коллекциям, всё уже входит в плату за запуск.\", \"span\": [0, 157]}, {\"id\": \"telegram:15:423064#s6\", \"kind\": \"event\", \"actor\": \"киты\", \"action\": \"продают BTC\", \"object\": \"BTC\", \"qualifiers\": {}, \"origin\": \"own\", \"source_role\": \"author\", \"verification_status\": \"unverified\", \"quote\": \"– Киты продают BTC, а мелкие держатели покупают\", \"span\": [0, 48]}, {\"id\": \"telegram:15:423064#s6\", \"kind\": \"event\", \"actor\": \"CQ\", \"action\": \"считает, что медвежий тренд разворачивается\", \"object\": \"медвежий тренд\", \"qualifiers\": {}, \"origin\": \"own\", \"source_role\": \"author\", \"verification_status\": \"unverified\", \"quote\": \"– CQ считает, что иедвежий тренд разворачивается\", \"span\": [48, 96]}, {\"id\": \"telegram:15:423064#s6\", \"kind\": \"event\", \"actor\": \"кол-во #ETH на биржах\", \"action\": \"достигло 11-летнего минимума\", \"object\": \"#ETH\", \"qualifiers\": {\"place\": \"биржах\"}, \"origin\": \"own\", \"source_role\": \"author\", \"verification_status\": \"unverified\", \"quote\": \"– кол-во #ETH на биржах достигло 11-летнего минимума\", \"span\": [96, 148]}, {\"id\": \"telegram:15:423064#s6\", \"kind\": \"event\", \"actor\": \"крупнейшие L2\", \"action\": \"по выручке в 2026 году\", \"object\": \"L2\", \"qualifiers\": {\"event_date\": \"2026\"}, \"origin\": \"own\", \"source_role\": \"author\", \"verification_status\": \"unverified\", \"quote\": \"– крупнейшие L2 по выручке в 2026 году\", \"span\": [148, 190]}]}",
+    "refusal": null,
+    "reasoning": null
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 2110,
+  "completion_tokens": 2100,
+  "total_tokens": 4210,
+  "cost": 0.000854728,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 256,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.000854728,
+   "upstream_inference_prompt_cost": 0.000266728,
+   "upstream_inference_completions_cost": 0.000588
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

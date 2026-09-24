@@ -1,0 +1,149 @@
+{
+ "topic": "zec",
+ "title": "ZEC / Zcash",
+ "a": {
+  "window": "2026-09-17..2026-09-19",
+  "published": 23,
+  "held_for_review": 0,
+  "threads_with_published": [
+   "21112",
+   "2426"
+  ],
+  "by_thread": {
+   "21112": 1,
+   "2426": 22
+  },
+  "channels_with_published": [
+   "icodrops_sergey",
+   "rawa_imagination"
+  ],
+  "published_span": [
+   "2026-09-17 17:59:53.000000",
+   "2026-09-18 08:30:45.000000"
+  ],
+  "topics": {
+   "Цена и стадия роста": {
+    "comments": 21,
+    "authors": 17,
+    "threads": 1
+   },
+   "Сравнения с другими монетами": {
+    "comments": 2,
+    "authors": 2,
+    "threads": 2
+   }
+  },
+  "observations": [
+   "price_split"
+  ],
+  "verified": true
+ },
+ "b": {
+  "window": "2026-09-20..2026-09-22",
+  "published": 67,
+  "held_for_review": 9,
+  "threads_with_published": [
+   "2432",
+   "5299",
+   "7149",
+   "7151",
+   "7152"
+  ],
+  "by_thread": {
+   "2432": 1,
+   "5299": 26,
+   "7149": 25,
+   "7151": 14,
+   "7152": 1
+  },
+  "channels_with_published": [
+   "don_invest",
+   "icodrops_sergey",
+   "whitelist1"
+  ],
+  "published_span": [
+   "2026-09-20 12:51:13.000000",
+   "2026-09-22 13:19:42.000000"
+  ],
+  "topics": {
+   "Сравнения с другими монетами": {
+    "comments": 1,
+    "authors": 1,
+    "threads": 1
+   },
+   "Кошельки": {
+    "comments": 18,
+    "authors": 10,
+    "threads": 3
+   },
+   "Вайтлисты и минт": {
+    "comments": 41,
+    "authors": 16,
+    "threads": 3
+   },
+   "Рынок ZEC NFT": {
+    "comments": 7,
+    "authors": 5,
+    "threads": 3
+   }
+  },
+  "observations": [
+   "mint_access",
+   "wallet_noir",
+   "wl_revoke"
+  ],
+  "verified": true
+ },
+ "days": [
+  3,
+  3
+ ],
+ "shared_threads": [],
+ "topics_order": [
+  "Вайтлисты и минт",
+  "Цена и стадия роста",
+  "Кошельки",
+  "Рынок ZEC NFT",
+  "Сравнения с другими монетами"
+ ],
+ "threads": {
+  "21112": {
+   "link": "https://t.me/rawa_imagination/21112",
+   "channel": "rawa_imagination"
+  },
+  "2426": {
+   "link": "https://t.me/icodrops_sergey/2426",
+   "channel": "icodrops_sergey"
+  },
+  "2432": {
+   "link": "https://t.me/icodrops_sergey/2432",
+   "channel": "icodrops_sergey"
+  },
+  "5299": {
+   "link": "https://t.me/don_invest/5299",
+   "channel": "don_invest"
+  },
+  "7130": {
+   "link": "https://t.me/whitelist1/7130",
+   "channel": "whitelist1"
+  },
+  "7149": {
+   "link": "https://t.me/whitelist1/7149",
+   "channel": "whitelist1"
+  },
+  "7150": {
+   "link": "https://t.me/whitelist1/7150",
+   "channel": "whitelist1"
+  },
+  "7151": {
+   "link": "https://t.me/whitelist1/7151",
+   "channel": "whitelist1"
+  },
+  "7152": {
+   "link": "https://t.me/whitelist1/7152",
+   "channel": "whitelist1"
+  }
+ },
+ "grouping": "arguments-v2.json",
+ "cmd": "python3 docs/research/pulse_compare.py astrafeed.db zec 2026-09-17..2026-09-19 2026-09-20..2026-09-22"
+}

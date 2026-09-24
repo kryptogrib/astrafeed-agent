@@ -1,0 +1,25 @@
+{
+ "a": {
+  "quote": "• BITFOOTS: 303 1/1 · $5 в ZEC · заявки до 21 сен 17:00 МСК · mint на этой неделе;",
+  "actor": "BITFOOTS",
+  "action": "announce_mint",
+  "object": "NFT_collection",
+  "qualifiers": {
+   "supply": "303 1/1",
+   "price": "$5 in ZEC",
+   "deadline": "2026-09-21T14:00:00Z",
+   "mint_week": "this week"
+  },
+  "url": "https://t.me/whitelist1/7151"
+ },
+ "b": {
+  "quote": "выходят они 21 числа 13:00 UTC WL - инфа",
+  "actor": "ZEC NFT",
+  "action": "выходят 21 числа 13:00 UTC",
+  "object": "ZEC NFT",
+  "qualifiers": {
+   "event_date": "2026-09-21T13:00:00Z"
+  },
+  "url": "https://t.me/WEB3_AGGREGATOR/423375"
+ }
+}

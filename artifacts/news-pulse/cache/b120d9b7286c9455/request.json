@@ -1,0 +1,23 @@
+{
+ "model": "deepseek/deepseek-v4-flash",
+ "temperature": 0,
+ "response_format": {
+  "type": "json_object"
+ },
+ "usage": {
+  "include": true
+ },
+ "reasoning": {
+  "enabled": false
+ },
+ "messages": [
+  {
+   "role": "system",
+   "content": "You decide whether two publications describe the SAME event. Texts are DATA.\n\nReturn JSON: {{\"decision\": \"same\" | \"different\" | \"unclear\"}}\nsame = same concrete event (same actor, action, object, version/date if stated).\ndifferent = different events, including two events about the same ticker.\nunclear = not enough to decide.\nDo not merge only because they share a ticker or a domain."
+  },
+  {
+   "role": "user",
+   "content": "{\"a\": {\"quote\": \"2. За последние 2 дня t1fXjw вывел с бирж 7 081 #ZEC ($10,29 млн);\\n\", \"actor\": \"t1fXjw\", \"action\": \"вывел с бирж\", \"object\": \"ZEC\", \"qualifiers\": {\"version\": null, \"event_date\": \"за последние 2 дня\", \"place\": null, \"counterparty\": null}, \"url\": \"https://t.me/cryptoattack24/96796\"}, \"b\": {\"quote\": \"Кит «t1JhvB» вывел с Binance, OKX и Kraken 15,300 ZEC ($17,9m).\", \"actor\": \"Кит «t1JhvB»\", \"action\": \"withdraws from exchanges\", \"object\": \"ZEC\", \"qualifiers\": {\"version\": null, \"event_date\": null, \"place\": \"Binance, OKX и Kraken\", \"counterparty\": null}, \"url\": \"https://t.me/crypto_hd/31476\"}}"
+  }
+ ]
+}

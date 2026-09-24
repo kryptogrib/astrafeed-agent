@@ -1,0 +1,9 @@
+{
+ "prompt_version": "v3-relevance-summary",
+ "prompt_sha256": "d3afaa02e6ba13b0",
+ "input_sha256": "10bf2e5719ff2cbf",
+ "model": "deepseek/deepseek-v4-flash",
+ "provider_pinned": "DeepInfra",
+ "seconds": 75.6,
+ "provider_actual": "DeepInfra"
+}

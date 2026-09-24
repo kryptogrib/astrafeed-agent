@@ -1,0 +1,46 @@
+{
+ "id": "gen-1790191167-mD33YTatZpeH13kfz5ia",
+ "object": "chat.completion",
+ "created": 1790191167,
+ "model": "deepseek/deepseek-v4-flash",
+ "provider": "Venice",
+ "system_fingerprint": null,
+ "service_tier": null,
+ "choices": [
+  {
+   "index": 0,
+   "logprobs": null,
+   "finish_reason": "stop",
+   "native_finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "content": "{\"labels\": [{\"id\": \"telegram:11:96773#s0\", \"kind\": \"event\", \"actor\": null, \"action\": \"net outflow\", \"object\": \"BTC-ETF\", \"qualifiers\": {\"version\": \"spot\", \"event_date\": \"yesterday\", \"place\": null, \"counterparty\": null}, \"origin\": \"retelling\", \"source_role\": \"editorial\", \"verification_status\": \"unverified\", \"quote\": \"Вчера общий чистый отток спотовых BTC-ETF составил ~$295,9 млн.\", \"span\": [0, 60]}, {\"id\": \"telegram:11:96773#s1\", \"kind\": \"event\", \"actor\": null, \"action\": \"net outflow\", \"object\": \"ETH-ETF\", \"qualifiers\": {\"version\": \"spot\", \"event_date\": null, \"place\": null, \"counterparty\": null}, \"origin\": \"retelling\", \"source_role\": \"editorial\", \"verification_status\": \"unverified\", \"quote\": \"Общий чистый отток спотовых ETH-ETF составил $224,1 млн.\", \"span\": [0, 52]}, {\"id\": \"telegram:18:31473#s2\", \"kind\": \"author_position\", \"actor\": \"Ethereum founder\", \"action\": \"disagrees\", \"object\": \"opinion that AI development will inevitably lead to mass hacks\", \"qualifiers\": {}, \"origin\": \"retelling\", \"source_role\": \"editorial\", \"verification_status\": \"source_statement\", \"quote\": \"Основатель Ethereum не согласен с мнением, что развитие AI неизбежно приведет к массовым взломам.\", \"span\": [0, 93]}, {\"id\": \"telegram:18:31473#s3\", \"kind\": \"author_position\", \"actor\": \"Ethereum\", \"action\": \"plans to move in direction\", \"object\": \"security enhancement\", \"qualifiers\": {}, \"origin\": \"retelling\", \"source_role\": \"editorial\", \"verification_status\": \"source_statement\", \"quote\": \"Именно в этом направлении в Ethereum планируют двигаться в ближайшие несколько лет.\", \"span\": [0, 80]}, {\"id\": \"telegram:11:96776#s1\", \"kind\": \"event\", \"actor\": \"0xC2f1\", \"action\": \"withdrew and staked\", \"object\": \"ETH\", \"qualifiers\": {\"version\": null, \"event_date\": null, \"place\": \"Gemini\", \"counterparty\": null}, \"origin\": \"own\", \"source_role\": \"editorial\", \"verification_status\": \"unverified\", \"quote\": \"0xC2f1 вывел 2 695 #ETH ($6,94 млн) с Gemini и разместил их в стейкинге\", \"span\": [0, 68]}, {\"id\": \"telegram:11:96776#s1\", \"kind\": \"event\", \"actor\": \"0x3F2c\", \"action\": \"withdrew\", \"object\": \"ETH\", \"qualifiers\": {\"version\": null, \"event_date\": null, \"place\": \"Binance\", \"counterparty\": null}, \"origin\": \"own\", \"source_role\": \"editorial\", \"verification_status\": \"unverified\", \"quote\": \"0x3F2c вывел 2 500 #ETH ($6,02 млн) с Binance после 9 месяцев бездействия.\", \"span\": [70, 140]}, {\"id\": \"telegram:18:31476#s3\", \"kind\": \"event\", \"actor\": \"0xC2f1\", \"action\": \"withdrew and staked\", \"object\": \"ETH\", \"qualifiers\": {\"version\": null, \"event_date\": null, \"place\": \"Gemini\", \"counterparty\": null}, \"origin\": \"retelling\", \"source_role\": \"editorial\", \"verification_status\": \"unverified\", \"quote\": \"Кит «0xC2f1» вывел с Gemini 2695 ETH ($6,94m) и сразу отправил всю позицию в стейкинг.\", \"span\": [0, 88]}, {\"id\": \"telegram:18:31476#s3\", \"kind\": \"event\", \"actor\": \"0x3F2c\", \"action\": \"withdrew\", \"object\": \"ETH\", \"qualifiers\": {\"version\": null, \"event_date\": null, \"place\": \"Binance\", \"counterparty\": null}, \"origin\": \"retelling\", \"source_role\": \"editorial\", \"verification_status\": \"unverified\", \"quote\": \"Еще один кит «0x3F2c» после 9 месяцев бездействия вывел с Binance 2500 ETH ($6,02m).\", \"span\": [90, 160]}, {\"id\": \"telegram:18:31476#s4\", \"kind\": \"event\", \"actor\": \"0x0058\", \"action\": \"bought\", \"object\": \"ETH\", \"qualifiers\": {\"version\": null, \"event_date\": null, \"place\": null, \"counterparty\": null}, \"origin\": \"own\", \"source_role\": \"editorial\", \"verification_status\": \"unverified\", \"quote\": \"Инвестор «0x0058» потратил 13m USDC на покупку 5368 ETH по средней цене $2422.\", \"span\": [0, 80]}, {\"id\": \"telegram:15:423173#s1\", \"kind\": \"author_position\", \"actor\": \"Ethereum\", \"action\": \"plans to move in direction\", \"object\": \"security enhancement\", \"qualifiers\": {}, \"origin\": \"retelling\", \"source_role\": \"editorial\", \"verification_status\": \"source_statement\", \"quote\": \"Именно в эту сторону Ethereum планирует двигаться в ближайшие годы.\", \"span\": [0, 60]}, {\"id\": \"telegram:21:21109#s2\", \"kind\": \"event\", \"actor\": null, \"action\": \"funding rate\", \"object\": \"ETH\", \"qualifiers\": {\"version\": null, \"event_date\": null, \"place\": \"Binance, Bybit\", \"counterparty\": null}, \"origin\": \"own\", \"source_role\": \"editorial\", \"verification_status\": \"unverified\", \"quote\": \"ETH: Binance: +0.0033% 🐂 | Bybit: +0.0067% 🐂\", \"span\": [30, 80]}, {\"id\": \"telegram:11:96782#s0\", \"kind\": \"event\", \"actor\": \"BlackRock\", \"action\": \"transferred\", \"object\": \"ETH\", \"qualifiers\": {\"version\": null, \"event_date\": null, \"place\": \"Coinbase Prime\", \"counterparty\": null}, \"origin\": \"own\", \"source_role\": \"editorial\", \"verification_status\": \"unverified\", \"quote\": \"BlackRock перевели на Coinbase Prime 54 096 #ETH (131,7 млн $)\", \"span\": [0, 60]}, {\"id\": \"telegram:10:385211#s0\", \"kind\": \"event\", \"actor\": \"BlackRock\", \"action\": \"started transferring\", \"object\": \"ETH\", \"qualifiers\": {\"version\": null, \"event_date\": \"today\", \"place\": \"exchanges\", \"counterparty\": null}, \"origin\": \"own\", \"source_role\": \"editorial\", \"verification_status\": \"unverified\", \"quote\": \"BlackRock сегодня начал переводить BTC и ETH на биржи\", \"span\": [0, 60]}, {\"id\": \"telegram:15:423218#s1\", \"kind\": \"participant_reaction\", \"actor\": \"Robinhood\", \"action\": \"building around own product\", \"object\": \"Ethereum's DeFi blue chips\", \"qualifiers\": {}, \"origin\": \"own\", \"source_role\": \"editorial\", \"verification_status\": \"unverified\", \"quote\": \"Notably absent: Ethereum's DeFi blue chips – Robinhood is building around its own product, not the DeFi stack.\", \"span\": [100, 190]}]}",
+    "refusal": null,
+    "reasoning": null
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 1988,
+  "completion_tokens": 1850,
+  "total_tokens": 3838,
+  "cost": 0.0005481658,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.0005481658,
+   "upstream_inference_prompt_cost": 0.0001920408,
+   "upstream_inference_completions_cost": 0.000356125
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

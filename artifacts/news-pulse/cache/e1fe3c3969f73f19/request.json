@@ -1,0 +1,27 @@
+{
+ "a": {
+  "quote": "• ZADDR: 2,800 faces · 0.02 ZEC · 21 сен · WL 16:00 МСК (чекер) · public 22:00 МСК (3/wallet);",
+  "actor": "ZADDR",
+  "action": "announce_mint",
+  "object": "NFT_collection",
+  "qualifiers": {
+   "supply": "2,800 faces",
+   "price": "0.02 ZEC",
+   "date": "2026-09-21",
+   "wl_time": "2026-09-21T13:00:00Z",
+   "public_time": "2026-09-21T19:00:00Z",
+   "public_limit": "3/wallet"
+  },
+  "url": "https://t.me/whitelist1/7151"
+ },
+ "b": {
+  "quote": "выходят они 21 числа 13:00 UTC WL - инфа",
+  "actor": "ZEC NFT",
+  "action": "выходят 21 числа 13:00 UTC",
+  "object": "ZEC NFT",
+  "qualifiers": {
+   "event_date": "2026-09-21T13:00:00Z"
+  },
+  "url": "https://t.me/WEB3_AGGREGATOR/423375"
+ }
+}

@@ -1,0 +1,32 @@
+{
+ "choices": [
+  {
+   "message": {
+    "content": "{\"labels\": [{\"id\": \"telegram:9:1043301#s2\", \"kind\": \"redistribution\", \"actor\": null, \"action\": null, \"object\": null, \"qualifiers\": {}, \"origin\": \"retelling\", \"source_role\": \"unknown\", \"verification_status\": \"unverified\", \"topic_role\": \"subject\", \"quote\": \"• ETHEREUM\", \"span\": [0, 10]}]}"
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 1978,
+  "completion_tokens": 1893,
+  "total_tokens": 3871,
+  "cost": 0.00080696,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.00080696,
+   "upstream_inference_prompt_cost": 0.00027692,
+   "upstream_inference_completions_cost": 0.00053004
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

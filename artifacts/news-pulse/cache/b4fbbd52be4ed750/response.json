@@ -1,0 +1,46 @@
+{
+ "id": "gen-1790194608-YuKTHTpGiYf8WzLVB0Hg",
+ "object": "chat.completion",
+ "created": 1790194608,
+ "model": "deepseek/deepseek-v4-flash",
+ "provider": "SiliconFlow",
+ "system_fingerprint": null,
+ "service_tier": null,
+ "choices": [
+  {
+   "index": 0,
+   "logprobs": null,
+   "finish_reason": "stop",
+   "native_finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "content": "{\n  \"labels\": [\n    {\n      \"id\": \"telegram:14:8116#s0\",\n      \"kind\": \"participant_reaction\",\n      \"actor\": \"author\",\n      \"action\": \"expresses surprise at price movement\",\n      \"object\": \"ETH\",\n      \"qualifiers\": {\n        \"price\": \"3k$\"\n      },\n      \"origin\": \"own\",\n      \"source_role\": \"author\",\n      \"verification_status\": \"unverified\",\n      \"quote\": \"А сейчас ебанутое ускорение одной палкой на 3к$ по #eth 😇😇\",\n      \"span\": [0, 58]\n    },\n    {\n      \"id\": \"telegram:9:1042429#s0\",\n      \"kind\": \"event\",\n      \"actor\": \"Tom Lee's 'BitMine'\",\n      \"action\": \"buys\",\n      \"object\": \"27,562 ETH\",\n      \"qualifiers\": {\n        \"value\": \"$75 million\"\n      },\n      \"origin\": \"retelling\",\n      \"source_role\": \"editorial\",\n      \"verification_status\": \"source_statement\",\n      \"quote\": \"JUST IN: TOM LEE'S 'BITMINE' BUYS 27,562 $ETH WORTH $75 MILLION.  ...\",\n      \"span\": [0, 70]\n    },\n    {\n      \"id\": \"telegram:15:423484#s2\",\n      \"kind\": \"event\",\n      \"actor\": \"project (unclear)\",\n      \"action\": \"claim available\",\n      \"object\": \"allocation\",\n      \"qualifiers\": {\n        \"network\": \"Ethereum\",\n        \"amount\": \"over 10k tokens\",\n        \"claim_number\": \"second\",\n        \"exchange\": \"Mexc\",\n        \"price\": \"$0.0067\"\n      },\n      \"origin\": \"own\",\n      \"source_role\": \"author\",\n      \"verification_status\": \"unverified\",\n      \"quote\": \"Клейм в эфире, у кого аллокация свыше 10к токенов, напомню что это второй клейм. Слить можно на Mexc, прайс 0,0067$\",\n      \"span\": [0, 105]\n    },\n    {\n      \"id\": \"telegram:15:423486#s1\",\n      \"kind\": \"author_position\",\n      \"actor\": \"author\",\n      \"action\": \"expresses skepticism\",\n      \"object\": \"Ethereum's role in tokenization\",\n      \"qualifiers\": {},\n      \"origin\": \"own\",\n      \"source_role\": \"author\",\n      \"verification_status\": \"unverified\",\n      \"quote\": \"Да и сама история вокруг Ethereum сейчас выглядит далеко не так однозначно, как несколько лет назад. Мне, например, сложно поверить в тезис, что именно на эфире в итоге будет построена вся мировая токенизация.\",\n      \"span\": [0, 166]\n    },\n    {\n      \"id\": \"telegram:15:423486#s2\",\n      \"kind\": \"author_position\",\n      \"actor\": \"author\",\n      \"action\": \"states Ethereum not to be dismissed\",\n      \"object\": \"Ethereum\",\n      \"qualifiers\": {},\n      \"origin\": \"own\",\n      \"source_role\": \"author\",\n      \"verification_status\": \"unverified\",\n      \"quote\": \"Но и списывать Ethereum со счетов пока рано.\",\n      \"span\": [0, 43]\n    },\n    {\n      \"id\": \"telegram:15:423486#s3\",\n      \"kind\": \"event\",\n      \"actor\": \"Ethereum ecosystem\",\n      \"action\": \"discusses implementing\",\n      \"object\": \"private transfers\",\n      \"qualifiers\": {\n        \"type\": \"native private transfers of ETH and ERC-20\",\n        \"mechanism\": \"shared shielded pool at protocol level\",\n        \"similar_to\": \"Zcash shielded payments\"\n      },\n      \"origin\": \"retelling\",\n      \"source_role\": \"author\",\n      \"verification_status\": \"unverified\",\n      \"quote\": \"Впереди у него появляется ещё один потенциально сильный нарратив - приватность. Уже обсуждается внедрение нативных приватных переводов ETH и ERC-20 через общий shielded pool на уровне протокола. По смыслу это движение в ту же сторону, что и shielded-платежи Zcash, только встроенное в гораздо более широкую экосистему Ethereum.\",\n      \"span\": [0, 244]\n    },\n    {\n      \"id\": \"telegram:15:423486#s4\",\n      \"kind\": \"participant_reaction\",\n      \"actor\": \"author\",\n      \"action\": \"states not selling, increasing position via BMNR\",\n      \"object\": \"ETH\",\n      \"qualifiers\": {\n        \"instrument\": \"BMNR\"\n      },\n      \"origin\": \"own\",\n      \"source_role\": \"author\",\n      \"verification_status\": \"unverified\",\n      \"quote\": \"Свой эфир я не продавал, но часть позиции решил усилить через BMNR. Считаю, что это хороший способ увеличить лонг без использования фьючерсного плеча и риска ликвидации.\",\n      \"span\": [0, 151]\n    },\n    {\n      \"id\": \"telegram:15:423486#s6\",\n      \"kind\": \"event\",\n      \"actor\": \"BMNR (BitMine)\",\n      \"action\": \"holds\",\n      \"object\": \"ETH\",\n      \"qualifiers\": {\n        \"percentage\": \"~5% of all existing ETH\"\n      },\n      \"origin\": \"retelling\",\n      \"source_role\": \"author\",\n      \"verification_status\": \"unverified\",\n      \"quote\": \"BMNR - BitMine, компания Тома Ли, которая фактически превратилась в огромную публичную ETH-казну. На балансе компания держит около 5% от всего существующего эфира.\",\n      \"span\": [0, 139]\n    },\n    {\n      \"id\": \"telegram:15:423486#s7\",\n      \"kind\": \"author_position\",\n      \"actor\": \"author\",\n      \"action\": \"argues BMNR may outperform ETH\",\n      \"object\": \"BMNR\",\n      \"qualifiers\": {\n        \"mechanism\": \"market repricing and premium to crypto reserves\"\n      },\n      \"origin\": \"own\",\n      \"source_role\": \"author\",\n      \"verification_status\": \"unverified\",\n      \"quote\": \"Соответственно, при росте эфира растёт стоимость её активов. Но сама акция при этом может расти быстрее ETH - рынок дополнительно переоценивает компанию и готов платить премию к стоимости её криптовалютных резервов. И исторически это уже работало.\",\n      \"span\": [0, 205]\n    },\n    {\n      \"id\": \"telegram:15:423486#s8\",\n      \"kind\": \"author_position\",\n      \"actor\": \"author\",\n      \"action\": \"claims historical sensitivity of BMNR to ETH\",\n      \"object\": \"BMNR\",\n      \"qualifiers\": {\n        \"period\": \"after initial pump, later movements in 2026\"\n      },\n      \"origin\": \"own\",\n      \"source_role\": \"author\",\n      \"verification_status\": \"unverified\",\n      \"quote\": \"Если убрать самый первый безумный памп BMNR после объявления новой стратегии и посмотреть более поздние движения, акция всё равно обычно показывала повышенную чувствительность к ETH. Например, на нескольких крупных импульсах 2026 года получалось примерно так:\",\n      \"span\": [0, 194]\n    },\n    {\n      \"id\": \"telegram:15:423486#s9\",\n      \"kind\": \"event\",\n      \"actor\": null,\n      \"action\": \"price movements\",\n      \"object\": \"ETH and BMNR\",\n      \"qualifiers\": {\n        \"ETH_change\": \"+31%\",\n        \"BMNR_change\": \"+40%\",\n        \"ETH_change2\": \"+56%\",\n        \"BMNR_change2\": \"+81%\"\n      },\n      \"origin\": \"retelling\",\n      \"source_role\": \"author\",\n      \"verification_status\": \"unverified\",\n      \"quote\": \"ETH +31% → BMNR +40%\\nETH +56% → BMNR +81%\",\n      \"span\": [0, 45]\n    },\n    {\n      \"id\": \"telegram:15:423486#s10\",\n      \"kind\": \"author_position\",\n      \"actor\": \"author\",\n      \"action\": \"estimates beta\",\n      \"object\": \"BMNR relative to ETH\",\n      \"qualifiers\": {\n        \"beta\": \"1.3-1.5x\"\n      },\n      \"origin\": \"own\",\n      \"source_role\": \"author\",\n      \"verification_status\": \"unverified\",\n      \"quote\": \"То есть в относительно «зрелой» фазе это пока выглядит примерно как 1.3-1.5x beta к эфиру.\",\n      \"span\": [0, 82]\n    }\n  ]\n}",
+    "refusal": null,
+    "reasoning": null
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 1933,
+  "completion_tokens": 2025,
+  "total_tokens": 3958,
+  "cost": 0.00081829,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.00081829,
+   "upstream_inference_prompt_cost": 0.00025129,
+   "upstream_inference_completions_cost": 0.000567
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

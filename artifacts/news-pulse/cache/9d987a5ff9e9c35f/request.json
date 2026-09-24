@@ -1,0 +1,21 @@
+{
+ "segments": [
+  {
+   "id": "telegram:11:96824#s1",
+   "text": "–Два кошелька (вероятно, принадлежащие одному и тому же киту) перевели на Bitfinex 33 180 #ETH (~86,9 млн $) после более чем 2-летнего бездействия (1, 2);\n",
+   "mentions": [
+    {
+     "text": "#ETH",
+     "status": "confirmed"
+    },
+    {
+     "text": "ETH",
+     "status": "confirmed"
+    }
+   ],
+   "kind_hint": "post",
+   "url": "https://t.me/cryptoattack24/96824",
+   "time": "2026-09-19T09:20:05+00:00"
+  }
+ ]
+}

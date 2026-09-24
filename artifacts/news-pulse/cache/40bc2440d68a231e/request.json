@@ -1,0 +1,21 @@
+{
+ "segments": [
+  {
+   "id": "telegram:10:385676#s11",
+   "text": "✴️🇷🇺Мосбиржа запускает вечные фьючерсы на #BTC #ETH #SOL #XRP #TRX \n",
+   "mentions": [
+    {
+     "text": "#ETH",
+     "status": "confirmed"
+    },
+    {
+     "text": "ETH",
+     "status": "confirmed"
+    }
+   ],
+   "kind_hint": "post",
+   "url": "https://t.me/markettwits/385676",
+   "time": "2026-09-22T03:47:19+00:00"
+  }
+ ]
+}

@@ -1,0 +1,20 @@
+{
+ "a": {
+  "quote": "Несколько часов назад Unipcs (Bonk guy) , нашумевший #1 трейдер на fomo app обратил внимание аудитории на ARC цепочку.",
+  "actor": "Unipcs (Bonk guy)",
+  "action": "обратил внимание",
+  "object": "аудитории на ARC цепочку",
+  "qualifiers": {},
+  "url": "https://t.me/WEB3_AGGREGATOR/422908"
+ },
+ "b": {
+  "quote": "Fomo App интегрирует ARC в первые дни лаунча сети, соответственно движ гарантирован.",
+  "actor": "Fomo App",
+  "action": "интегрирует",
+  "object": "ARC",
+  "qualifiers": {
+   "timing": "в первые дни лаунча сети"
+  },
+  "url": "https://t.me/WEB3_AGGREGATOR/422908"
+ }
+}

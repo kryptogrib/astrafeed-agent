@@ -1,0 +1,17 @@
+{
+ "segments": [
+  {
+   "id": "telegram:10:385524#s1",
+   "text": "ETH тестирует отметку $2700, это максимум с января 2026г. Виталик одобряет.",
+   "mentions": [
+    {
+     "text": "ETH",
+     "status": "confirmed"
+    }
+   ],
+   "kind_hint": "post",
+   "url": "https://t.me/markettwits/385524",
+   "time": "2026-09-21T04:25:21+00:00"
+  }
+ ]
+}

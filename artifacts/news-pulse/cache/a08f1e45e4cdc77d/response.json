@@ -1,0 +1,46 @@
+{
+ "id": "gen-1790198775-tTTJSRzaTvwoVyX4RK25",
+ "object": "chat.completion",
+ "created": 1790198775,
+ "model": "deepseek/deepseek-v4-flash",
+ "provider": "Venice",
+ "system_fingerprint": null,
+ "service_tier": null,
+ "choices": [
+  {
+   "index": 0,
+   "logprobs": null,
+   "finish_reason": "stop",
+   "native_finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "content": "{\"labels\": [{\"id\": \"telegram:15:423533#s37\", \"kind\": \"event\", \"actor\": \"Zcash\", \"action\": \"сократит время блока\", \"object\": \"время блока\", \"qualifiers\": {\"version\": \"до 25 секунд\"}, \"origin\": \"unknown\", \"source_role\": \"unknown\", \"verification_status\": \"unverified\", \"quote\": \"Zcash сократит время блока до 25 секунд\", \"span\": [0, 40]}, {\"id\": \"telegram:15:423534#s10\", \"kind\": \"event\", \"actor\": \"Zkghost\", \"action\": \"запустили регистрацию в WL\", \"object\": \"NFT-коллекция на Zcash\", \"qualifiers\": {\"version\": \"состоящая из 10 000 NFT\"}, \"origin\": \"unknown\", \"source_role\": \"unknown\", \"verification_status\": \"unverified\", \"quote\": \"Zkghost - NFT-коллекция на Zcash состоящая из 10 000 NFT запустили регистрацию в WL. Дата минта TBA.\", \"span\": [0, 97]}, {\"id\": \"telegram:15:423535#s0\", \"kind\": \"participant_reaction\", \"actor\": null, \"action\": \"закончилась\", \"object\": \"нфт мета на Zcash\", \"qualifiers\": {}, \"origin\": \"own\", \"source_role\": \"author\", \"verification_status\": \"unverified\", \"quote\": \"В принципе на этом нфт мета на Zcash закончилась и можно возвращаться в Robinhood\", \"span\": [0, 78]}, {\"id\": \"telegram:1:7152#s3\", \"kind\": \"event\", \"actor\": \"CypherSquad NFT\", \"action\": \"пройдет минт\", \"object\": \"CypherSquad NFT на ZEC\", \"qualifiers\": {\"event_date\": \"Сегодня в 20:00 по МСК\"}, \"origin\": \"unknown\", \"source_role\": \"unknown\", \"verification_status\": \"unverified\", \"quote\": \"Сегодня в 20:00 по МСК пройдет минт CypherSquad NFT на ZEC. Минт Free, потребуется только на минт. Доступ проверяем в чекере.\", \"span\": [0, 108]}, {\"id\": \"telegram:15:423555#s2\", \"kind\": \"event\", \"actor\": \"GMGN's Haze\", \"action\": \"said the beta already supports markets\", \"object\": \"markets including BTC, ETH, SOL and ZEC against USDC\", \"qualifiers\": {\"counterparty\": \"third-party market makers\"}, \"origin\": \"retelling\", \"source_role\": \"editorial\", \"verification_status\": \"source_statement\", \"quote\": \"GMGN's Haze said the beta already supports markets including BTC, ETH, SOL and ZEC against USDC, with liquidity provided by third-party market makers. Fees are set at 0.045% for takers and 0.015% for makers.\", \"span\": [0, 196]}, {\"id\": \"telegram:15:423579#s2\", \"kind\": \"participant_reaction\", \"actor\": null, \"action\": \"driving\", \"object\": \"ZEC and DASH\", \"qualifiers\": {}, \"origin\": \"own\", \"source_role\": \"author\", \"verification_status\": \"unverified\", \"quote\": \"Same narrative driving ZEC and DASH, but a fraction of the cap. Every one still sits well below its ATH.\", \"span\": [0, 97]}, {\"id\": \"telegram:15:423580#s2\", \"kind\": \"participant_reaction\", \"actor\": null, \"action\": \"это уже не\", \"object\": \"ZEC\", \"qualifiers\": {}, \"origin\": \"own\", \"source_role\": \"author\", \"verification_status\": \"unverified\", \"quote\": \"Это уже не ZEC, а ETH\", \"span\": [0, 24]}, {\"id\": \"telegram:12:4878#s2\", \"kind\": \"event\", \"actor\": \"Near\", \"action\": \"взлетел\", \"object\": \"Near\", \"qualifiers\": {\"counterparty\": \"Near Intents\"}, \"origin\": \"retelling\", \"source_role\": \"editorial\", \"verification_status\": \"unverified\", \"quote\": \"Near взлетел в последнее время на шиллинге ончейн-приватности - при помощи Near Intents юзеры свапают между 9 блокчейнами, в том числе в Zec.\", \"span\": [0, 131]}, {\"id\": \"telegram:12:4878#s3\", \"kind\": \"event\", \"actor\": \"Barry Silbert\", \"action\": \"имеет\", \"object\": \"багажи Near\", \"qualifiers\": {\"counterparty\": \"Grayscale\"}, \"origin\": \"retelling\", \"source_role\": \"editorial\", \"verification_status\": \"unverified\", \"quote\": \"Также Barry Silbert из Grayscale (крупнейший выгодоприобретатель от пампа Zec) имеет огромные багажи Near еще с 2021 года.\", \"span\": [0, 113]}, {\"id\": \"telegram:15:423585#s3\", \"kind\": \"participant_reaction\", \"actor\": null, \"action\": \"решил сразу захватить\", \"object\": \"экосистему Zcash\", \"qualifiers\": {}, \"origin\": \"own\", \"source_role\": \"author\", \"verification_status\": \"unverified\", \"quote\": \"В этот раз решил сразу захватить ещё и экосистему Zcash, потому что там сейчас тоже настоящий раздачный сезон - фри минты появляются один за другим и по потенциалу это очень напоминает то, что сейчас происходит на Robinhood💋\", \"span\": [0, 199]}, {\"id\": \"telegram:15:423585#s8\", \"kind\": \"promo_service\", \"actor\": null, \"action\": \"WL на\", \"object\": \"Zcash\", \"qualifiers\": {}, \"origin\": \"own\", \"source_role\": \"author\", \"verification_status\": \"unverified\", \"quote\": \"WL на Zcash:\", \"span\": [0, 13]}, {\"id\": \"telegram:15:423585#s16\", \"kind\": \"promo_service\", \"actor\": null, \"action\": \"Wick on Zec\", \"object\": \"Форма\", \"qualifiers\": {}, \"origin\": \"own\", \"source_role\": \"author\", \"verification_status\": \"unverified\", \"quote\": \"Wick on Zec — Форма\", \"span\": [0, 19]}]}",
+    "refusal": null,
+    "reasoning": null
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 1688,
+  "completion_tokens": 1526,
+  "total_tokens": 3214,
+  "cost": 0.0004568158,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.0004568158,
+   "upstream_inference_prompt_cost": 0.0001630608,
+   "upstream_inference_completions_cost": 0.000293755
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

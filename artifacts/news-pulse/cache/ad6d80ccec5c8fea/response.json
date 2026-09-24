@@ -1,0 +1,46 @@
+{
+ "id": "gen-1790194022-ykO8gYcjGP8L56hqjdBI",
+ "object": "chat.completion",
+ "created": 1790194022,
+ "model": "deepseek/deepseek-v4-flash",
+ "provider": "DeepInfra",
+ "system_fingerprint": null,
+ "service_tier": null,
+ "choices": [
+  {
+   "index": 0,
+   "logprobs": null,
+   "finish_reason": "stop",
+   "native_finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "content": "{\"labels\": [{\"id\": \"telegram:15:422634#s1\", \"kind\": \"event\", \"actor\": \"0xa5019\", \"action\": \"trade\", \"object\": \"LAPTOP\", \"qualifiers\": {\"version\": \"LAPTOP\", \"event_date\": \"2026-09-09\", \"place\": null, \"counterparty\": null}, \"origin\": \"own\", \"source_role\": \"author\", \"verification_status\": \"unverified\", \"quote\": \"Трейдер \\\"0xa5019\\\" потратил 100 ETH (249,8 тыс. $) на покупку 9 124 LAPTOP, а затем продал 8 480 LAPTOP за 472 ETH (1,18 млн $). У него по-прежнему остаётся 644 LAPTOP (110 тыс. $).\", \"span\": [0, 0]}, {\"id\": \"telegram:9:1034501#s0\", \"kind\": \"event\", \"actor\": \"Consensys\", \"action\": \"spins off\", \"object\": \"MetaMask\", \"qualifiers\": {\"version\": null, \"event_date\": null, \"place\": null, \"counterparty\": null}, \"origin\": \"retelling\", \"source_role\": \"editorial\", \"verification_status\": \"source_statement\", \"quote\": \"ETHEREUM GIANT CONSENSYS SPINS OFF FLAGSHIP METAMASK WALLET, STAYS MUM ON IPO AND TOKEN PLANS ...\", \"span\": [0, 0]}, {\"id\": \"telegram:11:96642#s0\", \"kind\": \"event\", \"actor\": \"Consensys\", \"action\": \"plans to spin off\", \"object\": \"MetaMask\", \"qualifiers\": {\"version\": null, \"event_date\": null, \"place\": null, \"counterparty\": null}, \"origin\": \"retelling\", \"source_role\": \"editorial\", \"verification_status\": \"source_statement\", \"quote\": \"Consensys планирует выделить флагманский кошелек MetaMask в отдельную компанию.\", \"span\": [0, 0]}, {\"id\": \"telegram:18:31345#s2\", \"kind\": \"event\", \"actor\": \"Consensys\", \"action\": \"retain\", \"object\": \"Ethereum infrastructure and protocols\", \"qualifiers\": {\"version\": null, \"event_date\": null, \"place\": null, \"counterparty\": null}, \"origin\": \"retelling\", \"source_role\": \"editorial\", \"verification_status\": \"source_statement\", \"quote\": \"Институциональные продукты, Ethereum-инфраструктура и протоколы останутся под брендом Consensys.\", \"span\": [0, 0]}, {\"id\": \"telegram:10:384251#s1\", \"kind\": \"event\", \"actor\": \"Consensys\", \"action\": \"spun off\", \"object\": \"MetaMask\", \"qualifiers\": {\"version\": null, \"event_date\": null, \"place\": null, \"counterparty\": null}, \"origin\": \"retelling\", \"source_role\": \"editorial\", \"verification_status\": \"source_statement\", \"quote\": \"Consensys  (разработчик Ethereum и MetaMask) выделил его в отдельную компанию по одноименным брендом \\\"MetaMask\\\"\", \"span\": [0, 0]}, {\"id\": \"telegram:15:422660#s1\", \"kind\": \"event\", \"actor\": \"Consensys\", \"action\": \"plans to split\", \"object\": \"MetaMask\", \"qualifiers\": {\"version\": null, \"event_date\": \"end of 2026\", \"place\": null, \"counterparty\": null}, \"origin\": \"retelling\", \"source_role\": \"editorial\", \"verification_status\": \"source_statement\", \"quote\": \"Consensys plans to split MetaMask into an independent company, separating its wallet business from its Ethereum infrastructure and institutional operations by the end of 2026.\", \"span\": [0, 0]}, {\"id\": \"telegram:15:422660#s2\", \"kind\": \"event\", \"actor\": \"Consensys Software Inc.\", \"action\": \"rebrand\", \"object\": \"MetaMask\", \"qualifiers\": {\"version\": null, \"event_date\": null, \"place\": null, \"counterparty\": null}, \"origin\": \"retelling\", \"source_role\": \"editorial\", \"verification_status\": \"source_statement\", \"quote\": \"Consensys Software Inc. will rebrand as MetaMask, with Ethereum co-founder Joe Lubin serving as chairman and CEO. The new Consensys will retain the Consensys name and focus on Linea, Besu, Teku, and blockchain infrastructure for banks and other institutions.\", \"span\": [0, 0]}, {\"id\": \"telegram:15:422662#s9\", \"kind\": \"event\", \"actor\": \"CZ\", \"action\": \"advises\", \"object\": \"governments\", \"qualifiers\": {\"version\": null, \"event_date\": null, \"place\": null, \"counterparty\": null}, \"origin\": \"own\", \"source_role\": \"author\", \"verification_status\": \"unverified\", \"quote\": \"CZ советует правительствам добавить в национальные крипторезервы не только Bitcoin, но и Ethereum.\", \"span\": [0, 0]}, {\"id\": \"telegram:11:96651#s0\", \"kind\": \"event\", \"actor\": null, \"action\": \"net outflow\", \"object\": \"BTC-ETF\", \"qualifiers\": {\"version\": null, \"event_date\": \"yesterday\", \"place\": null, \"counterparty\": null}, \"origin\": \"own\", \"source_role\": \"author\", \"verification_status\": \"unverified\", \"quote\": \"Вчера общий чистый отток спотовых BTC-ETF составил ~$120,2 млн.\", \"span\": [0, 0]}, {\"id\": \"telegram:11:96651#s1\", \"kind\": \"event\", \"actor\": null, \"action\": \"net inflow\", \"object\": \"ETH-ETF\", \"qualifiers\": {\"version\": null, \"event_date\": null, \"place\": null, \"counterparty\": null}, \"origin\": \"own\", \"source_role\": \"author\", \"verification_status\": \"unverified\", \"quote\": \"Общий чистый приток спотовых ETH-ETF составил $34,7 млн.\", \"span\": [0, 0]}, {\"id\": \"telegram:9:1035069#s0\", \"kind\": \"event\", \"actor\": \"IBM, Lockheed Martin\", \"action\": \"announce\", \"object\": \"Swiss Quantum Innovation Hub at ETH Zurich\", \"qualifiers\": {\"version\": null, \"event_date\": null, \"place\": \"ETH Zurich\", \"counterparty\": null}, \"origin\": \"retelling\", \"source_role\": \"editorial\", \"verification_status\": \"source_statement\", \"quote\": \"IBM, LOCKHEED MARTIN ANNOUNCE SWISS QUANTUM INNOVATION HUB AT ETH ZURICH, ANCHORED BY SWITZERLAND'S FIRST IBM QUANTUM COMPUTER ...\", \"span\": [0, 0]}, {\"id\": \"telegram:21:21038#s11\", \"kind\": \"event\", \"actor\": null, \"action\": \"strong quarter\", \"object\": \"Ethereum\", \"qualifiers\": {\"version\": null, \"event_date\": null, \"place\": null, \"counterparty\": null}, \"origin\": \"own\", \"source_role\": \"author\", \"verification_status\": \"unverified\", \"quote\": \"Сильный квартал для Ethereum: ожидается приток институционалов\", \"span\": [0, 0]}]}",
+    "refusal": null,
+    "reasoning": null
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 1936,
+  "completion_tokens": 1750,
+  "total_tokens": 3686,
+  "cost": 0.00048924,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.00048924,
+   "upstream_inference_prompt_cost": 0.00017424,
+   "upstream_inference_completions_cost": 0.000315
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

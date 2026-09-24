@@ -1,0 +1,86 @@
+{
+ "model_input": {
+  "request": "artifacts/pulse-zec/thread-5299/v3/request.json",
+  "input_sha256": "0dd49e7e7b8e06e7",
+  "mentions": {
+   "380347": [
+    {
+     "text": "Zec",
+     "status": "confirmed"
+    }
+   ],
+   "380352": [
+    {
+     "text": "ZEC",
+     "status": "confirmed"
+    }
+   ]
+  },
+  "held_if_published_on_it": [
+   "380287",
+   "380288",
+   "380289",
+   "380294",
+   "380295",
+   "380296",
+   "380318",
+   "380319",
+   "380326",
+   "380335",
+   "380336",
+   "380337",
+   "380338",
+   "380350",
+   "380369",
+   "380370"
+  ]
+ },
+ "publication": {
+  "grounding_version": "headline-hashtag/2026-09-24",
+  "classifier_sha256": "b471a79b80634986",
+  "mentions": {
+   "post": [
+    {
+     "text": "ZEC",
+     "status": "confirmed"
+    }
+   ],
+   "380352": [
+    {
+     "text": "ZEC",
+     "status": "confirmed"
+    }
+   ],
+   "380347": [
+    {
+     "text": "Zec",
+     "status": "confirmed"
+    }
+   ]
+  },
+  "held": [
+   "380296"
+  ]
+ },
+ "mentions_changed": [
+  "post"
+ ],
+ "released_by_new_grounding": [
+  "380287",
+  "380288",
+  "380289",
+  "380294",
+  "380295",
+  "380318",
+  "380319",
+  "380326",
+  "380335",
+  "380336",
+  "380337",
+  "380338",
+  "380350",
+  "380369",
+  "380370"
+ ],
+ "held_by_new_grounding": []
+}

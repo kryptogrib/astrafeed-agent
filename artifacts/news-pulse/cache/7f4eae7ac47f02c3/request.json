@@ -1,0 +1,17 @@
+{
+ "segments": [
+  {
+   "id": "telegram:9:1042279#s19",
+   "text": "• Bitcoin breaks out; ETH also firmer — BTC hit an all-time high zone while short liquidations surged  \n",
+   "mentions": [
+    {
+     "text": "ETH",
+     "status": "confirmed"
+    }
+   ],
+   "kind_hint": "post",
+   "url": "https://t.me/marketfeed/1042279",
+   "time": "2026-09-21T11:00:26+00:00"
+  }
+ ]
+}

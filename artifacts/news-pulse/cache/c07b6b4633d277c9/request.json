@@ -1,0 +1,22 @@
+{
+ "a": {
+  "quote": "Официальная презентация запуска Arc начнется сегодня в 18:30 мск.",
+  "actor": "Circle",
+  "action": "will present",
+  "object": "official presentation of Arc launch",
+  "qualifiers": {
+   "event_date": "today at 18:30 мск"
+  },
+  "url": "https://t.me/crypto_hd/31448"
+ },
+ "b": {
+  "quote": "ARC: токены которые я взял и почему - подготовка к паблик мейннету 16 сентября",
+  "actor": "ARC",
+  "action": "подготовка к паблик мейннету",
+  "object": "паблик мейннет",
+  "qualifiers": {
+   "event_date": "16 сентября"
+  },
+  "url": "https://t.me/WEB3_AGGREGATOR/422903"
+ }
+}

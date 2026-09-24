@@ -1,0 +1,46 @@
+{
+ "id": "gen-1790196452-TirIEwXKR04pkakDaIQC",
+ "object": "chat.completion",
+ "created": 1790196452,
+ "model": "deepseek/deepseek-v4-flash",
+ "provider": "DigitalOcean",
+ "system_fingerprint": null,
+ "service_tier": null,
+ "choices": [
+  {
+   "index": 0,
+   "logprobs": null,
+   "finish_reason": "stop",
+   "native_finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "content": "{\n  \"labels\": [\n    {\n      \"id\": \"telegram:15:423080#s2\",\n      \"kind\": \"event\",\n      \"actor\": null,\n      \"action\": \"added\",\n      \"object\": \"cross-chain support\",\n      \"qualifiers\": {\n        \"version\": null,\n        \"event_date\": null,\n        \"place\": null,\n        \"counterparty\": \"arc\"\n      },\n      \"origin\": \"retelling\",\n      \"source_role\": \"participant\",\n      \"verification_status\": \"source_statement\",\n      \"quote\": \"fomo поддерживает кроссчейн (arc тоже уже добавили)\",\n      \"span\": [5, 55]\n    },\n    {\n      \"id\": \"telegram:9:1039182#s5\",\n      \"kind\": \"event\",\n      \"actor\": \"Circle\",\n      \"action\": \"launched\",\n      \"object\": \"Arc mainnet\",\n      \"qualifiers\": {\n        \"version\": \"mainnet\",\n        \"event_date\": null,\n        \"place\": null,\n        \"counterparty\": \"BlackRock, Visa\"\n      },\n      \"origin\": \"retelling\",\n      \"source_role\": \"editorial\",\n      \"verification_status\": \"source_statement\",\n      \"quote\": \"Circle launched Arc mainnet with BlackRock and Visa among validators\",\n      \"span\": [87, 152]\n    },\n    {\n      \"id\": \"telegram:1:7139#s0\",\n      \"kind\": \"promo_service\",\n      \"actor\": null,\n      \"action\": \"announces\",\n      \"object\": \"NFT mint on Arc\",\n      \"qualifiers\": {\n        \"version\": null,\n        \"event_date\": \"today (2026-09-16)\",\n        \"place\": null,\n        \"counterparty\": null\n      },\n      \"origin\": \"own\",\n      \"source_role\": \"participant\",\n      \"verification_status\": \"unverified\",\n      \"quote\": \"NFT на Arc / Главная лудка месяца, кто минтит СЕГОДНЯ\",\n      \"span\": [0, 52]\n    },\n    {\n      \"id\": \"telegram:1:7139#s6\",\n      \"kind\": \"event\",\n      \"actor\": null,\n      \"action\": \"takes place\",\n      \"object\": \"mint event\",\n      \"qualifiers\": {\n        \"version\": null,\n        \"event_date\": \"today after launch of Arc\",\n        \"place\": \"Broke Bookies\",\n        \"counterparty\": null\n      },\n      \"origin\": \"own\",\n      \"source_role\": \"participant\",\n      \"verification_status\": \"source_statement\",\n      \"quote\": \"Сегодня, время после запуска Arc\",\n      \"span\": [12, 47]\n    },\n    {\n      \"id\": \"telegram:1:7139#s8\",\n      \"kind\": \"redistribution\",\n      \"actor\": null,\n      \"action\": \"links to\",\n      \"object\": \"ARC tools\",\n      \"qualifiers\": {\n        \"version\": null,\n        \"event_date\": null,\n        \"place\": null,\n        \"counterparty\": null\n      },\n      \"origin\": \"own\",\n      \"source_role\": \"participant\",\n      \"verification_status\": \"unverified\",\n      \"quote\": \"Все ARC инструменты смотрим в посте\",\n      \"span\": [0, 37]\n    },\n    {\n      \"id\": \"telegram:15:423087#s0\",\n      \"kind\": \"event\",\n      \"actor\": null,\n      \"action\": \"works normally\",\n      \"object\": \"bridge on ARC\",\n      \"qualifiers\": {\n        \"version\": null,\n        \"event_date\": null,\n        \"place\": null,\n        \"counterparty\": null\n      },\n      \"origin\": \"own\",\n      \"source_role\": \"participant\",\n      \"verification_status\": \"source_statement\",\n      \"quote\": \"Бридж на ARC уже норм работает\",\n      \"span\": [0, 32]\n    },\n    {\n      \"id\": \"telegram:15:423087#s1\",\n      \"kind\": \"redistribution\",\n      \"actor\": null,\n      \"action\": \"provides link to\",\n      \"object\": \"bridge page\",\n      \"qualifiers\": {\n        \"version\": null,\n        \"event_date\": null,\n        \"place\": null,\n        \"counterparty\": null\n      },\n      \"origin\": \"own\",\n      \"source_role\": \"participant\",\n      \"verification_status\": \"unverified\",\n      \"quote\": \"https://relay.link/bridge/arc?toCurrency=0x3600000000000000000000000000000000000000&fromChainId=1&fromCurrency=0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48\",\n      \"span\": [0, 146]\n    },\n    {\n      \"id\": \"telegram:15:423087#s2\",\n      \"kind\": \"promo_service\",\n      \"actor\": null,\n      \"action\": \"encourages\",\n      \"object\": \"creating on arc.openfair.app\",\n      \"qualifiers\": {\n        \"version\": null,\n        \"event_date\": null,\n        \"place\": \"arc.openfair.app\",\n        \"counterparty\": null\n      },\n      \"origin\": \"own\",\n      \"source_role\": \"participant\",\n      \"verification_status\": \"unverified\",\n      \"quote\": \"Давайте ловить раннеров вместе (а ещё лучше создавать на https://arc.openfair.app)\",\n      \"span\": [0, 83]\n    },\n    {\n      \"id\": \"telegram:19:18961#s0\",\n      \"kind\": \"participant_reaction\",\n      \"actor\": null,\n      \"action\": \"asks\",\n      \"object\": \"cat runner of arc\",\n      \"qualifiers\": {\n        \"version\": null,\n        \"event_date\": null,\n        \"place\": null,\n        \"counterparty\": null\n      },\n      \"origin\": \"own\",\n      \"source_role\": \"participant\",\n      \"verification_status\": \"unverified\",\n      \"quote\": \"Cat runner of arc?\",\n      \"span\": [0, 18]\n    },\n    {\n      \"id\": \"telegram:19:18970#s0\",\n      \"kind\": \"participant_reaction\",\n      \"actor\": null,\n      \"action\": \"bought back\",\n      \"object\": \"$huhcat\",\n      \"qualifiers\": {\n        \"version\": null,\n        \"event_date\": null,\n        \"place\": null,\n        \"counterparty\": null\n      },\n      \"origin\": \"own\",\n      \"source_role\": \"participant\",\n      \"verification_status\": \"unverified\",\n      \"quote\": \"Bought back $huhcat\",\n      \"span\": [0, 18]\n    },\n    {\n      \"id\": \"telegram:19:18971#s3\",\n      \"kind\": \"event\",\n      \"actor\": \"Circle\",\n      \"action\": \"deployed\",\n      \"object\": \"Circle Inu on Arc\",\n      \"qualifiers\": {\n        \"version\": null,\n        \"event_date\": null,\n        \"place\": \"Arc\",\n        \"counterparty\": null\n      },\n      \"origin\": \"retelling\",\n      \"source_role\": \"participant\",\n      \"verification_status\": \"source_statement\",\n      \"quote\": \"it’s Circle Inu deployed on Arc, Circle’s own chain\",\n      \"span\": [85, 133]\n    },\n    {\n      \"id\": \"telegram:19:18971#s4\",\n      \"kind\": \"redistribution\",\n      \"actor\": null,\n      \"action\": \"mentions\",\n      \"object\": \"Circle → Arc → Inu chain\",\n      \"qualifiers\": {\n        \"version\": null,\n        \"event_date\": null,\n        \"place\": null,\n        \"counterparty\": null\n      },\n      \"origin\": \"own\",\n      \"source_role\": \"participant\",\n      \"verification_status\": \"unverified\",\n      \"quote\": \"Circle → Arc → Inu\",\n      \"span\": [0, 18]\n    }\n  ]\n}",
+    "refusal": null,
+    "reasoning": null
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 1637,
+  "completion_tokens": 1783,
+  "total_tokens": 3420,
+  "cost": 0.000509894,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.000509894,
+   "upstream_inference_prompt_cost": 0.000160426,
+   "upstream_inference_completions_cost": 0.000349468
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

@@ -1,0 +1,17 @@
+{
+ "segments": [
+  {
+   "id": "telegram:1:7151:c:572119#s0",
+   "text": "Ребят, каким кошельком пользуетесь в ZEC?",
+   "mentions": [
+    {
+     "text": "ZEC",
+     "status": "confirmed"
+    }
+   ],
+   "kind_hint": "comment",
+   "url": "https://t.me/whitelist1/7151?comment=572119",
+   "time": "2026-09-21T11:34:15+00:00"
+  }
+ ]
+}

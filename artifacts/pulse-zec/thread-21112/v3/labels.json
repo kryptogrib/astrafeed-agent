@@ -1,0 +1,76 @@
+[
+ {
+  "id": "343090",
+  "relevance": "unrelated",
+  "aspect": null,
+  "kind": "opinion",
+  "summary": null,
+  "quote": null,
+  "context_ids": []
+ },
+ {
+  "id": "343091",
+  "relevance": "unrelated",
+  "aspect": null,
+  "kind": "other",
+  "summary": null,
+  "quote": null,
+  "context_ids": []
+ },
+ {
+  "id": "343092",
+  "relevance": "relevant",
+  "aspect": "market",
+  "kind": "experience",
+  "summary": "Говорит, что держит NEAR, и по структуре он напоминает ZEC, который он тоже держит, и описывает технический анализ NEAR, сравнивая с ZEC.",
+  "quote": "Тоже держу ниар. По структуре очень напоминает zen, zec",
+  "context_ids": [
+   "post"
+  ]
+ },
+ {
+  "id": "343093",
+  "relevance": "unrelated",
+  "aspect": null,
+  "kind": "other",
+  "summary": null,
+  "quote": null,
+  "context_ids": []
+ },
+ {
+  "id": "343096",
+  "relevance": "unrelated",
+  "aspect": null,
+  "kind": "other",
+  "summary": null,
+  "quote": null,
+  "context_ids": []
+ },
+ {
+  "id": "343099",
+  "relevance": "unrelated",
+  "aspect": null,
+  "kind": "opinion",
+  "summary": null,
+  "quote": null,
+  "context_ids": []
+ },
+ {
+  "id": "343360",
+  "relevance": "unrelated",
+  "aspect": null,
+  "kind": "other",
+  "summary": null,
+  "quote": null,
+  "context_ids": []
+ },
+ {
+  "id": "343361",
+  "relevance": "unrelated",
+  "aspect": null,
+  "kind": "other",
+  "summary": null,
+  "quote": null,
+  "context_ids": []
+ }
+]

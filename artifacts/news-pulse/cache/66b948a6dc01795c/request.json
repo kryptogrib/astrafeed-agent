@@ -1,0 +1,20 @@
+{
+ "a": {
+  "quote": "• Arc Citizens: 10,000 fully on-chain identity PFP, запуск планируется 16 сентября;",
+  "actor": "Arc",
+  "action": "launch",
+  "object": "Arc Citizens",
+  "qualifiers": {
+   "event_date": "16 сентября"
+  },
+  "url": "https://t.me/whitelist1/7135"
+ },
+ "b": {
+  "quote": "Arc Mainnet уже близко, поэтому собрали все инфраструктурные проекты, которые стоит добавить в watchlist.",
+  "actor": "Arc",
+  "action": "close_to_launch",
+  "object": "Mainnet",
+  "qualifiers": {},
+  "url": "https://t.me/whitelist1/7135"
+ }
+}

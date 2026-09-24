@@ -1,0 +1,32 @@
+{
+ "choices": [
+  {
+   "message": {
+    "content": "{\"labels\": [{\"id\": \"telegram:1:7141#s3\", \"kind\": \"event\", \"actor\": \"Extended\", \"action\": \"announced transition to\", \"object\": \"Arc\", \"qualifiers\": {}, \"origin\": \"own\", \"source_role\": \"unknown\", \"verification_status\": \"unverified\", \"quote\": \"👍Extended запустили RWA Trading Competition на $50 тыс. Набиваем PNL, объем, OI и поднимаемся в лидерборде. В награды войдут топ 100 трейдеров, турнир продлится до 29 сентября. Вместе с этим, Extended объявили о переходе на Arc.\", \"span\": [0, 218]}]}"
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 2395,
+  "completion_tokens": 1902,
+  "total_tokens": 4297,
+  "cost": 0.00086786,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.00086786,
+   "upstream_inference_prompt_cost": 0.0003353,
+   "upstream_inference_completions_cost": 0.00053256
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

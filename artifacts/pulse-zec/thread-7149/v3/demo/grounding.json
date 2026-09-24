@@ -1,0 +1,77 @@
+{
+ "model_input": {
+  "request": "artifacts/pulse-zec/thread-7149/v3/request.json",
+  "input_sha256": "10bf2e5719ff2cbf",
+  "mentions": {
+   "post": [
+    {
+     "text": "ZEC",
+     "status": "confirmed"
+    },
+    {
+     "text": "Zcash",
+     "status": "confirmed"
+    }
+   ],
+   "571974": [
+    {
+     "text": "Zcash",
+     "status": "confirmed"
+    }
+   ],
+   "572005": [
+    {
+     "text": "Zec",
+     "status": "confirmed"
+    }
+   ]
+  },
+  "held_if_published_on_it": [
+   "572024",
+   "572027",
+   "572028",
+   "572074",
+   "572075",
+   "572076"
+  ]
+ },
+ "publication": {
+  "grounding_version": "headline-hashtag/2026-09-24",
+  "classifier_sha256": "b471a79b80634986",
+  "mentions": {
+   "post": [
+    {
+     "text": "ZEC",
+     "status": "confirmed"
+    },
+    {
+     "text": "Zcash",
+     "status": "confirmed"
+    }
+   ],
+   "572005": [
+    {
+     "text": "Zec",
+     "status": "confirmed"
+    }
+   ],
+   "571974": [
+    {
+     "text": "Zcash",
+     "status": "confirmed"
+    }
+   ]
+  },
+  "held": [
+   "572024",
+   "572027",
+   "572028",
+   "572074",
+   "572075",
+   "572076"
+  ]
+ },
+ "mentions_changed": [],
+ "released_by_new_grounding": [],
+ "held_by_new_grounding": []
+}

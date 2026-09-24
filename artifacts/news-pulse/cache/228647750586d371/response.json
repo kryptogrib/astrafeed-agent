@@ -1,0 +1,46 @@
+{
+ "id": "gen-1790192976-zgsDPkgWA2XBabrJ6KU6",
+ "object": "chat.completion",
+ "created": 1790192976,
+ "model": "deepseek/deepseek-v4-flash",
+ "provider": "Venice",
+ "system_fingerprint": null,
+ "service_tier": null,
+ "choices": [
+  {
+   "index": 0,
+   "logprobs": null,
+   "finish_reason": "stop",
+   "native_finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "content": "{\"labels\": [{\"id\": \"telegram:1:7146#s3\", \"kind\": \"event\", \"actor\": null, \"action\": \"submit application\", \"object\": \"whitelist for Zaddr collection\", \"qualifiers\": {\"version\": \"new collection\", \"event_date\": \"2026-09-21\", \"place\": null, \"counterparty\": null}, \"origin\": \"own\", \"source_role\": \"author\", \"verification_status\": \"unverified\", \"quote\": \"Подаем заявку в WL новой коллекции Zaddr (необходимо подключить X). Минт уже 21 сентября, mint price: 0.02 zec, 2,800 NFTs.\", \"span\": [0, 120]}, {\"id\": \"telegram:15:423337#s4\", \"kind\": \"event\", \"actor\": null, \"action\": \"announce giveaways\", \"object\": \"giveaways on X\", \"qualifiers\": {\"version\": null, \"event_date\": null, \"place\": \"X\", \"counterparty\": null}, \"origin\": \"own\", \"source_role\": \"author\", \"verification_status\": \"unverified\", \"quote\": \"3 giveaways on X:\\none on zec\\ntwo\\nthree\", \"span\": [0, 35]}, {\"id\": \"telegram:15:423339#s1\", \"kind\": \"event\", \"actor\": \"author\", \"action\": \"trade\", \"object\": \"NFTs\", \"qualifiers\": {\"version\": null, \"event_date\": null, \"place\": null, \"counterparty\": null}, \"origin\": \"own\", \"source_role\": \"author\", \"verification_status\": \"unverified\", \"quote\": \"Торгуются в +0.5 zec от клиринг прайса (1.5 zec). Уменя на рафле хитнуло только 2/10 не достаточно бычил на их цену и просчитался анлаки\", \"span\": [0, 200]}, {\"id\": \"telegram:15:423346#s0\", \"kind\": \"event\", \"actor\": null, \"action\": \"launch market\", \"object\": \"secondary market\", \"qualifiers\": {\"version\": null, \"event_date\": \"4 hours ago\", \"place\": null, \"counterparty\": null}, \"origin\": \"own\", \"source_role\": \"author\", \"verification_status\": \"unverified\", \"quote\": \"Маркет запущен примерно 4ч назад, за это время вторичка на 1,760 ZEC ($2,738,348) флор 2.14 ZEC ($3,304). Так что если смогли зафармить Снарклист, поздравляю. В целом попасть можно было, 1000 шт, на него ушло, кто попал получил бесплатно, вывод один – качайте твиттер.\", \"span\": [0, 300]}, {\"id\": \"telegram:15:423348#s1\", \"kind\": \"event\", \"actor\": null, \"action\": \"place sell wall\", \"object\": \"ZEC\", \"qualifiers\": {\"version\": null, \"event_date\": null, \"place\": null, \"counterparty\": null}, \"origin\": \"own\", \"source_role\": \"author\", \"verification_status\": \"unverified\", \"quote\": \"2.5 $ZEC стенка сун (если не пробьется печально будет)\", \"span\": [0, 55]}, {\"id\": \"telegram:15:423348#s4\", \"kind\": \"event\", \"actor\": null, \"action\": \"price update\", \"object\": \"ZEC\", \"qualifiers\": {\"version\": null, \"event_date\": null, \"place\": null, \"counterparty\": null}, \"origin\": \"own\", \"source_role\": \"author\", \"verification_status\": \"unverified\", \"quote\": \"$ZEC тем временем 1569\", \"span\": [0, 22]}, {\"id\": \"telegram:18:31517#s2\", \"kind\": \"event\", \"actor\": \"Grok 4.6\", \"action\": \"predict\", \"object\": \"ZEC as king\", \"qualifiers\": {\"version\": null, \"event_date\": null, \"place\": null, \"counterparty\": null}, \"origin\": \"retelling\", \"source_role\": \"author\", \"verification_status\": \"unverified\", \"quote\": \"Grok 4.6 оказался прав: ZEC король?\", \"span\": [0, 35]}, {\"id\": \"telegram:11:96824#s0\", \"kind\": \"event\", \"actor\": \"large investor\", \"action\": \"transfer\", \"object\": \"ZEC\", \"qualifiers\": {\"version\": null, \"event_date\": \"after 10 months inactivity\", \"place\": \"to Coinbase\", \"counterparty\": null}, \"origin\": \"retelling\", \"source_role\": \"editorial\", \"verification_status\": \"unverified\", \"quote\": \"крупный инвестор перевел #ZEC на сумму >362 млн $ спустя 10 месяцев бездействия (на тот момент стоимость токенов составляла ~163 млн $), после чего почти половину токенов перевёл на Coinbase.\", \"span\": [0, 400]}, {\"id\": \"telegram:12:4873#s0\", \"kind\": \"event\", \"actor\": \"Garrett Bullish\", \"action\": \"show address\", \"object\": \"spot ZEC address\", \"qualifiers\": {\"version\": null, \"event_date\": null, \"place\": null, \"counterparty\": null}, \"origin\": \"own\", \"source_role\": \"author\", \"verification_status\": \"unverified\", \"quote\": \"Гарретт Буллиш (в убытке на $35М по шорту Zec на Hyperliquid) показал свой спот адрес Zec\", \"span\": [0, 100]}, {\"id\": \"telegram:12:4873#s1\", \"kind\": \"event\", \"actor\": \"Garrett Bullish\", \"action\": \"withdraw\", \"object\": \"202K ZEC\", \"qualifiers\": {\"version\": null, \"event_date\": \"previously\", \"place\": null, \"counterparty\": null}, \"origin\": \"own\", \"source_role\": \"author\", \"verification_status\": \"unverified\", \"quote\": \"Ранее он вывел 202К Zec и фактически его шорт является частично дельта нейтральным (размер спота в разы больше шорта)\", \"span\": [0, 130]}, {\"id\": \"telegram:12:4873#s2\", \"kind\": \"event\", \"actor\": \"Garrett Bullish\", \"action\": \"reveal address\", \"object\": \"ZEC address t1gGCYpyURMo2FcYDSqeR8pgp2Kx9rnT72V\", \"qualifiers\": {\"version\": null, \"event_date\": null, \"place\": null, \"counterparty\": null}, \"origin\": \"own\", \"source_role\": \"author\", \"verification_status\": \"unverified\", \"quote\": \"Zec адрес: t1gGCYpyURMo2FcYDSqeR8pgp2Kx9rnT72V\", \"span\": [0, 55]}, {\"id\": \"telegram:15:423356#s0\", \"kind\": \"event\", \"actor\": null, \"action\": \"list\", \"object\": \"ZCASH NFT list\", \"qualifiers\": {\"version\": null, \"event_date\": null, \"place\": null, \"counterparty\": null}, \"origin\": \"own\", \"source_role\": \"author\", \"verification_status\": \"unverified\", \"quote\": \"ZCASH NFT список\", \"span\": [0, 16]}]}",
+    "refusal": null,
+    "reasoning": null
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 1975,
+  "completion_tokens": 1755,
+  "total_tokens": 3730,
+  "cost": 0.0005089105,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 256,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.0005089105,
+   "upstream_inference_prompt_cost": 0.000171073,
+   "upstream_inference_completions_cost": 0.0003378375
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

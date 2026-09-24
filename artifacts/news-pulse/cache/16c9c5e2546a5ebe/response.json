@@ -1,0 +1,32 @@
+{
+ "choices": [
+  {
+   "message": {
+    "content": "{\"labels\": [{\"id\": \"telegram:18:31503#s5\", \"kind\": \"event\", \"actor\": \"Киты\", \"action\": \"активно накапливают\", \"object\": \"ZEC\", \"qualifiers\": {\"version\": null, \"event_date\": null, \"place\": null, \"counterparty\": null}, \"origin\": \"retelling\", \"source_role\": \"author\", \"verification_status\": \"unverified\", \"quote\": \"➤ Киты активно накапливают ZEC. Четыре новых кошелька вывели с Binance и других бирж 32,293 ZEC (~$46,2m).\\n\\n\", \"span\": [0, 107]}]}"
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 1928,
+  "completion_tokens": 2153,
+  "total_tokens": 4081,
+  "cost": 0.0004843818,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.0004843818,
+   "upstream_inference_prompt_cost": 0.0001498056,
+   "upstream_inference_completions_cost": 0.0003345762
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

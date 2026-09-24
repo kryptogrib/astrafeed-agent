@@ -1,0 +1,32 @@
+{
+ "choices": [
+  {
+   "message": {
+    "content": "{\"labels\": [{\"id\": \"telegram:9:1042010#s22\", \"kind\": \"event\", \"actor\": null, \"action\": \"price_near_level\", \"object\": \"Ether\", \"qualifiers\": {\"version\": \"$2.6K\", \"event_date\": \"2026-09-20T20:30:17+00:00\"}, \"origin\": \"own\", \"source_role\": \"editorial\", \"verification_status\": \"source_statement\", \"topic_role\": \"subject\", \"quote\": \"Ether near $2.6K\", \"span\": [0, 14]}]}"
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 2239,
+  "completion_tokens": 1777,
+  "total_tokens": 4016,
+  "cost": 0.000567714,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.000567714,
+   "upstream_inference_prompt_cost": 0.000219422,
+   "upstream_inference_completions_cost": 0.000348292
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

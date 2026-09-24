@@ -1,0 +1,46 @@
+{
+ "id": "gen-1790195610-BMFmXzi3vX2jznlyEKo1",
+ "object": "chat.completion",
+ "created": 1790195610,
+ "model": "deepseek/deepseek-v4-flash",
+ "provider": "DeepInfra",
+ "system_fingerprint": null,
+ "service_tier": null,
+ "choices": [
+  {
+   "index": 0,
+   "logprobs": null,
+   "finish_reason": "stop",
+   "native_finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "content": "{\"labels\": [{\"id\": \"telegram:15:423434#s0\", \"kind\": \"event\", \"actor\": \"exploiter\", \"action\": \"hacked\", \"object\": \"SingularityNET\", \"qualifiers\": {\"version\": \"unauthorised minting of 260M\", \"counterparty\": \"$AGIX & 53.838M $WMTx\", \"place\": \"Ethereum\"}, \"origin\": \"retelling\", \"source_role\": \"unknown\", \"verification_status\": \"unverified\", \"quote\": \"The exploiter hacked @SingularityNET for unauthorised minting of 260M \\nalso hacked $AGIX & 53.838M $WMTx on Ethereum\", \"span\": [0, 117]}, {\"id\": \"telegram:9:1041998#s0\", \"kind\": \"promo_service\", \"actor\": null, \"action\": \"price update\", \"object\": \"cryptocurrencies\", \"qualifiers\": {\"version\": \"prices\", \"event_date\": \"2026-09-20T19:35:32+00:00\"}, \"origin\": \"own\", \"source_role\": \"editorial\", \"verification_status\": \"source_statement\", \"quote\": \"CRYPTO UPDATE:   \\n#BITCOIN 81250.00 +0.1%   \\n#ETHER 2633.40 -0.11%   \\n#CARDANO 0.2269 -0.87%\\n#BITCOINCASH 251.18 -0.73%   \\n#LITECOIN 58.44 +1.26%   \\n#STELLAR 0.1958 -1.31%   \\n#DOGECOIN 0.0870 -2.25%   \\n#UNISWAP 8.7246 +0.88%   \\n#CHAINLINK 12.5101 +0.17%   \\n#POLKADOT 1.1523 +2.62%   \\n#SOLANA 110.2500 -0.75%   \\n#AVALANCHE 11.0300 +13.24% ...\", \"span\": [0, 280]}, {\"id\": \"telegram:9:1042010#s5\", \"kind\": \"promo_service\", \"actor\": null, \"action\": \"market commentary\", \"object\": \"cryptocurrencies\", \"qualifiers\": {\"version\": \"prices and sentiment\", \"event_date\": \"2026-09-20T20:30:17+00:00\"}, \"origin\": \"own\", \"source_role\": \"editorial\", \"verification_status\": \"source_statement\", \"quote\": \"🪙 Crypto & DeFi\\n• Bitcoin holds around $81K — slightly firmer, while altcoins are mixed to weaker\\n• Ether near $2.6K; DOGE and SOL softer — risk appetite remains choppy\", \"span\": [0, 148]}, {\"id\": \"telegram:11:96837#s0\", \"kind\": \"event\", \"actor\": \"spotters BTC-ETF\", \"action\": \"net inflow\", \"object\": \"BTC-ETF\", \"qualifiers\": {\"version\": \"~$6,21 млн\", \"event_date\": \"с 14 по 18 августа\", \"place\": \"неделя\"}, \"origin\": \"retelling\", \"source_role\": \"unknown\", \"verification_status\": \"unverified\", \"quote\": \"📊 #BTC #ETH #ETF На прошлой неделе (с 14 по 18 августа) общий чистый приток спотовых BTC-ETF составил ~$6,21 млн;\", \"span\": [0, 100]}, {\"id\": \"telegram:11:96837#s1\", \"kind\": \"event\", \"actor\": \"spotters ETH-ETF\", \"action\": \"net outflow\", \"object\": \"ETH-ETF\", \"qualifiers\": {\"version\": \"~$140 млн\", \"event_date\": \"неделя\"}, \"origin\": \"retelling\", \"source_role\": \"unknown\", \"verification_status\": \"unverified\", \"quote\": \"Общий чистый отток спотовых ETH-ETF составил ~$140 млн.\", \"span\": [0, 52]}, {\"id\": \"telegram:11:96838#s1\", \"kind\": \"event\", \"actor\": \"трейдер\", \"action\": \"sold and bought back\", \"object\": \"ETH\", \"qualifiers\": {\"version\": \"10 500 #ETH ($23,64 млн) по средней цене $2 252 с прибылью в $3,66 млн, выкупил обратно 7 567 #ETH ($19,93 млн) по более высокой цене\", \"event_date\": \"месяц назад\"}, \"origin\": \"retelling\", \"source_role\": \"unknown\", \"verification_status\": \"unverified\", \"quote\": \"1. Трейдер, который месяц назад продал 10 500 #ETH ($23,64 млн) по средней цене $2 252 с прибылью в $3,66 млн, выкупил обратно 7 567 #ETH ($19,93 млн) по более высокой цене;\", \"span\": [0, 170]}, {\"id\": \"telegram:11:96838#s1\", \"kind\": \"event\", \"actor\": \"кит\", \"action\": \"sold and bought\", \"object\": \"BTC and ETH\", \"qualifiers\": {\"version\": \"продал 1 107 #BTC ($86,76 млн) на Hyperliquid, а затем купил 34 422 #ETH ($86,5 млн) и разместил все эти средства в стейкинг\", \"event_date\": \"за последние 5 дней\"}, \"origin\": \"retelling\", \"source_role\": \"unknown\", \"verification_status\": \"unverified\", \"quote\": \"2. За последние 5 дней кит продал 1 107 #BTC ($86,76 млн) на Hyperliquid, а затем купил 34 422 #ETH ($86,5 млн) и разместил все эти средства в стейкинг;\", \"span\": [171, 340]}, {\"id\": \"telegram:11:96838#s1\", \"kind\": \"event\", \"actor\": \"Гаррет Джин\", \"action\": \"closed short\", \"object\": \"ZEC\", \"qualifiers\": {\"version\": \"зафиксировав убыток в $35,44 млн. Он всё ещё удерживает спот на 202 078 #ZEC ($309,25 млн) с прибылью $221 млн\"}, \"origin\": \"retelling\", \"source_role\": \"unknown\", \"verification_status\": \"unverified\", \"quote\": \"3. Гаррет Джин, удерживавший крупнейший шорт #ZEC, закрыл его, зафиксировав убыток в $35,44 млн. Он всё ещё удерживает спот на 202 078 #ZEC ($309,25 млн) с прибылью $221 млн.\", \"span\": [341, 530]}, {\"id\": \"telegram:10:385524#s0\", \"kind\": \"promo_service\", \"actor\": null, \"action\": \"price test\", \"object\": \"ETH\", \"qualifiers\": {\"version\": \"$2700, максимум с января 2026г\", \"place\": \"Ethereum\"}, \"origin\": \"own\", \"source_role\": \"editorial\", \"verification_status\": \"source_statement\", \"quote\": \"⬆️✴️#ETH #крипто #обзор \\nETH тестирует отметку $2700, это максимум с января 2026г. Виталик одобряет.\", \"span\": [0, 82]}, {\"id\": \"telegram:21:21135#s10\", \"kind\": \"promo_service\", \"actor\": null, \"action\": \"price forecast\", \"object\": \"Ethereum\", \"qualifiers\": {\"version\": \"киты накапливают ETH, а слабые объемы повышают риск разворота\"}, \"origin\": \"own\", \"source_role\": \"editorial\", \"verification_status\": \"source_statement\", \"quote\": \"🌙 НОЧНЫЕ НОВОСТИ:\\n  • Прогноз цены Ethereum: киты накапливают ETH, а слабые объемы повышают риск разворота\\n  • Курс биткоина выше важного индикатора. Главное о криптовалютах на утро\\n  • Технический анализ Arbitrum: ралли нацелено на сопротивление $0,2403 на фоне усиления бычьего импульса\", \"span\": [0, 280]}, {\"id\": \"telegram:15:423456#s5\", \"kind\": \"participant_reaction\", \"actor\": \"author\", \"action\": \"instruction\", \"object\": \"user\", \"qualifiers\": {\"place\": \"Ethereum\"}, \"origin\": \"own\", \"source_role\": \"author\", \"verification_status\": \"source_statement\", \"quote\": \"> Укажите свой адрес Ethereum в поле примечания\", \"span\": [0, 50]}, {\"id\": \"telegram:15:423460#s2\", \"kind\": \"promo_service\", \"actor\": null, \"action\": \"price update\", \"object\": \"Bitcoin and Ethereum\", \"qualifiers\": {\"version\": \"Bitcoin: $81,776 +1.74%\\nEthereum: $2,662 +3.24%\"}, \"origin\": \"own\", \"source_role\": \"editorial\", \"verification_status\": \"source_statement\", \"quote\": \"Bitcoin: $81,776 +1.74%\\nEthereum: $2,662 +3.24%\", \"span\": [0, 52]}, {\"id\": \"telegram:15:423462#s1\", \"kind\": \"event\", \"actor\": \"attacker\", \"action\": \"drained\", \"object\": \"Fetch.ai's Ethereum token converter\", \"qualifiers\": {\"version\": \"leaked signing key\", \"counterparty\": \"NuNet\", \"place\": \"Ethereum\"}, \"origin\": \"retelling\", \"source_role\": \"unknown\", \"verification_status\": \"unverified\", \"quote\": \"An attacker used a leaked signing key to drain Fetch.ai's Ethereum token converter, then reused the same key to hit NuNet, walking away with roughly $2M across the two AI projects in one coordinated attack.\", \"span\": [0, 200]}, {\"id\": \"telegram:15:423462#s2\", \"kind\": \"event\", \"actor\": \"attacker\", \"action\": \"swept and minted\", \"object\": \"FET and NTX\", \"qualifiers\": {\"version\": \"8.7M FET (~$1.53M) from Fetch.ai's TokenConversionManagerV3 contract on Ethereum, while on NuNet the attacker minted 408.5M NTX (~$452K)\", \"counterparty\": \"AGIX and WMTX mints\", \"place\": \"Ethereum\"}, \"origin\": \"retelling\", \"source_role\": \"unknown\", \"verification_status\": \"unverified\", \"quote\": \"Around 8.7M FET (~$1.53M) was swept from Fetch.ai's TokenConversionManagerV3 contract on Ethereum, while on NuNet the attacker minted 408.5M NTX (~$452K), sending the token down about 95%. Security firms Blockaid and PeckShield attribute both hits to the same wallet cluster. Fetch.ai says it is also investigating unauthorized AGIX and WMTX mints, raising concerns over token supply across affiliated projects.\", \"span\": [0, 400]}]}",
+    "refusal": null,
+    "reasoning": null
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 2308,
+  "completion_tokens": 2626,
+  "total_tokens": 4934,
+  "cost": 0.000661968,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 256,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.000661968,
+   "upstream_inference_prompt_cost": 0.000189288,
+   "upstream_inference_completions_cost": 0.00047268
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

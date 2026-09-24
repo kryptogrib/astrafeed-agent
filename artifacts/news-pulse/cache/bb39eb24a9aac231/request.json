@@ -1,0 +1,21 @@
+{
+ "segments": [
+  {
+   "id": "telegram:1:7149#s8",
+   "text": "• Токен-стандарт ZRC20 на Zcash, задания в X + ZEC-кошелек, заявки скоро закрывают;  \n",
+   "mentions": [
+    {
+     "text": "Zcash",
+     "status": "confirmed"
+    },
+    {
+     "text": "ZEC",
+     "status": "confirmed"
+    }
+   ],
+   "kind_hint": "post",
+   "url": "https://t.me/whitelist1/7149",
+   "time": "2026-09-20T12:49:57+00:00"
+  }
+ ]
+}

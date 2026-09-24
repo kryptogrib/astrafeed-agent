@@ -1,0 +1,327 @@
+{
+  "topic": "aave",
+  "window": {
+    "requested": "2026-09-09..2026-09-23",
+    "start": "2026-09-09T00:00:00+00:00",
+    "end": "2026-09-24T00:00:00+00:00",
+    "cutoff": "2026-09-24T00:00:00+00:00",
+    "previous": "2026-08-25..2026-09-08",
+    "mode": "publication_replay"
+  },
+  "status": "ok",
+  "events": [
+    {
+      "event_id": "e1-4bdb4a742211eda9",
+      "headline": "#Aave: теперь принимает золото в качестве обеспечения 🤔",
+      "counts": {
+        "events": 1,
+        "publications": 1,
+        "channels": 1,
+        "known_authors": 0,
+        "unknown_authors": 1,
+        "found_origins": 0,
+        "reprints": 1,
+        "unknown_origin": 0
+      },
+      "actor": "Aave",
+      "action": "accepts gold as collateral",
+      "object": "gold",
+      "qualifiers": {},
+      "members": [
+        {
+          "obs_id": "telegram:3:6912#s0",
+          "publication_id": "telegram:3:6912",
+          "source_id": 3,
+          "author_id": null,
+          "published_at": "2026-09-11T12:02:26+00:00",
+          "url": "https://t.me/Slavik_investor_updates/6912",
+          "quote": "#Aave: теперь принимает золото в качестве обеспечения 🤔",
+          "span": [
+            0,
+            55
+          ],
+          "origin": "retelling"
+        }
+      ]
+    },
+    {
+      "event_id": "e2-0fb0504ab639e4c9",
+      "headline": "• Aave Proposes Custodied Collateral Lending for Institutions",
+      "counts": {
+        "events": 1,
+        "publications": 1,
+        "channels": 1,
+        "known_authors": 0,
+        "unknown_authors": 1,
+        "found_origins": 0,
+        "reprints": 1,
+        "unknown_origin": 0
+      },
+      "actor": "Aave",
+      "action": "proposes",
+      "object": "custodied collateral lending for institutions",
+      "qualifiers": {},
+      "members": [
+        {
+          "obs_id": "telegram:15:423460#s6",
+          "publication_id": "telegram:15:423460",
+          "source_id": 15,
+          "author_id": null,
+          "published_at": "2026-09-21T09:46:54+00:00",
+          "url": "https://t.me/WEB3_AGGREGATOR/423460",
+          "quote": "• Aave Proposes Custodied Collateral Lending for Institutions",
+          "span": [
+            382,
+            443
+          ],
+          "origin": "retelling"
+        }
+      ]
+    },
+    {
+      "event_id": "e3-8de96fd645de5fd5",
+      "headline": "🟢 Aave предлагает займы под кастодиальный BTC",
+      "counts": {
+        "events": 1,
+        "publications": 1,
+        "channels": 1,
+        "known_authors": 0,
+        "unknown_authors": 1,
+        "found_origins": 0,
+        "reprints": 1,
+        "unknown_origin": 0
+      },
+      "actor": "Aave",
+      "action": "предлагает",
+      "object": "займы под кастодиальный BTC",
+      "qualifiers": {},
+      "members": [
+        {
+          "obs_id": "telegram:15:423533#s17",
+          "publication_id": "telegram:15:423533",
+          "source_id": 15,
+          "author_id": null,
+          "published_at": "2026-09-21T20:47:03+00:00",
+          "url": "https://t.me/WEB3_AGGREGATOR/423533",
+          "quote": "🟢 Aave предлагает займы под кастодиальный BTC",
+          "span": [
+            785,
+            830
+          ],
+          "origin": "retelling"
+        }
+      ]
+    }
+  ],
+  "distribution_and_positions": [
+    {
+      "obs_id": "telegram:3:6912#s1",
+      "publication_id": "telegram:3:6912",
+      "kind": "author_position",
+      "text": "Aave - самый крупный лендинг протокол в крипте.",
+      "quote": "Aave - самый крупный лендинг протокол в крипте.",
+      "url": "https://t.me/Slavik_investor_updates/6912",
+      "origin": "own",
+      "source_role": "author"
+    },
+    {
+      "obs_id": "telegram:15:422974#s15",
+      "publication_id": "telegram:15:422974",
+      "kind": "author_position",
+      "text": "10. $AAVE (1) - безоговорочный лидер он-чейн кредитных протоколов. После взлома доверие к нему не пропало у людей(у меня пропало).",
+      "quote": "10. $AAVE (1) - безоговорочный лидер он-чейн кредитных протоколов. После взлома доверие к нему не пропало у людей(у меня пропало).",
+      "url": "https://t.me/WEB3_AGGREGATOR/422974",
+      "origin": "own",
+      "source_role": "author"
+    },
+    {
+      "obs_id": "telegram:15:423227#s14",
+      "publication_id": "telegram:15:423227",
+      "kind": "author_position",
+      "text": "слой банков BNY и HSBC, Aave и токенизированных активов живёт отдельно от казино.",
+      "quote": "слой банков BNY и HSBC, Aave и токенизированных активов живёт отдельно от казино.",
+      "url": "https://t.me/WEB3_AGGREGATOR/423227",
+      "origin": "own",
+      "source_role": "author"
+    }
+  ],
+  "discussion": [
+    {
+      "target": "none",
+      "text": "в собранных обсуждениях реакция не найдена",
+      "basis": "к событиям окна нет связанных комментариев",
+      "url": null,
+      "quote": null
+    }
+  ],
+  "changes": {
+    "previous_window": "2026-08-25..2026-09-08",
+    "events_appeared": [
+      "Aave|accepts gold as collateral|gold|#Aave: теперь принимает золото в качестве обеспечения 🤔",
+      "Aave|proposes|custodied collateral lending for institutions|• Aave Proposes Custodied Collateral Lending for Institutions",
+      "Aave|предлагает|займы под кастодиальный BTC|🟢 Aave предлагает займы под кастодиальный BTC"
+    ],
+    "events_gone": [],
+    "discussion_comments": 1689,
+    "previous_comments": 0,
+    "source_coverage": {
+      "added_channels": [
+        "@CryptoEarnImp",
+        "@Defiscamcheck",
+        "@PowsGemCalls",
+        "@Slavik_investor_updates",
+        "@WEB3_AGGREGATOR",
+        "@badfriend_loops",
+        "@crypto_hd",
+        "@cryptoattack24",
+        "@cryptonftded",
+        "@don_invest",
+        "@icodrops_sergey",
+        "@icryptocom",
+        "@krasnovcrypto",
+        "@marketfeed",
+        "@markettwits",
+        "@moni_talks",
+        "@rawa_imagination",
+        "@slavik_investor",
+        "@spidersjournal",
+        "@whitelist1"
+      ],
+      "removed_channels": [],
+      "current_channels": 20,
+      "previous_channels": 0
+    }
+  },
+  "short_observations": [
+    "#Aave: теперь принимает золото в качестве обеспечения 🤔",
+    "• Aave Proposes Custodied Collateral Lending for Institutions",
+    "🟢 Aave предлагает займы под кастодиальный BTC"
+  ],
+  "coverage": {
+    "publications": 13985,
+    "comments": 1689,
+    "channels": 20,
+    "topic_publications": 3,
+    "not_processed": 0,
+    "db_md5": "8618099125a806df376354286ccd982e",
+    "cutoff": "2026-09-24T00:00:00+00:00"
+  },
+  "limitations": [
+    "Режим publication_replay: discovered_at в снимке отсутствует, «впервые системой» не заявляется.",
+    "Роль источника unknown: в базе нет редакционного реестра.",
+    "Неизвестные авторы не объединяются.",
+    "Отсечено после cutoff 2026-09-24T00:00:00+00:00: 0."
+  ],
+  "evidence": [
+    {
+      "id": "telegram:3:6912#s0",
+      "url": "https://t.me/Slavik_investor_updates/6912",
+      "quote": "#Aave: теперь принимает золото в качестве обеспечения 🤔",
+      "span": [
+        0,
+        55
+      ],
+      "publication_id": "telegram:3:6912"
+    },
+    {
+      "id": "telegram:15:423460#s6",
+      "url": "https://t.me/WEB3_AGGREGATOR/423460",
+      "quote": "• Aave Proposes Custodied Collateral Lending for Institutions",
+      "span": [
+        382,
+        443
+      ],
+      "publication_id": "telegram:15:423460"
+    },
+    {
+      "id": "telegram:15:423533#s17",
+      "url": "https://t.me/WEB3_AGGREGATOR/423533",
+      "quote": "🟢 Aave предлагает займы под кастодиальный BTC",
+      "span": [
+        785,
+        830
+      ],
+      "publication_id": "telegram:15:423533"
+    },
+    {
+      "id": "telegram:3:6912#s1",
+      "url": "https://t.me/Slavik_investor_updates/6912",
+      "quote": "Aave - самый крупный лендинг протокол в крипте.",
+      "span": [
+        57,
+        104
+      ],
+      "publication_id": "telegram:3:6912"
+    },
+    {
+      "id": "telegram:15:422853#s9",
+      "url": "https://t.me/WEB3_AGGREGATOR/422853",
+      "quote": "В экосистеме на день первый заявлены Aave, Morpho, Uniswap, Aerodrome, FalconX, Galaxy и несколько институциональных маркетмейкеров.",
+      "span": [
+        2211,
+        2343
+      ],
+      "publication_id": "telegram:15:422853"
+    },
+    {
+      "id": "telegram:15:422974#s15",
+      "url": "https://t.me/WEB3_AGGREGATOR/422974",
+      "quote": "10. $AAVE (1) - безоговорочный лидер он-чейн кредитных протоколов. После взлома доверие к нему не пропало у людей(у меня пропало).",
+      "span": [
+        2688,
+        2818
+      ],
+      "publication_id": "telegram:15:422974"
+    },
+    {
+      "id": "telegram:13:3754#s2",
+      "url": "https://t.me/krasnovcrypto/3754",
+      "quote": "В экосистеме уже есть Uniswap, Aave, Morpho, Aerodrome и другие крупные проекты.",
+      "span": [
+        200,
+        280
+      ],
+      "publication_id": "telegram:13:3754"
+    },
+    {
+      "id": "telegram:15:423197#s2",
+      "url": "https://t.me/WEB3_AGGREGATOR/423197",
+      "quote": "Day-one access came via Binance Wallet, OKX, MetaMask and Kraken, with Aave, Morpho and Uniswap live from the start.",
+      "span": [
+        395,
+        511
+      ],
+      "publication_id": "telegram:15:423197"
+    },
+    {
+      "id": "telegram:15:423227#s14",
+      "url": "https://t.me/WEB3_AGGREGATOR/423227",
+      "quote": "слой банков BNY и HSBC, Aave и токенизированных активов живёт отдельно от казино.",
+      "span": [
+        2297,
+        2378
+      ],
+      "publication_id": "telegram:15:423227"
+    },
+    {
+      "id": "telegram:15:423244#s3",
+      "url": "https://t.me/WEB3_AGGREGATOR/423244",
+      "quote": "with integrations across protocols including Aave, Morpho, and Uniswap.",
+      "span": [
+        706,
+        777
+      ],
+      "publication_id": "telegram:15:423244"
+    }
+  ],
+  "spend_usd": 0.000535,
+  "numbers_by": "code",
+  "brief_markdown": "# Pulse (news-first): aave, окно 2026-09-09 – 2026-09-23\n\n## Коротко\n\n- #Aave: теперь принимает золото в качестве обеспечения 🤔\n- • Aave Proposes Custodied Collateral Lending for Institutions\n- 🟢 Aave предлагает займы под кастодиальный BTC\n\n## События и заявления\n\n- **#Aave: теперь принимает золото в качестве обеспечения 🤔**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/Slavik_investor_updates/6912: «#Aave: теперь принимает золото в качестве обеспечения 🤔»\n- **• Aave Proposes Custodied Collateral Lending for Institutions**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/423460: «• Aave Proposes Custodied Collateral Lending for Institutions»\n- **🟢 Aave предлагает займы под кастодиальный BTC**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/423533: «🟢 Aave предлагает займы под кастодиальный BTC»\n\n## Кто распространяет информацию и какие позиции\n\n- Aave - самый крупный лендинг протокол в крипте.\n  https://t.me/Slavik_investor_updates/6912\n- 10. $AAVE (1) - безоговорочный лидер он-чейн кредитных протоколов. После взлома доверие к нему не пропало у людей(у меня пропало).\n  https://t.me/WEB3_AGGREGATOR/422974\n- слой банков BNY и HSBC, Aave и токенизированных активов живёт отдельно от казино.\n  https://t.me/WEB3_AGGREGATOR/423227\n\n## Вопросы, аргументы и опыт участников\n\n- в собранных обсуждениях реакция не найдена\n  основание: к событиям окна нет связанных комментариев\n\n## Изменения относительно предыдущего периода\n\n- Появившиеся события: 3.\n- Исчезнувшие события: 0.\n- Изменение охвата источников: +20 / −0 каналов.\n- Комментарии в текущем окне: 1689.\n\n## Охват и ограничения\n\n- Публикации 13985, комментарии 1689, каналы 20.\n- Режим publication_replay: discovered_at в снимке отсутствует, «впервые системой» не заявляется.\n- Роль источника unknown: в базе нет редакционного реестра.\n- Неизвестные авторы не объединяются.\n- Отсечено после cutoff 2026-09-24T00:00:00+00:00: 0.\n\n## Основания\n\n- https://t.me/Slavik_investor_updates/6912: «#Aave: теперь принимает золото в качестве обеспечения 🤔»\n- https://t.me/WEB3_AGGREGATOR/423460: «• Aave Proposes Custodied Collateral Lending for Institutions»\n- https://t.me/WEB3_AGGREGATOR/423533: «🟢 Aave предлагает займы под кастодиальный BTC»\n- https://t.me/Slavik_investor_updates/6912: «Aave - самый крупный лендинг протокол в крипте.»\n- https://t.me/WEB3_AGGREGATOR/422853: «В экосистеме на день первый заявлены Aave, Morpho, Uniswap, Aerodrome, FalconX, Galaxy и несколько институциональных маркетмейкеров.»\n- https://t.me/WEB3_AGGREGATOR/422974: «10. $AAVE (1) - безоговорочный лидер он-чейн кредитных протоколов. После взлома доверие к нему не пропало у людей(у меня пропало).»\n- https://t.me/krasnovcrypto/3754: «В экосистеме уже есть Uniswap, Aave, Morpho, Aerodrome и другие крупные проекты.»\n- https://t.me/WEB3_AGGREGATOR/423197: «Day-one access came via Binance Wallet, OKX, MetaMask and Kraken, with Aave, Morpho and Uniswap live from the start.»\n- https://t.me/WEB3_AGGREGATOR/423227: «слой банков BNY и HSBC, Aave и токенизированных активов живёт отдельно от казино.»\n- https://t.me/WEB3_AGGREGATOR/423244: «with integrations across protocols including Aave, Morpho, and Uniswap.»\n",
+  "model": "deepseek/deepseek-v4-flash",
+  "llm": {
+    "calls": 1,
+    "cache_hits": 4,
+    "spent_usd": 0.000535,
+    "errors": []
+  }
+}

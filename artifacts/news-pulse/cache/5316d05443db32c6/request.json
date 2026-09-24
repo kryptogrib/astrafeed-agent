@@ -1,0 +1,23 @@
+{
+ "a": {
+  "quote": "Studio is built around Arc and Circle’s infrastructure, with integrations for CCTP, Gateway, Wallets, and other stablecoin tools.",
+  "actor": "Arc",
+  "action": "built",
+  "object": "Studio",
+  "qualifiers": {
+   "place": "around Arc and Circle’s infrastructure",
+   "counterparty": "CCTP, Gateway, Wallets"
+  },
+  "url": "https://t.me/WEB3_AGGREGATOR/423244"
+ },
+ "b": {
+  "quote": "Arc has introduced Arc Studio, an AI coding agent that turns natural-language prompts into full-stack onchain applications, including frontend interfaces, backend logic, and smart contracts.",
+  "actor": "Arc",
+  "action": "introduced",
+  "object": "Arc Studio",
+  "qualifiers": {
+   "version": "AI coding agent"
+  },
+  "url": "https://t.me/WEB3_AGGREGATOR/423244"
+ }
+}

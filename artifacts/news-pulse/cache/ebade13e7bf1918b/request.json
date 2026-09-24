@@ -1,0 +1,20 @@
+{
+ "a": {
+  "quote": "Основная сеть Arc запустилась. Arc и OpenSea запустили бесплатный минт NFT:",
+  "actor": "Arc",
+  "action": "launch",
+  "object": "mainnet",
+  "qualifiers": {},
+  "url": "https://t.me/WEB3_AGGREGATOR/423117"
+ },
+ "b": {
+  "quote": "👍Напомним, что Arc выходит в Mainnet уже сегодня, а вместе с ним и многие NFT коллекции, сверяемся с постом.",
+  "actor": "Arc",
+  "action": "launches",
+  "object": "Mainnet",
+  "qualifiers": {
+   "event_date": "today"
+  },
+  "url": "https://t.me/whitelist1/7138"
+ }
+}

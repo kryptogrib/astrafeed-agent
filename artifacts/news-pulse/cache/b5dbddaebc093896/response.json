@@ -1,0 +1,32 @@
+{
+ "choices": [
+  {
+   "message": {
+    "content": "{\"labels\": [{\"id\": \"telegram:11:96796#s3\", \"kind\": \"event\", \"actor\": \"t1YLeD\", \"action\": \"вывел с бирж 5 818 ZEC\", \"object\": \"5 818 ZEC\", \"qualifiers\": {\"amount\": \"5 818 ZEC\", \"value\": \"$8,45 млн\"}, \"origin\": \"retelling\", \"source_role\": \"editorial\", \"verification_status\": \"unverified\", \"topic_role\": \"subject\", \"quote\": \"3. t1YLeD вывел с бирж 5 818 #ZEC ($8,45 млн);\\n\", \"span\": [0, 48]}]}"
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 2033,
+  "completion_tokens": 2131,
+  "total_tokens": 4164,
+  "cost": 0.0004470466,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 1728,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.0004470466,
+   "upstream_inference_prompt_cost": 5.92046e-05,
+   "upstream_inference_completions_cost": 0.000387842
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

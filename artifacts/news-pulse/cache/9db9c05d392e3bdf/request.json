@@ -1,0 +1,22 @@
+{
+ "a": {
+  "quote": "Официальная презентация запуска Arc начнется сегодня в 18:30 мск.",
+  "actor": "Circle",
+  "action": "will present",
+  "object": "official presentation of Arc launch",
+  "qualifiers": {
+   "event_date": "today at 18:30 мск"
+  },
+  "url": "https://t.me/crypto_hd/31448"
+ },
+ "b": {
+  "quote": "• Arc Citizens: 10,000 fully on-chain identity PFP, запуск планируется 16 сентября;",
+  "actor": "Arc",
+  "action": "launch",
+  "object": "Arc Citizens",
+  "qualifiers": {
+   "event_date": "16 сентября"
+  },
+  "url": "https://t.me/whitelist1/7135"
+ }
+}

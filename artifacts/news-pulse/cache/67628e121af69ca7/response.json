@@ -1,0 +1,46 @@
+{
+ "id": "gen-1790198816-cYuhIH78E6fEHOeEi2uC",
+ "object": "chat.completion",
+ "created": 1790198816,
+ "model": "deepseek/deepseek-v4-flash",
+ "provider": "Baidu",
+ "system_fingerprint": null,
+ "service_tier": null,
+ "choices": [
+  {
+   "index": 0,
+   "logprobs": null,
+   "finish_reason": "stop",
+   "native_finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "content": "{\"labels\": [{\"id\": \"telegram:10:385896#s0\", \"kind\": \"event\", \"actor\": null, \"action\": \"price quote\", \"object\": \"ZEC\", \"qualifiers\": {\"version\": null, \"event_date\": null, \"place\": null, \"counterparty\": null}, \"origin\": \"unknown\", \"source_role\": \"unknown\", \"verification_status\": \"unverified\", \"quote\": \"💥✴️#ZEC > $1600\", \"span\": [0, 17]}, {\"id\": \"telegram:15:423639#s5\", \"kind\": \"promo_service\", \"actor\": null, \"action\": \"promote whitelist\", \"object\": \"Duckz collection on Zcash\", \"qualifiers\": {\"version\": null, \"event_date\": null, \"place\": null, \"counterparty\": null}, \"origin\": \"unknown\", \"source_role\": \"unknown\", \"verification_status\": \"unverified\", \"quote\": \"🔴Duckz. Коллекция на Zcash, можем податься в WL через сайт (коннектим твиттер и выполняем пару простых заданий).\", \"span\": [0, 107]}, {\"id\": \"telegram:15:423639#s6\", \"kind\": \"promo_service\", \"actor\": null, \"action\": \"promote whitelist\", \"object\": \"Bitx token drop ZRC20\", \"qualifiers\": {\"version\": null, \"event_date\": null, \"place\": null, \"counterparty\": null}, \"origin\": \"unknown\", \"source_role\": \"unknown\", \"verification_status\": \"unverified\", \"quote\": \"🔴Bitx. Еще один WL, в этот раз на дроп токенов стандарта ZRC20. Коннектим Zcash кошелек и делаем пару квестов.\", \"span\": [0, 108]}, {\"id\": \"telegram:15:423642#s7\", \"kind\": \"event\", \"actor\": null, \"action\": \"price high\", \"object\": \"ZEC\", \"qualifiers\": {\"version\": null, \"event_date\": \"10-year\", \"place\": null, \"counterparty\": null}, \"origin\": \"unknown\", \"source_role\": \"unknown\", \"verification_status\": \"unverified\", \"quote\": \"• ZEC: 10-year price high\", \"span\": [0, 25]}, {\"id\": \"telegram:1:7156#s1\", \"kind\": \"author_position\", \"actor\": null, \"action\": \"opinion\", \"object\": \"ZEC ecosystem quality\", \"qualifiers\": {\"version\": null, \"event_date\": null, \"place\": null, \"counterparty\": null}, \"origin\": \"unknown\", \"source_role\": \"unknown\", \"verification_status\": \"unverified\", \"quote\": \"По примеру ZEC мы видим как целая экосистема может рагать, поэтому нужно делать упор не на количество, а качество.\", \"span\": [0, 107]}, {\"id\": \"telegram:21:21112:c:343092#s0\", \"kind\": \"participant_reaction\", \"actor\": null, \"action\": \"comparison\", \"object\": \"near, zen, zec\", \"qualifiers\": {\"version\": null, \"event_date\": null, \"place\": null, \"counterparty\": null}, \"origin\": \"unknown\", \"source_role\": \"participant\", \"verification_status\": \"unverified\", \"quote\": \"Тоже держу ниар. По структуре очень напоминает  zen, zec , ну, по моим параметрам.\", \"span\": [0, 82]}, {\"id\": \"telegram:6:2426:c:150569#s0\", \"kind\": \"participant_reaction\", \"actor\": null, \"action\": \"prediction\", \"object\": \"DASH as younger brother of ZEC\", \"qualifiers\": {\"version\": null, \"event_date\": null, \"place\": null, \"counterparty\": null}, \"origin\": \"unknown\", \"source_role\": \"participant\", \"verification_status\": \"unverified\", \"quote\": \"Я думаю DASH  тоже себя ещё покажет как младший брат от ZEC\", \"span\": [0, 60]}, {\"id\": \"telegram:1:7149:c:571974#s0\", \"kind\": \"participant_reaction\", \"actor\": null, \"action\": \"question\", \"object\": \"NFT marketplace for Zcash\", \"qualifiers\": {\"version\": null, \"event_date\": null, \"place\": null, \"counterparty\": null}, \"origin\": \"unknown\", \"source_role\": \"participant\", \"verification_status\": \"unverified\", \"quote\": \"А на каком маркете торгуются нфт на Zcash ?\", \"span\": [0, 46]}, {\"id\": \"telegram:1:7149:c:572005#s0\", \"kind\": \"participant_reaction\", \"actor\": null, \"action\": \"question\", \"object\": \"how to deposit ZEC to noir wallet\", \"qualifiers\": {\"version\": null, \"event_date\": null, \"place\": null, \"counterparty\": null}, \"origin\": \"unknown\", \"source_role\": \"participant\", \"verification_status\": \"unverified\", \"quote\": \"Как завести Zec на кошелек noir? Только с биржи?\", \"span\": [0, 50]}, {\"id\": \"telegram:2:5299:c:380347#s0\", \"kind\": \"participant_reaction\", \"actor\": null, \"action\": \"question\", \"object\": \"ETH wallet requirement for ZEC project\", \"qualifiers\": {\"version\": null, \"event_date\": null, \"place\": null, \"counterparty\": null}, \"origin\": \"unknown\", \"source_role\": \"participant\", \"verification_status\": \"unverified\", \"quote\": \"ottoclub ETH кошелёк требует - это нормально для Zec проекта?\", \"span\": [0, 57]}, {\"id\": \"telegram:1:7151:c:572109#s0\", \"kind\": \"participant_reaction\", \"actor\": null, \"action\": \"exclamation\", \"object\": \"all ZEC in one place\", \"qualifiers\": {\"version\": null, \"event_date\": null, \"place\": null, \"counterparty\": null}, \"origin\": \"unknown\", \"source_role\": \"participant\", \"verification_status\": \"unverified\", \"quote\": \"Ништяк, все ZEC в одном котле!\", \"span\": [0, 31]}, {\"id\": \"telegram:2:5299:c:380352#s0\", \"kind\": \"participant_reaction\", \"actor\": null, \"action\": \"recommendation\", \"object\": \"noir wallet for ZEC NFT/WL\", \"qualifiers\": {\"version\": null, \"event_date\": null, \"place\": null, \"counterparty\": null}, \"origin\": \"unknown\", \"source_role\": \"participant\", \"verification_status\": \"unverified\", \"quote\": \"Лучше сделайте кош. noir\\nОн под NFT и WL лучше всего подходит для ZEC\", \"span\": [0, 72}]}",
+    "refusal": null,
+    "reasoning": null
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 1662,
+  "completion_tokens": 1622,
+  "total_tokens": 3284,
+  "cost": 0.00038875144,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.00038875144,
+   "upstream_inference_prompt_cost": 0.00013169688,
+   "upstream_inference_completions_cost": 0.00025705456
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

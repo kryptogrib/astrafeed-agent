@@ -1,0 +1,18 @@
+{
+ "a": {
+  "quote": "Лента забита минтами и вайтлистами на ZEC? Одни говорят, что это новая мета, другие - что это вообще не NFT. Деньги при этом ходят настоящие. Разберём, как устроено.",
+  "actor": null,
+  "action": "discuss",
+  "object": "mints and whitelists on ZEC",
+  "qualifiers": {},
+  "url": "https://t.me/WEB3_AGGREGATOR/423606"
+ },
+ "b": {
+  "quote": "⏺️Первая: платёж плюс запись. Отправляешь ZEC с мемо, площадка пишет у себя в индексе, что идентификатор теперь твой. Ончейн только факт платежа.",
+  "actor": null,
+  "action": "describe_method",
+  "object": "payment with memo",
+  "qualifiers": {},
+  "url": "https://t.me/WEB3_AGGREGATOR/423606"
+ }
+}

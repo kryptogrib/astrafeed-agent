@@ -1,0 +1,46 @@
+{
+ "id": "gen-1790196443-DAtI3BW4vkdWi0O35Wto",
+ "object": "chat.completion",
+ "created": 1790196443,
+ "model": "deepseek/deepseek-v4-flash",
+ "provider": "Novita",
+ "system_fingerprint": null,
+ "service_tier": null,
+ "choices": [
+  {
+   "index": 0,
+   "logprobs": null,
+   "finish_reason": "stop",
+   "native_finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "content": "{\"labels\": [{\"id\": \"telegram:20:48971#s0\", \"kind\": \"promo_service\", \"actor\": null, \"action\": null, \"object\": null, \"qualifiers\": {}, \"origin\": \"own\", \"source_role\": \"author\", \"verification_status\": \"unverified\", \"quote\": \"$ARCHITECTS - a bet on Arc staying and its users 0x8bcb94279fc2c984ec34e0c1f2192df8c69ea4f0\", \"span\": [0, 91]}, {\"id\": \"telegram:20:48975#s0\", \"kind\": \"participant_reaction\", \"actor\": null, \"action\": null, \"object\": null, \"qualifiers\": {}, \"origin\": \"own\", \"source_role\": \"author\", \"verification_status\": \"unverified\", \"quote\": \"Granted, yes there were people early new Arc 1-2 months before, today it begins \\\"officially\\\" via public (few hours basically only)\", \"span\": [0, 130]}, {\"id\": \"telegram:18:31448#s1\", \"kind\": \"event\", \"actor\": \"Circle\", \"action\": \"launched mainnet\", \"object\": \"Arc\", \"qualifiers\": {\"version\": \"mainnet\"}, \"origin\": \"retelling\", \"source_role\": \"editorial\", \"verification_status\": \"source_statement\", \"quote\": \"⚡ Компания Circle технически запустила майннет блокчейна Arc.\", \"span\": [0, 66]}, {\"id\": \"telegram:18:31448#s5\", \"kind\": \"event\", \"actor\": null, \"action\": \"presentation\", \"object\": \"Arc\", \"qualifiers\": {\"event_date\": \"2026-09-16T18:30:00+03:00\"}, \"origin\": \"retelling\", \"source_role\": \"editorial\", \"verification_status\": \"source_statement\", \"quote\": \"Официальная презентация запуска Arc начнется сегодня в 18:30 мск.\", \"span\": [0, 70]}, {\"id\": \"telegram:11:96753#s0\", \"kind\": \"event\", \"actor\": \"trader\", \"action\": \"earned\", \"object\": \"$361 тыс\", \"qualifiers\": {\"counterparty\": \"#ARGUS\", \"place\": \"Arc Chain\"}, \"origin\": \"retelling\", \"source_role\": \"editorial\", \"verification_status\": \"unverified\", \"quote\": \"💰 Трейдер заработал $361 тыс на #ARGUS в сети Arc Chain — прибыль х302!\", \"span\": [0, 78]}, {\"id\": \"telegram:15:423070#s2\", \"kind\": \"participant_reaction\", \"actor\": null, \"action\": null, \"object\": null, \"qualifiers\": {}, \"origin\": \"own\", \"source_role\": \"author\", \"verification_status\": \"unverified\", \"quote\": \"Today there will be a liquidity clash. ARC SZN???\\nThere will be a lot of rugs today. That’s exactly what we need 😁\", \"span\": [0, 119]}, {\"id\": \"telegram:1:7138#s4\", \"kind\": \"event\", \"actor\": \"Arc\", \"action\": \"mainnet launch\", \"object\": null, \"qualifiers\": {\"event_date\": \"2026-09-16\"}, \"origin\": \"retelling\", \"source_role\": \"editorial\", \"verification_status\": \"source_statement\", \"quote\": \"👍Напомним, что Arc выходит в Mainnet уже сегодня, а вместе с ним и многие NFT коллекции, сверяемся с постом.\", \"span\": [0, 111]}, {\"id\": \"telegram:19:18952#s0\", \"kind\": \"participant_reaction\", \"actor\": null, \"action\": null, \"object\": null, \"qualifiers\": {}, \"origin\": \"own\", \"source_role\": \"author\", \"verification_status\": \"unverified\", \"quote\": \"Time for a big arc cook\", \"span\": [0, 23]}, {\"id\": \"telegram:16:10991#s2\", \"kind\": \"event\", \"actor\": \"Arc\", \"action\": \"mainnet\", \"object\": null, \"qualifiers\": {\"event_date\": \"2026-09-16\"}, \"origin\": \"retelling\", \"source_role\": \"author\", \"verification_status\": \"source_statement\", \"quote\": \"Сегодня (спасибо за поправку @intelligent_ua) кстати мейннет Arc, можно будет бриджить через Jumper.\", \"span\": [0, 105]}, {\"id\": \"telegram:9:1039167#s0\", \"kind\": \"event\", \"actor\": \"Circle\", \"action\": \"launched mainnet\", \"object\": \"Arc\", \"qualifiers\": {\"counterparty\": \"BlackRock, Visa\", \"version\": \"mainnet\"}, \"origin\": \"retelling\", \"source_role\": \"editorial\", \"verification_status\": \"source_statement\", \"quote\": \"CIRCLE LAUNCHES ARC MAINNET WITH BLACKROCK AND VISA AMONG VALIDATORS, MINTS 10 BILLION ARC TOKENS ...\", \"span\": [0, 105]}, {\"id\": \"telegram:10:385037#s0\", \"kind\": \"event\", \"actor\": \"Circle\", \"action\": \"launched\", \"object\": \"Arc\", \"qualifiers\": {}, \"origin\": \"retelling\", \"source_role\": \"editorial\", \"verification_status\": \"source_statement\", \"quote\": \"💥✴️🇺🇸#CRCL #крипто \\nCircle запустила свой блокчейна Arc\", \"span\": [0, 60]}, {\"id\": \"telegram:15:423080#s0\", \"kind\": \"event\", \"actor\": \"trader\", \"action\": \"lost\", \"object\": \"$600K\", \"qualifiers\": {\"counterparty\": \"Axiom\", \"place\": \"arc\"}, \"origin\": \"retelling\", \"source_role\": \"editorial\", \"verification_status\": \"unverified\", \"quote\": \"😮 Один из топовых трейдеров Axiom потерял $600K, пытаясь сделать бридж в arc.\", \"span\": [0, 82]}]}",
+    "refusal": null,
+    "reasoning": null
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 1771,
+  "completion_tokens": 1437,
+  "total_tokens": 3208,
+  "cost": 0.0006503,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.0006503,
+   "upstream_inference_prompt_cost": 0.00024794,
+   "upstream_inference_completions_cost": 0.00040236
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

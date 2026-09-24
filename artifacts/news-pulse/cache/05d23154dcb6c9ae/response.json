@@ -1,0 +1,32 @@
+{
+ "choices": [
+  {
+   "message": {
+    "content": "{\"labels\": [{\"id\": \"telegram:12:4864#s14\", \"kind\": \"event\", \"actor\": \"holder of ZCAT\", \"action\": \"receives\", \"object\": \"ZEC\", \"qualifiers\": {\"condition\": \"Торгуешь и держишь ZCAT\"}, \"origin\": \"unknown\", \"source_role\": \"unknown\", \"verification_status\": \"unverified\", \"quote\": \"Торгуешь и держишь ZCAT - получаешь ZEC\", \"span\": [0, 42]}]}"
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 2154,
+  "completion_tokens": 1450,
+  "total_tokens": 3604,
+  "cost": 0.0004674894,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 256,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.0004674894,
+   "upstream_inference_prompt_cost": 0.0001883644,
+   "upstream_inference_completions_cost": 0.000279125
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "segments": [
+  {
+   "id": "telegram:9:1042085#s0",
+   "text": "JUST IN: $2,700 $ETH  ...",
+   "mentions": [
+    {
+     "text": "$ETH",
+     "status": "confirmed"
+    },
+    {
+     "text": "ETH",
+     "status": "confirmed"
+    }
+   ],
+   "kind_hint": "post",
+   "url": "https://t.me/marketfeed/1042085",
+   "time": "2026-09-21T00:49:29+00:00"
+  }
+ ]
+}

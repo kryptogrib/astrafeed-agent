@@ -1,0 +1,1679 @@
+{
+  "topic": "eth",
+  "window": {
+    "requested": "2026-09-17..2026-09-19",
+    "start": "2026-09-17T00:00:00+00:00",
+    "end": "2026-09-20T00:00:00+00:00",
+    "cutoff": "2026-09-20T00:00:00+00:00",
+    "previous": "2026-09-14..2026-09-16",
+    "mode": "publication_replay"
+  },
+  "status": "ok",
+  "events": [
+    {
+      "event_id": "e1-1b98e70b7e1ada6b",
+      "headline": "Общий чистый отток спотовых ETH-ETF составил $224,1 млн.",
+      "counts": {
+        "events": 1,
+        "publications": 2,
+        "channels": 2,
+        "known_authors": 0,
+        "unknown_authors": 2,
+        "found_origins": 1,
+        "reprints": 1,
+        "unknown_origin": 0
+      },
+      "actor": "null",
+      "action": "net outflow from spot ETH ETFs",
+      "object": "ETH ETFs",
+      "qualifiers": {
+        "version": "$224.1 million",
+        "event_date": "2026-09-16T04:21:01+00:00",
+        "place": "null"
+      },
+      "members": [
+        {
+          "obs_id": "telegram:11:96773#s1",
+          "publication_id": "telegram:11:96773",
+          "source_id": 11,
+          "author_id": null,
+          "published_at": "2026-09-17T04:21:01+00:00",
+          "url": "https://t.me/cryptoattack24/96773",
+          "quote": "Общий чистый отток спотовых ETH-ETF составил $224,1 млн.",
+          "span": [
+            82,
+            138
+          ],
+          "origin": "retelling"
+        },
+        {
+          "obs_id": "telegram:21:21109#s9",
+          "publication_id": "telegram:21:21109",
+          "source_id": 21,
+          "author_id": null,
+          "published_at": "2026-09-17T10:01:01+00:00",
+          "url": "https://t.me/rawa_imagination/21109",
+          "quote": "📈 🔴 ETH ETF: отток $224M",
+          "span": [
+            305,
+            329
+          ],
+          "origin": "own"
+        }
+      ]
+    },
+    {
+      "event_id": "e2-ec98efd39500ce4c",
+      "headline": "1. 0xC2f1 вывел 2 695 #ETH ($6,94 млн) с Gemini и разместил их в стейкинге;",
+      "counts": {
+        "events": 1,
+        "publications": 2,
+        "channels": 2,
+        "known_authors": 0,
+        "unknown_authors": 2,
+        "found_origins": 1,
+        "reprints": 1,
+        "unknown_origin": 0
+      },
+      "actor": "0xC2f1",
+      "action": "вывел и разместил в стейкинге",
+      "object": "2 695 #ETH ($6,94 млн)",
+      "qualifiers": {
+        "place": "Gemini"
+      },
+      "members": [
+        {
+          "obs_id": "telegram:11:96776#s1",
+          "publication_id": "telegram:11:96776",
+          "source_id": 11,
+          "author_id": null,
+          "published_at": "2026-09-17T05:43:01+00:00",
+          "url": "https://t.me/cryptoattack24/96776",
+          "quote": "1. 0xC2f1 вывел 2 695 #ETH ($6,94 млн) с Gemini и разместил их в стейкинге;",
+          "span": [
+            40,
+            115
+          ],
+          "origin": "own"
+        },
+        {
+          "obs_id": "telegram:18:31476#s3",
+          "publication_id": "telegram:18:31476",
+          "source_id": 18,
+          "author_id": null,
+          "published_at": "2026-09-17T06:49:07+00:00",
+          "url": "https://t.me/crypto_hd/31476",
+          "quote": "➤ Кит «0xC2f1» вывел с Gemini 2695 ETH ($6,94m) и сразу отправил всю позицию в стейкинг. Еще один кит «0x3F2c» после 9 месяцев бездействия вывел с Binance 2500 ETH ($6,02m).",
+          "span": [
+            176,
+            349
+          ],
+          "origin": "retelling"
+        }
+      ]
+    },
+    {
+      "event_id": "e3-fbc8cedab2aaaef9",
+      "headline": "2. 0x3F2c вывел 2 500 #ETH ($6,02 млн) с Binance после 9 месяцев бездействия.",
+      "counts": {
+        "events": 1,
+        "publications": 1,
+        "channels": 1,
+        "known_authors": 0,
+        "unknown_authors": 1,
+        "found_origins": 1,
+        "reprints": 0,
+        "unknown_origin": 0
+      },
+      "actor": "0x3F2c",
+      "action": "вывел",
+      "object": "2 500 #ETH ($6,02 млн)",
+      "qualifiers": {
+        "place": "Binance"
+      },
+      "members": [
+        {
+          "obs_id": "telegram:11:96776#s2",
+          "publication_id": "telegram:11:96776",
+          "source_id": 11,
+          "author_id": null,
+          "published_at": "2026-09-17T05:43:01+00:00",
+          "url": "https://t.me/cryptoattack24/96776",
+          "quote": "2. 0x3F2c вывел 2 500 #ETH ($6,02 млн) с Binance после 9 месяцев бездействия.",
+          "span": [
+            116,
+            193
+          ],
+          "origin": "own"
+        }
+      ]
+    },
+    {
+      "event_id": "e4-73a28409f802189b",
+      "headline": "➤ Инвестор «0x0058» потратил 13m USDC на покупку 5368 ETH по средней цене $2422.",
+      "counts": {
+        "events": 1,
+        "publications": 1,
+        "channels": 1,
+        "known_authors": 0,
+        "unknown_authors": 1,
+        "found_origins": 0,
+        "reprints": 1,
+        "unknown_origin": 0
+      },
+      "actor": "Инвестор «0x0058»",
+      "action": "потратил 13m USDC на покупку",
+      "object": "5368 ETH",
+      "qualifiers": {
+        "price": "$2422"
+      },
+      "members": [
+        {
+          "obs_id": "telegram:18:31476#s4",
+          "publication_id": "telegram:18:31476",
+          "source_id": 18,
+          "author_id": null,
+          "published_at": "2026-09-17T06:49:07+00:00",
+          "url": "https://t.me/crypto_hd/31476",
+          "quote": "➤ Инвестор «0x0058» потратил 13m USDC на покупку 5368 ETH по средней цене $2422.",
+          "span": [
+            351,
+            431
+          ],
+          "origin": "own"
+        }
+      ]
+    },
+    {
+      "event_id": "e5-6a10d8c975578af1",
+      "headline": "⚠️✴️#BTC #ETH #крипто #cot ",
+      "counts": {
+        "events": 1,
+        "publications": 1,
+        "channels": 1,
+        "known_authors": 0,
+        "unknown_authors": 1,
+        "found_origins": 1,
+        "reprints": 0,
+        "unknown_origin": 0
+      },
+      "actor": "BlackRock",
+      "action": "начал переводить BTC и ETH на биржи",
+      "object": "BTC и ETH",
+      "qualifiers": {},
+      "members": [
+        {
+          "obs_id": "telegram:10:385211#s0",
+          "publication_id": "telegram:10:385211",
+          "source_id": 10,
+          "author_id": null,
+          "published_at": "2026-09-17T12:24:29+00:00",
+          "url": "https://t.me/markettwits/385211",
+          "quote": "⚠️✴️#BTC #ETH #крипто #cot \nBlackRock сегодня начал переводить BTC и ETH на биржи - скорее всего, на продажу для клиентов  — мониторинг",
+          "span": [
+            0,
+            135
+          ],
+          "origin": "own"
+        }
+      ]
+    },
+    {
+      "event_id": "e6-0cbce6a16038085b",
+      "headline": "Комиссия за транзакции в сети Ethereum значительно снизилась. С момента достижения пикового значения 21 апреля в $0,72,  сегодня средняя транзакция за перевод оценивается всего в…",
+      "counts": {
+        "events": 1,
+        "publications": 1,
+        "channels": 1,
+        "known_authors": 0,
+        "unknown_authors": 1,
+        "found_origins": 0,
+        "reprints": 1,
+        "unknown_origin": 0
+      },
+      "actor": "Ethereum network",
+      "action": "decrease",
+      "object": "transaction fee",
+      "qualifiers": {
+        "event_date": "today",
+        "counterparty": "Santiment"
+      },
+      "members": [
+        {
+          "obs_id": "telegram:10:385262#s1",
+          "publication_id": "telegram:10:385262",
+          "source_id": 10,
+          "author_id": null,
+          "published_at": "2026-09-17T19:43:55+00:00",
+          "url": "https://t.me/markettwits/385262",
+          "quote": "Комиссия за транзакции в сети Ethereum значительно снизилась. С момента достижения пикового значения 21 апреля в $0,72,  сегодня средняя транзакция за перевод оценивается всего в $0,095, даже с учетом того, что рыночная стоимость ETH сейчас выше. — Santiment",
+          "span": [
+            23,
+            281
+          ],
+          "origin": "retelling"
+        }
+      ]
+    },
+    {
+      "event_id": "e7-79ddbc00ba386cd5",
+      "headline": "➤ При резком росте #ETH до ~$2730 объем ликвидаций SHORT-позиций превысит $3,060,000,000.",
+      "counts": {
+        "events": 1,
+        "publications": 1,
+        "channels": 1,
+        "known_authors": 0,
+        "unknown_authors": 1,
+        "found_origins": 1,
+        "reprints": 0,
+        "unknown_origin": 0
+      },
+      "actor": null,
+      "action": "liquidation",
+      "object": "SHORT positions",
+      "qualifiers": {
+        "event_date": "future",
+        "counterparty": "ETH price"
+      },
+      "members": [
+        {
+          "obs_id": "telegram:18:31491#s2",
+          "publication_id": "telegram:18:31491",
+          "source_id": 18,
+          "author_id": null,
+          "published_at": "2026-09-17T20:33:19+00:00",
+          "url": "https://t.me/crypto_hd/31491",
+          "quote": "➤ При резком росте #ETH до ~$2730 объем ликвидаций SHORT-позиций превысит $3,060,000,000.",
+          "span": [
+            148,
+            237
+          ],
+          "origin": "own"
+        }
+      ]
+    },
+    {
+      "event_id": "e8-25495bb8ed6c21b0",
+      "headline": "🕵️‍♂️ BlackRock перевели на Coinbase Prime 54 096 #ETH (131,7 млн $) и 2 015 #BTC (153,8 млн $)",
+      "counts": {
+        "events": 1,
+        "publications": 1,
+        "channels": 1,
+        "known_authors": 0,
+        "unknown_authors": 1,
+        "found_origins": 0,
+        "reprints": 1,
+        "unknown_origin": 0
+      },
+      "actor": "BlackRock",
+      "action": "transfer",
+      "object": "ETH",
+      "qualifiers": {
+        "counterparty": "Coinbase Prime",
+        "event_date": "current"
+      },
+      "members": [
+        {
+          "obs_id": "telegram:15:423250#s7",
+          "publication_id": "telegram:15:423250",
+          "source_id": 15,
+          "author_id": null,
+          "published_at": "2026-09-17T20:54:15+00:00",
+          "url": "https://t.me/WEB3_AGGREGATOR/423250",
+          "quote": "🕵️‍♂️ BlackRock перевели на Coinbase Prime 54 096 #ETH (131,7 млн $) и 2 015 #BTC (153,8 млн $)",
+          "span": [
+            566,
+            661
+          ],
+          "origin": "retelling"
+        }
+      ]
+    },
+    {
+      "event_id": "e9-d57ff52e9ff96871",
+      "headline": "Общий чистый отток спотовых ETH-ETF составил $39,3 млн.",
+      "counts": {
+        "events": 1,
+        "publications": 2,
+        "channels": 2,
+        "known_authors": 0,
+        "unknown_authors": 2,
+        "found_origins": 1,
+        "reprints": 0,
+        "unknown_origin": 1
+      },
+      "actor": null,
+      "action": "отток",
+      "object": "спотовых ETH-ETF",
+      "qualifiers": {
+        "version": null,
+        "event_date": null,
+        "place": null,
+        "counterparty": null
+      },
+      "members": [
+        {
+          "obs_id": "telegram:11:96795#s1",
+          "publication_id": "telegram:11:96795",
+          "source_id": 11,
+          "author_id": null,
+          "published_at": "2026-09-18T03:57:07+00:00",
+          "url": "https://t.me/cryptoattack24/96795",
+          "quote": "Общий чистый отток спотовых ETH-ETF составил $39,3 млн.",
+          "span": [
+            83,
+            138
+          ],
+          "origin": "unknown"
+        },
+        {
+          "obs_id": "telegram:21:21117#s9",
+          "publication_id": "telegram:21:21117",
+          "source_id": 21,
+          "author_id": null,
+          "published_at": "2026-09-18T10:01:01+00:00",
+          "url": "https://t.me/rawa_imagination/21117",
+          "quote": "📈 🔴 ETH ETF: отток $39M",
+          "span": [
+            309,
+            332
+          ],
+          "origin": "unknown"
+        }
+      ]
+    },
+    {
+      "event_id": "e10-5c0c02b4a45b50e5",
+      "headline": "📍Сегодня экспирация в опционах на BTC и ETH! (Deribit)",
+      "counts": {
+        "events": 1,
+        "publications": 1,
+        "channels": 1,
+        "known_authors": 0,
+        "unknown_authors": 1,
+        "found_origins": 1,
+        "reprints": 0,
+        "unknown_origin": 0
+      },
+      "actor": null,
+      "action": "expiration",
+      "object": "options on BTC and ETH",
+      "qualifiers": {
+        "event_date": "2026-09-18",
+        "place": "Deribit"
+      },
+      "members": [
+        {
+          "obs_id": "telegram:18:31498#s0",
+          "publication_id": "telegram:18:31498",
+          "source_id": 18,
+          "author_id": null,
+          "published_at": "2026-09-18T07:22:04+00:00",
+          "url": "https://t.me/crypto_hd/31498",
+          "quote": "📍Сегодня экспирация в опционах на BTC и ETH! (Deribit)",
+          "span": [
+            0,
+            54
+          ],
+          "origin": "own"
+        }
+      ]
+    },
+    {
+      "event_id": "e11-d94d5187156da12d",
+      "headline": "@nostrafinance has reported that a manipulated NSTR oracle price allowed a single account to borrow ~$3.5M in ETH, STRK, USDC, USDT, WBTC, and DAI against NSTR collateral on…",
+      "counts": {
+        "events": 1,
+        "publications": 1,
+        "channels": 1,
+        "known_authors": 0,
+        "unknown_authors": 1,
+        "found_origins": 0,
+        "reprints": 1,
+        "unknown_origin": 0
+      },
+      "actor": "nostrafinance",
+      "action": "reported",
+      "object": "a manipulated NSTR oracle price allowed a single account to borrow ~$3.5M in ETH, STRK, USDC, USDT, WBTC, and DAI against NSTR collateral on Nostra's #Starknet money market",
+      "qualifiers": {
+        "version": null,
+        "event_date": null,
+        "place": null,
+        "counterparty": null
+      },
+      "members": [
+        {
+          "obs_id": "telegram:15:423264#s0",
+          "publication_id": "telegram:15:423264",
+          "source_id": 15,
+          "author_id": null,
+          "published_at": "2026-09-18T08:44:40+00:00",
+          "url": "https://t.me/WEB3_AGGREGATOR/423264",
+          "quote": "@nostrafinance has reported that a manipulated NSTR oracle price allowed a single account to borrow ~$3.5M in ETH, STRK, USDC, USDT, WBTC, and DAI against NSTR collateral on Nostra's #Starknet money market.",
+          "span": [
+            0,
+            206
+          ],
+          "origin": "retelling"
+        }
+      ]
+    },
+    {
+      "event_id": "e12-6f00f19e65b20c33",
+      "headline": "ETH: Binance: +0.0091% 🐂 | Bybit: +0.0100% 🐂",
+      "counts": {
+        "events": 1,
+        "publications": 1,
+        "channels": 1,
+        "known_authors": 0,
+        "unknown_authors": 1,
+        "found_origins": 0,
+        "reprints": 0,
+        "unknown_origin": 1
+      },
+      "actor": null,
+      "action": "premium",
+      "object": "ETH",
+      "qualifiers": {
+        "version": null,
+        "event_date": null,
+        "place": "Binance, Bybit",
+        "counterparty": null
+      },
+      "members": [
+        {
+          "obs_id": "telegram:21:21117#s3",
+          "publication_id": "telegram:21:21117",
+          "source_id": 21,
+          "author_id": null,
+          "published_at": "2026-09-18T10:01:01+00:00",
+          "url": "https://t.me/rawa_imagination/21117",
+          "quote": "ETH: Binance: +0.0091% 🐂 | Bybit: +0.0100% 🐂",
+          "span": [
+            130,
+            174
+          ],
+          "origin": "unknown"
+        }
+      ]
+    },
+    {
+      "event_id": "e13-72ba3c573f7b8cd0",
+      "headline": "➤ Инсайдер Bitcoin OG выставил ордер на открытие лонга на 2450 BTC (~$190m) по цене $78,000. Также он продал 35,000 ETH ($87,5m) по цене ~$2500 и направил часть средств на…",
+      "counts": {
+        "events": 1,
+        "publications": 1,
+        "channels": 1,
+        "known_authors": 0,
+        "unknown_authors": 1,
+        "found_origins": 0,
+        "reprints": 1,
+        "unknown_origin": 0
+      },
+      "actor": "Bitcoin OG",
+      "action": "выставил ордер на открытие лонга, продал ETH",
+      "object": "2450 BTC, 35,000 ETH",
+      "qualifiers": {
+        "version": null,
+        "event_date": null,
+        "place": null,
+        "counterparty": null
+      },
+      "members": [
+        {
+          "obs_id": "telegram:18:31503#s2",
+          "publication_id": "telegram:18:31503",
+          "source_id": 18,
+          "author_id": null,
+          "published_at": "2026-09-18T11:49:21+00:00",
+          "url": "https://t.me/crypto_hd/31503",
+          "quote": "➤ Инсайдер Bitcoin OG выставил ордер на открытие лонга на 2450 BTC (~$190m) по цене $78,000. Также он продал 35,000 ETH ($87,5m) по цене ~$2500 и направил часть средств на увеличение обеспечения убыточного шорта по ZEC.",
+          "span": [
+            46,
+            265
+          ],
+          "origin": "retelling"
+        }
+      ]
+    },
+    {
+      "event_id": "e14-21869d99515ccb24",
+      "headline": "➤ 11 новых кошельков, вероятно принадлежащих одному киту, за последние три дня продали 602 BTC за $45,8m на Hyperliquid и купили 18,780 ETH на ту же сумму.",
+      "counts": {
+        "events": 1,
+        "publications": 1,
+        "channels": 1,
+        "known_authors": 0,
+        "unknown_authors": 1,
+        "found_origins": 0,
+        "reprints": 1,
+        "unknown_origin": 0
+      },
+      "actor": "11 новых кошельков, вероятно принадлежащих одному киту",
+      "action": "продали BTC, купили ETH",
+      "object": "602 BTC, 18,780 ETH",
+      "qualifiers": {
+        "version": null,
+        "event_date": "за последние три дня",
+        "place": "Hyperliquid",
+        "counterparty": null
+      },
+      "members": [
+        {
+          "obs_id": "telegram:18:31503#s4",
+          "publication_id": "telegram:18:31503",
+          "source_id": 18,
+          "author_id": null,
+          "published_at": "2026-09-18T11:49:21+00:00",
+          "url": "https://t.me/crypto_hd/31503",
+          "quote": "➤ 11 новых кошельков, вероятно принадлежащих одному киту, за последние три дня продали 602 BTC за $45,8m на Hyperliquid и купили 18,780 ETH на ту же сумму.",
+          "span": [
+            371,
+            526
+          ],
+          "origin": "retelling"
+        }
+      ]
+    },
+    {
+      "event_id": "e15-e7b0e741d1a92de8",
+      "headline": "➤ Кит «0x72e0», вероятно, меняет HYPE на ETH. Он перевел 440,000 HYPE ($36m) в FalconX, после чего вывел 12,250 ETH ($30,1m).",
+      "counts": {
+        "events": 1,
+        "publications": 1,
+        "channels": 1,
+        "known_authors": 0,
+        "unknown_authors": 1,
+        "found_origins": 0,
+        "reprints": 1,
+        "unknown_origin": 0
+      },
+      "actor": "Кит «0x72e0»",
+      "action": "меняет HYPE на ETH",
+      "object": "440,000 HYPE, 12,250 ETH",
+      "qualifiers": {
+        "version": null,
+        "event_date": null,
+        "place": "FalconX",
+        "counterparty": null
+      },
+      "members": [
+        {
+          "obs_id": "telegram:18:31503#s6",
+          "publication_id": "telegram:18:31503",
+          "source_id": 18,
+          "author_id": null,
+          "published_at": "2026-09-18T11:49:21+00:00",
+          "url": "https://t.me/crypto_hd/31503",
+          "quote": "➤ Кит «0x72e0», вероятно, меняет HYPE на ETH. Он перевел 440,000 HYPE ($36m) в FalconX, после чего вывел 12,250 ETH ($30,1m).",
+          "span": [
+            636,
+            761
+          ],
+          "origin": "retelling"
+        }
+      ]
+    },
+    {
+      "event_id": "e16-00c57e20e0576712",
+      "headline": "➤ Четыре новых кошелька одного кита/институционала купили 6972 ETH ($17,15m) по средней цене $2460,69 и отправили всю позицию в стейкинг.",
+      "counts": {
+        "events": 1,
+        "publications": 1,
+        "channels": 1,
+        "known_authors": 0,
+        "unknown_authors": 1,
+        "found_origins": 0,
+        "reprints": 1,
+        "unknown_origin": 0
+      },
+      "actor": "Четыре новых кошелька одного кита/институционала",
+      "action": "купили ETH и отправили в стейкинг",
+      "object": "6972 ETH",
+      "qualifiers": {
+        "version": null,
+        "event_date": null,
+        "place": null,
+        "counterparty": null
+      },
+      "members": [
+        {
+          "obs_id": "telegram:18:31503#s7",
+          "publication_id": "telegram:18:31503",
+          "source_id": 18,
+          "author_id": null,
+          "published_at": "2026-09-18T11:49:21+00:00",
+          "url": "https://t.me/crypto_hd/31503",
+          "quote": "➤ Четыре новых кошелька одного кита/институционала купили 6972 ETH ($17,15m) по средней цене $2460,69 и отправили всю позицию в стейкинг.",
+          "span": [
+            763,
+            900
+          ],
+          "origin": "retelling"
+        }
+      ]
+    },
+    {
+      "event_id": "e17-c97d0c8cb7e8c107",
+      "headline": "По его словам, инвесторы ошибались, считая, что Ethereum станет единым стандартом для институционального рынка. Сейчас компании рассматривают разные блокчейны, и победитель пока не…",
+      "counts": {
+        "events": 1,
+        "publications": 1,
+        "channels": 1,
+        "known_authors": 0,
+        "unknown_authors": 1,
+        "found_origins": 0,
+        "reprints": 1,
+        "unknown_origin": 0
+      },
+      "actor": "инвесторы",
+      "action": "ошибались, считая",
+      "object": "Ethereum станет единым стандартом для институционального рынка",
+      "qualifiers": {
+        "version": null,
+        "event_date": null,
+        "place": null,
+        "counterparty": null
+      },
+      "members": [
+        {
+          "obs_id": "telegram:18:31504#s3",
+          "publication_id": "telegram:18:31504",
+          "source_id": 18,
+          "author_id": null,
+          "published_at": "2026-09-18T12:43:19+00:00",
+          "url": "https://t.me/crypto_hd/31504",
+          "quote": "По его словам, инвесторы ошибались, считая, что Ethereum станет единым стандартом для институционального рынка. Сейчас компании рассматривают разные блокчейны, и победитель пока не определен.",
+          "span": [
+            171,
+            362
+          ],
+          "origin": "retelling"
+        }
+      ]
+    },
+    {
+      "event_id": "e18-e5b6ccff9b088623",
+      "headline": "1. У них есть уже коллекция почти по эфиру.",
+      "counts": {
+        "events": 1,
+        "publications": 1,
+        "channels": 1,
+        "known_authors": 0,
+        "unknown_authors": 1,
+        "found_origins": 0,
+        "reprints": 0,
+        "unknown_origin": 1
+      },
+      "actor": null,
+      "action": "есть коллекция",
+      "object": "по эфиру",
+      "qualifiers": {
+        "version": null,
+        "event_date": null,
+        "place": null,
+        "counterparty": null
+      },
+      "members": [
+        {
+          "obs_id": "telegram:15:423294#s2",
+          "publication_id": "telegram:15:423294",
+          "source_id": 15,
+          "author_id": null,
+          "published_at": "2026-09-18T14:55:21+00:00",
+          "url": "https://t.me/WEB3_AGGREGATOR/423294",
+          "quote": "1. У них есть уже коллекция почти по эфиру.",
+          "span": [
+            42,
+            85
+          ],
+          "origin": "unknown"
+        }
+      ]
+    },
+    {
+      "event_id": "e19-a4f2adbf4b9d2794",
+      "headline": "🪙 Ethereum хочет ускорить базовый ритм сети — предложение EIP-8198 должно сделать длительность слота настраиваемой вместо жёстких 12 секунд, чтобы затем постепенно сокращать её.",
+      "counts": {
+        "events": 1,
+        "publications": 1,
+        "channels": 1,
+        "known_authors": 0,
+        "unknown_authors": 1,
+        "found_origins": 1,
+        "reprints": 0,
+        "unknown_origin": 0
+      },
+      "actor": "Ethereum",
+      "action": "хочет ускорить базовый ритм сети",
+      "object": "предложение EIP-8198",
+      "qualifiers": {},
+      "members": [
+        {
+          "obs_id": "telegram:15:423312#s0",
+          "publication_id": "telegram:15:423312",
+          "source_id": 15,
+          "author_id": null,
+          "published_at": "2026-09-18T18:36:35+00:00",
+          "url": "https://t.me/WEB3_AGGREGATOR/423312",
+          "quote": "🪙 Ethereum хочет ускорить базовый ритм сети — предложение EIP-8198 должно сделать длительность слота настраиваемой вместо жёстких 12 секунд, чтобы затем постепенно сокращать её.",
+          "span": [
+            0,
+            177
+          ],
+          "origin": "own"
+        }
+      ]
+    },
+    {
+      "event_id": "e20-d5a5326d209f61fa",
+      "headline": "В обсуждениях называют 10 секунд как первый осторожный шаг, а в текущем черновике EIP фигурируют 8 секунд, Ethereum Foundation уже включила инициативу в B-tier для Hegotá.",
+      "counts": {
+        "events": 1,
+        "publications": 1,
+        "channels": 1,
+        "known_authors": 0,
+        "unknown_authors": 1,
+        "found_origins": 1,
+        "reprints": 0,
+        "unknown_origin": 0
+      },
+      "actor": "Ethereum Foundation",
+      "action": "включила инициативу в B-tier для Hegotá",
+      "object": "EIP-8198",
+      "qualifiers": {
+        "version": "8 секунд"
+      },
+      "members": [
+        {
+          "obs_id": "telegram:15:423312#s1",
+          "publication_id": "telegram:15:423312",
+          "source_id": 15,
+          "author_id": null,
+          "published_at": "2026-09-18T18:36:35+00:00",
+          "url": "https://t.me/WEB3_AGGREGATOR/423312",
+          "quote": "В обсуждениях называют 10 секунд как первый осторожный шаг, а в текущем черновике EIP фигурируют 8 секунд, Ethereum Foundation уже включила инициативу в B-tier для Hegotá.",
+          "span": [
+            180,
+            351
+          ],
+          "origin": "own"
+        }
+      ]
+    },
+    {
+      "event_id": "e21-0485a411367d9252",
+      "headline": "Общий чистый приток спотовых ETH-ETF составил $143,7 млн.",
+      "counts": {
+        "events": 1,
+        "publications": 2,
+        "channels": 2,
+        "known_authors": 0,
+        "unknown_authors": 2,
+        "found_origins": 2,
+        "reprints": 0,
+        "unknown_origin": 0
+      },
+      "actor": "спотовые ETH-ETF",
+      "action": "чистый приток составил $143,7 млн",
+      "object": null,
+      "qualifiers": {},
+      "members": [
+        {
+          "obs_id": "telegram:11:96819#s1",
+          "publication_id": "telegram:11:96819",
+          "source_id": 11,
+          "author_id": null,
+          "published_at": "2026-09-19T04:03:01+00:00",
+          "url": "https://t.me/cryptoattack24/96819",
+          "quote": "Общий чистый приток спотовых ETH-ETF составил $143,7 млн.",
+          "span": [
+            81,
+            138
+          ],
+          "origin": "own"
+        },
+        {
+          "obs_id": "telegram:21:21121#s9",
+          "publication_id": "telegram:21:21121",
+          "source_id": 21,
+          "author_id": null,
+          "published_at": "2026-09-19T10:01:01+00:00",
+          "url": "https://t.me/rawa_imagination/21121",
+          "quote": "📈 🟢 ETH ETF: приток $144M",
+          "span": [
+            310,
+            335
+          ],
+          "origin": "own"
+        }
+      ]
+    },
+    {
+      "event_id": "e22-94522467a1ad084d",
+      "headline": "–Два кошелька (вероятно, принадлежащие одному и тому же киту) перевели на Bitfinex 33 180 #ETH (~86,9 млн $) после более чем 2-летнего бездействия (1, 2);",
+      "counts": {
+        "events": 1,
+        "publications": 1,
+        "channels": 1,
+        "known_authors": 0,
+        "unknown_authors": 1,
+        "found_origins": 1,
+        "reprints": 0,
+        "unknown_origin": 0
+      },
+      "actor": "два кошелька (вероятно, принадлежащие одному и тому же киту)",
+      "action": "перевели на Bitfinex 33 180 #ETH (~86,9 млн $)",
+      "object": "33 180 #ETH",
+      "qualifiers": {
+        "counterparty": "Bitfinex"
+      },
+      "members": [
+        {
+          "obs_id": "telegram:11:96824#s1",
+          "publication_id": "telegram:11:96824",
+          "source_id": 11,
+          "author_id": null,
+          "published_at": "2026-09-19T09:20:05+00:00",
+          "url": "https://t.me/cryptoattack24/96824",
+          "quote": "–Два кошелька (вероятно, принадлежащие одному и тому же киту) перевели на Bitfinex 33 180 #ETH (~86,9 млн $) после более чем 2-летнего бездействия (1, 2);",
+          "span": [
+            21,
+            175
+          ],
+          "origin": "own"
+        }
+      ]
+    },
+    {
+      "event_id": "e23-28d1b3f1a9ad545d",
+      "headline": "Активность китов в ETH резко выросла, кол-во холдеров обновило рекорд. В альткоинах ралли. — Santiment",
+      "counts": {
+        "events": 1,
+        "publications": 1,
+        "channels": 1,
+        "known_authors": 0,
+        "unknown_authors": 1,
+        "found_origins": 1,
+        "reprints": 0,
+        "unknown_origin": 0
+      },
+      "actor": "киты в ETH",
+      "action": "активность резко выросла, кол-во холдеров обновило рекорд",
+      "object": null,
+      "qualifiers": {},
+      "members": [
+        {
+          "obs_id": "telegram:10:385442#s1",
+          "publication_id": "telegram:10:385442",
+          "source_id": 10,
+          "author_id": null,
+          "published_at": "2026-09-19T09:22:17+00:00",
+          "url": "https://t.me/markettwits/385442",
+          "quote": "Активность китов в ETH резко выросла, кол-во холдеров обновило рекорд. В альткоинах ралли. — Santiment",
+          "span": [
+            24,
+            126
+          ],
+          "origin": "own"
+        }
+      ]
+    },
+    {
+      "event_id": "e24-3da122a196632c38",
+      "headline": "ETH: Binance: +0.0100% 🐂 | Bybit: +0.0100% 🐂",
+      "counts": {
+        "events": 1,
+        "publications": 1,
+        "channels": 1,
+        "known_authors": 0,
+        "unknown_authors": 1,
+        "found_origins": 1,
+        "reprints": 0,
+        "unknown_origin": 0
+      },
+      "actor": null,
+      "action": "цена ETH на Binance и Bybit +0.0100%",
+      "object": null,
+      "qualifiers": {
+        "place": "Binance, Bybit"
+      },
+      "members": [
+        {
+          "obs_id": "telegram:21:21121#s3",
+          "publication_id": "telegram:21:21121",
+          "source_id": 21,
+          "author_id": null,
+          "published_at": "2026-09-19T10:01:01+00:00",
+          "url": "https://t.me/rawa_imagination/21121",
+          "quote": "  ETH: Binance: +0.0100% 🐂 | Bybit: +0.0100% 🐂",
+          "span": [
+            128,
+            174
+          ],
+          "origin": "own"
+        }
+      ]
+    },
+    {
+      "event_id": "e25-7e3a3f30e727aa81",
+      "headline": "#ETHER 2639.50 +0.32%",
+      "counts": {
+        "events": 1,
+        "publications": 1,
+        "channels": 1,
+        "known_authors": 0,
+        "unknown_authors": 1,
+        "found_origins": 1,
+        "reprints": 0,
+        "unknown_origin": 0
+      },
+      "actor": null,
+      "action": "цена #ETHER 2639.50 +0.32%",
+      "object": null,
+      "qualifiers": {},
+      "members": [
+        {
+          "obs_id": "telegram:9:1041526#s0",
+          "publication_id": "telegram:9:1041526",
+          "source_id": 9,
+          "author_id": null,
+          "published_at": "2026-09-19T10:09:41+00:00",
+          "url": "https://t.me/marketfeed/1041526",
+          "quote": "#ETHER 2639.50 +0.32%",
+          "span": [
+            46,
+            67
+          ],
+          "origin": "own"
+        }
+      ]
+    },
+    {
+      "event_id": "e26-39d34980417fb7cd",
+      "headline": "• Bitcoin holds around $81.2K; ether near $2.64K — risk assets steady despite macro/policy noise.",
+      "counts": {
+        "events": 1,
+        "publications": 1,
+        "channels": 1,
+        "known_authors": 0,
+        "unknown_authors": 1,
+        "found_origins": 1,
+        "reprints": 0,
+        "unknown_origin": 0
+      },
+      "actor": null,
+      "action": "ether near $2.64K",
+      "object": null,
+      "qualifiers": {},
+      "members": [
+        {
+          "obs_id": "telegram:9:1041542#s25",
+          "publication_id": "telegram:9:1041542",
+          "source_id": 9,
+          "author_id": null,
+          "published_at": "2026-09-19T11:01:17+00:00",
+          "url": "https://t.me/marketfeed/1041542",
+          "quote": "• Bitcoin holds around $81.2K; ether near $2.64K — risk assets steady despite macro/policy noise.",
+          "span": [
+            2268,
+            2365
+          ],
+          "origin": "own"
+        }
+      ]
+    },
+    {
+      "event_id": "e27-d8930c1560bb8ed1",
+      "headline": "Мосбиржа запускает бессрочные фьючерсы на индексы #BTC, #ETH, #SOL, #XRP и #TRX для квалифицированных инвесторов",
+      "counts": {
+        "events": 1,
+        "publications": 1,
+        "channels": 1,
+        "known_authors": 0,
+        "unknown_authors": 1,
+        "found_origins": 1,
+        "reprints": 0,
+        "unknown_origin": 0
+      },
+      "actor": "Мосбиржа",
+      "action": "launches",
+      "object": "бессрочные фьючерсы на индексы #ETH",
+      "qualifiers": {
+        "event_date": "2026-09-19T20:56:39+00:00",
+        "place": "Мосбиржа"
+      },
+      "members": [
+        {
+          "obs_id": "telegram:11:96827#s9",
+          "publication_id": "telegram:11:96827",
+          "source_id": 11,
+          "author_id": null,
+          "published_at": "2026-09-19T20:56:39+00:00",
+          "url": "https://t.me/cryptoattack24/96827",
+          "quote": "Мосбиржа запускает бессрочные фьючерсы на индексы #BTC, #ETH, #SOL, #XRP и #TRX для квалифицированных инвесторов",
+          "span": [
+            339,
+            451
+          ],
+          "origin": "own"
+        }
+      ]
+    }
+  ],
+  "distribution_and_positions": [
+    {
+      "obs_id": "telegram:18:31473#s2",
+      "publication_id": "telegram:18:31473",
+      "kind": "author_position",
+      "text": "Основатель Ethereum не согласен с мнением, что развитие AI неизбежно приведет к массовым взломам. AI-технологии смогут не только искать уязвимости, но и математически доказывать безопасность программ, причем проверять весь код целиком.",
+      "quote": "Основатель Ethereum не согласен с мнением, что развитие AI неизбежно приведет к массовым взломам. AI-технологии смогут не только искать уязвимости, но и математически доказывать безопасность программ, причем проверять весь код целиком.",
+      "url": "https://t.me/crypto_hd/31473",
+      "origin": "retelling",
+      "source_role": "author"
+    },
+    {
+      "obs_id": "telegram:18:31473#s3",
+      "publication_id": "telegram:18:31473",
+      "kind": "author_position",
+      "text": "Именно в этом направлении в Ethereum планируют двигаться в ближайшие несколько лет. Бутерин считает, что без усиления безопасности у масштабируемых и приватных блокчейнов «нет будущего».",
+      "quote": "Именно в этом направлении в Ethereum планируют двигаться в ближайшие несколько лет. Бутерин считает, что без усиления безопасности у масштабируемых и приватных блокчейнов «нет будущего».",
+      "url": "https://t.me/crypto_hd/31473",
+      "origin": "retelling",
+      "source_role": "author"
+    },
+    {
+      "obs_id": "telegram:15:423173#s1",
+      "publication_id": "telegram:15:423173",
+      "kind": "author_position",
+      "text": "Именно в эту сторону Ethereum планирует двигаться в ближайшие годы.",
+      "quote": "Именно в эту сторону Ethereum планирует двигаться в ближайшие годы.",
+      "url": "https://t.me/WEB3_AGGREGATOR/423173",
+      "origin": "retelling",
+      "source_role": "author"
+    },
+    {
+      "obs_id": "telegram:15:423218#s1",
+      "publication_id": "telegram:15:423218",
+      "kind": "author_position",
+      "text": "The S-tier – Lighter, Delta, Arcus, Index, Bankr, Virtuals – shows the chain is built for perps, tokenized stocks and agents, while B and C are mostly memecoins. Notably absent: Ethereum's DeFi blue chips – Robinhood is building around its own product, not the DeFi stack.",
+      "quote": "The S-tier – Lighter, Delta, Arcus, Index, Bankr, Virtuals – shows the chain is built for perps, tokenized stocks and agents, while B and C are mostly memecoins. Notably absent: Ethereum's DeFi blue chips – Robinhood is building around its own product, not the DeFi stack.",
+      "url": "https://t.me/WEB3_AGGREGATOR/423218",
+      "origin": "own",
+      "source_role": "editorial"
+    }
+  ],
+  "discussion": [
+    {
+      "target": "other_subject",
+      "target_id": null,
+      "text": "примерно так, плюс/минус оплата мощностей + частично апи. С подписками на Равангу и донатами пока покрывает.",
+      "basis": "предмет реплики — сторонний сервис/коллекция экосистемы, не событие темы",
+      "url": "https://t.me/rawa_imagination/21117?comment=343184",
+      "quote": "примерно так, плюс/минус оплата мощностей + частично апи. С подписками на Равангу и донатами пока покрывает."
+    }
+  ],
+  "changes": {
+    "previous_window": "2026-09-14..2026-09-16",
+    "events_appeared": [
+      "0x3F2c|вывел|2 500 #ETH ($6,02 млн)|2. 0x3F2c вывел 2 500 #ETH ($6,02 млн) с Binance после 9 месяцев бездействия.",
+      "0xC2f1|вывел и разместил в стейкинге|2 695 #ETH ($6,94 млн)|1. 0xC2f1 вывел 2 695 #ETH ($6,94 млн) с Gemini и разместил их в стейкинге;",
+      "11 новых кошельков, вероятно принадлежащих одному киту|продали BTC, купили ETH|602 BTC, 18,780 ETH|➤ 11 новых кошельков, вероятно принадлежащих одному киту, за последние три дня продали 602 BTC за $45,8m на Hyperliquid и купили 18,780 ETH на ту же сумму.",
+      "Bitcoin OG|выставил ордер на открытие лонга, продал ETH|2450 BTC, 35,000 ETH|➤ Инсайдер Bitcoin OG выставил ордер на открытие лонга на 2450 BTC (~$190m) по цене $78,000. Также он продал 35,000 ETH ($87,5m) по цене ~$2500 и направил часть средств на…",
+      "BlackRock|transfer|ETH|🕵️‍♂️ BlackRock перевели на Coinbase Prime 54 096 #ETH (131,7 млн $) и 2 015 #BTC (153,8 млн $)",
+      "BlackRock|начал переводить BTC и ETH на биржи|BTC и ETH|⚠️✴️#BTC #ETH #крипто #cot ",
+      "Ethereum Foundation|включила инициативу в B-tier для Hegotá|EIP-8198|В обсуждениях называют 10 секунд как первый осторожный шаг, а в текущем черновике EIP фигурируют 8 секунд, Ethereum Foundation уже включила инициативу в B-tier для Hegotá.",
+      "Ethereum network|decrease|transaction fee|Комиссия за транзакции в сети Ethereum значительно снизилась. С момента достижения пикового значения 21 апреля в $0,72,  сегодня средняя транзакция за перевод оценивается всего в…",
+      "Ethereum|хочет ускорить базовый ритм сети|предложение EIP-8198|🪙 Ethereum хочет ускорить базовый ритм сети — предложение EIP-8198 должно сделать длительность слота настраиваемой вместо жёстких 12 секунд, чтобы затем постепенно сокращать её.",
+      "nostrafinance|reported|a manipulated NSTR oracle price allowed a single account to borrow ~$3.5M in ETH, STRK, USDC, USDT, WBTC, and DAI against NSTR collateral on Nostra's #Starknet money market|@nostrafinance has reported that a manipulated NSTR oracle price allowed a single account to borrow ~$3.5M in ETH, STRK, USDC, USDT, WBTC, and DAI against NSTR collateral on…",
+      "null|net outflow from spot ETH ETFs|ETH ETFs|Общий чистый отток спотовых ETH-ETF составил $224,1 млн.",
+      "|ether near $2.64K||• Bitcoin holds around $81.2K; ether near $2.64K — risk assets steady despite macro/policy noise.",
+      "|expiration|options on BTC and ETH|📍Сегодня экспирация в опционах на BTC и ETH! (Deribit)",
+      "|liquidation|SHORT positions|➤ При резком росте #ETH до ~$2730 объем ликвидаций SHORT-позиций превысит $3,060,000,000.",
+      "|premium|ETH|ETH: Binance: +0.0091% 🐂 | Bybit: +0.0100% 🐂",
+      "|есть коллекция|по эфиру|1. У них есть уже коллекция почти по эфиру.",
+      "|отток|спотовых ETH-ETF|Общий чистый отток спотовых ETH-ETF составил $39,3 млн.",
+      "|цена #ETHER 2639.50 +0.32%||#ETHER 2639.50 +0.32%",
+      "|цена ETH на Binance и Bybit +0.0100%||ETH: Binance: +0.0100% 🐂 | Bybit: +0.0100% 🐂",
+      "Инвестор «0x0058»|потратил 13m USDC на покупку|5368 ETH|➤ Инвестор «0x0058» потратил 13m USDC на покупку 5368 ETH по средней цене $2422.",
+      "Кит «0x72e0»|меняет HYPE на ETH|440,000 HYPE, 12,250 ETH|➤ Кит «0x72e0», вероятно, меняет HYPE на ETH. Он перевел 440,000 HYPE ($36m) в FalconX, после чего вывел 12,250 ETH ($30,1m).",
+      "Мосбиржа|launches|бессрочные фьючерсы на индексы #ETH|Мосбиржа запускает бессрочные фьючерсы на индексы #BTC, #ETH, #SOL, #XRP и #TRX для квалифицированных инвесторов",
+      "Четыре новых кошелька одного кита/институционала|купили ETH и отправили в стейкинг|6972 ETH|➤ Четыре новых кошелька одного кита/институционала купили 6972 ETH ($17,15m) по средней цене $2460,69 и отправили всю позицию в стейкинг.",
+      "два кошелька (вероятно, принадлежащие одному и тому же киту)|перевели на Bitfinex 33 180 #ETH (~86,9 млн $)|33 180 #ETH|–Два кошелька (вероятно, принадлежащие одному и тому же киту) перевели на Bitfinex 33 180 #ETH (~86,9 млн $) после более чем 2-летнего бездействия (1, 2);",
+      "инвесторы|ошибались, считая|Ethereum станет единым стандартом для институционального рынка|По его словам, инвесторы ошибались, считая, что Ethereum станет единым стандартом для институционального рынка. Сейчас компании рассматривают разные блокчейны, и победитель пока не…",
+      "киты в ETH|активность резко выросла, кол-во холдеров обновило рекорд||Активность китов в ETH резко выросла, кол-во холдеров обновило рекорд. В альткоинах ралли. — Santiment",
+      "спотовые ETH-ETF|чистый приток составил $143,7 млн||Общий чистый приток спотовых ETH-ETF составил $143,7 млн."
+    ],
+    "events_gone": [
+      "#ETH Ethereum и Base|отказались от разработки|общего стандарта кошельков|🙅‍♂️ #ETH Ethereum и Base отказались от разработки общего стандарта кошельков после нескольких месяцев переговоров. coindesk.com",
+      "Aerie Capital|launch new Morpho market|Ethereum mainnet|Aerie Capital launched a new Morpho market on Ethereum mainnet",
+      "BitMine|acquire|ETH|BITMINE'S ETH HOLDINGS REACHED 5.96 MILLION AFTER ACQUIRING 27,180 TOKENS OVER THE PAST WEEK",
+      "BitMine|владеет|ETH|на балансе уже более 5.96 млн ETH (около 4.9% общего предложения)",
+      "BitMine|докупила|27 180 ETH|🪙 BitMine за неделю докупила ещё 27 180 ETH и теперь контролирует почти 5% всего предложения Ethereum. Причём примерно 85% своих запасов — около 5 млн ETH — компания уже отправила…",
+      "BitMine|купила|ETH|Компания BitMine Тома Ли из Fundstrat купила на баланс еще 27 180 ETH на прошлой неделе",
+      "BitMine|объявила цель|ETH|объявленная цель компании - купить 5% всего ETH",
+      "BitMine|приобрели|ETH|🎩 #ETH BitMine за последнюю неделю приобрели 27 180 ETH, в результате чего общий объем активов теперь составляет 5,96 млн ETH",
+      "CryptoQuant|указывает на завершение медвежьего рынка|Ethereum|MVRV Ethereum указывает на завершение медвежьего рынка.",
+      "Deutsche Bank|позволит клиентам хранить и переводить|#BTC, #ETH и отдельные стейблкоины|Крупнейший банк Германии позволит клиентам хранить и переводить #BTC, #ETH и отдельные стейблкоины напрямую через Deutsche Bank.",
+      "ETH ETF|net inflow|ETH ETF|🟢 ETH ETF приток $1,75 млрд за август, лучший с 2025",
+      "ETHEREUM, BASE DEVELOPERS|ABANDON EFFORT TO ALIGN ACCOUNT ABSTRACTION PROPOSALS||ETHEREUM, BASE DEVELOPERS ABANDON EFFORT TO ALIGN ACCOUNT ABSTRACTION PROPOSALS ...",
+      "ETHEREUM, SOLANA, AND BASE|составляют|рыночная капитализация евро-стейблкоинов|ETHEREUM, SOLANA, AND BASE ACCOUNT FOR 91.5% OF THE MARKET CAP OF EURO STABLECOINS  ...",
+      "Ethereum и Base|отказались от разработки|единого стандарта крипто-кошельков|Ethereum и Base отказались от разработки единого стандарта крипто-кошельков после нескольких месяцев переговоров — Coindesk",
+      "Ethereum|plan to become quantum-resistant L1 by 2029|network upgrade|🟢 Ethereum метит в квантово-стойкий L1 к 2029 году",
+      "Ethereum|выходит в лидеры||• Ethereum выходит в лидеры на фоне оттока $463 млн из Bitcoin ETF?",
+      "Lazarus Group hackers|sold|911 ETH|3. Хакеры из Lazarus Group продали 911 #ETH ($2,28 млн) по средней цене $2 499.",
+      "Matrixport|перевела и вывела|ETH|вывела 10 000 #ETH ($24,67 млн) с Binance.",
+      "Standard Reserve|запускает|Onchain ETH Reserve|Standard Reserve Launches Onchain ETH Reserve",
+      "hackers|use|Ethereum|Хакеры начали использовать Ethereum для управления банковским вирусом.",
+      "null|reference to malware article|Ethereum and banking virus|Ethereum и банковский вирус (читать)",
+      "two wallets (possibly same whale, inactive >1 year)|transferred|14 700 ETH|1. Два кошелька, которые более года были неактивны (возможно, принадлежащие одному и тому же киту), перевели на OKX 14 700 #ETH ($36,94 млн);",
+      "|had net inflow|spot ETH-ETF|Общий чистый приток спотовых ETH-ETF составил $121,02 млн.",
+      "|premium change|ETH|ETH: Binance: -0.0088% 🐻 | Bybit: -0.0113% 🐻",
+      "|price change|Ethereum|Ethereum: $2,475 -1.89%",
+      "|reached|amount of ETH on exchanges|📉 #ETH Santiment: количество ETH на биржах достигло 11-летнего минимума.",
+      "|||Общий чистый отток спотовых ETH-ETF составил $142,3 млн.",
+      "|||– кол-во #ETH на биржах достигло 11-летнего минимума",
+      "|котировка|Ethereum|Bitcoin: $77,798 +0.88%",
+      "|приток|ETH ETF|📈 🟢 ETH ETF: приток $216M",
+      "|прогноз цены|Ethereum|• Прогноз цены Ethereum: давление на поддержку после блокировки регулирования в Сенате США",
+      "|снизились до минимума за 11 лет|Запасы ETH на биржах|Запасы ETH на биржах снизились до минимума за 11 лет",
+      "Индикатор|опускался и восстановился|MVRV|предшествовал восстановлению ETH.",
+      "Кит|обменял|512 #WBTC ($38,64 млн) и 354 #cbBTC ($26,73 млн) на 26 924 #ETH ($64,57 млн)|2. Кит обменял 512 #WBTC ($38,64 млн) и 354 #cbBTC ($26,73 млн) на 26 924 #ETH ($64,57 млн).",
+      "Московская биржа|запускает|вечные фьючерсы на индексы #BTC, #ETH, #SOL, #XRP и #TRX|С 22 сентября квалифицированные инвесторы смогут торговать вечными фьючерсами на индексы #BTC, #ETH, #SOL, #XRP и #TRX.",
+      "кит|ликвидировало лонг|ETH/USDT|в паре ETH/USDT",
+      "компания|отправляет в стейкинг|ETH|Причём примерно 85% своих запасов — около 5 млн ETH — компания уже отправила в стейкинг.",
+      "спотовые ETH-ETF|чистый приток|ETH|Общий чистый приток спотовых ETH-ETF составил ~197 млн."
+    ],
+    "discussion_comments": 400,
+    "previous_comments": 292,
+    "source_coverage": {
+      "added_channels": [
+        "@icodrops_sergey"
+      ],
+      "removed_channels": [
+        "@CryptoEarnImp"
+      ],
+      "current_channels": 18,
+      "previous_channels": 18
+    }
+  },
+  "short_observations": [
+    "Общий чистый отток спотовых ETH-ETF составил $224,1 млн.",
+    "1. 0xC2f1 вывел 2 695 #ETH ($6,94 млн) с Gemini и разместил их в стейкинге;",
+    "Общий чистый отток спотовых ETH-ETF составил $39,3 млн.",
+    "Общий чистый приток спотовых ETH-ETF составил $143,7 млн.",
+    "2. 0x3F2c вывел 2 500 #ETH ($6,02 млн) с Binance после 9 месяцев бездействия."
+  ],
+  "coverage": {
+    "publications": 2814,
+    "comments": 400,
+    "channels": 18,
+    "topic_publications": 23,
+    "not_processed": 0,
+    "db_md5": "8618099125a806df376354286ccd982e",
+    "cutoff": "2026-09-20T00:00:00+00:00"
+  },
+  "limitations": [
+    "Режим publication_replay: discovered_at в снимке отсутствует, «впервые системой» не заявляется.",
+    "Роль источника unknown: в базе нет редакционного реестра.",
+    "Неизвестные авторы не объединяются.",
+    "Отсечено после cutoff 2026-09-20T00:00:00+00:00: 3951."
+  ],
+  "evidence": [
+    {
+      "id": "telegram:11:96773#s1",
+      "url": "https://t.me/cryptoattack24/96773",
+      "quote": "Общий чистый отток спотовых ETH-ETF составил $224,1 млн.",
+      "span": [
+        82,
+        138
+      ],
+      "publication_id": "telegram:11:96773"
+    },
+    {
+      "id": "telegram:21:21109#s9",
+      "url": "https://t.me/rawa_imagination/21109",
+      "quote": "📈 🔴 ETH ETF: отток $224M",
+      "span": [
+        305,
+        329
+      ],
+      "publication_id": "telegram:21:21109"
+    },
+    {
+      "id": "telegram:11:96776#s1",
+      "url": "https://t.me/cryptoattack24/96776",
+      "quote": "1. 0xC2f1 вывел 2 695 #ETH ($6,94 млн) с Gemini и разместил их в стейкинге;",
+      "span": [
+        40,
+        115
+      ],
+      "publication_id": "telegram:11:96776"
+    },
+    {
+      "id": "telegram:18:31476#s3",
+      "url": "https://t.me/crypto_hd/31476",
+      "quote": "➤ Кит «0xC2f1» вывел с Gemini 2695 ETH ($6,94m) и сразу отправил всю позицию в стейкинг. Еще один кит «0x3F2c» после 9 месяцев бездействия вывел с Binance 2500 ETH ($6,02m).",
+      "span": [
+        176,
+        349
+      ],
+      "publication_id": "telegram:18:31476"
+    },
+    {
+      "id": "telegram:11:96776#s2",
+      "url": "https://t.me/cryptoattack24/96776",
+      "quote": "2. 0x3F2c вывел 2 500 #ETH ($6,02 млн) с Binance после 9 месяцев бездействия.",
+      "span": [
+        116,
+        193
+      ],
+      "publication_id": "telegram:11:96776"
+    },
+    {
+      "id": "telegram:18:31476#s4",
+      "url": "https://t.me/crypto_hd/31476",
+      "quote": "➤ Инвестор «0x0058» потратил 13m USDC на покупку 5368 ETH по средней цене $2422.",
+      "span": [
+        351,
+        431
+      ],
+      "publication_id": "telegram:18:31476"
+    },
+    {
+      "id": "telegram:10:385211#s0",
+      "url": "https://t.me/markettwits/385211",
+      "quote": "⚠️✴️#BTC #ETH #крипто #cot \nBlackRock сегодня начал переводить BTC и ETH на биржи - скорее всего, на продажу для клиентов  — мониторинг",
+      "span": [
+        0,
+        135
+      ],
+      "publication_id": "telegram:10:385211"
+    },
+    {
+      "id": "telegram:10:385262#s1",
+      "url": "https://t.me/markettwits/385262",
+      "quote": "Комиссия за транзакции в сети Ethereum значительно снизилась. С момента достижения пикового значения 21 апреля в $0,72,  сегодня средняя транзакция за перевод оценивается всего в $0,095, даже с учетом того, что рыночная стоимость ETH сейчас выше. — Santiment",
+      "span": [
+        23,
+        281
+      ],
+      "publication_id": "telegram:10:385262"
+    },
+    {
+      "id": "telegram:18:31491#s2",
+      "url": "https://t.me/crypto_hd/31491",
+      "quote": "➤ При резком росте #ETH до ~$2730 объем ликвидаций SHORT-позиций превысит $3,060,000,000.",
+      "span": [
+        148,
+        237
+      ],
+      "publication_id": "telegram:18:31491"
+    },
+    {
+      "id": "telegram:15:423250#s7",
+      "url": "https://t.me/WEB3_AGGREGATOR/423250",
+      "quote": "🕵️‍♂️ BlackRock перевели на Coinbase Prime 54 096 #ETH (131,7 млн $) и 2 015 #BTC (153,8 млн $)",
+      "span": [
+        566,
+        661
+      ],
+      "publication_id": "telegram:15:423250"
+    },
+    {
+      "id": "telegram:11:96795#s1",
+      "url": "https://t.me/cryptoattack24/96795",
+      "quote": "Общий чистый отток спотовых ETH-ETF составил $39,3 млн.",
+      "span": [
+        83,
+        138
+      ],
+      "publication_id": "telegram:11:96795"
+    },
+    {
+      "id": "telegram:21:21117#s9",
+      "url": "https://t.me/rawa_imagination/21117",
+      "quote": "📈 🔴 ETH ETF: отток $39M",
+      "span": [
+        309,
+        332
+      ],
+      "publication_id": "telegram:21:21117"
+    },
+    {
+      "id": "telegram:18:31498#s0",
+      "url": "https://t.me/crypto_hd/31498",
+      "quote": "📍Сегодня экспирация в опционах на BTC и ETH! (Deribit)",
+      "span": [
+        0,
+        54
+      ],
+      "publication_id": "telegram:18:31498"
+    },
+    {
+      "id": "telegram:15:423264#s0",
+      "url": "https://t.me/WEB3_AGGREGATOR/423264",
+      "quote": "@nostrafinance has reported that a manipulated NSTR oracle price allowed a single account to borrow ~$3.5M in ETH, STRK, USDC, USDT, WBTC, and DAI against NSTR collateral on Nostra's #Starknet money market.",
+      "span": [
+        0,
+        206
+      ],
+      "publication_id": "telegram:15:423264"
+    },
+    {
+      "id": "telegram:21:21117#s3",
+      "url": "https://t.me/rawa_imagination/21117",
+      "quote": "ETH: Binance: +0.0091% 🐂 | Bybit: +0.0100% 🐂",
+      "span": [
+        130,
+        174
+      ],
+      "publication_id": "telegram:21:21117"
+    },
+    {
+      "id": "telegram:18:31503#s2",
+      "url": "https://t.me/crypto_hd/31503",
+      "quote": "➤ Инсайдер Bitcoin OG выставил ордер на открытие лонга на 2450 BTC (~$190m) по цене $78,000. Также он продал 35,000 ETH ($87,5m) по цене ~$2500 и направил часть средств на увеличение обеспечения убыточного шорта по ZEC.",
+      "span": [
+        46,
+        265
+      ],
+      "publication_id": "telegram:18:31503"
+    },
+    {
+      "id": "telegram:18:31503#s4",
+      "url": "https://t.me/crypto_hd/31503",
+      "quote": "➤ 11 новых кошельков, вероятно принадлежащих одному киту, за последние три дня продали 602 BTC за $45,8m на Hyperliquid и купили 18,780 ETH на ту же сумму.",
+      "span": [
+        371,
+        526
+      ],
+      "publication_id": "telegram:18:31503"
+    },
+    {
+      "id": "telegram:18:31503#s6",
+      "url": "https://t.me/crypto_hd/31503",
+      "quote": "➤ Кит «0x72e0», вероятно, меняет HYPE на ETH. Он перевел 440,000 HYPE ($36m) в FalconX, после чего вывел 12,250 ETH ($30,1m).",
+      "span": [
+        636,
+        761
+      ],
+      "publication_id": "telegram:18:31503"
+    },
+    {
+      "id": "telegram:18:31503#s7",
+      "url": "https://t.me/crypto_hd/31503",
+      "quote": "➤ Четыре новых кошелька одного кита/институционала купили 6972 ETH ($17,15m) по средней цене $2460,69 и отправили всю позицию в стейкинг.",
+      "span": [
+        763,
+        900
+      ],
+      "publication_id": "telegram:18:31503"
+    },
+    {
+      "id": "telegram:18:31504#s3",
+      "url": "https://t.me/crypto_hd/31504",
+      "quote": "По его словам, инвесторы ошибались, считая, что Ethereum станет единым стандартом для институционального рынка. Сейчас компании рассматривают разные блокчейны, и победитель пока не определен.",
+      "span": [
+        171,
+        362
+      ],
+      "publication_id": "telegram:18:31504"
+    },
+    {
+      "id": "telegram:15:423294#s2",
+      "url": "https://t.me/WEB3_AGGREGATOR/423294",
+      "quote": "1. У них есть уже коллекция почти по эфиру.",
+      "span": [
+        42,
+        85
+      ],
+      "publication_id": "telegram:15:423294"
+    },
+    {
+      "id": "telegram:15:423312#s0",
+      "url": "https://t.me/WEB3_AGGREGATOR/423312",
+      "quote": "🪙 Ethereum хочет ускорить базовый ритм сети — предложение EIP-8198 должно сделать длительность слота настраиваемой вместо жёстких 12 секунд, чтобы затем постепенно сокращать её.",
+      "span": [
+        0,
+        177
+      ],
+      "publication_id": "telegram:15:423312"
+    },
+    {
+      "id": "telegram:15:423312#s1",
+      "url": "https://t.me/WEB3_AGGREGATOR/423312",
+      "quote": "В обсуждениях называют 10 секунд как первый осторожный шаг, а в текущем черновике EIP фигурируют 8 секунд, Ethereum Foundation уже включила инициативу в B-tier для Hegotá.",
+      "span": [
+        180,
+        351
+      ],
+      "publication_id": "telegram:15:423312"
+    },
+    {
+      "id": "telegram:11:96819#s1",
+      "url": "https://t.me/cryptoattack24/96819",
+      "quote": "Общий чистый приток спотовых ETH-ETF составил $143,7 млн.",
+      "span": [
+        81,
+        138
+      ],
+      "publication_id": "telegram:11:96819"
+    },
+    {
+      "id": "telegram:21:21121#s9",
+      "url": "https://t.me/rawa_imagination/21121",
+      "quote": "📈 🟢 ETH ETF: приток $144M",
+      "span": [
+        310,
+        335
+      ],
+      "publication_id": "telegram:21:21121"
+    },
+    {
+      "id": "telegram:11:96824#s1",
+      "url": "https://t.me/cryptoattack24/96824",
+      "quote": "–Два кошелька (вероятно, принадлежащие одному и тому же киту) перевели на Bitfinex 33 180 #ETH (~86,9 млн $) после более чем 2-летнего бездействия (1, 2);",
+      "span": [
+        21,
+        175
+      ],
+      "publication_id": "telegram:11:96824"
+    },
+    {
+      "id": "telegram:10:385442#s1",
+      "url": "https://t.me/markettwits/385442",
+      "quote": "Активность китов в ETH резко выросла, кол-во холдеров обновило рекорд. В альткоинах ралли. — Santiment",
+      "span": [
+        24,
+        126
+      ],
+      "publication_id": "telegram:10:385442"
+    },
+    {
+      "id": "telegram:21:21121#s3",
+      "url": "https://t.me/rawa_imagination/21121",
+      "quote": "  ETH: Binance: +0.0100% 🐂 | Bybit: +0.0100% 🐂",
+      "span": [
+        128,
+        174
+      ],
+      "publication_id": "telegram:21:21121"
+    },
+    {
+      "id": "telegram:9:1041526#s0",
+      "url": "https://t.me/marketfeed/1041526",
+      "quote": "#ETHER 2639.50 +0.32%",
+      "span": [
+        46,
+        67
+      ],
+      "publication_id": "telegram:9:1041526"
+    },
+    {
+      "id": "telegram:9:1041542#s25",
+      "url": "https://t.me/marketfeed/1041542",
+      "quote": "• Bitcoin holds around $81.2K; ether near $2.64K — risk assets steady despite macro/policy noise.",
+      "span": [
+        2268,
+        2365
+      ],
+      "publication_id": "telegram:9:1041542"
+    },
+    {
+      "id": "telegram:11:96827#s9",
+      "url": "https://t.me/cryptoattack24/96827",
+      "quote": "Мосбиржа запускает бессрочные фьючерсы на индексы #BTC, #ETH, #SOL, #XRP и #TRX для квалифицированных инвесторов",
+      "span": [
+        339,
+        451
+      ],
+      "publication_id": "telegram:11:96827"
+    },
+    {
+      "id": "telegram:11:96773#s0",
+      "url": "https://t.me/cryptoattack24/96773",
+      "quote": "Вчера общий чистый отток спотовых BTC-ETF составил ~$295,9 млн.",
+      "span": [
+        17,
+        80
+      ],
+      "publication_id": "telegram:11:96773"
+    },
+    {
+      "id": "telegram:18:31473#s2",
+      "url": "https://t.me/crypto_hd/31473",
+      "quote": "Основатель Ethereum не согласен с мнением, что развитие AI неизбежно приведет к массовым взломам. AI-технологии смогут не только искать уязвимости, но и математически доказывать безопасность программ, причем проверять весь код целиком.",
+      "span": [
+        76,
+        311
+      ],
+      "publication_id": "telegram:18:31473"
+    },
+    {
+      "id": "telegram:18:31473#s3",
+      "url": "https://t.me/crypto_hd/31473",
+      "quote": "Именно в этом направлении в Ethereum планируют двигаться в ближайшие несколько лет. Бутерин считает, что без усиления безопасности у масштабируемых и приватных блокчейнов «нет будущего».",
+      "span": [
+        313,
+        499
+      ],
+      "publication_id": "telegram:18:31473"
+    },
+    {
+      "id": "telegram:15:423173#s1",
+      "url": "https://t.me/WEB3_AGGREGATOR/423173",
+      "quote": "Именно в эту сторону Ethereum планирует двигаться в ближайшие годы.",
+      "span": [
+        184,
+        251
+      ],
+      "publication_id": "telegram:15:423173"
+    },
+    {
+      "id": "telegram:15:423218#s1",
+      "url": "https://t.me/WEB3_AGGREGATOR/423218",
+      "quote": "The S-tier – Lighter, Delta, Arcus, Index, Bankr, Virtuals – shows the chain is built for perps, tokenized stocks and agents, while B and C are mostly memecoins. Notably absent: Ethereum's DeFi blue chips – Robinhood is building around its own product, not the DeFi stack.",
+      "span": [
+        31,
+        303
+      ],
+      "publication_id": "telegram:15:423218"
+    },
+    {
+      "id": "telegram:15:423244#s2",
+      "url": "https://t.me/WEB3_AGGREGATOR/423244",
+      "quote": "Studio is built around Arc and Circle’s infrastructure, with integrations for CCTP, Gateway, Wallets, and other stablecoin tools. Generated apps can be tested across nine EVM chains, including Arc, Ethereum, Base, Avalanche, Arbitrum, and Unichain, while the resulting code can be exported into developers’ own repositories.",
+      "span": [
+        252,
+        576
+      ],
+      "publication_id": "telegram:15:423244"
+    },
+    {
+      "id": "telegram:15:423246#s8",
+      "url": "https://t.me/WEB3_AGGREGATOR/423246",
+      "quote": "🤪 HashCats - намайнено 9k+ кошек, где-то 1/3 сожгли, 2/3 осталось и еще майнятся тотал 16376. Цена входа сейчас при минте = число уже существующих котов * 0.00002 ETH. Т.е. сейчас на Opensea +/- справедливая цена в 0.16 eth",
+      "span": [
+        1597,
+        1820
+      ],
+      "publication_id": "telegram:15:423246"
+    },
+    {
+      "id": "telegram:15:423246#s9",
+      "url": "https://t.me/WEB3_AGGREGATOR/423246",
+      "quote": "Эти эфиры, которые идут на минт котов на 70% идут в награды существующим котам, на 22.5% байбек и бёрн $HASH, 7.5% команде. Я говорил, что треть кошек сожгли - как раз при сожжении получаешь $HASH",
+      "span": [
+        1822,
+        2018
+      ],
+      "publication_id": "telegram:15:423246"
+    },
+    {
+      "id": "telegram:15:423246#s11",
+      "url": "https://t.me/WEB3_AGGREGATOR/423246",
+      "quote": "🤪 Project Mars - 5000 участков (внутри ETH залочены на случай, если игра загнется - можно будет сжечь нфт и достать кефиры) в 5 регионах и токен $DRILL",
+      "span": [
+        2380,
+        2531
+      ],
+      "publication_id": "telegram:15:423246"
+    },
+    {
+      "id": "telegram:15:423249#s1",
+      "url": "https://t.me/WEB3_AGGREGATOR/423249",
+      "quote": "Wall Street kept walking in: S&P Global agreed to buy OpenZeppelin, the firm securing $37T in smart contracts, Deutsche Bank went live with institutional BTC/ETH custody, and Circle's Arc L1 hit mainnet; while crypto's courtroom pile grew, from DOJ charges against two Robinhood engineers to Celsius's $495M suit against BitMEX.",
+      "span": [
+        49,
+        377
+      ],
+      "publication_id": "telegram:15:423249"
+    },
+    {
+      "id": "telegram:15:423249#s4",
+      "url": "https://t.me/WEB3_AGGREGATOR/423249",
+      "quote": "— Deutsche Bank launches institutional BTC and ETH custody",
+      "span": [
+        452,
+        510
+      ],
+      "publication_id": "telegram:15:423249"
+    },
+    {
+      "id": "telegram:11:96795#s0",
+      "url": "https://t.me/cryptoattack24/96795",
+      "quote": "📊 #BTC #ETH #ETF Вчера общий чистый приток спотовых BTC-ETF составил ~$159,5 млн.",
+      "span": [
+        0,
+        81
+      ],
+      "publication_id": "telegram:11:96795"
+    },
+    {
+      "id": "telegram:11:96819#s0",
+      "url": "https://t.me/cryptoattack24/96819",
+      "quote": "📈 #BTC #ETH #ETF Вчера общий чистый приток спотовых BTC-ETF составил ~$433 млн.",
+      "span": [
+        0,
+        79
+      ],
+      "publication_id": "telegram:11:96819"
+    },
+    {
+      "id": "https://t.me/rawa_imagination/21117?comment=343184",
+      "url": "https://t.me/rawa_imagination/21117?comment=343184",
+      "quote": "примерно так, плюс/минус оплата мощностей + частично апи. С подписками на Равангу и донатами пока покрывает."
+    }
+  ],
+  "spend_usd": 0.0,
+  "numbers_by": "code",
+  "brief_markdown": "# Pulse (news-first): eth, окно 2026-09-17 – 2026-09-19\n\n## Коротко\n\n- Общий чистый отток спотовых ETH-ETF составил $224,1 млн.\n- 1. 0xC2f1 вывел 2 695 #ETH ($6,94 млн) с Gemini и разместил их в стейкинге;\n- Общий чистый отток спотовых ETH-ETF составил $39,3 млн.\n- Общий чистый приток спотовых ETH-ETF составил $143,7 млн.\n- 2. 0x3F2c вывел 2 500 #ETH ($6,02 млн) с Binance после 9 месяцев бездействия.\n\n## События и заявления\n\n- **Общий чистый отток спотовых ETH-ETF составил $224,1 млн.**\n  публикации 2, каналы 2, известные авторы 0, первоисточники 1, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/cryptoattack24/96773: «Общий чистый отток спотовых ETH-ETF составил $224,1 млн.»\n  - https://t.me/rawa_imagination/21109: «📈 🔴 ETH ETF: отток $224M»\n- **1. 0xC2f1 вывел 2 695 #ETH ($6,94 млн) с Gemini и разместил их в стейкинге;**\n  публикации 2, каналы 2, известные авторы 0, первоисточники 1, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/cryptoattack24/96776: «1. 0xC2f1 вывел 2 695 #ETH ($6,94 млн) с Gemini и разместил их в стейкинге;»\n  - https://t.me/crypto_hd/31476: «➤ Кит «0xC2f1» вывел с Gemini 2695 ETH ($6,94m) и сразу отправил всю позицию в стейкинг. Еще один кит «0x3F2c» после 9 месяцев бездействия вывел с Binance 2500 »\n- **2. 0x3F2c вывел 2 500 #ETH ($6,02 млн) с Binance после 9 месяцев бездействия.**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/cryptoattack24/96776: «2. 0x3F2c вывел 2 500 #ETH ($6,02 млн) с Binance после 9 месяцев бездействия.»\n- **➤ Инвестор «0x0058» потратил 13m USDC на покупку 5368 ETH по средней цене $2422.**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/crypto_hd/31476: «➤ Инвестор «0x0058» потратил 13m USDC на покупку 5368 ETH по средней цене $2422.»\n- **⚠️✴️#BTC #ETH #крипто #cot **\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/markettwits/385211: «⚠️✴️#BTC #ETH #крипто #cot \nBlackRock сегодня начал переводить BTC и ETH на биржи - скорее всего, на продажу для клиентов  — мониторинг»\n- **Комиссия за транзакции в сети Ethereum значительно снизилась. С момента достижения пикового значения 21 апреля в $0,72,  сегодня средняя транзакция за перевод оценивается всего в…**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/markettwits/385262: «Комиссия за транзакции в сети Ethereum значительно снизилась. С момента достижения пикового значения 21 апреля в $0,72,  сегодня средняя транзакция за перевод о»\n- **➤ При резком росте #ETH до ~$2730 объем ликвидаций SHORT-позиций превысит $3,060,000,000.**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/crypto_hd/31491: «➤ При резком росте #ETH до ~$2730 объем ликвидаций SHORT-позиций превысит $3,060,000,000.»\n- **🕵️‍♂️ BlackRock перевели на Coinbase Prime 54 096 #ETH (131,7 млн $) и 2 015 #BTC (153,8 млн $)**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/423250: «🕵️‍♂️ BlackRock перевели на Coinbase Prime 54 096 #ETH (131,7 млн $) и 2 015 #BTC (153,8 млн $)»\n- **Общий чистый отток спотовых ETH-ETF составил $39,3 млн.**\n  публикации 2, каналы 2, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 1.\n  - https://t.me/cryptoattack24/96795: «Общий чистый отток спотовых ETH-ETF составил $39,3 млн.»\n  - https://t.me/rawa_imagination/21117: «📈 🔴 ETH ETF: отток $39M»\n- **📍Сегодня экспирация в опционах на BTC и ETH! (Deribit)**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/crypto_hd/31498: «📍Сегодня экспирация в опционах на BTC и ETH! (Deribit)»\n- **@nostrafinance has reported that a manipulated NSTR oracle price allowed a single account to borrow ~$3.5M in ETH, STRK, USDC, USDT, WBTC, and DAI against NSTR collateral on…**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/423264: «@nostrafinance has reported that a manipulated NSTR oracle price allowed a single account to borrow ~$3.5M in ETH, STRK, USDC, USDT, WBTC, and DAI against NSTR »\n- **ETH: Binance: +0.0091% 🐂 | Bybit: +0.0100% 🐂**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 0, неизвестное происхождение 1.\n  - https://t.me/rawa_imagination/21117: «ETH: Binance: +0.0091% 🐂 | Bybit: +0.0100% 🐂»\n- **➤ Инсайдер Bitcoin OG выставил ордер на открытие лонга на 2450 BTC (~$190m) по цене $78,000. Также он продал 35,000 ETH ($87,5m) по цене ~$2500 и направил часть средств на…**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/crypto_hd/31503: «➤ Инсайдер Bitcoin OG выставил ордер на открытие лонга на 2450 BTC (~$190m) по цене $78,000. Также он продал 35,000 ETH ($87,5m) по цене ~$2500 и направил часть»\n- **➤ 11 новых кошельков, вероятно принадлежащих одному киту, за последние три дня продали 602 BTC за $45,8m на Hyperliquid и купили 18,780 ETH на ту же сумму.**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/crypto_hd/31503: «➤ 11 новых кошельков, вероятно принадлежащих одному киту, за последние три дня продали 602 BTC за $45,8m на Hyperliquid и купили 18,780 ETH на ту же сумму.»\n- **➤ Кит «0x72e0», вероятно, меняет HYPE на ETH. Он перевел 440,000 HYPE ($36m) в FalconX, после чего вывел 12,250 ETH ($30,1m).**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/crypto_hd/31503: «➤ Кит «0x72e0», вероятно, меняет HYPE на ETH. Он перевел 440,000 HYPE ($36m) в FalconX, после чего вывел 12,250 ETH ($30,1m).»\n- **➤ Четыре новых кошелька одного кита/институционала купили 6972 ETH ($17,15m) по средней цене $2460,69 и отправили всю позицию в стейкинг.**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/crypto_hd/31503: «➤ Четыре новых кошелька одного кита/институционала купили 6972 ETH ($17,15m) по средней цене $2460,69 и отправили всю позицию в стейкинг.»\n- **По его словам, инвесторы ошибались, считая, что Ethereum станет единым стандартом для институционального рынка. Сейчас компании рассматривают разные блокчейны, и победитель пока не…**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/crypto_hd/31504: «По его словам, инвесторы ошибались, считая, что Ethereum станет единым стандартом для институционального рынка. Сейчас компании рассматривают разные блокчейны, »\n- **1. У них есть уже коллекция почти по эфиру.**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 0, неизвестное происхождение 1.\n  - https://t.me/WEB3_AGGREGATOR/423294: «1. У них есть уже коллекция почти по эфиру.»\n- **🪙 Ethereum хочет ускорить базовый ритм сети — предложение EIP-8198 должно сделать длительность слота настраиваемой вместо жёстких 12 секунд, чтобы затем постепенно сокращать её.**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/423312: «🪙 Ethereum хочет ускорить базовый ритм сети — предложение EIP-8198 должно сделать длительность слота настраиваемой вместо жёстких 12 секунд, чтобы затем постепе»\n- **В обсуждениях называют 10 секунд как первый осторожный шаг, а в текущем черновике EIP фигурируют 8 секунд, Ethereum Foundation уже включила инициативу в B-tier для Hegotá.**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/423312: «В обсуждениях называют 10 секунд как первый осторожный шаг, а в текущем черновике EIP фигурируют 8 секунд, Ethereum Foundation уже включила инициативу в B-tier »\n- **Общий чистый приток спотовых ETH-ETF составил $143,7 млн.**\n  публикации 2, каналы 2, известные авторы 0, первоисточники 2, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/cryptoattack24/96819: «Общий чистый приток спотовых ETH-ETF составил $143,7 млн.»\n  - https://t.me/rawa_imagination/21121: «📈 🟢 ETH ETF: приток $144M»\n- **–Два кошелька (вероятно, принадлежащие одному и тому же киту) перевели на Bitfinex 33 180 #ETH (~86,9 млн $) после более чем 2-летнего бездействия (1, 2);**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/cryptoattack24/96824: «–Два кошелька (вероятно, принадлежащие одному и тому же киту) перевели на Bitfinex 33 180 #ETH (~86,9 млн $) после более чем 2-летнего бездействия (1, 2);»\n- **Активность китов в ETH резко выросла, кол-во холдеров обновило рекорд. В альткоинах ралли. — Santiment**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/markettwits/385442: «Активность китов в ETH резко выросла, кол-во холдеров обновило рекорд. В альткоинах ралли. — Santiment»\n- **ETH: Binance: +0.0100% 🐂 | Bybit: +0.0100% 🐂**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/rawa_imagination/21121: «  ETH: Binance: +0.0100% 🐂 | Bybit: +0.0100% 🐂»\n- **#ETHER 2639.50 +0.32%**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/marketfeed/1041526: «#ETHER 2639.50 +0.32%»\n- **• Bitcoin holds around $81.2K; ether near $2.64K — risk assets steady despite macro/policy noise.**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/marketfeed/1041542: «• Bitcoin holds around $81.2K; ether near $2.64K — risk assets steady despite macro/policy noise.»\n- **Мосбиржа запускает бессрочные фьючерсы на индексы #BTC, #ETH, #SOL, #XRP и #TRX для квалифицированных инвесторов**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/cryptoattack24/96827: «Мосбиржа запускает бессрочные фьючерсы на индексы #BTC, #ETH, #SOL, #XRP и #TRX для квалифицированных инвесторов»\n\n## Кто распространяет информацию и какие позиции\n\n- Основатель Ethereum не согласен с мнением, что развитие AI неизбежно приведет к массовым взломам. AI-технологии смогут не только искать уязвимости, но и математически доказывать безопасность программ, причем проверять весь код целиком.\n  https://t.me/crypto_hd/31473\n- Именно в этом направлении в Ethereum планируют двигаться в ближайшие несколько лет. Бутерин считает, что без усиления безопасности у масштабируемых и приватных блокчейнов «нет будущего».\n  https://t.me/crypto_hd/31473\n- Именно в эту сторону Ethereum планирует двигаться в ближайшие годы.\n  https://t.me/WEB3_AGGREGATOR/423173\n- The S-tier – Lighter, Delta, Arcus, Index, Bankr, Virtuals – shows the chain is built for perps, tokenized stocks and agents, while B and C are mostly memecoins. Notably absent: Ethereum's DeFi blue chips – Robinhood is building around its own product, not the DeFi stack.\n  https://t.me/WEB3_AGGREGATOR/423218\n\n## Вопросы, аргументы и опыт участников\n\n- примерно так, плюс/минус оплата мощностей + частично апи. С подписками на Равангу и донатами пока покрывает.\n  основание: предмет реплики — сторонний сервис/коллекция экосистемы, не событие темы\n  https://t.me/rawa_imagination/21117?comment=343184\n\n## Изменения относительно предыдущего периода\n\n- Появившиеся события: 27.\n- Исчезнувшие события: 38.\n- Изменение охвата источников: +1 / −1 каналов.\n- Комментарии в текущем окне: 400.\n\n## Охват и ограничения\n\n- Публикации 2814, комментарии 400, каналы 18.\n- Режим publication_replay: discovered_at в снимке отсутствует, «впервые системой» не заявляется.\n- Роль источника unknown: в базе нет редакционного реестра.\n- Неизвестные авторы не объединяются.\n- Отсечено после cutoff 2026-09-20T00:00:00+00:00: 3951.\n\n## Основания\n\n- https://t.me/cryptoattack24/96773: «Общий чистый отток спотовых ETH-ETF составил $224,1 млн.»\n- https://t.me/rawa_imagination/21109: «📈 🔴 ETH ETF: отток $224M»\n- https://t.me/cryptoattack24/96776: «1. 0xC2f1 вывел 2 695 #ETH ($6,94 млн) с Gemini и разместил их в стейкинге;»\n- https://t.me/crypto_hd/31476: «➤ Кит «0xC2f1» вывел с Gemini 2695 ETH ($6,94m) и сразу отправил всю позицию в стейкинг. Еще один кит «0x3F2c» после 9 месяцев бездействия вывел с Binance 2500 »\n- https://t.me/cryptoattack24/96776: «2. 0x3F2c вывел 2 500 #ETH ($6,02 млн) с Binance после 9 месяцев бездействия.»\n- https://t.me/crypto_hd/31476: «➤ Инвестор «0x0058» потратил 13m USDC на покупку 5368 ETH по средней цене $2422.»\n- https://t.me/markettwits/385211: «⚠️✴️#BTC #ETH #крипто #cot \nBlackRock сегодня начал переводить BTC и ETH на биржи - скорее всего, на продажу для клиентов  — мониторинг»\n- https://t.me/markettwits/385262: «Комиссия за транзакции в сети Ethereum значительно снизилась. С момента достижения пикового значения 21 апреля в $0,72,  сегодня средняя транзакция за перевод о»\n- https://t.me/crypto_hd/31491: «➤ При резком росте #ETH до ~$2730 объем ликвидаций SHORT-позиций превысит $3,060,000,000.»\n- https://t.me/WEB3_AGGREGATOR/423250: «🕵️‍♂️ BlackRock перевели на Coinbase Prime 54 096 #ETH (131,7 млн $) и 2 015 #BTC (153,8 млн $)»\n- https://t.me/cryptoattack24/96795: «Общий чистый отток спотовых ETH-ETF составил $39,3 млн.»\n- https://t.me/rawa_imagination/21117: «📈 🔴 ETH ETF: отток $39M»\n- https://t.me/crypto_hd/31498: «📍Сегодня экспирация в опционах на BTC и ETH! (Deribit)»\n- https://t.me/WEB3_AGGREGATOR/423264: «@nostrafinance has reported that a manipulated NSTR oracle price allowed a single account to borrow ~$3.5M in ETH, STRK, USDC, USDT, WBTC, and DAI against NSTR »\n- https://t.me/rawa_imagination/21117: «ETH: Binance: +0.0091% 🐂 | Bybit: +0.0100% 🐂»\n- https://t.me/crypto_hd/31503: «➤ Инсайдер Bitcoin OG выставил ордер на открытие лонга на 2450 BTC (~$190m) по цене $78,000. Также он продал 35,000 ETH ($87,5m) по цене ~$2500 и направил часть»\n- https://t.me/crypto_hd/31503: «➤ 11 новых кошельков, вероятно принадлежащих одному киту, за последние три дня продали 602 BTC за $45,8m на Hyperliquid и купили 18,780 ETH на ту же сумму.»\n- https://t.me/crypto_hd/31503: «➤ Кит «0x72e0», вероятно, меняет HYPE на ETH. Он перевел 440,000 HYPE ($36m) в FalconX, после чего вывел 12,250 ETH ($30,1m).»\n- https://t.me/crypto_hd/31503: «➤ Четыре новых кошелька одного кита/институционала купили 6972 ETH ($17,15m) по средней цене $2460,69 и отправили всю позицию в стейкинг.»\n- https://t.me/crypto_hd/31504: «По его словам, инвесторы ошибались, считая, что Ethereum станет единым стандартом для институционального рынка. Сейчас компании рассматривают разные блокчейны, »\n",
+  "model": "deepseek/deepseek-v4-flash",
+  "llm": {
+    "calls": 0,
+    "cache_hits": 159,
+    "spent_usd": 0.0,
+    "errors": []
+  }
+}

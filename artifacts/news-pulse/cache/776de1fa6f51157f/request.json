@@ -1,0 +1,17 @@
+{
+ "segments": [
+  {
+   "id": "telegram:15:422660#s2",
+   "text": "Consensys Software Inc. will rebrand as MetaMask, with Ethereum co-founder Joe Lubin serving as chairman and CEO. The new Consensys will retain the Consensys name and focus on Linea, Besu, Teku, and blockchain infrastructure for banks and other institutions.\n\n",
+   "mentions": [
+    {
+     "text": "Ethereum",
+     "status": "confirmed"
+    }
+   ],
+   "kind_hint": "post",
+   "url": "https://t.me/WEB3_AGGREGATOR/422660",
+   "time": "2026-09-09T20:30:20+00:00"
+  }
+ ]
+}

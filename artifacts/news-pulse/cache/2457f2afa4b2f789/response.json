@@ -1,0 +1,46 @@
+{
+ "id": "gen-1790194203-dqKMLdc4d1Q36LuxKdgm",
+ "object": "chat.completion",
+ "created": 1790194203,
+ "model": "deepseek/deepseek-v4-flash",
+ "provider": "GMICloud",
+ "system_fingerprint": null,
+ "service_tier": null,
+ "choices": [
+  {
+   "index": 0,
+   "logprobs": null,
+   "finish_reason": "stop",
+   "native_finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "content": "{\"labels\": [{\"id\": \"telegram:10:384763#s0\", \"kind\": \"event\", \"actor\": null, \"action\": \"decline\", \"object\": \"ETH exchange reserves\", \"qualifiers\": {\"event_date\": \"2026-09-14\", \"place\": \"exchanges\", \"counterparty\": null}, \"origin\": \"retelling\", \"source_role\": \"editorial\", \"verification_status\": \"source_statement\", \"quote\": \"Запасы ETH на биржах снизились до минимума за 11 лет\", \"span\": [0, 55]}, {\"id\": \"telegram:9:1037913#s5\", \"kind\": \"event\", \"actor\": \"BitMine\", \"action\": \"increase holdings\", \"object\": \"ETH\", \"qualifiers\": {\"event_date\": \"2026-09-14\", \"place\": null, \"counterparty\": null}, \"origin\": \"retelling\", \"source_role\": \"editorial\", \"verification_status\": \"source_statement\", \"quote\": \"BitMine boosts ETH holdings\", \"span\": [0, 0]}, {\"id\": \"telegram:15:422973#s4\", \"kind\": \"event\", \"actor\": \"BitMine\", \"action\": \"purchase\", \"object\": \"ETH\", \"qualifiers\": {\"event_date\": \"2026-09-14\", \"place\": null, \"counterparty\": null}, \"origin\": \"retelling\", \"source_role\": \"editorial\", \"verification_status\": \"source_statement\", \"quote\": \"BitMine за прошедшую неделю приобрели 27 180 #ETH\", \"span\": [0, 55]}, {\"id\": \"telegram:15:422974#s4\", \"kind\": \"author_position\", \"actor\": \"author\", \"action\": \"state portfolio\", \"object\": \"ETH\", \"qualifiers\": {\"event_date\": \"2026-09-14\", \"place\": null, \"counterparty\": null}, \"origin\": \"own\", \"source_role\": \"author\", \"verification_status\": \"unverified\", \"quote\": \"До этого в основном все было в $BTC $ETH $BNB и стейблы\", \"span\": [0, 0]}, {\"id\": \"telegram:15:422974#s14\", \"kind\": \"author_position\", \"actor\": \"author\", \"action\": \"transfer\", \"object\": \"ETH\", \"qualifiers\": {\"event_date\": \"2026-09-14\", \"place\": null, \"counterparty\": null}, \"origin\": \"own\", \"source_role\": \"author\", \"verification_status\": \"unverified\", \"quote\": \"перелил часть в $PONS\", \"span\": [0, 0]}, {\"id\": \"telegram:19:18913#s1\", \"kind\": \"author_position\", \"actor\": \"author\", \"action\": \"comment\", \"object\": \"eth\", \"qualifiers\": {\"event_date\": \"2026-09-15\", \"place\": null, \"counterparty\": null}, \"origin\": \"own\", \"source_role\": \"author\", \"verification_status\": \"unverified\", \"quote\": \"early inscriptions on eth would go for millions\", \"span\": [0, 0]}, {\"id\": \"telegram:19:18913#s3\", \"kind\": \"author_position\", \"actor\": \"author\", \"action\": \"advise\", \"object\": \"eth\", \"qualifiers\": {\"event_date\": \"2026-09-15\", \"place\": null, \"counterparty\": null}, \"origin\": \"own\", \"source_role\": \"author\", \"verification_status\": \"unverified\", \"quote\": \"Study inscriptions on eth/btc.\", \"span\": [0, 0]}, {\"id\": \"telegram:11:96730#s0\", \"kind\": \"event\", \"actor\": null, \"action\": \"decline\", \"object\": \"ETH exchange reserves\", \"qualifiers\": {\"event_date\": \"2026-09-15\", \"place\": \"exchanges\", \"counterparty\": null}, \"origin\": \"retelling\", \"source_role\": \"editorial\", \"verification_status\": \"source_statement\", \"quote\": \"количество ETH на биржах достигло 11-летнего минимума\", \"span\": [0, 55]}, {\"id\": \"telegram:11:96732#s0\", \"kind\": \"event\", \"actor\": null, \"action\": \"inflow\", \"object\": \"BTC ETF\", \"qualifiers\": {\"event_date\": \"2026-09-15\", \"place\": null, \"counterparty\": null}, \"origin\": \"retelling\", \"source_role\": \"editorial\", \"verification_status\": \"source_statement\", \"quote\": \"общий чистый приток спотовых BTC-ETF составил ~$160,04 млн\", \"span\": [0, 0]}, {\"id\": \"telegram:11:96732#s1\", \"kind\": \"event\", \"actor\": null, \"action\": \"inflow\", \"object\": \"ETH ETF\", \"qualifiers\": {\"event_date\": \"2026-09-15\", \"place\": null, \"counterparty\": null}, \"origin\": \"retelling\", \"source_role\": \"editorial\", \"verification_status\": \"source_statement\", \"quote\": \"Общий чистый приток спотовых ETH-ETF составил $121,02 млн\", \"span\": [0, 0]}, {\"id\": \"telegram:11:96734#s0\", \"kind\": \"event\", \"actor\": \"Solana\", \"action\": \"increase capacity\", \"object\": \"Ethereum\", \"qualifiers\": {\"event_date\": \"2026-09-15\", \"place\": null, \"counterparty\": null}, \"origin\": \"retelling\", \"source_role\": \"editorial\", \"verification_status\": \"source_statement\", \"quote\": \"Solana более чем втрое увеличила объем данных\", \"span\": [0, 0]}, {\"id\": \"telegram:11:96735#s1\", \"kind\": \"event\", \"actor\": \"two wallets\", \"action\": \"transfer\", \"object\": \"ETH\", \"qualifiers\": {\"event_date\": \"2026-09-15\", \"place\": \"OKX\", \"counterparty\": null}, \"origin\": \"retelling\", \"source_role\": \"editorial\", \"verification_status\": \"source_statement\", \"quote\": \"Два кошелька, которые более года были неактивны (возможно, принадлежащие одному и тому же киту), перевели на OKX 14 700 #ETH ($36,94 млн)\", \"span\": [0, 0]}]}",
+    "refusal": null,
+    "reasoning": null
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 2102,
+  "completion_tokens": 1496,
+  "total_tokens": 3598,
+  "cost": 0.0003396484,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 1702,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.0003396484,
+   "upstream_inference_prompt_cost": 6.73764e-05,
+   "upstream_inference_completions_cost": 0.000272272
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

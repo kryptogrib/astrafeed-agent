@@ -1,0 +1,21 @@
+{
+ "segments": [
+  {
+   "id": "telegram:15:423105#s9",
+   "text": "RSoft Agentic Bank выиграл онлайн-трек хакатона LabLab x Arc с банком, клиентами которого были боты. А сегодня на AI Infra Summit Arc показал устройства, которые сами покупают себе электричество и вычислительные мощности.\n\n",
+   "mentions": [
+    {
+     "text": "Arc",
+     "status": "confirmed"
+    },
+    {
+     "text": "Arc",
+     "status": "confirmed"
+    }
+   ],
+   "kind_hint": "post",
+   "url": "https://t.me/WEB3_AGGREGATOR/423105",
+   "time": "2026-09-16T13:57:34+00:00"
+  }
+ ]
+}

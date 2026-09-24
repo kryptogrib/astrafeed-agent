@@ -1,0 +1,23 @@
+{
+ "a": {
+  "quote": "utility-NFT, копит комиссии внутри себя; минт через OpenSea, не ZEC L1",
+  "actor": null,
+  "action": "utility-NFT, копит комиссии внутри себя; минт через OpenSea, не ZEC L1",
+  "object": "utility-NFT",
+  "qualifiers": {},
+  "url": "https://t.me/whitelist1/7149"
+ },
+ "b": {
+  "quote": "Приватная коллекция на Zcash: арт публичный. Саплай/цена не раскрыты;",
+  "actor": null,
+  "action": "announcement of private collection",
+  "object": "private collection on Zcash",
+  "qualifiers": {
+   "version": null,
+   "event_date": null,
+   "place": null,
+   "counterparty": null
+  },
+  "url": "https://t.me/whitelist1/7149"
+ }
+}

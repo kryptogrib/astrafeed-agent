@@ -1,0 +1,32 @@
+{
+ "choices": [
+  {
+   "message": {
+    "content": "{\"labels\": [{\"id\": \"telegram:15:423568#s3\", \"kind\": \"event\", \"actor\": \"Shyft\", \"action\": \"nears pre-deposits\", \"object\": \"shCORE and shYIELD, its first two Ethereum-based vaults\", \"qualifiers\": {\"version\": null, \"event_date\": null, \"place\": \"UAE\", \"counterparty\": \"GAP3\"}, \"origin\": \"own\", \"source_role\": \"editorial\", \"verification_status\": \"unverified\", \"quote\": \"The appointment lands as Shyft nears pre-deposits for shCORE and shYIELD, its first two Ethereum-based vaults, and follows its recent tie-up with VARA-licensed GAP3, deepening the protocol's footprint in the UAE's fast-growing digital-asset hub.\", \"span\": [0, 249]}]}"
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 1925,
+  "completion_tokens": 1686,
+  "total_tokens": 3611,
+  "cost": 0.000490798,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 256,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.000490798,
+   "upstream_inference_prompt_cost": 0.000166243,
+   "upstream_inference_completions_cost": 0.000324555
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

@@ -1,0 +1,24 @@
+{
+ "a": {
+  "quote": "More than 190 institutional and ecosystem teams are already building on Arc, one of the most institutionally backed genesis cohorts the industry has seen, as Circle pushes stablecoins deeper into regulated finance.",
+  "actor": "Circle",
+  "action": "attracted",
+  "object": "190+ teams",
+  "qualifiers": {
+   "count": "190+",
+   "context": "genesis cohort"
+  },
+  "url": "https://t.me/WEB3_AGGREGATOR/423100"
+ },
+ "b": {
+  "quote": "Arc, the stablecoin-native Layer-1 built by Circle, launched its public mainnet, positioning itself as an \"Economic OS for the internet\" with USDC as the native gas token and deterministic sub-second finality.",
+  "actor": "Circle",
+  "action": "launched",
+  "object": "Arc public mainnet",
+  "qualifiers": {
+   "event_date": "2026-09-16",
+   "place": "mainnet"
+  },
+  "url": "https://t.me/WEB3_AGGREGATOR/423100"
+ }
+}

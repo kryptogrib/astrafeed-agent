@@ -1,0 +1,24 @@
+{
+ "a": {
+  "quote": "The Standard Reserve went live today, an onchain reserve protocol built around ETH flows, using an OlympusDAO-style design with a hard-capped 1B STANDARD supply.",
+  "actor": "Standard Reserve",
+  "action": "went live",
+  "object": "onchain reserve protocol",
+  "qualifiers": {
+   "design": "OlympusDAO-style",
+   "supply_cap": "1B STANDARD"
+  },
+  "url": "https://t.me/WEB3_AGGREGATOR/422959"
+ },
+ "b": {
+  "quote": "The protocol routes ETH fees into vaults, protocol-owned liquidity and the team, and pairs STANDARD against ETH in a hooked Uniswap v4 pool.",
+  "actor": "Standard Reserve",
+  "action": "routes ETH fees",
+  "object": "into vaults, POL, team",
+  "qualifiers": {
+   "mechanism": "pairs STANDARD against ETH in Uniswap v4 pool",
+   "access": "Charters, 1,000 Genesis Charters, allowlist mint, Dutch auction"
+  },
+  "url": "https://t.me/WEB3_AGGREGATOR/422959"
+ }
+}

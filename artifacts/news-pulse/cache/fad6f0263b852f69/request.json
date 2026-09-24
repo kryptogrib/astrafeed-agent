@@ -1,0 +1,22 @@
+{
+ "a": {
+  "quote": "Официальная презентация запуска Arc начнется сегодня в 18:30 мск.",
+  "actor": "Circle",
+  "action": "will present",
+  "object": "official presentation of Arc launch",
+  "qualifiers": {
+   "event_date": "today at 18:30 мск"
+  },
+  "url": "https://t.me/crypto_hd/31448"
+ },
+ "b": {
+  "quote": "Завтра ARC паблик майнет",
+  "actor": "ARC",
+  "action": "launch",
+  "object": "public mainnet",
+  "qualifiers": {
+   "event_date": "завтра"
+  },
+  "url": "https://t.me/WEB3_AGGREGATOR/423067"
+ }
+}

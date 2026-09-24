@@ -1,0 +1,17 @@
+{
+ "segments": [
+  {
+   "id": "telegram:18:31382#s1",
+   "text": "😐 SlowMist: Хакер взломал крупный DeFi-протокол ether․fi.\n",
+   "mentions": [
+    {
+     "text": "ether",
+     "status": "confirmed"
+    }
+   ],
+   "kind_hint": "post",
+   "url": "https://t.me/crypto_hd/31382",
+   "time": "2026-09-11T11:39:55+00:00"
+  }
+ ]
+}

@@ -7,7 +7,11 @@ Reads <run>/labels.json (model output, never modified) and <run>/demo/correction
 kept separate). Replies flagged relevant_not_grounded on the MODEL labels are held for review and
 left out of the published set whatever the corrections say. Corrections then change fields of the
 remaining replies; the corrected labels are checked again, and any new flag stops the script.
-Writes <run>/demo/published.json and <run>/demo/published.md. No LLM call; database opened read-only.
+Grounding is recomputed with the current topic_mentions, so the published set may differ from what the
+model saw. <run>/request.json is never rewritten; <run>/demo/grounding.json records the mentions of the
+model's input (read back from request.json, checked against meta.json), the mentions used for publication,
+GROUNDING_VERSION and the replies whose grounding changed.
+Writes <run>/demo/published.json, published.md and grounding.json. No LLM call; database opened read-only.
 """
 import copy
 import json
@@ -15,13 +19,14 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
-from pulse_classify_thread import check, load_thread, thread_comments, topic_mentions  # noqa: E402
+from pulse_classify_thread import (GROUNDING_VERSION, check, load_thread, saved_input, sha,  # noqa: E402
+                                   thread_comments, thread_texts, topic_mentions)
 
 
 def main(db_path, det_dir, link, topic, run_dir):
     run = Path(run_dir)
     sid, pid, post, rows = load_thread(db_path, link)
-    mentions = topic_mentions(det_dir, sid, pid, tuple(topic.split(",")))
+    mentions = topic_mentions(det_dir, sid, pid, tuple(topic.split(",")), thread_texts(post, rows))
     comments = thread_comments(rows)
     model = json.loads((run / "labels.json").read_text())
     corr_path = run / "demo" / "corrections.json"
@@ -29,6 +34,18 @@ def main(db_path, det_dir, link, topic, run_dir):
 
     # held: decided on the model's own labels, so a correction cannot quietly bring a reply back
     held = set(check(model, comments, mentions, post).get("relevant_not_grounded", []))
+    _, seen = saved_input(run)
+    held_then = set(check(model, comments, seen, post).get("relevant_not_grounded", []))
+    changed = sorted(k for k in set(seen) | set(mentions) if seen.get(k) != mentions.get(k))
+    grounding = {
+        "model_input": {"request": str(run / "request.json"),
+                        "input_sha256": json.loads((run / "meta.json").read_text())["input_sha256"],
+                        "mentions": seen, "held_if_published_on_it": sorted(held_then)},
+        "publication": {"grounding_version": GROUNDING_VERSION,
+                        "classifier_sha256": sha((Path(__file__).parent / "pulse_classify_thread.py").read_text()),
+                        "mentions": mentions, "held": sorted(held)},
+        "mentions_changed": changed,
+        "released_by_new_grounding": sorted(held_then - held), "held_by_new_grounding": sorted(held - held_then)}
 
     labels = copy.deepcopy(model)
     by_id = {str(x["id"]): x for x in labels}
@@ -59,12 +76,17 @@ def main(db_path, det_dir, link, topic, run_dir):
            "held_for_review": {"reason": "relevant_not_grounded на метках модели", "labels": held_rows}}
     (run / "demo").mkdir(exist_ok=True)
     (run / "demo" / "published.json").write_text(json.dumps(out, ensure_ascii=False, indent=1) + "\n")
+    (run / "demo" / "grounding.json").write_text(json.dumps(grounding, ensure_ascii=False, indent=1) + "\n")
 
     cell = lambda s: (s or "").replace("|", "/")
-    md = [f"# Публикуемый набор ETH: {link}", "",
+    md = [f"# Публикуемый набор ({topic}): {link}", "",
           f"Исходная разметка модели: `{run / 'labels.json'}` (не меняется).",
           f"Исправления: `{corr_path}` — {corr.get('reviewer') or 'нет'}. Помечены «испр.».",
-          f"Опубликовано {len(published)}, отложено на проверку {len(held_rows)} (флаг relevant_not_grounded).", "",
+          f"Опубликовано {len(published)}, отложено на проверку {len(held_rows)} (флаг relevant_not_grounded).",
+          f"Опора публикации: `{GROUNDING_VERSION}`. " + (
+              "Совпадает с опорой во входе модели." if not changed else
+              f"Отличается от входа модели (`request.json`, не меняется) у: {', '.join(changed)}; "
+              f"по опоре входа было бы отложено {len(held_then)}. Подробно — `demo/grounding.json`."), "",
           "| id | aspect | kind | пересказ | цитата | испр. |", "|---|---|---|---|---|---|"]
     for x in published:
         md.append(f"| [{x['id']}]({x['link']}) | {x.get('aspect')} | {x.get('kind')} | {cell(x.get('summary'))} | "

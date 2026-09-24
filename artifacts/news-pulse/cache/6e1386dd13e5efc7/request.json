@@ -1,0 +1,20 @@
+{
+ "a": {
+  "quote": "Ethereum метит в квантово-стойкий L1 к 2029 году",
+  "actor": "Ethereum",
+  "action": "plan",
+  "object": "quantum-resistant L1",
+  "qualifiers": {
+   "event_date": "2029"
+  },
+  "url": "https://t.me/WEB3_AGGREGATOR/422949"
+ },
+ "b": {
+  "quote": "Strategy/Strive keep buying BTC; BitMine boosts ETH holdings — treasury accumulation remains supportive",
+  "actor": "BitMine",
+  "action": "accumulate",
+  "object": "ETH",
+  "qualifiers": {},
+  "url": "https://t.me/marketfeed/1037913"
+ }
+}

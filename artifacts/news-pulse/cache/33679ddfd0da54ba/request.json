@@ -1,0 +1,21 @@
+{
+ "segments": [
+  {
+   "id": "telegram:2:5299#s0",
+   "text": "#ZEC растёт, с ним и активность в сети. NFT коллекции ожили первыми и уже дали кому-то заработать. \n\n",
+   "mentions": [
+    {
+     "text": "#ZEC",
+     "status": "confirmed"
+    },
+    {
+     "text": "ZEC",
+     "status": "confirmed"
+    }
+   ],
+   "kind_hint": "post",
+   "url": "https://t.me/don_invest/5299",
+   "time": "2026-09-21T08:35:31+00:00"
+  }
+ ]
+}

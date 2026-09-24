@@ -1,0 +1,21 @@
+{
+ "segments": [
+  {
+   "id": "telegram:11:96893#s2",
+   "text": "2. Кошелек Alameda Research (FTX Bankruptcy Estate) перевел 23 639 #ETH (~$65,05 млн) на Wintermute;\n",
+   "mentions": [
+    {
+     "text": "#ETH",
+     "status": "confirmed"
+    },
+    {
+     "text": "ETH",
+     "status": "confirmed"
+    }
+   ],
+   "kind_hint": "post",
+   "url": "https://t.me/cryptoattack24/96893",
+   "time": "2026-09-23T05:11:01+00:00"
+  }
+ ]
+}

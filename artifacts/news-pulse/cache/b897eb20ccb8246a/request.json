@@ -1,0 +1,17 @@
+{
+ "segments": [
+  {
+   "id": "telegram:21:21038#s34",
+   "text": "  🌙 Из новостей: Сильный квартал для Ethereum: ожидается приток институционалов\n",
+   "mentions": [
+    {
+     "text": "Ethereum",
+     "status": "confirmed"
+    }
+   ],
+   "kind_hint": "post",
+   "url": "https://t.me/rawa_imagination/21038",
+   "time": "2026-09-10T08:14:54+00:00"
+  }
+ ]
+}

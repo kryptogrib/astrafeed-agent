@@ -1,0 +1,24 @@
+{
+ "a": {
+  "quote": "🟣Arc Fly — минт состоится сегодня на OpenSea, будет фри минт на 7.777 NFT",
+  "actor": "Arc Fly",
+  "action": "mint",
+  "object": "NFT",
+  "qualifiers": {
+   "event_date": "today",
+   "place": "OpenSea"
+  },
+  "url": "https://t.me/WEB3_AGGREGATOR/423153"
+ },
+ "b": {
+  "quote": "• Arc Citizens: 10,000 fully on-chain identity PFP, запуск планируется 16 сентября;",
+  "actor": null,
+  "action": "launch",
+  "object": "Arc Citizens",
+  "qualifiers": {
+   "event_date": "16 сентября",
+   "version": "10,000 fully on-chain identity PFP"
+  },
+  "url": "https://t.me/whitelist1/7135"
+ }
+}

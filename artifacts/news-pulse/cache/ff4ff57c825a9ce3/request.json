@@ -1,0 +1,23 @@
+{
+ "a": {
+  "quote": "Ровно также $ZEC улетал вертикально на старте в 2016-м: мало монет в обороте рисуют 🐂«up only» на пустом стакане",
+  "actor": null,
+  "action": "price surge due to thin market",
+  "object": "ZEC",
+  "qualifiers": {
+   "event_date": "2026-09-18"
+  },
+  "url": "https://t.me/WEB3_AGGREGATOR/423316"
+ },
+ "b": {
+  "quote": "Innovation Exemption от SEC, которые сказали: \"Мы сами всех отрегулируем, на ближайшие лет 5\"",
+  "actor": "SEC",
+  "action": "announced Innovation Exemption",
+  "object": "on-chain stocks",
+  "qualifiers": {
+   "event_date": "2026-09-18",
+   "place": "US"
+  },
+  "url": "https://t.me/moni_talks/12227"
+ }
+}

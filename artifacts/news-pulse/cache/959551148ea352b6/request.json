@@ -1,0 +1,28 @@
+{
+ "a": {
+  "quote": "🟢 16 сентября Circle запустила мейннет: среди валидаторов BlackRock и Visa, отчеканено 10 млрд ARC, за первые два часа в сеть вошло больше $370 млн USDC. Звучит громко, но это около 0,05% всего USDC, ликвидность тонкая, спреды заметные, половина приложений сырая.\n",
+  "actor": "Circle",
+  "action": "launch",
+  "object": "mainnet",
+  "qualifiers": {
+   "event_date": "16 сентября",
+   "place": null,
+   "version": null,
+   "counterparty": null
+  },
+  "url": "https://t.me/WEB3_AGGREGATOR/423286"
+ },
+ "b": {
+  "quote": "RSoft Agentic Bank выиграл онлайн-трек хакатона LabLab x Arc с банком, клиентами которого были боты.",
+  "actor": "RSoft Agentic Bank",
+  "action": "won",
+  "object": "hackathon track",
+  "qualifiers": {
+   "version": null,
+   "event_date": "2026-09-16",
+   "place": "LabLab x Arc",
+   "counterparty": null
+  },
+  "url": "https://t.me/WEB3_AGGREGATOR/423105"
+ }
+}

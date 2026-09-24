@@ -1,0 +1,25 @@
+{
+ "a": {
+  "quote": "В мае прошел закрытый пресейл токена ARC, где собрали $222 млн по оценке $3 млрд.",
+  "actor": "Circle",
+  "action": "hold presale",
+  "object": "ARC token",
+  "qualifiers": {
+   "event_date": "май",
+   "place": "private presale",
+   "counterparty": "BlackRock, a16z, Apollo, ICE, ARK, SBI, Standard Chartered"
+  },
+  "url": "https://t.me/WEB3_AGGREGATOR/422853"
+ },
+ "b": {
+  "quote": "Сегодня (спасибо за поправку @intelligent_ua) кстати мейннет Arc, можно будет бриджить через Jumper.",
+  "actor": "Arc",
+  "action": "mainnet launch",
+  "object": "Arc",
+  "qualifiers": {
+   "event_date": "today",
+   "place": "Jumper bridge"
+  },
+  "url": "https://t.me/CryptoEarnImp/10991"
+ }
+}

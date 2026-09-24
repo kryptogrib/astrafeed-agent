@@ -1,0 +1,17 @@
+{
+ "segments": [
+  {
+   "id": "telegram:10:384699#s2",
+   "text": "на балансе уже более 5.96 млн ETH (около 4.9% общего предложения)\n\n",
+   "mentions": [
+    {
+     "text": "ETH",
+     "status": "confirmed"
+    }
+   ],
+   "kind_hint": "post",
+   "url": "https://t.me/markettwits/384699",
+   "time": "2026-09-14T12:33:46+00:00"
+  }
+ ]
+}

@@ -1,0 +1,17 @@
+{
+ "segments": [
+  {
+   "id": "telegram:9:1036392#s22",
+   "text": "• Crypto markets stay bid — ETH ETF inflows hit $1.75B in August; shorts saw $255M liquidated in 60 minutes\n",
+   "mentions": [
+    {
+     "text": "ETH",
+     "status": "confirmed"
+    }
+   ],
+   "kind_hint": "post",
+   "url": "https://t.me/marketfeed/1036392",
+   "time": "2026-09-11T20:30:20+00:00"
+  }
+ ]
+}

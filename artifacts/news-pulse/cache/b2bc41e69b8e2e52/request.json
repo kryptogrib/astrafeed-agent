@@ -1,0 +1,21 @@
+{
+ "a": {
+  "quote": "В мейннет Zcash определён ровно один актив - сам ZEC",
+  "actor": "Zcash",
+  "action": null,
+  "object": null,
+  "qualifiers": {
+   "version": "ZSA",
+   "event_date": "5 ноября"
+  },
+  "url": "https://t.me/WEB3_AGGREGATOR/423606"
+ },
+ "b": {
+  "quote": "Почему в мейннет Zcash нет NFT",
+  "actor": "Zcash",
+  "action": null,
+  "object": null,
+  "qualifiers": {},
+  "url": "https://t.me/WEB3_AGGREGATOR/423606"
+ }
+}

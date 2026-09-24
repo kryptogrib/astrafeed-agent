@@ -1,0 +1,23 @@
+{
+ "a": {
+  "quote": "• Сегодня, время после запуска Arc;",
+  "actor": null,
+  "action": "launch",
+  "object": "Arc",
+  "qualifiers": {
+   "event_date": "Сегодня",
+   "version": "после запуска"
+  },
+  "url": "https://t.me/whitelist1/7139"
+ },
+ "b": {
+  "quote": "ARC: токены которые я взял и почему - подготовка к паблик мейннету 16 сентября",
+  "actor": "ARC",
+  "action": "prepare for public mainnet",
+  "object": "public mainnet",
+  "qualifiers": {
+   "event_date": "16 сентября"
+  },
+  "url": "https://t.me/WEB3_AGGREGATOR/422903"
+ }
+}

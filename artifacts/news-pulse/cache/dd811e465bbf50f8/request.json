@@ -1,0 +1,25 @@
+{
+ "a": {
+  "quote": "Circle's Arc L1 hit mainnet",
+  "actor": "Circle",
+  "action": "hit mainnet",
+  "object": "Arc L1",
+  "qualifiers": {
+   "version": "mainnet"
+  },
+  "url": "https://t.me/WEB3_AGGREGATOR/423249"
+ },
+ "b": {
+  "quote": "Сегодня, 16 сентября, Circle запустила мейннет Arc и сразу подключила его к Agent Stack, набору инструментов, который с 11 мая дает ИИ-агенту собственный кошелек.",
+  "actor": "Circle",
+  "action": "launched",
+  "object": "Arc mainnet",
+  "qualifiers": {
+   "version": "mainnet",
+   "event_date": "2026-09-16",
+   "place": null,
+   "counterparty": null
+  },
+  "url": "https://t.me/WEB3_AGGREGATOR/423105"
+ }
+}

@@ -1,0 +1,3458 @@
+{
+  "topic": "zec",
+  "window": {
+    "requested": "2026-09-17..2026-09-19",
+    "start": "2026-09-17T00:00:00+00:00",
+    "end": "2026-09-20T00:00:00+00:00",
+    "cutoff": "2026-09-20T00:00:00+00:00",
+    "previous": "2026-09-14..2026-09-16",
+    "mode": "publication_replay"
+  },
+  "status": "ok",
+  "events": [
+    {
+      "event_id": "e1-126fb6ec7666ea13",
+      "headline": "Он шортил ZEC еще в в начале лета, был в плюсе на $20М после слухов о уязвимости в системе шилдинга ZEC, но не зафиксировал прибыль, а удержал позицию.",
+      "counts": {
+        "events": 1,
+        "publications": 2,
+        "channels": 2,
+        "known_authors": 0,
+        "unknown_authors": 2,
+        "found_origins": 0,
+        "reprints": 2,
+        "unknown_origin": 0
+      },
+      "actor": "he",
+      "action": "shorted",
+      "object": "ZEC",
+      "qualifiers": {
+        "time": "early summer",
+        "profit": "$20M",
+        "reason": "rumors of vulnerability"
+      },
+      "members": [
+        {
+          "obs_id": "telegram:12:4871#s1",
+          "publication_id": "telegram:12:4871",
+          "source_id": 12,
+          "author_id": null,
+          "published_at": "2026-09-17T02:48:35+00:00",
+          "url": "https://t.me/Defiscamcheck/4871",
+          "quote": "Он шортил ZEC еще в в начале лета, был в плюсе на $20М после слухов о уязвимости в системе шилдинга ZEC, но не зафиксировал прибыль, а удержал позицию.",
+          "span": [
+            43,
+            194
+          ],
+          "origin": "retelling"
+        },
+        {
+          "obs_id": "telegram:15:423167#s1",
+          "publication_id": "telegram:15:423167",
+          "source_id": 15,
+          "author_id": null,
+          "published_at": "2026-09-17T07:08:07+00:00",
+          "url": "https://t.me/WEB3_AGGREGATOR/423167",
+          "quote": "Он шортил ZEC еще в в начале лета, был в плюсе на $20М после слухов о уязвимости в системе шилдинга ZEC, но не зафиксировал прибыль, а удержал позицию.",
+          "span": [
+            43,
+            194
+          ],
+          "origin": "retelling"
+        }
+      ]
+    },
+    {
+      "event_id": "e2-818a5fe7b0783e45",
+      "headline": "Популярнейший анонимный токен ZEC анонимного проекта ZCash с юридическим офисом в одном квартале от штаб-квартиры ЦРУ в США становится еще анонимнее при цене > $1300 — аналитики",
+      "counts": {
+        "events": 1,
+        "publications": 1,
+        "channels": 1,
+        "known_authors": 0,
+        "unknown_authors": 1,
+        "found_origins": 0,
+        "reprints": 1,
+        "unknown_origin": 0
+      },
+      "actor": "ZEC",
+      "action": "becomes more anonymous",
+      "object": "ZEC",
+      "qualifiers": {
+        "price": "> $1300",
+        "analysts": true
+      },
+      "members": [
+        {
+          "obs_id": "telegram:10:385132#s1",
+          "publication_id": "telegram:10:385132",
+          "source_id": 10,
+          "author_id": null,
+          "published_at": "2026-09-17T04:54:41+00:00",
+          "url": "https://t.me/markettwits/385132",
+          "quote": "Популярнейший анонимный токен ZEC анонимного проекта ZCash с юридическим офисом в одном квартале от штаб-квартиры ЦРУ в США становится еще анонимнее при цене > $1300 — аналитики",
+          "span": [
+            24,
+            201
+          ],
+          "origin": "retelling"
+        }
+      ]
+    },
+    {
+      "event_id": "e3-375e143ccee45301",
+      "headline": "#zec = 1400$ say GM 🏆",
+      "counts": {
+        "events": 1,
+        "publications": 1,
+        "channels": 1,
+        "known_authors": 0,
+        "unknown_authors": 1,
+        "found_origins": 1,
+        "reprints": 0,
+        "unknown_origin": 0
+      },
+      "actor": "ZEC",
+      "action": "reaches price",
+      "object": "ZEC",
+      "qualifiers": {
+        "price": "$1400"
+      },
+      "members": [
+        {
+          "obs_id": "telegram:14:8099#s0",
+          "publication_id": "telegram:14:8099",
+          "source_id": 14,
+          "author_id": null,
+          "published_at": "2026-09-17T05:20:50+00:00",
+          "url": "https://t.me/icryptocom/8099",
+          "quote": "#zec = 1400$ say GM 🏆",
+          "span": [
+            0,
+            21
+          ],
+          "origin": "own"
+        }
+      ]
+    },
+    {
+      "event_id": "e4-0c6fb8a35596800a",
+      "headline": "➤ Bitcoin OG увеличил шорт по ZEC. Сейчас он шортит 37,760 ZEC ($51,5m) с нереализованным убытком $26m. Цена ликвидации = $2632.",
+      "counts": {
+        "events": 1,
+        "publications": 1,
+        "channels": 1,
+        "known_authors": 0,
+        "unknown_authors": 1,
+        "found_origins": 0,
+        "reprints": 1,
+        "unknown_origin": 0
+      },
+      "actor": "Bitcoin OG",
+      "action": "увеличил шорт по ZEC",
+      "object": "ZEC",
+      "qualifiers": {
+        "amount": "37,760 ZEC",
+        "value_usd": "$51,5m",
+        "unrealized_loss": "$26m",
+        "liquidation_price": "$2632"
+      },
+      "members": [
+        {
+          "obs_id": "telegram:18:31476#s2",
+          "publication_id": "telegram:18:31476",
+          "source_id": 18,
+          "author_id": null,
+          "published_at": "2026-09-17T06:49:07+00:00",
+          "url": "https://t.me/crypto_hd/31476",
+          "quote": "➤ Bitcoin OG увеличил шорт по ZEC. Сейчас он шортит 37,760 ZEC ($51,5m) с нереализованным убытком $26m. Цена ликвидации = $2632.",
+          "span": [
+            46,
+            174
+          ],
+          "origin": "retelling"
+        }
+      ]
+    },
+    {
+      "event_id": "e5-6b3a56c4451e89dd",
+      "headline": "➤ Кит «t1JhvB» вывел с Binance, OKX и Kraken 15,300 ZEC ($17,9m).",
+      "counts": {
+        "events": 1,
+        "publications": 3,
+        "channels": 3,
+        "known_authors": 0,
+        "unknown_authors": 3,
+        "found_origins": 2,
+        "reprints": 1,
+        "unknown_origin": 0
+      },
+      "actor": "Кит «t1JhvB»",
+      "action": "вывел с Binance, OKX и Kraken 15,300 ZEC",
+      "object": "ZEC",
+      "qualifiers": {
+        "amount": "15,300 ZEC",
+        "value_usd": "$17,9m",
+        "exchanges": [
+          "Binance",
+          "OKX",
+          "Kraken"
+        ]
+      },
+      "members": [
+        {
+          "obs_id": "telegram:18:31476#s5",
+          "publication_id": "telegram:18:31476",
+          "source_id": 18,
+          "author_id": null,
+          "published_at": "2026-09-17T06:49:07+00:00",
+          "url": "https://t.me/crypto_hd/31476",
+          "quote": "➤ Кит «t1JhvB» вывел с Binance, OKX и Kraken 15,300 ZEC ($17,9m).",
+          "span": [
+            433,
+            498
+          ],
+          "origin": "retelling"
+        },
+        {
+          "obs_id": "telegram:12:4873#s1",
+          "publication_id": "telegram:12:4873",
+          "source_id": 12,
+          "author_id": null,
+          "published_at": "2026-09-19T10:34:17+00:00",
+          "url": "https://t.me/Defiscamcheck/4873",
+          "quote": "Ранее он вывел 202К Zec и фактически его шорт является частично дельта нейтральным (размер спота в разы больше шорта)",
+          "span": [
+            91,
+            208
+          ],
+          "origin": "retelling"
+        },
+        {
+          "obs_id": "telegram:15:423360#s1",
+          "publication_id": "telegram:15:423360",
+          "source_id": 15,
+          "author_id": null,
+          "published_at": "2026-09-19T10:55:49+00:00",
+          "url": "https://t.me/WEB3_AGGREGATOR/423360",
+          "quote": "Ранее он вывел 202К Zec и фактически его шорт является частично дельта нейтральным (размер спота в разы больше шорта)",
+          "span": [
+            91,
+            208
+          ],
+          "origin": "retelling"
+        }
+      ]
+    },
+    {
+      "event_id": "e6-319d5db0292b7400",
+      "headline": "Хайп аукцион zkSNARKs на зкеше.",
+      "counts": {
+        "events": 1,
+        "publications": 1,
+        "channels": 1,
+        "known_authors": 0,
+        "unknown_authors": 1,
+        "found_origins": 1,
+        "reprints": 0,
+        "unknown_origin": 0
+      },
+      "actor": null,
+      "action": "Хайп аукцион zkSNARKs на зкеше",
+      "object": "зкеш",
+      "qualifiers": {},
+      "members": [
+        {
+          "obs_id": "telegram:15:423189#s0",
+          "publication_id": "telegram:15:423189",
+          "source_id": 15,
+          "author_id": null,
+          "published_at": "2026-09-17T10:13:23+00:00",
+          "url": "https://t.me/WEB3_AGGREGATOR/423189",
+          "quote": "Хайп аукцион zkSNARKs на зкеше.",
+          "span": [
+            0,
+            31
+          ],
+          "origin": "own"
+        }
+      ]
+    },
+    {
+      "event_id": "e7-cbe062b0da67e3df",
+      "headline": "Автор ничего толкового давно не писал, но сегодня, вроде как, есть повод: весь твиттер гудит по поводу минта нфтшек на Zcash",
+      "counts": {
+        "events": 1,
+        "publications": 1,
+        "channels": 1,
+        "known_authors": 0,
+        "unknown_authors": 1,
+        "found_origins": 1,
+        "reprints": 0,
+        "unknown_origin": 0
+      },
+      "actor": null,
+      "action": "весь твиттер гудит по поводу минта нфтшек на Zcash",
+      "object": "Zcash",
+      "qualifiers": {},
+      "members": [
+        {
+          "obs_id": "telegram:15:423204#s1",
+          "publication_id": "telegram:15:423204",
+          "source_id": 15,
+          "author_id": null,
+          "published_at": "2026-09-17T12:45:32+00:00",
+          "url": "https://t.me/WEB3_AGGREGATOR/423204",
+          "quote": "Автор ничего толкового давно не писал, но сегодня, вроде как, есть повод: весь твиттер гудит по поводу минта нфтшек на Zcash",
+          "span": [
+            30,
+            154
+          ],
+          "origin": "own"
+        }
+      ]
+    },
+    {
+      "event_id": "e8-ffc17b4e4f13ed92",
+      "headline": "⚡️ Сеть Zcash собираются ускорить в 3 раза.",
+      "counts": {
+        "events": 1,
+        "publications": 2,
+        "channels": 1,
+        "known_authors": 0,
+        "unknown_authors": 2,
+        "found_origins": 1,
+        "reprints": 1,
+        "unknown_origin": 0
+      },
+      "actor": "Сеть Zcash",
+      "action": "собираются ускорить в 3 раза",
+      "object": "Zcash",
+      "qualifiers": {},
+      "members": [
+        {
+          "obs_id": "telegram:18:31484#s1",
+          "publication_id": "telegram:18:31484",
+          "source_id": 18,
+          "author_id": null,
+          "published_at": "2026-09-17T14:05:47+00:00",
+          "url": "https://t.me/crypto_hd/31484",
+          "quote": "⚡️ Сеть Zcash собираются ускорить в 3 раза.",
+          "span": [
+            5,
+            48
+          ],
+          "origin": "retelling"
+        },
+        {
+          "obs_id": "telegram:18:31494#s8",
+          "publication_id": "telegram:18:31494",
+          "source_id": 18,
+          "author_id": null,
+          "published_at": "2026-09-17T23:00:00+00:00",
+          "url": "https://t.me/crypto_hd/31494",
+          "quote": "Zcash ускорят в 3 раза (читать)",
+          "span": [
+            318,
+            349
+          ],
+          "origin": "own"
+        }
+      ]
+    },
+    {
+      "event_id": "e9-e9846a0c9e6be815",
+      "headline": "Сообщество Zcash поддержало сокращение времени формирования блока с 75 до 25 секунд.",
+      "counts": {
+        "events": 1,
+        "publications": 2,
+        "channels": 2,
+        "known_authors": 0,
+        "unknown_authors": 2,
+        "found_origins": 0,
+        "reprints": 2,
+        "unknown_origin": 0
+      },
+      "actor": "Сообщество Zcash",
+      "action": "поддержало сокращение времени формирования блока с 75 до 25 секунд",
+      "object": "Zcash",
+      "qualifiers": {
+        "from": "75 секунд",
+        "to": "25 секунд"
+      },
+      "members": [
+        {
+          "obs_id": "telegram:18:31484#s2",
+          "publication_id": "telegram:18:31484",
+          "source_id": 18,
+          "author_id": null,
+          "published_at": "2026-09-17T14:05:47+00:00",
+          "url": "https://t.me/crypto_hd/31484",
+          "quote": "Сообщество Zcash поддержало сокращение времени формирования блока с 75 до 25 секунд.",
+          "span": [
+            50,
+            134
+          ],
+          "origin": "retelling"
+        },
+        {
+          "obs_id": "telegram:10:385234#s1",
+          "publication_id": "telegram:10:385234",
+          "source_id": 10,
+          "author_id": null,
+          "published_at": "2026-09-17T14:24:28+00:00",
+          "url": "https://t.me/markettwits/385234",
+          "quote": "Сообщество ZCash проголосовало за ускорение формирования блоков в сети в 3 раза -  до 25 сек!",
+          "span": [
+            17,
+            110
+          ],
+          "origin": "retelling"
+        }
+      ]
+    },
+    {
+      "event_id": "e10-5d7c8ec730368723",
+      "headline": "Чтобы эмиссия ZEC не изменилась, при сокращении времени блока награду за каждый отдельный блок также уменьшат примерно в 3 раза. Изменения пока не запущены – их еще предстоит…",
+      "counts": {
+        "events": 1,
+        "publications": 1,
+        "channels": 1,
+        "known_authors": 0,
+        "unknown_authors": 1,
+        "found_origins": 0,
+        "reprints": 1,
+        "unknown_origin": 0
+      },
+      "actor": null,
+      "action": "изменения не запущены, предстоит реализовать и протестировать в рамках обновления NU7",
+      "object": "ZEC",
+      "qualifiers": {
+        "date": "5 ноября",
+        "update": "NU7"
+      },
+      "members": [
+        {
+          "obs_id": "telegram:18:31484#s5",
+          "publication_id": "telegram:18:31484",
+          "source_id": 18,
+          "author_id": null,
+          "published_at": "2026-09-17T14:05:47+00:00",
+          "url": "https://t.me/crypto_hd/31484",
+          "quote": "Чтобы эмиссия ZEC не изменилась, при сокращении времени блока награду за каждый отдельный блок также уменьшат примерно в 3 раза. Изменения пока не запущены – их еще предстоит реализовать и протестировать в рамках обновления NU7 (5 ноября).",
+          "span": [
+            254,
+            493
+          ],
+          "origin": "retelling"
+        }
+      ]
+    },
+    {
+      "event_id": "e11-f76ff1b9c92c8b59",
+      "headline": "💰 #ZEC >1400$",
+      "counts": {
+        "events": 1,
+        "publications": 3,
+        "channels": 3,
+        "known_authors": 0,
+        "unknown_authors": 3,
+        "found_origins": 0,
+        "reprints": 3,
+        "unknown_origin": 0
+      },
+      "actor": null,
+      "action": "price exceeds",
+      "object": "ZEC",
+      "qualifiers": {
+        "price": "1400$"
+      },
+      "members": [
+        {
+          "obs_id": "telegram:11:96789#s0",
+          "publication_id": "telegram:11:96789",
+          "source_id": 11,
+          "author_id": null,
+          "published_at": "2026-09-17T14:18:34+00:00",
+          "url": "https://t.me/cryptoattack24/96789",
+          "quote": "💰 #ZEC >1400$",
+          "span": [
+            0,
+            13
+          ],
+          "origin": "retelling"
+        },
+        {
+          "obs_id": "telegram:10:385255#s0",
+          "publication_id": "telegram:10:385255",
+          "source_id": 10,
+          "author_id": null,
+          "published_at": "2026-09-17T17:25:33+00:00",
+          "url": "https://t.me/markettwits/385255",
+          "quote": "💥✴️#ZEC > $1500",
+          "span": [
+            0,
+            15
+          ],
+          "origin": "retelling"
+        },
+        {
+          "obs_id": "telegram:18:31488#s0",
+          "publication_id": "telegram:18:31488",
+          "source_id": 18,
+          "author_id": null,
+          "published_at": "2026-09-17T17:31:40+00:00",
+          "url": "https://t.me/crypto_hd/31488",
+          "quote": "😳 #ZEC в моменте > $1500.",
+          "span": [
+            0,
+            25
+          ],
+          "origin": "retelling"
+        }
+      ]
+    },
+    {
+      "event_id": "e12-e1728063a36fbc96",
+      "headline": "👍 Курс Zcash обновил 10-летний максимум выше $1400.",
+      "counts": {
+        "events": 1,
+        "publications": 2,
+        "channels": 1,
+        "known_authors": 0,
+        "unknown_authors": 2,
+        "found_origins": 0,
+        "reprints": 2,
+        "unknown_origin": 0
+      },
+      "actor": null,
+      "action": "updates 10-year maximum",
+      "object": "Zcash price",
+      "qualifiers": {
+        "price": "above $1400"
+      },
+      "members": [
+        {
+          "obs_id": "telegram:15:423225#s0",
+          "publication_id": "telegram:15:423225",
+          "source_id": 15,
+          "author_id": null,
+          "published_at": "2026-09-17T15:11:31+00:00",
+          "url": "https://t.me/WEB3_AGGREGATOR/423225",
+          "quote": "👍 Курс Zcash обновил 10-летний максимум выше $1400.",
+          "span": [
+            0,
+            51
+          ],
+          "origin": "retelling"
+        },
+        {
+          "obs_id": "telegram:15:423243#s8",
+          "publication_id": "telegram:15:423243",
+          "source_id": 15,
+          "author_id": null,
+          "published_at": "2026-09-17T18:30:31+00:00",
+          "url": "https://t.me/WEB3_AGGREGATOR/423243",
+          "quote": "👍 Курс Zcash обновил 10-летний максимум выше $1400.",
+          "span": [
+            994,
+            1045
+          ],
+          "origin": "retelling"
+        }
+      ]
+    },
+    {
+      "event_id": "e13-884f13431cc1b5b5",
+      "headline": "🙁 Инсайдер Гаррет Джин сейчас в минусе почти на -$30,000,000 по своему шорту с ZEC.",
+      "counts": {
+        "events": 1,
+        "publications": 1,
+        "channels": 1,
+        "known_authors": 0,
+        "unknown_authors": 1,
+        "found_origins": 0,
+        "reprints": 1,
+        "unknown_origin": 0
+      },
+      "actor": "Гаррет Джин",
+      "action": "is in loss on short",
+      "object": "ZEC",
+      "qualifiers": {
+        "loss": "-$30,000,000"
+      },
+      "members": [
+        {
+          "obs_id": "telegram:18:31486#s0",
+          "publication_id": "telegram:18:31486",
+          "source_id": 18,
+          "author_id": null,
+          "published_at": "2026-09-17T16:06:15+00:00",
+          "url": "https://t.me/crypto_hd/31486",
+          "quote": "🙁 Инсайдер Гаррет Джин сейчас в минусе почти на -$30,000,000 по своему шорту с ZEC.",
+          "span": [
+            0,
+            83
+          ],
+          "origin": "retelling"
+        }
+      ]
+    },
+    {
+      "event_id": "e14-67a851d38412202b",
+      "headline": "А тут вдобавок еще $ZEC ATH пишет...",
+      "counts": {
+        "events": 1,
+        "publications": 1,
+        "channels": 1,
+        "known_authors": 0,
+        "unknown_authors": 1,
+        "found_origins": 0,
+        "reprints": 1,
+        "unknown_origin": 0
+      },
+      "actor": null,
+      "action": "writes ATH",
+      "object": "ZEC",
+      "qualifiers": {},
+      "members": [
+        {
+          "obs_id": "telegram:15:423236#s2",
+          "publication_id": "telegram:15:423236",
+          "source_id": 15,
+          "author_id": null,
+          "published_at": "2026-09-17T17:45:11+00:00",
+          "url": "https://t.me/WEB3_AGGREGATOR/423236",
+          "quote": "А тут вдобавок еще $ZEC ATH пишет...",
+          "span": [
+            145,
+            181
+          ],
+          "origin": "retelling"
+        }
+      ]
+    },
+    {
+      "event_id": "e15-9e94ec9cc7c059c8",
+      "headline": "ZEC уже 9 позиция в ТОПе крипты",
+      "counts": {
+        "events": 1,
+        "publications": 1,
+        "channels": 1,
+        "known_authors": 0,
+        "unknown_authors": 1,
+        "found_origins": 0,
+        "reprints": 1,
+        "unknown_origin": 0
+      },
+      "actor": null,
+      "action": "reaches 9th position",
+      "object": "ZEC",
+      "qualifiers": {
+        "ranking": "9th in crypto top"
+      },
+      "members": [
+        {
+          "obs_id": "telegram:6:2426#s0",
+          "publication_id": "telegram:6:2426",
+          "source_id": 6,
+          "author_id": null,
+          "published_at": "2026-09-17T17:59:23+00:00",
+          "url": "https://t.me/icodrops_sergey/2426",
+          "quote": "ZEC уже 9 позиция в ТОПе крипты",
+          "span": [
+            0,
+            31
+          ],
+          "origin": "retelling"
+        }
+      ]
+    },
+    {
+      "event_id": "e16-6f8bc127bf9c951a",
+      "headline": "Leo is up 1.6m from his ZEC long and bought more of $worth and I know i sold the bottom like a chud so i reaped here",
+      "counts": {
+        "events": 1,
+        "publications": 1,
+        "channels": 1,
+        "known_authors": 0,
+        "unknown_authors": 1,
+        "found_origins": 1,
+        "reprints": 0,
+        "unknown_origin": 0
+      },
+      "actor": "Leo",
+      "action": "bought more of $worth and reaped",
+      "object": "ZEC long",
+      "qualifiers": {},
+      "members": [
+        {
+          "obs_id": "telegram:20:49106#s0",
+          "publication_id": "telegram:20:49106",
+          "source_id": 20,
+          "author_id": null,
+          "published_at": "2026-09-17T18:51:03+00:00",
+          "url": "https://t.me/PowsGemCalls/49106",
+          "quote": "Leo is up 1.6m from his ZEC long and bought more of $worth and I know i sold the bottom like a chud so i reaped here",
+          "span": [
+            0,
+            116
+          ],
+          "origin": "own"
+        }
+      ]
+    },
+    {
+      "event_id": "e17-1b642fc3ca0b4aba",
+      "headline": "Лудоманы с Polymarket ожидают #ZEC выше $2000 до конца 2026 года.",
+      "counts": {
+        "events": 1,
+        "publications": 1,
+        "channels": 1,
+        "known_authors": 0,
+        "unknown_authors": 1,
+        "found_origins": 0,
+        "reprints": 1,
+        "unknown_origin": 0
+      },
+      "actor": "Лудоманы с Polymarket",
+      "action": "expect",
+      "object": "#ZEC",
+      "qualifiers": {
+        "version": "above $2000",
+        "event_date": "end of 2026"
+      },
+      "members": [
+        {
+          "obs_id": "telegram:18:31490#s0",
+          "publication_id": "telegram:18:31490",
+          "source_id": 18,
+          "author_id": null,
+          "published_at": "2026-09-17T19:37:05+00:00",
+          "url": "https://t.me/crypto_hd/31490",
+          "quote": "Лудоманы с Polymarket ожидают #ZEC выше $2000 до конца 2026 года.",
+          "span": [
+            2,
+            67
+          ],
+          "origin": "retelling"
+        }
+      ]
+    },
+    {
+      "event_id": "e18-1e9d7d9e48beb209",
+      "headline": "Списочек NFT на $ZEC",
+      "counts": {
+        "events": 1,
+        "publications": 1,
+        "channels": 1,
+        "known_authors": 0,
+        "unknown_authors": 1,
+        "found_origins": 1,
+        "reprints": 0,
+        "unknown_origin": 0
+      },
+      "actor": null,
+      "action": "list",
+      "object": "NFT on $ZEC",
+      "qualifiers": {},
+      "members": [
+        {
+          "obs_id": "telegram:15:423248#s0",
+          "publication_id": "telegram:15:423248",
+          "source_id": 15,
+          "author_id": null,
+          "published_at": "2026-09-17T20:54:09+00:00",
+          "url": "https://t.me/WEB3_AGGREGATOR/423248",
+          "quote": "Списочек NFT на $ZEC",
+          "span": [
+            0,
+            20
+          ],
+          "origin": "own"
+        }
+      ]
+    },
+    {
+      "event_id": "e19-d98e087fda32b68e",
+      "headline": "Памп #ZEC",
+      "counts": {
+        "events": 1,
+        "publications": 1,
+        "channels": 1,
+        "known_authors": 0,
+        "unknown_authors": 1,
+        "found_origins": 1,
+        "reprints": 0,
+        "unknown_origin": 0
+      },
+      "actor": null,
+      "action": "pump",
+      "object": "#ZEC",
+      "qualifiers": {},
+      "members": [
+        {
+          "obs_id": "telegram:15:423250#s10",
+          "publication_id": "telegram:15:423250",
+          "source_id": 15,
+          "author_id": null,
+          "published_at": "2026-09-17T20:54:15+00:00",
+          "url": "https://t.me/WEB3_AGGREGATOR/423250",
+          "quote": "Памп #ZEC",
+          "span": [
+            792,
+            801
+          ],
+          "origin": "own"
+        }
+      ]
+    },
+    {
+      "event_id": "e20-4c814840d1bd8fa9",
+      "headline": "Идея с отработкой классической фигуры ТА «чашка с ручкой» на ZEC (с целью в $3100+).",
+      "counts": {
+        "events": 1,
+        "publications": 1,
+        "channels": 1,
+        "known_authors": 0,
+        "unknown_authors": 1,
+        "found_origins": 1,
+        "reprints": 0,
+        "unknown_origin": 0
+      },
+      "actor": null,
+      "action": "idea with classic TA pattern 'cup with handle'",
+      "object": "ZEC",
+      "qualifiers": {
+        "version": "target $3100+"
+      },
+      "members": [
+        {
+          "obs_id": "telegram:18:31493#s1",
+          "publication_id": "telegram:18:31493",
+          "source_id": 18,
+          "author_id": null,
+          "published_at": "2026-09-17T22:27:44+00:00",
+          "url": "https://t.me/crypto_hd/31493",
+          "quote": "Идея с отработкой классической фигуры ТА «чашка с ручкой» на ZEC (с целью в $3100+).",
+          "span": [
+            23,
+            107
+          ],
+          "origin": "own"
+        }
+      ]
+    },
+    {
+      "event_id": "e21-87ef62a73bab2e61",
+      "headline": "Рост Zcash (читать)",
+      "counts": {
+        "events": 1,
+        "publications": 1,
+        "channels": 1,
+        "known_authors": 0,
+        "unknown_authors": 1,
+        "found_origins": 1,
+        "reprints": 0,
+        "unknown_origin": 0
+      },
+      "actor": null,
+      "action": "growth",
+      "object": "Zcash",
+      "qualifiers": {},
+      "members": [
+        {
+          "obs_id": "telegram:18:31494#s1",
+          "publication_id": "telegram:18:31494",
+          "source_id": 18,
+          "author_id": null,
+          "published_at": "2026-09-17T23:00:00+00:00",
+          "url": "https://t.me/crypto_hd/31494",
+          "quote": "Рост Zcash (читать)",
+          "span": [
+            36,
+            55
+          ],
+          "origin": "own"
+        }
+      ]
+    },
+    {
+      "event_id": "e22-d8a5fce14a5d39d4",
+      "headline": "CEO StarkWare о ZEC (читать)",
+      "counts": {
+        "events": 1,
+        "publications": 1,
+        "channels": 1,
+        "known_authors": 0,
+        "unknown_authors": 1,
+        "found_origins": 1,
+        "reprints": 0,
+        "unknown_origin": 0
+      },
+      "actor": "CEO StarkWare",
+      "action": "about",
+      "object": "ZEC",
+      "qualifiers": {},
+      "members": [
+        {
+          "obs_id": "telegram:18:31494#s11",
+          "publication_id": "telegram:18:31494",
+          "source_id": 18,
+          "author_id": null,
+          "published_at": "2026-09-17T23:00:00+00:00",
+          "url": "https://t.me/crypto_hd/31494",
+          "quote": "CEO StarkWare о ZEC (читать)",
+          "span": [
+            418,
+            446
+          ],
+          "origin": "own"
+        }
+      ]
+    },
+    {
+      "event_id": "e23-bcc46979e3af644d",
+      "headline": "Прогноз по ZEC (читать)",
+      "counts": {
+        "events": 1,
+        "publications": 1,
+        "channels": 1,
+        "known_authors": 0,
+        "unknown_authors": 1,
+        "found_origins": 1,
+        "reprints": 0,
+        "unknown_origin": 0
+      },
+      "actor": null,
+      "action": "forecast",
+      "object": "ZEC",
+      "qualifiers": {},
+      "members": [
+        {
+          "obs_id": "telegram:18:31494#s13",
+          "publication_id": "telegram:18:31494",
+          "source_id": 18,
+          "author_id": null,
+          "published_at": "2026-09-17T23:00:00+00:00",
+          "url": "https://t.me/crypto_hd/31494",
+          "quote": "Прогноз по ZEC (читать)",
+          "span": [
+            477,
+            500
+          ],
+          "origin": "own"
+        }
+      ]
+    },
+    {
+      "event_id": "e24-14244e6435eb5faa",
+      "headline": "Влажные мечты - ZEC (читать)",
+      "counts": {
+        "events": 1,
+        "publications": 1,
+        "channels": 1,
+        "known_authors": 0,
+        "unknown_authors": 1,
+        "found_origins": 1,
+        "reprints": 0,
+        "unknown_origin": 0
+      },
+      "actor": null,
+      "action": "wet dreams",
+      "object": "ZEC",
+      "qualifiers": {},
+      "members": [
+        {
+          "obs_id": "telegram:18:31494#s16",
+          "publication_id": "telegram:18:31494",
+          "source_id": 18,
+          "author_id": null,
+          "published_at": "2026-09-17T23:00:00+00:00",
+          "url": "https://t.me/crypto_hd/31494",
+          "quote": "Влажные мечты - ZEC (читать)",
+          "span": [
+            567,
+            595
+          ],
+          "origin": "own"
+        }
+      ]
+    },
+    {
+      "event_id": "e25-bed2428aa3a61494",
+      "headline": "Заполняем WL на дроп токена от проекта Bitx. Обещают чето типа стандарта brc-20 на битке только для ZEC и дроп токенов тем кто заполнил влку.",
+      "counts": {
+        "events": 1,
+        "publications": 1,
+        "channels": 1,
+        "known_authors": 0,
+        "unknown_authors": 1,
+        "found_origins": 1,
+        "reprints": 0,
+        "unknown_origin": 0
+      },
+      "actor": null,
+      "action": "filling WL for token drop from Bitx",
+      "object": "ZEC",
+      "qualifiers": {},
+      "members": [
+        {
+          "obs_id": "telegram:15:423256#s1",
+          "publication_id": "telegram:15:423256",
+          "source_id": 15,
+          "author_id": null,
+          "published_at": "2026-09-18T00:12:55+00:00",
+          "url": "https://t.me/WEB3_AGGREGATOR/423256",
+          "quote": "Заполняем WL на дроп токена от проекта Bitx. Обещают чето типа стандарта brc-20 на битке только для ZEC и дроп токенов тем кто заполнил влку.",
+          "span": [
+            41,
+            182
+          ],
+          "origin": "own"
+        }
+      ]
+    },
+    {
+      "event_id": "e26-105292f1b15b7551",
+      "headline": "Но шорт по #ZEC уничтожил всю его прибыль, и сейчас он находится на грани ликвидации.",
+      "counts": {
+        "events": 1,
+        "publications": 1,
+        "channels": 1,
+        "known_authors": 0,
+        "unknown_authors": 1,
+        "found_origins": 1,
+        "reprints": 0,
+        "unknown_origin": 0
+      },
+      "actor": "he",
+      "action": "short destroyed profit, near liquidation",
+      "object": "#ZEC",
+      "qualifiers": {},
+      "members": [
+        {
+          "obs_id": "telegram:11:96794#s1",
+          "publication_id": "telegram:11:96794",
+          "source_id": 11,
+          "author_id": null,
+          "published_at": "2026-09-18T03:31:00+00:00",
+          "url": "https://t.me/cryptoattack24/96794",
+          "quote": "Но шорт по #ZEC уничтожил всю его прибыль, и сейчас он находится на грани ликвидации.",
+          "span": [
+            120,
+            205
+          ],
+          "origin": "own"
+        }
+      ]
+    },
+    {
+      "event_id": "e27-056e56f67e9f85d7",
+      "headline": "Его шорт на 12 285 #ZEC ($18,31 млн) сейчас приносит убыток в размере $7,66 млн.",
+      "counts": {
+        "events": 1,
+        "publications": 1,
+        "channels": 1,
+        "known_authors": 0,
+        "unknown_authors": 1,
+        "found_origins": 1,
+        "reprints": 0,
+        "unknown_origin": 0
+      },
+      "actor": "Он (упомянутый трейдер)",
+      "action": "шорт на 12 285 ZEC приносит убыток",
+      "object": "шорт на 12 285 ZEC",
+      "qualifiers": {
+        "amount": "12 285 ZEC",
+        "value": "$18,31 млн",
+        "loss": "$7,66 млн"
+      },
+      "members": [
+        {
+          "obs_id": "telegram:11:96794#s2",
+          "publication_id": "telegram:11:96794",
+          "source_id": 11,
+          "author_id": null,
+          "published_at": "2026-09-18T03:31:00+00:00",
+          "url": "https://t.me/cryptoattack24/96794",
+          "quote": "Его шорт на 12 285 #ZEC ($18,31 млн) сейчас приносит убыток в размере $7,66 млн.",
+          "span": [
+            207,
+            287
+          ],
+          "origin": "retelling"
+        }
+      ]
+    },
+    {
+      "event_id": "e28-a7a70fd7145e1251",
+      "headline": "🔍 Новые кошельки накапливают #ZEC:",
+      "counts": {
+        "events": 1,
+        "publications": 1,
+        "channels": 1,
+        "known_authors": 0,
+        "unknown_authors": 1,
+        "found_origins": 0,
+        "reprints": 1,
+        "unknown_origin": 0
+      },
+      "actor": "Новые кошельки",
+      "action": "накапливают ZEC",
+      "object": "ZEC",
+      "qualifiers": {},
+      "members": [
+        {
+          "obs_id": "telegram:11:96796#s0",
+          "publication_id": "telegram:11:96796",
+          "source_id": 11,
+          "author_id": null,
+          "published_at": "2026-09-18T04:33:01+00:00",
+          "url": "https://t.me/cryptoattack24/96796",
+          "quote": "🔍 Новые кошельки накапливают #ZEC:\n",
+          "span": [
+            0,
+            35
+          ],
+          "origin": "retelling"
+        }
+      ]
+    },
+    {
+      "event_id": "e29-b30f531b99c9f8d1",
+      "headline": "1. t1UcyM вывел 15 860 #ZEC ($22,69 млн) с Binance;",
+      "counts": {
+        "events": 1,
+        "publications": 1,
+        "channels": 1,
+        "known_authors": 0,
+        "unknown_authors": 1,
+        "found_origins": 0,
+        "reprints": 1,
+        "unknown_origin": 0
+      },
+      "actor": "t1UcyM",
+      "action": "вывел 15 860 ZEC с Binance",
+      "object": "15 860 ZEC",
+      "qualifiers": {
+        "amount": "15 860 ZEC",
+        "value": "$22,69 млн",
+        "exchange": "Binance"
+      },
+      "members": [
+        {
+          "obs_id": "telegram:11:96796#s1",
+          "publication_id": "telegram:11:96796",
+          "source_id": 11,
+          "author_id": null,
+          "published_at": "2026-09-18T04:33:01+00:00",
+          "url": "https://t.me/cryptoattack24/96796",
+          "quote": "1. t1UcyM вывел 15 860 #ZEC ($22,69 млн) с Binance;\n",
+          "span": [
+            36,
+            88
+          ],
+          "origin": "retelling"
+        }
+      ]
+    },
+    {
+      "event_id": "e30-1ee02bcfccbed9df",
+      "headline": "2. За последние 2 дня t1fXjw вывел с бирж 7 081 #ZEC ($10,29 млн);",
+      "counts": {
+        "events": 1,
+        "publications": 1,
+        "channels": 1,
+        "known_authors": 0,
+        "unknown_authors": 1,
+        "found_origins": 0,
+        "reprints": 1,
+        "unknown_origin": 0
+      },
+      "actor": "t1fXjw",
+      "action": "вывел с бирж 7 081 ZEC",
+      "object": "7 081 ZEC",
+      "qualifiers": {
+        "amount": "7 081 ZEC",
+        "value": "$10,29 млн",
+        "period": "за последние 2 дня"
+      },
+      "members": [
+        {
+          "obs_id": "telegram:11:96796#s2",
+          "publication_id": "telegram:11:96796",
+          "source_id": 11,
+          "author_id": null,
+          "published_at": "2026-09-18T04:33:01+00:00",
+          "url": "https://t.me/cryptoattack24/96796",
+          "quote": "2. За последние 2 дня t1fXjw вывел с бирж 7 081 #ZEC ($10,29 млн);\n",
+          "span": [
+            88,
+            155
+          ],
+          "origin": "retelling"
+        }
+      ]
+    },
+    {
+      "event_id": "e31-905f7b2862b2df62",
+      "headline": "3. t1YLeD вывел с бирж 5 818 #ZEC ($8,45 млн);",
+      "counts": {
+        "events": 1,
+        "publications": 1,
+        "channels": 1,
+        "known_authors": 0,
+        "unknown_authors": 1,
+        "found_origins": 0,
+        "reprints": 1,
+        "unknown_origin": 0
+      },
+      "actor": "t1YLeD",
+      "action": "вывел с бирж 5 818 ZEC",
+      "object": "5 818 ZEC",
+      "qualifiers": {
+        "amount": "5 818 ZEC",
+        "value": "$8,45 млн"
+      },
+      "members": [
+        {
+          "obs_id": "telegram:11:96796#s3",
+          "publication_id": "telegram:11:96796",
+          "source_id": 11,
+          "author_id": null,
+          "published_at": "2026-09-18T04:33:01+00:00",
+          "url": "https://t.me/cryptoattack24/96796",
+          "quote": "3. t1YLeD вывел с бирж 5 818 #ZEC ($8,45 млн);\n",
+          "span": [
+            155,
+            202
+          ],
+          "origin": "retelling"
+        }
+      ]
+    },
+    {
+      "event_id": "e32-ff6b3ddbe256081d",
+      "headline": "🤔 #ZEC Управляющий партнер Dragonfly предложил свернуть деятельность фонда разработчиков Zcash, утверждая, что фонд достаточно велик, чтобы финансировать оставшуюся работу над…",
+      "counts": {
+        "events": 1,
+        "publications": 2,
+        "channels": 2,
+        "known_authors": 0,
+        "unknown_authors": 2,
+        "found_origins": 0,
+        "reprints": 2,
+        "unknown_origin": 0
+      },
+      "actor": "Управляющий партнер Dragonfly",
+      "action": "предложил свернуть деятельность фонда разработчиков Zcash",
+      "object": "фонд разработчиков Zcash",
+      "qualifiers": {
+        "source": "cointelegraph"
+      },
+      "members": [
+        {
+          "obs_id": "telegram:11:96809#s0",
+          "publication_id": "telegram:11:96809",
+          "source_id": 11,
+          "author_id": null,
+          "published_at": "2026-09-18T11:32:10+00:00",
+          "url": "https://t.me/cryptoattack24/96809",
+          "quote": "🤔 #ZEC Управляющий партнер Dragonfly предложил свернуть деятельность фонда разработчиков Zcash, утверждая, что фонд достаточно велик, чтобы финансировать оставшуюся работу над Zcash, и что он рискует быть «политизированным». cointelegraph",
+          "span": [
+            0,
+            238
+          ],
+          "origin": "retelling"
+        },
+        {
+          "obs_id": "telegram:15:423328#s5",
+          "publication_id": "telegram:15:423328",
+          "source_id": 15,
+          "author_id": null,
+          "published_at": "2026-09-18T20:22:19+00:00",
+          "url": "https://t.me/WEB3_AGGREGATOR/423328",
+          "quote": "👨‍💻 #ZEC Управляющий партнер Dragonfly предложил свернуть деятельность фонда разработчиков Zcash",
+          "span": [
+            429,
+            525
+          ],
+          "origin": "retelling"
+        }
+      ]
+    },
+    {
+      "event_id": "e33-bcd3c90af015b86a",
+      "headline": "➤ Киты активно накапливают ZEC. Четыре новых кошелька вывели с Binance и других бирж 32,293 ZEC (~$46,2m).",
+      "counts": {
+        "events": 1,
+        "publications": 1,
+        "channels": 1,
+        "known_authors": 0,
+        "unknown_authors": 1,
+        "found_origins": 0,
+        "reprints": 1,
+        "unknown_origin": 0
+      },
+      "actor": "Киты",
+      "action": "активно накапливают ZEC",
+      "object": "ZEC",
+      "qualifiers": {
+        "amount": "32,293 ZEC",
+        "value": "~$46,2m",
+        "exchanges": "Binance и другие биржи"
+      },
+      "members": [
+        {
+          "obs_id": "telegram:18:31503#s5",
+          "publication_id": "telegram:18:31503",
+          "source_id": 18,
+          "author_id": null,
+          "published_at": "2026-09-18T11:49:21+00:00",
+          "url": "https://t.me/crypto_hd/31503",
+          "quote": "➤ Киты активно накапливают ZEC. Четыре новых кошелька вывели с Binance и других бирж 32,293 ZEC (~$46,2m).\n\n",
+          "span": [
+            528,
+            636
+          ],
+          "origin": "retelling"
+        }
+      ]
+    },
+    {
+      "event_id": "e34-ad512c99e63af9b4",
+      "headline": "ZCASH TARGETS NOVEMBER UPGRADE TO MAKE PRIVATE PAYMENTS UP TO THREE TIMES FASTER ...",
+      "counts": {
+        "events": 1,
+        "publications": 1,
+        "channels": 1,
+        "known_authors": 0,
+        "unknown_authors": 1,
+        "found_origins": 0,
+        "reprints": 1,
+        "unknown_origin": 0
+      },
+      "actor": "Zcash",
+      "action": "целится на ноябрьский апгрейд для ускорения приватных платежей",
+      "object": "ноябрьский апгрейд",
+      "qualifiers": {
+        "upgrade_time": "ноябрь",
+        "speed_improvement": "до трех раз быстрее"
+      },
+      "members": [
+        {
+          "obs_id": "telegram:9:1041046#s0",
+          "publication_id": "telegram:9:1041046",
+          "source_id": 9,
+          "author_id": null,
+          "published_at": "2026-09-18T12:51:12+00:00",
+          "url": "https://t.me/marketfeed/1041046",
+          "quote": "ZCASH TARGETS NOVEMBER UPGRADE TO MAKE PRIVATE PAYMENTS UP TO THREE TIMES FASTER ...",
+          "span": [
+            0,
+            84
+          ],
+          "origin": "retelling"
+        }
+      ]
+    },
+    {
+      "event_id": "e35-6ef31b31bb1163b7",
+      "headline": "3333 supply ",
+      "counts": {
+        "events": 1,
+        "publications": 1,
+        "channels": 1,
+        "known_authors": 0,
+        "unknown_authors": 1,
+        "found_origins": 0,
+        "reprints": 0,
+        "unknown_origin": 1
+      },
+      "actor": null,
+      "action": "announcement of supply and mint price",
+      "object": "ZEC Blockchain",
+      "qualifiers": {
+        "version": null,
+        "event_date": null,
+        "place": null,
+        "counterparty": null
+      },
+      "members": [
+        {
+          "obs_id": "telegram:15:423299#s2",
+          "publication_id": "telegram:15:423299",
+          "source_id": 15,
+          "author_id": null,
+          "published_at": "2026-09-18T14:56:13+00:00",
+          "url": "https://t.me/WEB3_AGGREGATOR/423299",
+          "quote": "3333 supply \nZEC Blockchain\nMint price TBD",
+          "span": [
+            74,
+            116
+          ],
+          "origin": "unknown"
+        }
+      ]
+    },
+    {
+      "event_id": "e36-a6b6e31f89a456ef",
+      "headline": "что-то мимо меня вчера инфа прошла, да и я чет ток в ZEC погрузился, но вот инфа -> ТЫК",
+      "counts": {
+        "events": 1,
+        "publications": 1,
+        "channels": 1,
+        "known_authors": 0,
+        "unknown_authors": 1,
+        "found_origins": 0,
+        "reprints": 1,
+        "unknown_origin": 0
+      },
+      "actor": "author",
+      "action": "mentions missing information and provides link",
+      "object": "ZEC",
+      "qualifiers": {
+        "version": null,
+        "event_date": "yesterday",
+        "place": null,
+        "counterparty": null
+      },
+      "members": [
+        {
+          "obs_id": "telegram:15:423300#s1",
+          "publication_id": "telegram:15:423300",
+          "source_id": 15,
+          "author_id": null,
+          "published_at": "2026-09-18T14:56:33+00:00",
+          "url": "https://t.me/WEB3_AGGREGATOR/423300",
+          "quote": "что-то мимо меня вчера инфа прошла, да и я чет ток в ZEC погрузился, но вот инфа -> ТЫК",
+          "span": [
+            33,
+            120
+          ],
+          "origin": "retelling"
+        }
+      ]
+    },
+    {
+      "event_id": "e37-b05c98378d874e69",
+      "headline": "😐 В связи с большим количеством минтов на чейне Zcash, остро стал вопрос депа в саму сеть. Поэтому расписываю 1 раз, чтобы к этому не возвращаться ✏️",
+      "counts": {
+        "events": 1,
+        "publications": 1,
+        "channels": 1,
+        "known_authors": 0,
+        "unknown_authors": 1,
+        "found_origins": 1,
+        "reprints": 0,
+        "unknown_origin": 0
+      },
+      "actor": "author",
+      "action": "explains deposit issue due to many mints",
+      "object": "Zcash network",
+      "qualifiers": {
+        "version": null,
+        "event_date": null,
+        "place": null,
+        "counterparty": null
+      },
+      "members": [
+        {
+          "obs_id": "telegram:15:423315#s1",
+          "publication_id": "telegram:15:423315",
+          "source_id": 15,
+          "author_id": null,
+          "published_at": "2026-09-18T18:37:10+00:00",
+          "url": "https://t.me/WEB3_AGGREGATOR/423315",
+          "quote": "😐 В связи с большим количеством минтов на чейне Zcash, остро стал вопрос депа в саму сеть. Поэтому расписываю 1 раз, чтобы к этому не возвращаться ✏️",
+          "span": [
+            48,
+            197
+          ],
+          "origin": "own"
+        }
+      ]
+    },
+    {
+      "event_id": "e38-d88b56862e4c8afd",
+      "headline": "🔥 Zcash в ТОП-10: ренессанс приватности или сквиз шортистов?",
+      "counts": {
+        "events": 1,
+        "publications": 1,
+        "channels": 1,
+        "known_authors": 0,
+        "unknown_authors": 1,
+        "found_origins": 0,
+        "reprints": 1,
+        "unknown_origin": 0
+      },
+      "actor": "Zcash",
+      "action": "entered top-10",
+      "object": "Zcash",
+      "qualifiers": {
+        "version": null,
+        "event_date": null,
+        "place": null,
+        "counterparty": null
+      },
+      "members": [
+        {
+          "obs_id": "telegram:15:423316#s0",
+          "publication_id": "telegram:15:423316",
+          "source_id": 15,
+          "author_id": null,
+          "published_at": "2026-09-18T18:37:14+00:00",
+          "url": "https://t.me/WEB3_AGGREGATOR/423316",
+          "quote": "🔥 Zcash в ТОП-10: ренессанс приватности или сквиз шортистов?",
+          "span": [
+            0,
+            60
+          ],
+          "origin": "retelling"
+        }
+      ]
+    },
+    {
+      "event_id": "e39-ec65fbe71b65ff6f",
+      "headline": "ZEC разогнался до ~$1463, влетел на #9 по капитализации (~$24.8 млрд) и пробивал $1500. За месяц +160%, за год почти в 26X (+~2500%).",
+      "counts": {
+        "events": 1,
+        "publications": 1,
+        "channels": 1,
+        "known_authors": 0,
+        "unknown_authors": 1,
+        "found_origins": 0,
+        "reprints": 1,
+        "unknown_origin": 0
+      },
+      "actor": "ZEC",
+      "action": "price surge and market cap increase",
+      "object": "ZEC",
+      "qualifiers": {
+        "version": null,
+        "event_date": null,
+        "place": null,
+        "counterparty": null
+      },
+      "members": [
+        {
+          "obs_id": "telegram:15:423316#s1",
+          "publication_id": "telegram:15:423316",
+          "source_id": 15,
+          "author_id": null,
+          "published_at": "2026-09-18T18:37:14+00:00",
+          "url": "https://t.me/WEB3_AGGREGATOR/423316",
+          "quote": "ZEC разогнался до ~$1463, влетел на #9 по капитализации (~$24.8 млрд) и пробивал $1500. За месяц +160%, за год почти в 26X (+~2500%).",
+          "span": [
+            62,
+            195
+          ],
+          "origin": "retelling"
+        }
+      ]
+    },
+    {
+      "event_id": "e40-5a98b5b841cf7d8f",
+      "headline": "За сутки по ZEC ликвидировали позиций на >$55 млн, из них ~$49 млн — короткие. Самый громкий «погорелец» — кит Гаррет Джин, которого ончейн-детективы связывают с биржей BitForex…",
+      "counts": {
+        "events": 1,
+        "publications": 1,
+        "channels": 1,
+        "known_authors": 0,
+        "unknown_authors": 1,
+        "found_origins": 0,
+        "reprints": 1,
+        "unknown_origin": 0
+      },
+      "actor": "ZEC",
+      "action": "liquidations and short squeeze",
+      "object": "ZEC positions",
+      "qualifiers": {
+        "version": null,
+        "event_date": null,
+        "place": null,
+        "counterparty": "Garrett Jean, BitForex"
+      },
+      "members": [
+        {
+          "obs_id": "telegram:15:423316#s3",
+          "publication_id": "telegram:15:423316",
+          "source_id": 15,
+          "author_id": null,
+          "published_at": "2026-09-18T18:37:14+00:00",
+          "url": "https://t.me/WEB3_AGGREGATOR/423316",
+          "quote": "За сутки по ZEC ликвидировали позиций на >$55 млн, из них ~$49 млн — короткие. Самый громкий «погорелец» — кит Гаррет Джин, которого ончейн-детективы связывают с биржей BitForex: шорт на ~$51–54 млн с плечом 3x, ликвидация на $2631, нереализованный убыток ~$26–30 млн.",
+          "span": [
+            382,
+            650
+          ],
+          "origin": "retelling"
+        }
+      ]
+    },
+    {
+      "event_id": "e41-3b4cd34bf36b1935",
+      "headline": "Мэтт Хуанг, сооснователь фонда Paradigm, назвал Zec «приватным дополнением к BTC» и раскрыл, что фирма инвестировала в лабораторию разработки Zcash (ZODL) и держит $ZEC.",
+      "counts": {
+        "events": 1,
+        "publications": 1,
+        "channels": 1,
+        "known_authors": 0,
+        "unknown_authors": 1,
+        "found_origins": 0,
+        "reprints": 1,
+        "unknown_origin": 0
+      },
+      "actor": "Мэтт Хуанг, сооснователь фонда Paradigm",
+      "action": "назвал Zec «приватным дополнением к BTC» и раскрыл, что фирма инвестировала в лабораторию разработки Zcash (ZODL) и держит $ZEC",
+      "object": "Zec",
+      "qualifiers": {},
+      "members": [
+        {
+          "obs_id": "telegram:15:423316#s5",
+          "publication_id": "telegram:15:423316",
+          "source_id": 15,
+          "author_id": null,
+          "published_at": "2026-09-18T18:37:14+00:00",
+          "url": "https://t.me/WEB3_AGGREGATOR/423316",
+          "quote": "Мэтт Хуанг, сооснователь фонда Paradigm, назвал Zec «приватным дополнением к BTC» и раскрыл, что фирма инвестировала в лабораторию разработки Zcash (ZODL) и держит $ZEC.",
+          "span": [
+            835,
+            1004
+          ],
+          "origin": "retelling"
+        }
+      ]
+    },
+    {
+      "event_id": "e42-d1c7c8128c665883",
+      "headline": "Ровно также $ZEC улетал вертикально на старте в 2016-м: мало монет в обороте рисуют 🐂«up only» на пустом стакане.",
+      "counts": {
+        "events": 1,
+        "publications": 1,
+        "channels": 1,
+        "known_authors": 0,
+        "unknown_authors": 1,
+        "found_origins": 0,
+        "reprints": 1,
+        "unknown_origin": 0
+      },
+      "actor": null,
+      "action": "улетал вертикально на старте в 2016-м",
+      "object": "$ZEC",
+      "qualifiers": {
+        "event_date": "2016"
+      },
+      "members": [
+        {
+          "obs_id": "telegram:15:423316#s9",
+          "publication_id": "telegram:15:423316",
+          "source_id": 15,
+          "author_id": null,
+          "published_at": "2026-09-18T18:37:14+00:00",
+          "url": "https://t.me/WEB3_AGGREGATOR/423316",
+          "quote": "Ровно также $ZEC улетал вертикально на старте в 2016-м: мало монет в обороте рисуют 🐂«up only» на пустом стакане.",
+          "span": [
+            1804,
+            1917
+          ],
+          "origin": "retelling"
+        }
+      ]
+    },
+    {
+      "event_id": "e43-e935abc4fc02e8ef",
+      "headline": "В Bitx на данный момент мы можем заполнить WL-форму на дроп. Переходим по ссылке, выполняем квесты и оставляем ZEC кошелек.",
+      "counts": {
+        "events": 1,
+        "publications": 1,
+        "channels": 1,
+        "known_authors": 0,
+        "unknown_authors": 1,
+        "found_origins": 1,
+        "reprints": 0,
+        "unknown_origin": 0
+      },
+      "actor": "Bitx",
+      "action": "заполнить WL-форму на дроп",
+      "object": "ZEC кошелек",
+      "qualifiers": {},
+      "members": [
+        {
+          "obs_id": "telegram:15:423320#s2",
+          "publication_id": "telegram:15:423320",
+          "source_id": 15,
+          "author_id": null,
+          "published_at": "2026-09-18T18:38:03+00:00",
+          "url": "https://t.me/WEB3_AGGREGATOR/423320",
+          "quote": "В Bitx на данный момент мы можем заполнить WL-форму на дроп. Переходим по ссылке, выполняем квесты и оставляем ZEC кошелек.",
+          "span": [
+            35,
+            158
+          ],
+          "origin": "own"
+        }
+      ]
+    },
+    {
+      "event_id": "e44-ad603569b44950eb",
+      "headline": "DownOnly: 38 Обсуждаем ZEC-мету / WOW Forever",
+      "counts": {
+        "events": 1,
+        "publications": 1,
+        "channels": 1,
+        "known_authors": 0,
+        "unknown_authors": 1,
+        "found_origins": 1,
+        "reprints": 0,
+        "unknown_origin": 0
+      },
+      "actor": null,
+      "action": "Обсуждаем ZEC-мету / WOW Forever",
+      "object": "ZEC-мета",
+      "qualifiers": {},
+      "members": [
+        {
+          "obs_id": "telegram:15:423323#s0",
+          "publication_id": "telegram:15:423323",
+          "source_id": 15,
+          "author_id": null,
+          "published_at": "2026-09-18T18:39:14+00:00",
+          "url": "https://t.me/WEB3_AGGREGATOR/423323",
+          "quote": "DownOnly: 38 Обсуждаем ZEC-мету / WOW Forever",
+          "span": [
+            0,
+            45
+          ],
+          "origin": "own"
+        }
+      ]
+    },
+    {
+      "event_id": "e45-d49b16c38073dbb0",
+      "headline": "В этот раз записали в нашем приватном Discord, так что были гости и пришел Костя с канала NFT Alerts с которым обсудили ZEC мету",
+      "counts": {
+        "events": 1,
+        "publications": 1,
+        "channels": 1,
+        "known_authors": 0,
+        "unknown_authors": 1,
+        "found_origins": 1,
+        "reprints": 0,
+        "unknown_origin": 0
+      },
+      "actor": "Костя с канала NFT Alerts",
+      "action": "обсудили ZEC мету",
+      "object": "ZEC мета",
+      "qualifiers": {},
+      "members": [
+        {
+          "obs_id": "telegram:15:423323#s3",
+          "publication_id": "telegram:15:423323",
+          "source_id": 15,
+          "author_id": null,
+          "published_at": "2026-09-18T18:39:14+00:00",
+          "url": "https://t.me/WEB3_AGGREGATOR/423323",
+          "quote": "В этот раз записали в нашем приватном Discord, так что были гости и пришел Костя с канала NFT Alerts с которым обсудили ZEC мету",
+          "span": [
+            222,
+            350
+          ],
+          "origin": "own"
+        }
+      ]
+    },
+    {
+      "event_id": "e46-7ac0d2a832d2f0a8",
+      "headline": "Ранее: сделка по ZEC",
+      "counts": {
+        "events": 1,
+        "publications": 1,
+        "channels": 1,
+        "known_authors": 0,
+        "unknown_authors": 1,
+        "found_origins": 0,
+        "reprints": 1,
+        "unknown_origin": 0
+      },
+      "actor": null,
+      "action": "сделка по ZEC",
+      "object": "ZEC",
+      "qualifiers": {},
+      "members": [
+        {
+          "obs_id": "telegram:18:31511#s3",
+          "publication_id": "telegram:18:31511",
+          "source_id": 18,
+          "author_id": null,
+          "published_at": "2026-09-18T18:41:49+00:00",
+          "url": "https://t.me/crypto_hd/31511",
+          "quote": "Ранее: сделка по ZEC",
+          "span": [
+            299,
+            319
+          ],
+          "origin": "retelling"
+        }
+      ]
+    },
+    {
+      "event_id": "e47-9185e063dbb369e5",
+      "headline": "🤪 $NET - По сути, казиныч, за который топит Ансем, а у него попадание почти во все за последний год - VVV, ZEC, HYPE - все на ath. Обещают сейчс за стейкинг $NET 10.000% apy",
+      "counts": {
+        "events": 1,
+        "publications": 1,
+        "channels": 1,
+        "known_authors": 0,
+        "unknown_authors": 1,
+        "found_origins": 0,
+        "reprints": 1,
+        "unknown_origin": 0
+      },
+      "actor": "Ансем",
+      "action": "попадание почти во все за последний год - VVV, ZEC, HYPE - все на ath",
+      "object": "ZEC",
+      "qualifiers": {},
+      "members": [
+        {
+          "obs_id": "telegram:15:423324#s9",
+          "publication_id": "telegram:15:423324",
+          "source_id": 15,
+          "author_id": null,
+          "published_at": "2026-09-18T20:21:04+00:00",
+          "url": "https://t.me/WEB3_AGGREGATOR/423324",
+          "quote": "🤪 $NET - По сути, казиныч, за который топит Ансем, а у него попадание почти во все за последний год - VVV, ZEC, HYPE - все на ath. Обещают сейчс за стейкинг $NET 10.000% apy",
+          "span": [
+            2037,
+            2210
+          ],
+          "origin": "retelling"
+        }
+      ]
+    },
+    {
+      "event_id": "e48-daa18d1cba121a66",
+      "headline": "• Binance / Zcash — WSJ said Lagarde helped block Binance’s Europe push; Zcash targets a November privacy-payments upgrade.",
+      "counts": {
+        "events": 1,
+        "publications": 1,
+        "channels": 1,
+        "known_authors": 0,
+        "unknown_authors": 1,
+        "found_origins": 0,
+        "reprints": 1,
+        "unknown_origin": 0
+      },
+      "actor": "Zcash",
+      "action": "targets a November privacy-payments upgrade",
+      "object": "privacy-payments upgrade",
+      "qualifiers": {
+        "event_date": "November"
+      },
+      "members": [
+        {
+          "obs_id": "telegram:9:1041289#s23",
+          "publication_id": "telegram:9:1041289",
+          "source_id": 9,
+          "author_id": null,
+          "published_at": "2026-09-18T20:30:20+00:00",
+          "url": "https://t.me/marketfeed/1041289",
+          "quote": "• Binance / Zcash — WSJ said Lagarde helped block Binance’s Europe push; Zcash targets a November privacy-payments upgrade.",
+          "span": [
+            2185,
+            2308
+          ],
+          "origin": "retelling"
+        }
+      ]
+    },
+    {
+      "event_id": "e49-a942a26d088253d0",
+      "headline": "Реально обновляют хаи те, кто показывают результаты деятельности, а не просто обещают (пластичные кормушки - HYPE, PUMP, LIGHTER, VENICE) и топы влияния - ZEC",
+      "counts": {
+        "events": 1,
+        "publications": 2,
+        "channels": 2,
+        "known_authors": 0,
+        "unknown_authors": 2,
+        "found_origins": 2,
+        "reprints": 0,
+        "unknown_origin": 0
+      },
+      "actor": null,
+      "action": "обновляют хаи те, кто показывают результаты деятельности",
+      "object": "ZEC",
+      "qualifiers": {},
+      "members": [
+        {
+          "obs_id": "telegram:6:2431#s2",
+          "publication_id": "telegram:6:2431",
+          "source_id": 6,
+          "author_id": null,
+          "published_at": "2026-09-19T05:53:12+00:00",
+          "url": "https://t.me/icodrops_sergey/2431",
+          "quote": "Реально обновляют хаи те, кто показывают результаты деятельности, а не просто обещают (пластичные кормушки - HYPE, PUMP, LIGHTER, VENICE) и топы влияния - ZEC",
+          "span": [
+            249,
+            407
+          ],
+          "origin": "own"
+        },
+        {
+          "obs_id": "telegram:15:423344#s2",
+          "publication_id": "telegram:15:423344",
+          "source_id": 15,
+          "author_id": null,
+          "published_at": "2026-09-19T07:20:53+00:00",
+          "url": "https://t.me/WEB3_AGGREGATOR/423344",
+          "quote": "Реально обновляют хаи те, кто показывают результаты деятельности, а не просто обещают (пластичные кормушки - HYPE, PUMP, LIGHTER, VENICE) и топы влияния - ZEC",
+          "span": [
+            249,
+            407
+          ],
+          "origin": "own"
+        }
+      ]
+    },
+    {
+      "event_id": "e50-3da362b1a121a10b",
+      "headline": "🔘Подаем заявку в WL новой коллекции Zaddr (необходимо подключить X). Минт уже 21 сентября, mint price: 0.02 zec, 2,800 NFTs.",
+      "counts": {
+        "events": 1,
+        "publications": 1,
+        "channels": 1,
+        "known_authors": 0,
+        "unknown_authors": 1,
+        "found_origins": 1,
+        "reprints": 0,
+        "unknown_origin": 0
+      },
+      "actor": null,
+      "action": "Подаем заявку в WL новой коллекции Zaddr",
+      "object": "Zaddr",
+      "qualifiers": {
+        "event_date": "21 сентября",
+        "place": "X"
+      },
+      "members": [
+        {
+          "obs_id": "telegram:1:7146#s3",
+          "publication_id": "telegram:1:7146",
+          "source_id": 1,
+          "author_id": null,
+          "published_at": "2026-09-19T07:02:58+00:00",
+          "url": "https://t.me/whitelist1/7146",
+          "quote": "🔘Подаем заявку в WL новой коллекции Zaddr (необходимо подключить X). Минт уже 21 сентября, mint price: 0.02 zec, 2,800 NFTs.",
+          "span": [
+            414,
+            538
+          ],
+          "origin": "own"
+        }
+      ]
+    },
+    {
+      "event_id": "e51-972c31174b742016",
+      "headline": "3 giveaways on X:",
+      "counts": {
+        "events": 1,
+        "publications": 1,
+        "channels": 1,
+        "known_authors": 0,
+        "unknown_authors": 1,
+        "found_origins": 1,
+        "reprints": 0,
+        "unknown_origin": 0
+      },
+      "actor": null,
+      "action": "giveaways on X: one on zec",
+      "object": "zec",
+      "qualifiers": {},
+      "members": [
+        {
+          "obs_id": "telegram:15:423337#s4",
+          "publication_id": "telegram:15:423337",
+          "source_id": 15,
+          "author_id": null,
+          "published_at": "2026-09-19T07:18:02+00:00",
+          "url": "https://t.me/WEB3_AGGREGATOR/423337",
+          "quote": "3 giveaways on X:\none on zec\ntwo\nthree",
+          "span": [
+            135,
+            173
+          ],
+          "origin": "own"
+        }
+      ]
+    },
+    {
+      "event_id": "e52-bf31a98a096a2735",
+      "headline": "– крупный инвестор перевел #ZEC на сумму >362 млн $ спустя 10 месяцев бездействия (на тот момент стоимость токенов составляла ~163 млн $), после чего почти половину токенов перевёл…",
+      "counts": {
+        "events": 1,
+        "publications": 1,
+        "channels": 1,
+        "known_authors": 0,
+        "unknown_authors": 1,
+        "found_origins": 0,
+        "reprints": 1,
+        "unknown_origin": 0
+      },
+      "actor": "крупный инвестор",
+      "action": "перевел",
+      "object": "#ZEC",
+      "qualifiers": {
+        "version": "value > $362M",
+        "event_date": "спустя 10 месяцев бездействия",
+        "place": "Coinbase",
+        "counterparty": null
+      },
+      "members": [
+        {
+          "obs_id": "telegram:11:96824#s4",
+          "publication_id": "telegram:11:96824",
+          "source_id": 11,
+          "author_id": null,
+          "published_at": "2026-09-19T09:20:05+00:00",
+          "url": "https://t.me/cryptoattack24/96824",
+          "quote": "– крупный инвестор перевел #ZEC на сумму >362 млн $ спустя 10 месяцев бездействия (на тот момент стоимость токенов составляла ~163 млн $), после чего почти половину токенов перевёл на Coinbase.",
+          "span": [
+            306,
+            499
+          ],
+          "origin": "retelling"
+        }
+      ]
+    },
+    {
+      "event_id": "e53-a01178250b644dc1",
+      "headline": "Гарретт Буллиш (в убытке на $35М по шорту Zec на Hyperliquid) показал свой спот адрес Zec",
+      "counts": {
+        "events": 1,
+        "publications": 2,
+        "channels": 2,
+        "known_authors": 0,
+        "unknown_authors": 2,
+        "found_origins": 2,
+        "reprints": 0,
+        "unknown_origin": 0
+      },
+      "actor": "Гарретт Буллиш",
+      "action": "показал свой спот адрес",
+      "object": "Zec",
+      "qualifiers": {
+        "version": null,
+        "event_date": null,
+        "place": null,
+        "counterparty": null
+      },
+      "members": [
+        {
+          "obs_id": "telegram:12:4873#s0",
+          "publication_id": "telegram:12:4873",
+          "source_id": 12,
+          "author_id": null,
+          "published_at": "2026-09-19T10:34:17+00:00",
+          "url": "https://t.me/Defiscamcheck/4873",
+          "quote": "Гарретт Буллиш (в убытке на $35М по шорту Zec на Hyperliquid) показал свой спот адрес Zec",
+          "span": [
+            0,
+            89
+          ],
+          "origin": "own"
+        },
+        {
+          "obs_id": "telegram:15:423360#s0",
+          "publication_id": "telegram:15:423360",
+          "source_id": 15,
+          "author_id": null,
+          "published_at": "2026-09-19T10:55:49+00:00",
+          "url": "https://t.me/WEB3_AGGREGATOR/423360",
+          "quote": "Гарретт Буллиш (в убытке на $35М по шорту Zec на Hyperliquid) показал свой спот адрес Zec",
+          "span": [
+            0,
+            89
+          ],
+          "origin": "own"
+        }
+      ]
+    },
+    {
+      "event_id": "e54-09cd8112a0429f71",
+      "headline": "Zec адрес: t1gGCYpyURMo2FcYDSqeR8pgp2Kx9rnT72V",
+      "counts": {
+        "events": 1,
+        "publications": 2,
+        "channels": 2,
+        "known_authors": 0,
+        "unknown_authors": 2,
+        "found_origins": 2,
+        "reprints": 0,
+        "unknown_origin": 0
+      },
+      "actor": null,
+      "action": "address disclosure",
+      "object": "Zec",
+      "qualifiers": {
+        "version": "address t1gGCYpyURMo2FcYDSqeR8pgp2Kx9rnT72V",
+        "event_date": null,
+        "place": null,
+        "counterparty": null
+      },
+      "members": [
+        {
+          "obs_id": "telegram:12:4873#s2",
+          "publication_id": "telegram:12:4873",
+          "source_id": 12,
+          "author_id": null,
+          "published_at": "2026-09-19T10:34:17+00:00",
+          "url": "https://t.me/Defiscamcheck/4873",
+          "quote": "Zec адрес: t1gGCYpyURMo2FcYDSqeR8pgp2Kx9rnT72V",
+          "span": [
+            210,
+            256
+          ],
+          "origin": "own"
+        },
+        {
+          "obs_id": "telegram:15:423360#s2",
+          "publication_id": "telegram:15:423360",
+          "source_id": 15,
+          "author_id": null,
+          "published_at": "2026-09-19T10:55:49+00:00",
+          "url": "https://t.me/WEB3_AGGREGATOR/423360",
+          "quote": "Zec адрес: t1gGCYpyURMo2FcYDSqeR8pgp2Kx9rnT72V",
+          "span": [
+            210,
+            256
+          ],
+          "origin": "own"
+        }
+      ]
+    },
+    {
+      "event_id": "e55-9e44c58cc44b5092",
+      "headline": "начались торги NFTшек zkSnarks на аукционе с бидами по 1.5 $ZEC, торги сейчас идут полным ходом, флур сейчас составляет 2.13 $ZEC.",
+      "counts": {
+        "events": 1,
+        "publications": 1,
+        "channels": 1,
+        "known_authors": 0,
+        "unknown_authors": 1,
+        "found_origins": 0,
+        "reprints": 0,
+        "unknown_origin": 1
+      },
+      "actor": null,
+      "action": "начались торги NFTшек zkSnarks на аукционе с бидами по 1.5 $ZEC, торги сейчас идут полным ходом, флур сейчас составляет 2.13 $ZEC",
+      "object": "zkSnarks NFT",
+      "qualifiers": {},
+      "members": [
+        {
+          "obs_id": "telegram:15:423362#s1",
+          "publication_id": "telegram:15:423362",
+          "source_id": 15,
+          "author_id": null,
+          "published_at": "2026-09-19T13:17:47+00:00",
+          "url": "https://t.me/WEB3_AGGREGATOR/423362",
+          "quote": "начались торги NFTшек zkSnarks на аукционе с бидами по 1.5 $ZEC, торги сейчас идут полным ходом, флур сейчас составляет 2.13 $ZEC. \n\n",
+          "span": [
+            7,
+            140
+          ],
+          "origin": "unknown"
+        }
+      ]
+    },
+    {
+      "event_id": "e56-7d3090bc7b62ea03",
+      "headline": "BREAKING: DeGods переезжает на Zcash.",
+      "counts": {
+        "events": 1,
+        "publications": 1,
+        "channels": 1,
+        "known_authors": 0,
+        "unknown_authors": 1,
+        "found_origins": 0,
+        "reprints": 0,
+        "unknown_origin": 1
+      },
+      "actor": "DeGods",
+      "action": "переезжает на Zcash",
+      "object": "Zcash (network)",
+      "qualifiers": {},
+      "members": [
+        {
+          "obs_id": "telegram:15:423371#s0",
+          "publication_id": "telegram:15:423371",
+          "source_id": 15,
+          "author_id": null,
+          "published_at": "2026-09-19T14:48:08+00:00",
+          "url": "https://t.me/WEB3_AGGREGATOR/423371",
+          "quote": "BREAKING: DeGods переезжает на Zcash.\n\n",
+          "span": [
+            0,
+            39
+          ],
+          "origin": "unknown"
+        }
+      ]
+    },
+    {
+      "event_id": "e57-edba3bda3aa9aec4",
+      "headline": "0.3 ZEC Puppets вышли",
+      "counts": {
+        "events": 1,
+        "publications": 1,
+        "channels": 1,
+        "known_authors": 0,
+        "unknown_authors": 1,
+        "found_origins": 0,
+        "reprints": 0,
+        "unknown_origin": 1
+      },
+      "actor": null,
+      "action": "вышли 0.3 ZEC Puppets",
+      "object": "0.3 ZEC Puppets",
+      "qualifiers": {},
+      "members": [
+        {
+          "obs_id": "telegram:15:423375#s0",
+          "publication_id": "telegram:15:423375",
+          "source_id": 15,
+          "author_id": null,
+          "published_at": "2026-09-19T17:47:09+00:00",
+          "url": "https://t.me/WEB3_AGGREGATOR/423375",
+          "quote": "0.3 ZEC Puppets вышли\n\n",
+          "span": [
+            0,
+            23
+          ],
+          "origin": "unknown"
+        }
+      ]
+    },
+    {
+      "event_id": "e58-97e4f3c40b51a2df",
+      "headline": "Пока ждем Zaddr и оцениваем дальнейшую мету ZEC NFT, выходят они 21 числа 13:00 UTC WL - инфа",
+      "counts": {
+        "events": 1,
+        "publications": 1,
+        "channels": 1,
+        "known_authors": 0,
+        "unknown_authors": 1,
+        "found_origins": 0,
+        "reprints": 0,
+        "unknown_origin": 1
+      },
+      "actor": null,
+      "action": "выходят 21 числа 13:00 UTC WL",
+      "object": "не указано",
+      "qualifiers": {
+        "event_date": "21 числа 13:00 UTC"
+      },
+      "members": [
+        {
+          "obs_id": "telegram:15:423375#s3",
+          "publication_id": "telegram:15:423375",
+          "source_id": 15,
+          "author_id": null,
+          "published_at": "2026-09-19T17:47:09+00:00",
+          "url": "https://t.me/WEB3_AGGREGATOR/423375",
+          "quote": "Пока ждем Zaddr и оцениваем дальнейшую мету ZEC NFT, выходят они 21 числа 13:00 UTC WL - инфа\n\n",
+          "span": [
+            93,
+            188
+          ],
+          "origin": "unknown"
+        }
+      ]
+    },
+    {
+      "event_id": "e59-cd32165e63012a6c",
+      "headline": "ZecFrogs - NFT-коллекция в сети Zcash с сапплаем 6969 штук. Бесплатный минт пройдёт 21 сентября в 20:00 мск.",
+      "counts": {
+        "events": 1,
+        "publications": 1,
+        "channels": 1,
+        "known_authors": 0,
+        "unknown_authors": 1,
+        "found_origins": 0,
+        "reprints": 0,
+        "unknown_origin": 1
+      },
+      "actor": "ZecFrogs",
+      "action": "бесплатный минт пройдёт 21 сентября в 20:00 мск",
+      "object": "ZecFrogs NFT-коллекция",
+      "qualifiers": {
+        "event_date": "21 сентября в 20:00 мск"
+      },
+      "members": [
+        {
+          "obs_id": "telegram:15:423379#s9",
+          "publication_id": "telegram:15:423379",
+          "source_id": 15,
+          "author_id": null,
+          "published_at": "2026-09-19T18:54:14+00:00",
+          "url": "https://t.me/WEB3_AGGREGATOR/423379",
+          "quote": "ZecFrogs - NFT-коллекция в сети Zcash с сапплаем 6969 штук. Бесплатный минт пройдёт 21 сентября в 20:00 мск.\n\n",
+          "span": [
+            632,
+            742
+          ],
+          "origin": "unknown"
+        }
+      ]
+    }
+  ],
+  "distribution_and_positions": [
+    {
+      "obs_id": "telegram:15:423189#s3",
+      "publication_id": "telegram:15:423189",
+      "kind": "author_position",
+      "text": "Мне очень не нравится зкеш и его приколы с приватностью, нам не будет видно сколько всего депнули ончейн, и клиринг прайс мы узнаем только с их слов, все это будет в руках команды, фактически они могут сделать что угодно.",
+      "quote": "Мне очень не нравится зкеш и его приколы с приватностью, нам не будет видно сколько всего депнули ончейн, и клиринг прайс мы узнаем только с их слов, все это будет в руках команды, фактически они могут сделать что угодно.",
+      "url": "https://t.me/WEB3_AGGREGATOR/423189",
+      "origin": "own",
+      "source_role": "author"
+    },
+    {
+      "obs_id": "telegram:15:423204#s8",
+      "publication_id": "telegram:15:423204",
+      "kind": "author_position",
+      "text": "- отсутствие понимания, как именно будут минтиться нфтшки, ведь на Zcash нет подобной ординалсам\\инскрипциям механики как на битке",
+      "quote": "- отсутствие понимания, как именно будут минтиться нфтшки, ведь на Zcash нет подобной ординалсам\\инскрипциям механики как на битке",
+      "url": "https://t.me/WEB3_AGGREGATOR/423204",
+      "origin": "own",
+      "source_role": "author"
+    },
+    {
+      "obs_id": "telegram:18:31487#s2",
+      "publication_id": "telegram:18:31487",
+      "kind": "author_position",
+      "text": "Часть роста ZEC, как я думаю, обусловлена страхом, что Биткоин стал слишком «закостенелым». Я говорю это как человек, который любит Биткоин.",
+      "quote": "Часть роста ZEC, как я думаю, обусловлена страхом, что Биткоин стал слишком «закостенелым». Я говорю это как человек, который любит Биткоин.",
+      "url": "https://t.me/crypto_hd/31487",
+      "origin": "own",
+      "source_role": "author"
+    },
+    {
+      "obs_id": "telegram:15:423229#s3",
+      "publication_id": "telegram:15:423229",
+      "kind": "author_position",
+      "text": "$ZEC Альфа актив новая фин элита, крче defi развивается, nft развивается, бомжи уже не купят, ибо дорого, крч это бтс для молодых, плюс Уинклвосы, выкупают zec на компанию, как бит-майн баит эфирчик",
+      "quote": "$ZEC Альфа актив новая фин элита, крче defi развивается, nft развивается, бомжи уже не купят, ибо дорого, крч это бтс для молодых, плюс Уинклвосы, выкупают zec на компанию, как бит-майн баит эфирчик",
+      "url": "https://t.me/WEB3_AGGREGATOR/423229",
+      "origin": "own",
+      "source_role": "author"
+    }
+  ],
+  "discussion": [
+    {
+      "target": "event",
+      "target_id": "e3-375e143ccee45301",
+      "text": "Я этого гандона хотел лонговать когда он был по 450... Похуй фомо недозаработал бы баксов 40-50 в любом случае",
+      "basis": "реплика к посту с одним событием по теме и тому же предмету",
+      "url": "https://t.me/icryptocom/8099?comment=188801",
+      "quote": "Я этого гандона хотел лонговать когда он был по 450... Похуй фомо недозаработал бы баксов 40-50 в любом случае"
+    },
+    {
+      "target": "event",
+      "target_id": "e15-9e94ec9cc7c059c8",
+      "text": "Фомо уже у всех, ждем отката )",
+      "basis": "реплика к посту с одним событием по теме и тому же предмету",
+      "url": "https://t.me/icodrops_sergey/2426?comment=150547",
+      "quote": "Фомо уже у всех, ждем отката )"
+    },
+    {
+      "target": "event",
+      "target_id": "e15-9e94ec9cc7c059c8",
+      "text": "Да какое фомо на около трех иксах. Если он будет 5к стоить, то тогда можно будет говорить о фомоебле",
+      "basis": "реплика к посту с одним событием по теме и тому же предмету",
+      "url": "https://t.me/icodrops_sergey/2426?comment=150550",
+      "quote": "Да какое фомо на около трех иксах. Если он будет 5к стоить, то тогда можно будет говорить о фомоебле"
+    },
+    {
+      "target": "event",
+      "target_id": "e15-9e94ec9cc7c059c8",
+      "text": "время лонга с хорошим плечом",
+      "basis": "реплика к посту с одним событием по теме и тому же предмету",
+      "url": "https://t.me/icodrops_sergey/2426?comment=150551",
+      "quote": "время лонга с хорошим плечом"
+    },
+    {
+      "target": "event",
+      "target_id": "e15-9e94ec9cc7c059c8",
+      "text": "Скоро шорт зека озолотит поколение.. 😂😂",
+      "basis": "реплика к посту с одним событием по теме и тому же предмету",
+      "url": "https://t.me/icodrops_sergey/2426?comment=150552",
+      "quote": "Скоро шорт зека озолотит поколение.. 😂😂"
+    },
+    {
+      "target": "project",
+      "target_id": null,
+      "text": "Серёга первый раз купил по 150 и он падал до 125",
+      "basis": "вопрос или оценка по проекту в целом, не по конкретной новости",
+      "url": "https://t.me/icodrops_sergey/2426?comment=150556",
+      "quote": "Серёга первый раз купил по 150 и он падал до 125"
+    },
+    {
+      "target": "project",
+      "target_id": null,
+      "text": "12 иксов от дна",
+      "basis": "вопрос или оценка по проекту в целом, не по конкретной новости",
+      "url": "https://t.me/icodrops_sergey/2426?comment=150557",
+      "quote": "12 иксов от дна"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "Тоже держу ниар. По структуре очень напоминает  zen, zec , ну, по моим параметрам.\n\nПо коинглас наблюдаю все это время. Даже на 15м почти не было продаж спота. Все покупали спот. Он пробил вверх дневные линейные регрессии 100 и 200. И главн",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/rawa_imagination/21112?comment=343092",
+      "quote": "Тоже держу ниар. По структуре очень напоминает  zen, zec , ну, по моим параметрам.\n\nПо коинглас наблюдаю все это время. Даже на 15м почти не было продаж спота. Все покупали спот. О"
+    },
+    {
+      "target": "project",
+      "target_id": null,
+      "text": "пока всем похуи, есть потенциал на иксы с текуших",
+      "basis": "вопрос или оценка по проекту в целом, не по конкретной новости",
+      "url": "https://t.me/icodrops_sergey/2426?comment=150568",
+      "quote": "пока всем похуи, есть потенциал на иксы с текуших"
+    },
+    {
+      "target": "topic_level",
+      "target_id": null,
+      "text": "Я думаю DASH  тоже себя ещё покажет как младший брат от ZEC",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена",
+      "url": "https://t.me/icodrops_sergey/2426?comment=150569",
+      "quote": "Я думаю DASH  тоже себя ещё покажет как младший брат от ZEC"
+    },
+    {
+      "target": "event",
+      "target_id": "e15-9e94ec9cc7c059c8",
+      "text": "Нам то что с того. Покупать сейчас что бы сделать х2 на $100 ну даже х5 от текущих будет... Это что то поменяет",
+      "basis": "реплика к посту с одним событием по теме и тому же предмету",
+      "url": "https://t.me/icodrops_sergey/2426?comment=150573",
+      "quote": "Нам то что с того. Покупать сейчас что бы сделать х2 на $100 ну даже х5 от текущих будет... Это что то поменяет"
+    },
+    {
+      "target": "event",
+      "target_id": "e15-9e94ec9cc7c059c8",
+      "text": "С этой стороны конечно нет, Серёга просто флексит вином\n\nЯ ответил про фомо на 3 икса, когда их больше 10 уже",
+      "basis": "реплика к посту с одним событием по теме и тому же предмету",
+      "url": "https://t.me/icodrops_sergey/2426?comment=150574",
+      "quote": "С этой стороны конечно нет, Серёга просто флексит вином\n\nЯ ответил про фомо на 3 икса, когда их больше 10 уже"
+    }
+  ],
+  "changes": {
+    "previous_window": "2026-09-14..2026-09-16",
+    "events_appeared": [
+      "Bitcoin OG|увеличил шорт по ZEC|ZEC|➤ Bitcoin OG увеличил шорт по ZEC. Сейчас он шортит 37,760 ZEC ($51,5m) с нереализованным убытком $26m. Цена ликвидации = $2632.",
+      "Bitx|заполнить WL-форму на дроп|ZEC кошелек|В Bitx на данный момент мы можем заполнить WL-форму на дроп. Переходим по ссылке, выполняем квесты и оставляем ZEC кошелек.",
+      "CEO StarkWare|about|ZEC|CEO StarkWare о ZEC (читать)",
+      "DeGods|переезжает на Zcash|Zcash (network)|BREAKING: DeGods переезжает на Zcash.",
+      "Leo|bought more of $worth and reaped|ZEC long|Leo is up 1.6m from his ZEC long and bought more of $worth and I know i sold the bottom like a chud so i reaped here",
+      "ZEC|becomes more anonymous|ZEC|Популярнейший анонимный токен ZEC анонимного проекта ZCash с юридическим офисом в одном квартале от штаб-квартиры ЦРУ в США становится еще анонимнее при цене > $1300 — аналитики",
+      "ZEC|liquidations and short squeeze|ZEC positions|За сутки по ZEC ликвидировали позиций на >$55 млн, из них ~$49 млн — короткие. Самый громкий «погорелец» — кит Гаррет Джин, которого ончейн-детективы связывают с биржей BitForex…",
+      "ZEC|price surge and market cap increase|ZEC|ZEC разогнался до ~$1463, влетел на #9 по капитализации (~$24.8 млрд) и пробивал $1500. За месяц +160%, за год почти в 26X (+~2500%).",
+      "ZEC|reaches price|ZEC|#zec = 1400$ say GM 🏆",
+      "Zcash|entered top-10|Zcash|🔥 Zcash в ТОП-10: ренессанс приватности или сквиз шортистов?",
+      "Zcash|targets a November privacy-payments upgrade|privacy-payments upgrade|• Binance / Zcash — WSJ said Lagarde helped block Binance’s Europe push; Zcash targets a November privacy-payments upgrade.",
+      "Zcash|целится на ноябрьский апгрейд для ускорения приватных платежей|ноябрьский апгрейд|ZCASH TARGETS NOVEMBER UPGRADE TO MAKE PRIVATE PAYMENTS UP TO THREE TIMES FASTER ...",
+      "ZecFrogs|бесплатный минт пройдёт 21 сентября в 20:00 мск|ZecFrogs NFT-коллекция|ZecFrogs - NFT-коллекция в сети Zcash с сапплаем 6969 штук. Бесплатный минт пройдёт 21 сентября в 20:00 мск.",
+      "author|explains deposit issue due to many mints|Zcash network|😐 В связи с большим количеством минтов на чейне Zcash, остро стал вопрос депа в саму сеть. Поэтому расписываю 1 раз, чтобы к этому не возвращаться ✏️",
+      "author|mentions missing information and provides link|ZEC|что-то мимо меня вчера инфа прошла, да и я чет ток в ZEC погрузился, но вот инфа -> ТЫК",
+      "he|short destroyed profit, near liquidation|#ZEC|Но шорт по #ZEC уничтожил всю его прибыль, и сейчас он находится на грани ликвидации.",
+      "he|shorted|ZEC|Он шортил ZEC еще в в начале лета, был в плюсе на $20М после слухов о уязвимости в системе шилдинга ZEC, но не зафиксировал прибыль, а удержал позицию.",
+      "t1UcyM|вывел 15 860 ZEC с Binance|15 860 ZEC|1. t1UcyM вывел 15 860 #ZEC ($22,69 млн) с Binance;",
+      "t1YLeD|вывел с бирж 5 818 ZEC|5 818 ZEC|3. t1YLeD вывел с бирж 5 818 #ZEC ($8,45 млн);",
+      "t1fXjw|вывел с бирж 7 081 ZEC|7 081 ZEC|2. За последние 2 дня t1fXjw вывел с бирж 7 081 #ZEC ($10,29 млн);",
+      "|address disclosure|Zec|Zec адрес: t1gGCYpyURMo2FcYDSqeR8pgp2Kx9rnT72V",
+      "|announcement of supply and mint price|ZEC Blockchain|3333 supply ",
+      "|filling WL for token drop from Bitx|ZEC|Заполняем WL на дроп токена от проекта Bitx. Обещают чето типа стандарта brc-20 на битке только для ZEC и дроп токенов тем кто заполнил влку.",
+      "|forecast|ZEC|Прогноз по ZEC (читать)",
+      "|giveaways on X: one on zec|zec|3 giveaways on X:",
+      "|growth|Zcash|Рост Zcash (читать)",
+      "|idea with classic TA pattern 'cup with handle'|ZEC|Идея с отработкой классической фигуры ТА «чашка с ручкой» на ZEC (с целью в $3100+).",
+      "|list|NFT on $ZEC|Списочек NFT на $ZEC",
+      "|price exceeds|ZEC|💰 #ZEC >1400$",
+      "|pump|#ZEC|Памп #ZEC",
+      "|reaches 9th position|ZEC|ZEC уже 9 позиция в ТОПе крипты",
+      "|updates 10-year maximum|Zcash price|👍 Курс Zcash обновил 10-летний максимум выше $1400.",
+      "|wet dreams|ZEC|Влажные мечты - ZEC (читать)",
+      "|writes ATH|ZEC|А тут вдобавок еще $ZEC ATH пишет...",
+      "|Обсуждаем ZEC-мету / WOW Forever|ZEC-мета|DownOnly: 38 Обсуждаем ZEC-мету / WOW Forever",
+      "|Подаем заявку в WL новой коллекции Zaddr|Zaddr|🔘Подаем заявку в WL новой коллекции Zaddr (необходимо подключить X). Минт уже 21 сентября, mint price: 0.02 zec, 2,800 NFTs.",
+      "|Хайп аукцион zkSNARKs на зкеше|зкеш|Хайп аукцион zkSNARKs на зкеше.",
+      "|весь твиттер гудит по поводу минта нфтшек на Zcash|Zcash|Автор ничего толкового давно не писал, но сегодня, вроде как, есть повод: весь твиттер гудит по поводу минта нфтшек на Zcash",
+      "|выходят 21 числа 13:00 UTC WL|не указано|Пока ждем Zaddr и оцениваем дальнейшую мету ZEC NFT, выходят они 21 числа 13:00 UTC WL - инфа",
+      "|вышли 0.3 ZEC Puppets|0.3 ZEC Puppets|0.3 ZEC Puppets вышли",
+      "|изменения не запущены, предстоит реализовать и протестировать в рамках обновления NU7|ZEC|Чтобы эмиссия ZEC не изменилась, при сокращении времени блока награду за каждый отдельный блок также уменьшат примерно в 3 раза. Изменения пока не запущены – их еще предстоит…",
+      "|начались торги NFTшек zkSnarks на аукционе с бидами по 1.5 $ZEC, торги сейчас идут полным ходом, флур сейчас составляет 2.13 $ZEC|zkSnarks NFT|начались торги NFTшек zkSnarks на аукционе с бидами по 1.5 $ZEC, торги сейчас идут полным ходом, флур сейчас составляет 2.13 $ZEC.",
+      "|обновляют хаи те, кто показывают результаты деятельности|ZEC|Реально обновляют хаи те, кто показывают результаты деятельности, а не просто обещают (пластичные кормушки - HYPE, PUMP, LIGHTER, VENICE) и топы влияния - ZEC",
+      "|сделка по ZEC|ZEC|Ранее: сделка по ZEC",
+      "|улетал вертикально на старте в 2016-м|$ZEC|Ровно также $ZEC улетал вертикально на старте в 2016-м: мало монет в обороте рисуют 🐂«up only» на пустом стакане.",
+      "Ансем|попадание почти во все за последний год - VVV, ZEC, HYPE - все на ath|ZEC|🤪 $NET - По сути, казиныч, за который топит Ансем, а у него попадание почти во все за последний год - VVV, ZEC, HYPE - все на ath. Обещают сейчс за стейкинг $NET 10.000% apy",
+      "Гаррет Джин|is in loss on short|ZEC|🙁 Инсайдер Гаррет Джин сейчас в минусе почти на -$30,000,000 по своему шорту с ZEC.",
+      "Гарретт Буллиш|показал свой спот адрес|Zec|Гарретт Буллиш (в убытке на $35М по шорту Zec на Hyperliquid) показал свой спот адрес Zec",
+      "Кит «t1JhvB»|вывел с Binance, OKX и Kraken 15,300 ZEC|ZEC|➤ Кит «t1JhvB» вывел с Binance, OKX и Kraken 15,300 ZEC ($17,9m).",
+      "Киты|активно накапливают ZEC|ZEC|➤ Киты активно накапливают ZEC. Четыре новых кошелька вывели с Binance и других бирж 32,293 ZEC (~$46,2m).",
+      "Костя с канала NFT Alerts|обсудили ZEC мету|ZEC мета|В этот раз записали в нашем приватном Discord, так что были гости и пришел Костя с канала NFT Alerts с которым обсудили ZEC мету",
+      "Лудоманы с Polymarket|expect|#ZEC|Лудоманы с Polymarket ожидают #ZEC выше $2000 до конца 2026 года.",
+      "Мэтт Хуанг, сооснователь фонда Paradigm|назвал Zec «приватным дополнением к BTC» и раскрыл, что фирма инвестировала в лабораторию разработки Zcash (ZODL) и держит $ZEC|Zec|Мэтт Хуанг, сооснователь фонда Paradigm, назвал Zec «приватным дополнением к BTC» и раскрыл, что фирма инвестировала в лабораторию разработки Zcash (ZODL) и держит $ZEC.",
+      "Новые кошельки|накапливают ZEC|ZEC|🔍 Новые кошельки накапливают #ZEC:",
+      "Он (упомянутый трейдер)|шорт на 12 285 ZEC приносит убыток|шорт на 12 285 ZEC|Его шорт на 12 285 #ZEC ($18,31 млн) сейчас приносит убыток в размере $7,66 млн.",
+      "Сеть Zcash|собираются ускорить в 3 раза|Zcash|⚡️ Сеть Zcash собираются ускорить в 3 раза.",
+      "Сообщество Zcash|поддержало сокращение времени формирования блока с 75 до 25 секунд|Zcash|Сообщество Zcash поддержало сокращение времени формирования блока с 75 до 25 секунд.",
+      "Управляющий партнер Dragonfly|предложил свернуть деятельность фонда разработчиков Zcash|фонд разработчиков Zcash|🤔 #ZEC Управляющий партнер Dragonfly предложил свернуть деятельность фонда разработчиков Zcash, утверждая, что фонд достаточно велик, чтобы финансировать оставшуюся работу над…",
+      "крупный инвестор|перевел|#ZEC|– крупный инвестор перевел #ZEC на сумму >362 млн $ спустя 10 месяцев бездействия (на тот момент стоимость токенов составляла ~163 млн $), после чего почти половину токенов перевёл…"
+    ],
+    "events_gone": [
+      "ZCASH HOLDERS|OVERWHELMINGLY BACK|FASTER TRANSACTIONS AND BITCOIN-STYLE HALVINGS|ZCASH HOLDERS OVERWHELMINGLY BACK FASTER TRANSACTIONS AND BITCOIN-STYLE HALVINGS",
+      "ZEC|continues to grow|ZEC price|И пока этот круг не случится у нас будет разогрев всей экосистемы Zcash, а значит $ZEC продолжит расти, тот же ZCAT продолжит расти и так далее",
+      "Zcash holders|backed|faster transactions and halving-style design|Zcash holders backed faster transactions and halving-style design",
+      "collections|released|collections on Robinhood, Arc, Zcash|На самом деле сейчас несется че то очень интересное, потому что и на Robinhood и на Arc и на Zcash, стали выходить коллекции, причем не для виду, а реально с кучей иксов",
+      "|Freemint on ZEC 11 spots|ZEC|Freemint on ZEC 11 spots.",
+      "|lists|things to do in Zcash|Тут список того, что поделать в Zcash",
+      "|lists|upcoming projects|Тир-лист предстоящих проектов в экосистеме ZEC",
+      "|presents|thought on Zcash ecosystem|Мысль по Zcash экосистеме",
+      "|Аукцион рассчитывается в ZEC, но через NEAR Intents можно зайти ETH, SOL, BTC, стейблами и другими активами - система сама конвертирует их в ZEC|ZEC|Аукцион рассчитывается в ZEC, но через NEAR Intents можно зайти ETH, SOL, BTC, стейблами и другими активами - система сама конвертирует их в ZEC.",
+      "|Про экосистему Zcash|Zcash|Про экосистему Zcash",
+      "|будет|Zcash|Zcash",
+      "|купил ZEC год назад на $1.000, то сейчас это было бы $60.000|ZEC|Если б ты купил ZEC год назад на $1.000, то сейчас это было бы $60.000",
+      "|минт панков на ZEC|ZEC|Сегодня еще минт панков на ZEC",
+      "|нужен кошелек ноир, ZEC, акцион 48 часов|ZEC|нужен кошелек ноир, ZEC, акцион 48 часов.",
+      "|откупается и начисляется|ZEC|ZEC-paired",
+      "|разгон нфт меты во круг zcash|zcash|Я прям делаю еще ставку на разгон нфт меты во круг zcash, там тож движ интересный начинается",
+      "|является стратегией|ZEC|ZEC"
+    ],
+    "discussion_comments": 400,
+    "previous_comments": 292,
+    "source_coverage": {
+      "added_channels": [
+        "@icodrops_sergey"
+      ],
+      "removed_channels": [
+        "@CryptoEarnImp"
+      ],
+      "current_channels": 18,
+      "previous_channels": 18
+    }
+  },
+  "short_observations": [
+    "➤ Кит «t1JhvB» вывел с Binance, OKX и Kraken 15,300 ZEC ($17,9m).",
+    "💰 #ZEC >1400$",
+    "Он шортил ZEC еще в в начале лета, был в плюсе на $20М после слухов о уязвимости в системе шилдинга ZEC, но не зафиксировал прибыль, а удержал позицию.",
+    "Сообщество Zcash поддержало сокращение времени формирования блока с 75 до 25 секунд.",
+    "🤔 #ZEC Управляющий партнер Dragonfly предложил свернуть деятельность фонда разработчиков Zcash, утверждая, что фонд достаточно велик, чтобы финансировать оставшуюся работу над…"
+  ],
+  "coverage": {
+    "publications": 2814,
+    "comments": 400,
+    "channels": 18,
+    "topic_publications": 50,
+    "not_processed": 0,
+    "db_md5": "8618099125a806df376354286ccd982e",
+    "cutoff": "2026-09-20T00:00:00+00:00"
+  },
+  "limitations": [
+    "Режим publication_replay: discovered_at в снимке отсутствует, «впервые системой» не заявляется.",
+    "Роль источника unknown: в базе нет редакционного реестра.",
+    "Неизвестные авторы не объединяются.",
+    "Отсечено после cutoff 2026-09-20T00:00:00+00:00: 3951."
+  ],
+  "evidence": [
+    {
+      "id": "telegram:12:4871#s1",
+      "url": "https://t.me/Defiscamcheck/4871",
+      "quote": "Он шортил ZEC еще в в начале лета, был в плюсе на $20М после слухов о уязвимости в системе шилдинга ZEC, но не зафиксировал прибыль, а удержал позицию.",
+      "span": [
+        43,
+        194
+      ],
+      "publication_id": "telegram:12:4871"
+    },
+    {
+      "id": "telegram:15:423167#s1",
+      "url": "https://t.me/WEB3_AGGREGATOR/423167",
+      "quote": "Он шортил ZEC еще в в начале лета, был в плюсе на $20М после слухов о уязвимости в системе шилдинга ZEC, но не зафиксировал прибыль, а удержал позицию.",
+      "span": [
+        43,
+        194
+      ],
+      "publication_id": "telegram:15:423167"
+    },
+    {
+      "id": "telegram:10:385132#s1",
+      "url": "https://t.me/markettwits/385132",
+      "quote": "Популярнейший анонимный токен ZEC анонимного проекта ZCash с юридическим офисом в одном квартале от штаб-квартиры ЦРУ в США становится еще анонимнее при цене > $1300 — аналитики",
+      "span": [
+        24,
+        201
+      ],
+      "publication_id": "telegram:10:385132"
+    },
+    {
+      "id": "telegram:14:8099#s0",
+      "url": "https://t.me/icryptocom/8099",
+      "quote": "#zec = 1400$ say GM 🏆",
+      "span": [
+        0,
+        21
+      ],
+      "publication_id": "telegram:14:8099"
+    },
+    {
+      "id": "telegram:18:31476#s2",
+      "url": "https://t.me/crypto_hd/31476",
+      "quote": "➤ Bitcoin OG увеличил шорт по ZEC. Сейчас он шортит 37,760 ZEC ($51,5m) с нереализованным убытком $26m. Цена ликвидации = $2632.",
+      "span": [
+        46,
+        174
+      ],
+      "publication_id": "telegram:18:31476"
+    },
+    {
+      "id": "telegram:18:31476#s5",
+      "url": "https://t.me/crypto_hd/31476",
+      "quote": "➤ Кит «t1JhvB» вывел с Binance, OKX и Kraken 15,300 ZEC ($17,9m).",
+      "span": [
+        433,
+        498
+      ],
+      "publication_id": "telegram:18:31476"
+    },
+    {
+      "id": "telegram:12:4873#s1",
+      "url": "https://t.me/Defiscamcheck/4873",
+      "quote": "Ранее он вывел 202К Zec и фактически его шорт является частично дельта нейтральным (размер спота в разы больше шорта)",
+      "span": [
+        91,
+        208
+      ],
+      "publication_id": "telegram:12:4873"
+    },
+    {
+      "id": "telegram:15:423360#s1",
+      "url": "https://t.me/WEB3_AGGREGATOR/423360",
+      "quote": "Ранее он вывел 202К Zec и фактически его шорт является частично дельта нейтральным (размер спота в разы больше шорта)",
+      "span": [
+        91,
+        208
+      ],
+      "publication_id": "telegram:15:423360"
+    },
+    {
+      "id": "telegram:15:423189#s0",
+      "url": "https://t.me/WEB3_AGGREGATOR/423189",
+      "quote": "Хайп аукцион zkSNARKs на зкеше.",
+      "span": [
+        0,
+        31
+      ],
+      "publication_id": "telegram:15:423189"
+    },
+    {
+      "id": "telegram:15:423204#s1",
+      "url": "https://t.me/WEB3_AGGREGATOR/423204",
+      "quote": "Автор ничего толкового давно не писал, но сегодня, вроде как, есть повод: весь твиттер гудит по поводу минта нфтшек на Zcash",
+      "span": [
+        30,
+        154
+      ],
+      "publication_id": "telegram:15:423204"
+    },
+    {
+      "id": "telegram:18:31484#s1",
+      "url": "https://t.me/crypto_hd/31484",
+      "quote": "⚡️ Сеть Zcash собираются ускорить в 3 раза.",
+      "span": [
+        5,
+        48
+      ],
+      "publication_id": "telegram:18:31484"
+    },
+    {
+      "id": "telegram:18:31494#s8",
+      "url": "https://t.me/crypto_hd/31494",
+      "quote": "Zcash ускорят в 3 раза (читать)",
+      "span": [
+        318,
+        349
+      ],
+      "publication_id": "telegram:18:31494"
+    },
+    {
+      "id": "telegram:18:31484#s2",
+      "url": "https://t.me/crypto_hd/31484",
+      "quote": "Сообщество Zcash поддержало сокращение времени формирования блока с 75 до 25 секунд.",
+      "span": [
+        50,
+        134
+      ],
+      "publication_id": "telegram:18:31484"
+    },
+    {
+      "id": "telegram:10:385234#s1",
+      "url": "https://t.me/markettwits/385234",
+      "quote": "Сообщество ZCash проголосовало за ускорение формирования блоков в сети в 3 раза -  до 25 сек!",
+      "span": [
+        17,
+        110
+      ],
+      "publication_id": "telegram:10:385234"
+    },
+    {
+      "id": "telegram:18:31484#s5",
+      "url": "https://t.me/crypto_hd/31484",
+      "quote": "Чтобы эмиссия ZEC не изменилась, при сокращении времени блока награду за каждый отдельный блок также уменьшат примерно в 3 раза. Изменения пока не запущены – их еще предстоит реализовать и протестировать в рамках обновления NU7 (5 ноября).",
+      "span": [
+        254,
+        493
+      ],
+      "publication_id": "telegram:18:31484"
+    },
+    {
+      "id": "telegram:11:96789#s0",
+      "url": "https://t.me/cryptoattack24/96789",
+      "quote": "💰 #ZEC >1400$",
+      "span": [
+        0,
+        13
+      ],
+      "publication_id": "telegram:11:96789"
+    },
+    {
+      "id": "telegram:10:385255#s0",
+      "url": "https://t.me/markettwits/385255",
+      "quote": "💥✴️#ZEC > $1500",
+      "span": [
+        0,
+        15
+      ],
+      "publication_id": "telegram:10:385255"
+    },
+    {
+      "id": "telegram:18:31488#s0",
+      "url": "https://t.me/crypto_hd/31488",
+      "quote": "😳 #ZEC в моменте > $1500.",
+      "span": [
+        0,
+        25
+      ],
+      "publication_id": "telegram:18:31488"
+    },
+    {
+      "id": "telegram:15:423225#s0",
+      "url": "https://t.me/WEB3_AGGREGATOR/423225",
+      "quote": "👍 Курс Zcash обновил 10-летний максимум выше $1400.",
+      "span": [
+        0,
+        51
+      ],
+      "publication_id": "telegram:15:423225"
+    },
+    {
+      "id": "telegram:15:423243#s8",
+      "url": "https://t.me/WEB3_AGGREGATOR/423243",
+      "quote": "👍 Курс Zcash обновил 10-летний максимум выше $1400.",
+      "span": [
+        994,
+        1045
+      ],
+      "publication_id": "telegram:15:423243"
+    },
+    {
+      "id": "telegram:18:31486#s0",
+      "url": "https://t.me/crypto_hd/31486",
+      "quote": "🙁 Инсайдер Гаррет Джин сейчас в минусе почти на -$30,000,000 по своему шорту с ZEC.",
+      "span": [
+        0,
+        83
+      ],
+      "publication_id": "telegram:18:31486"
+    },
+    {
+      "id": "telegram:15:423236#s2",
+      "url": "https://t.me/WEB3_AGGREGATOR/423236",
+      "quote": "А тут вдобавок еще $ZEC ATH пишет...",
+      "span": [
+        145,
+        181
+      ],
+      "publication_id": "telegram:15:423236"
+    },
+    {
+      "id": "telegram:6:2426#s0",
+      "url": "https://t.me/icodrops_sergey/2426",
+      "quote": "ZEC уже 9 позиция в ТОПе крипты",
+      "span": [
+        0,
+        31
+      ],
+      "publication_id": "telegram:6:2426"
+    },
+    {
+      "id": "telegram:20:49106#s0",
+      "url": "https://t.me/PowsGemCalls/49106",
+      "quote": "Leo is up 1.6m from his ZEC long and bought more of $worth and I know i sold the bottom like a chud so i reaped here",
+      "span": [
+        0,
+        116
+      ],
+      "publication_id": "telegram:20:49106"
+    },
+    {
+      "id": "telegram:18:31490#s0",
+      "url": "https://t.me/crypto_hd/31490",
+      "quote": "Лудоманы с Polymarket ожидают #ZEC выше $2000 до конца 2026 года.",
+      "span": [
+        2,
+        67
+      ],
+      "publication_id": "telegram:18:31490"
+    },
+    {
+      "id": "telegram:15:423248#s0",
+      "url": "https://t.me/WEB3_AGGREGATOR/423248",
+      "quote": "Списочек NFT на $ZEC",
+      "span": [
+        0,
+        20
+      ],
+      "publication_id": "telegram:15:423248"
+    },
+    {
+      "id": "telegram:15:423250#s10",
+      "url": "https://t.me/WEB3_AGGREGATOR/423250",
+      "quote": "Памп #ZEC",
+      "span": [
+        792,
+        801
+      ],
+      "publication_id": "telegram:15:423250"
+    },
+    {
+      "id": "telegram:18:31493#s1",
+      "url": "https://t.me/crypto_hd/31493",
+      "quote": "Идея с отработкой классической фигуры ТА «чашка с ручкой» на ZEC (с целью в $3100+).",
+      "span": [
+        23,
+        107
+      ],
+      "publication_id": "telegram:18:31493"
+    },
+    {
+      "id": "telegram:18:31494#s1",
+      "url": "https://t.me/crypto_hd/31494",
+      "quote": "Рост Zcash (читать)",
+      "span": [
+        36,
+        55
+      ],
+      "publication_id": "telegram:18:31494"
+    },
+    {
+      "id": "telegram:18:31494#s11",
+      "url": "https://t.me/crypto_hd/31494",
+      "quote": "CEO StarkWare о ZEC (читать)",
+      "span": [
+        418,
+        446
+      ],
+      "publication_id": "telegram:18:31494"
+    },
+    {
+      "id": "telegram:18:31494#s13",
+      "url": "https://t.me/crypto_hd/31494",
+      "quote": "Прогноз по ZEC (читать)",
+      "span": [
+        477,
+        500
+      ],
+      "publication_id": "telegram:18:31494"
+    },
+    {
+      "id": "telegram:18:31494#s16",
+      "url": "https://t.me/crypto_hd/31494",
+      "quote": "Влажные мечты - ZEC (читать)",
+      "span": [
+        567,
+        595
+      ],
+      "publication_id": "telegram:18:31494"
+    },
+    {
+      "id": "telegram:15:423256#s1",
+      "url": "https://t.me/WEB3_AGGREGATOR/423256",
+      "quote": "Заполняем WL на дроп токена от проекта Bitx. Обещают чето типа стандарта brc-20 на битке только для ZEC и дроп токенов тем кто заполнил влку.",
+      "span": [
+        41,
+        182
+      ],
+      "publication_id": "telegram:15:423256"
+    },
+    {
+      "id": "telegram:11:96794#s1",
+      "url": "https://t.me/cryptoattack24/96794",
+      "quote": "Но шорт по #ZEC уничтожил всю его прибыль, и сейчас он находится на грани ликвидации.",
+      "span": [
+        120,
+        205
+      ],
+      "publication_id": "telegram:11:96794"
+    },
+    {
+      "id": "telegram:11:96794#s2",
+      "url": "https://t.me/cryptoattack24/96794",
+      "quote": "Его шорт на 12 285 #ZEC ($18,31 млн) сейчас приносит убыток в размере $7,66 млн.",
+      "span": [
+        207,
+        287
+      ],
+      "publication_id": "telegram:11:96794"
+    },
+    {
+      "id": "telegram:11:96796#s0",
+      "url": "https://t.me/cryptoattack24/96796",
+      "quote": "🔍 Новые кошельки накапливают #ZEC:\n",
+      "span": [
+        0,
+        35
+      ],
+      "publication_id": "telegram:11:96796"
+    },
+    {
+      "id": "telegram:11:96796#s1",
+      "url": "https://t.me/cryptoattack24/96796",
+      "quote": "1. t1UcyM вывел 15 860 #ZEC ($22,69 млн) с Binance;\n",
+      "span": [
+        36,
+        88
+      ],
+      "publication_id": "telegram:11:96796"
+    },
+    {
+      "id": "telegram:11:96796#s2",
+      "url": "https://t.me/cryptoattack24/96796",
+      "quote": "2. За последние 2 дня t1fXjw вывел с бирж 7 081 #ZEC ($10,29 млн);\n",
+      "span": [
+        88,
+        155
+      ],
+      "publication_id": "telegram:11:96796"
+    },
+    {
+      "id": "telegram:11:96796#s3",
+      "url": "https://t.me/cryptoattack24/96796",
+      "quote": "3. t1YLeD вывел с бирж 5 818 #ZEC ($8,45 млн);\n",
+      "span": [
+        155,
+        202
+      ],
+      "publication_id": "telegram:11:96796"
+    },
+    {
+      "id": "telegram:11:96809#s0",
+      "url": "https://t.me/cryptoattack24/96809",
+      "quote": "🤔 #ZEC Управляющий партнер Dragonfly предложил свернуть деятельность фонда разработчиков Zcash, утверждая, что фонд достаточно велик, чтобы финансировать оставшуюся работу над Zcash, и что он рискует быть «политизированным». cointelegraph",
+      "span": [
+        0,
+        238
+      ],
+      "publication_id": "telegram:11:96809"
+    },
+    {
+      "id": "telegram:15:423328#s5",
+      "url": "https://t.me/WEB3_AGGREGATOR/423328",
+      "quote": "👨‍💻 #ZEC Управляющий партнер Dragonfly предложил свернуть деятельность фонда разработчиков Zcash",
+      "span": [
+        429,
+        525
+      ],
+      "publication_id": "telegram:15:423328"
+    },
+    {
+      "id": "telegram:18:31503#s5",
+      "url": "https://t.me/crypto_hd/31503",
+      "quote": "➤ Киты активно накапливают ZEC. Четыре новых кошелька вывели с Binance и других бирж 32,293 ZEC (~$46,2m).\n\n",
+      "span": [
+        528,
+        636
+      ],
+      "publication_id": "telegram:18:31503"
+    },
+    {
+      "id": "telegram:9:1041046#s0",
+      "url": "https://t.me/marketfeed/1041046",
+      "quote": "ZCASH TARGETS NOVEMBER UPGRADE TO MAKE PRIVATE PAYMENTS UP TO THREE TIMES FASTER ...",
+      "span": [
+        0,
+        84
+      ],
+      "publication_id": "telegram:9:1041046"
+    },
+    {
+      "id": "telegram:15:423299#s2",
+      "url": "https://t.me/WEB3_AGGREGATOR/423299",
+      "quote": "3333 supply \nZEC Blockchain\nMint price TBD",
+      "span": [
+        74,
+        116
+      ],
+      "publication_id": "telegram:15:423299"
+    },
+    {
+      "id": "telegram:15:423300#s1",
+      "url": "https://t.me/WEB3_AGGREGATOR/423300",
+      "quote": "что-то мимо меня вчера инфа прошла, да и я чет ток в ZEC погрузился, но вот инфа -> ТЫК",
+      "span": [
+        33,
+        120
+      ],
+      "publication_id": "telegram:15:423300"
+    },
+    {
+      "id": "telegram:15:423315#s1",
+      "url": "https://t.me/WEB3_AGGREGATOR/423315",
+      "quote": "😐 В связи с большим количеством минтов на чейне Zcash, остро стал вопрос депа в саму сеть. Поэтому расписываю 1 раз, чтобы к этому не возвращаться ✏️",
+      "span": [
+        48,
+        197
+      ],
+      "publication_id": "telegram:15:423315"
+    },
+    {
+      "id": "telegram:15:423316#s0",
+      "url": "https://t.me/WEB3_AGGREGATOR/423316",
+      "quote": "🔥 Zcash в ТОП-10: ренессанс приватности или сквиз шортистов?",
+      "span": [
+        0,
+        60
+      ],
+      "publication_id": "telegram:15:423316"
+    },
+    {
+      "id": "telegram:15:423316#s1",
+      "url": "https://t.me/WEB3_AGGREGATOR/423316",
+      "quote": "ZEC разогнался до ~$1463, влетел на #9 по капитализации (~$24.8 млрд) и пробивал $1500. За месяц +160%, за год почти в 26X (+~2500%).",
+      "span": [
+        62,
+        195
+      ],
+      "publication_id": "telegram:15:423316"
+    },
+    {
+      "id": "telegram:15:423316#s3",
+      "url": "https://t.me/WEB3_AGGREGATOR/423316",
+      "quote": "За сутки по ZEC ликвидировали позиций на >$55 млн, из них ~$49 млн — короткие. Самый громкий «погорелец» — кит Гаррет Джин, которого ончейн-детективы связывают с биржей BitForex: шорт на ~$51–54 млн с плечом 3x, ликвидация на $2631, нереализованный убыток ~$26–30 млн.",
+      "span": [
+        382,
+        650
+      ],
+      "publication_id": "telegram:15:423316"
+    },
+    {
+      "id": "telegram:15:423316#s5",
+      "url": "https://t.me/WEB3_AGGREGATOR/423316",
+      "quote": "Мэтт Хуанг, сооснователь фонда Paradigm, назвал Zec «приватным дополнением к BTC» и раскрыл, что фирма инвестировала в лабораторию разработки Zcash (ZODL) и держит $ZEC.",
+      "span": [
+        835,
+        1004
+      ],
+      "publication_id": "telegram:15:423316"
+    },
+    {
+      "id": "telegram:15:423316#s9",
+      "url": "https://t.me/WEB3_AGGREGATOR/423316",
+      "quote": "Ровно также $ZEC улетал вертикально на старте в 2016-м: мало монет в обороте рисуют 🐂«up only» на пустом стакане.",
+      "span": [
+        1804,
+        1917
+      ],
+      "publication_id": "telegram:15:423316"
+    },
+    {
+      "id": "telegram:15:423320#s2",
+      "url": "https://t.me/WEB3_AGGREGATOR/423320",
+      "quote": "В Bitx на данный момент мы можем заполнить WL-форму на дроп. Переходим по ссылке, выполняем квесты и оставляем ZEC кошелек.",
+      "span": [
+        35,
+        158
+      ],
+      "publication_id": "telegram:15:423320"
+    },
+    {
+      "id": "telegram:15:423323#s0",
+      "url": "https://t.me/WEB3_AGGREGATOR/423323",
+      "quote": "DownOnly: 38 Обсуждаем ZEC-мету / WOW Forever",
+      "span": [
+        0,
+        45
+      ],
+      "publication_id": "telegram:15:423323"
+    },
+    {
+      "id": "telegram:15:423323#s3",
+      "url": "https://t.me/WEB3_AGGREGATOR/423323",
+      "quote": "В этот раз записали в нашем приватном Discord, так что были гости и пришел Костя с канала NFT Alerts с которым обсудили ZEC мету",
+      "span": [
+        222,
+        350
+      ],
+      "publication_id": "telegram:15:423323"
+    },
+    {
+      "id": "telegram:18:31511#s3",
+      "url": "https://t.me/crypto_hd/31511",
+      "quote": "Ранее: сделка по ZEC",
+      "span": [
+        299,
+        319
+      ],
+      "publication_id": "telegram:18:31511"
+    },
+    {
+      "id": "telegram:15:423324#s9",
+      "url": "https://t.me/WEB3_AGGREGATOR/423324",
+      "quote": "🤪 $NET - По сути, казиныч, за который топит Ансем, а у него попадание почти во все за последний год - VVV, ZEC, HYPE - все на ath. Обещают сейчс за стейкинг $NET 10.000% apy",
+      "span": [
+        2037,
+        2210
+      ],
+      "publication_id": "telegram:15:423324"
+    },
+    {
+      "id": "telegram:9:1041289#s23",
+      "url": "https://t.me/marketfeed/1041289",
+      "quote": "• Binance / Zcash — WSJ said Lagarde helped block Binance’s Europe push; Zcash targets a November privacy-payments upgrade.",
+      "span": [
+        2185,
+        2308
+      ],
+      "publication_id": "telegram:9:1041289"
+    },
+    {
+      "id": "telegram:6:2431#s2",
+      "url": "https://t.me/icodrops_sergey/2431",
+      "quote": "Реально обновляют хаи те, кто показывают результаты деятельности, а не просто обещают (пластичные кормушки - HYPE, PUMP, LIGHTER, VENICE) и топы влияния - ZEC",
+      "span": [
+        249,
+        407
+      ],
+      "publication_id": "telegram:6:2431"
+    },
+    {
+      "id": "telegram:15:423344#s2",
+      "url": "https://t.me/WEB3_AGGREGATOR/423344",
+      "quote": "Реально обновляют хаи те, кто показывают результаты деятельности, а не просто обещают (пластичные кормушки - HYPE, PUMP, LIGHTER, VENICE) и топы влияния - ZEC",
+      "span": [
+        249,
+        407
+      ],
+      "publication_id": "telegram:15:423344"
+    },
+    {
+      "id": "telegram:1:7146#s3",
+      "url": "https://t.me/whitelist1/7146",
+      "quote": "🔘Подаем заявку в WL новой коллекции Zaddr (необходимо подключить X). Минт уже 21 сентября, mint price: 0.02 zec, 2,800 NFTs.",
+      "span": [
+        414,
+        538
+      ],
+      "publication_id": "telegram:1:7146"
+    },
+    {
+      "id": "telegram:15:423337#s4",
+      "url": "https://t.me/WEB3_AGGREGATOR/423337",
+      "quote": "3 giveaways on X:\none on zec\ntwo\nthree",
+      "span": [
+        135,
+        173
+      ],
+      "publication_id": "telegram:15:423337"
+    },
+    {
+      "id": "telegram:11:96824#s4",
+      "url": "https://t.me/cryptoattack24/96824",
+      "quote": "– крупный инвестор перевел #ZEC на сумму >362 млн $ спустя 10 месяцев бездействия (на тот момент стоимость токенов составляла ~163 млн $), после чего почти половину токенов перевёл на Coinbase.",
+      "span": [
+        306,
+        499
+      ],
+      "publication_id": "telegram:11:96824"
+    },
+    {
+      "id": "telegram:12:4873#s0",
+      "url": "https://t.me/Defiscamcheck/4873",
+      "quote": "Гарретт Буллиш (в убытке на $35М по шорту Zec на Hyperliquid) показал свой спот адрес Zec",
+      "span": [
+        0,
+        89
+      ],
+      "publication_id": "telegram:12:4873"
+    },
+    {
+      "id": "telegram:15:423360#s0",
+      "url": "https://t.me/WEB3_AGGREGATOR/423360",
+      "quote": "Гарретт Буллиш (в убытке на $35М по шорту Zec на Hyperliquid) показал свой спот адрес Zec",
+      "span": [
+        0,
+        89
+      ],
+      "publication_id": "telegram:15:423360"
+    },
+    {
+      "id": "telegram:12:4873#s2",
+      "url": "https://t.me/Defiscamcheck/4873",
+      "quote": "Zec адрес: t1gGCYpyURMo2FcYDSqeR8pgp2Kx9rnT72V",
+      "span": [
+        210,
+        256
+      ],
+      "publication_id": "telegram:12:4873"
+    },
+    {
+      "id": "telegram:15:423360#s2",
+      "url": "https://t.me/WEB3_AGGREGATOR/423360",
+      "quote": "Zec адрес: t1gGCYpyURMo2FcYDSqeR8pgp2Kx9rnT72V",
+      "span": [
+        210,
+        256
+      ],
+      "publication_id": "telegram:15:423360"
+    },
+    {
+      "id": "telegram:15:423362#s1",
+      "url": "https://t.me/WEB3_AGGREGATOR/423362",
+      "quote": "начались торги NFTшек zkSnarks на аукционе с бидами по 1.5 $ZEC, торги сейчас идут полным ходом, флур сейчас составляет 2.13 $ZEC. \n\n",
+      "span": [
+        7,
+        140
+      ],
+      "publication_id": "telegram:15:423362"
+    },
+    {
+      "id": "telegram:15:423371#s0",
+      "url": "https://t.me/WEB3_AGGREGATOR/423371",
+      "quote": "BREAKING: DeGods переезжает на Zcash.\n\n",
+      "span": [
+        0,
+        39
+      ],
+      "publication_id": "telegram:15:423371"
+    },
+    {
+      "id": "telegram:15:423375#s0",
+      "url": "https://t.me/WEB3_AGGREGATOR/423375",
+      "quote": "0.3 ZEC Puppets вышли\n\n",
+      "span": [
+        0,
+        23
+      ],
+      "publication_id": "telegram:15:423375"
+    },
+    {
+      "id": "telegram:15:423375#s3",
+      "url": "https://t.me/WEB3_AGGREGATOR/423375",
+      "quote": "Пока ждем Zaddr и оцениваем дальнейшую мету ZEC NFT, выходят они 21 числа 13:00 UTC WL - инфа\n\n",
+      "span": [
+        93,
+        188
+      ],
+      "publication_id": "telegram:15:423375"
+    },
+    {
+      "id": "telegram:15:423379#s9",
+      "url": "https://t.me/WEB3_AGGREGATOR/423379",
+      "quote": "ZecFrogs - NFT-коллекция в сети Zcash с сапплаем 6969 штук. Бесплатный минт пройдёт 21 сентября в 20:00 мск.\n\n",
+      "span": [
+        632,
+        742
+      ],
+      "publication_id": "telegram:15:423379"
+    },
+    {
+      "id": "telegram:15:423189#s3",
+      "url": "https://t.me/WEB3_AGGREGATOR/423189",
+      "quote": "Мне очень не нравится зкеш и его приколы с приватностью, нам не будет видно сколько всего депнули ончейн, и клиринг прайс мы узнаем только с их слов, все это будет в руках команды, фактически они могут сделать что угодно.",
+      "span": [
+        535,
+        756
+      ],
+      "publication_id": "telegram:15:423189"
+    },
+    {
+      "id": "telegram:15:423204#s8",
+      "url": "https://t.me/WEB3_AGGREGATOR/423204",
+      "quote": "- отсутствие понимания, как именно будут минтиться нфтшки, ведь на Zcash нет подобной ординалсам\\инскрипциям механики как на битке",
+      "span": [
+        399,
+        529
+      ],
+      "publication_id": "telegram:15:423204"
+    },
+    {
+      "id": "telegram:18:31487#s2",
+      "url": "https://t.me/crypto_hd/31487",
+      "quote": "Часть роста ZEC, как я думаю, обусловлена страхом, что Биткоин стал слишком «закостенелым». Я говорю это как человек, который любит Биткоин.",
+      "span": [
+        104,
+        244
+      ],
+      "publication_id": "telegram:18:31487"
+    },
+    {
+      "id": "telegram:15:423229#s3",
+      "url": "https://t.me/WEB3_AGGREGATOR/423229",
+      "quote": "$ZEC Альфа актив новая фин элита, крче defi развивается, nft развивается, бомжи уже не купят, ибо дорого, крч это бтс для молодых, плюс Уинклвосы, выкупают zec на компанию, как бит-майн баит эфирчик",
+      "span": [
+        592,
+        790
+      ],
+      "publication_id": "telegram:15:423229"
+    },
+    {
+      "id": "telegram:18:31503#s2",
+      "url": "https://t.me/crypto_hd/31503",
+      "quote": "➤ Инсайдер Bitcoin OG выставил ордер на открытие лонга на 2450 BTC (~$190m) по цене $78,000. Также он продал 35,000 ETH ($87,5m) по цене ~$2500 и направил часть средств на увеличение обеспечения убыточного шорта по ZEC. \n\n",
+      "span": [
+        46,
+        268
+      ],
+      "publication_id": "telegram:18:31503"
+    },
+    {
+      "id": "telegram:15:423298#s1",
+      "url": "https://t.me/WEB3_AGGREGATOR/423298",
+      "quote": "Короче, маркетплейс Zecmart запускает минт своей коллекции. Твиттер слабый, но скорее всего не скам, так как Zcash отмечал их у себя на странице, еще в 2023 году. Будет фри минт на 555 NFT, из затрат - только немного $ZEC на комиссию сети. \n\n",
+      "span": [
+        67,
+        309
+      ],
+      "publication_id": "telegram:15:423298"
+    },
+    {
+      "id": "telegram:7:12227#s1",
+      "url": "https://t.me/moni_talks/12227",
+      "quote": "Одним из факторов конечно же стал Innovation Exemption от SEC, которые сказали: \"Мы сами всех отрегулируем, на ближайшие лет 5\".",
+      "span": [
+        110,
+        238
+      ],
+      "publication_id": "telegram:7:12227"
+    },
+    {
+      "id": "telegram:15:423319#s1",
+      "url": "https://t.me/WEB3_AGGREGATOR/423319",
+      "quote": "Одним из факторов конечно же стал Innovation Exemption от SEC, которые сказали: \"Мы сами всех отрегулируем, на ближайшие лет 5\".",
+      "span": [
+        110,
+        238
+      ],
+      "publication_id": "telegram:15:423319"
+    },
+    {
+      "id": "telegram:15:423348#s4",
+      "url": "https://t.me/WEB3_AGGREGATOR/423348",
+      "quote": "$ZEC тем временем 1569",
+      "span": [
+        229,
+        251
+      ],
+      "publication_id": "telegram:15:423348"
+    },
+    {
+      "id": "telegram:18:31517#s2",
+      "url": "https://t.me/crypto_hd/31517",
+      "quote": "Grok 4.6 оказался прав: ZEC король?",
+      "span": [
+        258,
+        293
+      ],
+      "publication_id": "telegram:18:31517"
+    },
+    {
+      "id": "telegram:15:423359#s3",
+      "url": "https://t.me/WEB3_AGGREGATOR/423359",
+      "quote": "$ZEC тем временем собирается походу коснуться $1600...",
+      "span": [
+        94,
+        148
+      ],
+      "publication_id": "telegram:15:423359"
+    },
+    {
+      "id": "https://t.me/icryptocom/8099?comment=188801",
+      "url": "https://t.me/icryptocom/8099?comment=188801",
+      "quote": "Я этого гандона хотел лонговать когда он был по 450... Похуй фомо недозаработал бы баксов 40-50 в любом случае"
+    },
+    {
+      "id": "https://t.me/icodrops_sergey/2426?comment=150547",
+      "url": "https://t.me/icodrops_sergey/2426?comment=150547",
+      "quote": "Фомо уже у всех, ждем отката )"
+    },
+    {
+      "id": "https://t.me/icodrops_sergey/2426?comment=150550",
+      "url": "https://t.me/icodrops_sergey/2426?comment=150550",
+      "quote": "Да какое фомо на около трех иксах. Если он будет 5к стоить, то тогда можно будет говорить о фомоебле"
+    },
+    {
+      "id": "https://t.me/icodrops_sergey/2426?comment=150551",
+      "url": "https://t.me/icodrops_sergey/2426?comment=150551",
+      "quote": "время лонга с хорошим плечом"
+    },
+    {
+      "id": "https://t.me/icodrops_sergey/2426?comment=150552",
+      "url": "https://t.me/icodrops_sergey/2426?comment=150552",
+      "quote": "Скоро шорт зека озолотит поколение.. 😂😂"
+    },
+    {
+      "id": "https://t.me/icodrops_sergey/2426?comment=150556",
+      "url": "https://t.me/icodrops_sergey/2426?comment=150556",
+      "quote": "Серёга первый раз купил по 150 и он падал до 125"
+    },
+    {
+      "id": "https://t.me/icodrops_sergey/2426?comment=150557",
+      "url": "https://t.me/icodrops_sergey/2426?comment=150557",
+      "quote": "12 иксов от дна"
+    },
+    {
+      "id": "https://t.me/rawa_imagination/21112?comment=343092",
+      "url": "https://t.me/rawa_imagination/21112?comment=343092",
+      "quote": "Тоже держу ниар. По структуре очень напоминает  zen, zec , ну, по моим параметрам.\n\nПо коинглас наблюдаю все это время. Даже на 15м почти не было продаж спота. Все покупали спот. О"
+    },
+    {
+      "id": "https://t.me/icodrops_sergey/2426?comment=150568",
+      "url": "https://t.me/icodrops_sergey/2426?comment=150568",
+      "quote": "пока всем похуи, есть потенциал на иксы с текуших"
+    },
+    {
+      "id": "https://t.me/icodrops_sergey/2426?comment=150569",
+      "url": "https://t.me/icodrops_sergey/2426?comment=150569",
+      "quote": "Я думаю DASH  тоже себя ещё покажет как младший брат от ZEC"
+    },
+    {
+      "id": "https://t.me/icodrops_sergey/2426?comment=150573",
+      "url": "https://t.me/icodrops_sergey/2426?comment=150573",
+      "quote": "Нам то что с того. Покупать сейчас что бы сделать х2 на $100 ну даже х5 от текущих будет... Это что то поменяет"
+    },
+    {
+      "id": "https://t.me/icodrops_sergey/2426?comment=150574",
+      "url": "https://t.me/icodrops_sergey/2426?comment=150574",
+      "quote": "С этой стороны конечно нет, Серёга просто флексит вином\n\nЯ ответил про фомо на 3 икса, когда их больше 10 уже"
+    }
+  ],
+  "spend_usd": 0.0,
+  "numbers_by": "code",
+  "brief_markdown": "# Pulse (news-first): zec, окно 2026-09-17 – 2026-09-19\n\n## Коротко\n\n- ➤ Кит «t1JhvB» вывел с Binance, OKX и Kraken 15,300 ZEC ($17,9m).\n- 💰 #ZEC >1400$\n- Он шортил ZEC еще в в начале лета, был в плюсе на $20М после слухов о уязвимости в системе шилдинга ZEC, но не зафиксировал прибыль, а удержал позицию.\n- Сообщество Zcash поддержало сокращение времени формирования блока с 75 до 25 секунд.\n- 🤔 #ZEC Управляющий партнер Dragonfly предложил свернуть деятельность фонда разработчиков Zcash, утверждая, что фонд достаточно велик, чтобы финансировать оставшуюся работу над…\n\n## События и заявления\n\n- **Он шортил ZEC еще в в начале лета, был в плюсе на $20М после слухов о уязвимости в системе шилдинга ZEC, но не зафиксировал прибыль, а удержал позицию.**\n  публикации 2, каналы 2, известные авторы 0, первоисточники 0, перепечатки 2, неизвестное происхождение 0.\n  - https://t.me/Defiscamcheck/4871: «Он шортил ZEC еще в в начале лета, был в плюсе на $20М после слухов о уязвимости в системе шилдинга ZEC, но не зафиксировал прибыль, а удержал позицию.»\n  - https://t.me/WEB3_AGGREGATOR/423167: «Он шортил ZEC еще в в начале лета, был в плюсе на $20М после слухов о уязвимости в системе шилдинга ZEC, но не зафиксировал прибыль, а удержал позицию.»\n- **Популярнейший анонимный токен ZEC анонимного проекта ZCash с юридическим офисом в одном квартале от штаб-квартиры ЦРУ в США становится еще анонимнее при цене > $1300 — аналитики**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/markettwits/385132: «Популярнейший анонимный токен ZEC анонимного проекта ZCash с юридическим офисом в одном квартале от штаб-квартиры ЦРУ в США становится еще анонимнее при цене > »\n- **#zec = 1400$ say GM 🏆**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/icryptocom/8099: «#zec = 1400$ say GM 🏆»\n- **➤ Bitcoin OG увеличил шорт по ZEC. Сейчас он шортит 37,760 ZEC ($51,5m) с нереализованным убытком $26m. Цена ликвидации = $2632.**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/crypto_hd/31476: «➤ Bitcoin OG увеличил шорт по ZEC. Сейчас он шортит 37,760 ZEC ($51,5m) с нереализованным убытком $26m. Цена ликвидации = $2632.»\n- **➤ Кит «t1JhvB» вывел с Binance, OKX и Kraken 15,300 ZEC ($17,9m).**\n  публикации 3, каналы 3, известные авторы 0, первоисточники 2, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/crypto_hd/31476: «➤ Кит «t1JhvB» вывел с Binance, OKX и Kraken 15,300 ZEC ($17,9m).»\n  - https://t.me/Defiscamcheck/4873: «Ранее он вывел 202К Zec и фактически его шорт является частично дельта нейтральным (размер спота в разы больше шорта)»\n  - https://t.me/WEB3_AGGREGATOR/423360: «Ранее он вывел 202К Zec и фактически его шорт является частично дельта нейтральным (размер спота в разы больше шорта)»\n- **Хайп аукцион zkSNARKs на зкеше.**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/423189: «Хайп аукцион zkSNARKs на зкеше.»\n- **Автор ничего толкового давно не писал, но сегодня, вроде как, есть повод: весь твиттер гудит по поводу минта нфтшек на Zcash**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/423204: «Автор ничего толкового давно не писал, но сегодня, вроде как, есть повод: весь твиттер гудит по поводу минта нфтшек на Zcash»\n- **⚡️ Сеть Zcash собираются ускорить в 3 раза.**\n  публикации 2, каналы 1, известные авторы 0, первоисточники 1, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/crypto_hd/31484: «⚡️ Сеть Zcash собираются ускорить в 3 раза.»\n  - https://t.me/crypto_hd/31494: «Zcash ускорят в 3 раза (читать)»\n- **Сообщество Zcash поддержало сокращение времени формирования блока с 75 до 25 секунд.**\n  публикации 2, каналы 2, известные авторы 0, первоисточники 0, перепечатки 2, неизвестное происхождение 0.\n  - https://t.me/crypto_hd/31484: «Сообщество Zcash поддержало сокращение времени формирования блока с 75 до 25 секунд.»\n  - https://t.me/markettwits/385234: «Сообщество ZCash проголосовало за ускорение формирования блоков в сети в 3 раза -  до 25 сек!»\n- **Чтобы эмиссия ZEC не изменилась, при сокращении времени блока награду за каждый отдельный блок также уменьшат примерно в 3 раза. Изменения пока не запущены – их еще предстоит…**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/crypto_hd/31484: «Чтобы эмиссия ZEC не изменилась, при сокращении времени блока награду за каждый отдельный блок также уменьшат примерно в 3 раза. Изменения пока не запущены – их»\n- **💰 #ZEC >1400$**\n  публикации 3, каналы 3, известные авторы 0, первоисточники 0, перепечатки 3, неизвестное происхождение 0.\n  - https://t.me/cryptoattack24/96789: «💰 #ZEC >1400$»\n  - https://t.me/markettwits/385255: «💥✴️#ZEC > $1500»\n  - https://t.me/crypto_hd/31488: «😳 #ZEC в моменте > $1500.»\n- **👍 Курс Zcash обновил 10-летний максимум выше $1400.**\n  публикации 2, каналы 1, известные авторы 0, первоисточники 0, перепечатки 2, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/423225: «👍 Курс Zcash обновил 10-летний максимум выше $1400.»\n  - https://t.me/WEB3_AGGREGATOR/423243: «👍 Курс Zcash обновил 10-летний максимум выше $1400.»\n- **🙁 Инсайдер Гаррет Джин сейчас в минусе почти на -$30,000,000 по своему шорту с ZEC.**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/crypto_hd/31486: «🙁 Инсайдер Гаррет Джин сейчас в минусе почти на -$30,000,000 по своему шорту с ZEC.»\n- **А тут вдобавок еще $ZEC ATH пишет...**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/423236: «А тут вдобавок еще $ZEC ATH пишет...»\n- **ZEC уже 9 позиция в ТОПе крипты**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/icodrops_sergey/2426: «ZEC уже 9 позиция в ТОПе крипты»\n- **Leo is up 1.6m from his ZEC long and bought more of $worth and I know i sold the bottom like a chud so i reaped here**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/PowsGemCalls/49106: «Leo is up 1.6m from his ZEC long and bought more of $worth and I know i sold the bottom like a chud so i reaped here»\n- **Лудоманы с Polymarket ожидают #ZEC выше $2000 до конца 2026 года.**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/crypto_hd/31490: «Лудоманы с Polymarket ожидают #ZEC выше $2000 до конца 2026 года.»\n- **Списочек NFT на $ZEC**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/423248: «Списочек NFT на $ZEC»\n- **Памп #ZEC**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/423250: «Памп #ZEC»\n- **Идея с отработкой классической фигуры ТА «чашка с ручкой» на ZEC (с целью в $3100+).**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/crypto_hd/31493: «Идея с отработкой классической фигуры ТА «чашка с ручкой» на ZEC (с целью в $3100+).»\n- **Рост Zcash (читать)**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/crypto_hd/31494: «Рост Zcash (читать)»\n- **CEO StarkWare о ZEC (читать)**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/crypto_hd/31494: «CEO StarkWare о ZEC (читать)»\n- **Прогноз по ZEC (читать)**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/crypto_hd/31494: «Прогноз по ZEC (читать)»\n- **Влажные мечты - ZEC (читать)**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/crypto_hd/31494: «Влажные мечты - ZEC (читать)»\n- **Заполняем WL на дроп токена от проекта Bitx. Обещают чето типа стандарта brc-20 на битке только для ZEC и дроп токенов тем кто заполнил влку.**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/423256: «Заполняем WL на дроп токена от проекта Bitx. Обещают чето типа стандарта brc-20 на битке только для ZEC и дроп токенов тем кто заполнил влку.»\n- **Но шорт по #ZEC уничтожил всю его прибыль, и сейчас он находится на грани ликвидации.**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/cryptoattack24/96794: «Но шорт по #ZEC уничтожил всю его прибыль, и сейчас он находится на грани ликвидации.»\n- **Его шорт на 12 285 #ZEC ($18,31 млн) сейчас приносит убыток в размере $7,66 млн.**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/cryptoattack24/96794: «Его шорт на 12 285 #ZEC ($18,31 млн) сейчас приносит убыток в размере $7,66 млн.»\n- **🔍 Новые кошельки накапливают #ZEC:**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/cryptoattack24/96796: «🔍 Новые кошельки накапливают #ZEC:\n»\n- **1. t1UcyM вывел 15 860 #ZEC ($22,69 млн) с Binance;**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/cryptoattack24/96796: «1. t1UcyM вывел 15 860 #ZEC ($22,69 млн) с Binance;\n»\n- **2. За последние 2 дня t1fXjw вывел с бирж 7 081 #ZEC ($10,29 млн);**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/cryptoattack24/96796: «2. За последние 2 дня t1fXjw вывел с бирж 7 081 #ZEC ($10,29 млн);\n»\n- **3. t1YLeD вывел с бирж 5 818 #ZEC ($8,45 млн);**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/cryptoattack24/96796: «3. t1YLeD вывел с бирж 5 818 #ZEC ($8,45 млн);\n»\n- **🤔 #ZEC Управляющий партнер Dragonfly предложил свернуть деятельность фонда разработчиков Zcash, утверждая, что фонд достаточно велик, чтобы финансировать оставшуюся работу над…**\n  публикации 2, каналы 2, известные авторы 0, первоисточники 0, перепечатки 2, неизвестное происхождение 0.\n  - https://t.me/cryptoattack24/96809: «🤔 #ZEC Управляющий партнер Dragonfly предложил свернуть деятельность фонда разработчиков Zcash, утверждая, что фонд достаточно велик, чтобы финансировать оставш»\n  - https://t.me/WEB3_AGGREGATOR/423328: «👨‍💻 #ZEC Управляющий партнер Dragonfly предложил свернуть деятельность фонда разработчиков Zcash»\n- **➤ Киты активно накапливают ZEC. Четыре новых кошелька вывели с Binance и других бирж 32,293 ZEC (~$46,2m).**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/crypto_hd/31503: «➤ Киты активно накапливают ZEC. Четыре новых кошелька вывели с Binance и других бирж 32,293 ZEC (~$46,2m).\n\n»\n- **ZCASH TARGETS NOVEMBER UPGRADE TO MAKE PRIVATE PAYMENTS UP TO THREE TIMES FASTER ...**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/marketfeed/1041046: «ZCASH TARGETS NOVEMBER UPGRADE TO MAKE PRIVATE PAYMENTS UP TO THREE TIMES FASTER ...»\n- **3333 supply **\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 0, неизвестное происхождение 1.\n  - https://t.me/WEB3_AGGREGATOR/423299: «3333 supply \nZEC Blockchain\nMint price TBD»\n- **что-то мимо меня вчера инфа прошла, да и я чет ток в ZEC погрузился, но вот инфа -> ТЫК**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/423300: «что-то мимо меня вчера инфа прошла, да и я чет ток в ZEC погрузился, но вот инфа -> ТЫК»\n- **😐 В связи с большим количеством минтов на чейне Zcash, остро стал вопрос депа в саму сеть. Поэтому расписываю 1 раз, чтобы к этому не возвращаться ✏️**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/423315: «😐 В связи с большим количеством минтов на чейне Zcash, остро стал вопрос депа в саму сеть. Поэтому расписываю 1 раз, чтобы к этому не возвращаться ✏️»\n- **🔥 Zcash в ТОП-10: ренессанс приватности или сквиз шортистов?**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/423316: «🔥 Zcash в ТОП-10: ренессанс приватности или сквиз шортистов?»\n- **ZEC разогнался до ~$1463, влетел на #9 по капитализации (~$24.8 млрд) и пробивал $1500. За месяц +160%, за год почти в 26X (+~2500%).**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/423316: «ZEC разогнался до ~$1463, влетел на #9 по капитализации (~$24.8 млрд) и пробивал $1500. За месяц +160%, за год почти в 26X (+~2500%).»\n- **За сутки по ZEC ликвидировали позиций на >$55 млн, из них ~$49 млн — короткие. Самый громкий «погорелец» — кит Гаррет Джин, которого ончейн-детективы связывают с биржей BitForex…**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/423316: «За сутки по ZEC ликвидировали позиций на >$55 млн, из них ~$49 млн — короткие. Самый громкий «погорелец» — кит Гаррет Джин, которого ончейн-детективы связывают »\n- **Мэтт Хуанг, сооснователь фонда Paradigm, назвал Zec «приватным дополнением к BTC» и раскрыл, что фирма инвестировала в лабораторию разработки Zcash (ZODL) и держит $ZEC.**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/423316: «Мэтт Хуанг, сооснователь фонда Paradigm, назвал Zec «приватным дополнением к BTC» и раскрыл, что фирма инвестировала в лабораторию разработки Zcash (ZODL) и дер»\n- **Ровно также $ZEC улетал вертикально на старте в 2016-м: мало монет в обороте рисуют 🐂«up only» на пустом стакане.**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/423316: «Ровно также $ZEC улетал вертикально на старте в 2016-м: мало монет в обороте рисуют 🐂«up only» на пустом стакане.»\n- **В Bitx на данный момент мы можем заполнить WL-форму на дроп. Переходим по ссылке, выполняем квесты и оставляем ZEC кошелек.**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/423320: «В Bitx на данный момент мы можем заполнить WL-форму на дроп. Переходим по ссылке, выполняем квесты и оставляем ZEC кошелек.»\n- **DownOnly: 38 Обсуждаем ZEC-мету / WOW Forever**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/423323: «DownOnly: 38 Обсуждаем ZEC-мету / WOW Forever»\n- **В этот раз записали в нашем приватном Discord, так что были гости и пришел Костя с канала NFT Alerts с которым обсудили ZEC мету**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/423323: «В этот раз записали в нашем приватном Discord, так что были гости и пришел Костя с канала NFT Alerts с которым обсудили ZEC мету»\n- **Ранее: сделка по ZEC**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/crypto_hd/31511: «Ранее: сделка по ZEC»\n- **🤪 $NET - По сути, казиныч, за который топит Ансем, а у него попадание почти во все за последний год - VVV, ZEC, HYPE - все на ath. Обещают сейчс за стейкинг $NET 10.000% apy**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/423324: «🤪 $NET - По сути, казиныч, за который топит Ансем, а у него попадание почти во все за последний год - VVV, ZEC, HYPE - все на ath. Обещают сейчс за стейкинг $NE»\n- **• Binance / Zcash — WSJ said Lagarde helped block Binance’s Europe push; Zcash targets a November privacy-payments upgrade.**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/marketfeed/1041289: «• Binance / Zcash — WSJ said Lagarde helped block Binance’s Europe push; Zcash targets a November privacy-payments upgrade.»\n- **Реально обновляют хаи те, кто показывают результаты деятельности, а не просто обещают (пластичные кормушки - HYPE, PUMP, LIGHTER, VENICE) и топы влияния - ZEC**\n  публикации 2, каналы 2, известные авторы 0, первоисточники 2, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/icodrops_sergey/2431: «Реально обновляют хаи те, кто показывают результаты деятельности, а не просто обещают (пластичные кормушки - HYPE, PUMP, LIGHTER, VENICE) и топы влияния - ZEC»\n  - https://t.me/WEB3_AGGREGATOR/423344: «Реально обновляют хаи те, кто показывают результаты деятельности, а не просто обещают (пластичные кормушки - HYPE, PUMP, LIGHTER, VENICE) и топы влияния - ZEC»\n- **🔘Подаем заявку в WL новой коллекции Zaddr (необходимо подключить X). Минт уже 21 сентября, mint price: 0.02 zec, 2,800 NFTs.**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/whitelist1/7146: «🔘Подаем заявку в WL новой коллекции Zaddr (необходимо подключить X). Минт уже 21 сентября, mint price: 0.02 zec, 2,800 NFTs.»\n- **3 giveaways on X:**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 1, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/423337: «3 giveaways on X:\none on zec\ntwo\nthree»\n- **– крупный инвестор перевел #ZEC на сумму >362 млн $ спустя 10 месяцев бездействия (на тот момент стоимость токенов составляла ~163 млн $), после чего почти половину токенов перевёл…**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/cryptoattack24/96824: «– крупный инвестор перевел #ZEC на сумму >362 млн $ спустя 10 месяцев бездействия (на тот момент стоимость токенов составляла ~163 млн $), после чего почти поло»\n- **Гарретт Буллиш (в убытке на $35М по шорту Zec на Hyperliquid) показал свой спот адрес Zec**\n  публикации 2, каналы 2, известные авторы 0, первоисточники 2, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/Defiscamcheck/4873: «Гарретт Буллиш (в убытке на $35М по шорту Zec на Hyperliquid) показал свой спот адрес Zec»\n  - https://t.me/WEB3_AGGREGATOR/423360: «Гарретт Буллиш (в убытке на $35М по шорту Zec на Hyperliquid) показал свой спот адрес Zec»\n- **Zec адрес: t1gGCYpyURMo2FcYDSqeR8pgp2Kx9rnT72V**\n  публикации 2, каналы 2, известные авторы 0, первоисточники 2, перепечатки 0, неизвестное происхождение 0.\n  - https://t.me/Defiscamcheck/4873: «Zec адрес: t1gGCYpyURMo2FcYDSqeR8pgp2Kx9rnT72V»\n  - https://t.me/WEB3_AGGREGATOR/423360: «Zec адрес: t1gGCYpyURMo2FcYDSqeR8pgp2Kx9rnT72V»\n- **начались торги NFTшек zkSnarks на аукционе с бидами по 1.5 $ZEC, торги сейчас идут полным ходом, флур сейчас составляет 2.13 $ZEC.**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 0, неизвестное происхождение 1.\n  - https://t.me/WEB3_AGGREGATOR/423362: «начались торги NFTшек zkSnarks на аукционе с бидами по 1.5 $ZEC, торги сейчас идут полным ходом, флур сейчас составляет 2.13 $ZEC. \n\n»\n- **BREAKING: DeGods переезжает на Zcash.**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 0, неизвестное происхождение 1.\n  - https://t.me/WEB3_AGGREGATOR/423371: «BREAKING: DeGods переезжает на Zcash.\n\n»\n- **0.3 ZEC Puppets вышли**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 0, неизвестное происхождение 1.\n  - https://t.me/WEB3_AGGREGATOR/423375: «0.3 ZEC Puppets вышли\n\n»\n- **Пока ждем Zaddr и оцениваем дальнейшую мету ZEC NFT, выходят они 21 числа 13:00 UTC WL - инфа**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 0, неизвестное происхождение 1.\n  - https://t.me/WEB3_AGGREGATOR/423375: «Пока ждем Zaddr и оцениваем дальнейшую мету ZEC NFT, выходят они 21 числа 13:00 UTC WL - инфа\n\n»\n- **ZecFrogs - NFT-коллекция в сети Zcash с сапплаем 6969 штук. Бесплатный минт пройдёт 21 сентября в 20:00 мск.**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 0, неизвестное происхождение 1.\n  - https://t.me/WEB3_AGGREGATOR/423379: «ZecFrogs - NFT-коллекция в сети Zcash с сапплаем 6969 штук. Бесплатный минт пройдёт 21 сентября в 20:00 мск.\n\n»\n\n## Кто распространяет информацию и какие позиции\n\n- Мне очень не нравится зкеш и его приколы с приватностью, нам не будет видно сколько всего депнули ончейн, и клиринг прайс мы узнаем только с их слов, все это будет в руках команды, фактически они могут сделать что угодно.\n  https://t.me/WEB3_AGGREGATOR/423189\n- - отсутствие понимания, как именно будут минтиться нфтшки, ведь на Zcash нет подобной ординалсам\\инскрипциям механики как на битке\n  https://t.me/WEB3_AGGREGATOR/423204\n- Часть роста ZEC, как я думаю, обусловлена страхом, что Биткоин стал слишком «закостенелым». Я говорю это как человек, который любит Биткоин.\n  https://t.me/crypto_hd/31487\n- $ZEC Альфа актив новая фин элита, крче defi развивается, nft развивается, бомжи уже не купят, ибо дорого, крч это бтс для молодых, плюс Уинклвосы, выкупают zec на компанию, как бит-майн баит эфирчик\n  https://t.me/WEB3_AGGREGATOR/423229\n\n## Вопросы, аргументы и опыт участников\n\n- Я этого гандона хотел лонговать когда он был по 450... Похуй фомо недозаработал бы баксов 40-50 в любом случае\n  основание: реплика к посту с одним событием по теме и тому же предмету\n  https://t.me/icryptocom/8099?comment=188801\n- Фомо уже у всех, ждем отката )\n  основание: реплика к посту с одним событием по теме и тому же предмету\n  https://t.me/icodrops_sergey/2426?comment=150547\n- Да какое фомо на около трех иксах. Если он будет 5к стоить, то тогда можно будет говорить о фомоебле\n  основание: реплика к посту с одним событием по теме и тому же предмету\n  https://t.me/icodrops_sergey/2426?comment=150550\n- время лонга с хорошим плечом\n  основание: реплика к посту с одним событием по теме и тому же предмету\n  https://t.me/icodrops_sergey/2426?comment=150551\n- Скоро шорт зека озолотит поколение.. 😂😂\n  основание: реплика к посту с одним событием по теме и тому же предмету\n  https://t.me/icodrops_sergey/2426?comment=150552\n- Серёга первый раз купил по 150 и он падал до 125\n  основание: вопрос или оценка по проекту в целом, не по конкретной новости\n  https://t.me/icodrops_sergey/2426?comment=150556\n- 12 иксов от дна\n  основание: вопрос или оценка по проекту в целом, не по конкретной новости\n  https://t.me/icodrops_sergey/2426?comment=150557\n- Тоже держу ниар. По структуре очень напоминает  zen, zec , ну, по моим параметрам.\n\nПо коинглас наблюдаю все это время. Даже на 15м почти не было продаж спота. Все покупали спот. Он пробил вверх дневные линейные регрессии 100 и 200. И главн\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/rawa_imagination/21112?comment=343092\n- пока всем похуи, есть потенциал на иксы с текуших\n  основание: вопрос или оценка по проекту в целом, не по конкретной новости\n  https://t.me/icodrops_sergey/2426?comment=150568\n- Я думаю DASH  тоже себя ещё покажет как младший брат от ZEC\n  основание: совпадение темы недостаточно, связь со событием не установлена\n  https://t.me/icodrops_sergey/2426?comment=150569\n- Нам то что с того. Покупать сейчас что бы сделать х2 на $100 ну даже х5 от текущих будет... Это что то поменяет\n  основание: реплика к посту с одним событием по теме и тому же предмету\n  https://t.me/icodrops_sergey/2426?comment=150573\n- С этой стороны конечно нет, Серёга просто флексит вином\n\nЯ ответил про фомо на 3 икса, когда их больше 10 уже\n  основание: реплика к посту с одним событием по теме и тому же предмету\n  https://t.me/icodrops_sergey/2426?comment=150574\n\n## Изменения относительно предыдущего периода\n\n- Появившиеся события: 59.\n- Исчезнувшие события: 17.\n- Изменение охвата источников: +1 / −1 каналов.\n- Комментарии в текущем окне: 400.\n\n## Охват и ограничения\n\n- Публикации 2814, комментарии 400, каналы 18.\n- Режим publication_replay: discovered_at в снимке отсутствует, «впервые системой» не заявляется.\n- Роль источника unknown: в базе нет редакционного реестра.\n- Неизвестные авторы не объединяются.\n- Отсечено после cutoff 2026-09-20T00:00:00+00:00: 3951.\n\n## Основания\n\n- https://t.me/Defiscamcheck/4871: «Он шортил ZEC еще в в начале лета, был в плюсе на $20М после слухов о уязвимости в системе шилдинга ZEC, но не зафиксировал прибыль, а удержал позицию.»\n- https://t.me/WEB3_AGGREGATOR/423167: «Он шортил ZEC еще в в начале лета, был в плюсе на $20М после слухов о уязвимости в системе шилдинга ZEC, но не зафиксировал прибыль, а удержал позицию.»\n- https://t.me/markettwits/385132: «Популярнейший анонимный токен ZEC анонимного проекта ZCash с юридическим офисом в одном квартале от штаб-квартиры ЦРУ в США становится еще анонимнее при цене > »\n- https://t.me/icryptocom/8099: «#zec = 1400$ say GM 🏆»\n- https://t.me/crypto_hd/31476: «➤ Bitcoin OG увеличил шорт по ZEC. Сейчас он шортит 37,760 ZEC ($51,5m) с нереализованным убытком $26m. Цена ликвидации = $2632.»\n- https://t.me/crypto_hd/31476: «➤ Кит «t1JhvB» вывел с Binance, OKX и Kraken 15,300 ZEC ($17,9m).»\n- https://t.me/Defiscamcheck/4873: «Ранее он вывел 202К Zec и фактически его шорт является частично дельта нейтральным (размер спота в разы больше шорта)»\n- https://t.me/WEB3_AGGREGATOR/423360: «Ранее он вывел 202К Zec и фактически его шорт является частично дельта нейтральным (размер спота в разы больше шорта)»\n- https://t.me/WEB3_AGGREGATOR/423189: «Хайп аукцион zkSNARKs на зкеше.»\n- https://t.me/WEB3_AGGREGATOR/423204: «Автор ничего толкового давно не писал, но сегодня, вроде как, есть повод: весь твиттер гудит по поводу минта нфтшек на Zcash»\n- https://t.me/crypto_hd/31484: «⚡️ Сеть Zcash собираются ускорить в 3 раза.»\n- https://t.me/crypto_hd/31494: «Zcash ускорят в 3 раза (читать)»\n- https://t.me/crypto_hd/31484: «Сообщество Zcash поддержало сокращение времени формирования блока с 75 до 25 секунд.»\n- https://t.me/markettwits/385234: «Сообщество ZCash проголосовало за ускорение формирования блоков в сети в 3 раза -  до 25 сек!»\n- https://t.me/crypto_hd/31484: «Чтобы эмиссия ZEC не изменилась, при сокращении времени блока награду за каждый отдельный блок также уменьшат примерно в 3 раза. Изменения пока не запущены – их»\n- https://t.me/cryptoattack24/96789: «💰 #ZEC >1400$»\n- https://t.me/markettwits/385255: «💥✴️#ZEC > $1500»\n- https://t.me/crypto_hd/31488: «😳 #ZEC в моменте > $1500.»\n- https://t.me/WEB3_AGGREGATOR/423225: «👍 Курс Zcash обновил 10-летний максимум выше $1400.»\n- https://t.me/WEB3_AGGREGATOR/423243: «👍 Курс Zcash обновил 10-летний максимум выше $1400.»\n",
+  "model": "deepseek/deepseek-v4-flash",
+  "llm": {
+    "calls": 0,
+    "cache_hits": 128,
+    "spent_usd": 0.0,
+    "errors": []
+  }
+}

@@ -1,0 +1,26 @@
+{
+ "a": {
+  "quote": "BlackRock сегодня начал переводить BTC и ETH на биржи - скорее всего, на продажу для клиентов  — мониторинг",
+  "actor": "BlackRock",
+  "action": "started transferring",
+  "object": "ETH",
+  "qualifiers": {
+   "counterparty": "exchanges",
+   "version": "BTC and ETH"
+  },
+  "url": "https://t.me/markettwits/385211"
+ },
+ "b": {
+  "quote": "Вчера общий чистый приток спотовых BTC-ETF составил ~$159,5 млн.",
+  "actor": null,
+  "action": "net inflow",
+  "object": "spot BTC-ETF",
+  "qualifiers": {
+   "version": null,
+   "event_date": "вчера",
+   "place": null,
+   "counterparty": null
+  },
+  "url": "https://t.me/cryptoattack24/96795"
+ }
+}

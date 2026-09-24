@@ -1,0 +1,46 @@
+{
+ "id": "gen-1790184446-2oDG0OapKIGgTL7aG4dA",
+ "object": "chat.completion",
+ "created": 1790184446,
+ "model": "deepseek/deepseek-v4-flash",
+ "provider": "DeepInfra",
+ "system_fingerprint": null,
+ "service_tier": null,
+ "choices": [
+  {
+   "index": 0,
+   "logprobs": null,
+   "finish_reason": "stop",
+   "native_finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "content": "{\"labels\": [{\"id\": \"343090\", \"relevance\": \"unrelated\", \"aspect\": null, \"kind\": \"opinion\", \"summary\": null, \"quote\": null, \"context_ids\": []}, {\"id\": \"343091\", \"relevance\": \"unrelated\", \"aspect\": null, \"kind\": \"other\", \"summary\": null, \"quote\": null, \"context_ids\": []}, {\"id\": \"343092\", \"relevance\": \"relevant\", \"aspect\": \"market\", \"kind\": \"experience\", \"summary\": \"Говорит, что держит NEAR, и по структуре он напоминает ZEC, который он тоже держит, и описывает технический анализ NEAR, сравнивая с ZEC.\", \"quote\": \"Тоже держу ниар. По структуре очень напоминает zen, zec\", \"context_ids\": [\"post\"]}, {\"id\": \"343093\", \"relevance\": \"unrelated\", \"aspect\": null, \"kind\": \"other\", \"summary\": null, \"quote\": null, \"context_ids\": []}, {\"id\": \"343096\", \"relevance\": \"unrelated\", \"aspect\": null, \"kind\": \"other\", \"summary\": null, \"quote\": null, \"context_ids\": []}, {\"id\": \"343099\", \"relevance\": \"unrelated\", \"aspect\": null, \"kind\": \"opinion\", \"summary\": null, \"quote\": null, \"context_ids\": []}, {\"id\": \"343360\", \"relevance\": \"unrelated\", \"aspect\": null, \"kind\": \"other\", \"summary\": null, \"quote\": null, \"context_ids\": []}, {\"id\": \"343361\", \"relevance\": \"unrelated\", \"aspect\": null, \"kind\": \"other\", \"summary\": null, \"quote\": null, \"context_ids\": []}]}",
+    "refusal": null,
+    "reasoning": null
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 1477,
+  "completion_tokens": 406,
+  "total_tokens": 1883,
+  "cost": 0.000169146,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 512,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.000169146,
+   "upstream_inference_prompt_cost": 9.6066e-05,
+   "upstream_inference_completions_cost": 7.308e-05
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

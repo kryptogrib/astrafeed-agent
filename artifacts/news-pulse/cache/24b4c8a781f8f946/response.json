@@ -1,0 +1,32 @@
+{
+ "choices": [
+  {
+   "message": {
+    "content": "{\"labels\": [{\"id\": \"telegram:15:423461#s6\", \"kind\": \"event\", \"actor\": \"Zcash\", \"action\": \"enters top 10 in short liquidations\", \"object\": \"ZEC\", \"qualifiers\": {\"version\": null, \"event_date\": \"2026-09-21\", \"place\": null, \"counterparty\": null}, \"origin\": \"retelling\", \"source_role\": \"editorial\", \"verification_status\": \"unverified\", \"topic_role\": \"subject\", \"quote\": \"Zcash в топ-10 на сжигании шортов — ZEC за месяц +160% и влетел на #9 по капитализации на ликвидации шортов (за сутки сожгли $49 млн коротких) и тонком стакане, где 31% монет заперт в приватных пулах. Фонды и апгрейд реальны, но иксы пока рисует механика рынка, а не приватность.\", \"span\": [0, 299]}]}"
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 1912,
+  "completion_tokens": 2235,
+  "total_tokens": 4147,
+  "cost": 0.00148,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.00148,
+   "upstream_inference_prompt_cost": 0.0003630886424722106,
+   "upstream_inference_completions_cost": 0.0011169113575277894
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

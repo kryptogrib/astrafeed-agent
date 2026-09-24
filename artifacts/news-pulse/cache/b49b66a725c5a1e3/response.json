@@ -1,0 +1,46 @@
+{
+ "id": "gen-1790198511-4yHOdB8sBgAdIrzMgk7D",
+ "object": "chat.completion",
+ "created": 1790198511,
+ "model": "deepseek/deepseek-v4-flash",
+ "provider": "Venice",
+ "system_fingerprint": null,
+ "service_tier": null,
+ "choices": [
+  {
+   "index": 0,
+   "logprobs": null,
+   "finish_reason": "stop",
+   "native_finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "content": "{\"labels\": [{\"id\": \"telegram:11:96794#s2\", \"kind\": \"event\", \"actor\": \"он (некий трейдер)\", \"action\": \"открыл шорт\", \"object\": \"ZEC\", \"qualifiers\": {\"version\": null, \"event_date\": null, \"place\": null, \"counterparty\": null}, \"origin\": \"retelling\", \"source_role\": \"unknown\", \"verification_status\": \"unverified\", \"quote\": \"Его шорт на 12 285 #ZEC ($18,31 млн) сейчас приносит убыток в размере $7,66 млн.\", \"span\": [0, 80]}, {\"id\": \"telegram:11:96796#s0\", \"kind\": \"event\", \"actor\": \"новые кошельки\", \"action\": \"накапливают\", \"object\": \"ZEC\", \"qualifiers\": {\"version\": null, \"event_date\": null, \"place\": null, \"counterparty\": null}, \"origin\": \"retelling\", \"source_role\": \"unknown\", \"verification_status\": \"unverified\", \"quote\": \"🔍 Новые кошельки накапливают #ZEC:\\n\", \"span\": [0, 33]}, {\"id\": \"telegram:11:96796#s2\", \"kind\": \"event\", \"actor\": \"t1fXjw\", \"action\": \"вывел с бирж\", \"object\": \"ZEC\", \"qualifiers\": {\"version\": null, \"event_date\": \"за последние 2 дня\", \"place\": null, \"counterparty\": null}, \"origin\": \"retelling\", \"source_role\": \"unknown\", \"verification_status\": \"unverified\", \"quote\": \"2. За последние 2 дня t1fXjw вывел с бирж 7 081 #ZEC ($10,29 млн);\\n\", \"span\": [0, 63]}, {\"id\": \"telegram:1:7144#s5\", \"kind\": \"promo_service\", \"actor\": \"проект Bitx\", \"action\": \"запускает дроп токена\", \"object\": \"ZEC\", \"qualifiers\": {\"version\": null, \"event_date\": null, \"place\": null, \"counterparty\": null}, \"origin\": \"retelling\", \"source_role\": \"unknown\", \"verification_status\": \"unverified\", \"quote\": \"👍Заполняем WL на дроп токена от проекта Bitx на ZEC. Потребуется выполнить простые задания и ZEC кошелек.\\n\", \"span\": [0, 97]}, {\"id\": \"telegram:15:423274#s3\", \"kind\": \"participant_reaction\", \"actor\": \"я (автор сообщения)\", \"action\": \"имеет статус Pending\", \"object\": \"ZEC проекты\", \"qualifiers\": {\"version\": null, \"event_date\": null, \"place\": null, \"counterparty\": null}, \"origin\": \"own\", \"source_role\": \"participant\", \"verification_status\": \"unverified\", \"quote\": \"У меня Pending на остальных ZEC проектах... \\n\\n\", \"span\": [0, 44]}, {\"id\": \"telegram:11:96809#s0\", \"kind\": \"event\", \"actor\": \"управляющий партнер Dragonfly\", \"action\": \"предложил свернуть деятельность фонда разработчиков Zcash\", \"object\": \"Zcash\", \"qualifiers\": {\"version\": null, \"event_date\": null, \"place\": null, \"counterparty\": null}, \"origin\": \"retelling\", \"source_role\": \"editorial\", \"verification_status\": \"source_statement\", \"quote\": \"🤔 #ZEC Управляющий партнер Dragonfly предложил свернуть деятельность фонда разработчиков Zcash, утверждая, что фонд достаточно велик, чтобы финансировать оставшуюся работу над Zcash, и что он рискует быть «политизированным». cointelegraph\", \"span\": [0, 199]}, {\"id\": \"telegram:18:31503#s2\", \"kind\": \"event\", \"actor\": \"инсайдер Bitcoin OG\", \"action\": \"направил часть средств на увеличение обеспечения убыточного шорта по ZEC\", \"object\": \"ZEC\", \"qualifiers\": {\"version\": null, \"event_date\": null, \"place\": null, \"counterparty\": null}, \"origin\": \"retelling\", \"source_role\": \"unknown\", \"verification_status\": \"unverified\", \"quote\": \"➤ Инсайдер Bitcoin OG выставил ордер на открытие лонга на 2450 BTC (~$190m) по цене $78,000. Также он продал 35,000 ETH ($87,5m) по цене ~$2500 и направил часть средств на увеличение обеспечения убыточного шорта по ZEC. \\n\\n\", \"span\": [0, 233]}, {\"id\": \"telegram:18:31503#s5\", \"kind\": \"event\", \"actor\": \"киты\", \"action\": \"накапливают\", \"object\": \"ZEC\", \"qualifiers\": {\"version\": null, \"event_date\": null, \"place\": null, \"counterparty\": null}, \"origin\": \"retelling\", \"source_role\": \"unknown\", \"verification_status\": \"unverified\", \"quote\": \"➤ Киты активно накапливают ZEC. Четыре новых кошелька вывели с Binance и других бирж 32,293 ZEC (~$46,2m).\\n\\n\", \"span\": [0, 107]}, {\"id\": \"telegram:9:1041046#s0\", \"kind\": \"event\", \"actor\": \"Zcash (проект)\", \"action\": \"планирует ноябрьское обновление\", \"object\": \"Zcash\", \"qualifiers\": {\"version\": null, \"event_date\": \"ноябрь\", \"place\": null, \"counterparty\": null}, \"origin\": \"retelling\", \"source_role\": \"editorial\", \"verification_status\": \"source_statement\", \"quote\": \"ZCASH TARGETS NOVEMBER UPGRADE TO MAKE PRIVATE PAYMENTS UP TO THREE TIMES FASTER ...\", \"span\": [0, 82]}, {\"id\": \"telegram:15:423298#s1\", \"kind\": \"event\", \"actor\": \"маркетплейс Zecmart\", \"action\": \"запускает минт своей коллекции\", \"object\": \"NFT\", \"qualifiers\": {\"version\": null, \"event_date\": null, \"place\": null, \"counterparty\": null}, \"origin\": \"retelling\", \"source_role\": \"unknown\", \"verification_status\": \"unverified\", \"quote\": \"Короче, маркетплейс Zecmart запускает минт своей коллекции. Твиттер слабый, но скорее всего не скам, так как Zcash отмечал их у себя на странице, еще в 2023 году. Будет фри минт на 555 NFT, из затрат - только немного $ZEC на комиссию сети. \\n\\n\", \"span\": [0, 233]}, {\"id\": \"telegram:15:423299#s2\", \"kind\": \"event\", \"actor\": null, \"action\": null, \"object\": null, \"qualifiers\": {}, \"origin\": \"unknown\", \"source_role\": \"unknown\", \"verification_status\": \"unverified\", \"quote\": \"3333 supply \\nZEC Blockchain\\nMint price TBD\\n\\n\", \"span\": [0, 35]}, {\"id\": \"telegram:15:423300#s1\", \"kind\": \"participant_reaction\", \"actor\": \"я (автор сообщения)\", \"action\": \"делится информацией\", \"object\": \"ZEC\", \"qualifiers\": {\"version\": null, \"event_date\": \"вчера\", \"place\": null, \"counterparty\": null}, \"origin\": \"own\", \"source_role\": \"participant\", \"verification_status\": \"unverified\", \"quote\": \"что-то мимо меня вчера инфа прошла, да и я чет ток в ZEC погрузился, но вот инфа -> ТЫК\\n\\n\", \"span\": [0, 82]}]}",
+    "refusal": null,
+    "reasoning": null
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 1905,
+  "completion_tokens": 1885,
+  "total_tokens": 3790,
+  "cost": 0.0005468855,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.0005468855,
+   "upstream_inference_prompt_cost": 0.000184023,
+   "upstream_inference_completions_cost": 0.0003628625
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

@@ -1,0 +1,1682 @@
+{
+ "grouping": "агентская группировка v2, 2026-09-24, по публикуемым наборам v3 после исправления опоры #ZEC (2426 и 21112 — с исправлениями слоя corrections.json); не человеческая, не вывод модели. Заменяет arguments.json, который сохранён без изменений.",
+ "threads": {
+  "21112": {
+   "link": "https://t.me/rawa_imagination/21112",
+   "channel": "rawa_imagination",
+   "comments": 8,
+   "participants": 5,
+   "published": 1,
+   "held": 0,
+   "first": "2026-09-17 19:12:14.000000",
+   "last": "2026-09-18 18:50:57.000000",
+   "first_kept": "2026-09-17 19:12:14.000000",
+   "last_kept": "2026-09-18 18:50:57.000000"
+  },
+  "2426": {
+   "link": "https://t.me/icodrops_sergey/2426",
+   "channel": "icodrops_sergey",
+   "comments": 30,
+   "participants": 22,
+   "published": 23,
+   "held": 0,
+   "first": "2026-09-17 17:59:53.000000",
+   "last": "2026-09-23 08:00:52.000000",
+   "first_kept": "2026-09-17 17:59:53.000000",
+   "last_kept": "2026-09-23 08:00:52.000000"
+  },
+  "2432": {
+   "link": "https://t.me/icodrops_sergey/2432",
+   "channel": "icodrops_sergey",
+   "comments": 11,
+   "participants": 10,
+   "published": 1,
+   "held": 0,
+   "first": "2026-09-22 12:11:01.000000",
+   "last": "2026-09-23 05:40:16.000000",
+   "first_kept": "2026-09-22 12:11:01.000000",
+   "last_kept": "2026-09-23 05:40:16.000000"
+  },
+  "5299": {
+   "link": "https://t.me/don_invest/5299",
+   "channel": "don_invest",
+   "comments": 28,
+   "participants": 10,
+   "published": 26,
+   "held": 1,
+   "first": "2026-09-21 08:38:24.000000",
+   "last": "2026-09-21 15:07:06.000000",
+   "first_kept": "2026-09-21 08:38:24.000000",
+   "last_kept": "2026-09-21 15:07:06.000000"
+  },
+  "7130": {
+   "link": "https://t.me/whitelist1/7130",
+   "channel": "whitelist1",
+   "comments": 12,
+   "participants": 9,
+   "published": 0,
+   "held": 0,
+   "first": "2026-09-11 12:05:04.000000",
+   "last": "2026-09-12 12:56:11.000000",
+   "first_kept": "2026-09-11 12:05:04.000000",
+   "last_kept": "2026-09-12 12:56:11.000000"
+  },
+  "7149": {
+   "link": "https://t.me/whitelist1/7149",
+   "channel": "whitelist1",
+   "comments": 57,
+   "participants": 13,
+   "published": 25,
+   "held": 6,
+   "first": "2026-09-20 12:50:00.000000",
+   "last": "2026-09-21 17:40:24.000000",
+   "first_kept": "2026-09-20 12:50:00.000000",
+   "last_kept": "2026-09-21 17:40:24.000000"
+  },
+  "7150": {
+   "link": "https://t.me/whitelist1/7150",
+   "channel": "whitelist1",
+   "comments": 9,
+   "participants": 7,
+   "published": 0,
+   "held": 0,
+   "first": "2026-09-21 07:03:50.000000",
+   "last": "2026-09-21 09:24:51.000000",
+   "first_kept": "2026-09-21 07:03:50.000000",
+   "last_kept": "2026-09-21 09:24:51.000000"
+  },
+  "7151": {
+   "link": "https://t.me/whitelist1/7151",
+   "channel": "whitelist1",
+   "comments": 20,
+   "participants": 11,
+   "published": 14,
+   "held": 1,
+   "first": "2026-09-21 10:30:23.000000",
+   "last": "2026-09-21 19:33:17.000000",
+   "first_kept": "2026-09-21 10:30:23.000000",
+   "last_kept": "2026-09-21 19:33:17.000000"
+  },
+  "7152": {
+   "link": "https://t.me/whitelist1/7152",
+   "channel": "whitelist1",
+   "comments": 22,
+   "participants": 6,
+   "published": 1,
+   "held": 1,
+   "first": "2026-09-22 07:01:07.000000",
+   "last": "2026-09-22 11:28:54.000000",
+   "first_kept": "2026-09-22 07:01:07.000000",
+   "last_kept": "2026-09-22 11:28:54.000000"
+  }
+ },
+ "window": [
+  "2026-09-17 17:59:53.000000",
+  "2026-09-23 07:59:43.000000"
+ ],
+ "unassigned_published": [],
+ "units": [
+  {
+   "key": "forecast_20k",
+   "type": "opinion",
+   "title": "Прогноз 20k, «но не сразу»",
+   "ids": [
+    "2426/150563"
+   ],
+   "direction": "up",
+   "subject": "Цена и стадия роста",
+   "comments": 1,
+   "authors": 1,
+   "threads": 1,
+   "channels": 1,
+   "links": [
+    "https://t.me/icodrops_sergey/2426?comment=150563"
+   ],
+   "ts": [
+    "2026-09-17 18:54:01.000000"
+   ]
+  },
+  {
+   "key": "forecast_70k",
+   "type": "opinion",
+   "title": "«70к вполне реально», ждать долго; чья цена — спорно",
+   "ids": [
+    "2426/150564"
+   ],
+   "direction": "up",
+   "subject": "Цена и стадия роста",
+   "comments": 1,
+   "authors": 1,
+   "threads": 1,
+   "channels": 1,
+   "links": [
+    "https://t.me/icodrops_sergey/2426?comment=150564"
+   ],
+   "ts": [
+    "2026-09-17 19:00:51.000000"
+   ]
+  },
+  {
+   "key": "conditional_privacy",
+   "type": "argument",
+   "title": "Рост при условии, что рынок уйдёт в приватность, а ZEC поведёт (условие к 70к)",
+   "ids": [
+    "2426/150566"
+   ],
+   "direction": "up",
+   "subject": "Цена и стадия роста",
+   "comments": 1,
+   "authors": 1,
+   "threads": 1,
+   "channels": 1,
+   "links": [
+    "https://t.me/icodrops_sergey/2426?comment=150566"
+   ],
+   "ts": [
+    "2026-09-17 19:07:24.000000"
+   ]
+  },
+  {
+   "key": "fomo_later",
+   "type": "argument",
+   "title": "На ~3 иксах FOMO нет, начнётся к 5k",
+   "ids": [
+    "2426/150550"
+   ],
+   "direction": "up",
+   "subject": "Цена и стадия роста",
+   "comments": 1,
+   "authors": 1,
+   "threads": 1,
+   "channels": 1,
+   "links": [
+    "https://t.me/icodrops_sergey/2426?comment=150550"
+   ],
+   "ts": [
+    "2026-09-17 18:03:30.000000"
+   ]
+  },
+  {
+   "key": "no_interest",
+   "type": "opinion",
+   "title": "Массового интереса пока нет (без вывода)",
+   "ids": [
+    "2426/150567"
+   ],
+   "direction": "none",
+   "subject": "Цена и стадия роста",
+   "comments": 1,
+   "authors": 1,
+   "threads": 1,
+   "channels": 1,
+   "links": [
+    "https://t.me/icodrops_sergey/2426?comment=150567"
+   ],
+   "ts": [
+    "2026-09-18 02:48:51.000000"
+   ]
+  },
+  {
+   "key": "no_interest_potential",
+   "type": "argument",
+   "title": "Всем всё равно — значит есть потенциал на иксы",
+   "ids": [
+    "2426/150568"
+   ],
+   "direction": "up",
+   "subject": "Цена и стадия роста",
+   "comments": 1,
+   "authors": 1,
+   "threads": 1,
+   "channels": 1,
+   "links": [
+    "https://t.me/icodrops_sergey/2426?comment=150568"
+   ],
+   "ts": [
+    "2026-09-18 03:08:00.000000"
+   ]
+  },
+  {
+   "key": "fomo_now",
+   "type": "opinion",
+   "title": "FOMO уже у всех, жду отката",
+   "ids": [
+    "2426/150547"
+   ],
+   "direction": "down",
+   "subject": "Цена и стадия роста",
+   "comments": 1,
+   "authors": 1,
+   "threads": 1,
+   "channels": 1,
+   "links": [
+    "https://t.me/icodrops_sergey/2426?comment=150547"
+   ],
+   "ts": [
+    "2026-09-17 17:59:53.000000"
+   ]
+  },
+  {
+   "key": "on_tv",
+   "type": "experience",
+   "title": "«Уже по телеку показывают» (возможна ирония)",
+   "ids": [
+    "2426/150560"
+   ],
+   "direction": "unknown",
+   "subject": "Цена и стадия роста",
+   "comments": 1,
+   "authors": 1,
+   "threads": 1,
+   "channels": 1,
+   "links": [
+    "https://t.me/icodrops_sergey/2426?comment=150560"
+   ],
+   "ts": [
+    "2026-09-17 18:26:26.000000"
+   ]
+  },
+  {
+   "key": "stake_too_small",
+   "type": "opinion",
+   "title": "Даже x2–x5 на $100 ничего не изменят",
+   "ids": [
+    "2426/150573"
+   ],
+   "direction": "none",
+   "subject": "Цена и стадия роста",
+   "comments": 1,
+   "authors": 1,
+   "threads": 1,
+   "channels": 1,
+   "links": [
+    "https://t.me/icodrops_sergey/2426?comment=150573"
+   ],
+   "ts": [
+    "2026-09-18 07:17:35.000000"
+   ]
+  },
+  {
+   "key": "bubble",
+   "type": "opinion",
+   "title": "Пузырь, «дырявый ледокол на дно» — один автор",
+   "ids": [
+    "2426/150571",
+    "2426/150572"
+   ],
+   "direction": "down",
+   "subject": "Цена и стадия роста",
+   "comments": 2,
+   "authors": 1,
+   "threads": 1,
+   "channels": 1,
+   "links": [
+    "https://t.me/icodrops_sergey/2426?comment=150571",
+    "https://t.me/icodrops_sergey/2426?comment=150572"
+   ],
+   "ts": [
+    "2026-09-18 05:18:49.000000",
+    "2026-09-18 05:20:19.000000"
+   ]
+  },
+  {
+   "key": "how_far",
+   "type": "opinion",
+   "title": "Сколько уже прошли: 12 иксов от дна, вход автора канала (цифры не проверены)",
+   "ids": [
+    "2426/150556",
+    "2426/150557",
+    "2426/150574"
+   ],
+   "direction": "none",
+   "subject": "Цена и стадия роста",
+   "comments": 3,
+   "authors": 1,
+   "threads": 1,
+   "channels": 1,
+   "links": [
+    "https://t.me/icodrops_sergey/2426?comment=150556",
+    "https://t.me/icodrops_sergey/2426?comment=150557",
+    "https://t.me/icodrops_sergey/2426?comment=150574"
+   ],
+   "ts": [
+    "2026-09-17 18:23:59.000000",
+    "2026-09-17 18:24:30.000000",
+    "2026-09-18 07:19:05.000000"
+   ]
+  },
+  {
+   "key": "early_signal",
+   "type": "answer",
+   "title": "Ссылка на ранний сигнал в канале (не проверялась)",
+   "ids": [
+    "2426/150576"
+   ],
+   "direction": "none",
+   "subject": "Цена и стадия роста",
+   "comments": 1,
+   "authors": 1,
+   "threads": 1,
+   "channels": 1,
+   "links": [
+    "https://t.me/icodrops_sergey/2426?comment=150576"
+   ],
+   "ts": [
+    "2026-09-18 08:30:45.000000"
+   ]
+  },
+  {
+   "key": "hamsters_irony",
+   "type": "reaction",
+   "title": "Ирония: хомяков загоняют на ATH после x3",
+   "ids": [
+    "2426/150548"
+   ],
+   "direction": "down",
+   "subject": "Цена и стадия роста",
+   "comments": 1,
+   "authors": 1,
+   "threads": 1,
+   "channels": 1,
+   "links": [
+    "https://t.me/icodrops_sergey/2426?comment=150548"
+   ],
+   "ts": [
+    "2026-09-17 18:00:30.000000"
+   ]
+  },
+  {
+   "key": "one_liners",
+   "type": "reaction",
+   "title": "Однострочники: «время лонга», «шорт озолотит», «как в 2017»",
+   "ids": [
+    "2426/150551",
+    "2426/150552",
+    "2426/150554"
+   ],
+   "direction": "unknown",
+   "subject": "Цена и стадия роста",
+   "comments": 3,
+   "authors": 3,
+   "threads": 1,
+   "channels": 1,
+   "links": [
+    "https://t.me/icodrops_sergey/2426?comment=150551",
+    "https://t.me/icodrops_sergey/2426?comment=150552",
+    "https://t.me/icodrops_sergey/2426?comment=150554"
+   ],
+   "ts": [
+    "2026-09-17 18:03:44.000000",
+    "2026-09-17 18:03:44.000000",
+    "2026-09-17 18:04:48.000000"
+   ]
+  },
+  {
+   "key": "gloating",
+   "type": "reaction",
+   "title": "Злорадство над скептиками",
+   "ids": [
+    "2426/150549",
+    "2426/150555"
+   ],
+   "direction": "up",
+   "subject": "Цена и стадия роста",
+   "comments": 2,
+   "authors": 2,
+   "threads": 1,
+   "channels": 1,
+   "links": [
+    "https://t.me/icodrops_sergey/2426?comment=150549",
+    "https://t.me/icodrops_sergey/2426?comment=150555"
+   ],
+   "ts": [
+    "2026-09-17 18:02:53.000000",
+    "2026-09-17 18:21:53.000000"
+   ]
+  },
+  {
+   "key": "privacy_disputed",
+   "type": "argument",
+   "title": "Приватности в ZEC нет, криминал на Monero (утверждение не проверено)",
+   "ids": [
+    "2426/150651"
+   ],
+   "direction": "down",
+   "subject": "Приватность",
+   "comments": 1,
+   "authors": 1,
+   "threads": 1,
+   "channels": 1,
+   "links": [
+    "https://t.me/icodrops_sergey/2426?comment=150651"
+   ],
+   "ts": [
+    "2026-09-23 07:59:43.000000"
+   ]
+  },
+  {
+   "key": "dash",
+   "type": "opinion",
+   "title": "DASH — «младший брат» ZEC, ещё покажет себя",
+   "ids": [
+    "2426/150569"
+   ],
+   "subject": "Сравнения с другими монетами",
+   "comments": 1,
+   "authors": 1,
+   "threads": 1,
+   "channels": 1,
+   "links": [
+    "https://t.me/icodrops_sergey/2426?comment=150569"
+   ],
+   "ts": [
+    "2026-09-18 04:42:02.000000"
+   ]
+  },
+  {
+   "key": "near_like_zec",
+   "type": "argument",
+   "title": "Разбор NEAR: структура похожа на zen/zec, при повторе ZEC — «космос»; сам держит NEAR и ZEN",
+   "ids": [
+    "21112/343092"
+   ],
+   "subject": "Сравнения с другими монетами",
+   "comments": 1,
+   "authors": 1,
+   "threads": 1,
+   "channels": 1,
+   "links": [
+    "https://t.me/rawa_imagination/21112?comment=343092"
+   ],
+   "ts": [
+    "2026-09-17 19:40:52.000000"
+   ]
+  },
+  {
+   "key": "hype_or_zec",
+   "type": "reaction",
+   "title": "«hype или zec 😁»",
+   "ids": [
+    "2432/150645"
+   ],
+   "subject": "Сравнения с другими монетами",
+   "comments": 1,
+   "authors": 1,
+   "threads": 1,
+   "channels": 1,
+   "links": [
+    "https://t.me/icodrops_sergey/2432?comment=150645"
+   ],
+   "ts": [
+    "2026-09-22 13:19:42.000000"
+   ]
+  },
+  {
+   "key": "noir_recommend",
+   "type": "recommendation",
+   "title": "Советует Noir для NFT и WL на ZEC",
+   "ids": [
+    "5299/380352"
+   ],
+   "group": "Noir",
+   "subject": "Кошельки",
+   "comments": 1,
+   "authors": 1,
+   "threads": 1,
+   "channels": 1,
+   "links": [
+    "https://t.me/don_invest/5299?comment=380352"
+   ],
+   "ts": [
+    "2026-09-21 11:13:07.000000"
+   ]
+  },
+  {
+   "key": "noir_default",
+   "type": "info",
+   "title": "Платформы сами советуют Noir, он стоит по умолчанию",
+   "ids": [
+    "5299/380354"
+   ],
+   "group": "Noir",
+   "subject": "Кошельки",
+   "comments": 1,
+   "authors": 1,
+   "threads": 1,
+   "channels": 1,
+   "links": [
+    "https://t.me/don_invest/5299?comment=380354"
+   ],
+   "ts": [
+    "2026-09-21 11:15:25.000000"
+   ]
+  },
+  {
+   "key": "noir_experience",
+   "type": "experience",
+   "title": "Пользуется Noir: в Chrome Noir, на телефоне Zodl; пришлось поставить ради WL ZADDR",
+   "ids": [
+    "5299/380353",
+    "5299/380355"
+   ],
+   "group": "Noir",
+   "subject": "Кошельки",
+   "comments": 2,
+   "authors": 2,
+   "threads": 1,
+   "channels": 1,
+   "links": [
+    "https://t.me/don_invest/5299?comment=380353",
+    "https://t.me/don_invest/5299?comment=380355"
+   ],
+   "ts": [
+    "2026-09-21 11:14:35.000000",
+    "2026-09-21 11:17:30.000000"
+   ]
+  },
+  {
+   "key": "noir_questions",
+   "type": "question",
+   "title": "Каким кошельком пользуетесь; обязателен ли Noir без компьютера",
+   "ids": [
+    "7151/572119",
+    "5299/380360"
+   ],
+   "group": "Noir",
+   "subject": "Кошельки",
+   "comments": 2,
+   "authors": 2,
+   "threads": 2,
+   "channels": 2,
+   "links": [
+    "https://t.me/whitelist1/7151?comment=572119",
+    "https://t.me/don_invest/5299?comment=380360"
+   ],
+   "ts": [
+    "2026-09-21 11:34:15.000000",
+    "2026-09-21 12:19:34.000000"
+   ]
+  },
+  {
+   "key": "noir_answers",
+   "type": "answer",
+   "title": "«Noir», «Noir для удобства»",
+   "ids": [
+    "7151/572120",
+    "5299/380361"
+   ],
+   "group": "Noir",
+   "subject": "Кошельки",
+   "comments": 2,
+   "authors": 2,
+   "threads": 2,
+   "channels": 2,
+   "links": [
+    "https://t.me/whitelist1/7151?comment=572120",
+    "https://t.me/don_invest/5299?comment=380361"
+   ],
+   "ts": [
+    "2026-09-21 11:34:30.000000",
+    "2026-09-21 12:20:33.000000"
+   ]
+  },
+  {
+   "key": "zodl_question",
+   "type": "question",
+   "title": "Тот ли это кошелёк (Zodl); почему сайт просит другой, хотя подключал Zodl",
+   "ids": [
+    "5299/380318",
+    "5299/380336"
+   ],
+   "group": "Zodl",
+   "subject": "Кошельки",
+   "comments": 2,
+   "authors": 1,
+   "threads": 1,
+   "channels": 1,
+   "links": [
+    "https://t.me/don_invest/5299?comment=380318",
+    "https://t.me/don_invest/5299?comment=380336"
+   ],
+   "ts": [
+    "2026-09-21 08:59:17.000000",
+    "2026-09-21 10:17:57.000000"
+   ]
+  },
+  {
+   "key": "zodl_experience",
+   "type": "experience",
+   "title": "Пользуется Zodl, удобный",
+   "ids": [
+    "5299/380326"
+   ],
+   "group": "Zodl",
+   "subject": "Кошельки",
+   "comments": 1,
+   "authors": 1,
+   "threads": 1,
+   "channels": 1,
+   "links": [
+    "https://t.me/don_invest/5299?comment=380326"
+   ],
+   "ts": [
+    "2026-09-21 09:17:02.000000"
+   ]
+  },
+  {
+   "key": "evm_question",
+   "type": "question",
+   "title": "Нормально ли, что ZEC-проект (OttoClub) просит ETH-кошелёк",
+   "ids": [
+    "5299/380347"
+   ],
+   "group": "EVM-кошелёк для OttoClub",
+   "subject": "Кошельки",
+   "comments": 1,
+   "authors": 1,
+   "threads": 1,
+   "channels": 1,
+   "links": [
+    "https://t.me/don_invest/5299?comment=380347"
+   ],
+   "ts": [
+    "2026-09-21 10:51:48.000000"
+   ]
+  },
+  {
+   "key": "evm_not_zec",
+   "type": "opinion",
+   "title": "OttoClub «вроде не зек»",
+   "ids": [
+    "5299/380348"
+   ],
+   "group": "EVM-кошелёк для OttoClub",
+   "subject": "Кошельки",
+   "comments": 1,
+   "authors": 1,
+   "threads": 1,
+   "channels": 1,
+   "links": [
+    "https://t.me/don_invest/5299?comment=380348"
+   ],
+   "ts": [
+    "2026-09-21 10:59:47.000000"
+   ]
+  },
+  {
+   "key": "evm_answer",
+   "type": "answer",
+   "title": "Да, вводим EVM-кошелёк",
+   "ids": [
+    "5299/380349"
+   ],
+   "group": "EVM-кошелёк для OttoClub",
+   "subject": "Кошельки",
+   "comments": 1,
+   "authors": 1,
+   "threads": 1,
+   "channels": 1,
+   "links": [
+    "https://t.me/don_invest/5299?comment=380349"
+   ],
+   "ts": [
+    "2026-09-21 11:09:16.000000"
+   ]
+  },
+  {
+   "key": "bridge_question",
+   "type": "question",
+   "title": "Как завести ZEC на Noir, только с биржи?",
+   "ids": [
+    "7149/572005"
+   ],
+   "group": "Как завести ZEC",
+   "subject": "Кошельки",
+   "comments": 1,
+   "authors": 1,
+   "threads": 1,
+   "channels": 1,
+   "links": [
+    "https://t.me/whitelist1/7149?comment=572005"
+   ],
+   "ts": [
+    "2026-09-20 15:22:37.000000"
+   ]
+  },
+  {
+   "key": "bridge_answer",
+   "type": "answer",
+   "title": "Через кроссчейн-бридж Rubic",
+   "ids": [
+    "7149/572006"
+   ],
+   "group": "Как завести ZEC",
+   "subject": "Кошельки",
+   "comments": 1,
+   "authors": 1,
+   "threads": 1,
+   "channels": 1,
+   "links": [
+    "https://t.me/whitelist1/7149?comment=572006"
+   ],
+   "ts": [
+    "2026-09-20 15:23:08.000000"
+   ]
+  },
+  {
+   "key": "bridge_thanks",
+   "type": "reaction",
+   "title": "Знает такой, спасибо",
+   "ids": [
+    "7149/572008"
+   ],
+   "group": "Как завести ZEC",
+   "subject": "Кошельки",
+   "comments": 1,
+   "authors": 1,
+   "threads": 1,
+   "channels": 1,
+   "links": [
+    "https://t.me/whitelist1/7149?comment=572008"
+   ],
+   "ts": [
+    "2026-09-20 15:23:43.000000"
+   ]
+  },
+  {
+   "key": "service_yes",
+   "type": "service",
+   "title": "«Да» на вопрос о кошельке",
+   "ids": [
+    "5299/380319"
+   ],
+   "group": "Zodl",
+   "subject": "Кошельки",
+   "comments": 1,
+   "authors": 1,
+   "threads": 1,
+   "channels": 1,
+   "links": [
+    "https://t.me/don_invest/5299?comment=380319"
+   ],
+   "ts": [
+    "2026-09-21 09:02:28.000000"
+   ]
+  },
+  {
+   "key": "wl_list_update",
+   "type": "curator",
+   "title": "Дополнения подборки: ZecVision, OttoClub, Wizards",
+   "ids": [
+    "5299/380338",
+    "5299/380369"
+   ],
+   "group": "Подборка и дедлайны",
+   "subject": "Вайтлисты и минт",
+   "comments": 2,
+   "authors": 1,
+   "threads": 1,
+   "channels": 1,
+   "links": [
+    "https://t.me/don_invest/5299?comment=380338",
+    "https://t.me/don_invest/5299?comment=380369"
+   ],
+   "ts": [
+    "2026-09-21 10:28:52.000000",
+    "2026-09-21 14:24:30.000000"
+   ]
+  },
+  {
+   "key": "wl_add_suggest",
+   "type": "recommendation",
+   "title": "Добавить в подборку BiTFoot",
+   "ids": [
+    "5299/380287"
+   ],
+   "group": "Подборка и дедлайны",
+   "subject": "Вайтлисты и минт",
+   "comments": 1,
+   "authors": 1,
+   "threads": 1,
+   "channels": 1,
+   "links": [
+    "https://t.me/don_invest/5299?comment=380287"
+   ],
+   "ts": [
+    "2026-09-21 08:38:24.000000"
+   ]
+  },
+  {
+   "key": "wl_deadlines",
+   "type": "info",
+   "title": "Дедлайны и чекеры: «дедлайн 4 часа», ссылка на BiTFoot, чекер zeckers, «выкатили чекер» лягушек, окно WL 72 ч закончилось",
+   "ids": [
+    "5299/380289",
+    "5299/380294",
+    "5299/380335",
+    "5299/380363",
+    "7149/571965"
+   ],
+   "group": "Подборка и дедлайны",
+   "subject": "Вайтлисты и минт",
+   "comments": 5,
+   "authors": 3,
+   "threads": 2,
+   "channels": 2,
+   "links": [
+    "https://t.me/don_invest/5299?comment=380289",
+    "https://t.me/don_invest/5299?comment=380294",
+    "https://t.me/don_invest/5299?comment=380335",
+    "https://t.me/don_invest/5299?comment=380363",
+    "https://t.me/whitelist1/7149?comment=571965"
+   ],
+   "ts": [
+    "2026-09-21 08:41:07.000000",
+    "2026-09-21 08:47:50.000000",
+    "2026-09-21 10:15:50.000000",
+    "2026-09-21 12:21:44.000000",
+    "2026-09-20 12:51:16.000000"
+   ]
+  },
+  {
+   "key": "wl_how_questions",
+   "type": "question",
+   "title": "Как попасть и где проверить: достаточно ли подключить кошелёк, где результаты, куда вставлять кошелёк, прошёл ли кто",
+   "ids": [
+    "5299/380295",
+    "5299/380350",
+    "5299/380362",
+    "7149/571964",
+    "7149/572021"
+   ],
+   "group": "Как попасть и где смотреть результат",
+   "subject": "Вайтлисты и минт",
+   "comments": 5,
+   "authors": 5,
+   "threads": 2,
+   "channels": 2,
+   "links": [
+    "https://t.me/don_invest/5299?comment=380295",
+    "https://t.me/don_invest/5299?comment=380350",
+    "https://t.me/don_invest/5299?comment=380362",
+    "https://t.me/whitelist1/7149?comment=571964",
+    "https://t.me/whitelist1/7149?comment=572021"
+   ],
+   "ts": [
+    "2026-09-21 08:48:02.000000",
+    "2026-09-21 11:12:24.000000",
+    "2026-09-21 12:21:01.000000",
+    "2026-09-20 12:51:13.000000",
+    "2026-09-20 15:54:40.000000"
+   ]
+  },
+  {
+   "key": "wl_passed",
+   "type": "experience",
+   "title": "Прошёл WL: 8 из 10 аккаунтов, «прошёл», в X не пусто",
+   "ids": [
+    "7149/571966",
+    "7149/572009",
+    "7149/572030"
+   ],
+   "group": "Как попасть и где смотреть результат",
+   "subject": "Вайтлисты и минт",
+   "comments": 3,
+   "authors": 2,
+   "threads": 1,
+   "channels": 1,
+   "links": [
+    "https://t.me/whitelist1/7149?comment=571966",
+    "https://t.me/whitelist1/7149?comment=572009",
+    "https://t.me/whitelist1/7149?comment=572030"
+   ],
+   "ts": [
+    "2026-09-20 12:51:24.000000",
+    "2026-09-20 15:32:35.000000",
+    "2026-09-20 16:38:39.000000"
+   ]
+  },
+  {
+   "key": "wl_missed",
+   "type": "experience",
+   "title": "Не успел, форма закрыта",
+   "ids": [
+    "5299/380337"
+   ],
+   "group": "Как попасть и где смотреть результат",
+   "subject": "Вайтлисты и минт",
+   "comments": 1,
+   "authors": 1,
+   "threads": 1,
+   "channels": 1,
+   "links": [
+    "https://t.me/don_invest/5299?comment=380337"
+   ],
+   "ts": [
+    "2026-09-21 10:21:01.000000"
+   ]
+  },
+  {
+   "key": "wl_revoke_rumor",
+   "type": "info",
+   "title": "Слух, что WL отзывают, «некоторые жалуются»",
+   "ids": [
+    "7149/571982",
+    "7149/571984"
+   ],
+   "group": "Слух об отзыве WL",
+   "subject": "Вайтлисты и минт",
+   "comments": 2,
+   "authors": 1,
+   "threads": 1,
+   "channels": 1,
+   "links": [
+    "https://t.me/whitelist1/7149?comment=571982",
+    "https://t.me/whitelist1/7149?comment=571984"
+   ],
+   "ts": [
+    "2026-09-20 14:15:55.000000",
+    "2026-09-20 14:19:00.000000"
+   ]
+  },
+  {
+   "key": "wl_revoke_questions",
+   "type": "question",
+   "title": "Правда ли отзывают, «скамят работяг?»",
+   "ids": [
+    "7149/571983",
+    "7149/571985"
+   ],
+   "group": "Слух об отзыве WL",
+   "subject": "Вайтлисты и минт",
+   "comments": 2,
+   "authors": 2,
+   "threads": 1,
+   "channels": 1,
+   "links": [
+    "https://t.me/whitelist1/7149?comment=571983",
+    "https://t.me/whitelist1/7149?comment=571985"
+   ],
+   "ts": [
+    "2026-09-20 14:18:45.000000",
+    "2026-09-20 14:19:13.000000"
+   ]
+  },
+  {
+   "key": "zaddr_closed_q",
+   "type": "question",
+   "title": "Перестали ли принимать заявки на ZADDR; заминтил ли кто",
+   "ids": [
+    "7149/571996",
+    "7151/572127"
+   ],
+   "group": "ZADDR",
+   "subject": "Вайтлисты и минт",
+   "comments": 2,
+   "authors": 2,
+   "threads": 2,
+   "channels": 1,
+   "links": [
+    "https://t.me/whitelist1/7149?comment=571996",
+    "https://t.me/whitelist1/7151?comment=572127"
+   ],
+   "ts": [
+    "2026-09-20 15:07:36.000000",
+    "2026-09-21 13:25:43.000000"
+   ]
+  },
+  {
+   "key": "zaddr_closed_a",
+   "type": "answer",
+   "title": "Заявки ZADDR закрыли пару дней назад",
+   "ids": [
+    "7149/572000"
+   ],
+   "group": "ZADDR",
+   "subject": "Вайтлисты и минт",
+   "comments": 1,
+   "authors": 1,
+   "threads": 1,
+   "channels": 1,
+   "links": [
+    "https://t.me/whitelist1/7149?comment=572000"
+   ],
+   "ts": [
+    "2026-09-20 15:09:00.000000"
+   ]
+  },
+  {
+   "key": "zaddr_skip",
+   "type": "recommendation",
+   "title": "Скипнуть ZADDR",
+   "ids": [
+    "7151/572128"
+   ],
+   "group": "ZADDR",
+   "subject": "Вайтлисты и минт",
+   "comments": 1,
+   "authors": 1,
+   "threads": 1,
+   "channels": 1,
+   "links": [
+    "https://t.me/whitelist1/7151?comment=572128"
+   ],
+   "ts": [
+    "2026-09-21 13:30:46.000000"
+   ]
+  },
+  {
+   "key": "zaddr_lag",
+   "type": "experience",
+   "title": "«зек лагает» при работе с ZADDR (сеть или сайт — неясно)",
+   "ids": [
+    "7151/572131"
+   ],
+   "group": "ZADDR",
+   "subject": "Вайтлисты и минт",
+   "comments": 1,
+   "authors": 1,
+   "threads": 1,
+   "channels": 1,
+   "links": [
+    "https://t.me/whitelist1/7151?comment=572131"
+   ],
+   "ts": [
+    "2026-09-21 13:55:12.000000"
+   ]
+  },
+  {
+   "key": "fees_high",
+   "type": "opinion",
+   "title": "Комиссия большая",
+   "ids": [
+    "7149/572012"
+   ],
+   "group": "Комиссия",
+   "subject": "Вайтлисты и минт",
+   "comments": 1,
+   "authors": 1,
+   "threads": 1,
+   "channels": 1,
+   "links": [
+    "https://t.me/whitelist1/7149?comment=572012"
+   ],
+   "ts": [
+    "2026-09-20 15:39:42.000000"
+   ]
+  },
+  {
+   "key": "fees_ok",
+   "type": "opinion",
+   "title": "$10–15 на комиссию — нормально",
+   "ids": [
+    "7149/572013"
+   ],
+   "group": "Комиссия",
+   "subject": "Вайтлисты и минт",
+   "comments": 1,
+   "authors": 1,
+   "threads": 1,
+   "channels": 1,
+   "links": [
+    "https://t.me/whitelist1/7149?comment=572013"
+   ],
+   "ts": [
+    "2026-09-20 15:41:54.000000"
+   ]
+  },
+  {
+   "key": "fees_privacy_joke",
+   "type": "reaction",
+   "title": "«Приватность нужно оплачивать»",
+   "ids": [
+    "7149/572022"
+   ],
+   "group": "Комиссия",
+   "subject": "Вайтлисты и минт",
+   "comments": 1,
+   "authors": 1,
+   "threads": 1,
+   "channels": 1,
+   "links": [
+    "https://t.me/whitelist1/7149?comment=572022"
+   ],
+   "ts": [
+    "2026-09-20 15:55:35.000000"
+   ]
+  },
+  {
+   "key": "gtd_giveaway",
+   "type": "reaction",
+   "title": "Раздача GTD на минт zecvisions и отклики на неё",
+   "ids": [
+    "7151/572129",
+    "7151/572130",
+    "7151/572133",
+    "7151/572135",
+    "7151/572141",
+    "7151/572143"
+   ],
+   "group": "Раздача GTD и реакции",
+   "subject": "Вайтлисты и минт",
+   "comments": 6,
+   "authors": 4,
+   "threads": 1,
+   "channels": 1,
+   "links": [
+    "https://t.me/whitelist1/7151?comment=572129",
+    "https://t.me/whitelist1/7151?comment=572130",
+    "https://t.me/whitelist1/7151?comment=572133",
+    "https://t.me/whitelist1/7151?comment=572135",
+    "https://t.me/whitelist1/7151?comment=572141",
+    "https://t.me/whitelist1/7151?comment=572143"
+   ],
+   "ts": [
+    "2026-09-21 13:53:06.000000",
+    "2026-09-21 13:55:09.000000",
+    "2026-09-21 14:00:13.000000",
+    "2026-09-21 14:00:30.000000",
+    "2026-09-21 14:01:45.000000",
+    "2026-09-21 14:02:04.000000"
+   ]
+  },
+  {
+   "key": "wl_reactions",
+   "type": "reaction",
+   "title": "Поздравления и надежды на прибыль, согласия",
+   "ids": [
+    "7149/572010",
+    "7149/572011",
+    "7151/572109",
+    "7151/572153",
+    "7151/572154"
+   ],
+   "group": "Раздача GTD и реакции",
+   "subject": "Вайтлисты и минт",
+   "comments": 5,
+   "authors": 5,
+   "threads": 2,
+   "channels": 1,
+   "links": [
+    "https://t.me/whitelist1/7149?comment=572010",
+    "https://t.me/whitelist1/7149?comment=572011",
+    "https://t.me/whitelist1/7151?comment=572109",
+    "https://t.me/whitelist1/7151?comment=572153",
+    "https://t.me/whitelist1/7151?comment=572154"
+   ],
+   "ts": [
+    "2026-09-20 15:38:54.000000",
+    "2026-09-20 15:39:23.000000",
+    "2026-09-21 11:06:01.000000",
+    "2026-09-21 14:32:50.000000",
+    "2026-09-21 14:39:35.000000"
+   ]
+  },
+  {
+   "key": "service_link",
+   "type": "service",
+   "title": "«Давай линк»",
+   "ids": [
+    "5299/380288"
+   ],
+   "group": "Подборка и дедлайны",
+   "subject": "Вайтлисты и минт",
+   "comments": 1,
+   "authors": 1,
+   "threads": 1,
+   "channels": 1,
+   "links": [
+    "https://t.me/don_invest/5299?comment=380288"
+   ],
+   "ts": [
+    "2026-09-21 08:40:26.000000"
+   ]
+  },
+  {
+   "key": "nft_where_q",
+   "type": "question",
+   "title": "На каком маркете торгуются NFT на Zcash",
+   "ids": [
+    "7149/571974"
+   ],
+   "subject": "Рынок ZEC NFT",
+   "comments": 1,
+   "authors": 1,
+   "threads": 1,
+   "channels": 1,
+   "links": [
+    "https://t.me/whitelist1/7149?comment=571974"
+   ],
+   "ts": [
+    "2026-09-20 12:57:09.000000"
+   ]
+  },
+  {
+   "key": "nft_where_a",
+   "type": "answer",
+   "title": "zecbit.net с двумя коллекциями, остальные на своих сайтах (не проверено)",
+   "ids": [
+    "7149/571975",
+    "7149/571976"
+   ],
+   "subject": "Рынок ZEC NFT",
+   "comments": 2,
+   "authors": 2,
+   "threads": 1,
+   "channels": 1,
+   "links": [
+    "https://t.me/whitelist1/7149?comment=571975",
+    "https://t.me/whitelist1/7149?comment=571976"
+   ],
+   "ts": [
+    "2026-09-20 12:57:43.000000",
+    "2026-09-20 12:57:52.000000"
+   ]
+  },
+  {
+   "key": "nft_price_expect",
+   "type": "opinion",
+   "title": "Цена лягушек: «минимум по касику», «дорогие»",
+   "ids": [
+    "7149/571968",
+    "7149/571971"
+   ],
+   "subject": "Рынок ZEC NFT",
+   "comments": 2,
+   "authors": 2,
+   "threads": 1,
+   "channels": 1,
+   "links": [
+    "https://t.me/whitelist1/7149?comment=571968",
+    "https://t.me/whitelist1/7149?comment=571971"
+   ],
+   "ts": [
+    "2026-09-20 12:51:38.000000",
+    "2026-09-20 12:53:41.000000"
+   ]
+  },
+  {
+   "key": "nft_floor",
+   "type": "info",
+   "title": "Флор 0.018 ZEC",
+   "ids": [
+    "7152/572207"
+   ],
+   "subject": "Рынок ZEC NFT",
+   "comments": 1,
+   "authors": 1,
+   "threads": 1,
+   "channels": 1,
+   "links": [
+    "https://t.me/whitelist1/7152?comment=572207"
+   ],
+   "ts": [
+    "2026-09-22 07:04:15.000000"
+   ]
+  },
+  {
+   "key": "zeckers_scam",
+   "type": "opinion",
+   "title": "zeckers «кажется скам, ни одной продажи»",
+   "ids": [
+    "5299/380370"
+   ],
+   "subject": "Рынок ZEC NFT",
+   "comments": 1,
+   "authors": 1,
+   "threads": 1,
+   "channels": 1,
+   "links": [
+    "https://t.me/don_invest/5299?comment=380370"
+   ],
+   "ts": [
+    "2026-09-21 15:07:06.000000"
+   ]
+  }
+ ],
+ "topics": [
+  {
+   "topic": "Цена и стадия роста",
+   "comments": 21,
+   "authors": 17,
+   "threads": 1,
+   "by_type": {
+    "opinion": {
+     "comments": 10,
+     "authors": 7
+    },
+    "argument": {
+     "comments": 3,
+     "authors": 3
+    },
+    "experience": {
+     "comments": 1,
+     "authors": 1
+    },
+    "answer": {
+     "comments": 1,
+     "authors": 1
+    },
+    "reaction": {
+     "comments": 6,
+     "authors": 6
+    }
+   }
+  },
+  {
+   "topic": "Приватность",
+   "comments": 1,
+   "authors": 1,
+   "threads": 1,
+   "by_type": {
+    "argument": {
+     "comments": 1,
+     "authors": 1
+    }
+   }
+  },
+  {
+   "topic": "Сравнения с другими монетами",
+   "comments": 3,
+   "authors": 3,
+   "threads": 3,
+   "by_type": {
+    "opinion": {
+     "comments": 1,
+     "authors": 1
+    },
+    "argument": {
+     "comments": 1,
+     "authors": 1
+    },
+    "reaction": {
+     "comments": 1,
+     "authors": 1
+    }
+   }
+  },
+  {
+   "topic": "Кошельки",
+   "comments": 18,
+   "authors": 10,
+   "threads": 3,
+   "by_type": {
+    "recommendation": {
+     "comments": 1,
+     "authors": 1
+    },
+    "info": {
+     "comments": 1,
+     "authors": 1
+    },
+    "experience": {
+     "comments": 3,
+     "authors": 2
+    },
+    "question": {
+     "comments": 6,
+     "authors": 5
+    },
+    "answer": {
+     "comments": 4,
+     "authors": 3
+    },
+    "opinion": {
+     "comments": 1,
+     "authors": 1
+    },
+    "reaction": {
+     "comments": 1,
+     "authors": 1
+    },
+    "service": {
+     "comments": 1,
+     "authors": 1
+    }
+   }
+  },
+  {
+   "topic": "Вайтлисты и минт",
+   "comments": 41,
+   "authors": 16,
+   "threads": 3,
+   "by_type": {
+    "curator": {
+     "comments": 2,
+     "authors": 1
+    },
+    "recommendation": {
+     "comments": 2,
+     "authors": 2
+    },
+    "info": {
+     "comments": 7,
+     "authors": 4
+    },
+    "question": {
+     "comments": 9,
+     "authors": 8
+    },
+    "experience": {
+     "comments": 5,
+     "authors": 4
+    },
+    "answer": {
+     "comments": 1,
+     "authors": 1
+    },
+    "opinion": {
+     "comments": 2,
+     "authors": 2
+    },
+    "reaction": {
+     "comments": 12,
+     "authors": 8
+    },
+    "service": {
+     "comments": 1,
+     "authors": 1
+    }
+   }
+  },
+  {
+   "topic": "Рынок ZEC NFT",
+   "comments": 7,
+   "authors": 5,
+   "threads": 3,
+   "by_type": {
+    "question": {
+     "comments": 1,
+     "authors": 1
+    },
+    "answer": {
+     "comments": 2,
+     "authors": 2
+    },
+    "opinion": {
+     "comments": 3,
+     "authors": 3
+    },
+    "info": {
+     "comments": 1,
+     "authors": 1
+    }
+   }
+  }
+ ],
+ "observations": [
+  {
+   "key": "mint_access",
+   "text": "Главный практический вопрос — как попасть в вайтлисты ZEC NFT и где проверить результат. Дедлайны, чекеры и закрытие заявок участники сообщают друг другу сами; подтверждений от проектов в наборе нет.",
+   "units": [
+    "wl_how_questions",
+    "wl_passed",
+    "wl_missed",
+    "wl_deadlines",
+    "zaddr_closed_q",
+    "zaddr_closed_a"
+   ],
+   "units_total": 6,
+   "comments": 17,
+   "authors": 12,
+   "threads": 3,
+   "channels": 2,
+   "links": [
+    {
+     "id": "5299/380295",
+     "link": "https://t.me/don_invest/5299?comment=380295"
+    },
+    {
+     "id": "5299/380350",
+     "link": "https://t.me/don_invest/5299?comment=380350"
+    },
+    {
+     "id": "5299/380362",
+     "link": "https://t.me/don_invest/5299?comment=380362"
+    },
+    {
+     "id": "7149/571964",
+     "link": "https://t.me/whitelist1/7149?comment=571964"
+    },
+    {
+     "id": "7149/572021",
+     "link": "https://t.me/whitelist1/7149?comment=572021"
+    }
+   ],
+   "more_links": 12
+  },
+  {
+   "key": "wallet_noir",
+   "text": "Кошелёк для минта чаще всего называют Noir: его советуют, и платформы, по словам участников, ставят его по умолчанию. Вопросы возникают, когда сайт просит не тот кошелёк, что подключён, или EVM-адрес для ZEC-проекта.",
+   "units": [
+    "noir_recommend",
+    "noir_default",
+    "noir_experience",
+    "noir_answers",
+    "zodl_question",
+    "evm_question",
+    "evm_answer"
+   ],
+   "units_total": 7,
+   "comments": 10,
+   "authors": 6,
+   "threads": 2,
+   "channels": 2,
+   "links": [
+    {
+     "id": "5299/380352",
+     "link": "https://t.me/don_invest/5299?comment=380352"
+    },
+    {
+     "id": "5299/380354",
+     "link": "https://t.me/don_invest/5299?comment=380354"
+    },
+    {
+     "id": "5299/380353",
+     "link": "https://t.me/don_invest/5299?comment=380353"
+    },
+    {
+     "id": "5299/380355",
+     "link": "https://t.me/don_invest/5299?comment=380355"
+    },
+    {
+     "id": "7151/572120",
+     "link": "https://t.me/whitelist1/7151?comment=572120"
+    }
+   ],
+   "more_links": 5
+  },
+  {
+   "key": "price_split",
+   "text": "О цене ZEC мнения расходятся. Доводы за рост — массового FOMO ещё нет, и рынок может уйти в приватность; против — пузырь и ожидание отката. Прогнозы конкретных уровней даны без обоснования.",
+   "units": [
+    "fomo_later",
+    "no_interest_potential",
+    "conditional_privacy",
+    "forecast_20k",
+    "forecast_70k",
+    "bubble",
+    "fomo_now"
+   ],
+   "units_total": 7,
+   "comments": 8,
+   "authors": 6,
+   "threads": 1,
+   "channels": 1,
+   "links": [
+    {
+     "id": "2426/150550",
+     "link": "https://t.me/icodrops_sergey/2426?comment=150550"
+    },
+    {
+     "id": "2426/150568",
+     "link": "https://t.me/icodrops_sergey/2426?comment=150568"
+    },
+    {
+     "id": "2426/150566",
+     "link": "https://t.me/icodrops_sergey/2426?comment=150566"
+    },
+    {
+     "id": "2426/150563",
+     "link": "https://t.me/icodrops_sergey/2426?comment=150563"
+    },
+    {
+     "id": "2426/150564",
+     "link": "https://t.me/icodrops_sergey/2426?comment=150564"
+    }
+   ],
+   "more_links": 3
+  },
+  {
+   "key": "wl_revoke",
+   "text": "Слух об отзыве вайтлистов вызвал тревожные вопросы, но ни подтверждения, ни опровержения в наборе нет.",
+   "units": [
+    "wl_revoke_rumor",
+    "wl_revoke_questions"
+   ],
+   "units_total": 2,
+   "comments": 4,
+   "authors": 3,
+   "threads": 1,
+   "channels": 1,
+   "links": [
+    {
+     "id": "7149/571982",
+     "link": "https://t.me/whitelist1/7149?comment=571982"
+    },
+    {
+     "id": "7149/571984",
+     "link": "https://t.me/whitelist1/7149?comment=571984"
+    },
+    {
+     "id": "7149/571983",
+     "link": "https://t.me/whitelist1/7149?comment=571983"
+    },
+    {
+     "id": "7149/571985",
+     "link": "https://t.me/whitelist1/7149?comment=571985"
+    }
+   ],
+   "more_links": 0
+  },
+  {
+   "key": "privacy_claim",
+   "text": "Приватность ZEC как довод по существу почти не обсуждается: единственный аргумент о ней её оспаривает (утверждение не проверено), возражений на него в наборе нет.",
+   "units": [
+    "privacy_disputed"
+   ],
+   "units_total": 1,
+   "comments": 1,
+   "authors": 1,
+   "threads": 1,
+   "channels": 1,
+   "links": [
+    {
+     "id": "2426/150651",
+     "link": "https://t.me/icodrops_sergey/2426?comment=150651"
+    }
+   ],
+   "more_links": 0
+  }
+ ]
+}

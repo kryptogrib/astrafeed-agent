@@ -1,0 +1,26 @@
+{
+ "a": {
+  "quote": "ETH: Binance: +0.0091% 🐂 | Bybit: +0.0100% 🐂",
+  "actor": null,
+  "action": "price change",
+  "object": "ETH",
+  "qualifiers": {
+   "version": null,
+   "event_date": null,
+   "place": "Binance, Bybit",
+   "counterparty": null
+  },
+  "url": "https://t.me/rawa_imagination/21117"
+ },
+ "b": {
+  "quote": "📈 🔴 ETH ETF: отток $39M",
+  "actor": null,
+  "action": "outflow",
+  "object": "ETH ETF",
+  "qualifiers": {
+   "amount": "$39M",
+   "event_date": "2026-09-18"
+  },
+  "url": "https://t.me/rawa_imagination/21117"
+ }
+}

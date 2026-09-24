@@ -1,0 +1,17 @@
+{
+ "segments": [
+  {
+   "id": "telegram:15:423533#s35",
+   "text": "🟢 Мосбиржа запустит перпы на BTC, ETH, SOL, XRP, TRX\n",
+   "mentions": [
+    {
+     "text": "ETH",
+     "status": "confirmed"
+    }
+   ],
+   "kind_hint": "post",
+   "url": "https://t.me/WEB3_AGGREGATOR/423533",
+   "time": "2026-09-21T20:47:03+00:00"
+  }
+ ]
+}

@@ -1,0 +1,24 @@
+{
+ "a": {
+  "quote": "Innovation Exemption от SEC, которые сказали: \"Мы сами всех отрегулируем, на ближайшие лет 5\"",
+  "actor": "SEC",
+  "action": "announced Innovation Exemption",
+  "object": "on-chain stocks",
+  "qualifiers": {
+   "event_date": "2026-09-18",
+   "place": "US"
+  },
+  "url": "https://t.me/moni_talks/12227"
+ },
+ "b": {
+  "quote": "Самый громкий «погорелец» — кит Гаррет Джин, которого ончейн-детективы связывают с биржей BitForex: шорт на ~$51–54 млн с плечом 3x, ликвидация на $2631, нереализованный убыток ~$26–30 млн",
+  "actor": "Garrett Jean",
+  "action": "liquidated short position",
+  "object": "ZEC",
+  "qualifiers": {
+   "event_date": "2026-09-18",
+   "counterparty": "BitForex"
+  },
+  "url": "https://t.me/WEB3_AGGREGATOR/423316"
+ }
+}

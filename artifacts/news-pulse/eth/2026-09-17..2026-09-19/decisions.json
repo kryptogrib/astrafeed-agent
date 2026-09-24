@@ -1,0 +1,4185 @@
+{
+  "topic": "eth",
+  "window": {
+    "start": "2026-09-17T00:00:00+00:00",
+    "end": "2026-09-20T00:00:00+00:00",
+    "interval": "[start,end)"
+  },
+  "publications": [
+    {
+      "source_id": 11,
+      "external_id": "96773",
+      "link": "https://t.me/cryptoattack24/96773",
+      "published_at": "2026-09-17T04:21:01+00:00",
+      "author_id": null,
+      "topic_mention": true,
+      "selected_news": true,
+      "segments": [
+        {
+          "class": "event",
+          "start": 17,
+          "end": 80,
+          "quote": "Вчера общий чистый отток спотовых BTC-ETF составил ~$295,9 млн."
+        },
+        {
+          "class": "event",
+          "start": 82,
+          "end": 138,
+          "quote": "Общий чистый отток спотовых ETH-ETF составил $224,1 млн."
+        }
+      ],
+      "event_ids": [
+        "e1-1b98e70b7e1ada6b"
+      ],
+      "origin": "retelling",
+      "source_role": "author",
+      "status": "processed"
+    },
+    {
+      "source_id": 18,
+      "external_id": "31473",
+      "link": "https://t.me/crypto_hd/31473",
+      "published_at": "2026-09-17T04:26:37+00:00",
+      "author_id": null,
+      "topic_mention": true,
+      "selected_news": false,
+      "segments": [
+        {
+          "class": "promo_service",
+          "start": 0,
+          "end": 4,
+          "quote": "#eth"
+        },
+        {
+          "class": "author_position",
+          "start": 76,
+          "end": 311,
+          "quote": "Основатель Ethereum не согласен с мнением, что развитие AI неизбежно приведет к массовым взломам. AI-технологии смогут не только искать уязвимости, но и математически доказывать безопасность программ, причем проверять весь код целиком."
+        },
+        {
+          "class": "author_position",
+          "start": 313,
+          "end": 499,
+          "quote": "Именно в этом направлении в Ethereum планируют двигаться в ближайшие несколько лет. Бутерин считает, что без усиления безопасности у масштабируемых и приватных блокчейнов «нет будущего»."
+        }
+      ],
+      "event_ids": [],
+      "origin": "retelling",
+      "source_role": "author",
+      "status": "processed"
+    },
+    {
+      "source_id": 11,
+      "external_id": "96776",
+      "link": "https://t.me/cryptoattack24/96776",
+      "published_at": "2026-09-17T05:43:01+00:00",
+      "author_id": null,
+      "topic_mention": true,
+      "selected_news": true,
+      "segments": [
+        {
+          "class": "event",
+          "start": 40,
+          "end": 115,
+          "quote": "1. 0xC2f1 вывел 2 695 #ETH ($6,94 млн) с Gemini и разместил их в стейкинге;"
+        },
+        {
+          "class": "event",
+          "start": 116,
+          "end": 193,
+          "quote": "2. 0x3F2c вывел 2 500 #ETH ($6,02 млн) с Binance после 9 месяцев бездействия."
+        }
+      ],
+      "event_ids": [
+        "e2-ec98efd39500ce4c",
+        "e3-fbc8cedab2aaaef9"
+      ],
+      "origin": "own",
+      "source_role": "participant",
+      "status": "processed"
+    },
+    {
+      "source_id": 18,
+      "external_id": "31476",
+      "link": "https://t.me/crypto_hd/31476",
+      "published_at": "2026-09-17T06:49:07+00:00",
+      "author_id": null,
+      "topic_mention": true,
+      "selected_news": true,
+      "segments": [
+        {
+          "class": "event",
+          "start": 176,
+          "end": 349,
+          "quote": "➤ Кит «0xC2f1» вывел с Gemini 2695 ETH ($6,94m) и сразу отправил всю позицию в стейкинг. Еще один кит «0x3F2c» после 9 месяцев бездействия вывел с Binance 2500 ETH ($6,02m)."
+        },
+        {
+          "class": "event",
+          "start": 351,
+          "end": 431,
+          "quote": "➤ Инвестор «0x0058» потратил 13m USDC на покупку 5368 ETH по средней цене $2422."
+        }
+      ],
+      "event_ids": [
+        "e2-ec98efd39500ce4c",
+        "e4-73a28409f802189b"
+      ],
+      "origin": "retelling",
+      "source_role": "editorial",
+      "status": "processed"
+    },
+    {
+      "source_id": 15,
+      "external_id": "423173",
+      "link": "https://t.me/WEB3_AGGREGATOR/423173",
+      "published_at": "2026-09-17T07:10:14+00:00",
+      "author_id": null,
+      "topic_mention": true,
+      "selected_news": false,
+      "segments": [
+        {
+          "class": "author_position",
+          "start": 184,
+          "end": 251,
+          "quote": "Именно в эту сторону Ethereum планирует двигаться в ближайшие годы."
+        }
+      ],
+      "event_ids": [],
+      "origin": "retelling",
+      "source_role": "author",
+      "status": "processed"
+    },
+    {
+      "source_id": 21,
+      "external_id": "21108",
+      "link": "https://t.me/rawa_imagination/21108",
+      "published_at": "2026-09-17T08:13:01+00:00",
+      "author_id": null,
+      "topic_mention": true,
+      "selected_news": false,
+      "segments": [
+        {
+          "class": "promo_service",
+          "start": 423,
+          "end": 481,
+          "quote": "🟢 ₿ BTC: $76,400.00 (+1.01%)\n  🟢 ⟠ ETH: $2,442.03 (+2.14%)"
+        }
+      ],
+      "event_ids": [],
+      "origin": "unknown",
+      "source_role": "unknown",
+      "status": "processed"
+    },
+    {
+      "source_id": 21,
+      "external_id": "21109",
+      "link": "https://t.me/rawa_imagination/21109",
+      "published_at": "2026-09-17T10:01:01+00:00",
+      "author_id": null,
+      "topic_mention": true,
+      "selected_news": true,
+      "segments": [
+        {
+          "class": "promo_service",
+          "start": 13,
+          "end": 41,
+          "quote": "₿ BTC: $76,532\n⟠ ETH: $2,437"
+        },
+        {
+          "class": "event",
+          "start": 305,
+          "end": 329,
+          "quote": "📈 🔴 ETH ETF: отток $224M"
+        }
+      ],
+      "event_ids": [
+        "e1-1b98e70b7e1ada6b"
+      ],
+      "origin": "own",
+      "source_role": "editorial",
+      "status": "held"
+    },
+    {
+      "source_id": 11,
+      "external_id": "96782",
+      "link": "https://t.me/cryptoattack24/96782",
+      "published_at": "2026-09-17T12:16:32+00:00",
+      "author_id": null,
+      "topic_mention": true,
+      "selected_news": false,
+      "segments": [],
+      "event_ids": [],
+      "origin": "own",
+      "source_role": "participant",
+      "status": "held"
+    },
+    {
+      "source_id": 10,
+      "external_id": "385211",
+      "link": "https://t.me/markettwits/385211",
+      "published_at": "2026-09-17T12:24:29+00:00",
+      "author_id": null,
+      "topic_mention": true,
+      "selected_news": true,
+      "segments": [
+        {
+          "class": "event",
+          "start": 0,
+          "end": 135,
+          "quote": "⚠️✴️#BTC #ETH #крипто #cot \nBlackRock сегодня начал переводить BTC и ETH на биржи - скорее всего, на продажу для клиентов  — мониторинг"
+        }
+      ],
+      "event_ids": [
+        "e5-6a10d8c975578af1"
+      ],
+      "origin": "own",
+      "source_role": "editorial",
+      "status": "processed"
+    },
+    {
+      "source_id": 15,
+      "external_id": "423218",
+      "link": "https://t.me/WEB3_AGGREGATOR/423218",
+      "published_at": "2026-09-17T15:09:51+00:00",
+      "author_id": null,
+      "topic_mention": true,
+      "selected_news": false,
+      "segments": [
+        {
+          "class": "author_position",
+          "start": 31,
+          "end": 303,
+          "quote": "The S-tier – Lighter, Delta, Arcus, Index, Bankr, Virtuals – shows the chain is built for perps, tokenized stocks and agents, while B and C are mostly memecoins. Notably absent: Ethereum's DeFi blue chips – Robinhood is building around its own product, not the DeFi stack."
+        }
+      ],
+      "event_ids": [],
+      "origin": "own",
+      "source_role": "editorial",
+      "status": "processed"
+    },
+    {
+      "source_id": 15,
+      "external_id": "423229",
+      "link": "https://t.me/WEB3_AGGREGATOR/423229",
+      "published_at": "2026-09-17T17:43:15+00:00",
+      "author_id": null,
+      "topic_mention": true,
+      "selected_news": false,
+      "segments": [
+        {
+          "class": "participant_reaction",
+          "start": 592,
+          "end": 790,
+          "quote": "$ZEC Альфа актив новая фин элита, крче defi развивается, nft развивается, бомжи уже не купят, ибо дорого, крч это бтс для молодых, плюс Уинклвосы, выкупают zec на компанию, как бит-майн баит эфирчик"
+        }
+      ],
+      "event_ids": [],
+      "origin": "own",
+      "source_role": "participant",
+      "status": "processed"
+    },
+    {
+      "source_id": 15,
+      "external_id": "423244",
+      "link": "https://t.me/WEB3_AGGREGATOR/423244",
+      "published_at": "2026-09-17T18:31:20+00:00",
+      "author_id": null,
+      "topic_mention": true,
+      "selected_news": false,
+      "segments": [
+        {
+          "class": "event",
+          "start": 252,
+          "end": 576,
+          "quote": "Studio is built around Arc and Circle’s infrastructure, with integrations for CCTP, Gateway, Wallets, and other stablecoin tools. Generated apps can be tested across nine EVM chains, including Arc, Ethereum, Base, Avalanche, Arbitrum, and Unichain, while the resulting code can be exported into developers’ own repositories."
+        }
+      ],
+      "event_ids": [],
+      "origin": "retelling",
+      "source_role": "editorial",
+      "status": "processed"
+    },
+    {
+      "source_id": 15,
+      "external_id": "423246",
+      "link": "https://t.me/WEB3_AGGREGATOR/423246",
+      "published_at": "2026-09-17T19:21:18+00:00",
+      "author_id": null,
+      "topic_mention": true,
+      "selected_news": false,
+      "segments": [
+        {
+          "class": "event",
+          "start": 1597,
+          "end": 1820,
+          "quote": "🤪 HashCats - намайнено 9k+ кошек, где-то 1/3 сожгли, 2/3 осталось и еще майнятся тотал 16376. Цена входа сейчас при минте = число уже существующих котов * 0.00002 ETH. Т.е. сейчас на Opensea +/- справедливая цена в 0.16 eth"
+        },
+        {
+          "class": "event",
+          "start": 1822,
+          "end": 2018,
+          "quote": "Эти эфиры, которые идут на минт котов на 70% идут в награды существующим котам, на 22.5% байбек и бёрн $HASH, 7.5% команде. Я говорил, что треть кошек сожгли - как раз при сожжении получаешь $HASH"
+        },
+        {
+          "class": "event",
+          "start": 2380,
+          "end": 2531,
+          "quote": "🤪 Project Mars - 5000 участков (внутри ETH залочены на случай, если игра загнется - можно будет сжечь нфт и достать кефиры) в 5 регионах и токен $DRILL"
+        }
+      ],
+      "event_ids": [],
+      "origin": "own",
+      "source_role": "participant",
+      "status": "processed"
+    },
+    {
+      "source_id": 10,
+      "external_id": "385262",
+      "link": "https://t.me/markettwits/385262",
+      "published_at": "2026-09-17T19:43:55+00:00",
+      "author_id": null,
+      "topic_mention": true,
+      "selected_news": true,
+      "segments": [
+        {
+          "class": "promo_service",
+          "start": 0,
+          "end": 21,
+          "quote": "✴️#ETH #обзор #крипто"
+        },
+        {
+          "class": "event",
+          "start": 23,
+          "end": 281,
+          "quote": "Комиссия за транзакции в сети Ethereum значительно снизилась. С момента достижения пикового значения 21 апреля в $0,72,  сегодня средняя транзакция за перевод оценивается всего в $0,095, даже с учетом того, что рыночная стоимость ETH сейчас выше. — Santiment"
+        }
+      ],
+      "event_ids": [
+        "e6-0cbce6a16038085b"
+      ],
+      "origin": "retelling",
+      "source_role": "editorial",
+      "status": "processed"
+    },
+    {
+      "source_id": 18,
+      "external_id": "31491",
+      "link": "https://t.me/crypto_hd/31491",
+      "published_at": "2026-09-17T20:33:19+00:00",
+      "author_id": null,
+      "topic_mention": true,
+      "selected_news": true,
+      "segments": [
+        {
+          "class": "event",
+          "start": 148,
+          "end": 237,
+          "quote": "➤ При резком росте #ETH до ~$2730 объем ликвидаций SHORT-позиций превысит $3,060,000,000."
+        }
+      ],
+      "event_ids": [
+        "e7-79ddbc00ba386cd5"
+      ],
+      "origin": "own",
+      "source_role": "editorial",
+      "status": "processed"
+    },
+    {
+      "source_id": 15,
+      "external_id": "423249",
+      "link": "https://t.me/WEB3_AGGREGATOR/423249",
+      "published_at": "2026-09-17T20:54:12+00:00",
+      "author_id": null,
+      "topic_mention": true,
+      "selected_news": false,
+      "segments": [
+        {
+          "class": "event",
+          "start": 49,
+          "end": 377,
+          "quote": "Wall Street kept walking in: S&P Global agreed to buy OpenZeppelin, the firm securing $37T in smart contracts, Deutsche Bank went live with institutional BTC/ETH custody, and Circle's Arc L1 hit mainnet; while crypto's courtroom pile grew, from DOJ charges against two Robinhood engineers to Celsius's $495M suit against BitMEX."
+        },
+        {
+          "class": "event",
+          "start": 452,
+          "end": 510,
+          "quote": "— Deutsche Bank launches institutional BTC and ETH custody"
+        }
+      ],
+      "event_ids": [],
+      "origin": "retelling",
+      "source_role": "editorial",
+      "status": "processed"
+    },
+    {
+      "source_id": 15,
+      "external_id": "423250",
+      "link": "https://t.me/WEB3_AGGREGATOR/423250",
+      "published_at": "2026-09-17T20:54:15+00:00",
+      "author_id": null,
+      "topic_mention": true,
+      "selected_news": true,
+      "segments": [
+        {
+          "class": "event",
+          "start": 566,
+          "end": 661,
+          "quote": "🕵️‍♂️ BlackRock перевели на Coinbase Prime 54 096 #ETH (131,7 млн $) и 2 015 #BTC (153,8 млн $)"
+        }
+      ],
+      "event_ids": [
+        "e8-25495bb8ed6c21b0"
+      ],
+      "origin": "retelling",
+      "source_role": "editorial",
+      "status": "processed"
+    },
+    {
+      "source_id": 11,
+      "external_id": "96795",
+      "link": "https://t.me/cryptoattack24/96795",
+      "published_at": "2026-09-18T03:57:07+00:00",
+      "author_id": null,
+      "topic_mention": true,
+      "selected_news": true,
+      "segments": [
+        {
+          "class": "event",
+          "start": 0,
+          "end": 81,
+          "quote": "📊 #BTC #ETH #ETF Вчера общий чистый приток спотовых BTC-ETF составил ~$159,5 млн."
+        },
+        {
+          "class": "event",
+          "start": 83,
+          "end": 138,
+          "quote": "Общий чистый отток спотовых ETH-ETF составил $39,3 млн."
+        }
+      ],
+      "event_ids": [
+        "e9-d57ff52e9ff96871"
+      ],
+      "origin": "own",
+      "source_role": "editorial",
+      "status": "processed"
+    },
+    {
+      "source_id": 18,
+      "external_id": "31498",
+      "link": "https://t.me/crypto_hd/31498",
+      "published_at": "2026-09-18T07:22:04+00:00",
+      "author_id": null,
+      "topic_mention": true,
+      "selected_news": true,
+      "segments": [
+        {
+          "class": "event",
+          "start": 0,
+          "end": 54,
+          "quote": "📍Сегодня экспирация в опционах на BTC и ETH! (Deribit)"
+        },
+        {
+          "class": "promo_service",
+          "start": 56,
+          "end": 108,
+          "quote": "$1,7b в опционах на #BTC и $370m в опционах на #ETH."
+        },
+        {
+          "class": "promo_service",
+          "start": 154,
+          "end": 194,
+          "quote": "▫️Зона основного интереса в ETH = $2500."
+        }
+      ],
+      "event_ids": [
+        "e10-5c0c02b4a45b50e5"
+      ],
+      "origin": "own",
+      "source_role": "editorial",
+      "status": "processed"
+    },
+    {
+      "source_id": 21,
+      "external_id": "21113",
+      "link": "https://t.me/rawa_imagination/21113",
+      "published_at": "2026-09-18T08:10:27+00:00",
+      "author_id": null,
+      "topic_mention": true,
+      "selected_news": false,
+      "segments": [
+        {
+          "class": "promo_service",
+          "start": 429,
+          "end": 487,
+          "quote": "🟢 ₿ BTC: $77,862.00 (+1.90%)\n  🟢 ⟠ ETH: $2,493.97 (+2.15%)"
+        }
+      ],
+      "event_ids": [],
+      "origin": "unknown",
+      "source_role": "unknown",
+      "status": "processed"
+    },
+    {
+      "source_id": 15,
+      "external_id": "423264",
+      "link": "https://t.me/WEB3_AGGREGATOR/423264",
+      "published_at": "2026-09-18T08:44:40+00:00",
+      "author_id": null,
+      "topic_mention": true,
+      "selected_news": true,
+      "segments": [
+        {
+          "class": "event",
+          "start": 0,
+          "end": 206,
+          "quote": "@nostrafinance has reported that a manipulated NSTR oracle price allowed a single account to borrow ~$3.5M in ETH, STRK, USDC, USDT, WBTC, and DAI against NSTR collateral on Nostra's #Starknet money market."
+        }
+      ],
+      "event_ids": [
+        "e11-d94d5187156da12d"
+      ],
+      "origin": "retelling",
+      "source_role": "author",
+      "status": "processed"
+    },
+    {
+      "source_id": 13,
+      "external_id": "3756",
+      "link": "https://t.me/krasnovcrypto/3756",
+      "published_at": "2026-09-18T09:41:34+00:00",
+      "author_id": null,
+      "topic_mention": true,
+      "selected_news": false,
+      "segments": [
+        {
+          "class": "participant_reaction",
+          "start": 0,
+          "end": 23,
+          "quote": "Тестирую бота на ETH ⚪️"
+        },
+        {
+          "class": "participant_reaction",
+          "start": 25,
+          "end": 153,
+          "quote": "Запустил бота на Ethereum всего на $100. Хотелось посмотреть, как стратегия поведет себя именно вживую, а не только на бэктесте."
+        }
+      ],
+      "event_ids": [],
+      "origin": "own",
+      "source_role": "participant",
+      "status": "processed"
+    },
+    {
+      "source_id": 21,
+      "external_id": "21117",
+      "link": "https://t.me/rawa_imagination/21117",
+      "published_at": "2026-09-18T10:01:01+00:00",
+      "author_id": null,
+      "topic_mention": true,
+      "selected_news": true,
+      "segments": [
+        {
+          "class": "promo_service",
+          "start": 13,
+          "end": 41,
+          "quote": "₿ BTC: $78,142\n⟠ ETH: $2,503"
+        },
+        {
+          "class": "event",
+          "start": 130,
+          "end": 174,
+          "quote": "ETH: Binance: +0.0091% 🐂 | Bybit: +0.0100% 🐂"
+        },
+        {
+          "class": "event",
+          "start": 309,
+          "end": 332,
+          "quote": "📈 🔴 ETH ETF: отток $39M"
+        }
+      ],
+      "event_ids": [
+        "e9-d57ff52e9ff96871",
+        "e12-6f00f19e65b20c33"
+      ],
+      "origin": "unknown",
+      "source_role": "unknown",
+      "status": "processed"
+    },
+    {
+      "source_id": 18,
+      "external_id": "31503",
+      "link": "https://t.me/crypto_hd/31503",
+      "published_at": "2026-09-18T11:49:21+00:00",
+      "author_id": null,
+      "topic_mention": true,
+      "selected_news": true,
+      "segments": [
+        {
+          "class": "event",
+          "start": 46,
+          "end": 265,
+          "quote": "➤ Инсайдер Bitcoin OG выставил ордер на открытие лонга на 2450 BTC (~$190m) по цене $78,000. Также он продал 35,000 ETH ($87,5m) по цене ~$2500 и направил часть средств на увеличение обеспечения убыточного шорта по ZEC."
+        },
+        {
+          "class": "event",
+          "start": 371,
+          "end": 526,
+          "quote": "➤ 11 новых кошельков, вероятно принадлежащих одному киту, за последние три дня продали 602 BTC за $45,8m на Hyperliquid и купили 18,780 ETH на ту же сумму."
+        },
+        {
+          "class": "event",
+          "start": 636,
+          "end": 761,
+          "quote": "➤ Кит «0x72e0», вероятно, меняет HYPE на ETH. Он перевел 440,000 HYPE ($36m) в FalconX, после чего вывел 12,250 ETH ($30,1m)."
+        },
+        {
+          "class": "event",
+          "start": 763,
+          "end": 900,
+          "quote": "➤ Четыре новых кошелька одного кита/институционала купили 6972 ETH ($17,15m) по средней цене $2460,69 и отправили всю позицию в стейкинг."
+        }
+      ],
+      "event_ids": [
+        "e13-72ba3c573f7b8cd0",
+        "e14-21869d99515ccb24",
+        "e15-e7b0e741d1a92de8",
+        "e16-00c57e20e0576712"
+      ],
+      "origin": "retelling",
+      "source_role": "author",
+      "status": "processed"
+    },
+    {
+      "source_id": 18,
+      "external_id": "31504",
+      "link": "https://t.me/crypto_hd/31504",
+      "published_at": "2026-09-18T12:43:19+00:00",
+      "author_id": null,
+      "topic_mention": true,
+      "selected_news": true,
+      "segments": [
+        {
+          "class": "promo_service",
+          "start": 0,
+          "end": 4,
+          "quote": "#eth"
+        },
+        {
+          "class": "event",
+          "start": 171,
+          "end": 362,
+          "quote": "По его словам, инвесторы ошибались, считая, что Ethereum станет единым стандартом для институционального рынка. Сейчас компании рассматривают разные блокчейны, и победитель пока не определен."
+        }
+      ],
+      "event_ids": [
+        "e17-c97d0c8cb7e8c107"
+      ],
+      "origin": "retelling",
+      "source_role": "author",
+      "status": "processed"
+    },
+    {
+      "source_id": 5,
+      "external_id": "3277",
+      "link": "https://t.me/cryptonftded/3277",
+      "published_at": "2026-09-18T14:09:38+00:00",
+      "author_id": null,
+      "topic_mention": true,
+      "selected_news": false,
+      "segments": [
+        {
+          "class": "promo_service",
+          "start": 162,
+          "end": 195,
+          "quote": "BTC $80 200\nETH $2 552\nGRAM $1.37"
+        }
+      ],
+      "event_ids": [],
+      "origin": "unknown",
+      "source_role": "unknown",
+      "status": "processed"
+    },
+    {
+      "source_id": 15,
+      "external_id": "423294",
+      "link": "https://t.me/WEB3_AGGREGATOR/423294",
+      "published_at": "2026-09-18T14:55:21+00:00",
+      "author_id": null,
+      "topic_mention": true,
+      "selected_news": true,
+      "segments": [
+        {
+          "class": "event",
+          "start": 42,
+          "end": 85,
+          "quote": "1. У них есть уже коллекция почти по эфиру."
+        }
+      ],
+      "event_ids": [
+        "e18-e5b6ccff9b088623"
+      ],
+      "origin": "unknown",
+      "source_role": "unknown",
+      "status": "processed"
+    },
+    {
+      "source_id": 18,
+      "external_id": "31509",
+      "link": "https://t.me/crypto_hd/31509",
+      "published_at": "2026-09-18T16:04:09+00:00",
+      "author_id": null,
+      "topic_mention": true,
+      "selected_news": false,
+      "segments": [
+        {
+          "class": "promo_service",
+          "start": 5,
+          "end": 51,
+          "quote": "🚀 Arbitrum: почему \"мертвый\" L2 ETH дает иксы?"
+        }
+      ],
+      "event_ids": [],
+      "origin": "unknown",
+      "source_role": "unknown",
+      "status": "processed"
+    },
+    {
+      "source_id": 15,
+      "external_id": "423312",
+      "link": "https://t.me/WEB3_AGGREGATOR/423312",
+      "published_at": "2026-09-18T18:36:35+00:00",
+      "author_id": null,
+      "topic_mention": true,
+      "selected_news": true,
+      "segments": [
+        {
+          "class": "event",
+          "start": 0,
+          "end": 177,
+          "quote": "🪙 Ethereum хочет ускорить базовый ритм сети — предложение EIP-8198 должно сделать длительность слота настраиваемой вместо жёстких 12 секунд, чтобы затем постепенно сокращать её."
+        },
+        {
+          "class": "event",
+          "start": 180,
+          "end": 351,
+          "quote": "В обсуждениях называют 10 секунд как первый осторожный шаг, а в текущем черновике EIP фигурируют 8 секунд, Ethereum Foundation уже включила инициативу в B-tier для Hegotá."
+        }
+      ],
+      "event_ids": [
+        "e19-a4f2adbf4b9d2794",
+        "e20-d5a5326d209f61fa"
+      ],
+      "origin": "own",
+      "source_role": "editorial",
+      "status": "processed"
+    },
+    {
+      "source_id": 18,
+      "external_id": "31516",
+      "link": "https://t.me/crypto_hd/31516",
+      "published_at": "2026-09-18T22:20:00+00:00",
+      "author_id": null,
+      "topic_mention": true,
+      "selected_news": false,
+      "segments": [
+        {
+          "class": "promo_service",
+          "start": 34,
+          "end": 94,
+          "quote": "❕Arbitrum (ARB): почему \"мертвый\" L2 ETH дает иксы? - статья"
+        }
+      ],
+      "event_ids": [],
+      "origin": "unknown",
+      "source_role": "unknown",
+      "status": "processed"
+    },
+    {
+      "source_id": 11,
+      "external_id": "96819",
+      "link": "https://t.me/cryptoattack24/96819",
+      "published_at": "2026-09-19T04:03:01+00:00",
+      "author_id": null,
+      "topic_mention": true,
+      "selected_news": true,
+      "segments": [
+        {
+          "class": "event",
+          "start": 0,
+          "end": 79,
+          "quote": "📈 #BTC #ETH #ETF Вчера общий чистый приток спотовых BTC-ETF составил ~$433 млн."
+        },
+        {
+          "class": "event",
+          "start": 81,
+          "end": 138,
+          "quote": "Общий чистый приток спотовых ETH-ETF составил $143,7 млн."
+        }
+      ],
+      "event_ids": [
+        "e21-0485a411367d9252"
+      ],
+      "origin": "own",
+      "source_role": "editorial",
+      "status": "processed"
+    },
+    {
+      "source_id": 11,
+      "external_id": "96824",
+      "link": "https://t.me/cryptoattack24/96824",
+      "published_at": "2026-09-19T09:20:05+00:00",
+      "author_id": null,
+      "topic_mention": true,
+      "selected_news": true,
+      "segments": [
+        {
+          "class": "event",
+          "start": 21,
+          "end": 175,
+          "quote": "–Два кошелька (вероятно, принадлежащие одному и тому же киту) перевели на Bitfinex 33 180 #ETH (~86,9 млн $) после более чем 2-летнего бездействия (1, 2);"
+        }
+      ],
+      "event_ids": [
+        "e22-94522467a1ad084d"
+      ],
+      "origin": "own",
+      "source_role": "editorial",
+      "status": "processed"
+    },
+    {
+      "source_id": 10,
+      "external_id": "385442",
+      "link": "https://t.me/markettwits/385442",
+      "published_at": "2026-09-19T09:22:17+00:00",
+      "author_id": null,
+      "topic_mention": true,
+      "selected_news": true,
+      "segments": [
+        {
+          "class": "event",
+          "start": 24,
+          "end": 126,
+          "quote": "Активность китов в ETH резко выросла, кол-во холдеров обновило рекорд. В альткоинах ралли. — Santiment"
+        }
+      ],
+      "event_ids": [
+        "e23-28d1b3f1a9ad545d"
+      ],
+      "origin": "own",
+      "source_role": "editorial",
+      "status": "processed"
+    },
+    {
+      "source_id": 21,
+      "external_id": "21121",
+      "link": "https://t.me/rawa_imagination/21121",
+      "published_at": "2026-09-19T10:01:01+00:00",
+      "author_id": null,
+      "topic_mention": true,
+      "selected_news": true,
+      "segments": [
+        {
+          "class": "promo_service",
+          "start": 13,
+          "end": 41,
+          "quote": "₿ BTC: $81,335\n⟠ ETH: $2,641"
+        },
+        {
+          "class": "event",
+          "start": 128,
+          "end": 174,
+          "quote": "  ETH: Binance: +0.0100% 🐂 | Bybit: +0.0100% 🐂"
+        },
+        {
+          "class": "event",
+          "start": 310,
+          "end": 335,
+          "quote": "📈 🟢 ETH ETF: приток $144M"
+        }
+      ],
+      "event_ids": [
+        "e21-0485a411367d9252",
+        "e24-3da122a196632c38"
+      ],
+      "origin": "own",
+      "source_role": "editorial",
+      "status": "processed"
+    },
+    {
+      "source_id": 9,
+      "external_id": "1041526",
+      "link": "https://t.me/marketfeed/1041526",
+      "published_at": "2026-09-19T10:09:41+00:00",
+      "author_id": null,
+      "topic_mention": true,
+      "selected_news": true,
+      "segments": [
+        {
+          "class": "event",
+          "start": 46,
+          "end": 67,
+          "quote": "#ETHER 2639.50 +0.32%"
+        }
+      ],
+      "event_ids": [
+        "e25-7e3a3f30e727aa81"
+      ],
+      "origin": "own",
+      "source_role": "editorial",
+      "status": "processed"
+    },
+    {
+      "source_id": 9,
+      "external_id": "1041542",
+      "link": "https://t.me/marketfeed/1041542",
+      "published_at": "2026-09-19T11:01:17+00:00",
+      "author_id": null,
+      "topic_mention": true,
+      "selected_news": true,
+      "segments": [
+        {
+          "class": "event",
+          "start": 2268,
+          "end": 2365,
+          "quote": "• Bitcoin holds around $81.2K; ether near $2.64K — risk assets steady despite macro/policy noise."
+        }
+      ],
+      "event_ids": [
+        "e26-39d34980417fb7cd"
+      ],
+      "origin": "own",
+      "source_role": "editorial",
+      "status": "processed"
+    },
+    {
+      "source_id": 9,
+      "external_id": "1041664",
+      "link": "https://t.me/marketfeed/1041664",
+      "published_at": "2026-09-19T18:53:11+00:00",
+      "author_id": null,
+      "topic_mention": true,
+      "selected_news": false,
+      "segments": [
+        {
+          "class": "redistribution",
+          "start": 48,
+          "end": 69,
+          "quote": "#ETHER 2636.40 +0.19%"
+        }
+      ],
+      "event_ids": [],
+      "origin": "retelling",
+      "source_role": "editorial",
+      "status": "processed"
+    },
+    {
+      "source_id": 9,
+      "external_id": "1041673",
+      "link": "https://t.me/marketfeed/1041673",
+      "published_at": "2026-09-19T20:30:32+00:00",
+      "author_id": null,
+      "topic_mention": true,
+      "selected_news": false,
+      "segments": [
+        {
+          "class": "redistribution",
+          "start": 1924,
+          "end": 1948,
+          "quote": "ETH also modestly higher"
+        }
+      ],
+      "event_ids": [],
+      "origin": "retelling",
+      "source_role": "editorial",
+      "status": "processed"
+    },
+    {
+      "source_id": 11,
+      "external_id": "96827",
+      "link": "https://t.me/cryptoattack24/96827",
+      "published_at": "2026-09-19T20:56:39+00:00",
+      "author_id": null,
+      "topic_mention": true,
+      "selected_news": true,
+      "segments": [
+        {
+          "class": "event",
+          "start": 339,
+          "end": 451,
+          "quote": "Мосбиржа запускает бессрочные фьючерсы на индексы #BTC, #ETH, #SOL, #XRP и #TRX для квалифицированных инвесторов"
+        }
+      ],
+      "event_ids": [
+        "e27-d8930c1560bb8ed1"
+      ],
+      "origin": "own",
+      "source_role": "editorial",
+      "status": "processed"
+    }
+  ],
+  "comments": [
+    {
+      "comment_key": "channel:1545881523:187446",
+      "link": "https://t.me/cryptonftded/3270?comment=187446",
+      "published_at": "2026-09-17T07:01:39+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1494845665:571692",
+      "link": "https://t.me/whitelist1/7141?comment=571692",
+      "published_at": "2026-09-17T07:02:20+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1494845665:571693",
+      "link": "https://t.me/whitelist1/7141?comment=571693",
+      "published_at": "2026-09-17T07:04:01+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1742296134:188801",
+      "link": "https://t.me/icryptocom/8099?comment=188801",
+      "published_at": "2026-09-17T07:09:37+00:00",
+      "link_target": "project",
+      "basis": "вопрос или оценка по проекту в целом, не по конкретной новости"
+    },
+    {
+      "comment_key": "channel:1742296134:188802",
+      "link": "https://t.me/icryptocom/8099?comment=188802",
+      "published_at": "2026-09-17T07:40:08+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1742296134:188803",
+      "link": "https://t.me/icryptocom/8099?comment=188803",
+      "published_at": "2026-09-17T07:41:44+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1494845665:571695",
+      "link": "https://t.me/whitelist1/7141?comment=571695",
+      "published_at": "2026-09-17T07:57:56+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1742296134:188805",
+      "link": "https://t.me/icryptocom/8099?comment=188805",
+      "published_at": "2026-09-17T08:07:49+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1494845665:571696",
+      "link": "https://t.me/whitelist1/7141?comment=571696",
+      "published_at": "2026-09-17T08:12:39+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1494845665:571697",
+      "link": "https://t.me/whitelist1/7141?comment=571697",
+      "published_at": "2026-09-17T08:23:45+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1494845665:571698",
+      "link": "https://t.me/whitelist1/7141?comment=571698",
+      "published_at": "2026-09-17T08:23:51+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1696030614:284547",
+      "link": "https://t.me/krasnovcrypto/3754?comment=284547",
+      "published_at": "2026-09-17T08:25:30+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1494845665:571700",
+      "link": "https://t.me/whitelist1/7141?comment=571700",
+      "published_at": "2026-09-17T08:35:20+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1696030614:284548",
+      "link": "https://t.me/krasnovcrypto/3754?comment=284548",
+      "published_at": "2026-09-17T08:48:48+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1167285985:343073",
+      "link": "https://t.me/rawa_imagination/21108?comment=343073",
+      "published_at": "2026-09-17T09:03:00+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1167285985:343075",
+      "link": "https://t.me/rawa_imagination/21108?comment=343075",
+      "published_at": "2026-09-17T09:09:57+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1167285985:343076",
+      "link": "https://t.me/rawa_imagination/21108?comment=343076",
+      "published_at": "2026-09-17T09:22:04+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1167285985:343079",
+      "link": "https://t.me/rawa_imagination/21108?comment=343079",
+      "published_at": "2026-09-17T09:35:42+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1696030614:284549",
+      "link": "https://t.me/krasnovcrypto/3754?comment=284549",
+      "published_at": "2026-09-17T09:41:46+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1696030614:284550",
+      "link": "https://t.me/krasnovcrypto/3754?comment=284550",
+      "published_at": "2026-09-17T09:43:23+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1494845665:571704",
+      "link": "https://t.me/whitelist1/7141?comment=571704",
+      "published_at": "2026-09-17T09:55:35+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1742296134:188807",
+      "link": "https://t.me/icryptocom/8100?comment=188807",
+      "published_at": "2026-09-17T10:19:59+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1742296134:188808",
+      "link": "https://t.me/icryptocom/8100?comment=188808",
+      "published_at": "2026-09-17T10:20:45+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1742296134:188809",
+      "link": "https://t.me/icryptocom/8100?comment=188809",
+      "published_at": "2026-09-17T10:20:54+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1742296134:188811",
+      "link": "https://t.me/icryptocom/8100?comment=188811",
+      "published_at": "2026-09-17T10:21:28+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1545881523:187463",
+      "link": "https://t.me/cryptonftded/3270?comment=187463",
+      "published_at": "2026-09-17T10:30:05+00:00",
+      "link_target": "other_subject",
+      "basis": "предмет реплики — сторонний сервис/коллекция экосистемы, не событие темы"
+    },
+    {
+      "comment_key": "channel:1696030614:284552",
+      "link": "https://t.me/krasnovcrypto/3754?comment=284552",
+      "published_at": "2026-09-17T10:36:09+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1742296134:188812",
+      "link": "https://t.me/icryptocom/8100?comment=188812",
+      "published_at": "2026-09-17T10:59:09+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1742296134:188813",
+      "link": "https://t.me/icryptocom/8100?comment=188813",
+      "published_at": "2026-09-17T11:00:16+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1742296134:188814",
+      "link": "https://t.me/icryptocom/8100?comment=188814",
+      "published_at": "2026-09-17T11:01:49+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1742296134:188815",
+      "link": "https://t.me/icryptocom/8100?comment=188815",
+      "published_at": "2026-09-17T11:02:08+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1742296134:188816",
+      "link": "https://t.me/icryptocom/8100?comment=188816",
+      "published_at": "2026-09-17T11:03:11+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1494845665:571708",
+      "link": "https://t.me/whitelist1/7142?comment=571708",
+      "published_at": "2026-09-17T11:30:50+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1494845665:571709",
+      "link": "https://t.me/whitelist1/7142?comment=571709",
+      "published_at": "2026-09-17T11:39:24+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1494845665:571711",
+      "link": "https://t.me/whitelist1/7142?comment=571711",
+      "published_at": "2026-09-17T11:43:30+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1545881523:187471",
+      "link": "https://t.me/cryptonftded/3271?comment=187471",
+      "published_at": "2026-09-17T12:00:36+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1494845665:571714",
+      "link": "https://t.me/whitelist1/7142?comment=571714",
+      "published_at": "2026-09-17T12:12:41+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1494845665:571716",
+      "link": "https://t.me/whitelist1/7142?comment=571716",
+      "published_at": "2026-09-17T12:14:16+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1530857706:138189",
+      "link": "https://t.me/Slavik_investor_updates/6921?comment=138189",
+      "published_at": "2026-09-17T12:38:39+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1530857706:138190",
+      "link": "https://t.me/Slavik_investor_updates/6924?comment=138190",
+      "published_at": "2026-09-17T12:42:11+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1530857706:138193",
+      "link": "https://t.me/Slavik_investor_updates/6919?comment=138193",
+      "published_at": "2026-09-17T12:58:34+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1494845665:571721",
+      "link": "https://t.me/whitelist1/7143?comment=571721",
+      "published_at": "2026-09-17T13:03:57+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1494845665:571723",
+      "link": "https://t.me/whitelist1/7143?comment=571723",
+      "published_at": "2026-09-17T13:07:02+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1494845665:571724",
+      "link": "https://t.me/whitelist1/7143?comment=571724",
+      "published_at": "2026-09-17T13:07:11+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1494845665:571725",
+      "link": "https://t.me/whitelist1/7143?comment=571725",
+      "published_at": "2026-09-17T13:07:17+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1494845665:571726",
+      "link": "https://t.me/whitelist1/7143?comment=571726",
+      "published_at": "2026-09-17T13:07:23+00:00",
+      "link_target": "other_subject",
+      "basis": "предмет реплики — сторонний сервис/коллекция экосистемы, не событие темы"
+    },
+    {
+      "comment_key": "channel:1494845665:571727",
+      "link": "https://t.me/whitelist1/7143?comment=571727",
+      "published_at": "2026-09-17T13:07:34+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1494845665:571728",
+      "link": "https://t.me/whitelist1/7143?comment=571728",
+      "published_at": "2026-09-17T13:13:30+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1545881523:187477",
+      "link": "https://t.me/cryptonftded/3274?comment=187477",
+      "published_at": "2026-09-17T14:48:48+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1545881523:187478",
+      "link": "https://t.me/cryptonftded/3274?comment=187478",
+      "published_at": "2026-09-17T14:49:01+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1545881523:187479",
+      "link": "https://t.me/cryptonftded/3274?comment=187479",
+      "published_at": "2026-09-17T14:59:34+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1545881523:187480",
+      "link": "https://t.me/cryptonftded/3274?comment=187480",
+      "published_at": "2026-09-17T15:06:42+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1545881523:187481",
+      "link": "https://t.me/cryptonftded/3274?comment=187481",
+      "published_at": "2026-09-17T15:08:42+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1545881523:187482",
+      "link": "https://t.me/cryptonftded/3274?comment=187482",
+      "published_at": "2026-09-17T15:10:14+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1494845665:571736",
+      "link": "https://t.me/whitelist1/7143?comment=571736",
+      "published_at": "2026-09-17T15:25:14+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1494845665:571738",
+      "link": "https://t.me/whitelist1/7143?comment=571738",
+      "published_at": "2026-09-17T15:25:31+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1494845665:571741",
+      "link": "https://t.me/whitelist1/7143?comment=571741",
+      "published_at": "2026-09-17T15:26:32+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1494845665:571742",
+      "link": "https://t.me/whitelist1/7143?comment=571742",
+      "published_at": "2026-09-17T15:36:45+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1494845665:571743",
+      "link": "https://t.me/whitelist1/7143?comment=571743",
+      "published_at": "2026-09-17T15:37:23+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1494845665:571746",
+      "link": "https://t.me/whitelist1/7143?comment=571746",
+      "published_at": "2026-09-17T15:41:05+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1545881523:187483",
+      "link": "https://t.me/cryptonftded/3274?comment=187483",
+      "published_at": "2026-09-17T15:43:17+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1545881523:187484",
+      "link": "https://t.me/cryptonftded/3274?comment=187484",
+      "published_at": "2026-09-17T15:50:44+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1494845665:571747",
+      "link": "https://t.me/whitelist1/7143?comment=571747",
+      "published_at": "2026-09-17T15:53:06+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1545881523:187485",
+      "link": "https://t.me/cryptonftded/3274?comment=187485",
+      "published_at": "2026-09-17T16:01:02+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1530857706:138197",
+      "link": "https://t.me/Slavik_investor_updates/6925?comment=138197",
+      "published_at": "2026-09-17T16:01:36+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1545881523:187486",
+      "link": "https://t.me/cryptonftded/3274?comment=187486",
+      "published_at": "2026-09-17T16:05:06+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1545881523:187487",
+      "link": "https://t.me/cryptonftded/3274?comment=187487",
+      "published_at": "2026-09-17T16:06:25+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1530857706:138199",
+      "link": "https://t.me/Slavik_investor_updates/6925?comment=138199",
+      "published_at": "2026-09-17T16:07:46+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1742296134:188823",
+      "link": "https://t.me/icryptocom/8101?comment=188823",
+      "published_at": "2026-09-17T16:39:10+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1530857706:138206",
+      "link": "https://t.me/Slavik_investor_updates/6925?comment=138206",
+      "published_at": "2026-09-17T17:14:46+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1545881523:187488",
+      "link": "https://t.me/cryptonftded/3274?comment=187488",
+      "published_at": "2026-09-17T17:31:21+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1545881523:187489",
+      "link": "https://t.me/cryptonftded/3274?comment=187489",
+      "published_at": "2026-09-17T17:33:57+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1545881523:187490",
+      "link": "https://t.me/cryptonftded/3274?comment=187490",
+      "published_at": "2026-09-17T17:35:05+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1545881523:187491",
+      "link": "https://t.me/cryptonftded/3274?comment=187491",
+      "published_at": "2026-09-17T17:36:07+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1545881523:187492",
+      "link": "https://t.me/cryptonftded/3274?comment=187492",
+      "published_at": "2026-09-17T17:38:27+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1545881523:187494",
+      "link": "https://t.me/cryptonftded/3274?comment=187494",
+      "published_at": "2026-09-17T17:41:51+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1545881523:187496",
+      "link": "https://t.me/cryptonftded/3274?comment=187496",
+      "published_at": "2026-09-17T17:45:41+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1269863275:150547",
+      "link": "https://t.me/icodrops_sergey/2426?comment=150547",
+      "published_at": "2026-09-17T17:59:53+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1269863275:150548",
+      "link": "https://t.me/icodrops_sergey/2426?comment=150548",
+      "published_at": "2026-09-17T18:00:30+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1269863275:150549",
+      "link": "https://t.me/icodrops_sergey/2426?comment=150549",
+      "published_at": "2026-09-17T18:02:53+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1269863275:150550",
+      "link": "https://t.me/icodrops_sergey/2426?comment=150550",
+      "published_at": "2026-09-17T18:03:30+00:00",
+      "link_target": "project",
+      "basis": "вопрос или оценка по проекту в целом, не по конкретной новости"
+    },
+    {
+      "comment_key": "channel:1269863275:150551",
+      "link": "https://t.me/icodrops_sergey/2426?comment=150551",
+      "published_at": "2026-09-17T18:03:44+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1269863275:150552",
+      "link": "https://t.me/icodrops_sergey/2426?comment=150552",
+      "published_at": "2026-09-17T18:03:44+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1269863275:150554",
+      "link": "https://t.me/icodrops_sergey/2426?comment=150554",
+      "published_at": "2026-09-17T18:04:48+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1269863275:150555",
+      "link": "https://t.me/icodrops_sergey/2426?comment=150555",
+      "published_at": "2026-09-17T18:21:53+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1269863275:150556",
+      "link": "https://t.me/icodrops_sergey/2426?comment=150556",
+      "published_at": "2026-09-17T18:23:59+00:00",
+      "link_target": "project",
+      "basis": "вопрос или оценка по проекту в целом, не по конкретной новости"
+    },
+    {
+      "comment_key": "channel:1269863275:150557",
+      "link": "https://t.me/icodrops_sergey/2426?comment=150557",
+      "published_at": "2026-09-17T18:24:30+00:00",
+      "link_target": "project",
+      "basis": "вопрос или оценка по проекту в целом, не по конкретной новости"
+    },
+    {
+      "comment_key": "channel:1494845665:571758",
+      "link": "https://t.me/whitelist1/7143?comment=571758",
+      "published_at": "2026-09-17T18:25:07+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1269863275:150558",
+      "link": "https://t.me/icodrops_sergey/2426?comment=150558",
+      "published_at": "2026-09-17T18:25:17+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1269863275:150559",
+      "link": "https://t.me/icodrops_sergey/2426?comment=150559",
+      "published_at": "2026-09-17T18:25:50+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1269863275:150560",
+      "link": "https://t.me/icodrops_sergey/2426?comment=150560",
+      "published_at": "2026-09-17T18:26:26+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1269863275:150561",
+      "link": "https://t.me/icodrops_sergey/2426?comment=150561",
+      "published_at": "2026-09-17T18:27:33+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1545881523:187499",
+      "link": "https://t.me/cryptonftded/3274?comment=187499",
+      "published_at": "2026-09-17T18:49:57+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1545881523:187500",
+      "link": "https://t.me/cryptonftded/3274?comment=187500",
+      "published_at": "2026-09-17T18:53:41+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1269863275:150563",
+      "link": "https://t.me/icodrops_sergey/2426?comment=150563",
+      "published_at": "2026-09-17T18:54:01+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1269863275:150564",
+      "link": "https://t.me/icodrops_sergey/2426?comment=150564",
+      "published_at": "2026-09-17T19:00:51+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1545881523:187501",
+      "link": "https://t.me/cryptonftded/3274?comment=187501",
+      "published_at": "2026-09-17T19:01:31+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1269863275:150566",
+      "link": "https://t.me/icodrops_sergey/2426?comment=150566",
+      "published_at": "2026-09-17T19:07:24+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1167285985:343090",
+      "link": "https://t.me/rawa_imagination/21112?comment=343090",
+      "published_at": "2026-09-17T19:12:14+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1545881523:187502",
+      "link": "https://t.me/cryptonftded/3274?comment=187502",
+      "published_at": "2026-09-17T19:18:36+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1167285985:343091",
+      "link": "https://t.me/rawa_imagination/21112?comment=343091",
+      "published_at": "2026-09-17T19:25:52+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1167285985:343092",
+      "link": "https://t.me/rawa_imagination/21112?comment=343092",
+      "published_at": "2026-09-17T19:40:52+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1167285985:343093",
+      "link": "https://t.me/rawa_imagination/21112?comment=343093",
+      "published_at": "2026-09-17T19:41:36+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1167285985:343096",
+      "link": "https://t.me/rawa_imagination/21112?comment=343096",
+      "published_at": "2026-09-17T19:50:54+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1530857706:138210",
+      "link": "https://t.me/Slavik_investor_updates/6924?comment=138210",
+      "published_at": "2026-09-17T20:09:35+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1530857706:138211",
+      "link": "https://t.me/Slavik_investor_updates/6925?comment=138211",
+      "published_at": "2026-09-17T21:10:26+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1167285985:343099",
+      "link": "https://t.me/rawa_imagination/21112?comment=343099",
+      "published_at": "2026-09-17T21:19:00+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1530857706:138212",
+      "link": "https://t.me/Slavik_investor_updates/6921?comment=138212",
+      "published_at": "2026-09-17T21:29:44+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1269863275:150567",
+      "link": "https://t.me/icodrops_sergey/2426?comment=150567",
+      "published_at": "2026-09-18T02:48:51+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1269863275:150568",
+      "link": "https://t.me/icodrops_sergey/2426?comment=150568",
+      "published_at": "2026-09-18T03:08:00+00:00",
+      "link_target": "project",
+      "basis": "вопрос или оценка по проекту в целом, не по конкретной новости"
+    },
+    {
+      "comment_key": "channel:1269863275:150569",
+      "link": "https://t.me/icodrops_sergey/2426?comment=150569",
+      "published_at": "2026-09-18T04:42:02+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1269863275:150570",
+      "link": "https://t.me/icodrops_sergey/2426?comment=150570",
+      "published_at": "2026-09-18T05:17:46+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1269863275:150571",
+      "link": "https://t.me/icodrops_sergey/2426?comment=150571",
+      "published_at": "2026-09-18T05:18:49+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1269863275:150572",
+      "link": "https://t.me/icodrops_sergey/2426?comment=150572",
+      "published_at": "2026-09-18T05:20:19+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1167285985:343102",
+      "link": "https://t.me/rawa_imagination/21105?comment=343102",
+      "published_at": "2026-09-18T06:46:44+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1530857706:138222",
+      "link": "https://t.me/Slavik_investor_updates/6925?comment=138222",
+      "published_at": "2026-09-18T07:01:06+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1494845665:571779",
+      "link": "https://t.me/whitelist1/7144?comment=571779",
+      "published_at": "2026-09-18T07:02:09+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1494845665:571780",
+      "link": "https://t.me/whitelist1/7144?comment=571780",
+      "published_at": "2026-09-18T07:02:25+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1494845665:571781",
+      "link": "https://t.me/whitelist1/7144?comment=571781",
+      "published_at": "2026-09-18T07:09:30+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1696030614:284568",
+      "link": "https://t.me/krasnovcrypto/3754?comment=284568",
+      "published_at": "2026-09-18T07:09:54+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1269863275:150573",
+      "link": "https://t.me/icodrops_sergey/2426?comment=150573",
+      "published_at": "2026-09-18T07:17:35+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1494845665:571784",
+      "link": "https://t.me/whitelist1/7144?comment=571784",
+      "published_at": "2026-09-18T07:18:57+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1269863275:150574",
+      "link": "https://t.me/icodrops_sergey/2426?comment=150574",
+      "published_at": "2026-09-18T07:19:05+00:00",
+      "link_target": "project",
+      "basis": "вопрос или оценка по проекту в целом, не по конкретной новости"
+    },
+    {
+      "comment_key": "channel:1269863275:150575",
+      "link": "https://t.me/icodrops_sergey/2426?comment=150575",
+      "published_at": "2026-09-18T07:20:11+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1545881523:187555",
+      "link": "https://t.me/cryptonftded/3274?comment=187555",
+      "published_at": "2026-09-18T08:06:10+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1167285985:343108",
+      "link": "https://t.me/rawa_imagination/21114?comment=343108",
+      "published_at": "2026-09-18T08:20:05+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1167285985:343109",
+      "link": "https://t.me/rawa_imagination/21114?comment=343109",
+      "published_at": "2026-09-18T08:20:17+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1269863275:150576",
+      "link": "https://t.me/icodrops_sergey/2426?comment=150576",
+      "published_at": "2026-09-18T08:30:45+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1167285985:343113",
+      "link": "https://t.me/rawa_imagination/21115?comment=343113",
+      "published_at": "2026-09-18T09:50:27+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1167285985:343114",
+      "link": "https://t.me/rawa_imagination/21115?comment=343114",
+      "published_at": "2026-09-18T09:50:27+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1742296134:188827",
+      "link": "https://t.me/icryptocom/8103?comment=188827",
+      "published_at": "2026-09-18T09:55:22+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1545881523:187568",
+      "link": "https://t.me/cryptonftded/3276?comment=187568",
+      "published_at": "2026-09-18T11:18:57+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1545881523:187569",
+      "link": "https://t.me/cryptonftded/3276?comment=187569",
+      "published_at": "2026-09-18T11:22:09+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1545881523:187570",
+      "link": "https://t.me/cryptonftded/3276?comment=187570",
+      "published_at": "2026-09-18T11:33:40+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1545881523:187572",
+      "link": "https://t.me/cryptonftded/3276?comment=187572",
+      "published_at": "2026-09-18T11:42:22+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1545881523:187573",
+      "link": "https://t.me/cryptonftded/3276?comment=187573",
+      "published_at": "2026-09-18T11:42:22+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1494845665:571796",
+      "link": "https://t.me/whitelist1/7144?comment=571796",
+      "published_at": "2026-09-18T11:50:07+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1494845665:571797",
+      "link": "https://t.me/whitelist1/7144?comment=571797",
+      "published_at": "2026-09-18T11:52:59+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1545881523:187575",
+      "link": "https://t.me/cryptonftded/3276?comment=187575",
+      "published_at": "2026-09-18T12:07:05+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1545881523:187576",
+      "link": "https://t.me/cryptonftded/3276?comment=187576",
+      "published_at": "2026-09-18T12:07:06+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1545881523:187577",
+      "link": "https://t.me/cryptonftded/3276?comment=187577",
+      "published_at": "2026-09-18T12:07:42+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1545881523:187578",
+      "link": "https://t.me/cryptonftded/3276?comment=187578",
+      "published_at": "2026-09-18T12:08:33+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1545881523:187579",
+      "link": "https://t.me/cryptonftded/3276?comment=187579",
+      "published_at": "2026-09-18T12:12:09+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1545881523:187580",
+      "link": "https://t.me/cryptonftded/3276?comment=187580",
+      "published_at": "2026-09-18T12:14:10+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1545881523:187582",
+      "link": "https://t.me/cryptonftded/3276?comment=187582",
+      "published_at": "2026-09-18T12:19:08+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1545881523:187584",
+      "link": "https://t.me/cryptonftded/3276?comment=187584",
+      "published_at": "2026-09-18T12:33:24+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1545881523:187585",
+      "link": "https://t.me/cryptonftded/3276?comment=187585",
+      "published_at": "2026-09-18T12:34:22+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1545881523:187586",
+      "link": "https://t.me/cryptonftded/3276?comment=187586",
+      "published_at": "2026-09-18T12:34:22+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1545881523:187587",
+      "link": "https://t.me/cryptonftded/3276?comment=187587",
+      "published_at": "2026-09-18T12:34:48+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1167285985:343125",
+      "link": "https://t.me/rawa_imagination/21117?comment=343125",
+      "published_at": "2026-09-18T12:38:24+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1167285985:343130",
+      "link": "https://t.me/rawa_imagination/21117?comment=343130",
+      "published_at": "2026-09-18T12:39:24+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1167285985:343138",
+      "link": "https://t.me/rawa_imagination/21117?comment=343138",
+      "published_at": "2026-09-18T12:41:19+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1545881523:187588",
+      "link": "https://t.me/cryptonftded/3276?comment=187588",
+      "published_at": "2026-09-18T12:41:29+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1545881523:187589",
+      "link": "https://t.me/cryptonftded/3276?comment=187589",
+      "published_at": "2026-09-18T12:41:29+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1167285985:343146",
+      "link": "https://t.me/rawa_imagination/21117?comment=343146",
+      "published_at": "2026-09-18T12:42:50+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1167285985:343148",
+      "link": "https://t.me/rawa_imagination/21117?comment=343148",
+      "published_at": "2026-09-18T12:43:37+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1545881523:187590",
+      "link": "https://t.me/cryptonftded/3276?comment=187590",
+      "published_at": "2026-09-18T12:43:47+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1167285985:343151",
+      "link": "https://t.me/rawa_imagination/21117?comment=343151",
+      "published_at": "2026-09-18T12:43:50+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1167285985:343175",
+      "link": "https://t.me/rawa_imagination/21117?comment=343175",
+      "published_at": "2026-09-18T12:48:03+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1167285985:343184",
+      "link": "https://t.me/rawa_imagination/21117?comment=343184",
+      "published_at": "2026-09-18T12:50:03+00:00",
+      "link_target": "other_subject",
+      "basis": "предмет реплики — сторонний сервис/коллекция экосистемы, не событие темы"
+    },
+    {
+      "comment_key": "channel:1545881523:187591",
+      "link": "https://t.me/cryptonftded/3276?comment=187591",
+      "published_at": "2026-09-18T13:03:09+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1518472912:468724",
+      "link": "https://t.me/moni_talks/12226?comment=468724",
+      "published_at": "2026-09-18T13:03:41+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1518472912:468725",
+      "link": "https://t.me/moni_talks/12226?comment=468725",
+      "published_at": "2026-09-18T13:07:32+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1545881523:187592",
+      "link": "https://t.me/cryptonftded/3276?comment=187592",
+      "published_at": "2026-09-18T13:07:45+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1545881523:187593",
+      "link": "https://t.me/cryptonftded/3276?comment=187593",
+      "published_at": "2026-09-18T13:12:27+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1545881523:187594",
+      "link": "https://t.me/cryptonftded/3276?comment=187594",
+      "published_at": "2026-09-18T13:14:25+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1518472912:468728",
+      "link": "https://t.me/moni_talks/12226?comment=468728",
+      "published_at": "2026-09-18T13:15:59+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1530857706:138238",
+      "link": "https://t.me/Slavik_investor_updates/6926?comment=138238",
+      "published_at": "2026-09-18T13:20:06+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1494845665:571807",
+      "link": "https://t.me/whitelist1/7145?comment=571807",
+      "published_at": "2026-09-18T13:24:50+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1494845665:571808",
+      "link": "https://t.me/whitelist1/7145?comment=571808",
+      "published_at": "2026-09-18T13:26:02+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1494845665:571809",
+      "link": "https://t.me/whitelist1/7145?comment=571809",
+      "published_at": "2026-09-18T13:26:50+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1494845665:571810",
+      "link": "https://t.me/whitelist1/7145?comment=571810",
+      "published_at": "2026-09-18T13:27:11+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1494845665:571811",
+      "link": "https://t.me/whitelist1/7145?comment=571811",
+      "published_at": "2026-09-18T13:30:27+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1494845665:571812",
+      "link": "https://t.me/whitelist1/7145?comment=571812",
+      "published_at": "2026-09-18T13:30:56+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1494845665:571813",
+      "link": "https://t.me/whitelist1/7145?comment=571813",
+      "published_at": "2026-09-18T13:33:52+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1494845665:571814",
+      "link": "https://t.me/whitelist1/7145?comment=571814",
+      "published_at": "2026-09-18T13:34:22+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1494845665:571815",
+      "link": "https://t.me/whitelist1/7145?comment=571815",
+      "published_at": "2026-09-18T13:34:24+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1494845665:571816",
+      "link": "https://t.me/whitelist1/7145?comment=571816",
+      "published_at": "2026-09-18T13:37:18+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1494845665:571817",
+      "link": "https://t.me/whitelist1/7145?comment=571817",
+      "published_at": "2026-09-18T13:40:51+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1494845665:571818",
+      "link": "https://t.me/whitelist1/7145?comment=571818",
+      "published_at": "2026-09-18T13:44:41+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1545881523:187596",
+      "link": "https://t.me/cryptonftded/3276?comment=187596",
+      "published_at": "2026-09-18T13:45:37+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1545881523:187597",
+      "link": "https://t.me/cryptonftded/3276?comment=187597",
+      "published_at": "2026-09-18T13:46:10+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1494845665:571819",
+      "link": "https://t.me/whitelist1/7145?comment=571819",
+      "published_at": "2026-09-18T13:46:35+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1494845665:571820",
+      "link": "https://t.me/whitelist1/7145?comment=571820",
+      "published_at": "2026-09-18T13:47:22+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1518472912:468736",
+      "link": "https://t.me/moni_talks/12226?comment=468736",
+      "published_at": "2026-09-18T13:53:39+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1518472912:468737",
+      "link": "https://t.me/moni_talks/12226?comment=468737",
+      "published_at": "2026-09-18T13:54:24+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1518472912:468738",
+      "link": "https://t.me/moni_talks/12226?comment=468738",
+      "published_at": "2026-09-18T13:54:46+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1518472912:468739",
+      "link": "https://t.me/moni_talks/12226?comment=468739",
+      "published_at": "2026-09-18T13:56:32+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1494845665:571821",
+      "link": "https://t.me/whitelist1/7145?comment=571821",
+      "published_at": "2026-09-18T14:00:47+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1494845665:571823",
+      "link": "https://t.me/whitelist1/7145?comment=571823",
+      "published_at": "2026-09-18T14:02:24+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1530857706:138242",
+      "link": "https://t.me/Slavik_investor_updates/6926?comment=138242",
+      "published_at": "2026-09-18T14:03:21+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1518472912:468741",
+      "link": "https://t.me/moni_talks/12226?comment=468741",
+      "published_at": "2026-09-18T14:04:45+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1545881523:187600",
+      "link": "https://t.me/cryptonftded/3277?comment=187600",
+      "published_at": "2026-09-18T14:13:00+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1545881523:187601",
+      "link": "https://t.me/cryptonftded/3277?comment=187601",
+      "published_at": "2026-09-18T14:15:53+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1545881523:187602",
+      "link": "https://t.me/cryptonftded/3277?comment=187602",
+      "published_at": "2026-09-18T14:17:42+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1545881523:187603",
+      "link": "https://t.me/cryptonftded/3277?comment=187603",
+      "published_at": "2026-09-18T14:20:55+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1545881523:187604",
+      "link": "https://t.me/cryptonftded/3276?comment=187604",
+      "published_at": "2026-09-18T14:28:19+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1545881523:187605",
+      "link": "https://t.me/cryptonftded/3276?comment=187605",
+      "published_at": "2026-09-18T14:28:20+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1494845665:571824",
+      "link": "https://t.me/whitelist1/7145?comment=571824",
+      "published_at": "2026-09-18T14:44:02+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1494845665:571825",
+      "link": "https://t.me/whitelist1/7145?comment=571825",
+      "published_at": "2026-09-18T14:44:24+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1494845665:571828",
+      "link": "https://t.me/whitelist1/7145?comment=571828",
+      "published_at": "2026-09-18T14:45:34+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1494845665:571829",
+      "link": "https://t.me/whitelist1/7145?comment=571829",
+      "published_at": "2026-09-18T14:45:45+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1742296134:188830",
+      "link": "https://t.me/icryptocom/8105?comment=188830",
+      "published_at": "2026-09-18T14:49:24+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1530857706:138248",
+      "link": "https://t.me/Slavik_investor_updates/6927?comment=138248",
+      "published_at": "2026-09-18T15:06:01+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1167285985:343272",
+      "link": "https://t.me/rawa_imagination/21118?comment=343272",
+      "published_at": "2026-09-18T15:10:06+00:00",
+      "link_target": "project",
+      "basis": "вопрос или оценка по проекту в целом, не по конкретной новости"
+    },
+    {
+      "comment_key": "channel:1167285985:343277",
+      "link": "https://t.me/rawa_imagination/21118?comment=343277",
+      "published_at": "2026-09-18T15:16:55+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1167285985:343279",
+      "link": "https://t.me/rawa_imagination/21118?comment=343279",
+      "published_at": "2026-09-18T15:22:22+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1494845665:571832",
+      "link": "https://t.me/whitelist1/7145?comment=571832",
+      "published_at": "2026-09-18T15:34:27+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1530857706:138249",
+      "link": "https://t.me/Slavik_investor_updates/6927?comment=138249",
+      "published_at": "2026-09-18T15:36:23+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1545881523:187607",
+      "link": "https://t.me/cryptonftded/3276?comment=187607",
+      "published_at": "2026-09-18T16:01:31+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1545881523:187608",
+      "link": "https://t.me/cryptonftded/3276?comment=187608",
+      "published_at": "2026-09-18T16:11:36+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1518472912:468762",
+      "link": "https://t.me/moni_talks/12227?comment=468762",
+      "published_at": "2026-09-18T16:24:58+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:3836469437:1069",
+      "link": "https://t.me/badfriend_loops/831?comment=1069",
+      "published_at": "2026-09-18T16:28:13+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1530857706:138251",
+      "link": "https://t.me/Slavik_investor_updates/6926?comment=138251",
+      "published_at": "2026-09-18T16:47:57+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1494845665:571835",
+      "link": "https://t.me/whitelist1/7145?comment=571835",
+      "published_at": "2026-09-18T16:48:50+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1494845665:571836",
+      "link": "https://t.me/whitelist1/7145?comment=571836",
+      "published_at": "2026-09-18T16:51:30+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1530857706:138253",
+      "link": "https://t.me/Slavik_investor_updates/6928?comment=138253",
+      "published_at": "2026-09-18T17:04:23+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1530857706:138254",
+      "link": "https://t.me/Slavik_investor_updates/6928?comment=138254",
+      "published_at": "2026-09-18T17:08:27+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1530857706:138256",
+      "link": "https://t.me/Slavik_investor_updates/6928?comment=138256",
+      "published_at": "2026-09-18T17:37:18+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1438864078:380114",
+      "link": "https://t.me/don_invest/5298?comment=380114",
+      "published_at": "2026-09-18T18:11:08+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1438864078:380115",
+      "link": "https://t.me/don_invest/5298?comment=380115",
+      "published_at": "2026-09-18T18:11:26+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1438864078:380116",
+      "link": "https://t.me/don_invest/5298?comment=380116",
+      "published_at": "2026-09-18T18:11:34+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1438864078:380118",
+      "link": "https://t.me/don_invest/5298?comment=380118",
+      "published_at": "2026-09-18T18:11:43+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1438864078:380121",
+      "link": "https://t.me/don_invest/5298?comment=380121",
+      "published_at": "2026-09-18T18:11:58+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1438864078:380122",
+      "link": "https://t.me/don_invest/5298?comment=380122",
+      "published_at": "2026-09-18T18:12:18+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1438864078:380123",
+      "link": "https://t.me/don_invest/5298?comment=380123",
+      "published_at": "2026-09-18T18:12:20+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1545881523:187609",
+      "link": "https://t.me/cryptonftded/3276?comment=187609",
+      "published_at": "2026-09-18T18:12:33+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1438864078:380124",
+      "link": "https://t.me/don_invest/5298?comment=380124",
+      "published_at": "2026-09-18T18:12:39+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1438864078:380125",
+      "link": "https://t.me/don_invest/5298?comment=380125",
+      "published_at": "2026-09-18T18:12:42+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1438864078:380126",
+      "link": "https://t.me/don_invest/5298?comment=380126",
+      "published_at": "2026-09-18T18:12:51+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1438864078:380128",
+      "link": "https://t.me/don_invest/5298?comment=380128",
+      "published_at": "2026-09-18T18:13:26+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1438864078:380129",
+      "link": "https://t.me/don_invest/5298?comment=380129",
+      "published_at": "2026-09-18T18:13:45+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1438864078:380131",
+      "link": "https://t.me/don_invest/5298?comment=380131",
+      "published_at": "2026-09-18T18:14:07+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1438864078:380132",
+      "link": "https://t.me/don_invest/5298?comment=380132",
+      "published_at": "2026-09-18T18:14:51+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1438864078:380134",
+      "link": "https://t.me/don_invest/5298?comment=380134",
+      "published_at": "2026-09-18T18:16:00+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1438864078:380135",
+      "link": "https://t.me/don_invest/5298?comment=380135",
+      "published_at": "2026-09-18T18:16:03+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1438864078:380136",
+      "link": "https://t.me/don_invest/5298?comment=380136",
+      "published_at": "2026-09-18T18:16:07+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1438864078:380138",
+      "link": "https://t.me/don_invest/5298?comment=380138",
+      "published_at": "2026-09-18T18:16:33+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1438864078:380139",
+      "link": "https://t.me/don_invest/5298?comment=380139",
+      "published_at": "2026-09-18T18:16:45+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1438864078:380141",
+      "link": "https://t.me/don_invest/5298?comment=380141",
+      "published_at": "2026-09-18T18:17:34+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1438864078:380142",
+      "link": "https://t.me/don_invest/5298?comment=380142",
+      "published_at": "2026-09-18T18:22:00+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1438864078:380143",
+      "link": "https://t.me/don_invest/5298?comment=380143",
+      "published_at": "2026-09-18T18:22:02+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1438864078:380144",
+      "link": "https://t.me/don_invest/5298?comment=380144",
+      "published_at": "2026-09-18T18:22:02+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1438864078:380149",
+      "link": "https://t.me/don_invest/5298?comment=380149",
+      "published_at": "2026-09-18T18:23:35+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1438864078:380150",
+      "link": "https://t.me/don_invest/5298?comment=380150",
+      "published_at": "2026-09-18T18:24:20+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1438864078:380151",
+      "link": "https://t.me/don_invest/5298?comment=380151",
+      "published_at": "2026-09-18T18:24:26+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1438864078:380153",
+      "link": "https://t.me/don_invest/5298?comment=380153",
+      "published_at": "2026-09-18T18:27:12+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1438864078:380155",
+      "link": "https://t.me/don_invest/5298?comment=380155",
+      "published_at": "2026-09-18T18:29:39+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1438864078:380156",
+      "link": "https://t.me/don_invest/5298?comment=380156",
+      "published_at": "2026-09-18T18:30:21+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1438864078:380157",
+      "link": "https://t.me/don_invest/5298?comment=380157",
+      "published_at": "2026-09-18T18:30:50+00:00",
+      "link_target": "other_subject",
+      "basis": "предмет реплики — сторонний сервис/коллекция экосистемы, не событие темы"
+    },
+    {
+      "comment_key": "channel:1438864078:380158",
+      "link": "https://t.me/don_invest/5298?comment=380158",
+      "published_at": "2026-09-18T18:31:08+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1438864078:380160",
+      "link": "https://t.me/don_invest/5298?comment=380160",
+      "published_at": "2026-09-18T18:40:43+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1438864078:380161",
+      "link": "https://t.me/don_invest/5298?comment=380161",
+      "published_at": "2026-09-18T18:47:38+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1438864078:380162",
+      "link": "https://t.me/don_invest/5298?comment=380162",
+      "published_at": "2026-09-18T18:49:28+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1167285985:343360",
+      "link": "https://t.me/rawa_imagination/21112?comment=343360",
+      "published_at": "2026-09-18T18:50:16+00:00",
+      "link_target": "project",
+      "basis": "вопрос или оценка по проекту в целом, не по конкретной новости"
+    },
+    {
+      "comment_key": "channel:1167285985:343361",
+      "link": "https://t.me/rawa_imagination/21112?comment=343361",
+      "published_at": "2026-09-18T18:50:57+00:00",
+      "link_target": "project",
+      "basis": "вопрос или оценка по проекту в целом, не по конкретной новости"
+    },
+    {
+      "comment_key": "channel:1167285985:343364",
+      "link": "https://t.me/rawa_imagination/21118?comment=343364",
+      "published_at": "2026-09-18T18:53:23+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1438864078:380163",
+      "link": "https://t.me/don_invest/5298?comment=380163",
+      "published_at": "2026-09-18T18:54:12+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1438864078:380164",
+      "link": "https://t.me/don_invest/5298?comment=380164",
+      "published_at": "2026-09-18T18:56:03+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1167285985:343365",
+      "link": "https://t.me/rawa_imagination/21118?comment=343365",
+      "published_at": "2026-09-18T18:56:09+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1167285985:343366",
+      "link": "https://t.me/rawa_imagination/21118?comment=343366",
+      "published_at": "2026-09-18T18:56:23+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1438864078:380165",
+      "link": "https://t.me/don_invest/5298?comment=380165",
+      "published_at": "2026-09-18T18:59:01+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1530857706:138258",
+      "link": "https://t.me/Slavik_investor_updates/6928?comment=138258",
+      "published_at": "2026-09-18T19:00:50+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1269863275:150581",
+      "link": "https://t.me/icodrops_sergey/2426?comment=150581",
+      "published_at": "2026-09-18T19:14:01+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1545881523:187610",
+      "link": "https://t.me/cryptonftded/3276?comment=187610",
+      "published_at": "2026-09-18T19:24:35+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1438864078:380167",
+      "link": "https://t.me/don_invest/5298?comment=380167",
+      "published_at": "2026-09-18T19:26:24+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1438864078:380168",
+      "link": "https://t.me/don_invest/5298?comment=380168",
+      "published_at": "2026-09-18T19:26:32+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1438864078:380170",
+      "link": "https://t.me/don_invest/5298?comment=380170",
+      "published_at": "2026-09-18T19:27:50+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1438864078:380172",
+      "link": "https://t.me/don_invest/5298?comment=380172",
+      "published_at": "2026-09-18T19:47:34+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1438864078:380174",
+      "link": "https://t.me/don_invest/5298?comment=380174",
+      "published_at": "2026-09-18T20:01:56+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:3836469437:1071",
+      "link": "https://t.me/badfriend_loops/831?comment=1071",
+      "published_at": "2026-09-18T20:03:52+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1438864078:380178",
+      "link": "https://t.me/don_invest/5298?comment=380178",
+      "published_at": "2026-09-18T20:20:24+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1438864078:380179",
+      "link": "https://t.me/don_invest/5298?comment=380179",
+      "published_at": "2026-09-18T20:22:22+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1438864078:380181",
+      "link": "https://t.me/don_invest/5298?comment=380181",
+      "published_at": "2026-09-18T20:29:47+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1438864078:380183",
+      "link": "https://t.me/don_invest/5298?comment=380183",
+      "published_at": "2026-09-18T20:41:29+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:3836469437:1072",
+      "link": "https://t.me/badfriend_loops/831?comment=1072",
+      "published_at": "2026-09-18T20:45:17+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1438864078:380185",
+      "link": "https://t.me/don_invest/5298?comment=380185",
+      "published_at": "2026-09-18T20:45:36+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1438864078:380186",
+      "link": "https://t.me/don_invest/5298?comment=380186",
+      "published_at": "2026-09-18T20:55:21+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1438864078:380188",
+      "link": "https://t.me/don_invest/5298?comment=380188",
+      "published_at": "2026-09-18T21:01:59+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1438864078:380189",
+      "link": "https://t.me/don_invest/5298?comment=380189",
+      "published_at": "2026-09-18T21:20:24+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1167285985:343380",
+      "link": "https://t.me/rawa_imagination/21120?comment=343380",
+      "published_at": "2026-09-18T21:54:51+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1167285985:343381",
+      "link": "https://t.me/rawa_imagination/21120?comment=343381",
+      "published_at": "2026-09-18T21:56:00+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1167285985:343382",
+      "link": "https://t.me/rawa_imagination/21120?comment=343382",
+      "published_at": "2026-09-18T21:59:08+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1438864078:380190",
+      "link": "https://t.me/don_invest/5298?comment=380190",
+      "published_at": "2026-09-18T22:03:17+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1438864078:380191",
+      "link": "https://t.me/don_invest/5298?comment=380191",
+      "published_at": "2026-09-18T22:59:16+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1167285985:343420",
+      "link": "https://t.me/rawa_imagination/21117?comment=343420",
+      "published_at": "2026-09-18T23:44:26+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1167285985:343421",
+      "link": "https://t.me/rawa_imagination/21117?comment=343421",
+      "published_at": "2026-09-18T23:47:39+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1438864078:380192",
+      "link": "https://t.me/don_invest/5298?comment=380192",
+      "published_at": "2026-09-19T00:29:12+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1696030614:284582",
+      "link": "https://t.me/krasnovcrypto/3754?comment=284582",
+      "published_at": "2026-09-19T00:47:39+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1438864078:380193",
+      "link": "https://t.me/don_invest/5298?comment=380193",
+      "published_at": "2026-09-19T01:26:28+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1696030614:284583",
+      "link": "https://t.me/krasnovcrypto/3754?comment=284583",
+      "published_at": "2026-09-19T01:34:24+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1438864078:380194",
+      "link": "https://t.me/don_invest/5298?comment=380194",
+      "published_at": "2026-09-19T01:34:56+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1167285985:343422",
+      "link": "https://t.me/rawa_imagination/21120?comment=343422",
+      "published_at": "2026-09-19T01:54:03+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1438864078:380195",
+      "link": "https://t.me/don_invest/5298?comment=380195",
+      "published_at": "2026-09-19T01:55:16+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1438864078:380196",
+      "link": "https://t.me/don_invest/5298?comment=380196",
+      "published_at": "2026-09-19T01:56:43+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1438864078:380197",
+      "link": "https://t.me/don_invest/5298?comment=380197",
+      "published_at": "2026-09-19T02:26:58+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1438864078:380200",
+      "link": "https://t.me/don_invest/5298?comment=380200",
+      "published_at": "2026-09-19T03:57:11+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1438864078:380201",
+      "link": "https://t.me/don_invest/5298?comment=380201",
+      "published_at": "2026-09-19T05:01:40+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1269863275:150586",
+      "link": "https://t.me/icodrops_sergey/2427?comment=150586",
+      "published_at": "2026-09-19T05:45:58+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1269863275:150589",
+      "link": "https://t.me/icodrops_sergey/2427?comment=150589",
+      "published_at": "2026-09-19T05:48:47+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1269863275:150591",
+      "link": "https://t.me/icodrops_sergey/2430?comment=150591",
+      "published_at": "2026-09-19T05:49:57+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1167285985:343455",
+      "link": "https://t.me/rawa_imagination/21120?comment=343455",
+      "published_at": "2026-09-19T05:50:07+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1269863275:150592",
+      "link": "https://t.me/icodrops_sergey/2430?comment=150592",
+      "published_at": "2026-09-19T05:50:51+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1269863275:150593",
+      "link": "https://t.me/icodrops_sergey/2430?comment=150593",
+      "published_at": "2026-09-19T05:52:14+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1269863275:150594",
+      "link": "https://t.me/icodrops_sergey/2428?comment=150594",
+      "published_at": "2026-09-19T05:52:53+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1269863275:150596",
+      "link": "https://t.me/icodrops_sergey/2428?comment=150596",
+      "published_at": "2026-09-19T05:53:40+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1269863275:150597",
+      "link": "https://t.me/icodrops_sergey/2431?comment=150597",
+      "published_at": "2026-09-19T05:54:08+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1269863275:150598",
+      "link": "https://t.me/icodrops_sergey/2431?comment=150598",
+      "published_at": "2026-09-19T05:54:38+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1269863275:150599",
+      "link": "https://t.me/icodrops_sergey/2431?comment=150599",
+      "published_at": "2026-09-19T05:54:42+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1269863275:150600",
+      "link": "https://t.me/icodrops_sergey/2431?comment=150600",
+      "published_at": "2026-09-19T05:56:11+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1269863275:150601",
+      "link": "https://t.me/icodrops_sergey/2431?comment=150601",
+      "published_at": "2026-09-19T06:00:16+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1269863275:150602",
+      "link": "https://t.me/icodrops_sergey/2428?comment=150602",
+      "published_at": "2026-09-19T06:03:39+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1269863275:150603",
+      "link": "https://t.me/icodrops_sergey/2430?comment=150603",
+      "published_at": "2026-09-19T06:04:49+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1269863275:150604",
+      "link": "https://t.me/icodrops_sergey/2431?comment=150604",
+      "published_at": "2026-09-19T06:07:14+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1269863275:150605",
+      "link": "https://t.me/icodrops_sergey/2430?comment=150605",
+      "published_at": "2026-09-19T06:07:41+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1269863275:150608",
+      "link": "https://t.me/icodrops_sergey/2430?comment=150608",
+      "published_at": "2026-09-19T06:32:54+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1269863275:150609",
+      "link": "https://t.me/icodrops_sergey/2430?comment=150609",
+      "published_at": "2026-09-19T06:34:09+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1269863275:150610",
+      "link": "https://t.me/icodrops_sergey/2430?comment=150610",
+      "published_at": "2026-09-19T06:36:04+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1269863275:150611",
+      "link": "https://t.me/icodrops_sergey/2430?comment=150611",
+      "published_at": "2026-09-19T06:37:05+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1494845665:571876",
+      "link": "https://t.me/whitelist1/7146?comment=571876",
+      "published_at": "2026-09-19T07:03:04+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1269863275:150612",
+      "link": "https://t.me/icodrops_sergey/2430?comment=150612",
+      "published_at": "2026-09-19T07:15:58+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1494845665:571877",
+      "link": "https://t.me/whitelist1/7146?comment=571877",
+      "published_at": "2026-09-19T07:17:10+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1494845665:571878",
+      "link": "https://t.me/whitelist1/7146?comment=571878",
+      "published_at": "2026-09-19T07:17:14+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1494845665:571879",
+      "link": "https://t.me/whitelist1/7146?comment=571879",
+      "published_at": "2026-09-19T07:20:41+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1530857706:138266",
+      "link": "https://t.me/Slavik_investor_updates/6925?comment=138266",
+      "published_at": "2026-09-19T07:27:31+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1269863275:150615",
+      "link": "https://t.me/icodrops_sergey/2431?comment=150615",
+      "published_at": "2026-09-19T07:57:33+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1494845665:571881",
+      "link": "https://t.me/whitelist1/7146?comment=571881",
+      "published_at": "2026-09-19T08:03:13+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1269863275:150617",
+      "link": "https://t.me/icodrops_sergey/2430?comment=150617",
+      "published_at": "2026-09-19T08:10:00+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1438864078:380205",
+      "link": "https://t.me/don_invest/5298?comment=380205",
+      "published_at": "2026-09-19T08:14:21+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1269863275:150618",
+      "link": "https://t.me/icodrops_sergey/2427?comment=150618",
+      "published_at": "2026-09-19T08:16:46+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1438864078:380206",
+      "link": "https://t.me/don_invest/5298?comment=380206",
+      "published_at": "2026-09-19T08:19:29+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1269863275:150619",
+      "link": "https://t.me/icodrops_sergey/2427?comment=150619",
+      "published_at": "2026-09-19T08:19:44+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1269863275:150620",
+      "link": "https://t.me/icodrops_sergey/2427?comment=150620",
+      "published_at": "2026-09-19T08:32:29+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1494845665:571887",
+      "link": "https://t.me/whitelist1/7146?comment=571887",
+      "published_at": "2026-09-19T09:46:17+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1696030614:284590",
+      "link": "https://t.me/krasnovcrypto/3758?comment=284590",
+      "published_at": "2026-09-19T09:48:50+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1696030614:284591",
+      "link": "https://t.me/krasnovcrypto/3758?comment=284591",
+      "published_at": "2026-09-19T09:54:34+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1696030614:284592",
+      "link": "https://t.me/krasnovcrypto/3758?comment=284592",
+      "published_at": "2026-09-19T09:57:06+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1438864078:380224",
+      "link": "https://t.me/don_invest/5298?comment=380224",
+      "published_at": "2026-09-19T10:20:07+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1438864078:380225",
+      "link": "https://t.me/don_invest/5298?comment=380225",
+      "published_at": "2026-09-19T10:26:08+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1696030614:284593",
+      "link": "https://t.me/krasnovcrypto/3758?comment=284593",
+      "published_at": "2026-09-19T10:37:19+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1438864078:380226",
+      "link": "https://t.me/don_invest/5298?comment=380226",
+      "published_at": "2026-09-19T10:44:20+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1269863275:150621",
+      "link": "https://t.me/icodrops_sergey/2431?comment=150621",
+      "published_at": "2026-09-19T10:48:53+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1742296134:188834",
+      "link": "https://t.me/icryptocom/8106?comment=188834",
+      "published_at": "2026-09-19T11:29:53+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1269863275:150622",
+      "link": "https://t.me/icodrops_sergey/2427?comment=150622",
+      "published_at": "2026-09-19T11:34:40+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1742296134:188835",
+      "link": "https://t.me/icryptocom/8106?comment=188835",
+      "published_at": "2026-09-19T11:36:35+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1269863275:150623",
+      "link": "https://t.me/icodrops_sergey/2428?comment=150623",
+      "published_at": "2026-09-19T11:47:52+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1269863275:150624",
+      "link": "https://t.me/icodrops_sergey/2430?comment=150624",
+      "published_at": "2026-09-19T11:48:39+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1269863275:150625",
+      "link": "https://t.me/icodrops_sergey/2431?comment=150625",
+      "published_at": "2026-09-19T11:49:21+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1269863275:150626",
+      "link": "https://t.me/icodrops_sergey/2427?comment=150626",
+      "published_at": "2026-09-19T11:49:58+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1494845665:571893",
+      "link": "https://t.me/whitelist1/7147?comment=571893",
+      "published_at": "2026-09-19T12:02:58+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1167285985:343745",
+      "link": "https://t.me/rawa_imagination/21122?comment=343745",
+      "published_at": "2026-09-19T12:11:29+00:00",
+      "link_target": "other_subject",
+      "basis": "предмет реплики — сторонний сервис/коллекция экосистемы, не событие темы"
+    },
+    {
+      "comment_key": "channel:1742296134:188837",
+      "link": "https://t.me/icryptocom/8106?comment=188837",
+      "published_at": "2026-09-19T12:13:12+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1494845665:571896",
+      "link": "https://t.me/whitelist1/7147?comment=571896",
+      "published_at": "2026-09-19T12:14:49+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1269863275:150627",
+      "link": "https://t.me/icodrops_sergey/2431?comment=150627",
+      "published_at": "2026-09-19T12:16:37+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1494845665:571898",
+      "link": "https://t.me/whitelist1/7147?comment=571898",
+      "published_at": "2026-09-19T12:31:42+00:00",
+      "link_target": "project",
+      "basis": "вопрос или оценка по проекту в целом, не по конкретной новости"
+    },
+    {
+      "comment_key": "channel:1438864078:380231",
+      "link": "https://t.me/don_invest/5298?comment=380231",
+      "published_at": "2026-09-19T12:38:00+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1494845665:571899",
+      "link": "https://t.me/whitelist1/7147?comment=571899",
+      "published_at": "2026-09-19T12:50:52+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1438864078:380234",
+      "link": "https://t.me/don_invest/5298?comment=380234",
+      "published_at": "2026-09-19T13:22:40+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1742296134:188839",
+      "link": "https://t.me/icryptocom/8107?comment=188839",
+      "published_at": "2026-09-19T13:51:12+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1742296134:188840",
+      "link": "https://t.me/icryptocom/8107?comment=188840",
+      "published_at": "2026-09-19T13:58:11+00:00",
+      "link_target": "project",
+      "basis": "вопрос или оценка по проекту в целом, не по конкретной новости"
+    },
+    {
+      "comment_key": "channel:1530857706:138276",
+      "link": "https://t.me/Slavik_investor_updates/6929?comment=138276",
+      "published_at": "2026-09-19T14:06:00+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1742296134:188841",
+      "link": "https://t.me/icryptocom/8107?comment=188841",
+      "published_at": "2026-09-19T14:06:39+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1742296134:188842",
+      "link": "https://t.me/icryptocom/8102?comment=188842",
+      "published_at": "2026-09-19T14:07:25+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1742296134:188844",
+      "link": "https://t.me/icryptocom/8108?comment=188844",
+      "published_at": "2026-09-19T14:08:27+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1742296134:188845",
+      "link": "https://t.me/icryptocom/8108?comment=188845",
+      "published_at": "2026-09-19T14:08:42+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1530857706:138277",
+      "link": "https://t.me/Slavik_investor_updates/6929?comment=138277",
+      "published_at": "2026-09-19T14:09:53+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1530857706:138279",
+      "link": "https://t.me/Slavik_investor_updates/6929?comment=138279",
+      "published_at": "2026-09-19T14:16:09+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1438864078:380235",
+      "link": "https://t.me/don_invest/5298?comment=380235",
+      "published_at": "2026-09-19T14:22:20+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1530857706:138280",
+      "link": "https://t.me/Slavik_investor_updates/6929?comment=138280",
+      "published_at": "2026-09-19T14:28:41+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1530857706:138281",
+      "link": "https://t.me/Slavik_investor_updates/6929?comment=138281",
+      "published_at": "2026-09-19T14:33:58+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1438864078:380236",
+      "link": "https://t.me/don_invest/5298?comment=380236",
+      "published_at": "2026-09-19T14:37:58+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1742296134:188846",
+      "link": "https://t.me/icryptocom/8108?comment=188846",
+      "published_at": "2026-09-19T14:39:38+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1742296134:188847",
+      "link": "https://t.me/icryptocom/8108?comment=188847",
+      "published_at": "2026-09-19T14:40:09+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1696030614:284596",
+      "link": "https://t.me/krasnovcrypto/3758?comment=284596",
+      "published_at": "2026-09-19T14:40:54+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1530857706:138282",
+      "link": "https://t.me/Slavik_investor_updates/6929?comment=138282",
+      "published_at": "2026-09-19T14:48:10+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1269863275:150628",
+      "link": "https://t.me/icodrops_sergey/2431?comment=150628",
+      "published_at": "2026-09-19T14:53:35+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1530857706:138290",
+      "link": "https://t.me/Slavik_investor_updates/6930?comment=138290",
+      "published_at": "2026-09-19T16:21:03+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1438864078:380243",
+      "link": "https://t.me/don_invest/5298?comment=380243",
+      "published_at": "2026-09-19T16:47:59+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1269863275:150629",
+      "link": "https://t.me/icodrops_sergey/2427?comment=150629",
+      "published_at": "2026-09-19T16:50:55+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1530857706:138292",
+      "link": "https://t.me/Slavik_investor_updates/6930?comment=138292",
+      "published_at": "2026-09-19T16:58:05+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1742296134:188848",
+      "link": "https://t.me/icryptocom/8108?comment=188848",
+      "published_at": "2026-09-19T17:53:15+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1269863275:150630",
+      "link": "https://t.me/icodrops_sergey/2427?comment=150630",
+      "published_at": "2026-09-19T18:00:04+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1696030614:284601",
+      "link": "https://t.me/krasnovcrypto/3758?comment=284601",
+      "published_at": "2026-09-19T18:35:44+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1696030614:284604",
+      "link": "https://t.me/krasnovcrypto/3758?comment=284604",
+      "published_at": "2026-09-19T18:37:07+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1696030614:284605",
+      "link": "https://t.me/krasnovcrypto/3758?comment=284605",
+      "published_at": "2026-09-19T18:37:25+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1696030614:284606",
+      "link": "https://t.me/krasnovcrypto/3758?comment=284606",
+      "published_at": "2026-09-19T18:37:53+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1696030614:284607",
+      "link": "https://t.me/krasnovcrypto/3758?comment=284607",
+      "published_at": "2026-09-19T18:38:09+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1696030614:284608",
+      "link": "https://t.me/krasnovcrypto/3758?comment=284608",
+      "published_at": "2026-09-19T18:39:16+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1696030614:284610",
+      "link": "https://t.me/krasnovcrypto/3758?comment=284610",
+      "published_at": "2026-09-19T18:40:00+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1696030614:284611",
+      "link": "https://t.me/krasnovcrypto/3758?comment=284611",
+      "published_at": "2026-09-19T18:43:10+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1696030614:284612",
+      "link": "https://t.me/krasnovcrypto/3758?comment=284612",
+      "published_at": "2026-09-19T18:44:10+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1696030614:284613",
+      "link": "https://t.me/krasnovcrypto/3758?comment=284613",
+      "published_at": "2026-09-19T18:44:50+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1696030614:284614",
+      "link": "https://t.me/krasnovcrypto/3758?comment=284614",
+      "published_at": "2026-09-19T18:45:20+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1269863275:150631",
+      "link": "https://t.me/icodrops_sergey/2427?comment=150631",
+      "published_at": "2026-09-19T18:55:44+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1494845665:571920",
+      "link": "https://t.me/whitelist1/7147?comment=571920",
+      "published_at": "2026-09-19T19:34:42+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1269863275:150632",
+      "link": "https://t.me/icodrops_sergey/2427?comment=150632",
+      "published_at": "2026-09-19T19:42:13+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1696030614:284617",
+      "link": "https://t.me/krasnovcrypto/3758?comment=284617",
+      "published_at": "2026-09-19T19:59:26+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1742296134:188849",
+      "link": "https://t.me/icryptocom/8107?comment=188849",
+      "published_at": "2026-09-19T20:23:12+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1742296134:188850",
+      "link": "https://t.me/icryptocom/8108?comment=188850",
+      "published_at": "2026-09-19T21:26:27+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    },
+    {
+      "comment_key": "channel:1530857706:138296",
+      "link": "https://t.me/Slavik_investor_updates/6926?comment=138296",
+      "published_at": "2026-09-19T21:34:12+00:00",
+      "link_target": "topic_level",
+      "basis": "совпадение темы недостаточно, связь со событием не установлена"
+    }
+  ],
+  "events": [
+    {
+      "event_id": "e1-1b98e70b7e1ada6b",
+      "publications": [
+        "https://t.me/cryptoattack24/96773",
+        "https://t.me/rawa_imagination/21109"
+      ],
+      "n_publications": 2,
+      "n_channels": 2,
+      "n_known_authors": 0,
+      "found_origins": [
+        "https://t.me/rawa_imagination/21109"
+      ],
+      "n_reprints": 1,
+      "n_unknown_origin": 0
+    },
+    {
+      "event_id": "e2-ec98efd39500ce4c",
+      "publications": [
+        "https://t.me/cryptoattack24/96776",
+        "https://t.me/crypto_hd/31476"
+      ],
+      "n_publications": 2,
+      "n_channels": 2,
+      "n_known_authors": 0,
+      "found_origins": [
+        "https://t.me/cryptoattack24/96776"
+      ],
+      "n_reprints": 1,
+      "n_unknown_origin": 0
+    },
+    {
+      "event_id": "e3-fbc8cedab2aaaef9",
+      "publications": [
+        "https://t.me/cryptoattack24/96776"
+      ],
+      "n_publications": 1,
+      "n_channels": 1,
+      "n_known_authors": 0,
+      "found_origins": [
+        "https://t.me/cryptoattack24/96776"
+      ],
+      "n_reprints": 0,
+      "n_unknown_origin": 0
+    },
+    {
+      "event_id": "e4-73a28409f802189b",
+      "publications": [
+        "https://t.me/crypto_hd/31476"
+      ],
+      "n_publications": 1,
+      "n_channels": 1,
+      "n_known_authors": 0,
+      "found_origins": [],
+      "n_reprints": 1,
+      "n_unknown_origin": 0
+    },
+    {
+      "event_id": "e5-6a10d8c975578af1",
+      "publications": [
+        "https://t.me/markettwits/385211"
+      ],
+      "n_publications": 1,
+      "n_channels": 1,
+      "n_known_authors": 0,
+      "found_origins": [
+        "https://t.me/markettwits/385211"
+      ],
+      "n_reprints": 0,
+      "n_unknown_origin": 0
+    },
+    {
+      "event_id": "e6-0cbce6a16038085b",
+      "publications": [
+        "https://t.me/markettwits/385262"
+      ],
+      "n_publications": 1,
+      "n_channels": 1,
+      "n_known_authors": 0,
+      "found_origins": [],
+      "n_reprints": 1,
+      "n_unknown_origin": 0
+    },
+    {
+      "event_id": "e7-79ddbc00ba386cd5",
+      "publications": [
+        "https://t.me/crypto_hd/31491"
+      ],
+      "n_publications": 1,
+      "n_channels": 1,
+      "n_known_authors": 0,
+      "found_origins": [
+        "https://t.me/crypto_hd/31491"
+      ],
+      "n_reprints": 0,
+      "n_unknown_origin": 0
+    },
+    {
+      "event_id": "e8-25495bb8ed6c21b0",
+      "publications": [
+        "https://t.me/WEB3_AGGREGATOR/423250"
+      ],
+      "n_publications": 1,
+      "n_channels": 1,
+      "n_known_authors": 0,
+      "found_origins": [],
+      "n_reprints": 1,
+      "n_unknown_origin": 0
+    },
+    {
+      "event_id": "e9-d57ff52e9ff96871",
+      "publications": [
+        "https://t.me/cryptoattack24/96795",
+        "https://t.me/rawa_imagination/21117"
+      ],
+      "n_publications": 2,
+      "n_channels": 2,
+      "n_known_authors": 0,
+      "found_origins": [
+        "https://t.me/cryptoattack24/96795"
+      ],
+      "n_reprints": 0,
+      "n_unknown_origin": 1
+    },
+    {
+      "event_id": "e10-5c0c02b4a45b50e5",
+      "publications": [
+        "https://t.me/crypto_hd/31498"
+      ],
+      "n_publications": 1,
+      "n_channels": 1,
+      "n_known_authors": 0,
+      "found_origins": [
+        "https://t.me/crypto_hd/31498"
+      ],
+      "n_reprints": 0,
+      "n_unknown_origin": 0
+    },
+    {
+      "event_id": "e11-d94d5187156da12d",
+      "publications": [
+        "https://t.me/WEB3_AGGREGATOR/423264"
+      ],
+      "n_publications": 1,
+      "n_channels": 1,
+      "n_known_authors": 0,
+      "found_origins": [],
+      "n_reprints": 1,
+      "n_unknown_origin": 0
+    },
+    {
+      "event_id": "e12-6f00f19e65b20c33",
+      "publications": [
+        "https://t.me/rawa_imagination/21117"
+      ],
+      "n_publications": 1,
+      "n_channels": 1,
+      "n_known_authors": 0,
+      "found_origins": [],
+      "n_reprints": 0,
+      "n_unknown_origin": 1
+    },
+    {
+      "event_id": "e13-72ba3c573f7b8cd0",
+      "publications": [
+        "https://t.me/crypto_hd/31503"
+      ],
+      "n_publications": 1,
+      "n_channels": 1,
+      "n_known_authors": 0,
+      "found_origins": [],
+      "n_reprints": 1,
+      "n_unknown_origin": 0
+    },
+    {
+      "event_id": "e14-21869d99515ccb24",
+      "publications": [
+        "https://t.me/crypto_hd/31503"
+      ],
+      "n_publications": 1,
+      "n_channels": 1,
+      "n_known_authors": 0,
+      "found_origins": [],
+      "n_reprints": 1,
+      "n_unknown_origin": 0
+    },
+    {
+      "event_id": "e15-e7b0e741d1a92de8",
+      "publications": [
+        "https://t.me/crypto_hd/31503"
+      ],
+      "n_publications": 1,
+      "n_channels": 1,
+      "n_known_authors": 0,
+      "found_origins": [],
+      "n_reprints": 1,
+      "n_unknown_origin": 0
+    },
+    {
+      "event_id": "e16-00c57e20e0576712",
+      "publications": [
+        "https://t.me/crypto_hd/31503"
+      ],
+      "n_publications": 1,
+      "n_channels": 1,
+      "n_known_authors": 0,
+      "found_origins": [],
+      "n_reprints": 1,
+      "n_unknown_origin": 0
+    },
+    {
+      "event_id": "e17-c97d0c8cb7e8c107",
+      "publications": [
+        "https://t.me/crypto_hd/31504"
+      ],
+      "n_publications": 1,
+      "n_channels": 1,
+      "n_known_authors": 0,
+      "found_origins": [],
+      "n_reprints": 1,
+      "n_unknown_origin": 0
+    },
+    {
+      "event_id": "e18-e5b6ccff9b088623",
+      "publications": [
+        "https://t.me/WEB3_AGGREGATOR/423294"
+      ],
+      "n_publications": 1,
+      "n_channels": 1,
+      "n_known_authors": 0,
+      "found_origins": [],
+      "n_reprints": 0,
+      "n_unknown_origin": 1
+    },
+    {
+      "event_id": "e19-a4f2adbf4b9d2794",
+      "publications": [
+        "https://t.me/WEB3_AGGREGATOR/423312"
+      ],
+      "n_publications": 1,
+      "n_channels": 1,
+      "n_known_authors": 0,
+      "found_origins": [
+        "https://t.me/WEB3_AGGREGATOR/423312"
+      ],
+      "n_reprints": 0,
+      "n_unknown_origin": 0
+    },
+    {
+      "event_id": "e20-d5a5326d209f61fa",
+      "publications": [
+        "https://t.me/WEB3_AGGREGATOR/423312"
+      ],
+      "n_publications": 1,
+      "n_channels": 1,
+      "n_known_authors": 0,
+      "found_origins": [
+        "https://t.me/WEB3_AGGREGATOR/423312"
+      ],
+      "n_reprints": 0,
+      "n_unknown_origin": 0
+    },
+    {
+      "event_id": "e21-0485a411367d9252",
+      "publications": [
+        "https://t.me/cryptoattack24/96819",
+        "https://t.me/rawa_imagination/21121"
+      ],
+      "n_publications": 2,
+      "n_channels": 2,
+      "n_known_authors": 0,
+      "found_origins": [
+        "https://t.me/cryptoattack24/96819",
+        "https://t.me/rawa_imagination/21121"
+      ],
+      "n_reprints": 0,
+      "n_unknown_origin": 0
+    },
+    {
+      "event_id": "e22-94522467a1ad084d",
+      "publications": [
+        "https://t.me/cryptoattack24/96824"
+      ],
+      "n_publications": 1,
+      "n_channels": 1,
+      "n_known_authors": 0,
+      "found_origins": [
+        "https://t.me/cryptoattack24/96824"
+      ],
+      "n_reprints": 0,
+      "n_unknown_origin": 0
+    },
+    {
+      "event_id": "e23-28d1b3f1a9ad545d",
+      "publications": [
+        "https://t.me/markettwits/385442"
+      ],
+      "n_publications": 1,
+      "n_channels": 1,
+      "n_known_authors": 0,
+      "found_origins": [
+        "https://t.me/markettwits/385442"
+      ],
+      "n_reprints": 0,
+      "n_unknown_origin": 0
+    },
+    {
+      "event_id": "e24-3da122a196632c38",
+      "publications": [
+        "https://t.me/rawa_imagination/21121"
+      ],
+      "n_publications": 1,
+      "n_channels": 1,
+      "n_known_authors": 0,
+      "found_origins": [
+        "https://t.me/rawa_imagination/21121"
+      ],
+      "n_reprints": 0,
+      "n_unknown_origin": 0
+    },
+    {
+      "event_id": "e25-7e3a3f30e727aa81",
+      "publications": [
+        "https://t.me/marketfeed/1041526"
+      ],
+      "n_publications": 1,
+      "n_channels": 1,
+      "n_known_authors": 0,
+      "found_origins": [
+        "https://t.me/marketfeed/1041526"
+      ],
+      "n_reprints": 0,
+      "n_unknown_origin": 0
+    },
+    {
+      "event_id": "e26-39d34980417fb7cd",
+      "publications": [
+        "https://t.me/marketfeed/1041542"
+      ],
+      "n_publications": 1,
+      "n_channels": 1,
+      "n_known_authors": 0,
+      "found_origins": [
+        "https://t.me/marketfeed/1041542"
+      ],
+      "n_reprints": 0,
+      "n_unknown_origin": 0
+    },
+    {
+      "event_id": "e27-d8930c1560bb8ed1",
+      "publications": [
+        "https://t.me/cryptoattack24/96827"
+      ],
+      "n_publications": 1,
+      "n_channels": 1,
+      "n_known_authors": 0,
+      "found_origins": [
+        "https://t.me/cryptoattack24/96827"
+      ],
+      "n_reprints": 0,
+      "n_unknown_origin": 0
+    }
+  ]
+}

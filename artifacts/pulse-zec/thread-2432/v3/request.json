@@ -1,0 +1,29 @@
+{
+ "model": "deepseek/deepseek-v4-flash",
+ "temperature": 0,
+ "response_format": {
+  "type": "json_object"
+ },
+ "usage": {
+  "include": true
+ },
+ "reasoning": {
+  "enabled": false
+ },
+ "messages": [
+  {
+   "role": "system",
+   "content": "You read one Telegram discussion thread. Topic: zec.\n\n`mentions` on the post or on a comment lists words that a separate detector found as names of the\ntopic, with status confirmed or ambiguous (\"эфир\" may also mean a broadcast). Do not decide yourself\nwhich words name the topic; judge whether each reply is about it.\n\nFor EVERY comment return one object:\n  id           the comment id\n  relevance    relevant   the reply is about zec: it names it (see mentions) or continues, through\n                          its reply chain or the post, a message about zec\n               unrelated  another subject, including other coins and the market in general\n               unclear    cannot tell: the only link is a nearby message outside the reply chain,\n                          the parent is missing, or the meaning is in an image you cannot see\n  aspect       only if relevant, else null:\n               market      the price, trading and outlook of zec itself\n               usage       zec used as a currency, means of payment or balance: a price of\n                           something named in zec, mint cost, gas, zec on a wallet\n               technology  the network, upgrades, L2\n               other\n  kind         opinion / question / experience (the author's own fact or action) / other\n  summary      only if relevant, else null: one short sentence in Russian retelling THIS reply.\n               Keep its kind: a question stays a question (\"Спрашивает, …\"), an experience stays a fact.\n               The parent may be used to resolve \"это\" / \"он\", but add no numbers, levels or arguments\n               the reply itself does not state. Sarcasm: say it is ironic, do not retell it literally.\n               If a retelling needs a guess, null.\n  quote        only if relevant, else null: an exact fragment of the reply's own text, copied\n               character for character, on which the summary rests\n  context_ids  \"post\" and/or ids from the reply chain (parent, grandparent, ...) needed to understand\n               the reply; [] if it is clear alone. Never a message that is only nearby in time.\n  name_candidate  a word in the reply that you think names zec but is not in its mentions;\n               null otherwise. It is stored only as a candidate for review.\n\nDo not assume a reply is about zec because the post is; follow the reply chain. A reply to an\noff-topic message may return to zec: judge its own text too.\n\"[media]\" marks an image you cannot see: unclear only when the meaning cannot be understood without it.\nreply_to \"missing:<id>\" means the parent message is not available.\nAnswer with JSON only: {\"labels\": [ ... ]}"
+  },
+  {
+   "role": "user",
+   "content": "{\"post\": {\"id\": \"post\", \"text\": \"Рынок несколько месяцев назад и сейчас\\n\\nБыло несколько альфа проектов\\n\\nСейчас сразу вылезло куча монет, многие проекты сделали +50-70% за неделю и как будто готовы идти дальше\\n\\nЭто наиболее сложная стадия, так как глаза разбегаются и хочется начать прыгать по монетам, чего конечно делать не стоит\\n\\nЕсли купили удачные монеты, которые не проигрывают рынку, то лучше дальше в них и сидеть\"}, \"comments\": [{\"id\": \"150638\", \"reply_to\": \"post\", \"author\": \"anon\", \"time\": \"12:11\", \"text\": \"Навалил воды как всегда так держать!\"}, {\"id\": \"150639\", \"reply_to\": \"post\", \"author\": \"u1\", \"time\": \"12:12\", \"text\": \"старкнет!\"}, {\"id\": \"150640\", \"reply_to\": \"150638\", \"author\": \"u2\", \"time\": \"12:12\", \"text\": \"альфа вся на кэпитале\"}, {\"id\": \"150641\", \"reply_to\": \"post\", \"author\": \"u3\", \"time\": \"12:16\", \"text\": \"Сижу в альфе чия атом полькадот сракнет\"}, {\"id\": \"150642\", \"reply_to\": \"post\", \"author\": \"u4\", \"time\": \"12:18\", \"text\": \"А как же сливки?\"}, {\"id\": \"150643\", \"reply_to\": \"150641\", \"author\": \"u5\", \"time\": \"12:19\", \"text\": \"старк ещё всех посрамит\"}, {\"id\": \"150645\", \"reply_to\": \"post\", \"author\": \"u6\", \"time\": \"13:19\", \"text\": \"То бишь hype или zec 😁\", \"mentions\": [{\"text\": \"zec\", \"status\": \"confirmed\"}]}, {\"id\": \"150646\", \"reply_to\": \"post\", \"author\": \"u7\", \"time\": \"16:48\", \"text\": \"Дядя Сережа, 99.9% криптов засажены в гавно монеты с прошлого разгона, ждем когда это дерьмо вырастет, чтобы продать и уйти на покой. Либо дрочить спредики и разные неэффективности. Никто эту шляпу в данном цыкле уже покупать не будет(возможно это и ошибка)\"}, {\"id\": \"150648\", \"reply_to\": \"150643\", \"author\": \"u8\", \"time\": \"03:12\", \"text\": \"Арбитрум по 10$ если вообразить\"}, {\"id\": \"150649\", \"reply_to\": \"150643\", \"author\": \"u9\", \"time\": \"04:24\", \"text\": \"Он уже всех посрамил когда вышел хорошо, больше нечего от него ждать теперь это такое же г как и все остальное\"}, {\"id\": \"150650\", \"reply_to\": \"post\", \"author\": \"u10\", \"time\": \"05:40\", \"text\": \"Думаю идёт подготовка к выборам и после взлёт.\"}]}"
+  }
+ ],
+ "provider": {
+  "order": [
+   "DeepInfra"
+  ],
+  "allow_fallbacks": false
+ }
+}

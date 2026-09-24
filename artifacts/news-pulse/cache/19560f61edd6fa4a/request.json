@@ -1,0 +1,17 @@
+{
+ "segments": [
+  {
+   "id": "telegram:12:4873#s2",
+   "text": "Zec адрес: t1gGCYpyURMo2FcYDSqeR8pgp2Kx9rnT72V",
+   "mentions": [
+    {
+     "text": "Zec",
+     "status": "confirmed"
+    }
+   ],
+   "kind_hint": "post",
+   "url": "https://t.me/Defiscamcheck/4873",
+   "time": "2026-09-19T10:34:17+00:00"
+  }
+ ]
+}

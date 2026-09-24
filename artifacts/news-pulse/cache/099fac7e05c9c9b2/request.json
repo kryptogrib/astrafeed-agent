@@ -1,0 +1,26 @@
+{
+ "a": {
+  "quote": "⛓️Сегодня сеть Arc вышла в майннет, в которой для оплаты газа не нужен отдельный токен, все списывается в $USDC.\nТакже можно сминтить памятный NFT в честь запуска сети на ➡️Opensea, дедлайн 16 сентября 12:00 мск. Подробнее о сети тут.",
+  "actor": "Arc",
+  "action": "went to mainnet",
+  "object": "network",
+  "qualifiers": {
+   "event_date": "2026-09-16",
+   "place": "network",
+   "counterparty": "USDC"
+  },
+  "url": "https://t.me/WEB3_AGGREGATOR/423151"
+ },
+ "b": {
+  "quote": "🪙 Circle запустила мейннет Arc — сеть уже принимает транзакции, а за первые два часа в неё завели более $370 млн USDC.",
+  "actor": "Circle",
+  "action": "launched",
+  "object": "mainnet Arc",
+  "qualifiers": {
+   "event_date": "2026-09-16",
+   "place": "network",
+   "counterparty": "USDC"
+  },
+  "url": "https://t.me/WEB3_AGGREGATOR/423143"
+ }
+}

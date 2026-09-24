@@ -1,0 +1,32 @@
+{
+ "choices": [
+  {
+   "message": {
+    "content": "{\"labels\": [{\"id\": \"telegram:15:423491#s2\", \"kind\": \"event\", \"actor\": \"NEAR Intents\", \"action\": \"processed $3.4B cross-chain volume including ZEC swaps\", \"object\": \"NEAR Intents\", \"qualifiers\": {\"version\": null, \"event_date\": \"last 30 days\", \"place\": null, \"counterparty\": \"ZEC\"}, \"origin\": \"retelling\", \"source_role\": \"editorial\", \"verification_status\": \"unverified\", \"quote\": \"через NEAR Intents за 30 дней прошло $3,4 млрд кроссчейн объемов, в том числе и свопы в ZEC\", \"span\": [20, 100]}]}"
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 1856,
+  "completion_tokens": 1708,
+  "total_tokens": 3564,
+  "cost": 0.0003717168,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 1484,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.0003717168,
+   "upstream_inference_prompt_cost": 6.08608e-05,
+   "upstream_inference_completions_cost": 0.000310856
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

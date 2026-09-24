@@ -1,0 +1,32 @@
+{
+ "choices": [
+  {
+   "message": {
+    "content": "{\"labels\": [{\"id\": \"telegram:15:423406#s10\", \"kind\": \"event\", \"actor\": null, \"action\": \"price movement\", \"object\": \"ZEC\", \"qualifiers\": {\"version\": null, \"event_date\": \"2026-09-20\", \"place\": null, \"counterparty\": null}, \"origin\": \"retelling\", \"source_role\": \"editorial\", \"verification_status\": \"unverified\", \"quote\": \"$ZEC и вовсе живёт своей жизнью по $1 595 за монету (х3 за 30 дней)\", \"span\": [0, 0]}]}"
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 1810,
+  "completion_tokens": 1476,
+  "total_tokens": 3286,
+  "cost": 0.000638008,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 256,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.000638008,
+   "upstream_inference_prompt_cost": 0.000224728,
+   "upstream_inference_completions_cost": 0.00041328
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

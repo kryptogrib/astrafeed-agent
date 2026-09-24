@@ -1,0 +1,17 @@
+{
+ "segments": [
+  {
+   "id": "telegram:15:423080#s0",
+   "text": "😮 Один из топовых трейдеров Axiom потерял $600K, пытаясь сделать бридж в arc.\n",
+   "mentions": [
+    {
+     "text": "arc",
+     "status": "confirmed"
+    }
+   ],
+   "kind_hint": "post",
+   "url": "https://t.me/WEB3_AGGREGATOR/423080",
+   "time": "2026-09-16T10:59:38+00:00"
+  }
+ ]
+}

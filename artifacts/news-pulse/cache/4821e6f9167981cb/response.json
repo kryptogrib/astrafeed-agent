@@ -1,0 +1,32 @@
+{
+ "choices": [
+  {
+   "message": {
+    "content": "{\"labels\": [{\"id\": \"telegram:15:423173#s1\", \"kind\": \"author_position\", \"actor\": null, \"action\": \"plans to move\", \"object\": \"Ethereum\", \"qualifiers\": {\"version\": \"in the coming years\"}, \"origin\": \"retelling\", \"source_role\": \"editorial\", \"verification_status\": \"unverified\", \"quote\": \"Именно в эту сторону Ethereum планирует двигаться в ближайшие годы.\", \"span\": [0, 62]}]}"
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 2078,
+  "completion_tokens": 1538,
+  "total_tokens": 3616,
+  "cost": 0.0004770878,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 256,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.0004770878,
+   "upstream_inference_prompt_cost": 0.0001810228,
+   "upstream_inference_completions_cost": 0.000296065
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

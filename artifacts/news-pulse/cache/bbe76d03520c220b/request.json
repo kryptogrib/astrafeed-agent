@@ -1,0 +1,23 @@
+{
+ "a": {
+  "quote": "выходят они 21 числа 13:00 UTC WL - инфа",
+  "actor": "ZEC NFT",
+  "action": "выходят 21 числа 13:00 UTC",
+  "object": "ZEC NFT",
+  "qualifiers": {
+   "event_date": "2026-09-21T13:00:00Z"
+  },
+  "url": "https://t.me/WEB3_AGGREGATOR/423375"
+ },
+ "b": {
+  "quote": "▫️#ZEC = +$2,360,000.",
+  "actor": null,
+  "action": "report",
+  "object": "ZEC ETF net flow",
+  "qualifiers": {
+   "counterparty": "ETF",
+   "event_date": "2026-09-21"
+  },
+  "url": "https://t.me/crypto_hd/31561"
+ }
+}

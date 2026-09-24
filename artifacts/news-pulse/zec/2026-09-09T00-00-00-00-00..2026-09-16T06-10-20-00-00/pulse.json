@@ -1,0 +1,985 @@
+{
+  "topic": "zec",
+  "window": {
+    "requested": "2026-09-09T00:00:00+00:00..2026-09-16T06:10:20+00:00",
+    "start": "2026-09-09T00:00:00+00:00",
+    "end": "2026-09-16T06:10:20+00:00",
+    "cutoff": "2026-09-16T06:10:20+00:00",
+    "previous": "2026-09-01T17:49:40+00:00..2026-09-09T00:00:00+00:00",
+    "mode": "publication_replay"
+  },
+  "status": "ok",
+  "events": [
+    {
+      "event_id": "e1-1e39bc2e2cf277d9",
+      "headline": "👑 ZCASH – новый король крипторынка? Покупать или не стоит?",
+      "counts": {
+        "events": 1,
+        "publications": 1,
+        "channels": 1,
+        "known_authors": 0,
+        "unknown_authors": 1,
+        "found_origins": 0,
+        "reprints": 0,
+        "unknown_origin": 1
+      },
+      "actor": null,
+      "action": null,
+      "object": null,
+      "qualifiers": {},
+      "members": [
+        {
+          "obs_id": "telegram:18:31368#s1",
+          "publication_id": "telegram:18:31368",
+          "source_id": 18,
+          "author_id": null,
+          "published_at": "2026-09-10T17:04:12+00:00",
+          "url": "https://t.me/crypto_hd/31368",
+          "quote": "👑 ZCASH – новый король крипторынка? Покупать или не стоит?",
+          "span": [
+            5,
+            63
+          ],
+          "origin": "unknown"
+        },
+        {
+          "obs_id": "telegram:18:31368#s2",
+          "publication_id": "telegram:18:31368",
+          "source_id": 18,
+          "author_id": null,
+          "published_at": "2026-09-10T17:04:12+00:00",
+          "url": "https://t.me/crypto_hd/31368",
+          "quote": "ZEC вырос в 50 раз с 2025 года. В чем же секрет успеха? Есть ли смысл покупать монету во время текущего роста или нет?",
+          "span": [
+            65,
+            183
+          ],
+          "origin": "unknown"
+        }
+      ]
+    },
+    {
+      "event_id": "e2-971d32ab6b572c62",
+      "headline": "+ подключили ChatGPT Astra 6, Claude Fable 5.1 и GROK 4.6 - топовые нейронки озвучили свои вердикты по Zcash и предложили рассмотреть другие проекты.",
+      "counts": {
+        "events": 1,
+        "publications": 1,
+        "channels": 1,
+        "known_authors": 0,
+        "unknown_authors": 1,
+        "found_origins": 0,
+        "reprints": 0,
+        "unknown_origin": 1
+      },
+      "actor": "ChatGPT Astra 6, Claude Fable 5.1 и GROK 4.6",
+      "action": "озвучили свои вердикты",
+      "object": "Zcash",
+      "qualifiers": {},
+      "members": [
+        {
+          "obs_id": "telegram:18:31368#s4",
+          "publication_id": "telegram:18:31368",
+          "source_id": 18,
+          "author_id": null,
+          "published_at": "2026-09-10T17:04:12+00:00",
+          "url": "https://t.me/crypto_hd/31368",
+          "quote": "+ подключили ChatGPT Astra 6, Claude Fable 5.1 и GROK 4.6 - топовые нейронки озвучили свои вердикты по Zcash и предложили рассмотреть другие проекты.",
+          "span": [
+            250,
+            399
+          ],
+          "origin": "unknown"
+        }
+      ]
+    },
+    {
+      "event_id": "e3-08e727469a529a98",
+      "headline": "❕Исчерпывающий расклад по Zcash (ZEC) 2026 (статья)",
+      "counts": {
+        "events": 1,
+        "publications": 1,
+        "channels": 1,
+        "known_authors": 0,
+        "unknown_authors": 1,
+        "found_origins": 0,
+        "reprints": 0,
+        "unknown_origin": 1
+      },
+      "actor": null,
+      "action": null,
+      "object": null,
+      "qualifiers": {},
+      "members": [
+        {
+          "obs_id": "telegram:18:31375#s1",
+          "publication_id": "telegram:18:31375",
+          "source_id": 18,
+          "author_id": null,
+          "published_at": "2026-09-10T23:00:00+00:00",
+          "url": "https://t.me/crypto_hd/31375",
+          "quote": "❕Исчерпывающий расклад по Zcash (ZEC) 2026 (статья)",
+          "span": [
+            34,
+            85
+          ],
+          "origin": "unknown"
+        }
+      ]
+    },
+    {
+      "event_id": "e4-0d680da28f4c4d49",
+      "headline": "#ZEC Zcash завершит голосование по составу обновления сети NU7",
+      "counts": {
+        "events": 1,
+        "publications": 3,
+        "channels": 2,
+        "known_authors": 0,
+        "unknown_authors": 3,
+        "found_origins": 0,
+        "reprints": 3,
+        "unknown_origin": 0
+      },
+      "actor": "Zcash",
+      "action": "завершит голосование по составу обновления сети NU7",
+      "object": "обновление сети NU7",
+      "qualifiers": {},
+      "members": [
+        {
+          "obs_id": "telegram:11:96700#s3",
+          "publication_id": "telegram:11:96700",
+          "source_id": 11,
+          "author_id": null,
+          "published_at": "2026-09-12T20:57:32+00:00",
+          "url": "https://t.me/cryptoattack24/96700",
+          "quote": "#ZEC Zcash завершит голосование по составу обновления сети NU7",
+          "span": [
+            142,
+            204
+          ],
+          "origin": "retelling"
+        },
+        {
+          "obs_id": "telegram:15:422881#s3",
+          "publication_id": "telegram:15:422881",
+          "source_id": 15,
+          "author_id": null,
+          "published_at": "2026-09-13T07:52:20+00:00",
+          "url": "https://t.me/WEB3_AGGREGATOR/422881",
+          "quote": "#ZEC Zcash завершит голосование по составу обновления сети NU7",
+          "span": [
+            142,
+            204
+          ],
+          "origin": "retelling"
+        },
+        {
+          "obs_id": "telegram:15:422902#s9",
+          "publication_id": "telegram:15:422902",
+          "source_id": 15,
+          "author_id": null,
+          "published_at": "2026-09-13T20:33:52+00:00",
+          "url": "https://t.me/WEB3_AGGREGATOR/422902",
+          "quote": "#ZEC Zcash завершит голосование по составу обновления сети NU7",
+          "span": [
+            504,
+            566
+          ],
+          "origin": "retelling"
+        }
+      ]
+    },
+    {
+      "event_id": "e5-f29b90092dd09846",
+      "headline": "Freemint on ZEC 11 spots.",
+      "counts": {
+        "events": 1,
+        "publications": 1,
+        "channels": 1,
+        "known_authors": 0,
+        "unknown_authors": 1,
+        "found_origins": 0,
+        "reprints": 1,
+        "unknown_origin": 0
+      },
+      "actor": null,
+      "action": "Freemint on ZEC 11 spots",
+      "object": "ZEC",
+      "qualifiers": {},
+      "members": [
+        {
+          "obs_id": "telegram:15:422904#s4",
+          "publication_id": "telegram:15:422904",
+          "source_id": 15,
+          "author_id": null,
+          "published_at": "2026-09-14T06:25:01+00:00",
+          "url": "https://t.me/WEB3_AGGREGATOR/422904",
+          "quote": "Freemint on ZEC 11 spots.",
+          "span": [
+            251,
+            276
+          ],
+          "origin": "retelling"
+        }
+      ]
+    },
+    {
+      "event_id": "e6-db63642aebb6a63b",
+      "headline": "Я прям делаю еще ставку на разгон нфт меты во круг zcash, там тож движ интересный начинается",
+      "counts": {
+        "events": 1,
+        "publications": 1,
+        "channels": 1,
+        "known_authors": 0,
+        "unknown_authors": 1,
+        "found_origins": 0,
+        "reprints": 1,
+        "unknown_origin": 0
+      },
+      "actor": null,
+      "action": "разгон нфт меты во круг zcash",
+      "object": "zcash",
+      "qualifiers": {},
+      "members": [
+        {
+          "obs_id": "telegram:15:422977#s5",
+          "publication_id": "telegram:15:422977",
+          "source_id": 15,
+          "author_id": null,
+          "published_at": "2026-09-15T05:05:19+00:00",
+          "url": "https://t.me/WEB3_AGGREGATOR/422977",
+          "quote": "Я прям делаю еще ставку на разгон нфт меты во круг zcash, там тож движ интересный начинается",
+          "span": [
+            424,
+            516
+          ],
+          "origin": "retelling"
+        }
+      ]
+    },
+    {
+      "event_id": "e7-1032c2cb09ffdc45",
+      "headline": "Сегодня еще минт панков на ZEC",
+      "counts": {
+        "events": 1,
+        "publications": 1,
+        "channels": 1,
+        "known_authors": 0,
+        "unknown_authors": 1,
+        "found_origins": 0,
+        "reprints": 1,
+        "unknown_origin": 0
+      },
+      "actor": null,
+      "action": "минт панков на ZEC",
+      "object": "ZEC",
+      "qualifiers": {
+        "event_date": "Сегодня",
+        "place": "Паблик в 18 мск"
+      },
+      "members": [
+        {
+          "obs_id": "telegram:15:423011#s0",
+          "publication_id": "telegram:15:423011",
+          "source_id": 15,
+          "author_id": null,
+          "published_at": "2026-09-15T13:01:16+00:00",
+          "url": "https://t.me/WEB3_AGGREGATOR/423011",
+          "quote": "Сегодня еще минт панков на ZEC",
+          "span": [
+            0,
+            30
+          ],
+          "origin": "retelling"
+        }
+      ]
+    },
+    {
+      "event_id": "e8-6fbb9ed2b5ff3603",
+      "headline": "нужен кошелек ноир, ZEC, акцион 48 часов.",
+      "counts": {
+        "events": 1,
+        "publications": 1,
+        "channels": 1,
+        "known_authors": 0,
+        "unknown_authors": 1,
+        "found_origins": 0,
+        "reprints": 1,
+        "unknown_origin": 0
+      },
+      "actor": null,
+      "action": "нужен кошелек ноир, ZEC, акцион 48 часов",
+      "object": "ZEC",
+      "qualifiers": {},
+      "members": [
+        {
+          "obs_id": "telegram:15:423037#s1",
+          "publication_id": "telegram:15:423037",
+          "source_id": 15,
+          "author_id": null,
+          "published_at": "2026-09-15T18:03:42+00:00",
+          "url": "https://t.me/WEB3_AGGREGATOR/423037",
+          "quote": "нужен кошелек ноир, ZEC, акцион 48 часов.",
+          "span": [
+            23,
+            64
+          ],
+          "origin": "retelling"
+        }
+      ]
+    },
+    {
+      "event_id": "e9-77cecaffecf3a983",
+      "headline": "Аукцион рассчитывается в ZEC, но через NEAR Intents можно зайти ETH, SOL, BTC, стейблами и другими активами - система сама конвертирует их в ZEC.",
+      "counts": {
+        "events": 1,
+        "publications": 2,
+        "channels": 2,
+        "known_authors": 0,
+        "unknown_authors": 2,
+        "found_origins": 0,
+        "reprints": 2,
+        "unknown_origin": 0
+      },
+      "actor": null,
+      "action": "Аукцион рассчитывается в ZEC, но через NEAR Intents можно зайти ETH, SOL, BTC, стейблами и другими активами - система сама конвертирует их в ZEC",
+      "object": "ZEC",
+      "qualifiers": {},
+      "members": [
+        {
+          "obs_id": "telegram:7:12225#s15",
+          "publication_id": "telegram:7:12225",
+          "source_id": 7,
+          "author_id": null,
+          "published_at": "2026-09-15T18:32:01+00:00",
+          "url": "https://t.me/moni_talks/12225",
+          "quote": "Аукцион рассчитывается в ZEC, но через NEAR Intents можно зайти ETH, SOL, BTC, стейблами и другими активами - система сама конвертирует их в ZEC.",
+          "span": [
+            2607,
+            2752
+          ],
+          "origin": "retelling"
+        },
+        {
+          "obs_id": "telegram:15:423051#s15",
+          "publication_id": "telegram:15:423051",
+          "source_id": 15,
+          "author_id": null,
+          "published_at": "2026-09-15T19:05:10+00:00",
+          "url": "https://t.me/WEB3_AGGREGATOR/423051",
+          "quote": "Аукцион рассчитывается в ZEC, но через NEAR Intents можно зайти ETH, SOL, BTC, стейблами и другими активами - система сама конвертирует их в ZEC.",
+          "span": [
+            2607,
+            2752
+          ],
+          "origin": "retelling"
+        }
+      ]
+    },
+    {
+      "event_id": "e10-6725051e7f89c31d",
+      "headline": "Про экосистему Zcash",
+      "counts": {
+        "events": 1,
+        "publications": 1,
+        "channels": 1,
+        "known_authors": 0,
+        "unknown_authors": 1,
+        "found_origins": 0,
+        "reprints": 0,
+        "unknown_origin": 1
+      },
+      "actor": null,
+      "action": "Про экосистему Zcash",
+      "object": "Zcash",
+      "qualifiers": {},
+      "members": [
+        {
+          "obs_id": "telegram:15:423054#s0",
+          "publication_id": "telegram:15:423054",
+          "source_id": 15,
+          "author_id": null,
+          "published_at": "2026-09-15T19:05:49+00:00",
+          "url": "https://t.me/WEB3_AGGREGATOR/423054",
+          "quote": "Про экосистему Zcash",
+          "span": [
+            0,
+            20
+          ],
+          "origin": "unknown"
+        }
+      ]
+    },
+    {
+      "event_id": "e11-5d8e0162c7802269",
+      "headline": "ZEC-paired",
+      "counts": {
+        "events": 1,
+        "publications": 1,
+        "channels": 1,
+        "known_authors": 0,
+        "unknown_authors": 1,
+        "found_origins": 0,
+        "reprints": 0,
+        "unknown_origin": 1
+      },
+      "actor": null,
+      "action": "откупается и начисляется",
+      "object": "ZEC",
+      "qualifiers": {
+        "version": null,
+        "event_date": null,
+        "place": null,
+        "counterparty": null
+      },
+      "members": [
+        {
+          "obs_id": "telegram:15:423054#s18",
+          "publication_id": "telegram:15:423054",
+          "source_id": 15,
+          "author_id": null,
+          "published_at": "2026-09-15T19:05:49+00:00",
+          "url": "https://t.me/WEB3_AGGREGATOR/423054",
+          "quote": "ZEC-paired",
+          "span": [
+            2494,
+            2504
+          ],
+          "origin": "retelling"
+        }
+      ]
+    },
+    {
+      "event_id": "e12-4092503716f23af4",
+      "headline": "ZEC",
+      "counts": {
+        "events": 1,
+        "publications": 1,
+        "channels": 1,
+        "known_authors": 0,
+        "unknown_authors": 1,
+        "found_origins": 0,
+        "reprints": 0,
+        "unknown_origin": 1
+      },
+      "actor": null,
+      "action": "является стратегией",
+      "object": "ZEC",
+      "qualifiers": {
+        "version": null,
+        "event_date": null,
+        "place": null,
+        "counterparty": null
+      },
+      "members": [
+        {
+          "obs_id": "telegram:15:423054#s19",
+          "publication_id": "telegram:15:423054",
+          "source_id": 15,
+          "author_id": null,
+          "published_at": "2026-09-15T19:05:49+00:00",
+          "url": "https://t.me/WEB3_AGGREGATOR/423054",
+          "quote": "ZEC",
+          "span": [
+            2609,
+            2612
+          ],
+          "origin": "retelling"
+        },
+        {
+          "obs_id": "telegram:15:423054#s4",
+          "publication_id": "telegram:15:423054",
+          "source_id": 15,
+          "author_id": null,
+          "published_at": "2026-09-15T19:05:49+00:00",
+          "url": "https://t.me/WEB3_AGGREGATOR/423054",
+          "quote": "ZEC",
+          "span": [
+            545,
+            548
+          ],
+          "origin": "retelling"
+        }
+      ]
+    },
+    {
+      "event_id": "e13-e22920b533b854fb",
+      "headline": "Если б ты купил ZEC год назад на $1.000, то сейчас это было бы $60.000",
+      "counts": {
+        "events": 1,
+        "publications": 1,
+        "channels": 1,
+        "known_authors": 0,
+        "unknown_authors": 1,
+        "found_origins": 0,
+        "reprints": 0,
+        "unknown_origin": 1
+      },
+      "actor": null,
+      "action": "купил ZEC год назад на $1.000, то сейчас это было бы $60.000",
+      "object": "ZEC",
+      "qualifiers": {},
+      "members": [
+        {
+          "obs_id": "telegram:15:423054#s2",
+          "publication_id": "telegram:15:423054",
+          "source_id": 15,
+          "author_id": null,
+          "published_at": "2026-09-15T19:05:49+00:00",
+          "url": "https://t.me/WEB3_AGGREGATOR/423054",
+          "quote": "Если б ты купил ZEC год назад на $1.000, то сейчас это было бы $60.000",
+          "span": [
+            182,
+            252
+          ],
+          "origin": "retelling"
+        }
+      ]
+    },
+    {
+      "event_id": "e14-080bc9ea3e01b7b1",
+      "headline": "ZCASH HOLDERS OVERWHELMINGLY BACK FASTER TRANSACTIONS AND BITCOIN-STYLE HALVINGS",
+      "counts": {
+        "events": 1,
+        "publications": 1,
+        "channels": 1,
+        "known_authors": 0,
+        "unknown_authors": 1,
+        "found_origins": 0,
+        "reprints": 1,
+        "unknown_origin": 0
+      },
+      "actor": "ZCASH HOLDERS",
+      "action": "OVERWHELMINGLY BACK",
+      "object": "FASTER TRANSACTIONS AND BITCOIN-STYLE HALVINGS",
+      "qualifiers": {
+        "version": null,
+        "event_date": null,
+        "place": null,
+        "counterparty": null
+      },
+      "members": [
+        {
+          "obs_id": "telegram:9:1039055#s0",
+          "publication_id": "telegram:9:1039055",
+          "source_id": 9,
+          "author_id": null,
+          "published_at": "2026-09-16T06:10:19+00:00",
+          "url": "https://t.me/marketfeed/1039055",
+          "quote": "ZCASH HOLDERS OVERWHELMINGLY BACK FASTER TRANSACTIONS AND BITCOIN-STYLE HALVINGS",
+          "span": [
+            0,
+            80
+          ],
+          "origin": "retelling"
+        }
+      ]
+    }
+  ],
+  "distribution_and_positions": [],
+  "discussion": [
+    {
+      "target": "other_subject",
+      "target_id": null,
+      "text": "По багз от анвалт кто-то понял механику распределения гарантов? Я примерно понял, что на каждую коллекцию партнёра будет определённое количество спотов, то бишь даже на стадии гаранта будет фкфс. Но так ли это на самом деле?",
+      "basis": "предмет реплики — сторонний сервис/коллекция экосистемы, не событие темы",
+      "url": "https://t.me/whitelist1/7130?comment=571146",
+      "quote": "По багз от анвалт кто-то понял механику распределения гарантов? Я примерно понял, что на каждую коллекцию партнёра будет определённое количество спотов, то бишь даже на стадии гара"
+    }
+  ],
+  "changes": {
+    "previous_window": "2026-09-01T17:49:40+00:00..2026-09-09T00:00:00+00:00",
+    "events_appeared": [
+      "ChatGPT Astra 6, Claude Fable 5.1 и GROK 4.6|озвучили свои вердикты|Zcash|+ подключили ChatGPT Astra 6, Claude Fable 5.1 и GROK 4.6 - топовые нейронки озвучили свои вердикты по Zcash и предложили рассмотреть другие проекты.",
+      "ZCASH HOLDERS|OVERWHELMINGLY BACK|FASTER TRANSACTIONS AND BITCOIN-STYLE HALVINGS|ZCASH HOLDERS OVERWHELMINGLY BACK FASTER TRANSACTIONS AND BITCOIN-STYLE HALVINGS",
+      "Zcash|завершит голосование по составу обновления сети NU7|обновление сети NU7|#ZEC Zcash завершит голосование по составу обновления сети NU7",
+      "|Freemint on ZEC 11 spots|ZEC|Freemint on ZEC 11 spots.",
+      "|||❕Исчерпывающий расклад по Zcash (ZEC) 2026 (статья)",
+      "|||👑 ZCASH – новый король крипторынка? Покупать или не стоит?",
+      "|Аукцион рассчитывается в ZEC, но через NEAR Intents можно зайти ETH, SOL, BTC, стейблами и другими активами - система сама конвертирует их в ZEC|ZEC|Аукцион рассчитывается в ZEC, но через NEAR Intents можно зайти ETH, SOL, BTC, стейблами и другими активами - система сама конвертирует их в ZEC.",
+      "|Про экосистему Zcash|Zcash|Про экосистему Zcash",
+      "|купил ZEC год назад на $1.000, то сейчас это было бы $60.000|ZEC|Если б ты купил ZEC год назад на $1.000, то сейчас это было бы $60.000",
+      "|минт панков на ZEC|ZEC|Сегодня еще минт панков на ZEC",
+      "|нужен кошелек ноир, ZEC, акцион 48 часов|ZEC|нужен кошелек ноир, ZEC, акцион 48 часов.",
+      "|откупается и начисляется|ZEC|ZEC-paired",
+      "|разгон нфт меты во круг zcash|zcash|Я прям делаю еще ставку на разгон нфт меты во круг zcash, там тож движ интересный начинается",
+      "|является стратегией|ZEC|ZEC"
+    ],
+    "events_gone": [],
+    "discussion_comments": 699,
+    "previous_comments": 0,
+    "source_coverage": {
+      "added_channels": [
+        "@Defiscamcheck",
+        "@PowsGemCalls",
+        "@Slavik_investor_updates",
+        "@WEB3_AGGREGATOR",
+        "@badfriend_loops",
+        "@crypto_hd",
+        "@cryptoattack24",
+        "@cryptonftded",
+        "@don_invest",
+        "@icryptocom",
+        "@krasnovcrypto",
+        "@marketfeed",
+        "@markettwits",
+        "@moni_talks",
+        "@rawa_imagination",
+        "@slavik_investor",
+        "@spidersjournal",
+        "@whitelist1"
+      ],
+      "removed_channels": [],
+      "current_channels": 18,
+      "previous_channels": 0
+    }
+  },
+  "short_observations": [
+    "#ZEC Zcash завершит голосование по составу обновления сети NU7",
+    "Аукцион рассчитывается в ZEC, но через NEAR Intents можно зайти ETH, SOL, BTC, стейблами и другими активами - система сама конвертирует их в ZEC.",
+    "👑 ZCASH – новый король крипторынка? Покупать или не стоит?",
+    "+ подключили ChatGPT Astra 6, Claude Fable 5.1 и GROK 4.6 - топовые нейронки озвучили свои вердикты по Zcash и предложили рассмотреть другие проекты.",
+    "❕Исчерпывающий расклад по Zcash (ZEC) 2026 (статья)"
+  ],
+  "coverage": {
+    "publications": 6560,
+    "comments": 699,
+    "channels": 18,
+    "topic_publications": 13,
+    "not_processed": 0,
+    "db_md5": "8618099125a806df376354286ccd982e",
+    "cutoff": "2026-09-16T06:10:20+00:00"
+  },
+  "limitations": [
+    "Режим publication_replay: discovered_at в снимке отсутствует, «впервые системой» не заявляется.",
+    "Роль источника unknown: в базе нет редакционного реестра.",
+    "Неизвестные авторы не объединяются.",
+    "Отсечено после cutoff 2026-09-16T06:10:20+00:00: 8415."
+  ],
+  "evidence": [
+    {
+      "id": "telegram:18:31368#s1",
+      "url": "https://t.me/crypto_hd/31368",
+      "quote": "👑 ZCASH – новый король крипторынка? Покупать или не стоит?",
+      "span": [
+        5,
+        63
+      ],
+      "publication_id": "telegram:18:31368"
+    },
+    {
+      "id": "telegram:18:31368#s2",
+      "url": "https://t.me/crypto_hd/31368",
+      "quote": "ZEC вырос в 50 раз с 2025 года. В чем же секрет успеха? Есть ли смысл покупать монету во время текущего роста или нет?",
+      "span": [
+        65,
+        183
+      ],
+      "publication_id": "telegram:18:31368"
+    },
+    {
+      "id": "telegram:18:31368#s4",
+      "url": "https://t.me/crypto_hd/31368",
+      "quote": "+ подключили ChatGPT Astra 6, Claude Fable 5.1 и GROK 4.6 - топовые нейронки озвучили свои вердикты по Zcash и предложили рассмотреть другие проекты.",
+      "span": [
+        250,
+        399
+      ],
+      "publication_id": "telegram:18:31368"
+    },
+    {
+      "id": "telegram:18:31375#s1",
+      "url": "https://t.me/crypto_hd/31375",
+      "quote": "❕Исчерпывающий расклад по Zcash (ZEC) 2026 (статья)",
+      "span": [
+        34,
+        85
+      ],
+      "publication_id": "telegram:18:31375"
+    },
+    {
+      "id": "telegram:11:96700#s3",
+      "url": "https://t.me/cryptoattack24/96700",
+      "quote": "#ZEC Zcash завершит голосование по составу обновления сети NU7",
+      "span": [
+        142,
+        204
+      ],
+      "publication_id": "telegram:11:96700"
+    },
+    {
+      "id": "telegram:15:422881#s3",
+      "url": "https://t.me/WEB3_AGGREGATOR/422881",
+      "quote": "#ZEC Zcash завершит голосование по составу обновления сети NU7",
+      "span": [
+        142,
+        204
+      ],
+      "publication_id": "telegram:15:422881"
+    },
+    {
+      "id": "telegram:15:422902#s9",
+      "url": "https://t.me/WEB3_AGGREGATOR/422902",
+      "quote": "#ZEC Zcash завершит голосование по составу обновления сети NU7",
+      "span": [
+        504,
+        566
+      ],
+      "publication_id": "telegram:15:422902"
+    },
+    {
+      "id": "telegram:15:422904#s4",
+      "url": "https://t.me/WEB3_AGGREGATOR/422904",
+      "quote": "Freemint on ZEC 11 spots.",
+      "span": [
+        251,
+        276
+      ],
+      "publication_id": "telegram:15:422904"
+    },
+    {
+      "id": "telegram:15:422977#s5",
+      "url": "https://t.me/WEB3_AGGREGATOR/422977",
+      "quote": "Я прям делаю еще ставку на разгон нфт меты во круг zcash, там тож движ интересный начинается",
+      "span": [
+        424,
+        516
+      ],
+      "publication_id": "telegram:15:422977"
+    },
+    {
+      "id": "telegram:15:423011#s0",
+      "url": "https://t.me/WEB3_AGGREGATOR/423011",
+      "quote": "Сегодня еще минт панков на ZEC",
+      "span": [
+        0,
+        30
+      ],
+      "publication_id": "telegram:15:423011"
+    },
+    {
+      "id": "telegram:15:423037#s1",
+      "url": "https://t.me/WEB3_AGGREGATOR/423037",
+      "quote": "нужен кошелек ноир, ZEC, акцион 48 часов.",
+      "span": [
+        23,
+        64
+      ],
+      "publication_id": "telegram:15:423037"
+    },
+    {
+      "id": "telegram:7:12225#s15",
+      "url": "https://t.me/moni_talks/12225",
+      "quote": "Аукцион рассчитывается в ZEC, но через NEAR Intents можно зайти ETH, SOL, BTC, стейблами и другими активами - система сама конвертирует их в ZEC.",
+      "span": [
+        2607,
+        2752
+      ],
+      "publication_id": "telegram:7:12225"
+    },
+    {
+      "id": "telegram:15:423051#s15",
+      "url": "https://t.me/WEB3_AGGREGATOR/423051",
+      "quote": "Аукцион рассчитывается в ZEC, но через NEAR Intents можно зайти ETH, SOL, BTC, стейблами и другими активами - система сама конвертирует их в ZEC.",
+      "span": [
+        2607,
+        2752
+      ],
+      "publication_id": "telegram:15:423051"
+    },
+    {
+      "id": "telegram:15:423054#s0",
+      "url": "https://t.me/WEB3_AGGREGATOR/423054",
+      "quote": "Про экосистему Zcash",
+      "span": [
+        0,
+        20
+      ],
+      "publication_id": "telegram:15:423054"
+    },
+    {
+      "id": "telegram:15:423054#s18",
+      "url": "https://t.me/WEB3_AGGREGATOR/423054",
+      "quote": "ZEC-paired",
+      "span": [
+        2494,
+        2504
+      ],
+      "publication_id": "telegram:15:423054"
+    },
+    {
+      "id": "telegram:15:423054#s19",
+      "url": "https://t.me/WEB3_AGGREGATOR/423054",
+      "quote": "ZEC",
+      "span": [
+        2609,
+        2612
+      ],
+      "publication_id": "telegram:15:423054"
+    },
+    {
+      "id": "telegram:15:423054#s2",
+      "url": "https://t.me/WEB3_AGGREGATOR/423054",
+      "quote": "Если б ты купил ZEC год назад на $1.000, то сейчас это было бы $60.000",
+      "span": [
+        182,
+        252
+      ],
+      "publication_id": "telegram:15:423054"
+    },
+    {
+      "id": "telegram:9:1039055#s0",
+      "url": "https://t.me/marketfeed/1039055",
+      "quote": "ZCASH HOLDERS OVERWHELMINGLY BACK FASTER TRANSACTIONS AND BITCOIN-STYLE HALVINGS",
+      "span": [
+        0,
+        80
+      ],
+      "publication_id": "telegram:9:1039055"
+    },
+    {
+      "id": "telegram:12:4864#s11",
+      "url": "https://t.me/Defiscamcheck/4864",
+      "quote": "На SOL около года появились забридженные токены крупных блокчейнов-проектов / ZEC, HYPE, TAO",
+      "span": [
+        1074,
+        1166
+      ],
+      "publication_id": "telegram:12:4864"
+    },
+    {
+      "id": "telegram:12:4864#s14",
+      "url": "https://t.me/Defiscamcheck/4864",
+      "quote": "Торгуешь и держишь ZCAT - получаешь ZEC, BTC мем -> получаешь wBTC и т д.",
+      "span": [
+        1522,
+        1595
+      ],
+      "publication_id": "telegram:12:4864"
+    },
+    {
+      "id": "telegram:12:4864#s19",
+      "url": "https://t.me/Defiscamcheck/4864",
+      "quote": "Мета временно сместилась в СОЛ экосистеме. Ходят слухи, что такой взлет был поддержан тайным бидом от Solana Foundation - для которых развитие торговли акциями/ спот токенами (Hype,Zec, WbTC, TAO) в СОЛ блокчейне является одним из способов обелиться / отделившись от стереотипа, что SOL только для мемов.",
+      "span": [
+        1837,
+        2141
+      ],
+      "publication_id": "telegram:12:4864"
+    },
+    {
+      "id": "telegram:15:422763#s11",
+      "url": "https://t.me/WEB3_AGGREGATOR/422763",
+      "quote": "На SOL около года появились забридженные токены крупных блокчейнов-проектов / ZEC, HYPE, TAO",
+      "span": [
+        1074,
+        1166
+      ],
+      "publication_id": "telegram:15:422763"
+    },
+    {
+      "id": "telegram:15:422763#s14",
+      "url": "https://t.me/WEB3_AGGREGATOR/422763",
+      "quote": "Торгуешь и держишь ZCAT - получаешь ZEC, BTC мем -> получаешь wBTC и т д.",
+      "span": [
+        1522,
+        1595
+      ],
+      "publication_id": "telegram:15:422763"
+    },
+    {
+      "id": "telegram:15:422763#s19",
+      "url": "https://t.me/WEB3_AGGREGATOR/422763",
+      "quote": "Мета временно сместилась в СОЛ экосистеме. Ходят слухи, что такой взлет был поддержан тайным бидом от Solana Foundation - для которых развитие торговли акциями/ спот токенами (Hype,Zec, WbTC, TAO) в СОЛ блокчейне является одним из способов обелиться / отделившись от стереотипа, что SOL только для мемов.",
+      "span": [
+        1837,
+        2141
+      ],
+      "publication_id": "telegram:15:422763"
+    },
+    {
+      "id": "telegram:1:7130#s43",
+      "url": "https://t.me/whitelist1/7130",
+      "quote": "Zec Punks:",
+      "span": [
+        1677,
+        1687
+      ],
+      "publication_id": "telegram:1:7130"
+    },
+    {
+      "id": "telegram:1:7130#s44",
+      "url": "https://t.me/whitelist1/7130",
+      "quote": "• 1,555 панков на Zcash;",
+      "span": [
+        1689,
+        1713
+      ],
+      "publication_id": "telegram:1:7130"
+    },
+    {
+      "id": "telegram:15:422836#s0",
+      "url": "https://t.me/WEB3_AGGREGATOR/422836",
+      "quote": "0:00:00 Приветствие: Crypto Lamer и gopfan в одном выпуске\n0:02:27 Кто такой gopfan и как он попал на предикшн-маркеты\n0:10:10 С долгов до миллионов: погода, потом Трамп против Харрис\n0:12:16 Чем профи отличается от ритейла на выборах\n0:17:58 Ультраправых всегда переоценивают: Португалия и мэр Лос-Анджелеса\n0:20:55 Почему первые большие деньги пришли с погоды\n0:22:34 Kalshi против Polymarket: кто впереди и почему\n0:27:27 Интерфейс Polymarket и семья Трампа в капитале\n0:31:29 Preddy и скины поверх Polymarket: почему gopfan ими не пользуется\n0:34:48 Polymarket под нагрузкой на ЧМ и переписывание на Rust\n0:37:25 Предикшены на Hyperliquid: есть ли шансы\n0:39:03 Топ-2 маркетмейкер на ЧМ и награды от Monarch Markets\n0:44:17 Канал gopfan и выборы в Бразилии: Лула против Болсонару\n0:51:27 Промежуточные выборы в США: палата, сенат 50/50, бензин и Иран\n0:58:24 Почему «невозможные» маркеты дают 12% годовых\n0:59:37 Команда, чаты и рабочий день трейдера на выборах\n1:03:19 Выборы в России: маркет «Единая Россия против 2021» и русский ритейл\n1:07:02 Копитрейдинг: зачем торговать с новых аккаунтов\n1:10:14 Polymarket запустил перпы: зачем и кому это надо\n1:14:26 Инсайд с ужина Extended: кто зарабат",
+      "span": [
+        0,
+        1200
+      ],
+      "publication_id": "telegram:15:422836"
+    },
+    {
+      "id": "telegram:1:7132#s3",
+      "url": "https://t.me/whitelist1/7132",
+      "quote": "Zec punks - минт 15 сентября, 0.015 ZEC. WL форма скоро закрывается.",
+      "span": [
+        462,
+        530
+      ],
+      "publication_id": "telegram:1:7132"
+    },
+    {
+      "id": "telegram:15:422896#s0",
+      "url": "https://t.me/WEB3_AGGREGATOR/422896",
+      "quote": "За экосистему ZEC, Inkchain, robinhood, рынок итд.",
+      "span": [
+        0,
+        50
+      ],
+      "publication_id": "telegram:15:422896"
+    },
+    {
+      "id": "telegram:15:422974#s3",
+      "url": "https://t.me/WEB3_AGGREGATOR/422974",
+      "quote": "Но как же $HYPE $ZEC $VVV??? Там десятки иксов уже!",
+      "span": [
+        602,
+        653
+      ],
+      "publication_id": "telegram:15:422974"
+    },
+    {
+      "id": "telegram:15:422974#s6",
+      "url": "https://t.me/WEB3_AGGREGATOR/422974",
+      "quote": "$NEAR (5) - уже вырос х3 ото дна, торгуется на уровне прошлого начала бычки. Попадает в ИИ нарратив и ZEC нарратив",
+      "span": [
+        1303,
+        1417
+      ],
+      "publication_id": "telegram:15:422974"
+    },
+    {
+      "id": "https://t.me/whitelist1/7130?comment=571146",
+      "url": "https://t.me/whitelist1/7130?comment=571146",
+      "quote": "По багз от анвалт кто-то понял механику распределения гарантов? Я примерно понял, что на каждую коллекцию партнёра будет определённое количество спотов, то бишь даже на стадии гара"
+    }
+  ],
+  "spend_usd": 0.0,
+  "numbers_by": "code",
+  "brief_markdown": "# Pulse (news-first): zec, окно 2026-09-09T00:00:00+00:00 – 2026-09-16T06:10:20+00:00\n\n## Коротко\n\n- #ZEC Zcash завершит голосование по составу обновления сети NU7\n- Аукцион рассчитывается в ZEC, но через NEAR Intents можно зайти ETH, SOL, BTC, стейблами и другими активами - система сама конвертирует их в ZEC.\n- 👑 ZCASH – новый король крипторынка? Покупать или не стоит?\n- + подключили ChatGPT Astra 6, Claude Fable 5.1 и GROK 4.6 - топовые нейронки озвучили свои вердикты по Zcash и предложили рассмотреть другие проекты.\n- ❕Исчерпывающий расклад по Zcash (ZEC) 2026 (статья)\n\n## События и заявления\n\n- **👑 ZCASH – новый король крипторынка? Покупать или не стоит?**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 0, неизвестное происхождение 1.\n  - https://t.me/crypto_hd/31368: «👑 ZCASH – новый король крипторынка? Покупать или не стоит?»\n  - https://t.me/crypto_hd/31368: «ZEC вырос в 50 раз с 2025 года. В чем же секрет успеха? Есть ли смысл покупать монету во время текущего роста или нет?»\n- **+ подключили ChatGPT Astra 6, Claude Fable 5.1 и GROK 4.6 - топовые нейронки озвучили свои вердикты по Zcash и предложили рассмотреть другие проекты.**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 0, неизвестное происхождение 1.\n  - https://t.me/crypto_hd/31368: «+ подключили ChatGPT Astra 6, Claude Fable 5.1 и GROK 4.6 - топовые нейронки озвучили свои вердикты по Zcash и предложили рассмотреть другие проекты.»\n- **❕Исчерпывающий расклад по Zcash (ZEC) 2026 (статья)**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 0, неизвестное происхождение 1.\n  - https://t.me/crypto_hd/31375: «❕Исчерпывающий расклад по Zcash (ZEC) 2026 (статья)»\n- **#ZEC Zcash завершит голосование по составу обновления сети NU7**\n  публикации 3, каналы 2, известные авторы 0, первоисточники 0, перепечатки 3, неизвестное происхождение 0.\n  - https://t.me/cryptoattack24/96700: «#ZEC Zcash завершит голосование по составу обновления сети NU7»\n  - https://t.me/WEB3_AGGREGATOR/422881: «#ZEC Zcash завершит голосование по составу обновления сети NU7»\n  - https://t.me/WEB3_AGGREGATOR/422902: «#ZEC Zcash завершит голосование по составу обновления сети NU7»\n- **Freemint on ZEC 11 spots.**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/422904: «Freemint on ZEC 11 spots.»\n- **Я прям делаю еще ставку на разгон нфт меты во круг zcash, там тож движ интересный начинается**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/422977: «Я прям делаю еще ставку на разгон нфт меты во круг zcash, там тож движ интересный начинается»\n- **Сегодня еще минт панков на ZEC**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/423011: «Сегодня еще минт панков на ZEC»\n- **нужен кошелек ноир, ZEC, акцион 48 часов.**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/WEB3_AGGREGATOR/423037: «нужен кошелек ноир, ZEC, акцион 48 часов.»\n- **Аукцион рассчитывается в ZEC, но через NEAR Intents можно зайти ETH, SOL, BTC, стейблами и другими активами - система сама конвертирует их в ZEC.**\n  публикации 2, каналы 2, известные авторы 0, первоисточники 0, перепечатки 2, неизвестное происхождение 0.\n  - https://t.me/moni_talks/12225: «Аукцион рассчитывается в ZEC, но через NEAR Intents можно зайти ETH, SOL, BTC, стейблами и другими активами - система сама конвертирует их в ZEC.»\n  - https://t.me/WEB3_AGGREGATOR/423051: «Аукцион рассчитывается в ZEC, но через NEAR Intents можно зайти ETH, SOL, BTC, стейблами и другими активами - система сама конвертирует их в ZEC.»\n- **Про экосистему Zcash**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 0, неизвестное происхождение 1.\n  - https://t.me/WEB3_AGGREGATOR/423054: «Про экосистему Zcash»\n- **ZEC-paired**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 0, неизвестное происхождение 1.\n  - https://t.me/WEB3_AGGREGATOR/423054: «ZEC-paired»\n- **ZEC**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 0, неизвестное происхождение 1.\n  - https://t.me/WEB3_AGGREGATOR/423054: «ZEC»\n  - https://t.me/WEB3_AGGREGATOR/423054: «ZEC»\n- **Если б ты купил ZEC год назад на $1.000, то сейчас это было бы $60.000**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 0, неизвестное происхождение 1.\n  - https://t.me/WEB3_AGGREGATOR/423054: «Если б ты купил ZEC год назад на $1.000, то сейчас это было бы $60.000»\n- **ZCASH HOLDERS OVERWHELMINGLY BACK FASTER TRANSACTIONS AND BITCOIN-STYLE HALVINGS**\n  публикации 1, каналы 1, известные авторы 0, первоисточники 0, перепечатки 1, неизвестное происхождение 0.\n  - https://t.me/marketfeed/1039055: «ZCASH HOLDERS OVERWHELMINGLY BACK FASTER TRANSACTIONS AND BITCOIN-STYLE HALVINGS»\n\n## Кто распространяет информацию и какие позиции\n\nОтдельных авторских позиций сверх событий не выделено.\n\n## Вопросы, аргументы и опыт участников\n\n- По багз от анвалт кто-то понял механику распределения гарантов? Я примерно понял, что на каждую коллекцию партнёра будет определённое количество спотов, то бишь даже на стадии гаранта будет фкфс. Но так ли это на самом деле?\n  основание: предмет реплики — сторонний сервис/коллекция экосистемы, не событие темы\n  https://t.me/whitelist1/7130?comment=571146\n\n## Изменения относительно предыдущего периода\n\n- Появившиеся события: 14.\n- Исчезнувшие события: 0.\n- Изменение охвата источников: +18 / −0 каналов.\n- Комментарии в текущем окне: 699.\n\n## Охват и ограничения\n\n- Публикации 6560, комментарии 699, каналы 18.\n- Режим publication_replay: discovered_at в снимке отсутствует, «впервые системой» не заявляется.\n- Роль источника unknown: в базе нет редакционного реестра.\n- Неизвестные авторы не объединяются.\n- Отсечено после cutoff 2026-09-16T06:10:20+00:00: 8415.\n\n## Основания\n\n- https://t.me/crypto_hd/31368: «👑 ZCASH – новый король крипторынка? Покупать или не стоит?»\n- https://t.me/crypto_hd/31368: «ZEC вырос в 50 раз с 2025 года. В чем же секрет успеха? Есть ли смысл покупать монету во время текущего роста или нет?»\n- https://t.me/crypto_hd/31368: «+ подключили ChatGPT Astra 6, Claude Fable 5.1 и GROK 4.6 - топовые нейронки озвучили свои вердикты по Zcash и предложили рассмотреть другие проекты.»\n- https://t.me/crypto_hd/31375: «❕Исчерпывающий расклад по Zcash (ZEC) 2026 (статья)»\n- https://t.me/cryptoattack24/96700: «#ZEC Zcash завершит голосование по составу обновления сети NU7»\n- https://t.me/WEB3_AGGREGATOR/422881: «#ZEC Zcash завершит голосование по составу обновления сети NU7»\n- https://t.me/WEB3_AGGREGATOR/422902: «#ZEC Zcash завершит голосование по составу обновления сети NU7»\n- https://t.me/WEB3_AGGREGATOR/422904: «Freemint on ZEC 11 spots.»\n- https://t.me/WEB3_AGGREGATOR/422977: «Я прям делаю еще ставку на разгон нфт меты во круг zcash, там тож движ интересный начинается»\n- https://t.me/WEB3_AGGREGATOR/423011: «Сегодня еще минт панков на ZEC»\n- https://t.me/WEB3_AGGREGATOR/423037: «нужен кошелек ноир, ZEC, акцион 48 часов.»\n- https://t.me/moni_talks/12225: «Аукцион рассчитывается в ZEC, но через NEAR Intents можно зайти ETH, SOL, BTC, стейблами и другими активами - система сама конвертирует их в ZEC.»\n- https://t.me/WEB3_AGGREGATOR/423051: «Аукцион рассчитывается в ZEC, но через NEAR Intents можно зайти ETH, SOL, BTC, стейблами и другими активами - система сама конвертирует их в ZEC.»\n- https://t.me/WEB3_AGGREGATOR/423054: «Про экосистему Zcash»\n- https://t.me/WEB3_AGGREGATOR/423054: «ZEC-paired»\n- https://t.me/WEB3_AGGREGATOR/423054: «ZEC»\n- https://t.me/WEB3_AGGREGATOR/423054: «Если б ты купил ZEC год назад на $1.000, то сейчас это было бы $60.000»\n- https://t.me/marketfeed/1039055: «ZCASH HOLDERS OVERWHELMINGLY BACK FASTER TRANSACTIONS AND BITCOIN-STYLE HALVINGS»\n- https://t.me/Defiscamcheck/4864: «На SOL около года появились забридженные токены крупных блокчейнов-проектов / ZEC, HYPE, TAO»\n- https://t.me/Defiscamcheck/4864: «Торгуешь и держишь ZCAT - получаешь ZEC, BTC мем -> получаешь wBTC и т д.»\n",
+  "model": "deepseek/deepseek-v4-flash",
+  "llm": {
+    "calls": 0,
+    "cache_hits": 30,
+    "spent_usd": 0.0,
+    "errors": []
+  }
+}

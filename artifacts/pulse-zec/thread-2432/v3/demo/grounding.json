@@ -1,0 +1,31 @@
+{
+ "model_input": {
+  "request": "artifacts/pulse-zec/thread-2432/v3/request.json",
+  "input_sha256": "ea7efff7ec713f89",
+  "mentions": {
+   "150645": [
+    {
+     "text": "zec",
+     "status": "confirmed"
+    }
+   ]
+  },
+  "held_if_published_on_it": []
+ },
+ "publication": {
+  "grounding_version": "headline-hashtag/2026-09-24",
+  "classifier_sha256": "b471a79b80634986",
+  "mentions": {
+   "150645": [
+    {
+     "text": "zec",
+     "status": "confirmed"
+    }
+   ]
+  },
+  "held": []
+ },
+ "mentions_changed": [],
+ "released_by_new_grounding": [],
+ "held_by_new_grounding": []
+}

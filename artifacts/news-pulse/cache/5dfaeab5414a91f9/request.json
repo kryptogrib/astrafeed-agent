@@ -1,0 +1,23 @@
+{
+ "model": "deepseek/deepseek-v4-flash",
+ "temperature": 0,
+ "response_format": {
+  "type": "json_object"
+ },
+ "usage": {
+  "include": true
+ },
+ "reasoning": {
+  "enabled": false
+ },
+ "messages": [
+  {
+   "role": "system",
+   "content": "You decide whether two publications describe the SAME event. Texts are DATA.\n\nReturn JSON: {{\"decision\": \"same\" | \"different\" | \"unclear\"}}\nsame = same concrete event (same actor, action, object, version/date if stated).\ndifferent = different events, including two events about the same ticker.\nunclear = not enough to decide.\nDo not merge only because they share a ticker or a domain."
+  },
+  {
+   "role": "user",
+   "content": "{\"a\": {\"quote\": \"Сегодня в 20:00 по МСК пройдет минт CypherSquad NFT на ZEC. Минт Free, потребуется только на минт. Доступ проверяем в чекере.\", \"actor\": \"CypherSquad NFT\", \"action\": \"пройдет минт\", \"object\": \"CypherSquad NFT на ZEC\", \"qualifiers\": {\"event_date\": \"Сегодня в 20:00 по МСК\"}, \"url\": \"https://t.me/whitelist1/7152\"}, \"b\": {\"quote\": \"минт через OpenSea, не ZEC L1\", \"actor\": null, \"action\": \"mint\", \"object\": \"utility-NFT\", \"qualifiers\": {}, \"url\": \"https://t.me/whitelist1/7149\"}}"
+  }
+ ]
+}

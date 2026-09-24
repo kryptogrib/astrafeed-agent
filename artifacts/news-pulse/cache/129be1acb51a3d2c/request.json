@@ -1,0 +1,17 @@
+{
+ "segments": [
+  {
+   "id": "telegram:15:423150#s0",
+   "text": "Arc запущен\n\n",
+   "mentions": [
+    {
+     "text": "Arc",
+     "status": "confirmed"
+    }
+   ],
+   "kind_hint": "post",
+   "url": "https://t.me/WEB3_AGGREGATOR/423150",
+   "time": "2026-09-16T20:22:49+00:00"
+  }
+ ]
+}

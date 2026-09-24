@@ -1,0 +1,18 @@
+{
+ "a": {
+  "quote": "🟢 Почему в мейннет Zcash нет NFT?",
+  "actor": "Zcash",
+  "action": "question_nft_absence",
+  "object": "mainnet of Zcash",
+  "qualifiers": {},
+  "url": "https://t.me/WEB3_AGGREGATOR/423606"
+ },
+ "b": {
+  "quote": "Zcash хайпует, но NFT в мейннет нет. Разбираемся, кто и за что платит",
+  "actor": "Zcash",
+  "action": "hype",
+  "object": "NFT",
+  "qualifiers": {},
+  "url": "https://t.me/WEB3_AGGREGATOR/423606"
+ }
+}

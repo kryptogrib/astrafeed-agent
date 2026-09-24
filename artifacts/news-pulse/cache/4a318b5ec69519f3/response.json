@@ -1,0 +1,32 @@
+{
+ "choices": [
+  {
+   "message": {
+    "content": "{\"labels\": [{\"id\": \"telegram:15:423385#s15\", \"kind\": \"promo_service\", \"actor\": null, \"action\": \"mention\", \"object\": \"ValdeMURRR.eth\", \"qualifiers\": {}, \"origin\": \"unknown\", \"source_role\": \"unknown\", \"verification_status\": \"unverified\", \"quote\": \"🗿 GS Alpha: ValdeMURRR.eth | Чат | Щитпост\", \"span\": [0, 44]}]}"
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 488,
+  "completion_tokens": 232,
+  "total_tokens": 720,
+  "cost": 5.6906752e-05,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 256,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 5.6906752e-05,
+   "upstream_inference_prompt_cost": 2.1568512e-05,
+   "upstream_inference_completions_cost": 3.533824e-05
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

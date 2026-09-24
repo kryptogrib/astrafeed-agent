@@ -1,0 +1,25 @@
+{
+ "a": {
+  "quote": "⛓️Arc - L1-сеть от Circle с $222M инвестиций ориентированная на USDC, запустит майннет 16 сентября.",
+  "actor": "Arc",
+  "action": "запустит майннет",
+  "object": "майннет",
+  "qualifiers": {
+   "event_date": "16 сентября",
+   "place": "L1-сеть от Circle",
+   "counterparty": "Circle"
+  },
+  "url": "https://t.me/WEB3_AGGREGATOR/422875"
+ },
+ "b": {
+  "quote": "Circle 16 сентября запускает Arc - собственный L1 под стейблкоин-финансы. USDC перестаёт быть просто токеном внутри чужих сетей и становится основой своей экосистемы.",
+  "actor": "Circle",
+  "action": "launch",
+  "object": "Arc",
+  "qualifiers": {
+   "event_date": "16 сентября",
+   "version": "собственный L1 под стейблкоин-финансы"
+  },
+  "url": "https://t.me/Slavik_investor_updates/6918"
+ }
+}

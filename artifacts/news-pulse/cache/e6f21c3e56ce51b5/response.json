@@ -1,0 +1,46 @@
+{
+ "id": "gen-1790193622-WHsOKqgJXNubnZ6Jc5kZ",
+ "object": "chat.completion",
+ "created": 1790193622,
+ "model": "deepseek/deepseek-v4-flash",
+ "provider": "Venice",
+ "system_fingerprint": null,
+ "service_tier": null,
+ "choices": [
+  {
+   "index": 0,
+   "logprobs": null,
+   "finish_reason": "stop",
+   "native_finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "content": "{\"labels\": [{\"id\": \"telegram:18:31487#s2\", \"kind\": \"author_position\", \"actor\": null, \"action\": \"opine\", \"object\": \"ZEC\", \"qualifiers\": {}, \"origin\": \"own\", \"source_role\": \"author\", \"verification_status\": \"unverified\", \"quote\": \"Часть роста ZEC, как я думаю, обусловлена страхом, что Биткоин стал слишком «закостенелым». Я говорю это как человек, который любит Биткоин.\", \"span\": [0, 131]}, {\"id\": \"telegram:15:423229#s3\", \"kind\": \"author_position\", \"actor\": null, \"action\": \"opine\", \"object\": \"ZEC\", \"qualifiers\": {}, \"origin\": \"own\", \"source_role\": \"author\", \"verification_status\": \"unverified\", \"quote\": \"$ZEC Альфа актив новая фин элита, крче defi развивается, nft развивается, бомжи уже не купят, ибо дорого, крч это бтс для молодых, плюс Уинклвосы, выкупают zec на компанию, как бит-майн баит эфирчик\", \"span\": [0, 199]}, {\"id\": \"telegram:15:423236#s2\", \"kind\": \"event\", \"actor\": \"ZEC\", \"action\": \"reach_all_time_high\", \"object\": null, \"qualifiers\": {}, \"origin\": \"own\", \"source_role\": \"author\", \"verification_status\": \"unverified\", \"quote\": \"А тут вдобавок еще $ZEC ATH пишет...\", \"span\": [0, 38]}, {\"id\": \"telegram:6:2426#s0\", \"kind\": \"event\", \"actor\": \"ZEC\", \"action\": \"rank\", \"object\": null, \"qualifiers\": {\"position\": \"9\"}, \"origin\": \"own\", \"source_role\": \"author\", \"verification_status\": \"unverified\", \"quote\": \"ZEC уже 9 позиция в ТОПе крипты\", \"span\": [0, 32]}, {\"id\": \"telegram:20:49106#s0\", \"kind\": \"event\", \"actor\": \"Leo\", \"action\": \"profit\", \"object\": \"ZEC\", \"qualifiers\": {\"amount\": \"1.6m\"}, \"origin\": \"own\", \"source_role\": \"author\", \"verification_status\": \"unverified\", \"quote\": \"Leo is up 1.6m from his ZEC long and bought more of $worth and I know i sold the bottom like a chud so i reaped here\", \"span\": [0, 117]}, {\"id\": \"telegram:18:31490#s0\", \"kind\": \"event\", \"actor\": \"Polymarket users\", \"action\": \"predict\", \"object\": \"ZEC\", \"qualifiers\": {\"target_price\": \"2000\", \"timeframe\": \"end of 2026\"}, \"origin\": \"retelling\", \"source_role\": \"editorial\", \"verification_status\": \"source_statement\", \"quote\": \"Лудоманы с Polymarket ожидают #ZEC выше $2000 до конца 2026 года.\", \"span\": [0, 66]}, {\"id\": \"telegram:15:423248#s0\", \"kind\": \"event\", \"actor\": null, \"action\": \"list\", \"object\": \"NFT on ZEC\", \"qualifiers\": {}, \"origin\": \"own\", \"source_role\": \"author\", \"verification_status\": \"unverified\", \"quote\": \"Списочек NFT на $ZEC\", \"span\": [0, 20]}, {\"id\": \"telegram:15:423250#s5\", \"kind\": \"event\", \"actor\": null, \"action\": \"pump\", \"object\": \"ZEC\", \"qualifiers\": {}, \"origin\": \"own\", \"source_role\": \"author\", \"verification_status\": \"unverified\", \"quote\": \"Памп #ZEC\", \"span\": [0, 10]}, {\"id\": \"telegram:18:31493#s1\", \"kind\": \"author_position\", \"actor\": null, \"action\": \"opine\", \"object\": \"ZEC\", \"qualifiers\": {\"pattern\": \"cup and handle\", \"target\": \"3100\"}, \"origin\": \"own\", \"source_role\": \"author\", \"verification_status\": \"unverified\", \"quote\": \"Идея с отработкой классической фигуры ТА «чашка с ручкой» на ZEC (с целью в $3100+).\", \"span\": [0, 82]}, {\"id\": \"telegram:18:31494#s1\", \"kind\": \"event\", \"actor\": \"Zcash\", \"action\": \"rise\", \"object\": null, \"qualifiers\": {}, \"origin\": \"own\", \"source_role\": \"editorial\", \"verification_status\": \"unverified\", \"quote\": \"Рост Zcash (читать)\", \"span\": [0, 20]}, {\"id\": \"telegram:18:31494#s8\", \"kind\": \"event\", \"actor\": \"Zcash\", \"action\": \"accelerate\", \"object\": null, \"qualifiers\": {\"factor\": \"3x\"}, \"origin\": \"own\", \"source_role\": \"editorial\", \"verification_status\": \"unverified\", \"quote\": \"Zcash ускорят в 3 раза (читать)\", \"span\": [0, 30]}, {\"id\": \"telegram:18:31494#s11\", \"kind\": \"event\", \"actor\": \"CEO StarkWare\", \"action\": \"comment\", \"object\": \"ZEC\", \"qualifiers\": {}, \"origin\": \"own\", \"source_role\": \"editorial\", \"verification_status\": \"unverified\", \"quote\": \"CEO StarkWare о ZEC (читать)\", \"span\": [0, 27]}]}",
+    "refusal": null,
+    "reasoning": null
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 1692,
+  "completion_tokens": 1344,
+  "total_tokens": 3036,
+  "cost": 0.0004221672,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.0004221672,
+   "upstream_inference_prompt_cost": 0.0001634472,
+   "upstream_inference_completions_cost": 0.00025872
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

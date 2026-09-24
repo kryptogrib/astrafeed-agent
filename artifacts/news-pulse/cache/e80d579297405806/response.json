@@ -1,0 +1,32 @@
+{
+ "choices": [
+  {
+   "message": {
+    "content": "{\"labels\": [{\"id\": \"telegram:15:423204#s13\", \"kind\": \"promo_service\", \"actor\": null, \"action\": \"pay order\", \"object\": \"ZEC\", \"qualifiers\": {\"place\": \"Hyperliquid or Rubic.exchange\"}, \"origin\": \"own\", \"source_role\": \"author\", \"verification_status\": \"unverified\", \"quote\": \"3. Оплатить вашу заявку либо отправив спотовый ZEC с Hyperliquid, либо свопнув любую валюту через https://app.rubic.exchange/\", \"span\": [0, 130]}]}"
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 1794,
+  "completion_tokens": 1687,
+  "total_tokens": 3481,
+  "cost": 0.000446688,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 256,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.000446688,
+   "upstream_inference_prompt_cost": 0.000143028,
+   "upstream_inference_completions_cost": 0.00030366
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

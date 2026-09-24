@@ -1,0 +1,46 @@
+{
+ "id": "gen-1790193948-IIr8mIji0cVKNjgRxvMa",
+ "object": "chat.completion",
+ "created": 1790193948,
+ "model": "deepseek/deepseek-v4-flash",
+ "provider": "Venice",
+ "system_fingerprint": null,
+ "service_tier": null,
+ "choices": [
+  {
+   "index": 0,
+   "logprobs": null,
+   "finish_reason": "stop",
+   "native_finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "content": "{\"labels\": [{\"id\": \"telegram:15:422763#s9\", \"kind\": \"event\", \"actor\": null, \"action\": \"bridged tokens exist\", \"object\": \"ZEC\", \"qualifiers\": {\"version\": \"about a year\", \"place\": \"SOL\"}, \"origin\": \"retelling\", \"source_role\": \"editorial\", \"verification_status\": \"unverified\", \"quote\": \"На SOL около года появились забридженные токены крупных блокчейнов-проектов / ZEC, HYPE, TAO\", \"span\": [0, 88]}, {\"id\": \"telegram:15:422763#s12\", \"kind\": \"event\", \"actor\": \"holder of ZCAT\", \"action\": \"receives\", \"object\": \"ZEC\", \"qualifiers\": {}, \"origin\": \"retelling\", \"source_role\": \"editorial\", \"verification_status\": \"unverified\", \"quote\": \"Торгуешь и держишь ZCAT - получаешь ZEC, BTC мем -> получаешь wBTC и т д.\", \"span\": [0, 72]}, {\"id\": \"telegram:15:422763#s14\", \"kind\": \"event\", \"actor\": \"ZCAT holders\", \"action\": \"paid\", \"object\": \"4433 ZEC\", \"qualifiers\": {\"event_date\": \"past\", \"counterparty\": \"ZCAT\"}, \"origin\": \"retelling\", \"source_role\": \"editorial\", \"verification_status\": \"unverified\", \"quote\": \"ZCAT на топе был 150М+, холдерам было выплачено 4433 ZEC на 4.79М$\", \"span\": [0, 68]}, {\"id\": \"telegram:15:422763#s17\", \"kind\": \"event\", \"actor\": \"Solana Foundation\", \"action\": \"rumored to have supported rise\", \"object\": \"Zec\", \"qualifiers\": {\"place\": \"SOL ecosystem\"}, \"origin\": \"retelling\", \"source_role\": \"editorial\", \"verification_status\": \"unverified\", \"quote\": \"Ходят слухи, что такой взлет был поддержан тайным бидом от Solana Foundation - для которых развитие торговли акциями/ спот токенами (Hype,Zec, WbTC, TAO) в СОЛ блокчейне является одним из способов обелиться / отделившись от стереотипа, что SOL только для мемов.\", \"span\": [0, 280]}, {\"id\": \"telegram:1:7130#s14\", \"kind\": \"event\", \"actor\": null, \"action\": \"collection exists\", \"object\": \"Zec Punks\", \"qualifiers\": {\"version\": \"1,555 punks on Zcash\"}, \"origin\": \"retelling\", \"source_role\": \"editorial\", \"verification_status\": \"unverified\", \"quote\": \"Zec Punks: \\n• 1,555 панков на Zcash; \\n• Подключаем X и выполняем задания на сайте.\", \"span\": [0, 82]}, {\"id\": \"telegram:15:422836#s0\", \"kind\": \"event\", \"actor\": null, \"action\": \"podcast episode\", \"object\": \"Crypto Lamer and gopfan\", \"qualifiers\": {}, \"origin\": \"own\", \"source_role\": \"author\", \"verification_status\": \"unverified\", \"quote\": \"0:00:00 Приветствие: Crypto Lamer и gopfan в одном выпуске\", \"span\": [0, 55]}, {\"id\": \"telegram:11:96700#s1\", \"kind\": \"event\", \"actor\": \"Zcash\", \"action\": \"will complete voting on NU7 upgrade\", \"object\": \"ZEC\", \"qualifiers\": {\"event_date\": \"Monday, September 14\"}, \"origin\": \"retelling\", \"source_role\": \"editorial\", \"verification_status\": \"unverified\", \"quote\": \"🙋‍♂️ #ZEC Zcash завершит голосование по составу обновления сети NU7\", \"span\": [0, 66]}, {\"id\": \"telegram:1:7132#s3\", \"kind\": \"event\", \"actor\": null, \"action\": \"mint\", \"object\": \"Zec punks\", \"qualifiers\": {\"event_date\": \"September 15\", \"place\": \"0.015 ZEC\"}, \"origin\": \"retelling\", \"source_role\": \"editorial\", \"verification_status\": \"unverified\", \"quote\": \"Zec punks - минт 15 сентября, 0.015 ZEC. WL форма скоро закрывается.\", \"span\": [0, 72]}, {\"id\": \"telegram:15:422896#s0\", \"kind\": \"event\", \"actor\": null, \"action\": \"discussion about ecosystem\", \"object\": \"ZEC\", \"qualifiers\": {}, \"origin\": \"own\", \"source_role\": \"author\", \"verification_status\": \"unverified\", \"quote\": \"За экосистему ZEC, Inkchain, robinhood, рынок итд.\", \"span\": [0, 50]}, {\"id\": \"telegram:15:422902#s8\", \"kind\": \"event\", \"actor\": \"Zcash\", \"action\": \"will complete voting on NU7 upgrade\", \"object\": \"ZEC\", \"qualifiers\": {\"event_date\": \"Monday, September 14\"}, \"origin\": \"retelling\", \"source_role\": \"editorial\", \"verification_status\": \"unverified\", \"quote\": \"🙋‍♂️ #ZEC Zcash завершит голосование по составу обновления сети NU7\", \"span\": [0, 66]}, {\"id\": \"telegram:15:422904#s4\", \"kind\": \"event\", \"actor\": \"Zec Punks\", \"action\": \"supposed to launch\", \"object\": \"ZEC\", \"qualifiers\": {\"event_date\": \"next few days\"}, \"origin\": \"retelling\", \"source_role\": \"editorial\", \"verification_status\": \"unverified\", \"quote\": \"Zec Punks is supposed to launch in the next few days, and I think it’s going to be a rug too.\", \"span\": [0, 100]}, {\"id\": \"telegram:15:422974#s3\", \"kind\": \"event\", \"actor\": null, \"action\": \"price increase\", \"object\": \"ZEC\", \"qualifiers\": {}, \"origin\": \"own\", \"source_role\": \"author\", \"verification_status\": \"unverified\", \"quote\": \"Но как же $HYPE $ZEC $VVV??? Там десятки иксов уже!\", \"span\": [0, 55]}]}",
+    "refusal": null,
+    "reasoning": null
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 2771,
+  "completion_tokens": 1511,
+  "total_tokens": 4282,
+  "cost": 0.0005585461,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.0005585461,
+   "upstream_inference_prompt_cost": 0.0002676786,
+   "upstream_inference_completions_cost": 0.0002908675
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

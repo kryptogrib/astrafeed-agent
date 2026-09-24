@@ -1,0 +1,21 @@
+{
+ "a": {
+  "quote": "⏺️Первая: платёж плюс запись. Отправляешь ZEC с мемо, площадка пишет у себя в индексе, что идентификатор теперь твой. Ончейн только факт платежа.",
+  "actor": null,
+  "action": "describe_method",
+  "object": "payment with memo",
+  "qualifiers": {},
+  "url": "https://t.me/WEB3_AGGREGATOR/423606"
+ },
+ "b": {
+  "quote": "$ZCAT это токен на Solana, который платит холдерам в ZEC, к NFT на Zcash отношения не имеет. BITFOOTS минтится через Zcash, а инскрипцию отдаёт на биткоине через Ordinals. Надпись Zcash NFT не значит, что актив лежит в Zcash.",
+  "actor": "$ZCAT",
+  "action": "pay",
+  "object": "holders",
+  "qualifiers": {
+   "version": "ZEC",
+   "counterparty": "Solana"
+  },
+  "url": "https://t.me/WEB3_AGGREGATOR/423606"
+ }
+}

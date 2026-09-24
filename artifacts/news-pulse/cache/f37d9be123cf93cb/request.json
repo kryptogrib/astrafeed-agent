@@ -1,0 +1,25 @@
+{
+ "a": {
+  "quote": "😇 Вчера запустился новый блокчейн под названием ARC, где уже появляются первые проекты, активности мемы и т.п.",
+  "actor": "ARC",
+  "action": "запустился",
+  "object": "новый блокчейн",
+  "qualifiers": {
+   "time": "вчера"
+  },
+  "url": "https://t.me/WEB3_AGGREGATOR/423219"
+ },
+ "b": {
+  "quote": "RSoft Agentic Bank выиграл онлайн-трек хакатона LabLab x Arc с банком, клиентами которого были боты.",
+  "actor": "RSoft Agentic Bank",
+  "action": "won",
+  "object": "hackathon track",
+  "qualifiers": {
+   "version": null,
+   "event_date": "2026-09-16",
+   "place": "LabLab x Arc",
+   "counterparty": null
+  },
+  "url": "https://t.me/WEB3_AGGREGATOR/423105"
+ }
+}

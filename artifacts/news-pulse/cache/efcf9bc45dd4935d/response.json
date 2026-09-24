@@ -1,0 +1,32 @@
+{
+ "choices": [
+  {
+   "message": {
+    "content": "{\"labels\": [{\"id\": \"telegram:15:422853#s2\", \"kind\": \"event\", \"actor\": null, \"action\": \"comparison\", \"object\": \"Ethereum\", \"qualifiers\": {\"event_date\": null, \"place\": null, \"counterparty\": null, \"version\": null}, \"origin\": \"own\", \"source_role\": \"editorial\", \"verification_status\": \"unverified\", \"quote\": \"Как минимум, отличие от Ethereum, Base и Solana здесь есть. Газ платится в USDC, а не в волатильном токене, поэтому комиссия не скачет вместе с ценой газа. Финальность детерминированная, то есть после подтверждения блока отката уже не будет и ждать двенадцать блоков не нужно. Хоть валидаторы и выбраны из узкого списка, деплоить контракты может кто угодно.\", \"span\": [0, 370]}]}"
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 2046,
+  "completion_tokens": 1782,
+  "total_tokens": 3828,
+  "cost": 0.000411660032,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 256,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.000411660032,
+   "upstream_inference_prompt_cost": 0.000140225792,
+   "upstream_inference_completions_cost": 0.00027143424
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

@@ -1,0 +1,32 @@
+{
+ "choices": [
+  {
+   "message": {
+    "content": "{\"labels\": [{\"id\": \"telegram:15:423324#s9\", \"kind\": \"event\", \"actor\": \"Ансем\", \"action\": \"топит\", \"object\": \"$NET\", \"qualifiers\": {}, \"origin\": \"unknown\", \"source_role\": \"unknown\", \"verification_status\": \"unverified\", \"quote\": \"🤪 $NET - По сути, казиныч, за который топит Ансем, а у него попадание почти во все за последний год - VVV, ZEC, HYPE - все на ath. Обещают сейчс за стейкинг $NET 10.000% apy\", \"span\": [0, 155]}]}"
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 1948,
+  "completion_tokens": 1858,
+  "total_tokens": 3806,
+  "cost": 0.0004400928,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.0004400928,
+   "upstream_inference_prompt_cost": 0.0001513596,
+   "upstream_inference_completions_cost": 0.0002887332
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

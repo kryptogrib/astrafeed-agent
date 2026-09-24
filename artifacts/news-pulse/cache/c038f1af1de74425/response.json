@@ -1,0 +1,32 @@
+{
+ "choices": [
+  {
+   "message": {
+    "content": "{\"labels\": [{\"id\": \"telegram:15:423471#s1\", \"kind\": \"event\", \"actor\": \"ZecFrogs\", \"action\": \"launched wallet checker\", \"object\": \"ZEC\", \"qualifiers\": {\"version\": null, \"event_date\": \"2026-09-21\", \"place\": null, \"counterparty\": null}, \"origin\": \"retelling\", \"source_role\": \"editorial\", \"verification_status\": \"unverified\", \"topic_role\": \"subject\", \"quote\": \"ZecFrogs запустили чекер кошельков, всего получилось 30к участников из которых было удалено 16к ботов. Минт пройдет сегодня в 20:00 МСК, для участия понадобится 0.007 $ZEC на кошельке\", \"span\": [0, 199]}]}"
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 1912,
+  "completion_tokens": 2235,
+  "total_tokens": 4147,
+  "cost": 0.00148,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.00148,
+   "upstream_inference_prompt_cost": 0.0003630886424722106,
+   "upstream_inference_completions_cost": 0.0011169113575277894
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

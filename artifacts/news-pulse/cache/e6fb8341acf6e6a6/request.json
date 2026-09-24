@@ -1,0 +1,17 @@
+{
+ "segments": [
+  {
+   "id": "telegram:9:1041673#s21",
+   "text": "• Bitcoin firms up — BTC near $81.4K with ETH also modestly higher; DeFi names mixed, with UNI lagging.\n",
+   "mentions": [
+    {
+     "text": "ETH",
+     "status": "confirmed"
+    }
+   ],
+   "kind_hint": "post",
+   "url": "https://t.me/marketfeed/1041673",
+   "time": "2026-09-19T20:30:32+00:00"
+  }
+ ]
+}

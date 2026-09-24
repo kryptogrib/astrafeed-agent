@@ -1,0 +1,25 @@
+{
+ "a": {
+  "quote": "Сегодня (спасибо за поправку @intelligent_ua) кстати мейннет Arc, можно будет бриджить через Jumper.",
+  "actor": null,
+  "action": "launch",
+  "object": "мейннет Arc",
+  "qualifiers": {
+   "event_date": "Сегодня"
+  },
+  "url": "https://t.me/WEB3_AGGREGATOR/423093"
+ },
+ "b": {
+  "quote": "RSoft Agentic Bank выиграл онлайн-трек хакатона LabLab x Arc с банком, клиентами которого были боты.",
+  "actor": "RSoft Agentic Bank",
+  "action": "won",
+  "object": "hackathon track",
+  "qualifiers": {
+   "version": null,
+   "event_date": "2026-09-16",
+   "place": "LabLab x Arc",
+   "counterparty": null
+  },
+  "url": "https://t.me/WEB3_AGGREGATOR/423105"
+ }
+}

@@ -1,0 +1,26 @@
+{
+ "a": {
+  "quote": "Сегодня (спасибо за поправку @intelligent_ua) кстати мейннет Arc",
+  "actor": "Arc",
+  "action": "будет мейннет",
+  "object": "мейннет Arc",
+  "qualifiers": {
+   "version": null,
+   "event_date": "Сегодня",
+   "place": null,
+   "counterparty": null
+  },
+  "url": "https://t.me/WEB3_AGGREGATOR/423093"
+ },
+ "b": {
+  "quote": "• Arc Citizens: 10,000 fully on-chain identity PFP, запуск планируется 16 сентября;",
+  "actor": null,
+  "action": "launch",
+  "object": "Arc Citizens",
+  "qualifiers": {
+   "event_date": "16 сентября",
+   "version": "10,000 fully on-chain identity PFP"
+  },
+  "url": "https://t.me/whitelist1/7135"
+ }
+}

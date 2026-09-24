@@ -1,0 +1,23 @@
+{
+ "a": {
+  "quote": "Хакеры начали использовать Ethereum для управления банковским вирусом.",
+  "actor": "hackers",
+  "action": "use",
+  "object": "Ethereum",
+  "qualifiers": {
+   "event_date": "2026-09-16T12:55:11+00:00",
+   "place": "null"
+  },
+  "url": "https://t.me/crypto_hd/31457"
+ },
+ "b": {
+  "quote": "📈 🔴 ETH ETF: отток $224M",
+  "actor": null,
+  "action": "отток",
+  "object": "ETH ETF",
+  "qualifiers": {
+   "amount": "$224M"
+  },
+  "url": "https://t.me/rawa_imagination/21109"
+ }
+}

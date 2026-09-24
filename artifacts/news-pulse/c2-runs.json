@@ -1,0 +1,128 @@
+[
+  {
+    "topic": "zec",
+    "window": "2026-09-09..2026-09-23",
+    "dir": "artifacts/news-pulse/zec/2026-09-09..2026-09-23",
+    "spend_usd": 0.015184,
+    "cmp": {
+      "pulse.json": true,
+      "brief.md": true,
+      "decisions.json": true
+    },
+    "status": "ok",
+    "events": 156,
+    "llm": {
+      "calls": 95,
+      "spent_usd": 0.015184,
+      "errors": []
+    }
+  },
+  {
+    "topic": "zec",
+    "window": "2026-09-16T06:10:19+00:00..2026-09-21T06:04:32+00:00",
+    "dir": "artifacts/news-pulse/zec/2026-09-16T06-10-19-00-00..2026-09-21T06-04-32-00-00",
+    "spend_usd": 0.008831,
+    "cmp": {
+      "pulse.json": true,
+      "brief.md": true,
+      "decisions.json": true
+    },
+    "status": "ok",
+    "events": 74,
+    "llm": {
+      "calls": 49,
+      "spent_usd": 0.008831,
+      "errors": []
+    }
+  },
+  {
+    "topic": "eth",
+    "window": "2026-09-09..2026-09-23",
+    "dir": "artifacts/news-pulse/eth/2026-09-09..2026-09-23",
+    "spend_usd": 0.017311,
+    "cmp": {
+      "pulse.json": true,
+      "brief.md": true,
+      "decisions.json": true
+    },
+    "status": "ok",
+    "events": 230,
+    "llm": {
+      "calls": 77,
+      "spent_usd": 0.017311,
+      "errors": []
+    }
+  },
+  {
+    "topic": "eth",
+    "window": "2026-09-14T12:33:46+00:00..2026-09-21T12:44:54+00:00",
+    "dir": "artifacts/news-pulse/eth/2026-09-14T12-33-46-00-00..2026-09-21T12-44-54-00-00",
+    "spend_usd": 0.015607,
+    "cmp": {
+      "pulse.json": true,
+      "brief.md": true,
+      "decisions.json": true
+    },
+    "status": "ok",
+    "events": 112,
+    "llm": {
+      "calls": 64,
+      "spent_usd": 0.015607,
+      "errors": []
+    }
+  },
+  {
+    "topic": "arc",
+    "window": "2026-09-09..2026-09-23",
+    "dir": "artifacts/news-pulse/arc/2026-09-09..2026-09-23",
+    "spend_usd": 0.009674,
+    "cmp": {
+      "pulse.json": true,
+      "brief.md": true,
+      "decisions.json": true
+    },
+    "status": "ok",
+    "events": 83,
+    "llm": {
+      "calls": 56,
+      "spent_usd": 0.009674,
+      "errors": []
+    }
+  },
+  {
+    "topic": "arc",
+    "window": "2026-09-16T11:01:01+00:00..2026-09-17T11:01:01+00:00",
+    "dir": "artifacts/news-pulse/arc/2026-09-16T11-01-01-00-00..2026-09-17T11-01-01-00-00",
+    "spend_usd": 0.004836,
+    "cmp": {
+      "pulse.json": true,
+      "brief.md": true,
+      "decisions.json": true
+    },
+    "status": "ok",
+    "events": 31,
+    "llm": {
+      "calls": 15,
+      "spent_usd": 0.004836,
+      "errors": []
+    }
+  },
+  {
+    "topic": "aave",
+    "window": "2026-09-22..2026-09-23",
+    "dir": "artifacts/news-pulse/aave/2026-09-22..2026-09-23",
+    "spend_usd": 0.000163,
+    "cmp": {
+      "pulse.json": true,
+      "brief.md": true,
+      "decisions.json": true
+    },
+    "status": "ok",
+    "events": 1,
+    "llm": {
+      "calls": 2,
+      "spent_usd": 0.000163,
+      "errors": []
+    }
+  }
+]

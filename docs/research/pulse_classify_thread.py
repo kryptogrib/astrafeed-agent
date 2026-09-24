@@ -37,7 +37,15 @@ import urllib.request
 RELEVANCE = ("relevant", "unrelated", "unclear")
 ASPECTS = ("market", "usage", "technology", "other")
 KINDS = ("opinion", "question", "experience", "other")
-SKIP_RULES = {"hashtag"}  # labels of the post, not things people talk about
+SKIP_RULES = {"hashtag", "rubric_hashtag"}  # labels of the post, not things people talk about
+# Which mentions count as grounding. Bump it whenever topic_mentions changes: runs made before keep their
+# request.json as the model's input, and pulse_publish.py records both versions in demo/grounding.json.
+#   hashtag-skip/2026-09-22     every hashtag-only mention skipped (lost "#ZEC растёт…" in don_invest/5299)
+#   headline-hashtag/2026-09-24 a hashtag that is the subject of its line counts (headline_hashtag)
+GROUNDING_VERSION = "headline-hashtag/2026-09-24"
+HASHTAG = re.compile(r"#\w+")
+NOISE = re.compile(r"https?://\S+|\b(?:t\.me|x\.com)/\S+|@\w+")
+PROSE_WORD = re.compile(r"[^\W\d_]{2,}")
 NUMBER = re.compile(r"\d+(?:[.,]\d+)?")
 
 PROMPT_VERSION = "v3-relevance-summary"
@@ -85,6 +93,20 @@ def sha(obj):
     return hashlib.sha256(data.encode()).hexdigest()[:16]
 
 
+def saved_input(run_dir):
+    """The payload the model actually saw, read back from <run>/request.json and checked against the
+    input_sha256 of meta.json. Later changes to the detector or to topic_mentions never touch it."""
+    run = Path(run_dir)
+    body = json.loads((run / "request.json").read_text())
+    payload = json.loads(body["messages"][-1]["content"])
+    saved = json.loads((run / "meta.json").read_text())["input_sha256"]
+    if sha(payload) != saved:
+        raise SystemExit(f"{run}/request.json does not match input_sha256 {saved} of meta.json")
+    mentions = {"post": payload["post"]["mentions"]} if "mentions" in payload["post"] else {}
+    mentions.update({c["id"]: c["mentions"] for c in payload["comments"] if "mentions" in c})
+    return payload, mentions
+
+
 def api_key():
     if os.environ.get("OPENROUTER_API_KEY"):
         return os.environ["OPENROUTER_API_KEY"]
@@ -112,18 +134,36 @@ def load_thread(db_path, link):
     return sid, pid, post, rows
 
 
-def topic_mentions(det_dir, sid, pid, names):
+def headline_hashtag(line):
+    """"#ZEC растёт, с ним и активность…": the only hashtag of its line, followed by prose. The tag is
+    the subject of the sentence, not a label. Tag lists ("#бананы #россия", "#Calendar #CAreport CAbot")
+    and bare rubrics ("Рубрика #FOMO:") stay skipped; channel template lines never get here, they carry
+    rubric_hashtag."""
+    return (len(HASHTAG.findall(line)) == 1
+            and len(PROSE_WORD.findall(HASHTAG.sub(" ", NOISE.sub(" ", line)))) >= 2)
+
+
+def thread_texts(post, rows):
+    return {"post": post, **{str(r["comment_id"]): r["text"] or "" for r in rows}}
+
+
+def topic_mentions(det_dir, sid, pid, names, texts=None):
     """Mentions of the topic found by entity_candidates.py: {"post" | comment id: [{text, status}]}.
-    A surface seen both confirmed and ambiguous keeps confirmed."""
+    A surface seen both confirmed and ambiguous keeps confirmed. Hashtag-only mentions are skipped
+    unless `texts` ({"post" | comment id: text}) shows a headline hashtag (see headline_hashtag)."""
     found = collections.defaultdict(dict)
     for line in open(Path(det_dir) / "detections.jsonl"):
         d = json.loads(line)
         if ((d["source_id"], str(d["post_id"])) != (sid, pid) or d["candidate"] not in names
                 or d["status"] not in ("confirmed", "ambiguous")):
             continue
+        key = "post" if d["kind"] == "post" else str(d["comment_id"])
+        if d["rules"] == ["hashtag"] and texts is not None:
+            lines = (texts.get(key) or "").splitlines()
+            if d["line"] < len(lines) and headline_hashtag(lines[d["line"]]):
+                d["rules"] = ["headline_hashtag"]
         if set(d["rules"]) <= SKIP_RULES or d["rules"] == ["phrase_head"]:
             continue
-        key = "post" if d["kind"] == "post" else str(d["comment_id"])
         if found[key].get(d["surface"]) != "confirmed":
             found[key][d["surface"]] = d["status"]
     return {k: [{"text": s, "status": st} for s, st in sorted(v.items())] for k, v in found.items()}
@@ -266,7 +306,7 @@ def sheet(db_path, det_dir, topic, out_path, *pairs):
     head, rows_out = [], []
     for link, ids in zip(pairs[::2], pairs[1::2]):
         sid, pid, post, rows = load_thread(db_path, link)
-        mentions = topic_mentions(det_dir, sid, pid, names)
+        mentions = topic_mentions(det_dir, sid, pid, names, thread_texts(post, rows))
         head.append(f"# post {link} [mentions: {show_mentions(mentions.get('post')) or 'none'}]: "
                     + " ".join(post.split()))
         comments = {c["id"]: c for c in thread_comments(rows)}
@@ -295,7 +335,7 @@ def sheet(db_path, det_dir, topic, out_path, *pairs):
 def main(db_path, det_dir, link, topic, out_dir, model="deepseek/deepseek-v4-flash", gold_path=None):
     names = tuple(topic.split(","))
     sid, pid, post, rows = load_thread(db_path, link)
-    mentions = topic_mentions(det_dir, sid, pid, names)
+    mentions = topic_mentions(det_dir, sid, pid, names, thread_texts(post, rows))
     comments = thread_comments(rows)
     prompt = PROMPT.format(topic=names[0])
     payload = {"post": {"id": "post", "text": post, **({"mentions": mentions["post"]} if "post" in mentions else {})},
@@ -309,7 +349,9 @@ def main(db_path, det_dir, link, topic, out_dir, model="deepseek/deepseek-v4-fla
         saved = json.loads((out / "meta.json").read_text()) if (out / "meta.json").exists() else {}
         if {k: saved.get(k) for k in meta} != meta:  # identity fields only
             raise SystemExit(f"PULSE_REUSE refused: saved {saved or 'no meta.json'} != current {meta}; "
-                             "a changed prompt, input, model or provider needs a new call")
+                             "a changed prompt, input, model or provider needs a new call. If only the grounding "
+                             f"changed ({GROUNDING_VERSION}), keep this run: request.json stays the model's input "
+                             "and pulse_publish.py records the new grounding in demo/grounding.json")
         body = json.loads((out / "request.json").read_text())
         resp = json.loads((out / "response.json").read_text())
         seconds = f"повтор без вызова; исходный вызов {saved.get('seconds')}"

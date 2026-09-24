@@ -1,0 +1,25 @@
+{
+ "a": {
+  "quote": "Arc запустил публичный mainnet и уже сейчас мы можем делать быстрые активности.",
+  "actor": "Arc",
+  "action": "launched",
+  "object": "public mainnet",
+  "qualifiers": {
+   "version": "mainnet",
+   "event_date": "2026-09-16",
+   "place": null,
+   "counterparty": null
+  },
+  "url": "https://t.me/krasnovcrypto/3754"
+ },
+ "b": {
+  "quote": "• Arclings: 6,283 fully on-chain 1-bit SVG, mint на день Arc Mainnet, 16 сентября;",
+  "actor": "Arclings",
+  "action": "mint on Arc Mainnet day",
+  "object": "Arclings NFTs",
+  "qualifiers": {
+   "event_date": "16 сентября"
+  },
+  "url": "https://t.me/whitelist1/7135"
+ }
+}

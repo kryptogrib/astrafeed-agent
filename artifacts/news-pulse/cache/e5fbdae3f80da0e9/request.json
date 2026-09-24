@@ -1,0 +1,17 @@
+{
+ "segments": [
+  {
+   "id": "telegram:6:2432:c:150645#s0",
+   "text": "То бишь hype или zec 😁",
+   "mentions": [
+    {
+     "text": "zec",
+     "status": "confirmed"
+    }
+   ],
+   "kind_hint": "comment",
+   "url": "https://t.me/icodrops_sergey/2432?comment=150645",
+   "time": "2026-09-22T13:19:42+00:00"
+  }
+ ]
+}

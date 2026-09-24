@@ -1,0 +1,22 @@
+{
+ "a": {
+  "quote": "👍Напомним, что Arc выходит в Mainnet уже сегодня, а вместе с ним и многие NFT коллекции, сверяемся с постом.",
+  "actor": "Arc",
+  "action": "launches",
+  "object": "Mainnet",
+  "qualifiers": {
+   "event_date": "today"
+  },
+  "url": "https://t.me/whitelist1/7138"
+ },
+ "b": {
+  "quote": "Первый день мэйннета ARC",
+  "actor": null,
+  "action": "first day of mainnet",
+  "object": "ARC",
+  "qualifiers": {
+   "event_date": "текущая дата поста (2026-09-16)"
+  },
+  "url": "https://t.me/WEB3_AGGREGATOR/423153"
+ }
+}

@@ -1,0 +1,17 @@
+{
+ "segments": [
+  {
+   "id": "telegram:1:7139#s23",
+   "text": "Все ARC инструменты смотрим в посте. \n\n",
+   "mentions": [
+    {
+     "text": "ARC",
+     "status": "confirmed"
+    }
+   ],
+   "kind_hint": "post",
+   "url": "https://t.me/whitelist1/7139",
+   "time": "2026-09-16T11:01:01+00:00"
+  }
+ ]
+}

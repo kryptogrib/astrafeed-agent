@@ -1,0 +1,46 @@
+{
+ "id": "gen-1790192821-wB7C0TmWSvL2pDNI17rx",
+ "object": "chat.completion",
+ "created": 1790192821,
+ "model": "deepseek/deepseek-v4-flash",
+ "provider": "NextBit",
+ "system_fingerprint": null,
+ "service_tier": null,
+ "choices": [
+  {
+   "index": 0,
+   "logprobs": null,
+   "finish_reason": "stop",
+   "native_finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "content": "{\n  \"labels\": [\n    {\n      \"id\": \"telegram:15:423054#s4\",\n      \"kind\": \"event\",\n      \"actor\": null,\n      \"action\": \"made public bets\",\n      \"object\": \"VVV, ZEC, HYPE\",\n      \"qualifiers\": {},\n      \"origin\": \"retelling\",\n      \"source_role\": \"author\",\n      \"verification_status\": \"unverified\",\n      \"quote\": \"• Если задуматься так - на Ансеме просто какой-то гигачад сидит. Тип буквально сделал публичные ставки в VVV, ZEC и HYPE и не прогадал -все монеты штурмуют свои ATH, пока СНГ мегамозги ждут альтсезона на свои сумки\",\n      \"span\": [0, 233]\n    },\n    {\n      \"id\": \"telegram:15:423054#s18\",\n      \"kind\": \"event\",\n      \"actor\": null,\n      \"action\": \"buyback and distribute\",\n      \"object\": \"ZEC\",\n      \"qualifiers\": {\n        \"counterparty\": \"ZCAT holders\"\n      },\n      \"origin\": \"retelling\",\n      \"source_role\": \"author\",\n      \"verification_status\": \"unverified\",\n      \"quote\": \"> ZEC-paired\\n> 3% комса\\n> На комсу откупается ZEC и начисляется холдерам ZCAT\",\n      \"span\": [0, 82]\n    },\n    {\n      \"id\": \"telegram:15:423054#s19\",\n      \"kind\": \"event\",\n      \"actor\": null,\n      \"action\": \"exposure strategy\",\n      \"object\": \"ZEC\",\n      \"qualifiers\": {\n        \"counterparty\": \"TACZ, ZCAT\"\n      },\n      \"origin\": \"retelling\",\n      \"source_role\": \"author\",\n      \"verification_status\": \"unverified\",\n      \"quote\": \"Ну короче INDEX, только с exposure на ZEC. TACZ - тоже идет в паре к ZEC, но по сути является стратегией, которая холдерам раскидывает не ZEC, а ZCAT. Ну короче пытаются сделать эдакий флайвил\",\n      \"span\": [0, 175]\n    },\n    {\n      \"id\": \"telegram:9:1039055#s0\",\n      \"kind\": \"event\",\n      \"actor\": \"Zcash holders\",\n      \"action\": \"back\",\n      \"object\": \"faster transactions and Bitcoin-style halvings\",\n      \"qualifiers\": {},\n      \"origin\": \"retelling\",\n      \"source_role\": \"editorial\",\n      \"verification_status\": \"source_statement\",\n      \"quote\": \"ZCASH HOLDERS OVERWHELMINGLY BACK FASTER TRANSACTIONS AND BITCOIN-STYLE HALVINGS ...\",\n      \"span\": [0, 93]\n    },\n    {\n      \"id\": \"telegram:9:1039182#s5\",\n      \"kind\": \"event\",\n      \"actor\": \"Zcash holders\",\n      \"action\": \"back\",\n      \"object\": \"faster transactions and halving-style design\",\n      \"qualifiers\": {},\n      \"origin\": \"retelling\",\n      \"source_role\": \"editorial\",\n      \"verification_status\": \"source_statement\",\n      \"quote\": \"Zcash holders backed faster transactions and halving-style design\",\n      \"span\": [0, 67]\n    },\n    {\n      \"id\": \"telegram:15:423085#s2\",\n      \"kind\": \"participant_reaction\",\n      \"actor\": \"author\",\n      \"action\": \"states ignorance\",\n      \"object\": \"ZEC ecosystem\",\n      \"qualifiers\": {},\n      \"origin\": \"own\",\n      \"source_role\": \"author\",\n      \"verification_status\": \"unverified\",\n      \"quote\": \"Я вообще не шарю в ZEC экосистеме и как что сделать\",\n      \"span\": [0, 52]\n    },\n    {\n      \"id\": \"telegram:15:423090#s0\",\n      \"kind\": \"event\",\n      \"actor\": null,\n      \"action\": \"local bull run\",\n      \"object\": \"Zcash\",\n      \"qualifiers\": {},\n      \"origin\": \"own\",\n      \"source_role\": \"author\",\n      \"verification_status\": \"unverified\",\n      \"quote\": \"Zcash - локальная бычка будет здесь! 😞\",\n      \"span\": [0, 42]\n    },\n    {\n      \"id\": \"telegram:15:423090#s1\",\n      \"kind\": \"event\",\n      \"actor\": null,\n      \"action\": \"bullish on\",\n      \"object\": \"Zcash\",\n      \"qualifiers\": {\n        \"version\": \"price history\"\n      },\n      \"origin\": \"own\",\n      \"source_role\": \"author\",\n      \"verification_status\": \"unverified\",\n      \"quote\": \"Я булишь по Zcash вовсе не потому, что токен стоит уже почти как $ETH, а те кто брали его год назад на $250, сейчас имеют $15k (хотя это тоже). Я о том, что с такой ликвидностью, экосистемой и трендов на NFT, иксы неизюбежны, ровным счетом так же как и на Robinhood.\",\n      \"span\": [0, 283]\n    },\n    {\n      \"id\": \"telegram:15:423090#s3\",\n      \"kind\": \"event\",\n      \"actor\": null,\n      \"action\": \"ecosystem description\",\n      \"object\": \"Zodl wallet\",\n      \"qualifiers\": {\n        \"counterparty\": \"Zcash, Solana\"\n      },\n      \"origin\": \"own\",\n      \"source_role\": \"author\",\n      \"verification_status\": \"unverified\",\n      \"quote\": \"🔔 Экосистема:\\n• Zodl. Кошелек экосистемы Zcash с поддержкой и внутрянкой экосистемы Solana (тот же СEO Helios топит за них). Переходим на сайт, качаем расширение и создаем кошелек.\",\n      \"span\": [0, 175]\n    },\n    {\n      \"id\": \"telegram:15:423090#s5\",\n      \"kind\": \"event\",\n      \"actor\": null,\n      \"action\": \"launchpad and terminal\",\n      \"object\": \"SHLD\",\n      \"qualifiers\": {\n        \"counterparty\": \"Zcash\"\n      },\n      \"origin\": \"own\",\n      \"source_role\": \"author\",\n      \"verification_status\": \"unverified\",\n      \"quote\": \"• SHLD. Лаунчпад и терминал новых токенов и щитков. По сути, альтернативы сейчас нет - на сеть Zcash пока никто еще не сверстал нормальный терминал, что имеем то имеем.\",\n      \"span\": [0, 163]\n    },\n    {\n      \"id\": \"telegram:15:423102#s3\",\n      \"kind\": \"event\",\n      \"actor\": null,\n      \"action\": \"auction in ZEC\",\n      \"object\": \"ZEC\",\n      \"qualifiers\": {\n        \"counterparty\": \"NEAR, ETH, SOL, BTC, stablecoins\"\n      },\n      \"origin\": \"own\",\n      \"source_role\": \"author\",\n      \"verification_status\": \"unverified\",\n      \"quote\": \"Аукцион проходит в ZEC, но благодаря интеграции с NEAR можно зайти с ETH, SOL, BTC, стейблкоинами и другими активами. Заранее предупреждаю что там минимальный бид 0.1 ZEC ($112). Система сама конвертирует депозит в ZEC, поэтому не обязательно заранее покупать или переводить Zcash. Но если по простому делать, ставите Noir Wallet и бриджите через https://app.rubic.exchange/ прямо на кошелек любую крипту.\",\n      \"span\": [0, 393]\n    },\n    {\n      \"id\": \"telegram:15:423102#s4\",\n      \"kind\": \"participant_reaction\",\n      \"actor\": \"author\",\n      \"action\": \"cautious opinion\",\n      \"object\": \"experiment at intersection of privacy, NFT, Zcash ecosystem\",\n      \"qualifiers\": {},\n      \"origin\": \"own\",\n      \"source_role\": \"author\",\n      \"verification_status\": \"unverified\",\n      \"quote\": \"При этом я бы не спешил с выводами: пока это скорее интересный эксперимент на стыке приватности, NFT и экосистемы Zcash. DYOR\",\n      \"span\": [0, 119]\n    }\n  ]\n}",
+    "refusal": null,
+    "reasoning": null
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 2095,
+  "completion_tokens": 1940,
+  "total_tokens": 4035,
+  "cost": 0.00089625,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.00089625,
+   "upstream_inference_prompt_cost": 0.00031425,
+   "upstream_inference_completions_cost": 0.000582
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

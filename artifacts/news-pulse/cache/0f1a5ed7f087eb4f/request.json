@@ -1,0 +1,23 @@
+{
+ "a": {
+  "quote": "🟢 16 сентября Circle запустила мейннет: среди валидаторов BlackRock и Visa, отчеканено 10 млрд ARC, за первые два часа в сеть вошло больше $370 млн USDC. Звучит громко, но это около 0,05% всего USDC, ликвидность тонкая, спреды заметные, половина приложений сырая.\n",
+  "actor": "Circle",
+  "action": "launched mainnet",
+  "object": "Arc",
+  "qualifiers": {
+   "event_date": "16 сентября",
+   "counterparty": "BlackRock, Visa"
+  },
+  "url": "https://t.me/WEB3_AGGREGATOR/423286"
+ },
+ "b": {
+  "quote": "Granted, yes there were people early new Arc 1-2 months before, today it begins \"officially\" via public (few hours basically only)",
+  "actor": "Arc",
+  "action": "begins officially",
+  "object": "public launch",
+  "qualifiers": {
+   "event_date": "today"
+  },
+  "url": "https://t.me/PowsGemCalls/48975"
+ }
+}

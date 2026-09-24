@@ -1,0 +1,17 @@
+{
+ "segments": [
+  {
+   "id": "telegram:15:423462#s1",
+   "text": "An attacker used a leaked signing key to drain Fetch.ai's Ethereum token converter, then reused the same key to hit NuNet, walking away with roughly $2M across the two AI projects in one coordinated attack.\n\n",
+   "mentions": [
+    {
+     "text": "Ethereum",
+     "status": "confirmed"
+    }
+   ],
+   "kind_hint": "post",
+   "url": "https://t.me/WEB3_AGGREGATOR/423462",
+   "time": "2026-09-21T09:47:48+00:00"
+  }
+ ]
+}

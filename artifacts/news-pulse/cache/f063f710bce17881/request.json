@@ -1,0 +1,25 @@
+{
+ "a": {
+  "quote": "Circle's Arc L1 hit mainnet",
+  "actor": "Circle",
+  "action": "launches Arc L1 on mainnet",
+  "object": "Arc",
+  "qualifiers": {
+   "mainnet": true
+  },
+  "url": "https://t.me/WEB3_AGGREGATOR/423249"
+ },
+ "b": {
+  "quote": "Сегодня, время после запуска Arc;",
+  "actor": null,
+  "action": "launch",
+  "object": "Arc",
+  "qualifiers": {
+   "version": null,
+   "event_date": "today",
+   "place": null,
+   "counterparty": null
+  },
+  "url": "https://t.me/whitelist1/7139"
+ }
+}

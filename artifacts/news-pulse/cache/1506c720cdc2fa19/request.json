@@ -1,0 +1,17 @@
+{
+ "segments": [
+  {
+   "id": "telegram:11:96837#s1",
+   "text": "Общий чистый отток спотовых ETH-ETF составил ~$140 млн.",
+   "mentions": [
+    {
+     "text": "ETH",
+     "status": "confirmed"
+    }
+   ],
+   "kind_hint": "post",
+   "url": "https://t.me/cryptoattack24/96837",
+   "time": "2026-09-21T03:53:01+00:00"
+  }
+ ]
+}

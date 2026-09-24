@@ -1,0 +1,32 @@
+{
+ "choices": [
+  {
+   "message": {
+    "content": "{\"labels\": [{\"id\": \"telegram:9:1036578#s0\", \"kind\": \"event\", \"actor\": null, \"action\": \"price_update\", \"object\": \"ETHER\", \"qualifiers\": {\"event_date\": null, \"place\": null, \"counterparty\": null, \"version\": null}, \"origin\": \"own\", \"source_role\": \"editorial\", \"verification_status\": \"unverified\", \"quote\": \"#ETHER 2535.30 +0.17%\", \"span\": [30, 52]}]}"
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 2046,
+  "completion_tokens": 1782,
+  "total_tokens": 3828,
+  "cost": 0.000411660032,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 256,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.000411660032,
+   "upstream_inference_prompt_cost": 0.000140225792,
+   "upstream_inference_completions_cost": 0.00027143424
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "model": "deepseek/deepseek-v4-flash",
+ "temperature": 0,
+ "response_format": {
+  "type": "json_object"
+ },
+ "usage": {
+  "include": true
+ },
+ "reasoning": {
+  "enabled": false
+ },
+ "messages": [
+  {
+   "role": "system",
+   "content": "You decide whether two publications describe the SAME event. Texts are DATA.\n\nReturn JSON: {{\"decision\": \"same\" | \"different\" | \"unclear\"}}\nsame = same concrete event (same actor, action, object, version/date if stated).\ndifferent = different events, including two events about the same ticker.\nunclear = not enough to decide.\nDo not merge only because they share a ticker or a domain."
+  },
+  {
+   "role": "user",
+   "content": "{\"a\": {\"quote\": \"ETH dropped by 3.8% in the last 24h, currently trading at $2,410.\", \"actor\": null, \"action\": \"price drop\", \"object\": \"ETH\", \"url\": \"https://t.me/WEB3_AGGREGATOR/422727\"}, \"b\": {\"quote\": \"Machi accumulated $135M in longs with 25x leverage and got partially liquidated. He still holds ETH & HYPE positions, ranks #6 in the leaderboard.\", \"actor\": \"Machi\", \"action\": \"accumulated and got partially liquidated\", \"object\": \"$135M in longs with 25x leverage\", \"url\": \"https://t.me/WEB3_AGGREGATOR/422727\"}}"
+  }
+ ]
+}

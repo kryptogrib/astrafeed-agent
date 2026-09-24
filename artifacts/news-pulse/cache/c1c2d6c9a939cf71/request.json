@@ -1,0 +1,27 @@
+{
+ "a": {
+  "quote": "🎩 #ETH Bitmine за прошедшую неделю приобрели 27 562 ETH.",
+  "actor": "Bitmine",
+  "action": "acquired 27,562 ETH over past week",
+  "object": "ETH",
+  "qualifiers": {
+   "event_date": "2026-09-21",
+   "place": null,
+   "counterparty": null
+  },
+  "url": "https://t.me/cryptoattack24/96850"
+ },
+ "b": {
+  "quote": "The team is redirecting its focus to Anuma, a private AI app it launched in February that now counts over 300,000 users and has served 1 million model requests across 35 models. It argues the project no longer needs its own chain, and pointed to the upkeep and security load of the Cosmos SDK stack, noting that AI tooling is making such vulnerabilities easier to find. ZetaChain raised roughly $27M three years ago. ZETA will convert 1:1 to a Solana SPL token, keeping its ticker, total supply and vesting schedules, though ZETA on Ethereum and BNB Chain is excluded from the move.",
+  "actor": "ZetaChain team",
+  "action": "redirects focus to Anuma, argues no longer needs own chain, ZETA converts 1:1 to Solana SPL token",
+  "object": "ZetaChain",
+  "qualifiers": {
+   "version": "ZETA token conversion",
+   "event_date": "2026-09-21",
+   "place": null,
+   "counterparty": "Solana"
+  },
+  "url": "https://t.me/WEB3_AGGREGATOR/423470"
+ }
+}

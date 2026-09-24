@@ -1,0 +1,46 @@
+{
+ "id": "gen-1790196694-fYAYYx5rmEPWYVn7yyQn",
+ "object": "chat.completion",
+ "created": 1790196694,
+ "model": "deepseek/deepseek-v4-flash",
+ "provider": "Baidu",
+ "system_fingerprint": null,
+ "service_tier": null,
+ "choices": [
+  {
+   "index": 0,
+   "logprobs": null,
+   "finish_reason": "stop",
+   "native_finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "content": "{\"labels\": [{\"id\": \"telegram:18:31468#s1\", \"kind\": \"event\", \"actor\": \"топовый трейдер Axiom\", \"action\": \"стал жертвой фишинговой атаки и лишился денег\", \"object\": null, \"qualifiers\": {\"counterparty\": \"Arc\"}, \"origin\": \"retelling\", \"source_role\": \"editorial\", \"verification_status\": \"unverified\", \"quote\": \"Один из топовых трейдеров Axiom стал жертвой фишинговой атаки и лишился денег при попытке перевести активы в Arc.\", \"span\": [0, 117]}, {\"id\": \"telegram:15:423153#s0\", \"kind\": \"event\", \"actor\": null, \"action\": \"первый день мэйннета\", \"object\": \"ARC\", \"qualifiers\": {}, \"origin\": \"own\", \"source_role\": \"editorial\", \"verification_status\": \"unverified\", \"quote\": \"Первый день мэйннета ARC\", \"span\": [0, 28]}, {\"id\": \"telegram:15:423153#s5\", \"kind\": \"promo_service\", \"actor\": null, \"action\": \"упоминание\", \"object\": \"ARC\", \"qualifiers\": {}, \"origin\": \"own\", \"source_role\": \"editorial\", \"verification_status\": \"unverified\", \"quote\": \"Или звести деньги через Jumper, у которого к слову сейчас открыт WL на их новый продукт, но вернёмся к ARC\", \"span\": [0, 97]}, {\"id\": \"telegram:15:423153#s8\", \"kind\": \"event\", \"actor\": null, \"action\": \"запуск коллекций\", \"object\": \"Arc\", \"qualifiers\": {\"version\": \"AKA DN404, Arclings, Arc Fly\"}, \"origin\": \"own\", \"source_role\": \"editorial\", \"verification_status\": \"unverified\", \"quote\": \"AKA DN404 — первая коллекция на Arc: NFT + ERC-20 в одном активе, а комиссии идут в RWA\\nArclings — первая полностью ончейн 1-bit коллекция на Arc\\nArc Fly — минт состоится сегодня на OpenSea, будет фри минт на 7.777 NFT\", \"span\": [0, 199]}, {\"id\": \"telegram:15:423161#s6\", \"kind\": \"event\", \"actor\": \"Zack\", \"action\": \"подтвердил поддержку\", \"object\": \"Arc\", \"qualifiers\": {}, \"origin\": \"retelling\", \"source_role\": \"editorial\", \"verification_status\": \"source_statement\", \"quote\": \"Arc — community → Zack: поддержка уже запущена.\", \"span\": [0, 52]}, {\"id\": \"telegram:20:49038#s0\", \"kind\": \"participant_reaction\", \"actor\": \"Holy\", \"action\": \"комментирует\", \"object\": \"$ARC\", \"qualifiers\": {}, \"origin\": \"own\", \"source_role\": \"participant\", \"verification_status\": \"unverified\", \"quote\": \"Holy just looked back at $ARC positions and the chaos today 😂what in the WORLD are these p/a on the tokens LMAO\", \"span\": [0, 107]}, {\"id\": \"telegram:18:31472#s2\", \"kind\": \"event\", \"actor\": null, \"action\": \"запуск майннета\", \"object\": \"Arc\", \"qualifiers\": {}, \"origin\": \"own\", \"source_role\": \"editorial\", \"verification_status\": \"unverified\", \"quote\": \"Запуск майннета Arc (читать)\", \"span\": [0, 28]}, {\"id\": \"telegram:19:19007#s1\", \"kind\": \"event\", \"actor\": \"Circle\", \"action\": \"запуск\", \"object\": \"Arc\", \"qualifiers\": {\"counterparty\": \"BlackRock, Visa, Mastercard, DTCC, ICE, Galaxy\"}, \"origin\": \"retelling\", \"source_role\": \"editorial\", \"verification_status\": \"unverified\", \"quote\": \"Early on Arc — A chance to launch from day one in a new ecosystem built around stablecoins and global finance. Arc is built by Circle, with founding validators including BlackRock, Visa, Mastercard, DTCC, ICE (owner of the NYSE), Galaxy and more.\", \"span\": [0, 247]}, {\"id\": \"telegram:19:19008#s0\", \"kind\": \"event\", \"actor\": \"Circle\", \"action\": \"запуск\", \"object\": \"arc\", \"qualifiers\": {}, \"origin\": \"retelling\", \"source_role\": \"editorial\", \"verification_status\": \"unverified\", \"quote\": \"https://www.forbes.com/sites/boazsobrado/2026/09/16/circle-built-arc-for-blackrock-memecoins-are-moving-in-first/\", \"span\": [0, 113]}, {\"id\": \"telegram:1:7141#s2\", \"kind\": \"event\", \"actor\": \"Arc\", \"action\": \"сминтили 10 млрд токенов $ARC\", \"object\": \"$ARC\", \"qualifiers\": {}, \"origin\": \"retelling\", \"source_role\": \"editorial\", \"verification_status\": \"source_statement\", \"quote\": \"Arc сминтили 10 млрд токенов $ARC в Mainnet. Сама же команда пишет, что это техническая необходимость, а не подготовка к дропу. При этом, в X сами байтят холдеров Architect ролей.\", \"span\": [0, 167]}, {\"id\": \"telegram:1:7141#s3\", \"kind\": \"event\", \"actor\": \"Extended\", \"action\": \"объявили о переходе\", \"object\": \"Arc\", \"qualifiers\": {}, \"origin\": \"retelling\", \"source_role\": \"editorial\", \"verification_status\": \"unverified\", \"quote\": \"Extended объявили о переходе на Arc.\", \"span\": [0, 36]}, {\"id\": \"telegram:15:423169#s3\", \"kind\": \"event\", \"actor\": null, \"action\": \"ожидание минта\", \"object\": \"Arc\", \"qualifiers\": {\"version\": \"Owl Arc, The One\"}, \"origin\": \"own\", \"source_role\": \"participant\", \"verification_status\": \"unverified\", \"quote\": \"I’ll be waiting for these mints today:\\nOwl Arc\\nThe One - freemint on arc\\n8Bitard\", \"span\": [0, 76]}]}",
+    "refusal": null,
+    "reasoning": null
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 2258,
+  "completion_tokens": 1523,
+  "total_tokens": 3781,
+  "cost": 0.00042028896,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.00042028896,
+   "upstream_inference_prompt_cost": 0.00017892392,
+   "upstream_inference_completions_cost": 0.00024136504
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

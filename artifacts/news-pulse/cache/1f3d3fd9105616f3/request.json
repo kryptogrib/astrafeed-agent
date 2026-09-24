@@ -1,0 +1,26 @@
+{
+ "a": {
+  "quote": "Клейм в эфире, у кого аллокация свыше 10к токенов, напомню что это второй клейм. Слить можно на Mexc, прайс 0,0067$",
+  "actor": null,
+  "action": "claim in Ethereum network, second claim, can sell on Mexc at price 0.0067$",
+  "object": "tokens",
+  "qualifiers": {
+   "event_date": "2026-09-21",
+   "place": "Mexc",
+   "counterparty": null
+  },
+  "url": "https://t.me/WEB3_AGGREGATOR/423484"
+ },
+ "b": {
+  "quote": "JUST IN: TOM LEE'S 'BITMINE' BUYS 27,562 $ETH WORTH $75 MILLION.  ...",
+  "actor": "Tom Lee's 'BitMine'",
+  "action": "buys 27,562 $ETH worth $75 million",
+  "object": "ETH",
+  "qualifiers": {
+   "event_date": "2026-09-21",
+   "place": null,
+   "counterparty": null
+  },
+  "url": "https://t.me/marketfeed/1042429"
+ }
+}

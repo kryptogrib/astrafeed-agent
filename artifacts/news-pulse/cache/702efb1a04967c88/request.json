@@ -1,0 +1,25 @@
+{
+ "segments": [
+  {
+   "id": "telegram:15:423315#s0",
+   "text": "$ZEC - как быстро и дешево депнуть в Zcash? ☕️\n\n",
+   "mentions": [
+    {
+     "text": "$ZEC",
+     "status": "confirmed"
+    },
+    {
+     "text": "ZEC",
+     "status": "confirmed"
+    },
+    {
+     "text": "Zcash",
+     "status": "confirmed"
+    }
+   ],
+   "kind_hint": "post",
+   "url": "https://t.me/WEB3_AGGREGATOR/423315",
+   "time": "2026-09-18T18:37:10+00:00"
+  }
+ ]
+}

@@ -1,0 +1,46 @@
+{
+ "id": "gen-1790198831-GsiR4eFNf7XOjsb8yJIL",
+ "object": "chat.completion",
+ "created": 1790198831,
+ "model": "deepseek/deepseek-v4-flash",
+ "provider": "Venice",
+ "system_fingerprint": null,
+ "service_tier": null,
+ "choices": [
+  {
+   "index": 0,
+   "logprobs": null,
+   "finish_reason": "stop",
+   "native_finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "content": "{\"labels\": [{\"id\": \"telegram:1:7151:c:572119#s0\", \"kind\": \"participant_reaction\", \"actor\": null, \"action\": \"ask\", \"object\": \"wallet\", \"qualifiers\": {\"counterparty\": \"ZEC\"}, \"origin\": \"own\", \"source_role\": \"participant\", \"verification_status\": \"unverified\", \"quote\": \"Ребят, каким кошельком пользуетесь в ZEC?\", \"span\": [0, 42]}, {\"id\": \"telegram:1:7152:c:572207#s0\", \"kind\": \"participant_reaction\", \"actor\": null, \"action\": \"state\", \"object\": \"price\", \"qualifiers\": {\"version\": \"0.018 ZEC\"}, \"origin\": \"own\", \"source_role\": \"participant\", \"verification_status\": \"unverified\", \"quote\": \"0.018 ZEC флор\", \"span\": [0, 14]}, {\"id\": \"telegram:6:2432:c:150645#s0\", \"kind\": \"participant_reaction\", \"actor\": null, \"action\": \"compare\", \"object\": \"cryptocurrency\", \"qualifiers\": {\"counterparty\": \"hype\"}, \"origin\": \"own\", \"source_role\": \"participant\", \"verification_status\": \"unverified\", \"quote\": \"То бишь hype или zec 😁\", \"span\": [0, 21]}, {\"id\": \"telegram:6:2426:c:150651#s0\", \"kind\": \"participant_reaction\", \"actor\": null, \"action\": \"criticize\", \"object\": \"ZEC\", \"qualifiers\": {\"counterparty\": \"Monero\"}, \"origin\": \"own\", \"source_role\": \"participant\", \"verification_status\": \"unverified\", \"quote\": \"Не вижу пока будущего за zec, весь криминал сидит онли на монеро. Вся приватность только там пока что. Приватность в зикеше отсутствует.\", \"span\": [0, 131]}]}",
+    "refusal": null,
+    "reasoning": null
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 713,
+  "completion_tokens": 470,
+  "total_tokens": 1183,
+  "cost": 0.0001593508,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.0001593508,
+   "upstream_inference_prompt_cost": 6.88758e-05,
+   "upstream_inference_completions_cost": 9.0475e-05
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

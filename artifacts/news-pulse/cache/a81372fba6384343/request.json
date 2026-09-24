@@ -1,0 +1,23 @@
+{
+ "a": {
+  "quote": "• Arc Citizens: 10,000 fully on-chain identity PFP, запуск планируется 16 сентября;",
+  "actor": null,
+  "action": "launch",
+  "object": "Arc Citizens",
+  "qualifiers": {
+   "event_date": "16 сентября",
+   "version": "10,000 fully on-chain identity PFP"
+  },
+  "url": "https://t.me/whitelist1/7135"
+ },
+ "b": {
+  "quote": "👍 #AERO Запуск основной сети Arc",
+  "actor": "Arc",
+  "action": "запуск основной сети",
+  "object": "основная сеть",
+  "qualifiers": {
+   "event_date": "16 сентября"
+  },
+  "url": "https://t.me/WEB3_AGGREGATOR/422881"
+ }
+}

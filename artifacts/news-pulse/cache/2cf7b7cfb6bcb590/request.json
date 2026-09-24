@@ -1,0 +1,25 @@
+{
+ "a": {
+  "quote": "Circle's Arc L1 hit mainnet",
+  "actor": "Circle",
+  "action": "hit mainnet",
+  "object": "Arc L1",
+  "qualifiers": {
+   "version": "mainnet"
+  },
+  "url": "https://t.me/WEB3_AGGREGATOR/423249"
+ },
+ "b": {
+  "quote": "#shorts Забираем бесплатный NFT в сети Arc",
+  "actor": "Arc",
+  "action": "launched",
+  "object": "mainnet",
+  "qualifiers": {
+   "version": "mainnet",
+   "event_date": "2026-09-16",
+   "place": null,
+   "counterparty": null
+  },
+  "url": "https://t.me/WEB3_AGGREGATOR/423117"
+ }
+}

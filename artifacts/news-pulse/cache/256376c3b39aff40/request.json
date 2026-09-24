@@ -1,0 +1,17 @@
+{
+ "segments": [
+  {
+   "id": "telegram:15:423337#s4",
+   "text": "3 giveaways on X:\none on zec\ntwo\nthree",
+   "mentions": [
+    {
+     "text": "zec",
+     "status": "confirmed"
+    }
+   ],
+   "kind_hint": "post",
+   "url": "https://t.me/WEB3_AGGREGATOR/423337",
+   "time": "2026-09-19T07:18:02+00:00"
+  }
+ ]
+}

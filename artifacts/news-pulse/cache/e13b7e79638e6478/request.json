@@ -1,0 +1,24 @@
+{
+ "a": {
+  "quote": "Circle 16 сентября запускает Arc - собственный L1 под стейблкоин-финансы. USDC перестаёт быть просто токеном внутри чужих сетей и становится основой своей экосистемы.",
+  "actor": "Circle",
+  "action": "launch",
+  "object": "Arc",
+  "qualifiers": {
+   "event_date": "16 сентября"
+  },
+  "url": "https://t.me/Slavik_investor_updates/6918"
+ },
+ "b": {
+  "quote": "В мае прошел закрытый пресейл токена ARC, где собрали $222 млн по оценке $3 млрд.",
+  "actor": "Circle",
+  "action": "hold presale",
+  "object": "ARC token",
+  "qualifiers": {
+   "event_date": "май",
+   "place": "private presale",
+   "counterparty": "BlackRock, a16z, Apollo, ICE, ARK, SBI, Standard Chartered"
+  },
+  "url": "https://t.me/WEB3_AGGREGATOR/422853"
+ }
+}

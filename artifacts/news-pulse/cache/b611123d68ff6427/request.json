@@ -1,0 +1,21 @@
+{
+ "segments": [
+  {
+   "id": "telegram:9:1041664#s0",
+   "text": "CRYPTO   UPDATE:   \n#BITCOIN 81406.00 +0.35%   \n#ETHER 2636.40 +0.19%   \n#CARDANO 0.2284   +2.33%   \n#BITCOINCASH 253.82 -0.74%   \n#EOS 0.1295 +0%   \n#LITECOIN 57.34 +0.21%   \n#STELLAR 0.1971 +1.76%   \n#DOGECOIN 0.0893 +1.13%   \n#UNISWAP 8.6321 -4.78%   \n#CHAINLINK 12.4912 +1.21%   \n#POLKADOT 1.1229 -1.03%   \n#SOLANA 110.8800 -2.31%   \n#AVALANCHE 9.7000 +17.85%   \n#NEO 136.725 +8011.87% ...",
+   "mentions": [
+    {
+     "text": "#ETHER",
+     "status": "confirmed"
+    },
+    {
+     "text": "ETHER",
+     "status": "confirmed"
+    }
+   ],
+   "kind_hint": "post",
+   "url": "https://t.me/marketfeed/1041664",
+   "time": "2026-09-19T18:53:11+00:00"
+  }
+ ]
+}

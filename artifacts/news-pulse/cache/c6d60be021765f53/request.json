@@ -1,0 +1,21 @@
+{
+ "segments": [
+  {
+   "id": "telegram:18:31476#s2",
+   "text": "➤ Bitcoin OG увеличил шорт по ZEC. Сейчас он шортит 37,760 ZEC ($51,5m) с нереализованным убытком $26m. Цена ликвидации = $2632.\n\n",
+   "mentions": [
+    {
+     "text": "ZEC",
+     "status": "confirmed"
+    },
+    {
+     "text": "ZEC",
+     "status": "confirmed"
+    }
+   ],
+   "kind_hint": "post",
+   "url": "https://t.me/crypto_hd/31476",
+   "time": "2026-09-17T06:49:07+00:00"
+  }
+ ]
+}

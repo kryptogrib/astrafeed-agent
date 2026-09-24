@@ -1,0 +1,24 @@
+{
+ "a": {
+  "quote": "Я вам просто напоминаю, что в 18 по Москве официально ARC запускают и вы уже сейчас можете абсолютно бесплатно создавать свои мемы на https://arc.openfair.app/",
+  "actor": null,
+  "action": "launch",
+  "object": "ARC",
+  "qualifiers": {
+   "event_date": "18 по Москве",
+   "place": "https://arc.openfair.app/"
+  },
+  "url": "https://t.me/WEB3_AGGREGATOR/423121"
+ },
+ "b": {
+  "quote": "Circle запустила мейннет Arc — сеть уже принимает транзакции, а за первые два часа в неё завели более $370 млн USDC.",
+  "actor": "Circle",
+  "action": "launched mainnet",
+  "object": "Arc",
+  "qualifiers": {
+   "event_date": "2026-09-16",
+   "place": "network"
+  },
+  "url": "https://t.me/WEB3_AGGREGATOR/423143"
+ }
+}

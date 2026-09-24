@@ -1,0 +1,32 @@
+{
+ "choices": [
+  {
+   "message": {
+    "content": "{\"labels\": [{\"id\": \"telegram:11:96789#s0\", \"kind\": \"promo_service\", \"actor\": null, \"action\": \"price_ticker\", \"object\": \"ZEC\", \"qualifiers\": {\"version\": \">1400$\"}, \"origin\": \"unknown\", \"source_role\": \"unknown\", \"verification_status\": \"unverified\", \"quote\": \"💰 #ZEC >1400$\", \"span\": [0, 15]}]}"
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 1683,
+  "completion_tokens": 1454,
+  "total_tokens": 3137,
+  "cost": 0.0004424728,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.0004424728,
+   "upstream_inference_prompt_cost": 0.0001625778,
+   "upstream_inference_completions_cost": 0.000279895
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

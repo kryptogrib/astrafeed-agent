@@ -1,0 +1,46 @@
+{
+ "id": "gen-1790195808-ehJW9ijbJamHbIwhVOxo",
+ "object": "chat.completion",
+ "created": 1790195808,
+ "model": "deepseek/deepseek-v4-flash",
+ "provider": "SiliconFlow",
+ "system_fingerprint": null,
+ "service_tier": null,
+ "choices": [
+  {
+   "index": 0,
+   "logprobs": null,
+   "finish_reason": "stop",
+   "native_finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "content": "{\n  \"labels\": [\n    {\n      \"id\": \"telegram:11:96696#s1\",\n      \"kind\": \"event\",\n      \"actor\": null,\n      \"action\": \"net inflow\",\n      \"object\": \"spot ETH-ETF\",\n      \"qualifiers\": {\n        \"amount\": \"$216.4 million\"\n      },\n      \"origin\": \"unknown\",\n      \"source_role\": \"unknown\",\n      \"verification_status\": \"unverified\",\n      \"quote\": \"Общий чистый приток спотовых ETH-ETF составил $216,4 млн.\",\n      \"span\": [0, 62]\n    },\n    {\n      \"id\": \"telegram:20:48883#s1\",\n      \"kind\": \"promo_service\",\n      \"actor\": null,\n      \"action\": \"link to trade\",\n      \"object\": \"ETH trade page\",\n      \"qualifiers\": {},\n      \"origin\": \"unknown\",\n      \"source_role\": \"unknown\",\n      \"verification_status\": \"unverified\",\n      \"quote\": \"https://trade.padre.gg/trade/eth/u4_0x000000000004444c5dc75cb358380d2e3de08a90_0xfd1c4559ad314e035e2440d88574ce44ff10ab05cfc90e4c8591b2fae7c73a6f\",\n      \"span\": [0, 137]\n    },\n    {\n      \"id\": \"telegram:20:48890#s0\",\n      \"kind\": \"participant_reaction\",\n      \"actor\": \"author\",\n      \"action\": \"comments on announcement\",\n      \"object\": \"ETH mainnet usage\",\n      \"qualifiers\": {},\n      \"origin\": \"own\",\n      \"source_role\": \"participant\",\n      \"verification_status\": \"unverified\",\n      \"quote\": \"How I'm seeing it is they announced it about 11H ago, nobody bat an eye (bc again not many use ETH mainnet as comparable to RH/SOL/BSC for ex)\",\n      \"span\": [0, 137]\n    },\n    {\n      \"id\": \"telegram:20:48890#s2\",\n      \"kind\": \"participant_reaction\",\n      \"actor\": \"author\",\n      \"action\": \"comments on ETH's lack of staying power\",\n      \"object\": \"ETH\",\n      \"qualifiers\": {},\n      \"origin\": \"own\",\n      \"source_role\": \"participant\",\n      \"verification_status\": \"unverified\",\n      \"quote\": \"Until it forms a base and then slowly/gradually get the attention and staying power and grows from there. Not really going to compare it to anything rn atm bc ETH has not had anything w/ staying power (MOSTLY)\",\n      \"span\": [0, 177]\n    },\n    {\n      \"id\": \"telegram:15:422837#s0\",\n      \"kind\": \"promo_service\",\n      \"actor\": null,\n      \"action\": \"promotes launchpad\",\n      \"object\": \"sender.family\",\n      \"qualifiers\": {\n        \"platform\": \"Ethereum\",\n        \"type\": \"like STONK\"\n      },\n      \"origin\": \"unknown\",\n      \"source_role\": \"unknown\",\n      \"verification_status\": \"unverified\",\n      \"quote\": \"https://sender.family/\\nЛаунчпад на эфире по типу STONK\",\n      \"span\": [0, 55]\n    },\n    {\n      \"id\": \"telegram:9:1036578#s0\",\n      \"kind\": \"event\",\n      \"actor\": null,\n      \"action\": \"price update\",\n      \"object\": \"ETHER\",\n      \"qualifiers\": {\n        \"price\": \"2535.30\",\n        \"change\": \"+0.17%\"\n      },\n      \"origin\": \"unknown\",\n      \"source_role\": \"editorial\",\n      \"verification_status\": \"unverified\",\n      \"quote\": \"#ETHER 2535.30 +0.17%\",\n      \"span\": [22, 43]\n    },\n    {\n      \"id\": \"telegram:21:21060#s2\",\n      \"kind\": \"event\",\n      \"actor\": null,\n      \"action\": \"funding rate update\",\n      \"object\": \"ETH\",\n      \"qualifiers\": {\n        \"exchange\": \"Binance\",\n        \"rate\": \"+0.0030%\",\n        \"side\": \"bulls pay bears\"\n      },\n      \"origin\": \"unknown\",\n      \"source_role\": \"unknown\",\n      \"verification_status\": \"unverified\",\n      \"quote\": \"ETH: Binance: +0.0030% 🐂 | Bybit: +0.0057% 🐂\",\n      \"span\": [0, 55]\n    },\n    {\n      \"id\": \"telegram:15:422844#s4\",\n      \"kind\": \"event\",\n      \"actor\": \"Coinbase\",\n      \"action\": \"offers service\",\n      \"object\": \"Coinbase for Agents\",\n      \"qualifiers\": {\n        \"since\": \"June\",\n        \"assets\": [\"bitcoin\", \"ether\", \"XRP\", \"SOL\"]\n      },\n      \"origin\": \"retelling\",\n      \"source_role\": \"editorial\",\n      \"verification_status\": \"source_statement\",\n      \"quote\": \"Сам сервис Coinbase for Agents работает с июня: изолированные суб-портфели с лимитами, где агент торгует биткоином, эфиром, XRP и SOL прямо из ChatGPT или Claude.\",\n      \"span\": [0, 177]\n    },\n    {\n      \"id\": \"telegram:15:422853#s2\",\n      \"kind\": \"author_position\",\n      \"actor\": \"author\",\n      \"action\": \"compares\",\n      \"object\": \"Ethereum\",\n      \"qualifiers\": {\n        \"difference\": \"gas in USDC, deterministic finality\"\n      },\n      \"origin\": \"own\",\n      \"source_role\": \"author\",\n      \"verification_status\": \"unverified\",\n      \"quote\": \"Как минимум, отличие от Ethereum, Base и Solana здесь есть. Газ платится в USDC, а не в волатильном токене, поэтому комиссия не скачет вместе с ценой газа. Финальность детерминированная, то есть после подтверждения блока отката уже не будет и ждать двенадцать блоков не нужно. Хоть валидаторы и выбраны из узкого списка, деплоить контракты может кто угодно.\",\n      \"span\": [0, 337]\n    },\n    {\n      \"id\": \"telegram:15:422853#s4\",\n      \"kind\": \"event\",\n      \"actor\": null,\n      \"action\": \"technical description\",\n      \"object\": \"Ethereum contracts\",\n      \"qualifiers\": {\n        \"consensus\": \"BFT on Tendermint\",\n        \"block time\": \"~0.5s\",\n        \"execution\": \"EVM fork\"\n      },\n      \"origin\": \"unknown\",\n      \"source_role\": \"author\",\n      \"verification_status\": \"unverified\",\n      \"quote\": \"💰 Технически под капотом находится BFT-консенсус на базе Tendermint с блоком около полусекунды и исполнением на форке EVM, так что контракты с Ethereum переносятся почти без изменений. USDC встроен как нативный газ на уровне протокола, а не как надстройка сверху.\",\n      \"span\": [0, 247]\n    },\n    {\n      \"id\": \"telegram:15:422854#s11\",\n      \"kind\": \"promo_service\",\n      \"actor\": null,\n      \"action\": \"mentions handle\",\n      \"object\": \"ValdeMURRR.eth\",\n      \"qualifiers\": {},\n      \"origin\": \"unknown\",\n      \"source_role\": \"unknown\",\n      \"verification_status\": \"unverified\",\n      \"quote\": \"🗿 GS Alpha: ValdeMURRR.eth | Чат | Щитпост\",\n      \"span\": [0, 47]\n    },\n    {\n      \"id\": \"telegram:20:48937#s0\",\n      \"kind\": \"participant_reaction\",\n      \"actor\": \"author\",\n      \"action\": \"expresses surprise\",\n      \"object\": \"ETH Asteroid takeover\",\n      \"qualifiers\": {},\n      \"origin\": \"own\",\n      \"source_role\": \"participant\",\n      \"verification_status\": \"unverified\",\n      \"quote\": \"Did not know ETH Asteroid was taken over by the RH one\",\n      \"span\": [0, 61]\n    }\n  ]\n}",
+    "refusal": null,
+    "reasoning": null
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 2089,
+  "completion_tokens": 1908,
+  "total_tokens": 3997,
+  "cost": 0.00080581,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.00080581,
+   "upstream_inference_prompt_cost": 0.00027157,
+   "upstream_inference_completions_cost": 0.00053424
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

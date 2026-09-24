@@ -1,0 +1,28 @@
+{
+ "a": {
+  "quote": "Circle's Arc Stablecoin L1 Goes Live on Mainnet",
+  "actor": "Circle",
+  "action": "launched",
+  "object": "Arc mainnet",
+  "qualifiers": {
+   "event_date": "2026-09-16"
+  },
+  "url": "https://t.me/WEB3_AGGREGATOR/423100"
+ },
+ "b": {
+  "quote": "CIRCLE LAUNCHES ARC MAINNET WITH BLACKROCK AND VISA AMONG VALIDATORS, MINTS 10 BILLION ARC TOKENS",
+  "actor": "Circle",
+  "action": "launches",
+  "object": "ARC mainnet",
+  "qualifiers": {
+   "version": "mainnet",
+   "event_date": null,
+   "place": null,
+   "counterparty": [
+    "BlackRock",
+    "Visa"
+   ]
+  },
+  "url": "https://t.me/marketfeed/1039167"
+ }
+}

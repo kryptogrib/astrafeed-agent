@@ -1,0 +1,17 @@
+{
+ "segments": [
+  {
+   "id": "telegram:15:423013#s3",
+   "text": "Zama's first vault, launched in June with Morpho and Steakhouse, pulled in $40M within seven weeks. Alongside it, the new Zama Swap Protocol lets users trade confidential assets on Ethereum without revealing transaction size or intent.\n\n",
+   "mentions": [
+    {
+     "text": "Ethereum",
+     "status": "confirmed"
+    }
+   ],
+   "kind_hint": "post",
+   "url": "https://t.me/WEB3_AGGREGATOR/423013",
+   "time": "2026-09-15T13:01:35+00:00"
+  }
+ ]
+}

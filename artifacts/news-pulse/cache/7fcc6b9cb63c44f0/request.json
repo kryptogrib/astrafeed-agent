@@ -1,0 +1,26 @@
+{
+ "a": {
+  "quote": "1inch Swap: Arc поддерживается 1inch с первого дня в качестве launch partner;\n1inch Business: пользователи с  активной подпиской могут сразу использовать API;  \n1inch Aqua также теперь работает на всех 4 сетях.\n\n",
+  "actor": "1inch",
+  "action": "support",
+  "object": "Arc",
+  "qualifiers": {
+   "event_date": null,
+   "place": null,
+   "version": null,
+   "counterparty": null
+  },
+  "url": "https://t.me/whitelist1/7153"
+ },
+ "b": {
+  "quote": "• Arc Citizens: 10,000 fully on-chain identity PFP, запуск планируется 16 сентября;",
+  "actor": null,
+  "action": "launch",
+  "object": "Arc Citizens",
+  "qualifiers": {
+   "event_date": "16 сентября",
+   "version": "10,000 fully on-chain identity PFP"
+  },
+  "url": "https://t.me/whitelist1/7135"
+ }
+}

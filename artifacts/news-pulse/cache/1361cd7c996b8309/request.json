@@ -1,0 +1,17 @@
+{
+ "segments": [
+  {
+   "id": "telegram:12:4878#s3",
+   "text": "Также Barry Silbert из Grayscale (крупнейший выгодоприобретатель от пампа Zec) имеет огромные багажи Near еще с 2021 года.\n\n",
+   "mentions": [
+    {
+     "text": "Zec",
+     "status": "confirmed"
+    }
+   ],
+   "kind_hint": "post",
+   "url": "https://t.me/Defiscamcheck/4878",
+   "time": "2026-09-22T12:23:23+00:00"
+  }
+ ]
+}

@@ -1,0 +1,46 @@
+{
+ "id": "gen-1790191376-25JIkyPPxIiJTOaZjVYm",
+ "object": "chat.completion",
+ "created": 1790191376,
+ "model": "deepseek/deepseek-v4-flash",
+ "provider": "Novita",
+ "system_fingerprint": null,
+ "service_tier": null,
+ "choices": [
+  {
+   "index": 0,
+   "logprobs": null,
+   "finish_reason": "stop",
+   "native_finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "content": "{\"labels\": [{\"id\": \"telegram:11:96732#s0\", \"kind\": \"event\", \"actor\": null, \"action\": \"net inflow\", \"object\": \"BTC-ETF\", \"qualifiers\": {\"amount\": \"$160.04 million\", \"date\": \"yesterday\"}, \"origin\": \"retelling\", \"source_role\": \"unknown\", \"verification_status\": \"unverified\", \"quote\": \"Вчера общий чистый приток спотовых BTC-ETF составил ~$160,04 млн.\", \"span\": [0, 62]}, {\"id\": \"telegram:11:96732#s1\", \"kind\": \"event\", \"actor\": null, \"action\": \"net inflow\", \"object\": \"ETH-ETF\", \"qualifiers\": {\"amount\": \"$121.02 million\"}, \"origin\": \"retelling\", \"source_role\": \"unknown\", \"verification_status\": \"unverified\", \"quote\": \"Общий чистый приток спотовых ETH-ETF составил $121,02 млн.\", \"span\": [0, 55]}, {\"id\": \"telegram:11:96734#s0\", \"kind\": \"event\", \"actor\": \"Solana\", \"action\": \"increased transaction data capacity\", \"object\": \"Solana\", \"qualifiers\": {\"comparison\": \"Ethereum\", \"effect\": \"advantage\"}, \"origin\": \"retelling\", \"source_role\": \"editorial\", \"verification_status\": \"source_statement\", \"quote\": \"Solana более чем втрое увеличила объем данных, которые могут поместиться в транзакции, предоставив разработчикам возможности для более сложных сделок, подтверждения операций с корпоративных кошельков и приложений, обеспечивающих конфиденциальность. Это даёт преимущество перед Ethereum.\", \"span\": [0, 220]}, {\"id\": \"telegram:11:96735#s1\", \"kind\": \"event\", \"actor\": \"two inactive wallets\", \"action\": \"transferred\", \"object\": \"14,700 ETH\", \"qualifiers\": {\"destination\": \"OKX\", \"amount\": \"$36.94 million\"}, \"origin\": \"retelling\", \"source_role\": \"unknown\", \"verification_status\": \"unverified\", \"quote\": \"Два кошелька, которые более года были неактивны (возможно, принадлежащие одному и тому же киту), перевели на OKX 14 700 #ETH ($36,94 млн);\", \"span\": [0, 112]}, {\"id\": \"telegram:11:96735#s1\", \"kind\": \"event\", \"actor\": \"Multicoin Capital\", \"action\": \"transferred\", \"object\": \"333,166 HYPE\", \"qualifiers\": {\"destination\": \"Coinbase Prime\", \"amount\": \"$26.73 million\"}, \"origin\": \"retelling\", \"source_role\": \"unknown\", \"verification_status\": \"unverified\", \"quote\": \"Multicoin Capital перевели на Coinbase Prime ещё 333 166 #HYPE ($26,73 млн);\", \"span\": [113, 190]}, {\"id\": \"telegram:11:96735#s1\", \"kind\": \"event\", \"actor\": \"Lazarus Group\", \"action\": \"sold\", \"object\": \"911 ETH\", \"qualifiers\": {\"amount\": \"$2.28 million\", \"average_price\": \"$2,499\"}, \"origin\": \"retelling\", \"source_role\": \"unknown\", \"verification_status\": \"unverified\", \"quote\": \"Хакеры из Lazarus Group продали 911 #ETH ($2,28 млн) по средней цене $2 499.\", \"span\": [191, 260]}, {\"id\": \"telegram:9:1038132#s0\", \"kind\": \"event\", \"actor\": \"Solana\", \"action\": \"increased transaction data capacity\", \"object\": \"Solana\", \"qualifiers\": {\"comparison\": \"Ethereum\", \"effect\": \"advantage\"}, \"origin\": \"retelling\", \"source_role\": \"editorial\", \"verification_status\": \"source_statement\", \"quote\": \"SOLANA TRANSACTIONS JUST GOT MORE THAN 3 TIMES BIGGER, GIVING AN EDGE OVER ETHEREUM ...\", \"span\": [0, 80]}, {\"id\": \"telegram:9:1038133#s0\", \"kind\": \"event\", \"actor\": \"Ethereum and Base developers\", \"action\": \"abandoned effort\", \"object\": \"account abstraction proposals\", \"qualifiers\": {}, \"origin\": \"retelling\", \"source_role\": \"editorial\", \"verification_status\": \"source_statement\", \"quote\": \"ETHEREUM, BASE DEVELOPERS ABANDON EFFORT TO ALIGN ACCOUNT ABSTRACTION PROPOSALS ...\", \"span\": [0, 80]}, {\"id\": \"telegram:18:31423#s4\", \"kind\": \"event\", \"actor\": \"Derive\", \"action\": \"proposed to abandon own blockchain\", \"object\": \"Derive Chain\", \"qualifiers\": {\"new_architecture\": \"ZK V3\", \"settlement\": \"Ethereum\", \"migration\": \"automatic\"}, \"origin\": \"retelling\", \"source_role\": \"unknown\", \"verification_status\": \"unverified\", \"quote\": \"В то же время в Derive предлагают отказаться от собственного блокчейна Derive Chain и перейти на новую ZK-архитектуру V3 с расчетами в Ethereum. Все позиции и балансы пользователей планируют перенести автоматически.\", \"span\": [0, 170]}, {\"id\": \"telegram:21:21086#s11\", \"kind\": \"event\", \"actor\": \"Ethereum\", \"action\": \"outperformed Bitcoin\", \"object\": \"Ethereum\", \"qualifiers\": {\"growth\": \"20%\", \"since\": \"June\"}, \"origin\": \"retelling\", \"source_role\": \"editorial\", \"verification_status\": \"source_statement\", \"quote\": \"Курс Ethereum обошел биткоин по росту на 20% с июня. Какие перспективы\", \"span\": [0, 70]}, {\"id\": \"telegram:15:422983#s0\", \"kind\": \"event\", \"actor\": \"MEV bot\", \"action\": \"front-ran\", \"object\": \"exploit\", \"qualifiers\": {\"amount\": \"$7.81M\", \"asset\": \"rsETH\", \"network\": \"Ethereum\"}, \"origin\": \"retelling\", \"source_role\": \"unknown\", \"verification_status\": \"unverified\", \"quote\": \"A MEV bot front-runs a ~$7.81M rsETH exploit on Ethereum.\", \"span\": [0, 60]}, {\"id\": \"telegram:15:422990#s2\", \"kind\": \"event\", \"actor\": null, \"action\": \"price update\", \"object\": \"Ethereum\", \"qualifiers\": {\"price\": \"$2,475\", \"change\": \"-1.89%\"}, \"origin\": \"retelling\", \"source_role\": \"unknown\", \"verification_status\": \"unverified\", \"quote\": \"Ethereum: $2,475 -1.89%\", \"span\": [0, 25]}, {\"id\": \"telegram:15:422992#s1\", \"kind\": \"event\", \"actor\": \"IMD\", \"action\": \"launched\", \"object\": \"meme token\", \"qualifiers\": {\"features\": \"burn on sell, staking rewards, AI agents\", \"network\": \"Ethereum\", \"origin\": \"Fren Pet\"}, \"origin\": \"retelling\", \"source_role\": \"unknown\", \"verification_status\": \"unverified\", \"quote\": \"Most meme tokens do nothing. IMD tries to do the opposite: every sell burns its own supply, stakers earn from those burns, and the whole thing is meant to bankroll 2,000 AI agents running on-chain. It's Fren Pet, the old Base tamagotchi, reborn on Ethereum with a self-funding economy bolted on.\", \"span\": [0, 250]}, {\"id\": \"telegram:11:96738#s0\", \"kind\": \"event\", \"actor\": \"Matrixport\", \"action\": \"transferred\", \"object\": \"1,400 BTC\", \"qualifiers\": {\"destination\": \"Binance\", \"amount\": \"$107.8 million\"}, \"origin\": \"retelling\", \"source_role\": \"unknown\", \"verification_status\": \"unverified\", \"quote\": \"Matrixport перевела 1 400 #BTC ($107,8 млн) на Binance\", \"span\": [0, 60]}, {\"id\": \"telegram:11:96738#s0\", \"kind\": \"event\", \"actor\": \"Matrixport\", \"action\": \"withdrew\", \"object\": \"10,000 ETH\", \"qualifiers\": {\"source\": \"Binance\", \"amount\": \"$24.67 million\"}, \"origin\": \"retelling\", \"source_role\": \"unknown\", \"verification_status\": \"unverified\", \"quote\": \"и вывела 10 000 #ETH ($24,67 млн) с Binance.\", \"span\": [61, 100]}]}",
+    "refusal": null,
+    "reasoning": null
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 1995,
+  "completion_tokens": 2053,
+  "total_tokens": 4048,
+  "cost": 0.000825468,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 256,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.000825468,
+   "upstream_inference_prompt_cost": 0.000250628,
+   "upstream_inference_completions_cost": 0.00057484
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

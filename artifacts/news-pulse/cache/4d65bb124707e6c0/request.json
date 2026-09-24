@@ -1,0 +1,17 @@
+{
+ "segments": [
+  {
+   "id": "telegram:15:423462#s3",
+   "text": "Fetch.ai has suspended its Ethereum bridge while it investigates and works to contain the fallout. The incident pushes September's crypto hack losses past $333M, with a single attacker responsible for much of this weekend's damage.\n\n",
+   "mentions": [
+    {
+     "text": "Ethereum",
+     "status": "confirmed"
+    }
+   ],
+   "kind_hint": "post",
+   "url": "https://t.me/WEB3_AGGREGATOR/423462",
+   "time": "2026-09-21T09:47:48+00:00"
+  }
+ ]
+}

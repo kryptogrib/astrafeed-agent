@@ -1,0 +1,17 @@
+{
+ "segments": [
+  {
+   "id": "telegram:9:1035069#s0",
+   "text": "IBM, LOCKHEED MARTIN ANNOUNCE SWISS QUANTUM INNOVATION HUB AT ETH ZURICH, ANCHORED BY SWITZERLAND'S FIRST IBM QUANTUM COMPUTER ...",
+   "mentions": [
+    {
+     "text": "ETH",
+     "status": "confirmed"
+    }
+   ],
+   "kind_hint": "post",
+   "url": "https://t.me/marketfeed/1035069",
+   "time": "2026-09-10T07:03:25+00:00"
+  }
+ ]
+}

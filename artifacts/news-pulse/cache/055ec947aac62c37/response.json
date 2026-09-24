@@ -1,0 +1,32 @@
+{
+ "choices": [
+  {
+   "message": {
+    "content": "{\"labels\": [{\"id\": \"telegram:15:423461#s5\", \"kind\": \"event\", \"actor\": \"Circle\", \"action\": \"launch\", \"object\": \"сеть Arc\", \"qualifiers\": {\"event_date\": null, \"place\": null, \"version\": null, \"counterparty\": null}, \"origin\": \"retelling\", \"source_role\": \"editorial\", \"verification_status\": \"source_statement\", \"quote\": \"4⃣ Блокчейн Circle для BlackRock залили мемами — Circle запустила сеть Arc с валидаторами уровня BlackRock и Visa, но за первый день 82% объёма ($336 млн) ушло в мемкоин-лаунчпады, а не в институции. Знакомый сценарий: через 12 часов мемы рухнули на 40–75%.\\nЧитать ➡️\\n\\n\", \"span\": [0, 232]}]}"
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 1994,
+  "completion_tokens": 1837,
+  "total_tokens": 3831,
+  "cost": 0.000555464,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.000555464,
+   "upstream_inference_prompt_cost": 0.000195412,
+   "upstream_inference_completions_cost": 0.000360052
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

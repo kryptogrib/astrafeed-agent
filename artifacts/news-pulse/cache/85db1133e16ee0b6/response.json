@@ -1,0 +1,32 @@
+{
+ "choices": [
+  {
+   "message": {
+    "content": "{\"labels\": [{\"id\": \"telegram:10:385538#s2\", \"kind\": \"event\", \"actor\": \"Zcash\", \"action\": \"targets upgrade\", \"object\": \"upgrade\", \"qualifiers\": {\"event_date\": null, \"place\": null, \"version\": \"NU7\"}, \"origin\": \"retelling\", \"source_role\": \"editorial\", \"verification_status\": \"source_statement\", \"quote\": \"Zcash targets November upgrade to make private payments up to three times faster. NU7 would reduce block times to 25 seconds while setting aside at least 60% of transaction fees to supplement mining rewards beginning in 2031.\", \"span\": [0, 211]}]}"
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 2000,
+  "completion_tokens": 1792,
+  "total_tokens": 3792,
+  "cost": 0.00076176,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.00076176,
+   "upstream_inference_prompt_cost": 0.00026,
+   "upstream_inference_completions_cost": 0.00050176
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

@@ -1,0 +1,33 @@
+{
+ "segments": [
+  {
+   "id": "telegram:11:96857#s0",
+   "text": "🔁 #ETH Протокол рынка прогнозов Trueo заявляет о переходе с Base на Ethereum. Отмечает, что ценность разработки на Ethereum сильно недооценена и, развернув свой проект на Ethereum, Trueo окажется в непосредственной близости от самых ликвидных рынков криптовалют и всего в одном шаге от экосистем, созданных крупнейшими брендами в сфере криптовалют и финансов.\n",
+   "mentions": [
+    {
+     "text": "#ETH",
+     "status": "confirmed"
+    },
+    {
+     "text": "ETH",
+     "status": "confirmed"
+    },
+    {
+     "text": "Ethereum",
+     "status": "confirmed"
+    },
+    {
+     "text": "Ethereum",
+     "status": "confirmed"
+    },
+    {
+     "text": "Ethereum",
+     "status": "confirmed"
+    }
+   ],
+   "kind_hint": "post",
+   "url": "https://t.me/cryptoattack24/96857",
+   "time": "2026-09-22T03:55:02+00:00"
+  }
+ ]
+}

@@ -1,0 +1,32 @@
+{
+ "choices": [
+  {
+   "message": {
+    "content": "{\"labels\": [{\"id\": \"telegram:18:31503#s4\", \"kind\": \"event\", \"actor\": \"11 new wallets (likely one whale)\", \"action\": \"buy\", \"object\": \"ETH\", \"qualifiers\": {\"version\": null, \"event_date\": \"за последние три дня\", \"place\": \"Hyperliquid\", \"counterparty\": null}, \"origin\": \"retelling\", \"source_role\": \"editorial\", \"verification_status\": \"source_statement\", \"quote\": \"11 новых кошельков, вероятно принадлежащих одному киту, за последние три дня продали 602 BTC за $45,8m на Hyperliquid и купили 18,780 ETH на ту же сумму.\", \"span\": [0, 175]}]}"
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 1841,
+  "completion_tokens": 1699,
+  "total_tokens": 3540,
+  "cost": 0.0004851861,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 256,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.0004851861,
+   "upstream_inference_prompt_cost": 0.0001581286,
+   "upstream_inference_completions_cost": 0.0003270575
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

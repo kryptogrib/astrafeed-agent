@@ -1,0 +1,20 @@
+{
+ "a": {
+  "quote": "Circle's Arc Stablecoin L1 Goes Live on Mainnet",
+  "actor": "Circle",
+  "action": "launched",
+  "object": "Arc Stablecoin L1",
+  "qualifiers": {
+   "event_date": "2026-09-16"
+  },
+  "url": "https://t.me/WEB3_AGGREGATOR/423100"
+ },
+ "b": {
+  "quote": "Arc arrives as a full-stack financial platform rather than a bare chain, shipping assets, applications, interoperability, and Circle platform services from day one.",
+  "actor": "Arc",
+  "action": "arrives",
+  "object": null,
+  "qualifiers": {},
+  "url": "https://t.me/WEB3_AGGREGATOR/423100"
+ }
+}

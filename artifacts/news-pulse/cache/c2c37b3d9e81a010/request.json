@@ -1,0 +1,17 @@
+{
+ "segments": [
+  {
+   "id": "telegram:15:423491#s6",
+   "text": "🟢С 2018 по 2022 год проект продавал себя как быстрый и удобный L1 с шардингом, аккаунтами вида alice.near и EVM-слоем Aurora. Токен дошел до $20, но таких L1 стало слишком много, а ликвидность осталась в Ethereum и Solana.\n",
+   "mentions": [
+    {
+     "text": "Ethereum",
+     "status": "confirmed"
+    }
+   ],
+   "kind_hint": "post",
+   "url": "https://t.me/WEB3_AGGREGATOR/423491",
+   "time": "2026-09-21T13:35:54+00:00"
+  }
+ ]
+}

@@ -1,0 +1,17 @@
+{
+ "segments": [
+  {
+   "id": "telegram:20:48959#s0",
+   "text": "Got sick and rested up, feeling better now. Threw some coins in ARC Chain",
+   "mentions": [
+    {
+     "text": "ARC",
+     "status": "confirmed"
+    }
+   ],
+   "kind_hint": "post",
+   "url": "https://t.me/PowsGemCalls/48959",
+   "time": "2026-09-16T00:07:54+00:00"
+  }
+ ]
+}

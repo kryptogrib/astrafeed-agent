@@ -1,0 +1,26 @@
+{
+ "a": {
+  "quote": "1inch Swap: Arc поддерживается 1inch с первого дня в качестве launch partner;\n1inch Business: пользователи с  активной подпиской могут сразу использовать API;  \n1inch Aqua также теперь работает на всех 4 сетях.\n\n",
+  "actor": "1inch",
+  "action": "support",
+  "object": "Arc",
+  "qualifiers": {
+   "event_date": null,
+   "place": null,
+   "version": null,
+   "counterparty": null
+  },
+  "url": "https://t.me/whitelist1/7153"
+ },
+ "b": {
+  "quote": "• Mimo: story game на Arc, waitlist через X + wallet, будут частью игры.",
+  "actor": null,
+  "action": "launch",
+  "object": "Mimo",
+  "qualifiers": {
+   "place": "Arc",
+   "version": "story game"
+  },
+  "url": "https://t.me/whitelist1/7135"
+ }
+}

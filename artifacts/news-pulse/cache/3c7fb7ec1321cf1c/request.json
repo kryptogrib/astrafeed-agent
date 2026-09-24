@@ -1,0 +1,25 @@
+{
+ "a": {
+  "quote": "Официальная презентация запуска Arc начнется сегодня в 18:30 мск.",
+  "actor": null,
+  "action": "official presentation",
+  "object": "Arc launch",
+  "qualifiers": {
+   "event_date": "today at 18:30 MSK"
+  },
+  "url": "https://t.me/crypto_hd/31448"
+ },
+ "b": {
+  "quote": "🟢 16 сентября Circle запустила мейннет: среди валидаторов BlackRock и Visa, отчеканено 10 млрд ARC, за первые два часа в сеть вошло больше $370 млн USDC. Звучит громко, но это около 0,05% всего USDC, ликвидность тонкая, спреды заметные, половина приложений сырая.\n",
+  "actor": "Circle",
+  "action": "launch",
+  "object": "mainnet",
+  "qualifiers": {
+   "event_date": "16 сентября",
+   "place": null,
+   "version": null,
+   "counterparty": null
+  },
+  "url": "https://t.me/WEB3_AGGREGATOR/423286"
+ }
+}

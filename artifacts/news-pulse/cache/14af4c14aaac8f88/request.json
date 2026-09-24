@@ -1,0 +1,20 @@
+{
+ "a": {
+  "quote": "Основная сеть Arc запустилась. Arc и OpenSea запустили бесплатный минт NFT:",
+  "actor": null,
+  "action": "launch",
+  "object": "Arc mainnet",
+  "qualifiers": {},
+  "url": "https://t.me/WEB3_AGGREGATOR/423117"
+ },
+ "b": {
+  "quote": "• Arclings: 6,283 fully on-chain 1-bit SVG, mint на день Arc Mainnet, 16 сентября;",
+  "actor": "Arclings",
+  "action": "mint on Arc Mainnet day",
+  "object": "Arclings NFTs",
+  "qualifiers": {
+   "event_date": "16 сентября"
+  },
+  "url": "https://t.me/whitelist1/7135"
+ }
+}

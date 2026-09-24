@@ -1,0 +1,28 @@
+{
+ "a": {
+  "quote": "Сегодня, 16 сентября, Circle запустила мейннет Arc и сразу подключила его к Agent Stack, набору инструментов, который с 11 мая дает ИИ-агенту собственный кошелек.",
+  "actor": "Circle",
+  "action": "launched",
+  "object": "Arc mainnet",
+  "qualifiers": {
+   "version": "mainnet",
+   "event_date": "2026-09-16",
+   "place": null,
+   "counterparty": null
+  },
+  "url": "https://t.me/WEB3_AGGREGATOR/423105"
+ },
+ "b": {
+  "quote": "Если агент работает на Arc, то ему приходится проще, чем в других сетях. Газ здесь тоже в USDC, поэтому второй токен на комиссию не нужен, а транзакция подтверждается меньше чем за секунду.",
+  "actor": "Arc",
+  "action": "provides",
+  "object": "agent infrastructure",
+  "qualifiers": {
+   "version": null,
+   "event_date": null,
+   "place": null,
+   "counterparty": null
+  },
+  "url": "https://t.me/WEB3_AGGREGATOR/423105"
+ }
+}

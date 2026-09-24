@@ -1,0 +1,20 @@
+{
+ "a": {
+  "quote": "Ethereum убирает «налог на вход»: газ можно будет платить стейблами",
+  "actor": "Ethereum",
+  "action": "убирает «налог на вход»: газ можно будет платить стейблами",
+  "object": null,
+  "qualifiers": {},
+  "url": "https://t.me/WEB3_AGGREGATOR/422716"
+ },
+ "b": {
+  "quote": "Новости про то, что «Ethereum станет постквантовым к декабрю 2029», смешивают две разные истории.",
+  "actor": null,
+  "action": "reports",
+  "object": "news about Ethereum becoming post-quantum by December 2029",
+  "qualifiers": {
+   "event_date": "December 2029"
+  },
+  "url": "https://t.me/WEB3_AGGREGATOR/422716"
+ }
+}

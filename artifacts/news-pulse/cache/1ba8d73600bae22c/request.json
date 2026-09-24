@@ -1,0 +1,22 @@
+{
+ "a": {
+  "quote": "Завтра ARC паблик майнет",
+  "actor": "ARC",
+  "action": "launch",
+  "object": "public mainnet",
+  "qualifiers": {
+   "event_date": "завтра"
+  },
+  "url": "https://t.me/WEB3_AGGREGATOR/423067"
+ },
+ "b": {
+  "quote": "Вчера запустился новый блокчейн под названием ARC, где уже появляются первые проекты, активности мемы и т.п.",
+  "actor": null,
+  "action": "launched",
+  "object": "новый блокчейн ARC",
+  "qualifiers": {
+   "event_date": "вчера"
+  },
+  "url": "https://t.me/WEB3_AGGREGATOR/423219"
+ }
+}

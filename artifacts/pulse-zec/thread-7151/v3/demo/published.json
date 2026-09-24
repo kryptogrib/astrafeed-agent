@@ -1,0 +1,222 @@
+{
+ "link": "https://t.me/whitelist1/7151",
+ "model_labels": "artifacts/pulse-zec/thread-7151/v3/labels.json",
+ "corrections": "artifacts/pulse-zec/thread-7151/v3/demo/corrections.json",
+ "reviewer": null,
+ "published": [
+  {
+   "id": "572109",
+   "relevance": "relevant",
+   "aspect": "other",
+   "kind": "opinion",
+   "summary": "Одобряет, что все ZEC в одном месте.",
+   "quote": "все ZEC в одном котле!",
+   "context_ids": [
+    "post"
+   ],
+   "link": "https://t.me/whitelist1/7151?comment=572109",
+   "corrected": false,
+   "borderline": false
+  },
+  {
+   "id": "572119",
+   "relevance": "relevant",
+   "aspect": "usage",
+   "kind": "question",
+   "summary": "Спрашивает, каким кошельком пользуются в ZEC.",
+   "quote": "каким кошельком пользуетесь в ZEC?",
+   "context_ids": [
+    "post"
+   ],
+   "link": "https://t.me/whitelist1/7151?comment=572119",
+   "corrected": false,
+   "borderline": false
+  },
+  {
+   "id": "572120",
+   "relevance": "relevant",
+   "aspect": "usage",
+   "kind": "experience",
+   "summary": "Отвечает, что пользуется кошельком Noir.",
+   "quote": "Noir",
+   "context_ids": [
+    "572119"
+   ],
+   "link": "https://t.me/whitelist1/7151?comment=572120",
+   "corrected": false,
+   "borderline": false
+  },
+  {
+   "id": "572127",
+   "relevance": "relevant",
+   "aspect": "other",
+   "kind": "question",
+   "summary": "Спрашивает, заминтил ли кто-то ZADDR.",
+   "quote": "задр кто то заминтил?",
+   "context_ids": [
+    "post"
+   ],
+   "link": "https://t.me/whitelist1/7151?comment=572127",
+   "corrected": false,
+   "borderline": false
+  },
+  {
+   "id": "572128",
+   "relevance": "relevant",
+   "aspect": "other",
+   "kind": "opinion",
+   "summary": "Советует пропустить (скип) ZADDR.",
+   "quote": "скип",
+   "context_ids": [
+    "572127"
+   ],
+   "link": "https://t.me/whitelist1/7151?comment=572128",
+   "corrected": false,
+   "borderline": false
+  },
+  {
+   "id": "572129",
+   "relevance": "relevant",
+   "aspect": "other",
+   "kind": "experience",
+   "summary": "Предлагает пачку GTD на минт от zecvisions.",
+   "quote": "https://x.com/zecvisions Нужно если кому Дали пачку GTD на минт",
+   "context_ids": [
+    "572128"
+   ],
+   "link": "https://t.me/whitelist1/7151?comment=572129",
+   "corrected": false,
+   "borderline": false
+  },
+  {
+   "id": "572130",
+   "relevance": "relevant",
+   "aspect": "other",
+   "kind": "opinion",
+   "summary": "Говорит, что взял бы (предложение).",
+   "quote": "взял бы",
+   "context_ids": [
+    "572129"
+   ],
+   "link": "https://t.me/whitelist1/7151?comment=572130",
+   "corrected": false,
+   "borderline": false
+  },
+  {
+   "id": "572131",
+   "relevance": "relevant",
+   "aspect": "usage",
+   "kind": "experience",
+   "summary": "Жалуется, что ZEC сильно лагает при работе с ZADDR.",
+   "quote": "мне бы с задр разобраться, зек лагает ну просто дико",
+   "context_ids": [
+    "572129"
+   ],
+   "link": "https://t.me/whitelist1/7151?comment=572131",
+   "corrected": false,
+   "borderline": false
+  },
+  {
+   "id": "572133",
+   "relevance": "relevant",
+   "aspect": "other",
+   "kind": "opinion",
+   "summary": "Предлагает провести розыгрыш, обещает поддержку.",
+   "quote": "проводи розыгрыш, поддержим",
+   "context_ids": [
+    "572129"
+   ],
+   "link": "https://t.me/whitelist1/7151?comment=572133",
+   "corrected": false,
+   "borderline": false
+  },
+  {
+   "id": "572135",
+   "relevance": "relevant",
+   "aspect": "other",
+   "kind": "experience",
+   "summary": "Сообщает, что твит скоро будет.",
+   "quote": "Твит скоро будет",
+   "context_ids": [
+    "572130"
+   ],
+   "link": "https://t.me/whitelist1/7151?comment=572135",
+   "corrected": false,
+   "borderline": false
+  },
+  {
+   "id": "572141",
+   "relevance": "relevant",
+   "aspect": "other",
+   "kind": "opinion",
+   "summary": "Выражает заинтересованность (Ннада).",
+   "quote": "Ннада))",
+   "context_ids": [
+    "572129"
+   ],
+   "link": "https://t.me/whitelist1/7151?comment=572141",
+   "corrected": false,
+   "borderline": false
+  },
+  {
+   "id": "572143",
+   "relevance": "relevant",
+   "aspect": "other",
+   "kind": "experience",
+   "summary": "Обещает, что всё будет, твит через 5 минут.",
+   "quote": "Все будет брат Через 5 минут твит",
+   "context_ids": [
+    "572141"
+   ],
+   "link": "https://t.me/whitelist1/7151?comment=572143",
+   "corrected": false,
+   "borderline": false
+  },
+  {
+   "id": "572153",
+   "relevance": "relevant",
+   "aspect": "other",
+   "kind": "opinion",
+   "summary": "Соглашается (Yes, sir).",
+   "quote": "Yes, sir",
+   "context_ids": [
+    "572129"
+   ],
+   "link": "https://t.me/whitelist1/7151?comment=572153",
+   "corrected": false,
+   "borderline": false
+  },
+  {
+   "id": "572154",
+   "relevance": "relevant",
+   "aspect": "other",
+   "kind": "other",
+   "summary": "Отвечает 'Х'.",
+   "quote": "Х",
+   "context_ids": [
+    "572153"
+   ],
+   "link": "https://t.me/whitelist1/7151?comment=572154",
+   "corrected": false,
+   "borderline": false
+  }
+ ],
+ "held_for_review": {
+  "reason": "relevant_not_grounded на метках модели",
+  "labels": [
+   {
+    "id": "572112",
+    "relevance": "relevant",
+    "aspect": "market",
+    "kind": "opinion",
+    "summary": "Считает, что самого ZEC достаточно после его 150-кратного роста.",
+    "quote": "Достаточно самого зек после его 150 иксов)",
+    "context_ids": [
+     "572106"
+    ],
+    "link": "https://t.me/whitelist1/7151?comment=572112",
+    "text": "Достаточно самого зек после его 150 иксов)"
+   }
+  ]
+ }
+}

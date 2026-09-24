@@ -1,0 +1,21 @@
+{
+ "segments": [
+  {
+   "id": "telegram:15:423134#s1",
+   "text": "Норм ли то что типы в аукцион грузят с расчетом по 9-10 $ZEC за 1 NFT?!\n\n",
+   "mentions": [
+    {
+     "text": "$ZEC",
+     "status": "confirmed"
+    },
+    {
+     "text": "ZEC",
+     "status": "confirmed"
+    }
+   ],
+   "kind_hint": "post",
+   "url": "https://t.me/WEB3_AGGREGATOR/423134",
+   "time": "2026-09-16T18:40:50+00:00"
+  }
+ ]
+}
