@@ -42,6 +42,7 @@ class OpenRouterCfg(BaseModel):
     score_coverage_retries: int = 2
     score_token_limit_param: Literal["max_tokens", "max_completion_tokens"] | None = None
     score_max_tokens: int | None = None
+    embedding_model: str = "openai/text-embedding-3-small"
 
 
 class PrefilterCfg(BaseModel):

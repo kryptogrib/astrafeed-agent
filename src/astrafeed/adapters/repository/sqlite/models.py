@@ -99,3 +99,43 @@ class ThreadStateRow(Base):
     context_incomplete: Mapped[bool] = mapped_column(default=False)
     reason: Mapped[str] = mapped_column(default="")
     last_scan_at: Mapped[datetime] = mapped_column(UtcDateTime())
+
+
+class AgendaPublicationRow(Base):
+    __tablename__ = "agenda_publication"
+    publication_id: Mapped[str] = mapped_column(String, primary_key=True)
+    source_id: Mapped[int] = mapped_column(index=True)
+    external_id: Mapped[str]
+    text: Mapped[str]
+    text_hash: Mapped[str] = mapped_column(index=True)
+    published_at: Mapped[datetime] = mapped_column(UtcDateTime(), index=True)
+    detected_at: Mapped[datetime] = mapped_column(UtcDateTime())
+    channel_ref: Mapped[str]
+    link: Mapped[str]
+    version: Mapped[int]
+
+
+class AgendaJsonRow(Base):
+    __tablename__ = "agenda_json"
+    kind: Mapped[str] = mapped_column(String, primary_key=True)
+    item_id: Mapped[str] = mapped_column(String, primary_key=True)
+    payload: Mapped[str]
+
+
+class AgendaQueueRow(Base):
+    __tablename__ = "agenda_queue"
+    publication_id: Mapped[str] = mapped_column(String, primary_key=True)
+    reason: Mapped[str]
+
+
+class AgendaSnapshotRow(Base):
+    __tablename__ = "agenda_snapshot"
+    snapshot_id: Mapped[str] = mapped_column(String, primary_key=True)
+    published: Mapped[bool] = mapped_column(default=False, index=True)
+    payload: Mapped[str]
+
+
+class AgendaCycleRow(Base):
+    __tablename__ = "agenda_cycle"
+    id: Mapped[int] = mapped_column(primary_key=True)
+    payload: Mapped[str]

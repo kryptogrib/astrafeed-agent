@@ -5,7 +5,9 @@ from __future__ import annotations
 import argparse
 import asyncio
 import logging
+import os
 import re
+import subprocess
 from datetime import UTC, datetime, timedelta
 
 import uvicorn
@@ -15,15 +17,28 @@ from telethon import TelegramClient
 from telethon.sessions import StringSession
 
 from astrafeed.adapters.http.app import create_app
+from astrafeed.adapters.llm.agenda import (
+    OpenRouterAssigner,
+    OpenRouterEmbedder,
+    OpenRouterExtractor,
+)
 from astrafeed.adapters.llm.budgeted_client import BudgetedClient
 from astrafeed.adapters.llm.openrouter import OpenRouterLLMClient
 from astrafeed.adapters.llm.stub import StubLLMClient
+from astrafeed.adapters.repository.sqlite.agenda import SqliteAgendaStore
 from astrafeed.adapters.repository.sqlite.ingestion import SqliteIngestionStore
 from astrafeed.adapters.repository.sqlite.models import Base
 from astrafeed.adapters.repository.sqlite.pulse import SqliteCommentStore
 from astrafeed.adapters.repository.sqlite.spend_budget import SqliteSpendBudget
 from astrafeed.adapters.source.fake import FakeSource
 from astrafeed.adapters.source.telegram import TelegramSource
+from astrafeed.application.agenda_cycle import run_cycle
+from astrafeed.application.agenda_query import (
+    agenda_payload,
+    health_payload,
+    search_payload,
+    story_payload,
+)
 from astrafeed.application.brief import build_brief
 from astrafeed.application.ingestion import (
     IngestionCoordinator,
@@ -32,9 +47,27 @@ from astrafeed.application.ingestion import (
 )
 from astrafeed.application.pulse_ingest import CommentCollector
 from astrafeed.config import Settings
+from astrafeed.domain.agenda import EMBEDDING_MODEL, LOOKBACK
 from astrafeed.logging_cfg import configure_logging
 
 _log = logging.getLogger(__name__)
+
+
+def git_commit() -> str:
+    if os.environ.get("GIT_COMMIT"):
+        return os.environ["GIT_COMMIT"]
+    try:
+        return (
+            subprocess.check_output(
+                ["git", "rev-parse", "HEAD"],
+                stderr=subprocess.DEVNULL,
+                cwd=os.path.dirname(__file__),
+            )
+            .decode()
+            .strip()
+        )
+    except (OSError, subprocess.CalledProcessError):
+        return "unknown"
 
 
 def _window(value: str) -> timedelta:
@@ -153,31 +186,87 @@ def brief() -> None:
     asyncio.run(_brief(parser.parse_args()))
 
 
-async def _poll(cfg: Settings, client: TelegramClient, store: SqliteIngestionStore) -> None:
-    reader = TelegramSource(client, backfill_window=timedelta(hours=cfg.backfill_hours))
+async def _resolve_union(coordinator: IngestionCoordinator, refs: list[str]) -> list[int]:
+    seen: dict[int, int] = {}
+    for ref in dict.fromkeys(refs):
+        try:
+            source = await coordinator.resolve_public_ref(ref)
+        except Exception:
+            _log.exception("Could not resolve configured source %s", ref)
+            continue
+        seen.setdefault(source.telegram_id, source.id)
+    return list(seen.values())
+
+
+async def _agenda_poll(
+    cfg: Settings,
+    client: TelegramClient,
+    posts: SqliteIngestionStore,
+    agenda: SqliteAgendaStore,
+    extractor: OpenRouterExtractor,
+    embedder: OpenRouterEmbedder,
+    assigner: OpenRouterAssigner,
+) -> None:
+    reader = TelegramSource(client, backfill_window=LOOKBACK)
     coordinator = IngestionCoordinator(
-        store, reader, resolver=reader, limits=limits_from_settings(cfg)
+        posts, reader, resolver=reader, limits=limits_from_settings(cfg)
     )
     while True:
         await _ensure_connected(client)
         now = datetime.now(UTC)
-        ids = []
-        for channel in cfg.channels:
-            try:
-                ids.append((await coordinator.resolve_public_ref(channel)).id)
-            except Exception:
-                _log.exception("Could not resolve configured source %s", channel)
-        if ids:
-            result = await coordinator.ensure_window(
-                ids, now - timedelta(hours=cfg.backfill_hours), now
+        source_ids = await _resolve_union(coordinator, [*cfg.channels, *cfg.news_channels])
+
+        async def collect(start: datetime, end: datetime, ids: list[int] = source_ids) -> None:
+            if ids:
+                result = await coordinator.ensure_window(ids, start, end)
+                _log.info(
+                    "agenda collect sources=%d incomplete=%d errors=%d",
+                    len(ids),
+                    sum(not coverage.complete for coverage in result.values()),
+                    len(result.errors),
+                )
+
+        try:
+            snapshot = await run_cycle(
+                agenda,
+                reader=posts,
+                source_ids=source_ids,
+                extractor=extractor,
+                embedder=embedder,
+                assigner=assigner,
+                now=now,
+                collect=collect,
             )
-            _log.info(
-                "ingest tick sources=%d incomplete=%d errors=%d",
-                len(ids),
-                sum(not c.complete for c in result.values()),
-                len(result.errors),
-            )
+            if snapshot is None:
+                _log.warning("agenda cycle did not publish (budget or incomplete)")
+            else:
+                _log.info(
+                    "agenda snapshot %s stories=%d queue=%d",
+                    snapshot.snapshot_id,
+                    len(snapshot.agenda),
+                    snapshot.queue_depth,
+                )
+        except Exception as exc:
+            _log.error("agenda cycle failed: %s", type(exc).__name__)
         await asyncio.sleep(cfg.poll_seconds)
+
+
+def _agenda_llm(cfg: Settings, session):
+    budget = SqliteSpendBudget(session, daily_limit=cfg.llm_daily_budget_usd)
+    openai = AsyncOpenAI(api_key=cfg.openrouter.api_key, base_url=cfg.openrouter.base_url)
+    client = BudgetedClient(
+        openai,
+        store=budget,
+        user_id=0,
+        reservation_amount=cfg.llm_reservation_usd,
+        max_tokens=cfg.llm_max_tokens,
+    )
+    model = cfg.openrouter.cheap_model
+    return (
+        OpenRouterExtractor(client, model),
+        OpenRouterEmbedder(client, cfg.openrouter.embedding_model or EMBEDDING_MODEL),
+        OpenRouterAssigner(client, model),
+    )
 
 
 async def _serve(config_path: str) -> None:
@@ -186,12 +275,42 @@ async def _serve(config_path: str) -> None:
     client = _telegram(cfg)
     await _ensure_connected(client)
     engine, session = await _storage(cfg)
-    store = SqliteIngestionStore(session)
-    app = create_app()
+    posts = SqliteIngestionStore(session)
+    agenda = SqliteAgendaStore(session)
+    await agenda.ensure_search()
+    extractor, embedder, assigner = _agenda_llm(cfg, session)
+    commit = git_commit()
+
+    async def agenda_http(snapshot_id: str | None = None) -> dict:
+        return await agenda_payload(agenda, snapshot_id=snapshot_id, now=datetime.now(UTC))
+
+    async def search_http(
+        q: str, snapshot_id: str | None = None, limit: int = 10, offset: int = 0
+    ) -> dict:
+        return await search_payload(
+            agenda, q, snapshot_id=snapshot_id, now=datetime.now(UTC), limit=limit, offset=offset
+        )
+
+    async def story_http(story_id: str, snapshot_id: str | None = None) -> dict:
+        return await story_payload(agenda, story_id, snapshot_id=snapshot_id, now=datetime.now(UTC))
+
+    async def health_http() -> dict:
+        return await health_payload(agenda, now=datetime.now(UTC), commit=commit)
+
+    app = create_app(
+        agenda=agenda_http,
+        stories_search=search_http,
+        story=story_http,
+        health=health_http,
+        info={"commit": commit},
+    )
     server = uvicorn.Server(
         uvicorn.Config(app, host=cfg.api_host, port=cfg.api_port, log_config=None)
     )
-    poll_task = asyncio.create_task(_poll(cfg, client, store), name="ingest-poll")
+    poll_task = asyncio.create_task(
+        _agenda_poll(cfg, client, posts, agenda, extractor, embedder, assigner),
+        name="agenda-cycle",
+    )
     try:
         await server.serve()
     finally:

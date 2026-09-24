@@ -28,6 +28,7 @@ class BudgetedClient:
         self._reservation_amount = reservation_amount
         self._max_tokens = max_tokens
         self.chat = SimpleNamespace(completions=self)
+        self.embeddings = SimpleNamespace(create=self.create_embeddings)
 
     def with_options(self, **kwargs: Any) -> "BudgetedClient":
         return BudgetedClient(
@@ -49,12 +50,25 @@ class BudgetedClient:
         reservation = await self._store.reserve(self._user_id, self._reservation_amount)
         # Exceptions/cancellation/crashes leave the durable conservative charge intact.
         response = await self._client.chat.completions.create(**kwargs)
-        cost = getattr(getattr(response, "usage", None), "cost", None)
-        if cost is not None:
-            try:
-                actual_cost = float(cost)
-            except (TypeError, ValueError):
-                actual_cost = math.nan
-            if math.isfinite(actual_cost) and actual_cost >= 0:
-                await self._store.settle(reservation, actual_cost)
+        await self._settle(reservation, response)
         return response
+
+    async def create_embeddings(self, **kwargs: Any) -> Any:
+        extra_body = dict(kwargs.get("extra_body") or {})
+        extra_body["usage"] = {"include": True}
+        kwargs["extra_body"] = extra_body
+        reservation = await self._store.reserve(self._user_id, self._reservation_amount)
+        response = await self._client.embeddings.create(**kwargs)
+        await self._settle(reservation, response)
+        return response
+
+    async def _settle(self, reservation: str, response: Any) -> None:
+        cost = getattr(getattr(response, "usage", None), "cost", None)
+        if cost is None:
+            return
+        try:
+            actual_cost = float(cost)
+        except (TypeError, ValueError):
+            return
+        if math.isfinite(actual_cost) and actual_cost >= 0:
+            await self._store.settle(reservation, actual_cost)

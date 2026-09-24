@@ -1,0 +1,167 @@
+from datetime import UTC, datetime, timedelta
+
+from astrafeed.domain.agenda import (
+    CLASSIFIER_VERSION,
+    agenda_rank_key,
+    analysis_reuse_key,
+    comparable_channel_ids,
+    numbers_are_grounded,
+    rank_agenda_stories,
+    resolve_quote_span,
+    resolve_relative_when,
+    text_hash,
+    windows_at,
+)
+
+
+def test_quote_accepted_only_when_span_matches_or_unique_occurrence():
+    text = "Отток ETH ETF составил $120 млн. Это слабо."
+    assert resolve_quote_span(text, "Отток ETH ETF составил $120 млн.", 0, 32) == (0, 32)
+    assert resolve_quote_span(text, "Это слабо.", 99, 100) == (33, 43)
+    repeated = "ETH вырос. Спорят про ETH."
+    assert resolve_quote_span(repeated, "ETH", 0, 3) == (0, 3)
+    assert resolve_quote_span(repeated, "ETH", 99, 100) is None
+    assert resolve_quote_span(text, "нет такой цитаты", 0, 5) is None
+    assert resolve_quote_span(text, "", 0, 0) is None
+
+
+def test_same_text_reuses_extraction_across_publications():
+    h = text_hash("один и тот же текст")
+    assert h == text_hash("один и тот же текст")
+    assert h != text_hash("другой текст")
+    a = analysis_reuse_key(h, CLASSIFIER_VERSION)
+    b = analysis_reuse_key(text_hash("один и тот же текст"), CLASSIFIER_VERSION)
+    assert a == b
+    assert analysis_reuse_key(h, "open-extract/v2") != a
+
+
+def test_windows_are_half_open_24h_pairs():
+    t = datetime(2026, 9, 24, 21, 0, tzinfo=UTC)
+    current, previous = windows_at(t)
+    assert current == (t - timedelta(hours=24), t)
+    assert previous == (t - timedelta(hours=48), t - timedelta(hours=24))
+    assert current[0] == previous[1]
+    assert current[1] != current[0]
+
+
+def test_paraphrase_cannot_invent_numbers_absent_from_quotes():
+    quotes = ["Отток составил $120 млн"]
+    assert numbers_are_grounded("Авторы пишут об оттоке $120 млн", quotes)
+    assert not numbers_are_grounded("Авторы пишут об оттоке $240 млн", quotes)
+    assert numbers_are_grounded("Авторы называют отток слабым спросом", quotes)
+
+
+def test_today_and_yesterday_resolve_per_publication_instance():
+    published = datetime(2026, 9, 23, 15, 0, tzinfo=UTC)
+    assert resolve_relative_when("сегодня", published) == "2026-09-23"
+    assert resolve_relative_when("вчера", published) == "2026-09-22"
+    assert resolve_relative_when("22 сентября", published) == "22 сентября"
+
+
+def test_comparable_channels_require_complete_processing_of_both_windows():
+    comparable = comparable_channel_ids(
+        {
+            1: {"current_complete": True, "previous_complete": True, "processed": True},
+            2: {"current_complete": True, "previous_complete": False, "processed": True},
+            3: {"current_complete": True, "previous_complete": True, "processed": False},
+            4: {"current_complete": True, "previous_complete": True, "processed": True},
+        }
+    )
+    assert comparable == frozenset({1, 4})
+
+
+def test_agenda_sorts_by_growth_then_channels_then_freshness_then_id():
+    t = datetime(2026, 9, 24, tzinfo=UTC)
+    stories = [
+        {
+            "story_id": "st-b",
+            "growth": 2,
+            "current_channels": 3,
+            "freshness": t,
+            "eligible": True,
+        },
+        {
+            "story_id": "st-a",
+            "growth": 2,
+            "current_channels": 3,
+            "freshness": t,
+            "eligible": True,
+        },
+        {
+            "story_id": "st-c",
+            "growth": 3,
+            "current_channels": 2,
+            "freshness": t,
+            "eligible": True,
+        },
+        {
+            "story_id": "st-d",
+            "growth": 1,
+            "current_channels": 4,
+            "freshness": t,
+            "eligible": False,
+        },
+    ]
+    ranked = rank_agenda_stories(stories)
+    assert [s["story_id"] for s in ranked] == ["st-c", "st-a", "st-b"]
+    assert agenda_rank_key(stories[2]) < agenda_rank_key(stories[1])
+
+
+def test_growth_is_null_when_comparable_set_is_too_small():
+    from astrafeed.domain.agenda import decide_growth
+
+    growth, reason = decide_growth(
+        current_channels=3,
+        previous_channels=1,
+        comparable_count=1,
+        previous_window_complete=True,
+    )
+    assert growth is None
+    assert reason == "comparable_channels_below_2"
+
+    growth, reason = decide_growth(
+        current_channels=3,
+        previous_channels=1,
+        comparable_count=4,
+        previous_window_complete=True,
+    )
+    assert growth == 2
+    assert reason is None
+
+    growth, reason = decide_growth(
+        current_channels=2,
+        previous_channels=0,
+        comparable_count=4,
+        previous_window_complete=True,
+    )
+    assert growth == 2
+
+
+def test_empty_agenda_when_full_compare_has_no_new_or_growing_stories():
+    from astrafeed.domain.agenda import select_agenda
+
+    cards = [
+        {
+            "story_id": "st-flat",
+            "growth": 0,
+            "current_channels": 3,
+            "previous_channels": 3,
+            "eligible": True,
+        }
+    ]
+    selected, mode = select_agenda(cards, comparable_count=4)
+    assert selected == []
+    assert mode == "empty_no_growth"
+
+    limited = [
+        {
+            "story_id": "st-multi",
+            "growth": None,
+            "current_channels": 2,
+            "previous_channels": None,
+            "eligible": True,
+        }
+    ]
+    selected, mode = select_agenda(limited, comparable_count=1)
+    assert [c["story_id"] for c in selected] == ["st-multi"]
+    assert mode == "limited_no_growth_claim"

@@ -1,13 +1,16 @@
 FROM python:3.12-slim
 
+ARG GIT_COMMIT=unknown
 ENV PYTHONUNBUFFERED=1 \
-    PIP_NO_CACHE_DIR=1
+    PIP_NO_CACHE_DIR=1 \
+    GIT_COMMIT=$GIT_COMMIT
 
-COPY --from=ghcr.io/astral-sh/uv:0.7 /uv /usr/local/bin/uv
 WORKDIR /app
-COPY pyproject.toml uv.lock README.md ./
+COPY pyproject.toml uv.lock README.md LICENSE NOTICE ./
 COPY src ./src
-RUN uv sync --frozen --no-dev --compile-bytecode \
+# Install uv from PyPI so the image build does not hang on ghcr.io metadata.
+RUN pip install --no-cache-dir uv \
+    && uv sync --frozen --no-dev --compile-bytecode \
     && useradd --uid 10001 --no-create-home --shell /usr/sbin/nologin app \
     && mkdir -p /data \
     && chown app:app /data
