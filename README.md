@@ -24,6 +24,8 @@ The card records **6 channels, including 1 detected echo**, and shows the [exact
 
 The same trail flags disagreements when quoted amounts differ. It keeps the original wording and source links so a reader can decide what to trust. AstraFeed reports what channels **said**, not whether the underlying event is true.
 
+When a close later retelling drops an explicit uncertainty word such as “potentially,” the card shows **both exact phrases and links** under “Qualifier dropped in later wording.” This describes a change in wording; it does not claim the event was confirmed or that one channel copied another.
+
 ## See it in 60 seconds
 
 1. Open the [live agenda](https://cutememe.lol/agenda?format=html). Each card shows its sources, growth, and any available evidence signals.
@@ -59,6 +61,7 @@ The response has `service`, `action` (`agenda`, `search`, or `story`), and `resu
 | `independent_channels` / `echo_channels` | A text-similarity split of observed posts. “Independent” means *no near-verbatim copy detected*, not independent verification. |
 | `first_seen` | First matching post time in the observed channels, not the first report anywhere. |
 | `confirmation` | A label inferred from wording and attribution in posts; inspect the linked source before relying on it. |
+| `signals.caveat_drop` | An optional pair of closely matched source sentences where explicit uncertainty disappears in the later wording, with both links and publication gap. |
 | `coverage`, `stale`, `limitations` | What was collected and processed, and what the snapshot cannot support. |
 
 The watched channels are a curated Russian-language Telegram folder, not a representative sample of the whole market. Quotes in the English report may be machine-translated; JSON retains the original. Reader comments, when shown, are marked unverified. No sentiment score or trading recommendation is produced.

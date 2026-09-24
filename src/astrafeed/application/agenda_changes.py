@@ -5,6 +5,8 @@ arrival; removed evidence can have left the rolling window. Neither is an event
 or a retraction. Quote changes describe stored excerpts, not verified post edits.
 """
 
+from dataclasses import asdict
+
 from astrafeed.domain.agenda import PublicationRef, Snapshot, StoryCard
 from astrafeed.textkey import normalized_text
 
@@ -78,6 +80,8 @@ def _evidence_change(
         if normalized_text(pubs[key].quote) != normalized_text(old_pubs[key].quote)
     ]
     sourcing, old_sourcing = _sourcing(card), _sourcing(old_card)
+    caveat = card.signals.caveat_drop if card.signals else None
+    old_caveat = old_card.signals.caveat_drop if old_card.signals else None
     claims, old_claims = _claims(card), _claims(old_card)
     change = {
         "added_publications": [
@@ -102,6 +106,14 @@ def _evidence_change(
         "removed_claims": [old_claims[key] for key in sorted(old_claims.keys() - claims.keys())],
         "sourcing": (
             {"before": old_sourcing, "after": sourcing} if sourcing != old_sourcing else None
+        ),
+        "caveat_drop": (
+            {
+                "before": asdict(old_caveat) if old_caveat else None,
+                "after": asdict(caveat) if caveat else None,
+            }
+            if caveat != old_caveat
+            else None
         ),
     }
     if card.story_id not in current.stories or old_card.story_id not in baseline.stories:
@@ -191,6 +203,8 @@ def comparison_lines(payload: dict) -> list[str]:
             parts.append("displayed claims changed")
         if story["sourcing"]:
             parts.append("sourcing labels changed")
+        if story.get("caveat_drop"):
+            parts.append("qualifier-drop signal changed")
         if story["section"] != story["previous_section"]:
             parts.append(f"moved to {story['section']}")
         lines.append(f"Updated: {story['title']} — {', '.join(parts)}.")

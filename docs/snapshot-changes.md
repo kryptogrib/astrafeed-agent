@@ -51,6 +51,9 @@ Each updated story contains:
   claim kind and speaker. They describe evidence selection, not semantic novelty.
 - `sourcing`: before/after stored confirmation label and attributed source names,
   or null when unchanged. A null side means the labels were unavailable.
+- `caveat_drop`: before/after evidence pair when the narrowly detected qualifier
+  loss appears, disappears or changes; null when unchanged. This tracks report
+  wording evidence, not confirmation of the underlying event.
 - `section` / `previous_section`: `agenda` or `upcoming`.
 
 If a shared story lacks detailed publication references in either snapshot,

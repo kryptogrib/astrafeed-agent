@@ -426,6 +426,20 @@ class PriceMove:
 
 
 @dataclass(frozen=True)
+class CaveatDrop:
+    """Two closely worded posts where an explicit uncertainty word disappeared."""
+
+    qualifier: str
+    before_channel: str
+    before_link: str
+    before_quote: str
+    after_channel: str
+    after_link: str
+    after_quote: str
+    minutes_later: int
+
+
+@dataclass(frozen=True)
 class StorySignals:
     """Code-computed evidence about how a story spread; no model involved."""
 
@@ -440,6 +454,7 @@ class StorySignals:
     tickers: tuple[str, ...] = ()
     scheduled: bool = False
     price: PriceMove | None = None
+    caveat_drop: CaveatDrop | None = None
 
 
 @dataclass(frozen=True)

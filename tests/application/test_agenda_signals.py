@@ -67,6 +67,48 @@ def test_near_verbatim_copy_is_an_echo_not_an_independent_channel():
     assert signals.spread_minutes == 25
 
 
+def test_later_retelling_drops_explicit_uncertainty_with_linked_wording():
+    earlier = _pub("@first", "POTENTIALLY: Bitget wallets were hacked and $100M was withdrawn.", 0)
+    later = _pub("@later", "Bitget wallets were hacked and $100M was withdrawn.", 4)
+    signals = story_signals(_card(), [earlier, later], [])
+    assert signals.caveat_drop is not None
+    assert signals.caveat_drop.qualifier == "POTENTIALLY"
+    assert signals.caveat_drop.before_channel == "@first"
+    assert signals.caveat_drop.after_channel == "@later"
+    assert signals.caveat_drop.before_link == earlier.link
+    assert signals.caveat_drop.after_link == later.link
+    assert signals.caveat_drop.minutes_later == 4
+
+
+def test_caveat_drop_requires_close_wording_and_no_later_sourcing():
+    earlier = _pub("@first", "Possibly Bitget wallets were hacked and $100M was withdrawn.", 0)
+    different = _pub("@other", "Bitget deposits resume after a maintenance window.", 4)
+    attributed = _pub(
+        "@later", "According to Arkham, Bitget wallets were hacked and $100M was withdrawn.", 5
+    )
+    assert story_signals(_card(), [earlier, different, attributed], []).caveat_drop is None
+    assert (
+        story_signals(_card(), [earlier, _pub("@later", earlier.text, 5)], []).caveat_drop is None
+    )
+
+
+def test_caveat_drop_is_visible_with_both_evidence_links():
+    from dataclasses import replace
+
+    from astrafeed.application.agenda_query import _card_payload, _html_card_head, _md_card_head
+
+    before = _pub("@first", "POTENTIALLY: Bitget wallets were hacked and $100M was withdrawn.", 0)
+    after = _pub("@later", "Bitget wallets were hacked and $100M was withdrawn.", 4)
+    card = _card()
+    payload = _card_payload(replace(card, signals=story_signals(card, [before, after], [])))
+    shift = payload["signals"]["caveat_drop"]
+    assert (shift["before_link"], shift["after_link"]) == (before.link, after.link)
+    md = "\n".join(_md_card_head(payload, "## Bitget"))
+    html = _html_card_head(payload, "<h2>Bitget</h2>")
+    assert "Qualifier dropped" in md and before.link in md and after.link in md
+    assert "Qualifier dropped" in html and before.link in html and after.link in html
+
+
 def test_channels_stating_different_amounts_are_flagged():
     quotes = [
         ("@marketfeed", "похищено более $100 млн"),

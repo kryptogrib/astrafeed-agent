@@ -85,6 +85,7 @@ def _signals_payload(card: StoryCard) -> dict | None:
     if signals is None:
         return None
     price = signals.price
+    caveat = signals.caveat_drop
     return {
         "independent_channels": signals.independent_channels,
         "echo_channels": signals.echo_channels,
@@ -108,6 +109,18 @@ def _signals_payload(card: StoryCard) -> dict | None:
             }
             for node in signals.sources
         ],
+        "caveat_drop": None
+        if caveat is None
+        else {
+            "qualifier": caveat.qualifier,
+            "before_channel": caveat.before_channel,
+            "before_link": caveat.before_link,
+            "before_quote": caveat.before_quote,
+            "after_channel": caveat.after_channel,
+            "after_link": caveat.after_link,
+            "after_quote": caveat.after_quote,
+            "minutes_later": caveat.minutes_later,
+        },
         "price": None
         if price is None
         else {
@@ -345,6 +358,14 @@ def _md_card_head(card: dict, heading: str) -> list[str]:
     signal_lines = _signal_lines(card)
     if signal_lines:
         lines += [""] + [f"{line}  " for line in signal_lines]
+    caveat = (card.get("signals") or {}).get("caveat_drop")
+    if caveat:
+        lines += [
+            "",
+            f"⚠️ **Qualifier dropped in later wording** (+{_duration(caveat['minutes_later'])}):",
+            f"- [{caveat['before_channel']}]({caveat['before_link']}): “{caveat['before_quote']}”",
+            f"- [{caveat['after_channel']}]({caveat['after_link']}): “{caveat['after_quote']}”",
+        ]
     channels = _channel_links(card)
     if channels:
         lines += [
@@ -557,6 +578,18 @@ def _html_card_head(card: dict, title_html: str) -> str:
             for line in signal_lines
         )
         parts.append(f'<ul class="sig">{items}</ul>')
+    caveat = (card.get("signals") or {}).get("caveat_drop")
+    if caveat:
+        parts.append(
+            '<div class="talk"><p><b>⚠️ Qualifier dropped in later wording</b> '
+            f"(+{escape(_duration(caveat['minutes_later']))})</p>"
+            f"<blockquote>“{escape(caveat['before_quote'])}” <cite>— "
+            f'<a href="{_url(caveat["before_link"])}">{escape(caveat["before_channel"])}</a>'
+            "</cite></blockquote>"
+            f"<blockquote>“{escape(caveat['after_quote'])}” <cite>— "
+            f'<a href="{_url(caveat["after_link"])}">{escape(caveat["after_channel"])}</a>'
+            "</cite></blockquote></div>"
+        )
     parts.append(_html_timeline(card))
     channels = _channel_links(card)
     if channels:
