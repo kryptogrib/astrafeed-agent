@@ -37,6 +37,10 @@ _NUMBER = re.compile(r"\d+(?:[.,]\d+)?")
 _TICKER = re.compile(r"\$[A-Za-z][A-Za-z0-9]{1,}")
 _PROFANITY = re.compile(r"(?:на[её]б|за[её]б|[её]бан|\bбля|\bхуй|\bху[её]в|\bпизд)", re.I)
 _GENERIC_ENTITIES = {"tge", "fdv", "q3", "q4", "points", "поинты", "airdrop"}
+_VAGUE_STORY = re.compile(r"\b(?:новые детали|вся картина|подробности появились)\b", re.I)
+_FUTURE_SECTION = re.compile(r"(?:что ожидается|планируется|upcoming)[^\n]{0,70}", re.I)
+_PENDING = re.compile(r"\b(?:рассматрива\w*|ожида\w*|слушани\w*)\b", re.I)
+_RESOLVED = re.compile(r"\b(?:отменил\w*|заблокировал\w*|orders?.{0,40}restore|blocking)\b", re.I)
 
 
 def _mentions(text: str, name: str) -> bool:
@@ -57,7 +61,14 @@ def _supported_link(
     correct entity label or similar embedding cannot repair an unrelated quote.
     """
     quote = link.quote.strip()
-    if not quote or quote not in pub.text:
+    if not quote or quote not in pub.text or _VAGUE_STORY.search(title) or ";" in title:
+        return False
+    before_quote = pub.text[: pub.text.index(quote)]
+    # A bullet under a future-plan heading is not evidence of a completed launch.
+    if (_FUTURE_SECTION.search(before_quote[-350:]) and not _PENDING.search(title)
+        and re.match(r"^(?:запуск|завершение|расширение)\b", title, re.I)):
+        return False
+    if _PENDING.search(title) and _RESOLVED.search(quote):
         return False
     title_tickers = _TICKER.findall(title)
     if title_tickers and not any(_mentions(quote, ticker) for ticker in title_tickers):
@@ -103,7 +114,7 @@ def _snapshot_id(t: datetime) -> str:
 
 
 def _evidence_key(story: Story, quote: str) -> str:
-    raw = "\n".join(("story-evidence/v1", story.title_ru, story.boundary, quote))
+    raw = "\n".join(("story-evidence/v2", story.title_ru, story.boundary, quote))
     return hashlib.sha256(raw.encode("utf-8")).hexdigest()
 
 
@@ -136,6 +147,19 @@ def _display_title(
         ),
         None,
     )
+    if primary is None:
+        primary = next(
+            (
+                entity for entity in entities.values()
+                if entity.status == "confirmed"
+                and entity.canonical_name.casefold().lstrip("$#") not in _GENERIC_ENTITIES
+                and re.match(
+                    rf"^{re.escape(entity.canonical_name)}(?!\w)", story.title_ru, re.I
+                )
+                and any(_mentions(link.quote, entity.canonical_name) for link in links)
+            ),
+            None,
+        )
     title = story.title_ru.strip()
     if _PROFANITY.search(title):
         title = next(
@@ -150,6 +174,7 @@ def _display_title(
         )
     if primary is None:
         return title, ""
+    key = primary.canonical_name.casefold()
     names = (primary.canonical_name, *primary.aliases)
     if any(_mentions(title, name) for name in names):
         return title, key
@@ -234,8 +259,6 @@ def _claim_cards(
             for word in re.findall(r"[A-Za-zА-Яа-яЁё0-9]+", link.quote + " " + link.paraphrase_ru)
         }
         candidates.append((len(terms & words), link, pub))
-    if any(score > 0 for score, _, _ in candidates):
-        candidates = [candidate for candidate in candidates if candidate[0] > 0]
     candidates.sort(key=lambda candidate: candidate[0], reverse=True)
     chosen: list[tuple[int, StoryLink, PublicationVersion]] = []
     seen_channels: set[str] = set()

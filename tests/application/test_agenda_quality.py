@@ -328,3 +328,25 @@ async def test_subjectless_excerpt_cannot_vote_for_named_project():
     snapshot = await build_snapshot(store, now + timedelta(minutes=1), _coverage(),
                                     collected_at=now, analyzed_at=now)
     assert "beta" not in snapshot.stories
+
+
+@pytest.mark.asyncio
+async def test_future_bullet_and_resolved_case_do_not_vote_for_current_event():
+    store = InMemoryAgendaStore()
+    now = datetime(2026, 9, 24, 12, tzinfo=UTC)
+    await store.save_story(Story("omni", "Запуск Omni в публичной сети", "", now))
+    await store.save_story(Story("court", "Судья рассматривает запрет СМИ", "", now))
+    for source_id in (1, 2):
+        future = "Что ожидается до TGE\n\n- Запуск Omni в публичной сети"
+        pub = _publication(source_id, f"omni-{source_id}", future, now)
+        await store.record_publication(pub)
+        await _link(store, "omni", pub, "Запуск Omni в публичной сети", "")
+        resolved = "Судья отменил запрет СМИ"
+        pub = _publication(source_id, f"court-{source_id}", resolved, now)
+        await store.record_publication(pub)
+        await _link(store, "court", pub, resolved, "")
+    snapshot = await build_snapshot(
+        store, now + timedelta(minutes=1), _coverage(), collected_at=now, analyzed_at=now
+    )
+    assert "omni" not in snapshot.stories
+    assert "court" not in snapshot.stories
