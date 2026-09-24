@@ -279,7 +279,11 @@ async def build_snapshot(
         channels_incomplete=sum(
             1
             for state in coverage_states.values()
-            if not (state.get("current_complete") and state.get("previous_complete"))
+            if not (
+                state.get("current_complete")
+                and state.get("previous_complete")
+                and state.get("processed")
+            )
         ),
         publications_total=len(pubs),
         publications_processed=len(processed - queued),

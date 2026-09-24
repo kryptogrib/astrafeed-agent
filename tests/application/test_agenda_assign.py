@@ -430,6 +430,72 @@ async def test_relaxed_merge_key_persists_across_batches_without_entity_decision
 
 
 @pytest.mark.asyncio
+async def test_relaxed_digest_fragments_are_assigned_concurrently():
+    from astrafeed.adapters.llm.agenda import Assignment
+
+    store = InMemoryAgendaStore()
+    now = datetime(2026, 9, 24, 12, tzinfo=UTC)
+    quotes = ("Отток ETH ETF составил 120 млн сегодня.", "Рост SOL составил 15 процентов сегодня.")
+    text = "\n".join(quotes)
+    pub = _pub(text, 1, "1", "@a", now)
+    await store.record_publication(pub)
+    fragments = []
+    for quote, entity in zip(quotes, ("ETH", "SOL"), strict=True):
+        start = text.index(quote)
+        fragments.append(
+            Fragment(
+                text=quote,
+                start=start,
+                end=start + len(quote),
+                entities=(MentionedEntity(entity, quote),),
+                claims=(
+                    Claim(
+                        kind="event",
+                        speaker="author",
+                        quote=quote,
+                        start=start,
+                        end=start + len(quote),
+                    ),
+                ),
+            )
+        )
+    extraction = ExtractionResult(
+        reuse_key="key",
+        text_hash=pub.text_hash,
+        classifier_version=CLASSIFIER_VERSION,
+        status="ok",
+        fragments=tuple(fragments),
+    )
+
+    class ConcurrentAssigner:
+        active = 0
+        maximum = 0
+
+        async def assign(self, **kwargs):
+            self.active += 1
+            self.maximum = max(self.maximum, self.active)
+            await asyncio.sleep(0.01)
+            self.active -= 1
+            entity = kwargs["fragment"].entity_surfaces[0]
+            return Assignment((), "new", None, f"Новость {entity}", entity, "separate", None)
+
+    assigner = ConcurrentAssigner()
+    embedder = Embedder(
+        {
+            embedding_input(quote, [entity]): [1.0, 0.0] if entity == "ETH" else [0.0, 1.0]
+            for quote, entity in zip(quotes, ("ETH", "SOL"), strict=True)
+        }
+    )
+    await assign_speculative_batch(
+        store, embedder, assigner, [(pub, extraction)], concurrency=2, strict=False
+    )
+
+    assert assigner.maximum == 2
+    assert embedder.calls == 1
+    assert len(await store.links_for_publications({pub.publication_id})) == 2
+
+
+@pytest.mark.asyncio
 async def test_embedding_failure_keeps_queue_and_does_not_assign():
     store = InMemoryAgendaStore()
     when = datetime(2026, 9, 23, 12, tzinfo=UTC)

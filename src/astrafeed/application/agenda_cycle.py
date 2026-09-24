@@ -56,6 +56,10 @@ def _publication(source_id: int, item: Item, detected_at: datetime) -> Publicati
     )
 
 
+def _partial_is_publishable(partial: Snapshot, previous: Snapshot | None) -> bool:
+    return previous is None or not previous.agenda or len(partial.agenda) >= len(previous.agenda)
+
+
 async def ingest_publications(
     store: AgendaStore,
     reader: WindowReader,
@@ -114,6 +118,7 @@ async def run_cycle(
     collect: CollectFn | None = None,
     extract_concurrency: int = 12,
     assign_concurrency: int = 16,
+    backfill_batch_size: int = 128,
     assignment_mode: Literal["auto", "strict", "relaxed"] = "auto",
     merge_cosine_threshold: float = 0.92,
     collection_window: timedelta = LOOKBACK,
@@ -124,6 +129,8 @@ async def run_cycle(
         raise ValueError("extract_concurrency must be positive")
     if assign_concurrency < 1:
         raise ValueError("assign_concurrency must be positive")
+    if backfill_batch_size < 1:
+        raise ValueError("backfill_batch_size must be positive")
     if assignment_mode not in {"auto", "strict", "relaxed"}:
         raise ValueError("invalid assignment_mode")
     if collection_window < LOOKBACK:
@@ -156,6 +163,7 @@ async def run_cycle(
         strict_assignment = assignment_mode == "strict" or (
             assignment_mode == "auto" and len(pending) < 128
         )
+        batch_size = extract_concurrency if strict_assignment else backfill_batch_size
         semaphore = asyncio.Semaphore(extract_concurrency)
         reuse_locks: dict[str, asyncio.Lock] = {}
         extract_seconds = 0.0
@@ -180,8 +188,8 @@ async def run_cycle(
             "agenda analyze started posts=%d concurrency=%d", len(pending), extract_concurrency
         )
         try:
-            for offset in range(0, len(pending), extract_concurrency):
-                batch = pending[offset : offset + extract_concurrency]
+            for offset in range(0, len(pending), batch_size):
+                batch = pending[offset : offset + batch_size]
                 tasks = [asyncio.create_task(extract_one(pub)) for pub in batch]
                 try:
                     jobs = []
@@ -245,14 +253,22 @@ async def run_cycle(
                                 limitations=(*partial.coverage.limitations, limitation),
                             ),
                         )
-                        await publish_snapshot(store, partial)
-                        state.queue_depth = await store.queue_depth()
-                        await store.set_cycle_state(state)
-                        _log.info(
-                            "agenda partial snapshot %s queue=%d",
-                            partial.snapshot_id,
-                            partial.queue_depth,
-                        )
+                        previous = await store.get_snapshot(None)
+                        if _partial_is_publishable(partial, previous):
+                            await publish_snapshot(store, partial)
+                            state.queue_depth = await store.queue_depth()
+                            await store.set_cycle_state(state)
+                            _log.info(
+                                "agenda partial snapshot %s queue=%d",
+                                partial.snapshot_id,
+                                partial.queue_depth,
+                            )
+                        else:
+                            _log.info(
+                                "agenda partial snapshot skipped stories=%d previous=%d",
+                                len(partial.agenda),
+                                len(previous.agenda) if previous is not None else 0,
+                            )
                         last_partial_count = processed
                         last_partial_time = perf_counter()
                 finally:
@@ -264,13 +280,14 @@ async def run_cycle(
             _log.info(
                 "agenda analyze posts=%d extract_seconds=%.1f assign_seconds=%.1f "
                 "wall_seconds=%.1f extract_concurrency=%d assign_concurrency=%d "
-                "reused=%d retried=%d mode=%s",
+                "batch_size=%d reused=%d retried=%d mode=%s",
                 len(pending),
                 extract_seconds,
                 assign_seconds,
                 perf_counter() - pipeline_started,
                 extract_concurrency,
                 assign_concurrency,
+                batch_size,
                 speculative_reused,
                 speculative_retried,
                 "strict" if strict_assignment else "relaxed",

@@ -481,9 +481,10 @@ async def assign_speculative_batch(
         prior: tuple[IndexedFragment, ...],
     ) -> list[PreparedFragment]:
         nonlocal context_seconds, model_seconds
-        prepared: list[PreparedFragment] = []
         prior_surfaces = {surface.casefold() for item in prior for surface in item.entity_surfaces}
-        for index, fragment, indexed in indexed_fragments:
+
+        async def one(index: int, fragment: Fragment, indexed: IndexedFragment) -> PreparedFragment:
+            nonlocal context_seconds, model_seconds
             started = perf_counter()
             context = _context_from_state(
                 indexed,
@@ -512,8 +513,7 @@ async def assign_speculative_batch(
                     surface.casefold() for surface in indexed.entity_surfaces
                 )
             ):
-                prepared.append(PreparedFragment(index, fragment, indexed, context, None, True))
-                continue
+                return PreparedFragment(index, fragment, indexed, context, None, True)
             started = perf_counter()
             try:
                 async with semaphore:
@@ -524,10 +524,27 @@ async def assign_speculative_batch(
                 assignment = None
             finally:
                 model_seconds += perf_counter() - started
-            prepared.append(PreparedFragment(index, fragment, indexed, context, assignment))
-            if assignment is None:
-                break
-        return prepared
+            return PreparedFragment(index, fragment, indexed, context, assignment)
+
+        if strict:
+            prepared = []
+            for index, fragment, indexed in indexed_fragments:
+                result = await one(index, fragment, indexed)
+                prepared.append(result)
+                if result.assignment is None and not result.deferred:
+                    break
+            return prepared
+        fragment_tasks = [
+            asyncio.create_task(one(index, fragment, indexed))
+            for index, fragment, indexed in indexed_fragments
+        ]
+        try:
+            return list(await asyncio.gather(*fragment_tasks))
+        finally:
+            for fragment_task in fragment_tasks:
+                if not fragment_task.done():
+                    fragment_task.cancel()
+            await asyncio.gather(*fragment_tasks, return_exceptions=True)
 
     prior: list[IndexedFragment] = []
     decision_tasks = []

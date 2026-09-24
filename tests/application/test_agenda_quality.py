@@ -159,6 +159,20 @@ async def test_navigation_claim_does_not_create_a_second_channel_vote():
 
 
 @pytest.mark.asyncio
+async def test_unprocessed_channels_count_as_incomplete():
+    store = InMemoryAgendaStore()
+    now = datetime(2026, 9, 24, 12, tzinfo=UTC)
+    coverage = _coverage()
+    coverage[2]["processed"] = False
+
+    snapshot = await build_snapshot(store, now, coverage, collected_at=now, analyzed_at=now)
+
+    assert snapshot.coverage.channels_ok == 1
+    assert snapshot.coverage.channels_incomplete == 1
+    assert snapshot.coverage.comparable_channels == 1
+
+
+@pytest.mark.asyncio
 async def test_payy_card_uses_one_relevant_summary_and_quotes_from_both_sources():
     store = InMemoryAgendaStore()
     now = datetime(2026, 9, 24, 12, tzinfo=UTC)

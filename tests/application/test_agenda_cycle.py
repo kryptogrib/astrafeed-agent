@@ -1,11 +1,12 @@
 import asyncio
 from datetime import UTC, datetime, timedelta
+from types import SimpleNamespace
 
 import pytest
 
 from astrafeed.adapters.llm.agenda import Assignment
 from astrafeed.adapters.repository.memory_agenda import InMemoryAgendaStore
-from astrafeed.application.agenda_cycle import cycle_health, run_cycle
+from astrafeed.application.agenda_cycle import _partial_is_publishable, cycle_health, run_cycle
 from astrafeed.domain.agenda import (
     CLASSIFIER_VERSION,
     Claim,
@@ -89,6 +90,16 @@ class Assigner:
             event_id=None,
             paraphrase_ru="Пишут про ETH",
         )
+
+
+def test_partial_snapshot_does_not_replace_a_more_useful_agenda():
+    useful = SimpleNamespace(agenda=(1, 2))
+    empty = SimpleNamespace(agenda=())
+    one_card = SimpleNamespace(agenda=(1,))
+    assert not _partial_is_publishable(empty, useful)
+    assert not _partial_is_publishable(one_card, useful)
+    assert _partial_is_publishable(useful, one_card)
+    assert _partial_is_publishable(empty, None)
 
 
 @pytest.mark.asyncio
