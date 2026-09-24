@@ -1,0 +1,15 @@
+{
+ "model": "deepseek/deepseek-v4-flash",
+ "schemas": [
+  "reaction-subject/v2",
+  "reaction-subject-verify/v2"
+ ],
+ "calls": 0,
+ "cache_hits": 122,
+ "cache_misses": 0,
+ "spent_usd": 0.01175,
+ "llm_seconds": 409.5,
+ "wall_seconds": 0.0,
+ "missing_estimate_usd": 0,
+ "note": "verify misses appear only after the first pass for that comment is cached"
+}

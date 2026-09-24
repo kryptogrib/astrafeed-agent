@@ -1,0 +1,46 @@
+{
+ "id": "gen-1790249372-70Z8KomAVzB6vId2NfeA",
+ "object": "chat.completion",
+ "created": 1790249372,
+ "model": "deepseek/deepseek-v4-flash",
+ "provider": "StreamLake",
+ "system_fingerprint": null,
+ "service_tier": null,
+ "choices": [
+  {
+   "index": 0,
+   "logprobs": null,
+   "finish_reason": "stop",
+   "native_finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "content": "{\"target\": \"event\", \"target_id\": \"e9-77cecaffecf3a983\", \"comment_fragment\": \"флагманский продукт\", \"context_fragment\": \"Аукцион рассчитывается в ZEC, но через NEAR Intents можно зайти ETH, SOL, BTC, стейблами и другими активами - система сама конвертирует их в ZEC.\", \"why\": \"Comment reacts to ZEC auction as flagship product.\"}",
+    "refusal": null,
+    "reasoning": null
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 1680,
+  "completion_tokens": 105,
+  "total_tokens": 1785,
+  "cost": 0.00016746534,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.00016746534,
+   "upstream_inference_prompt_cost": 0.00014885808,
+   "upstream_inference_completions_cost": 1.860726e-05
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

@@ -269,9 +269,10 @@ def _tokens(prompt: str, payload: Any) -> int:
 class Caller:
     """Cache-first calls under an explicit USD cap; a miss in reuse mode is recorded, never guessed."""
 
-    def __init__(self, db_md5: str, *, pay: bool, max_usd: float) -> None:
+    def __init__(self, db_md5: str, *, pay: bool, max_usd: float, cache: Path = CACHE) -> None:
         from news_pulse_llm import DEFAULT_MODEL
 
+        self.cache = cache
         self.model = os.environ.get("NEWS_PULSE_MODEL") or DEFAULT_MODEL
         self.db_md5 = db_md5
         self.pay = pay
@@ -286,10 +287,10 @@ class Caller:
         from news_pulse_llm import call_openrouter, identity, read_cache, write_cache
 
         ident = identity(prompt=prompt, payload=payload, model=self.model, schema=schema, db_md5=self.db_md5)
-        cached = read_cache(ident, CACHE)
+        cached = read_cache(ident, self.cache)
         if cached:
             self.hits += 1
-            meta = json.loads((CACHE / _h_ident(ident) / "meta.json").read_text())
+            meta = json.loads((self.cache / _h_ident(ident) / "meta.json").read_text())
             self.seconds += float(meta.get("seconds") or 0)
             self.spent += float((meta.get("usage") or {}).get("cost") or 0)
             return _content(cached[1])
@@ -299,7 +300,7 @@ class Caller:
             self.misses.append({"schema": schema, "input_tokens": est_in, "output_tokens": out_tokens, "usd": est})
             return None
         body, resp, seconds = call_openrouter(self.model, prompt, payload)
-        write_cache(ident, body, resp, seconds, CACHE)
+        write_cache(ident, body, resp, seconds, self.cache)
         self.calls += 1
         self.seconds += seconds
         self.spent += float((resp.get("usage") or {}).get("cost") or 0)

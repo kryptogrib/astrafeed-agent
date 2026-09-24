@@ -1,0 +1,46 @@
+{
+ "id": "gen-1790249376-y07vR67g629LcUzFGuXs",
+ "object": "chat.completion",
+ "created": 1790249376,
+ "model": "deepseek/deepseek-v4-flash",
+ "provider": "GMICloud",
+ "system_fingerprint": null,
+ "service_tier": null,
+ "choices": [
+  {
+   "index": 0,
+   "logprobs": null,
+   "finish_reason": "stop",
+   "native_finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "content": "{\n  \"target\": \"other_subject\",\n  \"target_id\": null,\n  \"comment_fragment\": \"Лаунчпад без воштрейдинг ботофермы - не лаунчпад, к сожалению 💧\",\n  \"context_fragment\": \"\",\n  \"why\": \"Comment reacts to a launchpad in general, not to Zcash event.\"\n}",
+    "refusal": null,
+    "reasoning": null
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 1710,
+  "completion_tokens": 82,
+  "total_tokens": 1792,
+  "cost": 0.0001518972,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 256,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.0001518972,
+   "upstream_inference_prompt_cost": 0.0001369732,
+   "upstream_inference_completions_cost": 1.4924e-05
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

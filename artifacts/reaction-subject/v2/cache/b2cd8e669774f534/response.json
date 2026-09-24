@@ -1,0 +1,46 @@
+{
+ "id": "gen-1790249542-AwozIKb49WMjtDo6ftie",
+ "object": "chat.completion",
+ "created": 1790249542,
+ "model": "deepseek/deepseek-v4-flash",
+ "provider": "DigitalOcean",
+ "system_fingerprint": null,
+ "service_tier": null,
+ "choices": [
+  {
+   "index": 0,
+   "logprobs": null,
+   "finish_reason": "stop",
+   "native_finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "content": "{\n  \"target\": \"author_thesis\",\n  \"target_id\": null,\n  \"comment_fragment\": \"Среди работяг?\",\n  \"context_fragment\": \"не забывай что там часть команды еще\",\n  \"why\": \"Comment asks about 'workies' referencing earlier reply chain about team.\"\n}",
+    "refusal": null,
+    "reasoning": null
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 1137,
+  "completion_tokens": 70,
+  "total_tokens": 1207,
+  "cost": 4.48644e-05,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 1024,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 4.48644e-05,
+   "upstream_inference_prompt_cost": 3.11444e-05,
+   "upstream_inference_completions_cost": 1.372e-05
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

@@ -1,0 +1,46 @@
+{
+ "id": "gen-1790249418-NKpS9MCxWQqkNs1iU4Jr",
+ "object": "chat.completion",
+ "created": 1790249418,
+ "model": "deepseek/deepseek-v4-flash",
+ "provider": "DigitalOcean",
+ "system_fingerprint": null,
+ "service_tier": null,
+ "choices": [
+  {
+   "index": 0,
+   "logprobs": null,
+   "finish_reason": "stop",
+   "native_finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "content": "{\n  \"target\": \"event\",\n  \"target_id\": \"e103-bac60b19c932c9f7\",\n  \"comment_fragment\": \"Раванга это и предположила\",\n  \"context_fragment\": \"Что случилось (19.09.2026, Ethereum):\",\n  \"why\": \"Comment agrees with post's analysis of the exploit event.\"\n}",
+    "refusal": null,
+    "reasoning": null
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 1356,
+  "completion_tokens": 84,
+  "total_tokens": 1440,
+  "cost": 0.000149352,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.000149352,
+   "upstream_inference_prompt_cost": 0.000132888,
+   "upstream_inference_completions_cost": 1.6464e-05
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}
