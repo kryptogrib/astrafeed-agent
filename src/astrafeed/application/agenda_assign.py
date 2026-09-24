@@ -23,6 +23,7 @@ from astrafeed.domain.agenda import (
     embedding_input,
     lexical_tokens,
 )
+from astrafeed.domain.spend_budget import BudgetExceeded
 from astrafeed.ports.agenda import AgendaStore, Embedder, StoryAssigner
 
 
@@ -162,6 +163,8 @@ async def assign_publication(
         text = embedding_input(fragment.text, surfaces)
         try:
             vector = await _vector_for(store, embedder, text)
+        except BudgetExceeded:
+            raise
         except Exception:
             await store.enqueue(publication.publication_id, "embed_error")
             raise
@@ -191,13 +194,19 @@ async def assign_publication(
             await store.list_stories(),
             await store.list_events(),
         )
-        assignment = await assigner.assign(
-            fragment=indexed,
-            entities=entities,
-            stories=stories,
-            events=events,
-            candidates=candidates,
-        )
+        try:
+            assignment = await assigner.assign(
+                fragment=indexed,
+                entities=entities,
+                stories=stories,
+                events=events,
+                candidates=candidates,
+            )
+        except BudgetExceeded:
+            raise
+        except Exception:
+            await store.enqueue(publication.publication_id, "assign_error")
+            return
         chosen_entities = _apply_entities(entities, assignment)
         for entity in chosen_entities:
             await store.save_entity(entity)

@@ -130,6 +130,9 @@ async def run_cycle(
             extraction = await analyze_publication(store, extractor, publication)
             if extraction.status == "error":
                 continue
+            if extraction.status == "empty":
+                await store.mark_processed(publication.publication_id)
+                continue
             await assign_publication(store, embedder, assigner, publication, extraction)
 
         state.last_analyze_at = now

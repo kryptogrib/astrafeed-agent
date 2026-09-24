@@ -133,5 +133,4 @@ async def analyze_publication(
     if cached.status == "error":
         await store.enqueue(publication.publication_id, "extract_error")
         return cached
-    await store.mark_processed(publication.publication_id)
     return resolve_instance(cached, publication.published_at)
