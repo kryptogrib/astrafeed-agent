@@ -12,7 +12,7 @@ from dataclasses import dataclass, field
 from datetime import datetime, timedelta
 from typing import Any, Literal
 
-CLASSIFIER_VERSION = "open-extract/v3"
+CLASSIFIER_VERSION = "open-extract/v4"
 EMBEDDING_MODEL = "openai/text-embedding-3-small"
 EMBEDDING_DIM = 1536
 EMBEDDING_PREP_VERSION = "fragment-entities/v1"
