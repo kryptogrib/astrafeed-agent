@@ -182,6 +182,53 @@ async def test_extraction_overlaps_but_assignment_stays_chronological():
 
 
 @pytest.mark.asyncio
+async def test_extraction_stays_within_one_bounded_batch_ahead_of_assignment():
+    store = InMemoryAgendaStore()
+    t = datetime(2026, 9, 24, 12, tzinfo=UTC)
+
+    class CountingExtractor(Extractor):
+        calls = 0
+
+        async def extract(self, text):
+            self.calls += 1
+            return await super().extract(text)
+
+    extractor = CountingExtractor()
+
+    class CheckingAssigner(Assigner):
+        calls = 0
+
+        async def assign(self, **kwargs):
+            if self.calls == 0:
+                assert extractor.calls <= 2
+            self.calls += 1
+            return await super().assign(**kwargs)
+
+    await run_cycle(
+        store,
+        reader=Reader(
+            {
+                1: [
+                    _item(
+                        "@a",
+                        str(index),
+                        f"Отток ETH ETF номер {index} сегодня.",
+                        t - timedelta(minutes=10 - index),
+                    )
+                    for index in range(5)
+                ]
+            }
+        ),
+        source_ids=[1],
+        extractor=extractor,
+        embedder=Embedder(),
+        assigner=CheckingAssigner(),
+        now=t,
+        extract_concurrency=2,
+    )
+
+
+@pytest.mark.asyncio
 async def test_concurrent_extraction_reuses_identical_text():
     store = InMemoryAgendaStore()
     t = datetime(2026, 9, 24, 12, tzinfo=UTC)

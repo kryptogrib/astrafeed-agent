@@ -155,40 +155,48 @@ async def run_cycle(
                 finally:
                     extract_seconds += perf_counter() - started
 
-        tasks = [asyncio.create_task(extract_one(pub)) for pub in pending]
         _log.info(
             "agenda analyze started posts=%d concurrency=%d", len(pending), extract_concurrency
         )
         try:
-            for processed, (publication, task) in enumerate(zip(pending, tasks, strict=True), 1):
+            for offset in range(0, len(pending), extract_concurrency):
+                batch = pending[offset : offset + extract_concurrency]
+                tasks = [asyncio.create_task(extract_one(pub)) for pub in batch]
                 try:
-                    extraction = await task
-                    if extraction.status == "error":
-                        continue
-                    if extraction.status == "empty":
-                        await store.mark_processed(publication.publication_id)
-                        continue
-                    started = perf_counter()
-                    try:
-                        await assign_publication(store, embedder, assigner, publication, extraction)
-                    finally:
-                        assign_seconds += perf_counter() - started
+                    for processed, (publication, task) in enumerate(
+                        zip(batch, tasks, strict=True), offset + 1
+                    ):
+                        try:
+                            extraction = await task
+                            if extraction.status == "error":
+                                continue
+                            if extraction.status == "empty":
+                                await store.mark_processed(publication.publication_id)
+                                continue
+                            started = perf_counter()
+                            try:
+                                await assign_publication(
+                                    store, embedder, assigner, publication, extraction
+                                )
+                            finally:
+                                assign_seconds += perf_counter() - started
+                        finally:
+                            if processed % 25 == 0:
+                                _log.info(
+                                    "agenda analyze progress=%d/%d extract_seconds=%.1f "
+                                    "assign_seconds=%.1f wall_seconds=%.1f",
+                                    processed,
+                                    len(pending),
+                                    extract_seconds,
+                                    assign_seconds,
+                                    perf_counter() - pipeline_started,
+                                )
                 finally:
-                    if processed % 25 == 0:
-                        _log.info(
-                            "agenda analyze progress=%d/%d extract_seconds=%.1f "
-                            "assign_seconds=%.1f wall_seconds=%.1f",
-                            processed,
-                            len(pending),
-                            extract_seconds,
-                            assign_seconds,
-                            perf_counter() - pipeline_started,
-                        )
+                    for task in tasks:
+                        if not task.done():
+                            task.cancel()
+                    await asyncio.gather(*tasks, return_exceptions=True)
         finally:
-            for task in tasks:
-                if not task.done():
-                    task.cancel()
-            await asyncio.gather(*tasks, return_exceptions=True)
             _log.info(
                 "agenda analyze posts=%d extract_seconds=%.1f assign_seconds=%.1f "
                 "wall_seconds=%.1f concurrency=%d",
