@@ -15,3 +15,10 @@ config.yaml
 build/
 dist/
 *.egg-info/
+
+# LLM replay caches for research scripts; restore with
+# git checkout research-cache-2026-09 -- artifacts/news-pulse/cache artifacts/reaction-subject
+artifacts/news-pulse/cache/
+artifacts/reaction-subject/cache/
+artifacts/reaction-subject/transfer/
+artifacts/reaction-subject/v2/
