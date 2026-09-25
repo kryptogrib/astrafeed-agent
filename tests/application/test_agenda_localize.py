@@ -150,3 +150,30 @@ def test_decimal_comma_and_point_are_the_same_grounded_number():
     source = "Payy, возможно, взломан на $1,83 млн."
     localizer._cache[source] = "Payy may have been hacked for $1.83 million."
     assert localizer._english(source, [source]) == localizer._cache[source]
+
+
+@pytest.mark.parametrize(
+    ("source", "english"),
+    [
+        # Live snap-20260925T075313Z: both stayed in Russian on the English page.
+        (
+            "Бразилия с 1 октября будет требовать отчетности о переводах на $10 000 или более",
+            "Starting October 1, Brazil will require reporting of transfers of $10,000 or more",
+        ),
+        (
+            "Ondo Finance токенизирует их для круглосуточного доступа через криптокошельки",
+            "Ondo Finance tokenizes them for 24/7 access via crypto wallets",
+        ),
+    ],
+)
+def test_thousands_separators_and_24_7_idiom_do_not_block_a_faithful_translation(source, english):
+    localizer = EnglishLocalizer(Translator())
+    localizer._cache[source] = english
+    assert localizer._english(source, [source]) == english
+
+
+def test_regrouped_digits_are_still_a_different_number():
+    localizer = EnglishLocalizer(Translator())
+    source = "Выведено $10 000."
+    localizer._cache[source] = "Withdrawn $100,000."
+    assert localizer._english(source, [source]) == ""

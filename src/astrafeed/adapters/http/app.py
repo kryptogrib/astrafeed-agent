@@ -7,12 +7,8 @@ from fastapi import FastAPI, HTTPException, Request
 from fastapi.responses import FileResponse, HTMLResponse, JSONResponse, PlainTextResponse
 
 from astrafeed.adapters.http.a2mcp import mount_a2mcp
-from astrafeed.application.agenda_query import (
-    AgendaNotFound,
-    AgendaPreparing,
-    render_agenda_html,
-    render_story_html,
-)
+from astrafeed.application.agenda_html import render_agenda_html, render_story_html
+from astrafeed.application.agenda_query import AgendaNotFound, AgendaPreparing
 
 _FAVICON = Path(__file__).with_name("static") / "favicon.ico"
 

@@ -7,12 +7,12 @@ import pytest
 from astrafeed.adapters.http.app import create_app
 from astrafeed.adapters.repository.memory_agenda import InMemoryAgendaStore
 from astrafeed.application.agenda_query import (
-    _growth_text,
     agenda_payload,
     search_payload,
     story_payload,
 )
 from astrafeed.application.agenda_snapshot import publish_snapshot
+from astrafeed.application.agenda_text import growth_text
 from astrafeed.domain.agenda import (
     ClaimCard,
     CoverageInfo,
@@ -166,7 +166,7 @@ async def test_preparing_is_503_and_old_apis_remain():
 
 
 def test_agenda_page_escapes_text_and_drops_unsafe_links():
-    from astrafeed.application.agenda_query import render_agenda_html
+    from astrafeed.application.agenda_html import render_agenda_html
 
     payload = {
         "snapshot_id": "snap",
@@ -203,7 +203,7 @@ def test_agenda_page_escapes_text_and_drops_unsafe_links():
 
 
 def test_story_history_and_first_linked_source_have_distinct_labels():
-    from astrafeed.application.agenda_query import render_agenda_md
+    from astrafeed.application.agenda_markdown import render_agenda_md
 
     card = {
         "story_id": "bitget",
@@ -262,12 +262,8 @@ def test_story_history_and_first_linked_source_have_distinct_labels():
 
 
 def test_discussion_is_rendered_in_markdown_and_html_and_escaped():
-    from astrafeed.application.agenda_query import (
-        render_agenda_html,
-        render_agenda_md,
-        render_story_html,
-        render_story_md,
-    )
+    from astrafeed.application.agenda_html import render_agenda_html, render_story_html
+    from astrafeed.application.agenda_markdown import render_agenda_md, render_story_md
 
     card = {
         "story_id": "s1",
@@ -330,7 +326,7 @@ def test_discussion_is_rendered_in_markdown_and_html_and_escaped():
 
 
 def test_agenda_markdown_ends_with_a_measured_trust_line():
-    from astrafeed.application.agenda_query import render_agenda_md
+    from astrafeed.application.agenda_markdown import render_agenda_md
 
     payload = {
         "snapshot_id": "snap",
@@ -368,16 +364,16 @@ def test_agenda_markdown_ends_with_a_measured_trust_line():
 
 def test_growth_text_explains_incomplete_channel():
     assert (
-        _growth_text({"growth": 5, "current_channels": 6, "previous_channels": 0})
+        growth_text({"growth": 5, "current_channels": 6, "previous_channels": 0})
         == "↑ +5 in 24h on comparable sources (6 observed)"
     )
-    assert _growth_text({"growth": 2, "current_channels": 2, "previous_channels": 0}) == (
+    assert growth_text({"growth": 2, "current_channels": 2, "previous_channels": 0}) == (
         "↑ +2 in 24h"
     )
 
 
 def test_html_groups_source_links_and_labels_snapshot_coverage():
-    from astrafeed.application.agenda_query import render_agenda_html
+    from astrafeed.application.agenda_html import render_agenda_html
 
     card = {
         "story_id": "mixed",

@@ -27,7 +27,7 @@ The live service and these six files are the product. The earlier Token Brief en
 2. [src/astrafeed/domain/agenda.py](src/astrafeed/domain/agenda.py) — quote spans, windows, growth rules
 3. [src/astrafeed/application/agenda_signals.py](src/astrafeed/application/agenda_signals.py) — echoes, conflicting figures, price before/after Telegram
 4. [src/astrafeed/application/agenda_changes.py](src/astrafeed/application/agenda_changes.py) — `since_snapshot_id` report delta
-5. [src/astrafeed/application/agenda_query.py](src/astrafeed/application/agenda_query.py) — JSON / Markdown / HTML from the published snapshot
+5. [src/astrafeed/application/agenda_query.py](src/astrafeed/application/agenda_query.py) — JSON from the published snapshot; [agenda_text.py](src/astrafeed/application/agenda_text.py) holds the wording shared by the [Markdown](src/astrafeed/application/agenda_markdown.py) and [HTML](src/astrafeed/application/agenda_html.py) renderers
 6. [src/astrafeed/adapters/http/a2mcp.py](src/astrafeed/adapters/http/a2mcp.py) — OKX.AI tool over the same read API
 
 `make check` runs ruff, mypy, import-linter, and pytest.
@@ -67,6 +67,15 @@ Here is a real, pinned [HYPE listing story](https://cutememe.lol/stories/st-e5cf
 | +179 min · near-verbatim echo of @Defiscamcheck | [@WEB3_AGGREGATOR](https://t.me/WEB3_AGGREGATOR/423706) |
 
 The card records **6 channels, including 1 detected echo**, and shows the [exact quoted announcement](https://t.me/marketfeed/1044681). “First” means first among channels AstraFeed observed, based on post time. An echo is a text-similarity finding, not proof of coordination. The story also carries an OKX spot price change since the first post; that is market context, **not a claim that the post moved the price**. The example is a historical snapshot, so its figures do not silently change with the live feed.
+
+For a traded ticker the card also answers **how late each source was for the price**. The live ONDO story on 25 Sep: the market was already up 6% in the hour before the first Telegram post, and by the time each source posted this share of the move was done:
+
+```
+⏳ @crypto_hd 18% · @WEB3_AGGREGATOR 19% · x/@cryptodotnews 37% · @marketfeed 45% · theblock.co 59% · @whitelist1 86%
+🕰 First post citing an official statement: 18h 54m after the first post
+```
+
+Prices are OKX spot at each post's minute; this is context, not a claim that any post moved the market ([contract](docs/story-signals.md)).
 
 The same trail flags disagreements when quoted amounts differ. It keeps the original wording and source links so a reader can decide what to trust. AstraFeed reports what channels **said**, not whether the underlying event is true.
 

@@ -4,7 +4,8 @@ from datetime import UTC, datetime, timedelta
 import pytest
 
 from astrafeed.adapters.repository.memory_agenda import InMemoryAgendaStore
-from astrafeed.application.agenda_query import agenda_payload, render_agenda_html
+from astrafeed.application.agenda_html import render_agenda_html
+from astrafeed.application.agenda_query import agenda_payload
 from astrafeed.domain.agenda import CaveatDrop, PriceMove, PublicationRef, SourceNode, StorySignals
 from tests.adapters.http.test_agenda import _snapshot
 
