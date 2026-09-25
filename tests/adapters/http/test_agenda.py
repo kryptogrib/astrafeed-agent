@@ -16,6 +16,7 @@ from astrafeed.application.agenda_snapshot import publish_snapshot
 from astrafeed.domain.agenda import (
     ClaimCard,
     CoverageInfo,
+    EventCard,
     PublicationRef,
     SearchDoc,
     Snapshot,
@@ -476,7 +477,9 @@ async def test_agenda_shows_recent_x_and_reddit_posts_outside_ranked_stories():
     t = datetime(2026, 9, 25, 12, tzinfo=UTC)
     original = _snapshot(t)
 
-    def single_source(sid: str, channel: str, link: str, text: str, age_hours: int):
+    def single_source(
+        sid: str, channel: str, link: str, text: str, age_hours: int, *, event: bool = True
+    ):
         published = t - timedelta(hours=age_hours)
         card = StoryCard(
             story_id=sid,
@@ -493,16 +496,29 @@ async def test_agenda_shows_recent_x_and_reddit_posts_outside_ranked_stories():
         )
         return StoryDetail(
             card=card,
+            events=(EventCard(sid, "", "", ()),) if event else (),
             publications=(PublicationRef(sid, channel, link, published, text),),
         )
 
     x_link = "https://x.com/CFTC/status/123"
     reddit_link = "https://www.reddit.com/r/CryptoCurrency/comments/abc/news/"
+    reddit_link_2 = "https://www.reddit.com/r/CryptoCurrency/comments/def/update/"
     stories = {
         **original.stories,
         "x": single_source("x", "x/@CFTC", x_link, "CFTC publishes crypto rule update", 1),
         "reddit": single_source(
             "reddit", "r/CryptoCurrency", reddit_link, "Bitcoin developer releases update", 2
+        ),
+        "reddit2": single_source(
+            "reddit2", "r/CryptoCurrency", reddit_link_2, "Exchange announces listing", 3
+        ),
+        "daily": single_source(
+            "daily",
+            "r/Bitcoin",
+            "https://www.reddit.com/r/Bitcoin/comments/daily/",
+            "Daily discussion",
+            0,
+            event=False,
         ),
         "old": single_source(
             "old", "r/Bitcoin", "https://www.reddit.com/r/Bitcoin/comments/old/", "Old", 30
@@ -517,7 +533,10 @@ async def test_agenda_shows_recent_x_and_reddit_posts_outside_ranked_stories():
     body = (await _get(app, "/agenda")).json()
     assert [card["story_id"] for card in body["stories"]] == ["st-eth"]
     assert [post["link"] for post in body["source_posts"]["x"]] == [x_link]
-    assert [post["link"] for post in body["source_posts"]["reddit"]] == [reddit_link]
+    assert [post["link"] for post in body["source_posts"]["reddit"]] == [
+        reddit_link,
+        reddit_link_2,
+    ]
     assert x_link in (await _get(app, "/agenda?format=html")).text
     assert reddit_link in (await _get(app, "/agenda?format=html")).text
     markdown = (await _get(app, "/agenda?format=md")).text

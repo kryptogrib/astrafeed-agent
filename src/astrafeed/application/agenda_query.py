@@ -277,6 +277,13 @@ def _recent_source_posts(snapshot: Snapshot) -> dict[str, list[dict]]:
     candidates: dict[str, list[tuple[datetime, str, dict]]] = {"x": [], "reddit": []}
     seen_ids: set[str] = set()
     for detail in snapshot.stories.values():
+        # The side list is for fresh developments, not daily threads or
+        # open-ended questions that the extractor also assigns to stories.
+        title = detail.card.title
+        if not detail.events or re.search(
+            r"\b(?:daily|day\s+\d+|user asks|anybody know)\b|\?", title, re.I
+        ):
+            continue
         for pub in detail.publications:
             group = _source_group(pub.channel_ref, pub.link)
             source = {"X": "x", "Reddit": "reddit"}.get(group)
@@ -302,11 +309,13 @@ def _recent_source_posts(snapshot: Snapshot) -> dict[str, list[dict]]:
     result: dict[str, list[dict]] = {}
     for source, posts in candidates.items():
         chosen: list[dict] = []
-        channels: set[str] = set()
+        channel_counts: dict[str, int] = {}
+        per_channel = 1 if source == "x" else 2
         for _, _, post in sorted(posts, key=lambda item: (item[0], item[1]), reverse=True):
-            if post["channel"] in channels:
+            channel = post["channel"]
+            if channel_counts.get(channel, 0) >= per_channel:
                 continue
-            channels.add(post["channel"])
+            channel_counts[channel] = channel_counts.get(channel, 0) + 1
             chosen.append(post)
             if len(chosen) == 3:
                 break
