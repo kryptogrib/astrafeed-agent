@@ -22,3 +22,5 @@ artifacts/news-pulse/cache/
 artifacts/reaction-subject/cache/
 artifacts/reaction-subject/transfer/
 artifacts/reaction-subject/v2/
+.DS_Store
+docs/astrafeed.png
