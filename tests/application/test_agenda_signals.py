@@ -7,6 +7,7 @@ from astrafeed.application.agenda_signals import (
     add_price_moves,
     is_scheduled,
     lead_channels,
+    move_done_pct,
     price_timing_verdict,
     sourcing,
     story_signals,
@@ -266,3 +267,93 @@ def test_entities_alone_do_not_add_a_ticker() -> None:
         )
         == ()
     )
+
+
+async def test_each_original_source_shows_how_much_of_the_move_it_trailed():
+    # Shape of live ONDO (snap-20260925T075313Z): the market moved before Telegram,
+    # and the official post arrived after most of the move.
+    card = _card("Binance lists Hyperliquid (HYPE)", ("Hyperliquid",))
+    from dataclasses import replace
+
+    pubs = [
+        _pub("@first", "HYPE listing announced", 0),
+        _pub("@copy", "HYPE listing announced", 5),
+        _pub("@late", "Hyperliquid HYPE gets a Binance listing today", 120),
+        _pub("@official", "Official: Binance will list HYPE", 600),
+    ]
+    card = replace(card, signals=story_signals(card, pubs, []))
+    hour_before = T0 - timedelta(hours=1)
+    opens = {
+        hour_before: 100.0,
+        T0: 104.0,
+        T0 + timedelta(minutes=120): 110.0,
+        T0 + timedelta(minutes=600): 118.0,
+    }
+    out = await add_price_moves(_snapshot(card), _Market(opens=opens, last=120.0), T0)
+    points = out.agenda[0].signals.price.at_posts
+    assert [(p.channel_ref, p.price, p.move_done_pct) for p in points] == [
+        ("@first", 104.0, 20),
+        ("@late", 110.0, 50),
+        ("@official", 118.0, 90),
+    ]
+
+
+def test_move_done_is_unknown_for_a_quiet_market_and_clamped_on_overshoot():
+    assert move_done_pct(100.0, 100.4, 100.5) is None
+    assert move_done_pct(100.0, 125.0, 120.0) == 100
+    assert move_done_pct(100.0, 97.0, 120.0) == 0
+    assert move_done_pct(100.0, 90.0, 80.0) == 50
+
+
+async def test_the_official_source_is_priced_even_when_it_posts_last():
+    card = _card("Binance lists Hyperliquid (HYPE)", ("Hyperliquid",))
+    from dataclasses import replace
+
+    texts = [
+        "HYPE may get listed soon",
+        "Rumours say Hyperliquid token lands on a big exchange",
+        "Traders expect a HYPE listing this week",
+        "Is HYPE about to hit Binance?",
+        "Insiders hint Hyperliquid will trade on Binance",
+        "Hyperliquid listing chatter grows",
+        "Everyone is talking about HYPE on Binance",
+    ]
+    pubs = [_pub(f"@c{n}", text, n * 30) for n, text in enumerate(texts)]
+    pubs.append(_pub("@exchange", "Official announcement: Binance will list HYPE", 900))
+    card = replace(card, signals=story_signals(card, pubs, []))
+    out = await add_price_moves(_snapshot(card), _Market(), T0)
+    channels = [p.channel_ref for p in out.agenda[0].signals.price.at_posts]
+    assert channels[-1] == "@exchange"
+    assert len(channels) == 6
+
+
+def test_report_shows_the_price_trail_and_the_wait_for_an_official_statement():
+    from astrafeed.application.agenda_query import _signal_lines
+
+    def node(channel: str, minutes: int, sourcing: str = "unmarked") -> dict:
+        return {"channel": channel, "minutes_after_first": minutes, "sourcing": sourcing}
+
+    def point(channel: str, done: int | None) -> dict:
+        return {"channel": channel, "move_done_pct": done}
+
+    signals = {
+        "confirmation": "official",
+        "attributed_to": [],
+        "sources": [node("@a", 0), node("@b", 60), node("@c", 1134, "official")],
+        "spread_minutes": None,
+        "figures_conflict": False,
+        "official_after_minutes": 1134,
+        "price": {
+            "inst_id": "ONDO-USDT",
+            "change_pct": 25.27,
+            "price_then": 0.4516,
+            "price_now": 0.5657,
+            "at_posts": [point("@a", 18), point("@b", 45), point("@c", 86)],
+        },
+    }
+    lines = _signal_lines({"signals": signals})
+    assert "🕰 First post citing an official statement: 18h 54m after the first post" in lines
+    assert lines[-1].endswith("@a 18% · @b 45% · @c 86%")
+
+    signals["price"]["at_posts"] = [point("@a", None), point("@c", None)]
+    assert not any(line.startswith("⏳") for line in _signal_lines({"signals": signals}))

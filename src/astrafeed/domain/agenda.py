@@ -447,6 +447,18 @@ class FigureGroup:
 
 
 @dataclass(frozen=True)
+class PriceAtPost:
+    """Spot price at one original source's first post on the story."""
+
+    channel_ref: str
+    published_at: datetime
+    price: float
+    # Share of the move from an hour before the first post to now that had already
+    # happened when this channel posted; None when the whole move is immaterial.
+    move_done_pct: int | None = None
+
+
+@dataclass(frozen=True)
 class PriceMove:
     """OKX spot around the first observed Telegram post: hour before and after."""
 
@@ -459,6 +471,7 @@ class PriceMove:
     price_hour_before: float | None = None
     change_pct_before: float | None = None
     verdict: str | None = None
+    at_posts: tuple[PriceAtPost, ...] = ()
 
 
 @dataclass(frozen=True)

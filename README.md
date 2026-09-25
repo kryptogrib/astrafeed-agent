@@ -66,6 +66,15 @@ Here is a real, pinned [HYPE listing story](https://cutememe.lol/stories/st-e5cf
 
 The card records **6 channels, including 1 detected echo**, and shows the [exact quoted announcement](https://t.me/marketfeed/1044681). “First” means first among channels AstraFeed observed, based on post time. An echo is a text-similarity finding, not proof of coordination. The story also carries an OKX spot price change since the first post; that is market context, **not a claim that the post moved the price**. The example is a historical snapshot, so its figures do not silently change with the live feed.
 
+For a traded ticker the card also answers **how late each source was for the price**. The live ONDO story on 25 Sep: the market was already up 6% in the hour before the first Telegram post, and by the time each source posted this share of the move was done:
+
+```
+⏳ @crypto_hd 18% · @WEB3_AGGREGATOR 19% · x/@cryptodotnews 37% · @marketfeed 45% · theblock.co 59% · @whitelist1 86%
+🕰 First post citing an official statement: 18h 54m after the first post
+```
+
+Prices are OKX spot at each post's minute; this is context, not a claim that any post moved the market ([contract](docs/story-signals.md)).
+
 The same trail flags disagreements when quoted amounts differ. It keeps the original wording and source links so a reader can decide what to trust. AstraFeed reports what channels **said**, not whether the underlying event is true.
 
 When a close later retelling drops an explicit uncertainty word such as “potentially,” the card shows **both exact phrases and links** under “Qualifier dropped in later wording.” This describes a change in wording; it does not claim the event was confirmed or that one channel copied another.

@@ -21,6 +21,7 @@ from astrafeed.domain.agenda import (
     CaveatDrop,
     ChannelLead,
     FigureGroup,
+    PriceAtPost,
     PriceMove,
     PublicationVersion,
     Snapshot,
@@ -421,6 +422,57 @@ def price_timing_verdict(change_pct_before: float | None, change_pct_after: floa
     return "quiet"
 
 
+# Original (non-echo) sources priced per story; each is one OKX candle request.
+_PRICED_POSTS = 6
+
+
+def move_done_pct(baseline: float, at_post: float, now: float) -> int | None:
+    """Share of the move from ``baseline`` to ``now`` already done at ``at_post``.
+
+    Answers "how late was this channel for the price": 0 means the post came before
+    the move, 100 after all of it. Clamped, so an overshoot that later retraced reads
+    as the whole move. None when the move is below the material threshold, because
+    a share of noise is noise.
+    """
+    total = now - baseline
+    if not baseline or abs(total) / baseline * 100 < _MATERIAL_MOVE_PCT:
+        return None
+    return max(0, min(100, round((at_post - baseline) / total * 100)))
+
+
+async def _prices_at_posts(
+    market: MarketPrices,
+    inst_id: str,
+    sources: tuple[SourceNode, ...],
+    baseline: float,
+    first_price: float,
+    last: float,
+) -> tuple[PriceAtPost, ...]:
+    originals = [node for node in sources if not node.echo_of]
+    official = next((node for node in originals if node.sourcing == "official"), None)
+    originals = originals[:_PRICED_POSTS]
+    if official is not None and official not in originals:
+        # The official post is the one a trader compares the rumour against.
+        originals[-1] = official
+    if not originals:
+        return ()
+    rest = await asyncio.gather(
+        *(market.open_at(inst_id, node.published_at) for node in originals[1:]),
+        return_exceptions=True,
+    )
+    prices = [first_price, *rest]
+    return tuple(
+        PriceAtPost(
+            channel_ref=node.channel_ref,
+            published_at=node.published_at,
+            price=price,
+            move_done_pct=move_done_pct(baseline, price, last),
+        )
+        for node, price in zip(originals, prices, strict=True)
+        if isinstance(price, float) and price
+    )
+
+
 def _pct_change(start: float, end: float) -> float | None:
     if not start:
         return None
@@ -428,8 +480,9 @@ def _pct_change(start: float, end: float) -> float | None:
 
 
 async def _price_move(
-    market: MarketPrices, symbol: str, since: datetime, now: datetime
+    market: MarketPrices, symbol: str, sources: tuple[SourceNode, ...], now: datetime
 ) -> PriceMove | None:
+    since = sources[0].published_at
     inst_id = f"{symbol}-USDT"
     hour_before = since - timedelta(hours=1)
     before, then, last = await asyncio.gather(
@@ -468,10 +521,9 @@ async def add_price_moves(
         signals = card.signals
         if signals is None or not signals.tickers or not signals.sources:
             return card
-        since = signals.sources[0].published_at
         for symbol in signals.tickers:
             try:
-                move = await _price_move(market, symbol, since, now)
+                move = await _price_move(market, symbol, signals.sources, now)
             except Exception as exc:  # network, JSON, rate limit
                 _log.warning("price lookup %s failed: %s", symbol, type(exc).__name__)
                 continue
@@ -479,12 +531,29 @@ async def add_price_moves(
                 return replace(card, signals=replace(signals, price=move))
         return card
 
+    async def trail(card: StoryCard) -> StoryCard:
+        signals = card.signals
+        if signals is None or signals.price is None:
+            return card
+        move = signals.price
+        baseline = move.price_hour_before or move.price_then
+        at_posts = await _prices_at_posts(
+            market, move.inst_id, signals.sources, baseline, move.price_then, move.price_now
+        )
+        return replace(card, signals=replace(signals, price=replace(move, at_posts=at_posts)))
+
     try:
         async with asyncio.timeout(timeout_seconds):
             agenda = tuple(await asyncio.gather(*(one(card) for card in snapshot.agenda)))
     except TimeoutError:
         _log.warning("price lookup timed out")
         return snapshot
+    # Second phase: per-source prices are extra detail; losing them keeps the move.
+    try:
+        async with asyncio.timeout(timeout_seconds):
+            agenda = tuple(await asyncio.gather(*(trail(card) for card in agenda)))
+    except TimeoutError:
+        _log.warning("per-source price lookup timed out")
     stories = dict(snapshot.stories)
     for card in agenda:
         detail = stories.get(card.story_id)

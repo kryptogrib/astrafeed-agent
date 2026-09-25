@@ -36,6 +36,7 @@ from astrafeed.domain.agenda import (
     IndexedFragment,
     MentionedEntity,
     PositionCard,
+    PriceAtPost,
     PriceMove,
     PublicationRef,
     PublicationVersion,
@@ -79,6 +80,7 @@ _TYPES = {
         SourceNode,
         FigureGroup,
         PriceMove,
+        PriceAtPost,
         StorySignals,
         ChannelLead,
     )

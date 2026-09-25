@@ -100,6 +100,14 @@ def _signals_payload(card: StoryCard) -> dict | None:
         ],
         "figures_conflict": signals.figures_conflict,
         "tickers": list(signals.tickers),
+        "official_after_minutes": next(
+            (
+                node.minutes_after_first
+                for node in signals.sources
+                if node.sourcing == "official" and node.minutes_after_first > 0
+            ),
+            None,
+        ),
         "sources": [
             {
                 "channel": node.channel_ref,
@@ -135,6 +143,15 @@ def _signals_payload(card: StoryCard) -> dict | None:
             "price_hour_before": price.price_hour_before,
             "change_pct_before": price.change_pct_before,
             "verdict": price.verdict,
+            "at_posts": [
+                {
+                    "channel": point.channel_ref,
+                    "published_at": point.published_at.isoformat(),
+                    "price": point.price,
+                    "move_done_pct": point.move_done_pct,
+                }
+                for point in price.at_posts
+            ],
             "source": "OKX spot",
         },
     }
@@ -327,10 +344,28 @@ def _signal_lines(card: dict) -> list[str]:
             for f in signals["figures"]
         ]
         lines.append("⚠️ Figures differ: " + " vs ".join(parts))
+    official_after = signals.get("official_after_minutes")
+    if official_after and signals["confirmation"] != "official":
+        official_after = None
+    if official_after:
+        delay = _duration(official_after)
+        lines.append(f"🕰 First post citing an official statement: {delay} after the first post")
     price = signals.get("price")
     if price:
         lines.append(_price_line(price))
+        trail = _move_done_line(price)
+        if trail:
+            lines.append(trail)
     return lines
+
+
+def _move_done_line(price: dict) -> str:
+    """Where each original source stood on the price move, e.g. "@a 20% · @b 90%"."""
+    points = [p for p in price.get("at_posts") or [] if p["move_done_pct"] is not None]
+    if len(points) < 2:
+        return ""
+    trail = " · ".join(f"{p['channel']} {p['move_done_pct']}%" for p in points)
+    return f"⏳ Share of the move already done when each source posted: {trail}"
 
 
 def _price_line(price: dict) -> str:
