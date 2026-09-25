@@ -1,3 +1,4 @@
+from dataclasses import replace
 from datetime import UTC, datetime, timedelta
 
 import httpx
@@ -467,3 +468,57 @@ async def test_agenda_lists_configured_feeds_separately_from_story_evidence():
     assert '<a href="https://www.reddit.com/r/Bitcoin/">r/Bitcoin</a>' in page.text
     assert "These feeds are not evidence for the stories above" in page.text
     assert "reddit_feeds" not in (await _get(app, "/agenda")).json()
+
+
+@pytest.mark.asyncio
+async def test_agenda_shows_recent_x_and_reddit_posts_outside_ranked_stories():
+    store = InMemoryAgendaStore()
+    t = datetime(2026, 9, 25, 12, tzinfo=UTC)
+    original = _snapshot(t)
+
+    def single_source(sid: str, channel: str, link: str, text: str, age_hours: int):
+        published = t - timedelta(hours=age_hours)
+        card = StoryCard(
+            story_id=sid,
+            title=text,
+            entities=(),
+            current_channels=1,
+            previous_channels=0,
+            growth=1,
+            growth_null_reason=None,
+            first_seen=published,
+            freshness=published,
+            explanation=text,
+            claims=(),
+        )
+        return StoryDetail(
+            card=card,
+            publications=(PublicationRef(sid, channel, link, published, text),),
+        )
+
+    x_link = "https://x.com/CFTC/status/123"
+    reddit_link = "https://www.reddit.com/r/CryptoCurrency/comments/abc/news/"
+    stories = {
+        **original.stories,
+        "x": single_source("x", "x/@CFTC", x_link, "CFTC publishes crypto rule update", 1),
+        "reddit": single_source(
+            "reddit", "r/CryptoCurrency", reddit_link, "Bitcoin developer releases update", 2
+        ),
+        "old": single_source(
+            "old", "r/Bitcoin", "https://www.reddit.com/r/Bitcoin/comments/old/", "Old", 30
+        ),
+    }
+    await publish_snapshot(store, replace(original, stories=stories))
+
+    async def agenda(snapshot_id=None):
+        return await agenda_payload(store, snapshot_id=snapshot_id, now=t)
+
+    app = create_app(agenda=agenda)
+    body = (await _get(app, "/agenda")).json()
+    assert [card["story_id"] for card in body["stories"]] == ["st-eth"]
+    assert [post["link"] for post in body["source_posts"]["x"]] == [x_link]
+    assert [post["link"] for post in body["source_posts"]["reddit"]] == [reddit_link]
+    assert x_link in (await _get(app, "/agenda?format=html")).text
+    assert reddit_link in (await _get(app, "/agenda?format=html")).text
+    markdown = (await _get(app, "/agenda?format=md")).text
+    assert x_link in markdown and reddit_link in markdown

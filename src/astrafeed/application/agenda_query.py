@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 import re
-from datetime import datetime
+from datetime import datetime, timedelta
 from html import escape
 from urllib.parse import quote, urlsplit, urlunsplit
 
@@ -271,6 +271,49 @@ def _source_group(name: str, link: str) -> str:
     return "News sites" if host else "Other sources"
 
 
+def _recent_source_posts(snapshot: Snapshot) -> dict[str, list[dict]]:
+    """Show source activity without promoting one-source posts into the agenda."""
+    cutoff = snapshot.t - timedelta(hours=24)
+    candidates: dict[str, list[tuple[datetime, str, dict]]] = {"x": [], "reddit": []}
+    seen_ids: set[str] = set()
+    for detail in snapshot.stories.values():
+        for pub in detail.publications:
+            group = _source_group(pub.channel_ref, pub.link)
+            source = {"X": "x", "Reddit": "reddit"}.get(group)
+            if (
+                source is None
+                or pub.publication_id in seen_ids
+                or not cutoff <= pub.published_at <= snapshot.t
+            ):
+                continue
+            seen_ids.add(pub.publication_id)
+            candidates[source].append(
+                (
+                    pub.published_at,
+                    pub.publication_id,
+                    {
+                        "channel": pub.channel_ref,
+                        "link": pub.link,
+                        "published_at": pub.published_at.isoformat(),
+                        "text": " ".join((pub.quote or detail.card.title).split())[:240],
+                    },
+                )
+            )
+    result: dict[str, list[dict]] = {}
+    for source, posts in candidates.items():
+        chosen: list[dict] = []
+        channels: set[str] = set()
+        for _, _, post in sorted(posts, key=lambda item: (item[0], item[1]), reverse=True):
+            if post["channel"] in channels:
+                continue
+            channels.add(post["channel"])
+            chosen.append(post)
+            if len(chosen) == 3:
+                break
+        result[source] = chosen
+    return result
+
+
 def _head_start(lead: dict) -> str:
     minutes = lead["median_lead_minutes"]
     return f"median head start {_duration(minutes)}" if minutes else "tied with another channel"
@@ -502,6 +545,7 @@ def render_agenda_md(payload: dict) -> str:
     notes = _limitation_notes(payload)
     if notes:
         lines += ["", "⚠️ " + "; ".join(notes) + "."]
+    lines += _md_source_posts(payload)
     lines += ["", *comparison_lines(payload)]
     if not payload["stories"]:
         if not delta:
@@ -518,6 +562,27 @@ def render_agenda_md(payload: dict) -> str:
     lines += _md_extras(payload)
     lines += _md_footer(payload)
     return "\n".join(lines) + "\n"
+
+
+def _md_source_posts(payload: dict) -> list[str]:
+    posts = payload.get("source_posts") or {}
+    if not any(posts.values()):
+        return []
+    lines = [
+        "",
+        "## Fresh posts from X and Reddit",
+        "",
+        "Single-source posts; not independent confirmation.",
+    ]
+    for source, label in (("x", "X"), ("reddit", "Reddit")):
+        if group := posts.get(source):
+            lines += ["", f"### {label}"]
+            lines += [
+                f"- {_when(post['published_at'])} [{post['channel']}]({post['link']}): "
+                f"{post['text']}"
+                for post in group
+            ]
+    return lines
 
 
 def _md_footer(payload: dict) -> list[str]:
@@ -751,6 +816,29 @@ def _html_status(payload: dict) -> str:
     )
 
 
+def _html_source_posts(payload: dict) -> str:
+    posts = payload.get("source_posts") or {}
+    if not any(posts.values()):
+        return ""
+    groups = []
+    for source, label in (("x", "X"), ("reddit", "Reddit")):
+        if not (group := posts.get(source)):
+            continue
+        items = "".join(
+            f'<li><a href="{_url(post["link"])}">{escape(post["channel"])}</a> '
+            f'<span class="meta">{escape(_when(post["published_at"]))}</span>: '
+            f"{escape(post['text'])}</li>"
+            for post in group
+        )
+        groups.append(f"<h3>{label}</h3><ul>{items}</ul>")
+    return (
+        "<section><h2>Fresh posts from X and Reddit</h2>"
+        '<p class="meta">Single-source posts; not independent confirmation.</p>'
+        + "".join(groups)
+        + "</section>"
+    )
+
+
 def _html_feed_directory(rss_feeds: list[str], reddit_feeds: list[str]) -> str:
     if not rss_feeds and not reddit_feeds:
         return ""
@@ -798,6 +886,7 @@ def render_agenda_html(
         f'<p class="lead">{lead} Same snapshot: <code>POST /a2mcp/astrafeed</code>.</p>',
         _html_status(payload),
         _html_feed_directory(rss_feeds or [], reddit_feeds or []),
+        _html_source_posts(payload),
     ]
     body.extend(f'<p class="note">{escape(line)}</p>' for line in comparison_lines(payload))
     if not payload["stories"] and not delta:
@@ -950,6 +1039,7 @@ async def agenda_payload(
     snapshot = await load_snapshot(store, snapshot_id)
     payload = _status(snapshot, now)
     payload["stories"] = [_card_payload(card) for card in snapshot.agenda]
+    payload["source_posts"] = _recent_source_posts(snapshot)
     payload["upcoming"] = [_card_payload(card) for card in snapshot.upcoming]
     payload["lead_channels"] = [
         {
@@ -1001,6 +1091,7 @@ async def agenda_payload(
             payload["upcoming"] = [
                 card for card in payload["upcoming"] if card["story_id"] in changed_ids
             ]
+            payload["source_posts"] = {"x": [], "reddit": []}
             # This ranking is snapshot context, not a change in story evidence.
             payload["lead_channels"] = []
     payload["brief_markdown"] = render_agenda_md(payload)
