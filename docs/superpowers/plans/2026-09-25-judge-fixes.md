@@ -12,11 +12,10 @@
 - [x] Add HTTP tests for both A2MCP and REST: 200-character query accepted; 201 characters, empty string, and whitespace-only query return 422. Keep tests for `{}` and a POST with no body returning 200.
 - [x] Apply the same 200-character and nonblank constraint to `AstraFeedRequest.query` and `/stories/search?q=`. Run focused tests, then `make check`.
 
-## Priority 2 — working consumer and submission demo (next work)
+## Priority 2 — working consumer (next work)
 
 - [ ] Add `examples/agent_poll.py`: save a successful `snapshot_id`, poll with `since_snapshot_id`, handle an unchanged snapshot and `baseline_unavailable`, and print only available confirmation and price fields. Do not describe a report change as a new market event.
-- [ ] Record real output against a pinned earlier and later snapshot, then update README and the 2–4 minute video to show OKX.AI #13877, the callable service, and the consumer workflow. Verify every narrated claim against the recorded response.
-- [ ] Publish an accessible video URL and put it in README and the submission form before the deadline.
+- [ ] Verify the consumer against available pinned snapshots and add its exact command and representative output to README. Keep the final video capture until after deployment.
 
 ## Priority 3 — provenance and economics (execute now)
 
@@ -25,10 +24,11 @@
 - [x] Add a one-page `docs/x402-plan.md` with a future separate paid service, illustrative price, 402/payment/retry flow, and why the listed free endpoint stays 200. Link it from README.
 - [x] Add third-party attribution in `NOTICE`, keep `artifacts/README.md` as the frozen-research explanation, and explain why `/healthz` exposes spend.
 
-## Priority 4 — release check (after priorities 1–3 and demo)
+## Priority 4 — release and submission (after priorities 1–3)
 
 - [ ] Read `docs/ops.md`; do not start a local Telegram client. Run `make check`, deploy once, and verify commit, fresh snapshot, 200 for empty POST, 422 for invalid searches, and a real search hit.
-- [ ] Verify README links on public GitHub and run a focused judge review of the changed criteria. Keep the listed endpoint free; a paid integration requires its own fully tested service and listing decision.
+- [ ] Record the 2–4 minute video against the deployed service: show OKX.AI #13877, the callable endpoint, and the consumer workflow. Verify every narrated claim against the recorded response.
+- [ ] Publish an accessible video URL in README and the submission form before the deadline. Verify README links on public GitHub and run a focused judge review of the changed criteria. Keep the listed endpoint free; a paid integration requires its own fully tested service and listing decision.
 
 ## Acceptance for this work session
 
