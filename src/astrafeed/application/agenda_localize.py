@@ -25,6 +25,8 @@ from astrafeed.ports.agenda import Translator
 _log = logging.getLogger(__name__)
 
 _CYRILLIC = re.compile(r"[А-Яа-яЁё]")
+_THOUSANDS = re.compile(r"(?<=\d)[   ,](?=\d{3}(?!\d))")
+_IDIOMS = re.compile(r"\b24/7\b")
 CHUNK = 12
 CACHE_LIMIT = 5000
 
@@ -38,8 +40,13 @@ def _grounded_numbers(text: str, evidence: list[str]) -> bool:
         # Decimal punctuation changes in translation; thousands separators do not.
         return number.replace(",", ".") if re.fullmatch(r"\d+[,.]\d{1,2}", number) else number
 
-    allowed = {canonical(number) for quote in evidence for number in numbers_in(quote)}
-    return all(canonical(number) in allowed for number in numbers_in(text))
+    def numbers(value: str) -> set[str]:
+        # "$10 000" and "$10,000" are one number; "круглосуточно" becomes "24/7".
+        value = _IDIOMS.sub(" ", _THOUSANDS.sub("", value))
+        return {canonical(number) for number in numbers_in(value)}
+
+    allowed = {number for quote in evidence for number in numbers(quote)}
+    return numbers(text) <= allowed
 
 
 class EnglishLocalizer:

@@ -431,3 +431,21 @@ async def test_future_bullet_and_resolved_case_do_not_vote_for_current_event():
     )
     assert "omni" not in snapshot.stories
     assert "court" not in snapshot.stories
+
+
+@pytest.mark.asyncio
+async def test_all_caps_source_headline_yields_to_a_calm_quote_for_the_explanation():
+    store = InMemoryAgendaStore()
+    now = datetime(2026, 9, 24, 12, tzinfo=UTC)
+    await store.save_story(Story("poly", "Нью-Йорк подал иск против Polymarket", "", now))
+    # Live snap-20260925T075313Z: the paraphrase copied the shouting headline.
+    shout = "NEW YORK SUES POLYMARKET FOR RUNNING ILLEGAL GAMBLING OPERATION"
+    calm = "Штат Нью-Йорк подал иск против Polymarket."
+    for source_id, quote in ((1, shout), (2, calm)):
+        pub = _publication(source_id, str(source_id), quote, now - timedelta(hours=source_id))
+        await store.record_publication(pub)
+        await _link(store, "poly", pub, quote, quote)
+    snapshot = await build_snapshot(store, now, _coverage(), collected_at=now, analyzed_at=now)
+    card = snapshot.agenda[0]
+    assert card.explanation == calm
+    assert shout in {claim.quote for claim in card.claims}

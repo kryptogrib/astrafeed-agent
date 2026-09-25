@@ -262,7 +262,14 @@ def _hashes(pubs: list[PublicationVersion]) -> list[str]:
     return [pub.text_hash for pub in pubs]
 
 
+def _shouting(text: str) -> bool:
+    letters = [char for char in text if char.isalpha()]
+    return len(letters) >= 12 and all(char.isupper() for char in letters)
+
+
 def _explanation(claims: list[ClaimCard], title: str) -> str:
+    # A calm quote from another source reads better than a copied all-caps headline.
+    claims = sorted(claims, key=lambda claim: _shouting(claim.quote))
     for claim in claims:
         # A source excerpt retains modality (planned, possible, completed).
         # Prefer it to a fluent paraphrase that may silently change the tense.
@@ -271,7 +278,12 @@ def _explanation(claims: list[ClaimCard], title: str) -> str:
         else:
             candidates = (claim.paraphrase_ru, claim.quote)
         for text in candidates:
-            if text and not _PROFANITY.search(text) and numbers_are_grounded(text, [claim.quote]):
+            if (
+                text
+                and not _PROFANITY.search(text)
+                and not _shouting(text)
+                and numbers_are_grounded(text, [claim.quote])
+            ):
                 return text
     return title
 
