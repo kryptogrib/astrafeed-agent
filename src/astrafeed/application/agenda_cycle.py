@@ -128,8 +128,8 @@ async def _coverage_states(
     now: datetime,
 ) -> dict[int, dict[str, bool]]:
     current, previous = windows_at(now)
-    queued = set(await store.queued_ids())
     lookback_pubs = await store.publications_in(previous[0], current[1])
+    queued = set(await store.queued_ids({pub.publication_id for pub in lookback_pubs}))
     queued_sources = {pub.source_id for pub in lookback_pubs if pub.publication_id in queued}
     states: dict[int, dict[str, bool]] = {}
     for source_id in source_ids:
@@ -204,29 +204,21 @@ async def run_cycle(
         await store.set_cycle_state(state)
 
         await store.expire_before(now - FRESH_POST_WINDOW)
-        pending = [
-            pub for pub in await store.retryable_publications(as_of) if pub.source_id in source_set
-        ]
         if max_posts_per_cycle is not None:
             current_start = as_of - timedelta(hours=24)
             previous_start = as_of - LOOKBACK
-            pending.sort(
-                key=lambda pub: (
-                    0
-                    if pub.published_at >= current_start
-                    else 1
-                    if pub.published_at >= previous_start
-                    else 2,
-                    pub.published_at,
-                    pub.publication_id,
-                )
+            pending_count = await store.retryable_publication_count(as_of, source_set)
+            pending = await store.retryable_publications(
+                as_of,
+                source_ids=source_set,
+                limit=max_posts_per_cycle,
+                current_start=current_start,
+                previous_start=previous_start,
             )
         else:
-            pending.sort(key=lambda pub: (pub.published_at, pub.publication_id))
-        pending_count = len(pending)
+            pending = await store.retryable_publications(as_of, source_ids=source_set)
+            pending_count = len(pending)
         remaining_backfill = max_posts_per_cycle is not None and pending_count > max_posts_per_cycle
-        if max_posts_per_cycle is not None:
-            pending = pending[:max_posts_per_cycle]
         strict_assignment = assignment_mode == "strict" or (
             assignment_mode == "auto" and pending_count < 128
         )

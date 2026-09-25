@@ -49,25 +49,28 @@ class SqliteCommentStore:
     async def save_thread(self, state: ThreadState, comments: Sequence[StoredComment]) -> None:
         """Upsert the comments and the thread state in one transaction."""
         async with self._session() as s, s.begin():
-            for c in comments:
-                values = {
-                    "comment_key": c.comment_key,
-                    "source_id": c.source_id,
-                    "post_id": c.post_id,
-                    "comment_id": c.comment_id,
-                    "parent_comment_id": c.parent_comment_id,
-                    "ts": c.ts,
-                    "edited_at": c.edited_at,
-                    "text": c.text,
-                    "link": c.link,
-                    "author_key": c.author_key,
-                    "has_media": c.has_media,
-                }
-                stmt = sqlite_insert(CommentRow).values(**values)
+            if comments:
+                comment_values = [
+                    {
+                        "comment_key": c.comment_key,
+                        "source_id": c.source_id,
+                        "post_id": c.post_id,
+                        "comment_id": c.comment_id,
+                        "parent_comment_id": c.parent_comment_id,
+                        "ts": c.ts,
+                        "edited_at": c.edited_at,
+                        "text": c.text,
+                        "link": c.link,
+                        "author_key": c.author_key,
+                        "has_media": c.has_media,
+                    }
+                    for c in comments
+                ]
+                stmt = sqlite_insert(CommentRow)
                 stmt = stmt.on_conflict_do_update(
                     index_elements=[CommentRow.comment_key],
                     set_={
-                        **{k: stmt.excluded[k] for k in values if k != "comment_key"},
+                        **{k: stmt.excluded[k] for k in comment_values[0] if k != "comment_key"},
                         # An edited comment must be classified again.
                         "classified": case(
                             (CommentRow.text != stmt.excluded.text, False),
@@ -75,8 +78,8 @@ class SqliteCommentStore:
                         ),
                     },
                 )
-                await s.execute(stmt)
-            values = {
+                await s.execute(stmt, comment_values)
+            state_values = {
                 "source_id": state.source_id,
                 "post_id": state.post_id,
                 "status": state.status.value,
@@ -87,18 +90,33 @@ class SqliteCommentStore:
                 "reason": state.reason,
                 "last_scan_at": state.last_scan_at,
             }
-            stmt = sqlite_insert(ThreadStateRow).values(**values)
+            stmt = sqlite_insert(ThreadStateRow).values(**state_values)
             stmt = stmt.on_conflict_do_update(
                 index_elements=[ThreadStateRow.source_id, ThreadStateRow.post_id],
-                set_={k: stmt.excluded[k] for k in values if k not in ("source_id", "post_id")},
+                set_={
+                    k: stmt.excluded[k] for k in state_values if k not in ("source_id", "post_id")
+                },
             )
             await s.execute(stmt)
 
-    async def thread_states(self, source_id: int) -> dict[str, ThreadState]:
+    async def thread_states(
+        self, source_id: int, post_ids: Sequence[str]
+    ) -> dict[str, ThreadState]:
+        if not post_ids:
+            return {}
         async with self._session() as s:
-            rows = (
-                await s.scalars(select(ThreadStateRow).where(ThreadStateRow.source_id == source_id))
-            ).all()
+            rows = []
+            for offset in range(0, len(post_ids), 500):
+                rows.extend(
+                    (
+                        await s.scalars(
+                            select(ThreadStateRow).where(
+                                ThreadStateRow.source_id == source_id,
+                                ThreadStateRow.post_id.in_(post_ids[offset : offset + 500]),
+                            )
+                        )
+                    ).all()
+                )
         return {r.post_id: _state(r) for r in rows}
 
     async def read_comments(

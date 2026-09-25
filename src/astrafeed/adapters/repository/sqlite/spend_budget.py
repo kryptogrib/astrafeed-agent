@@ -6,7 +6,7 @@ from datetime import UTC, datetime, timedelta
 from decimal import ROUND_CEILING, Decimal
 from uuid import uuid4
 
-from sqlalchemy import func, select, text
+from sqlalchemy import and_, case, func, or_, select, text
 from sqlalchemy.ext.asyncio import AsyncConnection, async_sessionmaker
 
 from astrafeed.adapters.repository.sqlite.models import SpendReservationRow
@@ -104,33 +104,50 @@ class SqliteSpendBudget:
 
     async def summary(self) -> dict[str, float | int]:
         now = self._clock().astimezone(UTC)
+        row = SpendReservationRow
+        unsettled = row.settled.is_(False)
+        active = and_(
+            unsettled,
+            row.outcome == "active",
+            row.created_at.is_not(None),
+            row.created_at > now - timedelta(minutes=5),
+        )
+
+        def total(condition, value):
+            return func.coalesce(func.sum(case((condition, value), else_=0)), 0)
+
         async with self._session() as session:
-            settled_micros = await session.scalar(
-                select(func.coalesce(func.sum(SpendReservationRow.amount_micros), 0)).where(
-                    SpendReservationRow.settled.is_(True)
+            values = (
+                await session.execute(
+                    select(
+                        total(row.settled.is_(True), row.amount_micros),
+                        total(unsettled, row.amount_micros),
+                        total(active, 1),
+                        total(and_(unsettled, row.outcome == "timeout"), 1),
+                        total(and_(unsettled, row.outcome.in_(["error", "cancelled"])), 1),
+                        total(and_(unsettled, row.outcome == "missing_usage"), 1),
+                        total(
+                            and_(
+                                unsettled,
+                                row.outcome == "active",
+                                or_(
+                                    row.created_at.is_(None),
+                                    row.created_at <= now - timedelta(minutes=5),
+                                ),
+                            ),
+                            1,
+                        ),
+                        total(and_(unsettled, row.outcome.is_(None)), 1),
+                    )
                 )
-            )
-            unsettled = (
-                await session.scalars(
-                    select(SpendReservationRow).where(SpendReservationRow.settled.is_(False))
-                )
-            ).all()
-        active = [
-            row
-            for row in unsettled
-            if row.outcome == "active"
-            and row.created_at is not None
-            and now - row.created_at < timedelta(minutes=5)
-        ]
+            ).one()
         return {
-            "settled_usd": int(settled_micros or 0) / 1_000_000,
-            "unsettled_usd": sum(row.amount_micros for row in unsettled) / 1_000_000,
-            "active_count": len(active),
-            "timed_out_count": sum(row.outcome == "timeout" for row in unsettled),
-            "failed_count": sum(row.outcome in {"error", "cancelled"} for row in unsettled),
-            "missing_usage_count": sum(row.outcome == "missing_usage" for row in unsettled),
-            "stale_or_restart_count": sum(
-                row.outcome == "active" and row not in active for row in unsettled
-            ),
-            "legacy_unknown_count": sum(row.outcome is None for row in unsettled),
+            "settled_usd": int(values[0]) / 1_000_000,
+            "unsettled_usd": int(values[1]) / 1_000_000,
+            "active_count": int(values[2]),
+            "timed_out_count": int(values[3]),
+            "failed_count": int(values[4]),
+            "missing_usage_count": int(values[5]),
+            "stale_or_restart_count": int(values[6]),
+            "legacy_unknown_count": int(values[7]),
         }

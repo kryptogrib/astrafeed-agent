@@ -2,6 +2,7 @@ import asyncio
 from datetime import UTC, datetime
 
 import pytest
+from sqlalchemy import event
 from sqlalchemy.ext.asyncio import async_sessionmaker, create_async_engine
 
 from astrafeed.adapters.repository.sqlite.models import Base
@@ -87,4 +88,49 @@ async def test_existing_reservations_migrate_as_unknown_without_clearing_charge(
         assert summary["legacy_unknown_count"] == 1
         assert summary["active_count"] == 0
     finally:
+        await engine.dispose()
+
+
+@pytest.mark.asyncio
+async def test_summary_aggregates_all_outcomes_in_one_sql_result(tmp_path):
+    moment = datetime(2026, 9, 24, 12, tzinfo=UTC)
+    engine = create_async_engine(f"sqlite+aiosqlite:///{tmp_path / 'summary-aggregate.db'}")
+    async with engine.begin() as conn:
+        await conn.run_sync(Base.metadata.create_all)
+        await conn.exec_driver_sql(
+            "INSERT INTO spend_reservation "
+            "(id, principal_id, day, amount_micros, settled, created_at, outcome) VALUES "
+            "('active', 0, '2026-09-24', 100000, 0, '2026-09-24 11:59:59', 'active'), "
+            "('boundary', 0, '2026-09-24', 200000, 0, '2026-09-24 11:55:00', 'active'), "
+            "('null-date', 0, '2026-09-24', 300000, 0, NULL, 'active'), "
+            "('timeout', 0, '2026-09-24', 400000, 0, NULL, 'timeout'), "
+            "('error', 0, '2026-09-24', 500000, 0, NULL, 'error'), "
+            "('cancelled', 0, '2026-09-24', 600000, 0, NULL, 'cancelled'), "
+            "('missing', 0, '2026-09-24', 700000, 0, NULL, 'missing_usage'), "
+            "('legacy', 0, '2026-09-24', 800000, 0, NULL, NULL), "
+            "('settled', 0, '2026-09-24', 900000, 1, NULL, 'settled')"
+        )
+    seen: list[str] = []
+
+    def record(_conn, _cursor, statement, _parameters, _context, _executemany):
+        if statement.lstrip().upper().startswith("SELECT"):
+            seen.append(statement)
+
+    event.listen(engine.sync_engine, "before_cursor_execute", record)
+    try:
+        budget = SqliteSpendBudget(session=async_sessionmaker(engine), clock=lambda: moment)
+        summary = await budget.summary()
+        assert summary == {
+            "settled_usd": 0.9,
+            "unsettled_usd": 3.6,
+            "active_count": 1,
+            "timed_out_count": 1,
+            "failed_count": 2,
+            "missing_usage_count": 1,
+            "stale_or_restart_count": 2,
+            "legacy_unknown_count": 1,
+        }
+        assert len(seen) == 1
+    finally:
+        event.remove(engine.sync_engine, "before_cursor_execute", record)
         await engine.dispose()

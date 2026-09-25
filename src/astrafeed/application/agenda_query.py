@@ -452,13 +452,13 @@ async def search_payload(
 
 async def health_payload(store: AgendaStore, *, now: datetime, commit: str) -> dict:
     state: CycleState = await store.get_cycle_state()
-    snapshot = await store.get_snapshot(None)
+    snapshot = await store.published_snapshot_meta()
     queue_depth = await store.queue_depth()
-    queue_stopped = len(await store.queued_ids()) - queue_depth
+    queue_stopped = await store.queue_stopped()
     last_full_success_at = state.last_full_success_at or state.last_success_at
     if snapshot is None:
         status = "preparing"
-    elif state.budget_blocked or state.last_error or is_stale(snapshot.published_at, now):
+    elif state.budget_blocked or state.last_error or is_stale(snapshot[2], now):
         status = "degraded"
     else:
         status = "ok"
@@ -480,10 +480,10 @@ async def health_payload(store: AgendaStore, *, now: datetime, commit: str) -> d
         "last_snapshot": None
         if snapshot is None
         else {
-            "id": snapshot.snapshot_id,
-            "t": snapshot.t.isoformat(),
-            "stale": is_stale(snapshot.published_at, now),
-            "age_seconds": max(0, int((now - snapshot.published_at).total_seconds())),
+            "id": snapshot[0],
+            "t": snapshot[1].isoformat(),
+            "stale": is_stale(snapshot[2], now),
+            "age_seconds": max(0, int((now - snapshot[2]).total_seconds())),
         },
         "budget_blocked": state.budget_blocked,
     }

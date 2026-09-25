@@ -117,7 +117,7 @@ class CommentCollector:
         if not items:
             return
         counters = await self._reader.reply_counts(ref, [i.external_id for i in items])
-        states = await self._comments.thread_states(source_id)
+        states = await self._comments.thread_states(source_id, [i.external_id for i in items])
         for item in items:
             counter = counters.get(item.external_id)
             previous = states.get(item.external_id)

@@ -42,32 +42,43 @@ class WindowSource:
     async def fetch_new_items(self, channel: Channel, since: datetime | None) -> list[Item]:
         if channel.source_id is None or self._start is None or self._end is None:
             return []
-        raw = await self._store.read_window(channel.source_id, self._start, self._end)
-        seen: set[str] = set()
-        if since is not None and self._repo is not None and channel.id is not None:
-            keys = {
-                processed_item_signature(channel.id, item.external_id)
-                for item in raw
-                if item.timestamp == since
-            }
-            seen = await self._repo.seen_signatures(keys, since)
+        limit = min(self._channel_limit, self._remaining)
+        page_size = 200 if since is not None and self._repo is not None else min(200, limit + 1)
+        page_size = max(1, page_size)
+        start = max(self._start, since) if since is not None else self._start
+        after: tuple[datetime, str] | None = None
         mapped: list[Item] = []
-        for item in raw:
-            if since is not None:
-                if item.timestamp < since:
-                    continue
+        while len(mapped) <= limit:
+            page = await self._store.read_window_page(
+                channel.source_id, start, self._end, after=after, limit=page_size
+            )
+            if not page:
+                break
+            seen: set[str] = set()
+            if since is not None and self._repo is not None and channel.id is not None:
+                keys = {
+                    processed_item_signature(channel.id, item.external_id)
+                    for item in page
+                    if item.timestamp == since
+                }
+                if keys:
+                    seen = await self._repo.seen_signatures(keys, since)
+            for item in page:
                 if item.timestamp == since:
                     if self._repo is None or channel.id is None:
                         continue
                     if processed_item_signature(channel.id, item.external_id) in seen:
                         continue
-            mapped.append(
-                replace(item, channel_ref=channel.telegram_ref, channel_name=channel.name)
-            )
-        ordered = sorted(mapped, key=lambda i: i.timestamp)
-        limit = min(self._channel_limit, self._remaining)
-        selected = ordered[:limit]
-        self.truncated |= len(ordered) > limit
+                mapped.append(
+                    replace(item, channel_ref=channel.telegram_ref, channel_name=channel.name)
+                )
+                if len(mapped) > limit:
+                    break
+            if len(page) < page_size:
+                break
+            after = (page[-1].timestamp, page[-1].external_id)
+        selected = mapped[:limit]
+        self.truncated |= len(mapped) > limit
         self._remaining -= len(selected)
         return selected
 

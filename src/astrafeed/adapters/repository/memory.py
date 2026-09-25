@@ -105,6 +105,34 @@ class InMemoryRepository(Repository):
             key=lambda i: i.timestamp,
         )
 
+    async def count_window(self, source_id: int, start: datetime, end: datetime) -> int:
+        return sum(
+            sid == source_id and start <= item.timestamp <= end
+            for (sid, _), item in self._items.items()
+        )
+
+    async def read_window_page(
+        self,
+        source_id: int,
+        start: datetime,
+        end: datetime,
+        *,
+        after: tuple[datetime, str] | None,
+        limit: int,
+    ) -> list[Item]:
+        if limit < 1:
+            raise ValueError("Page limit must be positive")
+        return sorted(
+            (
+                item
+                for (sid, _), item in self._items.items()
+                if sid == source_id
+                and start <= item.timestamp <= end
+                and (after is None or (item.timestamp, item.external_id) > after)
+            ),
+            key=lambda item: (item.timestamp, item.external_id),
+        )[:limit]
+
     async def coverage(self, source_id: int, start: datetime, end: datetime) -> Coverage:
         return coverage_for_window(self._coverage.get(source_id, []), start, end)
 

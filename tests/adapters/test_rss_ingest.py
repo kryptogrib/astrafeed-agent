@@ -2,6 +2,7 @@ from datetime import UTC, datetime, timedelta
 
 import httpx
 import pytest
+from sqlalchemy import event
 from sqlalchemy.ext.asyncio import async_sessionmaker, create_async_engine
 
 from astrafeed.adapters.repository.memory import InMemoryRepository
@@ -117,4 +118,41 @@ async def test_sqlite_coverage_merges_adjacent_spans_and_ignores_history_outside
         assert not (await store.coverage(source_id, START, START + 3 * hour)).complete
         assert not (await store.coverage(source_id, START + 7 * hour, START + 8 * hour)).complete
     finally:
+        await engine.dispose()
+
+
+@pytest.mark.asyncio
+async def test_raw_items_batch_upsert_and_count_window_without_decoding(tmp_path):
+    engine = create_async_engine(f"sqlite+aiosqlite:///{tmp_path / 'batch.db'}")
+    async with engine.begin() as connection:
+        await connection.run_sync(Base.metadata.create_all)
+    store = SqliteIngestionStore(async_sessionmaker(engine, expire_on_commit=False))
+    source = await store.upsert_source(42)
+    seen: list[str] = []
+
+    def record(_conn, _cursor, statement, _parameters, _context, _executemany):
+        if statement.lstrip().upper().startswith("INSERT"):
+            seen.append(statement)
+
+    event.listen(engine.sync_engine, "before_cursor_execute", record)
+    try:
+        items = [
+            Item("42", str(i), f"Text {i}", f"https://example.com/{i}", START) for i in range(425)
+        ]
+        await store.store_items(source.id, items)
+        assert len(seen) <= 3
+        await store.store_items(
+            source.id,
+            [items[0], Item("42", "1", "Updated", "https://example.com/1", START)],
+        )
+        assert await store.count_window(source.id, START, START) == 425
+        assert (
+            await store.count_window(
+                source.id, START + timedelta(seconds=1), START + timedelta(days=1)
+            )
+            == 0
+        )
+        assert (await store.read_window(source.id, START, START))[1].text == "Updated"
+    finally:
+        event.remove(engine.sync_engine, "before_cursor_execute", record)
         await engine.dispose()

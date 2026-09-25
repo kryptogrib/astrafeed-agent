@@ -77,6 +77,7 @@ def _supported_link(
     title: str,
     key_entity: str,
     entities: dict[str, Entity],
+    has_any_entities: bool = False,
 ) -> bool:
     """Only evidence that visibly names the subject can contribute a channel vote.
 
@@ -127,7 +128,7 @@ def _supported_link(
             or any(_mentions(title, name) for name in (entity.canonical_name, *entity.aliases))
         )
     ]
-    if entities and not any(
+    if (entities or has_any_entities) and not any(
         _mentions(quote, name)
         for entity in named_entities
         for name in (entity.canonical_name, *entity.aliases)
@@ -367,10 +368,28 @@ async def build_snapshot(
         if pub.source_id in coverage_states
     ]
     by_id = {pub.publication_id: pub for pub in pubs}
-    stories = {story.story_id: story for story in await store.list_stories()}
-    events = await store.list_events()
-    entities = {entity.entity_id: entity for entity in await store.list_entities()}
     all_links = await store.links_for_publications(set(by_id))
+    story_ids = {link.story_id for link in all_links}
+    stories = {story.story_id: story for story in await store.list_stories(story_ids)}
+    events = await store.list_events(story_ids=story_ids)
+    entity_ids = {entity_id for link in all_links for entity_id in link.entity_ids}
+    titles = tuple(story.title_ru for story in stories.values())
+    key_entities = {story.key_entity.casefold() for story in stories.values() if story.key_entity}
+    entities = {
+        entity.entity_id: entity
+        for entity in await store.list_entities(
+            lambda entity: (
+                entity.entity_id in entity_ids
+                or entity.canonical_name.casefold() in key_entities
+                or any(
+                    _mentions(title, name)
+                    for title in titles
+                    for name in (entity.canonical_name, *entity.aliases)
+                )
+            )
+        )
+    }
+    has_any_entities = bool(await store.entity_count())
     links_by_story: dict[str, list[StoryLink]] = defaultdict(list)
     for link in all_links:
         story = stories.get(link.story_id)
@@ -379,7 +398,9 @@ async def build_snapshot(
             story is not None
             and pub is not None
             and not claim_is_noise(link.quote)
-            and _supported_link(link, pub, story.title_ru, story.key_entity or "", entities)
+            and _supported_link(
+                link, pub, story.title_ru, story.key_entity or "", entities, has_any_entities
+            )
         ):
             links_by_story[link.story_id].append(link)
     verification_failed = False
@@ -568,7 +589,7 @@ async def build_snapshot(
                     docs.append(SearchDoc(detail.card.story_id, "alias", alias))
                     break
     processed = {pub.publication_id for pub in pubs}
-    queued = set(await store.queued_ids()) & processed
+    queued = set(await store.queued_ids(processed))
     limitations = () if not verification_failed else ("evidence_verification_failed",)
     coverage = CoverageInfo(
         channels_ok=sum(1 for state in coverage_states.values() if state.get("processed")),

@@ -664,19 +664,19 @@ async def _backfill_posts(args: argparse.Namespace) -> None:
         print(f"\n{'channel':<32} {'posts':>6}  status")
         total = 0
         for sid, ref in resolved.items():
-            posts = len(await store.read_window(sid, start, now))
+            posts = await store.count_window(sid, start, now)
             total += posts
             status = "ok" if result[sid].complete else f"INCOMPLETE {result.errors.get(sid, '')}"
             print(f"{ref:<32} {posts:>6}  {status}")
         for ref, reason in failed.items():
             print(f"{ref:<32} {'-':>6}  UNRESOLVED {reason}")
         for sid, url in rss_feeds.items():
-            articles = len(await store.read_window(sid, start, now))
+            articles = await store.count_window(sid, start, now)
             total += articles
             status = "ok" if sid not in rss_errors else f"INCOMPLETE {rss_errors[sid]}"
             print(f"{url:<32} {articles:>6}  {status}")
         for sid, subreddit in reddit_feeds.items():
-            posts = len(await store.read_window(sid, start, now))
+            posts = await store.count_window(sid, start, now)
             total += posts
             status = "ok" if sid not in reddit_errors else f"INCOMPLETE {reddit_errors[sid]}"
             print(f"{'r/' + subreddit:<32} {posts:>6}  {status}")

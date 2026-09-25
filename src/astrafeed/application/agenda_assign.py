@@ -5,7 +5,7 @@ from __future__ import annotations
 import asyncio
 import hashlib
 import logging
-from collections.abc import Sequence
+from collections.abc import Iterable, Sequence
 from dataclasses import dataclass, replace
 from time import perf_counter
 from typing import Literal
@@ -142,9 +142,9 @@ def select_assignment_context(
     fragment: IndexedFragment,
     candidates: Sequence[IndexedFragment],
     links: Sequence[StoryLink],
-    entities: Sequence[Entity],
-    stories: Sequence[Story],
-    events: Sequence[Event],
+    entities: Iterable[Entity],
+    stories: Iterable[Story],
+    events: Iterable[Event],
 ) -> tuple[list[Entity], list[Story], list[Event]]:
     candidate_keys = {(item.publication_id, item.fragment_index) for item in candidates}
     matched_links = [
@@ -242,9 +242,9 @@ def _context_from_state(
     indexed: IndexedFragment,
     pool: Sequence[IndexedFragment],
     links: Sequence[StoryLink],
-    entities: Sequence[Entity],
-    stories: Sequence[Story],
-    events: Sequence[Event],
+    entities: Iterable[Entity],
+    stories: Iterable[Story],
+    events: Iterable[Event],
     candidate_index: CandidateIndex | None = None,
 ) -> AssignmentContext:
     if candidate_index is None:
@@ -273,13 +273,25 @@ async def _context_from_store(store: AgendaStore, indexed: IndexedFragment) -> A
         indexed, [item for item in pool if item.published_at < indexed.published_at]
     )
     links = await store.links_for_publications({item.publication_id for item in candidates})
+    surfaces = {
+        surface.casefold() for item in (indexed, *candidates) for surface in item.entity_surfaces
+    }
+    entity_ids = {entity_id for link in links for entity_id in link.entity_ids}
+    story_ids = {link.story_id for link in links}
+    event_ids = {link.event_id for link in links if link.event_id}
     selected_entities, selected_stories, selected_events = select_assignment_context(
         indexed,
         candidates,
         links,
-        await store.list_entities(),
-        await store.list_stories(),
-        await store.list_events(),
+        await store.list_entities(
+            lambda entity: (
+                entity.entity_id in entity_ids
+                or entity.canonical_name.casefold() in surfaces
+                or any(alias.casefold() in surfaces for alias in entity.aliases)
+            )
+        ),
+        await store.list_stories(story_ids),
+        await store.list_events(event_ids),
     )
     return AssignmentContext(
         tuple(candidates),
@@ -344,14 +356,15 @@ async def _apply_decision(
             await store.enqueue(publication.publication_id, "assign_error")
             return AssignmentEffect((), None, None, (), None, valid=False)
         return AssignmentEffect((), None, None, (), None)
+    if not any(item.story_id == story.story_id for item in context.stories):
+        historic = await store.get_story(story.story_id)
+        if historic is not None:
+            story = historic
     if not story.key_entity:
         key_entity = _assignment_entity_key(assignment, indexed, context.entities)
         if key_entity:
             story = replace(story, key_entity=key_entity)
     chosen_entities = _apply_entities(list(context.entities), assignment)
-    for entity in chosen_entities:
-        await store.save_entity(entity)
-    await store.save_story(story)
     event_id = _resolve_event(assignment, story.story_id, list(context.events))
     event = None
     if event_id:
@@ -361,7 +374,6 @@ async def _apply_decision(
             when=getattr(assignment, "event_when", ""),
             amount=getattr(assignment, "event_amount", ""),
         )
-        await store.save_event(event)
     new_links = tuple(
         _link(
             story.story_id,
@@ -375,9 +387,7 @@ async def _apply_decision(
         )
         for claim_index, claim in enumerate(fragment.claims)
     )
-    for link in new_links:
-        await store.save_link(link)
-    await store.index_fragment(indexed)
+    await store.save_assignment(tuple(chosen_entities), story, event, new_links, indexed)
     return AssignmentEffect(tuple(chosen_entities), story, event, new_links, indexed)
 
 
@@ -455,15 +465,32 @@ async def assign_speculative_batch(
     start = min(pub.published_at for pub, _ in jobs) - LOOKBACK
     pool = await store.fragments_since(start)
     links = await store.links_for_publications({item.publication_id for item in pool})
-    entities = await store.list_entities()
-    stories = await store.list_stories()
-    events = await store.list_events()
+    catalog_surfaces = {surface.casefold() for item in pool for surface in item.entity_surfaces}
+    catalog_surfaces.update(
+        surface.casefold()
+        for _, extraction in jobs
+        for fragment in extraction.fragments
+        for surface in (entity.surface for entity in fragment.entities)
+    )
+    entity_ids = {entity_id for link in links for entity_id in link.entity_ids}
+    entities = await store.list_entities(
+        lambda entity: (
+            entity.entity_id in entity_ids
+            or entity.canonical_name.casefold() in catalog_surfaces
+            or any(alias.casefold() in catalog_surfaces for alias in entity.aliases)
+        )
+    )
+    stories = await store.list_stories({link.story_id for link in links})
+    events = await store.list_events({link.event_id for link in links if link.event_id})
     load_seconds = perf_counter() - batch_started
     frozen_pool = tuple(pool)
     frozen_links = tuple(links)
     frozen_entities = tuple(entities)
     frozen_stories = tuple(stories)
     frozen_events = tuple(events)
+    entity_map = {entity.entity_id: entity for entity in entities}
+    story_map = {story.story_id: story for story in stories}
+    event_map = {event.event_id: event for event in events}
     frozen_candidate_index = CandidateIndex(frozen_pool) if not strict else None
     semaphore = asyncio.Semaphore(concurrency)
     embed_started = perf_counter()
@@ -708,7 +735,14 @@ async def assign_speculative_batch(
         for proposal in prepared:
             started = perf_counter()
             context = (
-                _context_from_state(proposal.indexed, pool, links, entities, stories, events)
+                _context_from_state(
+                    proposal.indexed,
+                    pool,
+                    links,
+                    entity_map.values(),
+                    story_map.values(),
+                    event_map.values(),
+                )
                 if strict
                 else proposal.context
             )
@@ -738,10 +772,7 @@ async def assign_speculative_batch(
             if not strict and getattr(assignment, "story_decision", None) == "new":
                 title = getattr(assignment, "title_ru", "").strip()
                 if title and title.casefold() not in {"сюжет", "story"}:
-                    story_override = next(
-                        (story for story in stories if story.story_id == _stable_id("st", title)),
-                        None,
-                    )
+                    story_override = story_map.get(_stable_id("st", title))
             started = perf_counter()
             effect = await _apply_decision(
                 store,
@@ -758,14 +789,11 @@ async def assign_speculative_batch(
                 failed = True
                 break
             for entity in effect.entities:
-                entities = [item for item in entities if item.entity_id != entity.entity_id]
-                entities.append(entity)
+                entity_map[entity.entity_id] = entity
             if effect.story is not None:
-                stories = [item for item in stories if item.story_id != effect.story.story_id]
-                stories.append(effect.story)
+                story_map[effect.story.story_id] = effect.story
             if effect.event is not None:
-                events = [item for item in events if item.event_id != effect.event.event_id]
-                events.append(effect.event)
+                event_map[effect.event.event_id] = effect.event
             links.extend(effect.links)
             if effect.indexed is not None:
                 pool.append(effect.indexed)

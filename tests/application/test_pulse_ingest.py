@@ -2,13 +2,15 @@ from collections.abc import Sequence
 from datetime import UTC, datetime, timedelta
 
 import pytest
+from sqlalchemy import event, select, update
 from sqlalchemy.ext.asyncio import async_sessionmaker, create_async_engine
 
 from astrafeed.adapters.repository.sqlite.ingestion import SqliteIngestionStore
-from astrafeed.adapters.repository.sqlite.models import Base
+from astrafeed.adapters.repository.sqlite.models import Base, CommentRow
 from astrafeed.adapters.repository.sqlite.pulse import SqliteCommentStore
 from astrafeed.application.pulse_ingest import CommentCollector
 from astrafeed.domain.models import CommentFetch, CommentStatus, DiscussionComment, Item
+from astrafeed.domain.pulse import StoredComment, ThreadState
 
 T0 = datetime(2026, 9, 20, 12, tzinfo=UTC)
 REF = "@chan"
@@ -98,7 +100,7 @@ async def test_stores_comment_fields_and_skips_posts_without_comments(env):
     assert by_id["1"].parent_comment_id is None  # answers the post (thread root)
     assert by_id["2"].parent_comment_id == "1"
     assert by_id["2"].link == "https://t.me/chan/10?comment=2"
-    states = await env[2].thread_states(env[0])
+    states = await env[2].thread_states(env[0], ["10", "11", "12"])
     assert states["11"].status is CommentStatus.EMPTY
     assert states["12"].status is CommentStatus.UNAVAILABLE
 
@@ -124,7 +126,7 @@ async def test_late_comment_on_old_post_is_picked_up(env):
 async def test_flood_wait_is_not_recorded_as_empty_and_is_retried(env):
     env[3].fail["10"] = CommentStatus.FLOOD_WAIT
     report = await _run(env)
-    state = (await env[2].thread_states(env[0]))["10"]
+    state = (await env[2].thread_states(env[0], ["10"]))["10"]
     assert state.status is CommentStatus.FLOOD_WAIT and state.reply_counter is None
     assert report.failed == 1 and "flood wait" in report.error
     del env[3].fail["10"]
@@ -140,3 +142,61 @@ async def test_truncated_thread_is_rescanned(env):
     await _run(env, limit=100)
     await _run(env, limit=100)
     assert env[3].fetched == ["10", "10", "10"]
+
+
+async def test_thread_states_reads_only_requested_posts_across_large_windows(env):
+    sid, _, comments, _ = env
+    await comments.save_thread(ThreadState(sid, "historical", CommentStatus.FETCHED, 1, 1, T0), ())
+    await comments.save_thread(ThreadState(sid, "10", CommentStatus.EMPTY, 0, 0, T0), ())
+
+    states = await comments.thread_states(sid, [*(str(i) for i in range(1200)), "10"])
+
+    assert list(states) == ["10"]
+
+
+async def test_save_thread_batches_comments_and_reclassifies_only_edited_text(env):
+    sid, _, comments, _ = env
+    state = ThreadState(sid, "10", CommentStatus.FETCHED, 1200, 1200, T0)
+    rows = [
+        StoredComment(
+            f"{PEER}:{i}",
+            sid,
+            "10",
+            str(i),
+            T0,
+            f"comment {i}",
+            f"https://t.me/chan/10?comment={i}",
+        )
+        for i in range(1200)
+    ]
+    statements = []
+    engine = comments._session.kw["bind"]
+
+    def count_comment_writes(_conn, _cursor, statement, _parameters, _context, _executemany):
+        if statement.startswith("INSERT INTO comment "):
+            statements.append(statement)
+
+    event.listen(engine.sync_engine, "before_cursor_execute", count_comment_writes)
+    try:
+        await comments.save_thread(state, rows)
+    finally:
+        event.remove(engine.sync_engine, "before_cursor_execute", count_comment_writes)
+    assert len(statements) <= 10
+
+    async with comments._session() as session, session.begin():
+        await session.execute(
+            update(CommentRow).where(CommentRow.source_id == sid).values(classified=True)
+        )
+
+    edited = [
+        StoredComment(**{**row.__dict__, "text": "revised"}) if row.comment_id == "1" else row
+        for row in rows
+    ]
+    await comments.save_thread(state, edited)
+    async with comments._session() as session:
+        stored = (
+            await session.scalars(select(CommentRow).where(CommentRow.comment_id.in_(["1", "2"])))
+        ).all()
+    by_id = {row.comment_id: row for row in stored}
+    assert by_id["1"].text == "revised" and by_id["1"].classified is False
+    assert by_id["2"].classified is True

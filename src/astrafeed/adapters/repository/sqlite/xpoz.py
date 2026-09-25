@@ -20,12 +20,20 @@ class SqliteXpozThreads:
 
     async def record_reply_counts(self, counts: Mapping[str, int]) -> None:
         async with self._session() as s, s.begin():
-            for post_id, count in counts.items():
-                stmt = sqlite_insert(XpozThreadRow).values(post_id=post_id, reply_count=count)
+            pairs = list(counts.items())
+            # SQLite also binds column defaults, so cap each statement below
+            # the 999-variable limit supported by older installations.
+            for offset in range(0, len(pairs), 150):
+                stmt = sqlite_insert(XpozThreadRow).values(
+                    [
+                        {"post_id": post_id, "reply_count": count}
+                        for post_id, count in pairs[offset : offset + 150]
+                    ]
+                )
                 await s.execute(
                     stmt.on_conflict_do_update(
                         index_elements=[XpozThreadRow.post_id],
-                        set_={"reply_count": count},
+                        set_={"reply_count": stmt.excluded.reply_count},
                     )
                 )
 
@@ -33,8 +41,15 @@ class SqliteXpozThreads:
         if not post_ids:
             return {}
         async with self._session() as s:
-            rows = await s.scalars(select(XpozThreadRow).where(XpozThreadRow.post_id.in_(post_ids)))
-            return {row.post_id: row.reply_count for row in rows}
+            result: dict[str, int] = {}
+            for offset in range(0, len(post_ids), 500):
+                rows = await s.execute(
+                    select(XpozThreadRow.post_id, XpozThreadRow.reply_count).where(
+                        XpozThreadRow.post_id.in_(post_ids[offset : offset + 500])
+                    )
+                )
+                result.update(rows.all())
+            return result
 
     async def cached_comments(self, post_id: str) -> list[DiscussionComment] | None:
         async with self._session() as s:

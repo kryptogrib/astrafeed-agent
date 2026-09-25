@@ -4,11 +4,22 @@ from __future__ import annotations
 
 import asyncio
 import json
+from collections.abc import Callable
 from dataclasses import fields, is_dataclass
 from datetime import datetime
 from typing import Any
 
-from sqlalchemy import delete, insert, select, text
+from sqlalchemy import (
+    Integer,
+    bindparam,
+    delete,
+    func,
+    insert,
+    literal_column,
+    select,
+    text,
+    update,
+)
 from sqlalchemy.ext.asyncio import AsyncConnection, async_sessionmaker
 
 from astrafeed.adapters.repository.sqlite.models import (
@@ -19,6 +30,7 @@ from astrafeed.adapters.repository.sqlite.models import (
     AgendaPublicationRow,
     AgendaQueueRow,
     AgendaSnapshotRow,
+    UtcDateTime,
 )
 from astrafeed.domain.agenda import (
     SNAPSHOT_RETENTION,
@@ -51,7 +63,6 @@ from astrafeed.domain.agenda import (
     StoryDetail,
     StoryLink,
     StorySignals,
-    queue_reason_retryable,
 )
 
 _TYPES = {
@@ -134,6 +145,28 @@ def loads(raw: str) -> Any:
 _IN_CHUNK = 500
 
 
+def _retryable_clause():
+    """SQL equivalent for the persisted ASCII retry counter format."""
+    reason = AgendaQueueRow.reason
+    prefix = func.rtrim(reason, "0123456789")
+    numeric_tail = func.substr(reason, func.length(prefix) + 1)
+    stopped_error = (
+        (func.substr(prefix, -7) == "_error:")
+        & (func.length(numeric_tail) > 0)
+        & (func.cast(numeric_tail, Integer) >= 3)
+    )
+    return (reason != "expired") & ~stopped_error
+
+
+_RETRYABLE_QUEUE_SQL = (
+    "q.reason != 'expired' AND NOT ("
+    "substr(rtrim(q.reason, '0123456789'), -7) = '_error:' "
+    "AND length(q.reason) > length(rtrim(q.reason, '0123456789')) "
+    "AND CAST(substr(q.reason, length(rtrim(q.reason, '0123456789')) + 1) "
+    "AS INTEGER) >= 3)"
+)
+
+
 async def migrate_agenda_index_tables(connection: AsyncConnection) -> None:
     """Move links and fragments out of agenda_json into their indexed tables.
 
@@ -141,41 +174,46 @@ async def migrate_agenda_index_tables(connection: AsyncConnection) -> None:
     whole history. Runs at startup; a no-op once agenda_json holds neither kind.
     """
 
-    async def legacy(kind: str) -> list[tuple[str, str]]:
-        query = select(AgendaJsonRow.item_id, AgendaJsonRow.payload)
-        rows = await connection.execute(query.where(AgendaJsonRow.kind == kind))
-        return [(item_id, payload) for item_id, payload in rows]
-
-    if links := await legacy("link"):
-        await connection.execute(
-            insert(AgendaLinkRow).prefix_with("OR REPLACE"),
-            [
-                {
-                    "link_key": key,
-                    "publication_id": loads(payload).publication_id,
-                    "payload": payload,
-                }
-                for key, payload in links
-            ],
-        )
-    if fragments := await legacy("fragment"):
-        await connection.execute(
-            insert(AgendaFragmentRow).prefix_with("OR REPLACE"),
-            [
-                {
-                    "fragment_key": key,
-                    "published_at": loads(payload).published_at,
-                    "payload": payload,
-                }
-                for key, payload in fragments
-            ],
-        )
-    # Write only when there is something to move: the caller switches the
-    # journal to WAL afterwards, which SQLite refuses inside a write transaction.
-    if links or fragments:
-        await connection.execute(
-            delete(AgendaJsonRow).where(AgendaJsonRow.kind.in_(("link", "fragment")))
-        )
+    # Bound migration memory to a page; delete each page after its indexed
+    # replacement has been written so a restart can safely resume.
+    for kind, model, key_name, attribute in (
+        ("link", AgendaLinkRow, "link_key", "publication_id"),
+        ("fragment", AgendaFragmentRow, "fragment_key", "published_at"),
+    ):
+        while True:
+            rows = (
+                await connection.execute(
+                    select(AgendaJsonRow.item_id, AgendaJsonRow.payload)
+                    .where(AgendaJsonRow.kind == kind)
+                    .order_by(AgendaJsonRow.item_id)
+                    .limit(_IN_CHUNK)
+                )
+            ).all()
+            if not rows:
+                break
+            await connection.execute(
+                insert(model).prefix_with("OR REPLACE"),
+                [
+                    {
+                        key_name: key,
+                        attribute: getattr(loads(payload), attribute),
+                        "payload": payload,
+                    }
+                    for key, payload in rows
+                ],
+            )
+            await connection.execute(
+                delete(AgendaJsonRow).where(
+                    AgendaJsonRow.kind == kind,
+                    AgendaJsonRow.item_id.in_([key for key, _ in rows]),
+                )
+            )
+    # SQLAlchemy's checkfirst cannot reflect expression indexes on SQLite;
+    # create this one here so existing and fresh databases use the same path.
+    await connection.exec_driver_sql(
+        "CREATE INDEX IF NOT EXISTS ix_agenda_json_event_story "
+        "ON agenda_json (json_extract(payload, '$.story_id')) WHERE kind = 'event'"
+    )
 
 
 async def drop_unused_search_index(connection: AsyncConnection) -> None:
@@ -277,6 +315,22 @@ class SqliteAgendaStore:
             ).all()
             return [loads(row.payload) for row in rows]
 
+    async def _list_json_ids(self, kind: str, item_ids: set[str]) -> list[Any]:
+        if not item_ids:
+            return []
+        values: list[tuple[str, str]] = []
+        ids = sorted(item_ids)
+        async with self._session() as session:
+            for offset in range(0, len(ids), _IN_CHUNK):
+                result = await session.execute(
+                    select(AgendaJsonRow.item_id, AgendaJsonRow.payload).where(
+                        AgendaJsonRow.kind == kind,
+                        AgendaJsonRow.item_id.in_(ids[offset : offset + _IN_CHUNK]),
+                    )
+                )
+                values.extend(result)
+        return [loads(payload) for _, payload in sorted(values)]
+
     async def get_extraction(self, reuse_key: str) -> ExtractionResult | None:
         return await self._get_json("extraction", reuse_key)
 
@@ -308,55 +362,121 @@ class SqliteAgendaStore:
 
     async def expire_before(self, cutoff: datetime) -> None:
         async with self._session() as session, session.begin():
-            rows = (
-                await session.scalars(
-                    select(AgendaQueueRow)
-                    .join(
-                        AgendaPublicationRow,
-                        AgendaPublicationRow.publication_id == AgendaQueueRow.publication_id,
-                    )
-                    .where(
-                        AgendaPublicationRow.published_at < cutoff,
-                        AgendaQueueRow.reason != "expired",
-                    )
+            await session.execute(
+                update(AgendaQueueRow)
+                .where(
+                    AgendaQueueRow.publication_id.in_(
+                        select(AgendaPublicationRow.publication_id).where(
+                            AgendaPublicationRow.published_at < cutoff
+                        )
+                    ),
+                    _retryable_clause(),
                 )
-            ).all()
-            for queued in rows:
-                if queue_reason_retryable(queued.reason):
-                    queued.reason = "expired"
+                .values(reason="expired")
+            )
 
     async def queue_depth(self) -> int:
-        return len(await self.retryable_ids())
-
-    async def queued_ids(self) -> list[str]:
         async with self._session() as session:
-            rows = (await session.scalars(select(AgendaQueueRow))).all()
-            return [row.publication_id for row in rows]
+            return int(
+                await session.scalar(
+                    select(func.count()).select_from(AgendaQueueRow).where(_retryable_clause())
+                )
+                or 0
+            )
+
+    async def queue_stopped(self) -> int:
+        async with self._session() as session:
+            return int(
+                await session.scalar(
+                    select(func.count()).select_from(AgendaQueueRow).where(~_retryable_clause())
+                )
+                or 0
+            )
+
+    async def queued_ids(self, publication_ids: set[str] | None = None) -> list[str]:
+        if publication_ids is not None and not publication_ids:
+            return []
+        async with self._session() as session:
+            if publication_ids is None:
+                return list(await session.scalars(select(AgendaQueueRow.publication_id)))
+            ids = sorted(publication_ids)
+            found: list[str] = []
+            for offset in range(0, len(ids), _IN_CHUNK):
+                found.extend(
+                    await session.scalars(
+                        select(AgendaQueueRow.publication_id).where(
+                            AgendaQueueRow.publication_id.in_(ids[offset : offset + _IN_CHUNK])
+                        )
+                    )
+                )
+            return found
 
     async def retryable_ids(self) -> list[str]:
         async with self._session() as session:
-            rows = (
+            return list(
                 await session.scalars(
-                    select(AgendaQueueRow).where(AgendaQueueRow.reason != "expired")
+                    select(AgendaQueueRow.publication_id).where(_retryable_clause())
                 )
-            ).all()
-            return [row.publication_id for row in rows if queue_reason_retryable(row.reason)]
+            )
 
-    async def retryable_publications(self, end: datetime) -> list[PublicationVersion]:
-        # Two steps so the small queue drives the lookup: a join lets SQLite
-        # start from agenda_publication and range-scan the whole history.
-        ids = sorted(await self.retryable_ids())
-        pubs: list[PublicationVersion] = []
+    async def retryable_publications(
+        self,
+        end: datetime,
+        *,
+        source_ids: set[int] | None = None,
+        limit: int | None = None,
+        current_start: datetime | None = None,
+        previous_start: datetime | None = None,
+    ) -> list[PublicationVersion]:
+        if source_ids is not None and not source_ids:
+            return []
+        where = f"q.publication_id = p.publication_id AND {_RETRYABLE_QUEUE_SQL} "
+        where += "AND p.published_at < :end"
+        params: dict[str, Any] = {"end": end}
+        if source_ids is not None:
+            where += " AND p.source_id IN :source_ids"
+            params["source_ids"] = sorted(source_ids)
+        if current_start is not None and previous_start is not None:
+            order = (
+                "CASE WHEN p.published_at >= :current_start THEN 0 "
+                "WHEN p.published_at >= :previous_start THEN 1 ELSE 2 END, "
+                "p.published_at, p.publication_id"
+            )
+            params.update(current_start=current_start, previous_start=previous_start)
+        else:
+            order = "p.published_at, p.publication_id"
+        sql = (
+            "SELECT p.* FROM agenda_queue AS q CROSS JOIN agenda_publication AS p "
+            f"WHERE {where} ORDER BY {order}"
+        )
+        if limit is not None:
+            sql += " LIMIT :limit"
+            params["limit"] = limit
+        statement = text(sql)
+        statement = statement.bindparams(bindparam("end", type_=UtcDateTime()))
+        if source_ids is not None:
+            statement = statement.bindparams(bindparam("source_ids", expanding=True))
+        if current_start is not None and previous_start is not None:
+            statement = statement.bindparams(
+                bindparam("current_start", type_=UtcDateTime()),
+                bindparam("previous_start", type_=UtcDateTime()),
+            )
+        query = select(AgendaPublicationRow).from_statement(statement)
         async with self._session() as session:
-            for offset in range(0, len(ids), _IN_CHUNK):
-                rows = await session.scalars(
-                    select(AgendaPublicationRow).where(
-                        AgendaPublicationRow.publication_id.in_(ids[offset : offset + _IN_CHUNK]),
-                        AgendaPublicationRow.published_at < end,
-                    )
-                )
-                pubs.extend(self._row_to_pub(row) for row in rows)
-        return sorted(pubs, key=lambda p: (p.published_at, p.publication_id))
+            return [self._row_to_pub(row) for row in await session.scalars(query, params)]
+
+    async def retryable_publication_count(self, end: datetime, source_ids: set[int]) -> int:
+        if not source_ids:
+            return 0
+        statement = text(
+            "SELECT count(*) FROM agenda_queue AS q CROSS JOIN agenda_publication AS p "
+            f"WHERE q.publication_id = p.publication_id AND {_RETRYABLE_QUEUE_SQL} "
+            "AND p.published_at < :end AND p.source_id IN :source_ids"
+        ).bindparams(bindparam("source_ids", expanding=True), bindparam("end", type_=UtcDateTime()))
+        async with self._session() as session:
+            return int(
+                await session.scalar(statement, {"end": end, "source_ids": sorted(source_ids)}) or 0
+            )
 
     async def get_evidence_verdict(self, key: str) -> bool | None:
         return await self._get_json("evidence", key)
@@ -367,20 +487,73 @@ class SqliteAgendaStore:
     async def save_entity(self, entity: Entity) -> None:
         await self._put_json("entity", entity.entity_id, entity)
 
-    async def list_entities(self) -> list[Entity]:
-        return await self._list_json("entity")
+    async def list_entities(
+        self, predicate: Callable[[Entity], bool] | None = None
+    ) -> list[Entity]:
+        if predicate is None:
+            return await self._list_json("entity")
+        selected: list[Entity] = []
+        async with self._session() as session:
+            rows = await session.stream_scalars(
+                select(AgendaJsonRow.payload).where(AgendaJsonRow.kind == "entity")
+            )
+            async for payload in rows:
+                entity = loads(payload)
+                if predicate(entity):
+                    selected.append(entity)
+        return selected
+
+    async def entity_count(self) -> int:
+        async with self._session() as session:
+            return int(
+                await session.scalar(
+                    select(func.count())
+                    .select_from(AgendaJsonRow)
+                    .where(AgendaJsonRow.kind == "entity")
+                )
+                or 0
+            )
 
     async def save_story(self, story: Story) -> None:
         await self._put_json("story", story.story_id, story)
 
-    async def list_stories(self) -> list[Story]:
-        return await self._list_json("story")
+    async def get_story(self, story_id: str) -> Story | None:
+        return await self._get_json("story", story_id)
+
+    async def list_stories(self, story_ids: set[str] | None = None) -> list[Story]:
+        return (
+            await self._list_json("story")
+            if story_ids is None
+            else await self._list_json_ids("story", story_ids)
+        )
 
     async def save_event(self, event: Event) -> None:
         await self._put_json("event", event.event_id, event)
 
-    async def list_events(self) -> list[Event]:
-        return await self._list_json("event")
+    async def list_events(
+        self, event_ids: set[str] | None = None, *, story_ids: set[str] | None = None
+    ) -> list[Event]:
+        if event_ids is not None:
+            events = await self._list_json_ids("event", event_ids)
+            return [event for event in events if story_ids is None or event.story_id in story_ids]
+        if story_ids is None:
+            return await self._list_json("event")
+        if not story_ids:
+            return []
+        selected: list[tuple[str, str]] = []
+        ids = sorted(story_ids)
+        async with self._session() as session:
+            for offset in range(0, len(ids), _IN_CHUNK):
+                rows = await session.execute(
+                    select(AgendaJsonRow.item_id, AgendaJsonRow.payload).where(
+                        text("agenda_json.kind = 'event'"),
+                        literal_column("json_extract(agenda_json.payload, '$.story_id')").in_(
+                            ids[offset : offset + _IN_CHUNK]
+                        ),
+                    )
+                )
+                selected.extend(rows)
+        return [loads(payload) for _, payload in sorted(selected)]
 
     async def save_link(self, link: StoryLink) -> None:
         key = (
@@ -414,6 +587,50 @@ class SqliteAgendaStore:
                 )
             )
 
+    async def save_assignment(
+        self,
+        entities: tuple[Entity, ...],
+        story: Story,
+        event: Event | None,
+        links: tuple[StoryLink, ...],
+        fragment: IndexedFragment,
+    ) -> None:
+        """Commit one fragment's catalog and evidence in a single transaction."""
+        async with self._write_lock, self._session() as session, session.begin():
+            catalog = [
+                {"kind": "entity", "item_id": entity.entity_id, "payload": dumps(entity)}
+                for entity in entities
+            ]
+            catalog.append({"kind": "story", "item_id": story.story_id, "payload": dumps(story)})
+            if event is not None:
+                catalog.append(
+                    {"kind": "event", "item_id": event.event_id, "payload": dumps(event)}
+                )
+            await session.execute(insert(AgendaJsonRow).prefix_with("OR REPLACE"), catalog)
+            if links:
+                await session.execute(
+                    insert(AgendaLinkRow).prefix_with("OR REPLACE"),
+                    [
+                        {
+                            "link_key": (
+                                f"{link.publication_id}:{link.version}:{link.fragment_index}:"
+                                f"{link.claim_index}:{link.story_id}"
+                            ),
+                            "publication_id": link.publication_id,
+                            "payload": dumps(link),
+                        }
+                        for link in links
+                    ],
+                )
+            await session.execute(
+                insert(AgendaFragmentRow).prefix_with("OR REPLACE"),
+                {
+                    "fragment_key": f"{fragment.publication_id}:{fragment.fragment_index}",
+                    "published_at": fragment.published_at,
+                    "payload": dumps(fragment),
+                },
+            )
+
     async def fragments_since(self, start: datetime) -> list[IndexedFragment]:
         async with self._session() as session:
             payloads = await session.scalars(
@@ -438,7 +655,10 @@ class SqliteAgendaStore:
                     raise ValueError("snapshot_id is immutable")
                 row.published = True
             await session.execute(
-                text("UPDATE agenda_snapshot SET published = false WHERE snapshot_id != :id"),
+                text(
+                    "UPDATE agenda_snapshot SET published = false "
+                    "WHERE published = true AND snapshot_id != :id"
+                ),
                 {"id": snapshot.snapshot_id},
             )
             # Snapshot ids start with the UTC build time, so they sort in time order.
@@ -480,23 +700,30 @@ class SqliteAgendaStore:
                 self._published_cache = snapshot
             return snapshot
 
-    async def latest_nonempty_snapshot(self) -> Snapshot | None:
-        # Payloads are megabytes each: list ids first, decode one at a time.
+    async def published_snapshot_meta(self) -> tuple[str, datetime, datetime] | None:
         async with self._session() as session:
-            ids = (
-                await session.scalars(
-                    select(AgendaSnapshotRow.snapshot_id).order_by(
-                        AgendaSnapshotRow.snapshot_id.desc()
-                    )
+            row = (
+                await session.execute(
+                    select(
+                        AgendaSnapshotRow.snapshot_id,
+                        func.json_extract(AgendaSnapshotRow.payload, "$.t.v"),
+                        func.json_extract(AgendaSnapshotRow.payload, "$.published_at.v"),
+                    ).where(AgendaSnapshotRow.published.is_(True))
                 )
-            ).all()
-            for snapshot_id in ids:
-                payload = await session.scalar(
-                    select(AgendaSnapshotRow.payload).where(
-                        AgendaSnapshotRow.snapshot_id == snapshot_id
-                    )
-                )
-                if payload is not None and (snapshot := loads(payload)).agenda:
+            ).first()
+            if row is None:
+                return None
+            return row[0], datetime.fromisoformat(row[1]), datetime.fromisoformat(row[2])
+
+    async def latest_nonempty_snapshot(self) -> Snapshot | None:
+        # Decode one candidate at a time; older snapshots are retained only
+        # until the publish retention window closes.
+        async with self._session() as session:
+            payloads = await session.stream_scalars(
+                select(AgendaSnapshotRow.payload).order_by(AgendaSnapshotRow.snapshot_id.desc())
+            )
+            async for payload in payloads:
+                if (snapshot := loads(payload)).agenda:
                     return snapshot
         return None
 

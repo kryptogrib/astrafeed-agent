@@ -5,7 +5,7 @@ import json
 from collections.abc import Sequence
 from datetime import datetime
 
-from sqlalchemy import inspect, select
+from sqlalchemy import and_, func, inspect, or_, select
 from sqlalchemy.dialects.sqlite import insert as sqlite_insert
 from sqlalchemy.ext.asyncio import async_sessionmaker
 
@@ -106,25 +106,46 @@ class SqliteIngestionStore:
     async def store_items(self, source_id: int, items: Sequence[Item]) -> None:
         async with self._session() as s, s.begin():
             await self._require_source(s, source_id)
-            for item in items:
-                payload = json.dumps(_encode_item(item))
-                stmt = sqlite_insert(RawItemRow).values(
-                    source_id=source_id,
-                    external_id=item.external_id,
-                    timestamp=item.timestamp,
-                    payload=payload,
-                )
+            # Four bound fields per row; 200 stays below older SQLite's
+            # 999-variable limit while keeping large backfills bounded.
+            for offset in range(0, len(items), 200):
+                batch = [
+                    {
+                        "source_id": source_id,
+                        "external_id": item.external_id,
+                        "timestamp": item.timestamp,
+                        "payload": json.dumps(_encode_item(item)),
+                    }
+                    for item in items[offset : offset + 200]
+                ]
+                stmt = sqlite_insert(RawItemRow).values(batch)
                 stmt = stmt.on_conflict_do_update(
                     index_elements=[RawItemRow.source_id, RawItemRow.external_id],
-                    set_={"timestamp": item.timestamp, "payload": payload},
+                    set_={
+                        "timestamp": stmt.excluded.timestamp,
+                        "payload": stmt.excluded.payload,
+                    },
                 )
                 await s.execute(stmt)
+
+    async def count_window(self, source_id: int, start: datetime, end: datetime) -> int:
+        async with self._session() as s:
+            result = await s.scalar(
+                select(func.count())
+                .select_from(RawItemRow)
+                .where(
+                    RawItemRow.source_id == source_id,
+                    RawItemRow.timestamp >= start,
+                    RawItemRow.timestamp <= end,
+                )
+            )
+            return int(result or 0)
 
     async def read_window(self, source_id: int, start: datetime, end: datetime) -> list[Item]:
         async with self._session() as s:
             rows = (
                 await s.scalars(
-                    select(RawItemRow)
+                    select(RawItemRow.payload)
                     .where(
                         RawItemRow.source_id == source_id,
                         RawItemRow.timestamp >= start,
@@ -133,7 +154,44 @@ class SqliteIngestionStore:
                     .order_by(RawItemRow.timestamp, RawItemRow.external_id)
                 )
             ).all()
-            return [_decode_item(json.loads(r.payload)) for r in rows]
+            return [_decode_item(json.loads(payload)) for payload in rows]
+
+    async def read_window_page(
+        self,
+        source_id: int,
+        start: datetime,
+        end: datetime,
+        *,
+        after: tuple[datetime, str] | None,
+        limit: int,
+    ) -> list[Item]:
+        if limit < 1:
+            raise ValueError("Page limit must be positive")
+        conditions = [
+            RawItemRow.source_id == source_id,
+            RawItemRow.timestamp >= start,
+            RawItemRow.timestamp <= end,
+        ]
+        if after is not None:
+            conditions.append(
+                or_(
+                    RawItemRow.timestamp > after[0],
+                    and_(
+                        RawItemRow.timestamp == after[0],
+                        RawItemRow.external_id > after[1],
+                    ),
+                )
+            )
+        async with self._session() as s:
+            payloads = (
+                await s.scalars(
+                    select(RawItemRow.payload)
+                    .where(*conditions)
+                    .order_by(RawItemRow.timestamp, RawItemRow.external_id)
+                    .limit(limit)
+                )
+            ).all()
+            return [_decode_item(json.loads(payload)) for payload in payloads]
 
     async def coverage(self, source_id: int, start: datetime, end: datetime) -> Coverage:
         async with self._session() as s:

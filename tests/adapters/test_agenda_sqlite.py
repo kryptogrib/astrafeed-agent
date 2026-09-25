@@ -13,17 +13,21 @@ from astrafeed.adapters.repository.sqlite.agenda import (
 )
 from astrafeed.adapters.repository.sqlite.models import Base
 from astrafeed.application.agenda_extract import analyze_publication
+from astrafeed.application.agenda_query import health_payload
 from astrafeed.cli import _storage
 from astrafeed.config import Settings
 from astrafeed.domain.agenda import (
     CLASSIFIER_VERSION,
     Claim,
     CoverageInfo,
+    Entity,
+    Event,
     ExtractionResult,
     Fragment,
     IndexedFragment,
     PublicationVersion,
     Snapshot,
+    Story,
     StoryCard,
     StoryLink,
     analysis_reuse_key,
@@ -99,6 +103,126 @@ async def test_sqlite_expires_stale_queue_work_without_counting_it_as_active(tmp
         pending = await store.retryable_publications(now)
         assert [pub.publication_id for pub in pending] == ["new"]
         assert await store.retryable_publications(now - timedelta(hours=3)) == []
+    finally:
+        await engine.dispose()
+
+
+@pytest.mark.asyncio
+async def test_sqlite_queue_counts_keep_retry_reason_edge_cases(tmp_path):
+    engine = create_async_engine(f"sqlite+aiosqlite:///{tmp_path / 'reasons.db'}")
+    async with engine.begin() as conn:
+        await conn.run_sync(Base.metadata.create_all)
+    store = SqliteAgendaStore(async_sessionmaker(engine, expire_on_commit=False))
+    try:
+        reasons = {
+            "retry": "embed_error:2",
+            "stopped": "embed_error:3",
+            "nested": "prefix:embed_error:03",
+            "text": "embed_error:3x",
+            "expired": "expired",
+        }
+        for publication_id, reason in reasons.items():
+            await store.enqueue(publication_id, reason)
+        assert set(await store.retryable_ids()) == {"retry", "text"}
+        assert await store.queue_depth() == 2
+        assert await store.queue_stopped() == 3
+    finally:
+        await engine.dispose()
+
+
+@pytest.mark.asyncio
+async def test_sqlite_queued_ids_filters_large_expired_history_before_returning(tmp_path):
+    engine = create_async_engine(f"sqlite+aiosqlite:///{tmp_path / 'large-queue.db'}")
+    async with engine.begin() as conn:
+        await conn.run_sync(Base.metadata.create_all)
+        await conn.execute(
+            text("INSERT INTO agenda_queue (publication_id, reason) VALUES (:id, 'expired')"),
+            [{"id": f"old-{index:04d}"} for index in range(1200)],
+        )
+    store = SqliteAgendaStore(async_sessionmaker(engine, expire_on_commit=False))
+    try:
+        requested = {"old-0001", "old-0599", "old-1199", "missing"}
+        assert set(await store.queued_ids(requested)) == requested - {"missing"}
+        assert await store.queued_ids(set()) == []
+    finally:
+        await engine.dispose()
+
+
+@pytest.mark.asyncio
+async def test_sqlite_retryable_publications_limit_orders_before_loading(tmp_path):
+    engine = create_async_engine(f"sqlite+aiosqlite:///{tmp_path / 'limit.db'}")
+    async with engine.begin() as conn:
+        await conn.run_sync(Base.metadata.create_all)
+    store = SqliteAgendaStore(async_sessionmaker(engine, expire_on_commit=False))
+    now = datetime(2026, 9, 25, 12, tzinfo=UTC)
+    try:
+        for name, hours, source in (("old", 36, 1), ("current", 1, 1), ("other", 0, 2)):
+            await store.record_publication(
+                PublicationVersion(
+                    name,
+                    source,
+                    name,
+                    name,
+                    text_hash(name),
+                    now - timedelta(hours=hours),
+                    now,
+                    "@a",
+                    f"https://t.me/a/{name}",
+                )
+            )
+            await store.enqueue(name, "new")
+        assert await store.retryable_publication_count(now, {1}) == 2
+        selected = await store.retryable_publications(
+            now,
+            source_ids={1},
+            limit=1,
+            current_start=now - timedelta(hours=24),
+            previous_start=now - timedelta(hours=48),
+        )
+        assert [pub.publication_id for pub in selected] == ["current"]
+    finally:
+        await engine.dispose()
+
+
+@pytest.mark.asyncio
+async def test_sqlite_retryable_time_boundaries_match_orm_datetime_storage(tmp_path):
+    engine = create_async_engine(f"sqlite+aiosqlite:///{tmp_path / 'time-boundary.db'}")
+    async with engine.begin() as conn:
+        await conn.run_sync(Base.metadata.create_all)
+    store = SqliteAgendaStore(async_sessionmaker(engine, expire_on_commit=False))
+    now = datetime(2026, 9, 25, 12, tzinfo=UTC)
+    try:
+        for name, published_at in (
+            ("at-current-start", now - timedelta(hours=24)),
+            ("before-current", now - timedelta(hours=24, microseconds=1)),
+            ("at-end", now),
+        ):
+            await store.record_publication(
+                PublicationVersion(
+                    name,
+                    1,
+                    name,
+                    name,
+                    text_hash(name),
+                    published_at,
+                    now,
+                    "@a",
+                    f"https://t.me/a/{name}",
+                )
+            )
+            await store.enqueue(name, "new")
+        assert await store.retryable_publication_count(now, {1}) == 2
+        selected = await store.retryable_publications(
+            now,
+            source_ids={1},
+            limit=2,
+            current_start=now - timedelta(hours=24),
+            previous_start=now - timedelta(hours=48),
+        )
+        assert [pub.publication_id for pub in selected] == [
+            "at-current-start",
+            "before-current",
+        ]
     finally:
         await engine.dispose()
 
@@ -222,6 +346,46 @@ async def test_sqlite_finds_latest_nonempty_snapshot(tmp_path):
 
 
 @pytest.mark.asyncio
+async def test_health_reads_snapshot_metadata_without_loading_payload(tmp_path):
+    engine = create_async_engine(f"sqlite+aiosqlite:///{tmp_path / 'health.db'}")
+    async with engine.begin() as conn:
+        await conn.run_sync(Base.metadata.create_all)
+    store = SqliteAgendaStore(async_sessionmaker(engine, expire_on_commit=False))
+    t = datetime(2026, 9, 25, tzinfo=UTC)
+    snapshot = Snapshot(
+        snapshot_id="snap-20260925T000000Z",
+        t=t,
+        collected_at=t,
+        analyzed_at=t,
+        published_at=t,
+        coverage=CoverageInfo(1, 0, 0, 1, 1, 0, 0, 1),
+        queue_depth=0,
+        limitations=(),
+        agenda=(),
+        agenda_mode="new_or_growing",
+    )
+    try:
+        await store.publish_snapshot(snapshot)
+        statements: list[str] = []
+
+        def record_sql(_conn, _cursor, statement, _parameters, _context, _executemany):
+            statements.append(statement.lower())
+
+        event.listen(engine.sync_engine, "before_cursor_execute", record_sql)
+        try:
+            health = await health_payload(store, now=t, commit="test")
+        finally:
+            event.remove(engine.sync_engine, "before_cursor_execute", record_sql)
+        assert health["last_snapshot"]["id"] == snapshot.snapshot_id
+        snapshot_queries = [sql for sql in statements if "from agenda_snapshot" in sql]
+        assert len(snapshot_queries) == 1
+        assert "json_extract" in snapshot_queries[0]
+        assert "select agenda_snapshot.payload" not in snapshot_queries[0]
+    finally:
+        await engine.dispose()
+
+
+@pytest.mark.asyncio
 async def test_service_sqlite_storage_uses_wal_and_longer_busy_timeout(tmp_path):
     engine, session = await _storage(
         Settings(database_url=f"sqlite+aiosqlite:///{tmp_path / 'service.db'}")
@@ -269,6 +433,115 @@ async def test_links_and_fragments_are_read_by_index_after_legacy_json_migration
         async with engine.connect() as conn:
             legacy = await conn.scalar(text("SELECT count(*) FROM agenda_json"))
         assert legacy == 0
+    finally:
+        await engine.dispose()
+
+
+@pytest.mark.asyncio
+async def test_legacy_index_migration_processes_multiple_pages_and_can_repeat(tmp_path):
+    engine = create_async_engine(f"sqlite+aiosqlite:///{tmp_path / 'pages.db'}")
+    t = datetime(2026, 9, 25, tzinfo=UTC)
+    async with engine.begin() as conn:
+        await conn.run_sync(Base.metadata.create_all)
+        await conn.execute(
+            text("INSERT INTO agenda_json (kind, item_id, payload) VALUES (:kind, :id, :payload)"),
+            [
+                {
+                    "kind": "link",
+                    "id": f"pub-{index:04d}:1:0:0:story",
+                    "payload": dumps(StoryLink("story", f"pub-{index:04d}", 1, 0, 0)),
+                }
+                for index in range(1050)
+            ],
+        )
+        await conn.execute(
+            text("INSERT INTO agenda_json (kind, item_id, payload) VALUES (:kind, :id, :payload)"),
+            [
+                {
+                    "kind": "fragment",
+                    "id": f"pub-{index:04d}:0",
+                    "payload": dumps(IndexedFragment(f"pub-{index:04d}", t, 0, "x", (), "x")),
+                }
+                for index in range(1050)
+            ],
+        )
+        await migrate_agenda_index_tables(conn)
+        await migrate_agenda_index_tables(conn)
+        assert await conn.scalar(text("SELECT count(*) FROM agenda_json")) == 0
+        assert await conn.scalar(text("SELECT count(*) FROM agenda_link")) == 1050
+        assert await conn.scalar(text("SELECT count(*) FROM agenda_fragment")) == 1050
+    await engine.dispose()
+
+
+@pytest.mark.asyncio
+async def test_assignment_catalog_reads_only_matching_history_and_commits_fragment(tmp_path):
+    engine = create_async_engine(f"sqlite+aiosqlite:///{tmp_path / 'catalog.db'}")
+    async with engine.begin() as conn:
+        await conn.run_sync(Base.metadata.create_all)
+    store = SqliteAgendaStore(async_sessionmaker(engine, expire_on_commit=False))
+    t = datetime(2026, 9, 25, tzinfo=UTC)
+    try:
+        await store.save_entity(Entity("old", "Старый проект"))
+        await store.save_story(Story("old", "Старый сюжет", "old", t))
+        await store.save_event(Event("old", "old", "old"))
+        entity = Entity("new", "Новый проект", aliases=("НОВЫЙ",))
+        story = Story("new", "Новый сюжет", "new", t)
+        event_item = Event("new", "new", "today")
+        link = StoryLink("new", "pub", 1, 0, 0)
+        fragment = IndexedFragment("pub", t, 0, "Новый", ("НОВЫЙ",), "Новый")
+        await store.save_assignment((entity,), story, event_item, (link,), fragment)
+        assert await store.list_entities(
+            lambda item: "новый" in (alias.casefold() for alias in item.aliases)
+        ) == [entity]
+        assert await store.list_stories({"new"}) == [story]
+        assert await store.get_story("new") == story
+        assert await store.list_events(story_ids={"new"}) == [event_item]
+        assert await store.links_for_publications({"pub"}) == [link]
+        assert await store.fragments_since(t) == [fragment]
+    finally:
+        await engine.dispose()
+
+
+@pytest.mark.asyncio
+async def test_sqlite_event_lookup_filters_story_before_decoding_payloads(tmp_path):
+    engine = create_async_engine(f"sqlite+aiosqlite:///{tmp_path / 'events.db'}")
+    async with engine.begin() as conn:
+        await conn.run_sync(Base.metadata.create_all)
+        await migrate_agenda_index_tables(conn)
+        await conn.execute(
+            text(
+                "INSERT INTO agenda_json (kind, item_id, payload) VALUES ('event', :id, :payload)"
+            ),
+            [
+                {
+                    "id": f"old-{index:04d}",
+                    "payload": dumps(Event(f"old-{index:04d}", "old", "yesterday")),
+                }
+                for index in range(1100)
+            ],
+        )
+    store = SqliteAgendaStore(async_sessionmaker(engine, expire_on_commit=False))
+    wanted = Event("wanted", "current", "today")
+    try:
+        await store.save_event(wanted)
+        statements: list[tuple[str, tuple]] = []
+
+        def record_sql(_conn, _cursor, statement, _parameters, _context, _executemany):
+            statements.append((statement, _parameters))
+
+        event.listen(engine.sync_engine, "before_cursor_execute", record_sql)
+        try:
+            assert await store.list_events(story_ids={"current"}) == [wanted]
+        finally:
+            event.remove(engine.sync_engine, "before_cursor_execute", record_sql)
+        event_queries = [entry for entry in statements if "from agenda_json" in entry[0].lower()]
+        assert len(event_queries) == 1
+        async with engine.connect() as conn:
+            plan = await conn.exec_driver_sql(
+                "EXPLAIN QUERY PLAN " + event_queries[0][0], event_queries[0][1]
+            )
+            steps = [row[3] for row in plan]
+        assert any("ix_agenda_json_event_story" in step for step in steps), steps
     finally:
         await engine.dispose()
 
@@ -352,7 +625,11 @@ async def test_storage_drops_unused_fts_table_and_indexes_existing_tables(tmp_pa
             names = set(await conn.scalars(text("SELECT name FROM sqlite_master")))
             journal = await conn.scalar(text("PRAGMA journal_mode"))
         assert "agenda_fts" not in names
-        assert {"ix_spend_reservation_day", "ix_source_coverage_source_end"} <= names
+        assert {
+            "ix_spend_reservation_day",
+            "ix_source_coverage_source_end",
+            "ix_agenda_json_event_story",
+        } <= names
         assert journal == "wal"
     finally:
         await engine.dispose()

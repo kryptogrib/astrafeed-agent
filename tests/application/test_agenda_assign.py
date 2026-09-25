@@ -307,6 +307,48 @@ async def test_speculative_assignment_revalidates_changed_story_context():
 
 
 @pytest.mark.asyncio
+async def test_backfill_reuses_historic_story_id_without_resetting_first_seen():
+    from astrafeed.adapters.llm.agenda import Assignment
+
+    store = InMemoryAgendaStore()
+    now = datetime(2026, 9, 24, 12, tzinfo=UTC)
+    title = "Потоки ETH ETF"
+    historic = Story(
+        agenda_assign._stable_id("st", title),
+        title,
+        "Притоки и оттоки ETH ETF",
+        now - timedelta(days=10),
+    )
+    await store.save_story(historic)
+    text = "Отток ETH ETF составил 120 млн сегодня."
+    pub = _pub(text, 1, "recent", "@a", now)
+    await store.record_publication(pub)
+    assigner = Assigner(
+        lambda **kwargs: Assignment(
+            entity_decisions=(),
+            story_decision="new",
+            story_id=None,
+            title_ru=title,
+            boundary="новая граница",
+            event_decision="separate",
+            event_id=None,
+        )
+    )
+    await assign_speculative_batch(
+        store,
+        Embedder({embedding_input(text, ["ETH"]): [1.0, 0.0]}),
+        assigner,
+        [(pub, _event_result(text, text, "ETH"))],
+        strict=False,
+    )
+    stories = await store.list_stories()
+    assert len(stories) == 1
+    assert stories[0].story_id == historic.story_id
+    assert stories[0].first_seen == historic.first_seen
+    assert stories[0].boundary == historic.boundary
+
+
+@pytest.mark.asyncio
 async def test_independent_same_time_assignments_overlap():
     from astrafeed.adapters.llm.agenda import Assignment
 

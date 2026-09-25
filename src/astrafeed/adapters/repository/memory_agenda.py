@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from collections.abc import Callable
 from datetime import datetime
 
 from astrafeed.domain.agenda import (
@@ -105,8 +106,15 @@ class InMemoryAgendaStore:
     async def queue_depth(self) -> int:
         return len(await self.retryable_ids())
 
-    async def queued_ids(self) -> list[str]:
-        return list(self._queue)
+    async def queue_stopped(self) -> int:
+        return len(self._queue) - await self.queue_depth()
+
+    async def queued_ids(self, publication_ids: set[str] | None = None) -> list[str]:
+        return [
+            publication_id
+            for publication_id in self._queue
+            if publication_ids is None or publication_id in publication_ids
+        ]
 
     async def retryable_ids(self) -> list[str]:
         from astrafeed.domain.agenda import queue_reason_retryable
@@ -117,14 +125,41 @@ class InMemoryAgendaStore:
             if queue_reason_retryable(reason)
         ]
 
-    async def retryable_publications(self, end: datetime) -> list[PublicationVersion]:
+    async def retryable_publications(
+        self,
+        end: datetime,
+        *,
+        source_ids: set[int] | None = None,
+        limit: int | None = None,
+        current_start: datetime | None = None,
+        previous_start: datetime | None = None,
+    ) -> list[PublicationVersion]:
         retryable = set(await self.retryable_ids())
         latest = [
             versions[-1]
             for publication_id, versions in self._versions.items()
-            if publication_id in retryable and versions[-1].published_at < end
+            if publication_id in retryable
+            and versions[-1].published_at < end
+            and (source_ids is None or versions[-1].source_id in source_ids)
         ]
-        return sorted(latest, key=lambda p: (p.published_at, p.publication_id))
+        if current_start is not None and previous_start is not None:
+            latest.sort(
+                key=lambda p: (
+                    0
+                    if p.published_at >= current_start
+                    else 1
+                    if p.published_at >= previous_start
+                    else 2,
+                    p.published_at,
+                    p.publication_id,
+                )
+            )
+        else:
+            latest.sort(key=lambda p: (p.published_at, p.publication_id))
+        return latest[:limit] if limit is not None else latest
+
+    async def retryable_publication_count(self, end: datetime, source_ids: set[int]) -> int:
+        return len(await self.retryable_publications(end, source_ids=source_ids))
 
     async def get_evidence_verdict(self, key: str) -> bool | None:
         return self._evidence.get(key)
@@ -135,20 +170,41 @@ class InMemoryAgendaStore:
     async def save_entity(self, entity: Entity) -> None:
         self._entities[entity.entity_id] = entity
 
-    async def list_entities(self) -> list[Entity]:
-        return list(self._entities.values())
+    async def list_entities(
+        self, predicate: Callable[[Entity], bool] | None = None
+    ) -> list[Entity]:
+        return [
+            entity for entity in self._entities.values() if predicate is None or predicate(entity)
+        ]
+
+    async def entity_count(self) -> int:
+        return len(self._entities)
 
     async def save_story(self, story: Story) -> None:
         self._stories[story.story_id] = story
 
-    async def list_stories(self) -> list[Story]:
-        return list(self._stories.values())
+    async def get_story(self, story_id: str) -> Story | None:
+        return self._stories.get(story_id)
+
+    async def list_stories(self, story_ids: set[str] | None = None) -> list[Story]:
+        return [
+            story
+            for story in self._stories.values()
+            if story_ids is None or story.story_id in story_ids
+        ]
 
     async def save_event(self, event: Event) -> None:
         self._events[event.event_id] = event
 
-    async def list_events(self) -> list[Event]:
-        return list(self._events.values())
+    async def list_events(
+        self, event_ids: set[str] | None = None, *, story_ids: set[str] | None = None
+    ) -> list[Event]:
+        return [
+            event
+            for event in self._events.values()
+            if (event_ids is None or event.event_id in event_ids)
+            and (story_ids is None or event.story_id in story_ids)
+        ]
 
     async def save_link(self, link: StoryLink) -> None:
         key = (
@@ -178,6 +234,23 @@ class InMemoryAgendaStore:
     async def index_fragment(self, fragment: IndexedFragment) -> None:
         self._fragments.append(fragment)
 
+    async def save_assignment(
+        self,
+        entities: tuple[Entity, ...],
+        story: Story,
+        event: Event | None,
+        links: tuple[StoryLink, ...],
+        fragment: IndexedFragment,
+    ) -> None:
+        for entity in entities:
+            await self.save_entity(entity)
+        await self.save_story(story)
+        if event is not None:
+            await self.save_event(event)
+        for link in links:
+            await self.save_link(link)
+        await self.index_fragment(fragment)
+
     async def fragments_since(self, start: datetime) -> list[IndexedFragment]:
         return [f for f in self._fragments if f.published_at >= start]
 
@@ -194,6 +267,12 @@ class InMemoryAgendaStore:
                 return None
             return self._snapshots[self._published_id]
         return self._snapshots.get(snapshot_id)
+
+    async def published_snapshot_meta(self) -> tuple[str, datetime, datetime] | None:
+        snapshot = await self.get_snapshot()
+        if snapshot is None:
+            return None
+        return snapshot.snapshot_id, snapshot.t, snapshot.published_at
 
     async def latest_nonempty_snapshot(self) -> Snapshot | None:
         for snapshot_id in sorted(self._snapshots, reverse=True):

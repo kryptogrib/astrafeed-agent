@@ -8,11 +8,13 @@ import pytest
 from astrafeed.adapters.llm.agenda import Assignment
 from astrafeed.adapters.repository.memory_agenda import InMemoryAgendaStore
 from astrafeed.application.agenda_cycle import (
+    _coverage_states,
     _partial_is_publishable,
     cycle_health,
     restore_useful_snapshot,
     run_cycle,
 )
+from astrafeed.application.agenda_snapshot import build_snapshot
 from astrafeed.domain.agenda import (
     CLASSIFIER_VERSION,
     Claim,
@@ -62,6 +64,45 @@ async def test_old_pending_post_expires_without_appearing_analyzed():
     assert await store.queued_ids() == ["old", "new"]
     assert await store.retryable_ids() == ["new"]
     assert await store.queue_depth() == 1
+
+
+@pytest.mark.asyncio
+async def test_coverage_and_snapshot_query_only_queue_ids_in_two_windows():
+    class BoundedQueueStore(InMemoryAgendaStore):
+        requested: list[set[str]]
+
+        def __init__(self):
+            super().__init__()
+            self.requested = []
+
+        async def queued_ids(self, publication_ids=None):
+            assert publication_ids is not None
+            self.requested.append(publication_ids)
+            return await super().queued_ids(publication_ids)
+
+    store = BoundedQueueStore()
+    now = datetime(2026, 9, 25, 12, tzinfo=UTC)
+    for index in range(1200):
+        await store.enqueue(f"expired-{index}", "expired")
+    await store.record_publication(
+        PublicationVersion(
+            "current",
+            1,
+            "current",
+            "Current post",
+            text_hash("Current post"),
+            now - timedelta(hours=1),
+            now,
+            "@a",
+            "https://t.me/a/current",
+        )
+    )
+    await store.enqueue("current", "new")
+    coverage = await _coverage_states(store, Reader({1: []}), [1], now)
+    snapshot = await build_snapshot(store, now, coverage, collected_at=now, analyzed_at=now)
+    assert coverage[1]["processed"] is False
+    assert snapshot.coverage.publications_queued == 1
+    assert store.requested == [{"current"}, {"current"}]
 
 
 @pytest.mark.asyncio
