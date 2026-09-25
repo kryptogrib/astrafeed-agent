@@ -140,6 +140,34 @@ commits; check `GET /healthz` →
 `commit` when comparing an older pinned snapshot with a newer live one.
 [Response fields, examples and limits](docs/snapshot-changes.md).
 
+### An agent in 10 lines
+
+Run [the polling example](examples/agent_poll.py) once to save the current `snapshot_id`, then run it again after a later snapshot. It prints only new or updated **report cards**, with `null` when confirmation or OKX price context is unavailable. The cursor belongs to the client.
+
+```sh
+uv run python examples/agent_poll.py
+uv run python examples/agent_poll.py
+```
+
+For a reproducible comparison, pin both reports and use a separate demo cursor file:
+
+```sh
+uv run python examples/agent_poll.py \
+  --cursor-file /tmp/astrafeed-pinned-demo-cursor \
+  --since-snapshot-id snap-20260924T221840Z \
+  --snapshot-id snap-20260925T082441Z-r20260925T082633609300Z | sed -n '1,3p'
+```
+
+Output checked against the public service on 25 Sep 2026:
+
+```text
+snap-20260924T221840Z → snap-20260925T082441Z-r20260925T082633609300Z: 8 new or updated report cards
+BlackRock and Ondo Finance launch tokenized investment portfolios | confirmation=official | price.verdict=both_moved
+New York sues Polymarket for illegal gambling activity | confirmation=official | price.verdict=null
+```
+
+The comparison tracks changes in published reports; it does not assert that these events first happened between the two snapshots. Price-only changes do not resend a card.
+
 ## How it works
 
 ### Source coverage

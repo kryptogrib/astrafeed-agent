@@ -14,8 +14,8 @@
 
 ## Priority 2 — working consumer (next work)
 
-- [ ] Add `examples/agent_poll.py`: save a successful `snapshot_id`, poll with `since_snapshot_id`, handle an unchanged snapshot and `baseline_unavailable`, and print only available confirmation and price fields. Do not describe a report change as a new market event.
-- [ ] Verify the consumer against available pinned snapshots and add its exact command and representative output to README. Keep the final video capture until after deployment.
+- [x] Add `examples/agent_poll.py`: save a successful `snapshot_id`, poll with `since_snapshot_id`, handle an unchanged snapshot and `baseline_unavailable`, and print only available confirmation and price fields. Do not describe a report change as a new market event.
+- [x] Verify the consumer against available pinned snapshots and add its exact command and representative output to README. Keep the final video capture until after deployment.
 
 ## Priority 3 — provenance and economics (execute now)
 
@@ -32,4 +32,4 @@
 
 ## Acceptance for this work session
 
-The checked priority 1 and 3 items pass `make check`. Priority 2 and 4 remain explicit follow-up work; no payment or production deployment is claimed from this session.
+Priorities 1–3 pass `make check` and the example's explicit lint check. Priority 4 records release and submission work; no payment is part of this demo. The user will make the video, so its recording and URL remain open until that artifact exists.
