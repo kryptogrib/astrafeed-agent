@@ -8,16 +8,16 @@ AstraFeed turns posts from 38 curated public Telegram channels, RSS and Reddit f
 
 **[Open the live agenda](https://cutememe.lol/agenda?format=html)** · **[Watch the 2:56 demo](docs/submission/astrafeed-demo.mp4)** · [Check the live service](https://cutememe.lol/healthz)
 
-Built for **OKX Dev Day 2026 · Build a Company / OKX AI**. A2MCP endpoint: `POST https://cutememe.lol/a2mcp/astrafeed`. OKX.AI agent **#13877** has a free service submitted; its marketplace listing is **under review as of 25 Sep 2026**.
+Built for **OKX Dev Day 2026 · Build a Company / OKX AI**. A2MCP endpoint: `POST https://cutememe.lol/a2mcp/astrafeed`. OKX.AI agent **[#13877](https://www.okx.ai/agents/13877)** is publicly listed with the free **AstraFeed Crypto Agenda** service.
 
 | Link | Notes |
 |---|---|
 | [Live agenda](https://cutememe.lol/agenda?format=html) | Public HTTPS |
 | [A2MCP](https://cutememe.lol/a2mcp/astrafeed) | Empty `POST` returns the agenda; open the URL in a browser for the curl |
-| [OKX.AI #13877](https://www.okx.ai/agents/13877) | Free service submitted; marketplace card still in review |
+| [OKX.AI #13877](https://www.okx.ai/agents/13877) | Public marketplace listing; free AstraFeed Crypto Agenda service |
 | [Demo video](docs/submission/astrafeed-demo.mp4) | 2:56 narrated product and A2MCP walkthrough |
 
-The callable integration is the HTTPS endpoint. The marketplace card is the same service after OKX publishes it.
+The marketplace listing points to the same public HTTPS A2MCP endpoint.
 
 ## Start here
 
@@ -191,4 +191,4 @@ The first analysis can take time; `/healthz` shows progress and `/agenda` become
 
 The earlier [AstraFeed Token Brief](PROVENANCE.md) supplied the Telegram ingestion, filtering, and deduplication engine. This hackathon added live story extraction and assignment, comparable growth, quote and coverage checks, immutable snapshots, the read API, the evidence signals, and the A2MCP endpoint. Changes since the starting commit are visible with `git log aa9a275..HEAD`.
 
-The OKX.AI service is intended to be free during review; a paid x402 tier is a future plan, not part of the live demo. The [product brief](docs/product.md) defines the current scope; the [MVP plan](docs/plans/community-pulse-mvp.md) records the contracts and earlier experiments.
+The OKX.AI service is free; a paid x402 tier is a future plan, not part of the live demo. The [product brief](docs/product.md) defines the current scope; the [MVP plan](docs/plans/community-pulse-mvp.md) records the contracts and earlier experiments.

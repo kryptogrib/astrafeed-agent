@@ -46,7 +46,7 @@
 4. Получить согласованные JSON и короткий Markdown с тем же `snapshot_id`.
 5. В `/healthz` увидеть commit, состояние цикла, последний снимок и бюджетную блокировку.
 
-**Подача на OKX Dev Day 2026 (трек Build a Company, OKX AI), срок 25 сентября 23:59 UTC.** Та же повестка публикуется как A2MCP-сервис OKX.AI: `POST /a2mcp/astrafeed` на публичном HTTPS (пустое тело → повестка, `query` → поиск, `story_id` → карточка). Листинг [OKX.AI #13877](https://www.okx.ai/agents/13877) подан и ждёт проверки; в каталоге его ещё нет. Оплата x402 через OKX Payment SDK — после одобрения листинга, не в этом демо. Для подачи обязательны публичный URL, URL листинга, README и видео 2–4 минуты ([правила](https://www.okx.com/ru/learn/okx-dev-day-builder-kit)).
+**Подача на OKX Dev Day 2026 (трек Build a Company, OKX AI), срок 25 сентября 23:59 UTC.** Та же повестка публикуется как A2MCP-сервис OKX.AI: `POST /a2mcp/astrafeed` на публичном HTTPS (пустое тело → повестка, `query` → поиск, `story_id` → карточка). [OKX.AI #13877](https://www.okx.ai/agents/13877) публично показывает бесплатный сервис AstraFeed Crypto Agenda и его endpoint. Оплата x402 через OKX Payment SDK — будущий план, не часть этого демо. Для подачи обязательны публичный URL, URL листинга, README и видео 2–4 минуты ([правила](https://www.okx.com/ru/learn/okx-dev-day-builder-kit)).
 
 Настроение рынка, сайт и произвольные исследовательские вопросы в эту поставку не входят.
 
