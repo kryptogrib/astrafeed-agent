@@ -95,3 +95,26 @@ async def test_migration_adds_feed_identity_to_existing_source_table(tmp_path):
     telegram = await store.upsert_source(12345)
     assert telegram.telegram_id == 12345
     await engine.dispose()
+
+
+@pytest.mark.asyncio
+async def test_sqlite_coverage_merges_adjacent_spans_and_ignores_history_outside_window(tmp_path):
+    engine = create_async_engine(f"sqlite+aiosqlite:///{tmp_path / 'coverage.db'}")
+    async with engine.begin() as connection:
+        await connection.run_sync(Base.metadata.create_all)
+    store = SqliteIngestionStore(async_sessionmaker(engine, expire_on_commit=False))
+    (source_id,) = await resolve_feeds(store, [URL])
+    hour = timedelta(hours=1)
+    try:
+        # Old history, then two touching spans that jointly cover [2h, 5h].
+        await store.mark_coverage(source_id, START - 30 * 24 * hour, START, True)
+        await store.mark_coverage(source_id, START + 2 * hour, START + 4 * hour, True)
+        await store.mark_coverage(source_id, START + 4 * hour, START + 6 * hour, True)
+        await store.mark_coverage(source_id, START + 7 * hour, START + 9 * hour, False)
+
+        assert (await store.coverage(source_id, START + 2 * hour, START + 5 * hour)).complete
+        assert (await store.coverage(source_id, START - 24 * hour, START)).complete
+        assert not (await store.coverage(source_id, START, START + 3 * hour)).complete
+        assert not (await store.coverage(source_id, START + 7 * hour, START + 8 * hour)).complete
+    finally:
+        await engine.dispose()

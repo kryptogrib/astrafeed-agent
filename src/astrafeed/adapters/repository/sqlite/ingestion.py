@@ -139,7 +139,14 @@ class SqliteIngestionStore:
         async with self._session() as s:
             rows = (
                 await s.scalars(
-                    select(SourceCoverageRow).where(SourceCoverageRow.source_id == source_id)
+                    # Spans outside the window cannot help cover it; the table
+                    # gains a row per source per cycle, so never read them all.
+                    select(SourceCoverageRow).where(
+                        SourceCoverageRow.source_id == source_id,
+                        SourceCoverageRow.complete.is_(True),
+                        SourceCoverageRow.end >= start,
+                        SourceCoverageRow.start <= end,
+                    )
                 )
             ).all()
             records = [Coverage(start=r.start, end=r.end, complete=r.complete) for r in rows]

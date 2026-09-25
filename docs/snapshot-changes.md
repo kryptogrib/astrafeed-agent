@@ -77,7 +77,9 @@ The same snapshot returns empty change lists and no cards. If the baseline canno
 be loaded, return HTTP 200 with `response_mode: "full"`,
 `comparison_status: "baseline_unavailable"`, `compared_to: null` and `changes: null`.
 The requested ID remains in `since_snapshot_id`. Agents can rebuild state from the
-full response. No retention duration is promised.
+full response. Snapshots older than two days are deleted when a newer one is
+published, so an older baseline returns `baseline_unavailable`; the current
+published snapshot is never deleted.
 
 A blank baseline or a baseline published later than the target returns HTTP 422.
 An unknown explicitly pinned target returns 404; no published target returns 503.

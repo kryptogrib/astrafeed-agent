@@ -133,7 +133,7 @@ An agent saves the returned `snapshot_id`, then requests
 `{"since_snapshot_id":"snap-..."}` to `/a2mcp/astrafeed`.
 The delta contains new/updated cards and changes in sources, quotes and sourcing
 labels. An unavailable baseline returns the full agenda with
-`baseline_unavailable`. `snapshot_id` can still pin the target of the comparison.
+`baseline_unavailable`; snapshots are kept for two days. `snapshot_id` can still pin the target of the comparison.
 Each published ID identifies one immutable report, including when analysis is
 repeated without a new collection. The public host supports this on deployed
 commits; check `GET /healthz` →

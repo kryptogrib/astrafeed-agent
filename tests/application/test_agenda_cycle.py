@@ -490,7 +490,8 @@ async def test_collection_can_cover_72_hours_but_does_not_admit_old_news():
     )
 
     assert collected == [(t - timedelta(hours=72), t)]
-    assert await store.latest_publication("1:1") is None
+    stored = await store.publications_in(t - timedelta(hours=72), t)
+    assert [pub.publication_id for pub in stored] == ["1:2"]
     assert snapshot.coverage.publications_total == 1
 
 

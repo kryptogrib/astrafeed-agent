@@ -32,7 +32,11 @@ from astrafeed.adapters.llm.agenda import (
 from astrafeed.adapters.llm.budgeted_client import BudgetedClient
 from astrafeed.adapters.llm.openrouter import OpenRouterLLMClient
 from astrafeed.adapters.llm.stub import StubLLMClient
-from astrafeed.adapters.repository.sqlite.agenda import SqliteAgendaStore
+from astrafeed.adapters.repository.sqlite.agenda import (
+    SqliteAgendaStore,
+    drop_unused_search_index,
+    migrate_agenda_index_tables,
+)
 from astrafeed.adapters.repository.sqlite.ingestion import SqliteIngestionStore, migrate_rss_sources
 from astrafeed.adapters.repository.sqlite.models import Base
 from astrafeed.adapters.repository.sqlite.pulse import SqliteCommentStore
@@ -143,6 +147,12 @@ def _window(value: str) -> timedelta:
     return timedelta(hours=amount if unit == "h" else amount * 24)
 
 
+def _create_missing_indexes(sync_connection) -> None:
+    for table in Base.metadata.sorted_tables:
+        for index in table.indexes:
+            index.create(sync_connection, checkfirst=True)
+
+
 async def _storage(cfg: Settings):
     sqlite = cfg.database_url.startswith("sqlite+")
     engine = create_async_engine(
@@ -154,6 +164,14 @@ async def _storage(cfg: Settings):
         if sqlite:
             await migrate_rss_sources(conn)
             await migrate_spend_reservations(conn)
+            await migrate_agenda_index_tables(conn)
+            await drop_unused_search_index(conn)
+            # create_all skips indexes of tables that already exist.
+            await conn.run_sync(_create_missing_indexes)
+    if sqlite:
+        # Separate connection: SQLite refuses to change the journal mode inside
+        # a transaction that has already written (the migrations above may).
+        async with engine.connect() as conn:
             await conn.exec_driver_sql("PRAGMA journal_mode=WAL")
     return engine, async_sessionmaker(engine, expire_on_commit=False)
 
@@ -517,7 +535,6 @@ async def _serve(config_path: str) -> None:
             if xpoz_client is not None:
                 await xpoz_client.close()
             xpoz_client = None
-    await agenda.ensure_search()
     extractor, embedder, assigner, evidence_verifier, summarizer, translator = _agenda_llm(
         cfg, session
     )

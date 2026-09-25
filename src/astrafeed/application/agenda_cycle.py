@@ -9,7 +9,7 @@ import asyncio
 import logging
 from collections.abc import Awaitable, Callable, Sequence
 from dataclasses import replace
-from datetime import UTC, datetime, timedelta
+from datetime import datetime, timedelta
 from time import perf_counter
 from typing import Literal, Protocol
 
@@ -115,13 +115,10 @@ async def ingest_publications(
                 continue
             incoming = _publication(source_id, item, now)
             previous = await store.record_publication(incoming)
-            latest = await store.latest_publication(incoming.publication_id)
-            if latest is None:
-                continue
             if previous is None:
-                await store.enqueue(latest.publication_id, "new")
-            elif previous.text_hash != latest.text_hash:
-                await store.enqueue(latest.publication_id, "edited")
+                await store.enqueue(incoming.publication_id, "new")
+            elif previous.text_hash != incoming.text_hash:
+                await store.enqueue(incoming.publication_id, "edited")
 
 
 async def _coverage_states(
@@ -207,11 +204,8 @@ async def run_cycle(
         await store.set_cycle_state(state)
 
         await store.expire_before(now - FRESH_POST_WINDOW)
-        queued = set(await store.retryable_ids())
         pending = [
-            pub
-            for pub in await store.publications_in(datetime.min.replace(tzinfo=UTC), as_of)
-            if pub.publication_id in queued and pub.source_id in source_set
+            pub for pub in await store.retryable_publications(as_of) if pub.source_id in source_set
         ]
         if max_posts_per_cycle is not None:
             current_start = as_of - timedelta(hours=24)

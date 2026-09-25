@@ -19,6 +19,8 @@ EMBEDDING_PREP_VERSION = "fragment-entities/v1"
 WINDOW = timedelta(hours=24)
 LOOKBACK = timedelta(hours=48)
 STALE_AFTER = timedelta(minutes=15)
+# Older snapshots are deleted; since_snapshot_id then reports baseline_unavailable.
+SNAPSHOT_RETENTION = timedelta(days=2)
 AGENDA_LIMIT = 10
 MIN_CHANNELS = 2
 CANDIDATE_K = 10

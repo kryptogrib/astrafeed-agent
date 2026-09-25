@@ -64,6 +64,7 @@ class SourceCoverageRow(Base):
     __tablename__ = "source_coverage"
     __table_args__ = (
         UniqueConstraint("source_id", "start", "end", name="uq_source_coverage_window"),
+        Index("ix_source_coverage_source_end", "source_id", "end"),
     )
     id: Mapped[int] = mapped_column(primary_key=True)
     source_id: Mapped[int] = mapped_column(ForeignKey("source.id"), index=True)
@@ -74,7 +75,11 @@ class SourceCoverageRow(Base):
 
 class SpendReservationRow(Base):
     __tablename__ = "spend_reservation"
-    __table_args__ = (Index("ix_spend_reservation_principal_day", "principal_id", "day"),)
+    __table_args__ = (
+        Index("ix_spend_reservation_principal_day", "principal_id", "day"),
+        # The global daily budget check filters by day alone.
+        Index("ix_spend_reservation_day", "day"),
+    )
     id: Mapped[str] = mapped_column(String, primary_key=True)
     principal_id: Mapped[int]
     day: Mapped[str] = mapped_column(String)
@@ -132,6 +137,20 @@ class AgendaJsonRow(Base):
     __tablename__ = "agenda_json"
     kind: Mapped[str] = mapped_column(String, primary_key=True)
     item_id: Mapped[str] = mapped_column(String, primary_key=True)
+    payload: Mapped[str]
+
+
+class AgendaLinkRow(Base):
+    __tablename__ = "agenda_link"
+    link_key: Mapped[str] = mapped_column(String, primary_key=True)
+    publication_id: Mapped[str] = mapped_column(String, index=True)
+    payload: Mapped[str]
+
+
+class AgendaFragmentRow(Base):
+    __tablename__ = "agenda_fragment"
+    fragment_key: Mapped[str] = mapped_column(String, primary_key=True)
+    published_at: Mapped[datetime] = mapped_column(UtcDateTime(), index=True)
     payload: Mapped[str]
 
 

@@ -67,10 +67,6 @@ class InMemoryAgendaStore:
         history.append(next_version)
         return previous
 
-    async def latest_publication(self, publication_id: str) -> PublicationVersion | None:
-        history = self._versions.get(publication_id)
-        return history[-1] if history else None
-
     async def publications_in(self, start: datetime, end: datetime) -> list[PublicationVersion]:
         latest = [versions[-1] for versions in self._versions.values()]
         in_range = [p for p in latest if start <= p.published_at < end]
@@ -120,6 +116,15 @@ class InMemoryAgendaStore:
             for publication_id, reason in self._queue.items()
             if queue_reason_retryable(reason)
         ]
+
+    async def retryable_publications(self, end: datetime) -> list[PublicationVersion]:
+        retryable = set(await self.retryable_ids())
+        latest = [
+            versions[-1]
+            for publication_id, versions in self._versions.items()
+            if publication_id in retryable and versions[-1].published_at < end
+        ]
+        return sorted(latest, key=lambda p: (p.published_at, p.publication_id))
 
     async def get_evidence_verdict(self, key: str) -> bool | None:
         return self._evidence.get(key)

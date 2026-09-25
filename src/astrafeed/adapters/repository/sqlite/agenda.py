@@ -8,17 +8,20 @@ from dataclasses import fields, is_dataclass
 from datetime import datetime
 from typing import Any
 
-from sqlalchemy import select, text
-from sqlalchemy.ext.asyncio import async_sessionmaker
+from sqlalchemy import delete, insert, select, text
+from sqlalchemy.ext.asyncio import AsyncConnection, async_sessionmaker
 
 from astrafeed.adapters.repository.sqlite.models import (
     AgendaCycleRow,
+    AgendaFragmentRow,
     AgendaJsonRow,
+    AgendaLinkRow,
     AgendaPublicationRow,
     AgendaQueueRow,
     AgendaSnapshotRow,
 )
 from astrafeed.domain.agenda import (
+    SNAPSHOT_RETENTION,
     ChannelLead,
     Claim,
     ClaimCard,
@@ -127,21 +130,66 @@ def loads(raw: str) -> Any:
     return decode(json.loads(raw))
 
 
+# SQLite's default bound-parameter limit is 999 on older builds.
+_IN_CHUNK = 500
+
+
+async def migrate_agenda_index_tables(connection: AsyncConnection) -> None:
+    """Move links and fragments out of agenda_json into their indexed tables.
+
+    Earlier releases stored them as untyped JSON rows, so every lookup read the
+    whole history. Runs at startup; a no-op once agenda_json holds neither kind.
+    """
+
+    async def legacy(kind: str) -> list[tuple[str, str]]:
+        query = select(AgendaJsonRow.item_id, AgendaJsonRow.payload)
+        rows = await connection.execute(query.where(AgendaJsonRow.kind == kind))
+        return [(item_id, payload) for item_id, payload in rows]
+
+    if links := await legacy("link"):
+        await connection.execute(
+            insert(AgendaLinkRow).prefix_with("OR REPLACE"),
+            [
+                {
+                    "link_key": key,
+                    "publication_id": loads(payload).publication_id,
+                    "payload": payload,
+                }
+                for key, payload in links
+            ],
+        )
+    if fragments := await legacy("fragment"):
+        await connection.execute(
+            insert(AgendaFragmentRow).prefix_with("OR REPLACE"),
+            [
+                {
+                    "fragment_key": key,
+                    "published_at": loads(payload).published_at,
+                    "payload": payload,
+                }
+                for key, payload in fragments
+            ],
+        )
+    # Write only when there is something to move: the caller switches the
+    # journal to WAL afterwards, which SQLite refuses inside a write transaction.
+    if links or fragments:
+        await connection.execute(
+            delete(AgendaJsonRow).where(AgendaJsonRow.kind.in_(("link", "fragment")))
+        )
+
+
+async def drop_unused_search_index(connection: AsyncConnection) -> None:
+    """Drop agenda_fts: search runs over the snapshot, and nothing read this FTS copy."""
+    exists = await connection.scalar(text("SELECT 1 FROM sqlite_master WHERE name = 'agenda_fts'"))
+    if exists:
+        await connection.exec_driver_sql("DROP TABLE agenda_fts")
+
+
 class SqliteAgendaStore:
     def __init__(self, session: async_sessionmaker) -> None:
         self._session = session
         self._write_lock = asyncio.Lock()
         self._published_cache: Snapshot | None = None
-
-    async def ensure_search(self) -> None:
-        async with self._session() as session:
-            await session.execute(
-                text(
-                    "CREATE VIRTUAL TABLE IF NOT EXISTS agenda_fts USING fts5("
-                    "snapshot_id UNINDEXED, story_id UNINDEXED, kind, body)"
-                )
-            )
-            await session.commit()
 
     def _row_to_pub(self, row: AgendaPublicationRow) -> PublicationVersion:
         return PublicationVersion(
@@ -190,11 +238,6 @@ class SqliteAgendaStore:
                 existing.link = version.link
                 existing.version = next_version
             return previous
-
-    async def latest_publication(self, publication_id: str) -> PublicationVersion | None:
-        async with self._session() as session:
-            row = await session.get(AgendaPublicationRow, publication_id)
-            return self._row_to_pub(row) if row is not None else None
 
     async def publications_in(self, start: datetime, end: datetime) -> list[PublicationVersion]:
         async with self._session() as session:
@@ -272,7 +315,10 @@ class SqliteAgendaStore:
                         AgendaPublicationRow,
                         AgendaPublicationRow.publication_id == AgendaQueueRow.publication_id,
                     )
-                    .where(AgendaPublicationRow.published_at < cutoff)
+                    .where(
+                        AgendaPublicationRow.published_at < cutoff,
+                        AgendaQueueRow.reason != "expired",
+                    )
                 )
             ).all()
             for queued in rows:
@@ -289,8 +335,28 @@ class SqliteAgendaStore:
 
     async def retryable_ids(self) -> list[str]:
         async with self._session() as session:
-            rows = (await session.scalars(select(AgendaQueueRow))).all()
+            rows = (
+                await session.scalars(
+                    select(AgendaQueueRow).where(AgendaQueueRow.reason != "expired")
+                )
+            ).all()
             return [row.publication_id for row in rows if queue_reason_retryable(row.reason)]
+
+    async def retryable_publications(self, end: datetime) -> list[PublicationVersion]:
+        # Two steps so the small queue drives the lookup: a join lets SQLite
+        # start from agenda_publication and range-scan the whole history.
+        ids = sorted(await self.retryable_ids())
+        pubs: list[PublicationVersion] = []
+        async with self._session() as session:
+            for offset in range(0, len(ids), _IN_CHUNK):
+                rows = await session.scalars(
+                    select(AgendaPublicationRow).where(
+                        AgendaPublicationRow.publication_id.in_(ids[offset : offset + _IN_CHUNK]),
+                        AgendaPublicationRow.published_at < end,
+                    )
+                )
+                pubs.extend(self._row_to_pub(row) for row in rows)
+        return sorted(pubs, key=lambda p: (p.published_at, p.publication_id))
 
     async def get_evidence_verdict(self, key: str) -> bool | None:
         return await self._get_json("evidence", key)
@@ -321,19 +387,41 @@ class SqliteAgendaStore:
             f"{link.publication_id}:{link.version}:{link.fragment_index}:"
             f"{link.claim_index}:{link.story_id}"
         )
-        await self._put_json("link", key, link)
+        async with self._write_lock, self._session() as session, session.begin():
+            await session.merge(
+                AgendaLinkRow(link_key=key, publication_id=link.publication_id, payload=dumps(link))
+            )
 
     async def links_for_publications(self, publication_ids: set[str]) -> list[StoryLink]:
-        links = await self._list_json("link")
-        return [link for link in links if link.publication_id in publication_ids]
+        # Ordered by key, as agenda_json returned them: candidate ties and the
+        # story explanation quote depend on this order.
+        ids = sorted(publication_ids)
+        rows: list[tuple[str, str]] = []
+        async with self._session() as session:
+            for offset in range(0, len(ids), _IN_CHUNK):
+                chunk = ids[offset : offset + _IN_CHUNK]
+                query = select(AgendaLinkRow.link_key, AgendaLinkRow.payload)
+                result = await session.execute(query.where(AgendaLinkRow.publication_id.in_(chunk)))
+                rows.extend((key, payload) for key, payload in result)
+        return [loads(payload) for _, payload in sorted(rows)]
 
     async def index_fragment(self, fragment: IndexedFragment) -> None:
         key = f"{fragment.publication_id}:{fragment.fragment_index}"
-        await self._put_json("fragment", key, fragment)
+        async with self._write_lock, self._session() as session, session.begin():
+            await session.merge(
+                AgendaFragmentRow(
+                    fragment_key=key, published_at=fragment.published_at, payload=dumps(fragment)
+                )
+            )
 
     async def fragments_since(self, start: datetime) -> list[IndexedFragment]:
-        fragments = await self._list_json("fragment")
-        return [fragment for fragment in fragments if fragment.published_at >= start]
+        async with self._session() as session:
+            payloads = await session.scalars(
+                select(AgendaFragmentRow.payload)
+                .where(AgendaFragmentRow.published_at >= start)
+                .order_by(AgendaFragmentRow.fragment_key)
+            )
+            return [loads(payload) for payload in payloads]
 
     async def publish_snapshot(self, snapshot: Snapshot) -> None:
         async with self._session() as session, session.begin():
@@ -349,34 +437,18 @@ class SqliteAgendaStore:
                 if row.payload != payload:
                     raise ValueError("snapshot_id is immutable")
                 row.published = True
-            others = (
-                await session.scalars(
-                    select(AgendaSnapshotRow).where(
-                        AgendaSnapshotRow.snapshot_id != snapshot.snapshot_id
-                    )
-                )
-            ).all()
-            for other in others:
-                other.published = False
-        await self.ensure_search()
-        async with self._session() as session, session.begin():
             await session.execute(
-                text("DELETE FROM agenda_fts WHERE snapshot_id = :sid"),
-                {"sid": snapshot.snapshot_id},
+                text("UPDATE agenda_snapshot SET published = false WHERE snapshot_id != :id"),
+                {"id": snapshot.snapshot_id},
             )
-            for doc in snapshot.search_docs:
-                await session.execute(
-                    text(
-                        "INSERT INTO agenda_fts(snapshot_id, story_id, kind, body) "
-                        "VALUES (:sid, :story, :kind, :body)"
-                    ),
-                    {
-                        "sid": snapshot.snapshot_id,
-                        "story": doc.story_id,
-                        "kind": doc.kind,
-                        "body": doc.text,
-                    },
+            # Snapshot ids start with the UTC build time, so they sort in time order.
+            oldest_kept = "snap-" + (snapshot.t - SNAPSHOT_RETENTION).strftime("%Y%m%dT%H%M%SZ")
+            await session.execute(
+                delete(AgendaSnapshotRow).where(
+                    AgendaSnapshotRow.snapshot_id < oldest_kept,
+                    AgendaSnapshotRow.published.is_(False),
                 )
+            )
         self._published_cache = snapshot
 
     async def get_snapshot(self, snapshot_id: str | None = None) -> Snapshot | None:
@@ -409,15 +481,22 @@ class SqliteAgendaStore:
             return snapshot
 
     async def latest_nonempty_snapshot(self) -> Snapshot | None:
+        # Payloads are megabytes each: list ids first, decode one at a time.
         async with self._session() as session:
-            rows = (
+            ids = (
                 await session.scalars(
-                    select(AgendaSnapshotRow).order_by(AgendaSnapshotRow.snapshot_id.desc())
+                    select(AgendaSnapshotRow.snapshot_id).order_by(
+                        AgendaSnapshotRow.snapshot_id.desc()
+                    )
                 )
             ).all()
-            for row in rows:
-                snapshot = loads(row.payload)
-                if snapshot.agenda:
+            for snapshot_id in ids:
+                payload = await session.scalar(
+                    select(AgendaSnapshotRow.payload).where(
+                        AgendaSnapshotRow.snapshot_id == snapshot_id
+                    )
+                )
+                if payload is not None and (snapshot := loads(payload)).agenda:
                     return snapshot
         return None
 
