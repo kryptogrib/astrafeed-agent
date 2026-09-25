@@ -454,6 +454,7 @@ async def health_payload(store: AgendaStore, *, now: datetime, commit: str) -> d
     state: CycleState = await store.get_cycle_state()
     snapshot = await store.get_snapshot(None)
     queue_depth = await store.queue_depth()
+    queue_stopped = len(await store.queued_ids()) - queue_depth
     last_full_success_at = state.last_full_success_at or state.last_success_at
     if snapshot is None:
         status = "preparing"
@@ -474,6 +475,7 @@ async def health_payload(store: AgendaStore, *, now: datetime, commit: str) -> d
                 last_full_success_at.isoformat() if last_full_success_at else None
             ),
             "queue_depth": queue_depth,
+            "queue_stopped": queue_stopped,
         },
         "last_snapshot": None
         if snapshot is None

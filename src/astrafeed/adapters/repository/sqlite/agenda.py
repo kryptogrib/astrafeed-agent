@@ -263,8 +263,24 @@ class SqliteAgendaStore:
             if row is not None:
                 await session.delete(row)
 
+    async def expire_before(self, cutoff: datetime) -> None:
+        async with self._session() as session, session.begin():
+            rows = (
+                await session.scalars(
+                    select(AgendaQueueRow)
+                    .join(
+                        AgendaPublicationRow,
+                        AgendaPublicationRow.publication_id == AgendaQueueRow.publication_id,
+                    )
+                    .where(AgendaPublicationRow.published_at < cutoff)
+                )
+            ).all()
+            for queued in rows:
+                if queue_reason_retryable(queued.reason):
+                    queued.reason = "expired"
+
     async def queue_depth(self) -> int:
-        return len(await self.queued_ids())
+        return len(await self.retryable_ids())
 
     async def queued_ids(self) -> list[str]:
         async with self._session() as session:

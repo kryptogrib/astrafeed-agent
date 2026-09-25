@@ -24,7 +24,12 @@ from dataclasses import dataclass
 from datetime import UTC, datetime, timedelta
 
 from astrafeed.config import Settings
-from astrafeed.domain.ingestion import Coverage, Source, require_public_source_ref
+from astrafeed.domain.ingestion import (
+    FRESH_POST_WINDOW,
+    Coverage,
+    Source,
+    require_public_source_ref,
+)
 from astrafeed.ports.ingestion import IngestionStore
 from astrafeed.ports.source import PublicRefResolver, WindowRead, WindowReader
 
@@ -192,9 +197,13 @@ class IngestionCoordinator:
         if source.telegram_id is None:
             return Coverage(start=start, end=end, complete=False), "not a Telegram source"
 
-        existing = await self._store.coverage(source_id, start, end)
+        watermark = await self._store.get_ingest_watermark(source_id)
+        # The comparison still spans 48 hours, but collection never backfills
+        # older posts when a source is added or resumes after a long gap.
+        read_floor = max(start, end - FRESH_POST_WINDOW, watermark or start)
+        existing = await self._store.coverage(source_id, read_floor, end)
         if existing.complete:
-            return existing, None
+            return await self._store.coverage(source_id, start, end), None
 
         until = self._delayed_until.get(source_id)
         now = self._now()
@@ -210,14 +219,13 @@ class IngestionCoordinator:
 
         # Resume only a proven prefix of this requested window. A timestamp alone
         # cannot skip unread IDs sharing its second; derive the ID cursor from raw cache.
-        read_start = start
+        read_start = read_floor
         after_id = None
-        watermark = await self._store.get_ingest_watermark(source_id)
-        if watermark is not None and start <= watermark <= end:
-            boundary = max(start, watermark - timedelta(microseconds=1))
-            prefix = await self._store.coverage(source_id, start, boundary)
-            if prefix.complete or watermark == start:
-                cached = await self._store.read_window(source_id, start, watermark)
+        if watermark is not None and read_floor <= watermark <= end:
+            boundary = max(read_floor, watermark - timedelta(microseconds=1))
+            prefix = await self._store.coverage(source_id, read_floor, boundary)
+            if prefix.complete or watermark == read_floor:
+                cached = await self._store.read_window(source_id, read_floor, watermark)
                 numeric_ids = [
                     int(item.external_id) for item in cached if item.external_id.isdigit()
                 ]

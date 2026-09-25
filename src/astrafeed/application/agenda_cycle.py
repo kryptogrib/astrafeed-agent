@@ -28,6 +28,7 @@ from astrafeed.domain.agenda import (
     text_hash,
     windows_at,
 )
+from astrafeed.domain.ingestion import FRESH_POST_WINDOW
 from astrafeed.domain.models import Item
 from astrafeed.domain.spend_budget import BudgetExceeded
 from astrafeed.ports.agenda import (
@@ -106,10 +107,11 @@ async def ingest_publications(
     end: datetime,
     now: datetime,
 ) -> None:
+    fresh_start = max(start, now - FRESH_POST_WINDOW)
     for source_id in source_ids:
-        items = await reader.read_window(source_id, start, end)
+        items = await reader.read_window(source_id, fresh_start, end)
         for item in items:
-            if not (start <= item.timestamp < end):
+            if not (fresh_start <= item.timestamp < end):
                 continue
             incoming = _publication(source_id, item, now)
             previous = await store.record_publication(incoming)
@@ -204,6 +206,7 @@ async def run_cycle(
         state.phase = "analyze"
         await store.set_cycle_state(state)
 
+        await store.expire_before(now - FRESH_POST_WINDOW)
         queued = set(await store.retryable_ids())
         pending = [
             pub

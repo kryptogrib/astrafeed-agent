@@ -4,6 +4,7 @@ import httpx
 import pytest
 from sqlalchemy.ext.asyncio import async_sessionmaker, create_async_engine
 
+from astrafeed.adapters.repository.memory import InMemoryRepository
 from astrafeed.adapters.repository.sqlite.ingestion import (
     SqliteIngestionStore,
     migrate_rss_sources,
@@ -11,9 +12,30 @@ from astrafeed.adapters.repository.sqlite.ingestion import (
 from astrafeed.adapters.repository.sqlite.models import Base
 from astrafeed.adapters.source.rss import RssReader, parse_feed
 from astrafeed.application.rss_ingest import collect_feeds, resolve_feeds
+from astrafeed.domain.models import Item
 
 START = datetime(2026, 9, 25, tzinfo=UTC)
 URL = "https://example.com/feed"
+
+
+@pytest.mark.asyncio
+async def test_new_rss_source_stores_only_the_last_12_hours():
+    store = InMemoryRepository()
+    feeds = await resolve_feeds(store, [URL])
+    (source_id,) = feeds
+    end = START + timedelta(days=1)
+
+    class Reader:
+        async def read(self, url):
+            return [
+                Item("news", "old", "Old", "https://example.com/old", end - timedelta(hours=13)),
+                Item("news", "new", "New", "https://example.com/new", end - timedelta(hours=1)),
+            ]
+
+    await collect_feeds(store, Reader(), feeds, end - timedelta(hours=72), end)
+    items = await store.read_window(source_id, end - timedelta(hours=72), end)
+    assert [item.external_id for item in items] == ["new"]
+    assert await store.get_ingest_watermark(source_id) == end
 
 
 def test_parse_rss_and_atom_preserve_original_link_and_date():
@@ -51,8 +73,7 @@ async def test_rss_collection_is_idempotent_and_incomplete_history_is_visible(tm
     async with client:
         reader = RssReader(client)
         for _ in range(2):
-            errors = await collect_feeds(store, reader, feeds, START, START + timedelta(days=1))
-            assert source_id in errors
+            await collect_feeds(store, reader, feeds, START, START + timedelta(days=1))
     assert len(await store.read_window(source_id, START, START + timedelta(days=1))) == 1
     assert not (await store.coverage(source_id, START, START + timedelta(days=1))).complete
     assert (await store.get_source(source_id)).telegram_id is None

@@ -15,6 +15,11 @@ kept, but incomplete history cannot contribute to comparable growth. The
 original article URL remains the evidence link; summaries are inputs to story
 extraction, not full-text copies of articles.
 
+The first fetch admits at most the latest 12 hours of posts. Later fetches use
+the source watermark and admit newly published posts only. This keeps a long
+feed tail from becoming an analysis backlog; it does not claim the previous
+24-hour comparison window is complete until coverage has actually accumulated.
+
 ## Reddit
 
 `reddit_feeds` contains individual subreddit RSS URLs. The collector combines

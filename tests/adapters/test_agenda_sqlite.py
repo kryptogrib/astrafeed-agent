@@ -1,6 +1,6 @@
 import asyncio
 from dataclasses import replace
-from datetime import UTC, datetime
+from datetime import UTC, datetime, timedelta
 
 import pytest
 from sqlalchemy import text
@@ -55,6 +55,37 @@ class OnceExtractor:
                 ),
             ),
         )
+
+
+@pytest.mark.asyncio
+async def test_sqlite_expires_stale_queue_work_without_counting_it_as_active(tmp_path):
+    engine = create_async_engine(f"sqlite+aiosqlite:///{tmp_path / 'queue.db'}")
+    async with engine.begin() as conn:
+        await conn.run_sync(Base.metadata.create_all)
+    store = SqliteAgendaStore(async_sessionmaker(engine, expire_on_commit=False))
+    now = datetime(2026, 9, 25, 12, tzinfo=UTC)
+    try:
+        for name, age in (("old", 13), ("new", 2)):
+            await store.record_publication(
+                PublicationVersion(
+                    name,
+                    1,
+                    name,
+                    name,
+                    text_hash(name),
+                    now - timedelta(hours=age),
+                    now,
+                    "@a",
+                    f"https://t.me/a/{name}",
+                )
+            )
+            await store.enqueue(name, "new")
+        await store.expire_before(now - timedelta(hours=12))
+        assert set(await store.queued_ids()) == {"old", "new"}
+        assert await store.retryable_ids() == ["new"]
+        assert await store.queue_depth() == 1
+    finally:
+        await engine.dispose()
 
 
 @pytest.mark.asyncio

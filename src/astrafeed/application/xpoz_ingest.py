@@ -7,6 +7,7 @@ from collections.abc import Mapping, Sequence
 from datetime import UTC, datetime, timedelta
 from typing import Protocol
 
+from astrafeed.domain.ingestion import FRESH_POST_WINDOW
 from astrafeed.domain.models import Item
 from astrafeed.ports.ingestion import IngestionStore
 
@@ -91,11 +92,13 @@ async def collect_xpoz_accounts(
         last = await store.get_ingest_watermark(source_id)
         if last is not None and end - last < ACCOUNT_INTERVAL:
             continue
-        query_start = max(start, last - timedelta(hours=1)) if last is not None else start
+        query_start = max(
+            start, end - FRESH_POST_WINDOW, last - timedelta(hours=1) if last else start
+        )
         try:
             raw_posts, truncated = await reader.posts_by_author(handle, query_start)
             items = [item for post in raw_posts if (item := _as_item(post, handle)) is not None]
-            in_window = [i for i in items if start <= i.timestamp <= end]
+            in_window = [i for i in items if query_start <= i.timestamp <= end]
             await store.store_items(source_id, in_window)
             if threads is not None:
                 ids = {item.external_id for item in in_window}
@@ -134,7 +137,7 @@ async def collect_xpoz_search(
     last = await store.get_ingest_watermark(search_id)
     if last is not None and end - last < SEARCH_INTERVAL:
         return None
-    query_start = max(start, last - timedelta(hours=2)) if last is not None else start
+    query_start = max(start, end - FRESH_POST_WINDOW, last - timedelta(hours=2) if last else start)
     by_handle = {handle.casefold(): sid for sid, handle in accounts.items()}
     try:
         raw_posts, truncated = await reader.search_crypto(query_start)

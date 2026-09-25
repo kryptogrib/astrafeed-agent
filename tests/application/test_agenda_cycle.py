@@ -19,6 +19,7 @@ from astrafeed.domain.agenda import (
     ExtractionResult,
     Fragment,
     MentionedEntity,
+    PublicationVersion,
     analysis_reuse_key,
     text_hash,
 )
@@ -36,8 +37,67 @@ async def test_three_identical_analysis_failures_stay_in_coverage_queue_without_
     assert store.queue_reason("post") == "extract_error:3"
     assert await store.queued_ids() == ["post"]
     assert await store.retryable_ids() == []
+    assert await store.queue_depth() == 0
+    health = await cycle_health(store, now=datetime(2026, 9, 25, 12, tzinfo=UTC), commit="test")
+    assert health["cycle"]["queue_stopped"] == 1
     await store.enqueue("post", "edited")
     assert await store.retryable_ids() == ["post"]
+
+
+@pytest.mark.asyncio
+async def test_old_pending_post_expires_without_appearing_analyzed():
+    store = InMemoryAgendaStore()
+    now = datetime(2026, 9, 25, 12, tzinfo=UTC)
+    for name, age in (("old", 13), ("new", 2)):
+        when = now - timedelta(hours=age)
+        await store.record_publication(
+            PublicationVersion(
+                name, 1, name, name, text_hash(name), when, now, "@a", f"https://t.me/a/{name}"
+            )
+        )
+        await store.enqueue(name, "new")
+
+    await store.expire_before(now - timedelta(hours=12))
+    assert store.queue_reason("old") == "expired"
+    assert await store.queued_ids() == ["old", "new"]
+    assert await store.retryable_ids() == ["new"]
+    assert await store.queue_depth() == 1
+
+
+@pytest.mark.asyncio
+async def test_cycle_skips_old_queue_work_and_processes_fresh_post():
+    store = InMemoryAgendaStore()
+    now = datetime(2026, 9, 25, 12, tzinfo=UTC)
+    for name, age in (("old", 13), ("new", 2)):
+        when = now - timedelta(hours=age)
+        await store.record_publication(
+            PublicationVersion(
+                name,
+                1,
+                name,
+                f"ETH news {name} today.",
+                text_hash(f"ETH news {name} today."),
+                when,
+                now,
+                "@a",
+                f"https://t.me/a/{name}",
+            )
+        )
+        await store.enqueue(name, "new")
+
+    await run_cycle(
+        store,
+        reader=Reader({1: []}),
+        source_ids=[1],
+        extractor=Extractor(),
+        embedder=Embedder(),
+        assigner=Assigner(),
+        now=now,
+        ingest=False,
+    )
+    assert store.queue_reason("old") == "expired"
+    assert store.queue_reason("new") is None
+    assert await store.queue_depth() == 0
 
 
 @pytest.mark.asyncio
@@ -407,7 +467,7 @@ async def test_extraction_budget_block_preserves_last_snapshot():
 
 
 @pytest.mark.asyncio
-async def test_collection_can_cover_72_hours_without_changing_comparison_windows():
+async def test_collection_can_cover_72_hours_but_does_not_admit_old_news():
     store = InMemoryAgendaStore()
     t = datetime(2026, 9, 24, 12, tzinfo=UTC)
     old = _item("@a", "1", "Старый сюжет ETH ETF сегодня утром.", t - timedelta(hours=60))
@@ -430,7 +490,7 @@ async def test_collection_can_cover_72_hours_without_changing_comparison_windows
     )
 
     assert collected == [(t - timedelta(hours=72), t)]
-    assert await store.latest_publication("1:1") is not None
+    assert await store.latest_publication("1:1") is None
     assert snapshot.coverage.publications_total == 1
 
 
