@@ -302,6 +302,7 @@ def _recent_source_posts(snapshot: Snapshot) -> dict[str, list[dict]]:
                         "channel": pub.channel_ref,
                         "link": pub.link,
                         "published_at": pub.published_at.isoformat(),
+                        "title": detail.card.title,
                         "text": " ".join((pub.quote or detail.card.title).split())[:240],
                     },
                 )
@@ -588,7 +589,8 @@ def _md_source_posts(payload: dict) -> list[str]:
             lines += ["", f"### {label}"]
             lines += [
                 f"- {_when(post['published_at'])} [{post['channel']}]({post['link']}): "
-                f"{post['text']}"
+                f"**{post['title']}**"
+                + (f" — {post['text']}" if post["text"] != post["title"] else "")
                 for post in group
             ]
     return lines
@@ -836,7 +838,9 @@ def _html_source_posts(payload: dict) -> str:
         items = "".join(
             f'<li><a href="{_url(post["link"])}">{escape(post["channel"])}</a> '
             f'<span class="meta">{escape(_when(post["published_at"]))}</span>: '
-            f"{escape(post['text'])}</li>"
+            f"<b>{escape(post['title'])}</b>"
+            + (f" — {escape(post['text'])}" if post["text"] != post["title"] else "")
+            + "</li>"
             for post in group
         )
         groups.append(f"<h3>{label}</h3><ul>{items}</ul>")

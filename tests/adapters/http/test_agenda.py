@@ -537,6 +537,7 @@ async def test_agenda_shows_recent_x_and_reddit_posts_outside_ranked_stories():
         reddit_link,
         reddit_link_2,
     ]
+    assert body["source_posts"]["reddit"][0]["title"] == "Bitcoin developer releases update"
     assert x_link in (await _get(app, "/agenda?format=html")).text
     assert reddit_link in (await _get(app, "/agenda?format=html")).text
     markdown = (await _get(app, "/agenda?format=md")).text
