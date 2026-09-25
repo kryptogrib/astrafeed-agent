@@ -19,6 +19,7 @@ from astrafeed.domain.agenda import (
     PublicationRef,
     Snapshot,
     StoryCard,
+    numbers_are_grounded,
 )
 from astrafeed.domain.models import Item
 from astrafeed.ports.agenda import CommentReader, DiscussionSummarizer
@@ -156,6 +157,7 @@ class DiscussionEnricher:
                 text.strip()
                 and 0 <= index < len(comments)
                 and _mentions_story_subject(comments[index].text, card.entities)
+                and numbers_are_grounded(text, [comments[index].text])
             ):
                 facts.append((text.strip(), comments[index]))
         facts = facts[:MAX_FACTS]

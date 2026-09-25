@@ -590,6 +590,7 @@ async def build_snapshot(
                     break
     processed = {pub.publication_id for pub in pubs}
     queued = set(await store.queued_ids(processed))
+    retryable = set(await store.retryable_ids())
     limitations = () if not verification_failed else ("evidence_verification_failed",)
     coverage = CoverageInfo(
         channels_ok=sum(1 for state in coverage_states.values() if state.get("processed")),
@@ -606,7 +607,7 @@ async def build_snapshot(
         publications_total=len(pubs),
         publications_processed=len(processed - queued),
         publications_queued=len(queued),
-        publications_failed=sum(1 for pid in queued if True),
+        publications_failed=len(queued - retryable),
         comparable_channels=len(comparable),
         limitations=limitations
         if mode == "full"

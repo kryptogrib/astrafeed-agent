@@ -131,7 +131,7 @@ class EnglishLocalizer:
         return replace(
             discussion,
             quotes=tuple(
-                replace(comment, translation=self._english(comment.text))
+                replace(comment, translation=self._english(comment.text, [comment.text]))
                 for comment in discussion.quotes
             ),
         )
@@ -141,7 +141,7 @@ class EnglishLocalizer:
             detail,
             card=self._card(detail.card),
             positions=tuple(
-                replace(position, translation=self._english(position.quote))
+                replace(position, translation=self._english(position.quote, [position.quote]))
                 for position in detail.positions
             ),
         )

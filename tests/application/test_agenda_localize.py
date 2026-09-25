@@ -126,6 +126,44 @@ async def test_translations_are_cached_and_failures_keep_originals():
 
 
 @pytest.mark.asyncio
+async def test_comment_and_position_translations_reject_ungrounded_numbers():
+    class BadTranslator:
+        async def to_english(self, texts):
+            table = {
+                "вывел 5 млн вчера": "withdrew 50 million yesterday",
+                "дно на 100": "bottom at 999",
+            }
+            return [table.get(t, "") for t in texts]
+
+    snapshot = _snapshot()
+    card = replace(
+        snapshot.agenda[0],
+        discussion=Discussion(
+            5,
+            5,
+            (),
+            (CommentQuote("вывел 5 млн вчера", "https://t.me/a/1", "@a"),),
+        ),
+    )
+    snapshot = replace(
+        snapshot,
+        agenda=(card,),
+        stories={
+            "s": StoryDetail(
+                card=card,
+                positions=(PositionCard("author", "@a", "дно на 100", "", "https://t.me/a/2"),),
+            ),
+            "h": snapshot.stories["h"],
+        },
+    )
+
+    out = await EnglishLocalizer(BadTranslator()).localize(snapshot)
+
+    assert "50" not in out.agenda[0].discussion.quotes[0].translation
+    assert "999" not in out.stories["s"].positions[0].translation
+
+
+@pytest.mark.asyncio
 async def test_translated_headline_and_explanation_cannot_invent_numbers():
     class FabricatingTranslator:
         async def to_english(self, texts):

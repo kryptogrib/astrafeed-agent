@@ -46,6 +46,7 @@ def _status(snapshot: Snapshot, now: datetime) -> dict:
             "publications_total": snapshot.coverage.publications_total,
             "publications_processed": snapshot.coverage.publications_processed,
             "publications_queued": snapshot.coverage.publications_queued,
+            "publications_failed": snapshot.coverage.publications_failed,
             "comparable_channels": snapshot.coverage.comparable_channels,
         },
         "queue_depth": snapshot.queue_depth,

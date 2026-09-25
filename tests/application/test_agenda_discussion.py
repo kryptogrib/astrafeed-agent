@@ -225,3 +225,22 @@ async def test_unrelated_comment_under_shared_post_is_not_reported_as_story_evid
     assert tuple(q.text for q in result.agenda[0].discussion.quotes) == (
         "$SHORT airdrop claim opens tomorrow",
     )
+
+
+@pytest.mark.asyncio
+async def test_highlight_with_ungrounded_number_is_dropped():
+    reader = Reader({"@a": {"s1": 2}}, ["люди в панике, все бегут"])
+
+    class InventedFigure:
+        async def summarize(self, title, posts, comments):
+            return DiscussionDigest(
+                points=(),
+                quote_indices=(0,),
+                highlights=("потеряли $2 млн",),
+            )
+
+    snapshot = await DiscussionEnricher(reader, InventedFigure()).enrich(_snapshot("s"), T)
+
+    assert snapshot.agenda[0].discussion is not None
+    assert snapshot.agenda[0].discussion.highlights == ()
+    assert snapshot.agenda[0].discussion.quotes == ()

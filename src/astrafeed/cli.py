@@ -334,7 +334,12 @@ async def _agenda_poll(
     xpoz_search_id: int | None = None
     while True:
         now = datetime.now(UTC)
-        cycle_state = await agenda.get_cycle_state()
+        try:
+            cycle_state = await agenda.get_cycle_state()
+        except Exception:
+            _log.exception("agenda poll iteration failed")
+            await asyncio.sleep(max(1, cfg.poll_seconds))
+            continue
         collect_due = (
             cycle_state.last_collect_at is None
             or now - cycle_state.last_collect_at >= timedelta(seconds=cfg.poll_seconds)
@@ -378,7 +383,10 @@ async def _agenda_poll(
             if not source_ids:
                 cycle_state.last_error = "source_unavailable"
                 cycle_state.phase = "idle"
-                await agenda.set_cycle_state(cycle_state)
+                try:
+                    await agenda.set_cycle_state(cycle_state)
+                except Exception:
+                    _log.exception("agenda poll iteration failed")
                 await asyncio.sleep(cfg.poll_seconds)
                 continue
 
@@ -481,7 +489,12 @@ async def _agenda_poll(
         if snapshot is not None and "processing_in_progress" in snapshot.limitations:
             await asyncio.sleep(0)
         else:
-            latest_collect = (await agenda.get_cycle_state()).last_collect_at
+            try:
+                latest_collect = (await agenda.get_cycle_state()).last_collect_at
+            except Exception:
+                _log.exception("agenda poll iteration failed")
+                await asyncio.sleep(max(1, cfg.poll_seconds))
+                continue
             remaining = (
                 cfg.poll_seconds
                 if latest_collect is None
@@ -490,6 +503,49 @@ async def _agenda_poll(
                 ).total_seconds()
             )
             await asyncio.sleep(max(1, remaining))
+
+
+async def _supervised_agenda_poll(
+    cfg: Settings,
+    client: TelegramClient,
+    posts: SqliteIngestionStore,
+    agenda: SqliteAgendaStore,
+    extractor: OpenRouterExtractor,
+    embedder: OpenRouterEmbedder,
+    assigner: OpenRouterAssigner,
+    evidence_verifier: OpenRouterEvidenceVerifier,
+    summarizer: OpenRouterDiscussionSummarizer,
+    translator: OpenRouterTranslator,
+    xpoz_reader: XpozReader | None = None,
+    xpoz_threads: SqliteXpozThreads | None = None,
+) -> None:
+    while True:
+        try:
+            await _agenda_poll(
+                cfg,
+                client,
+                posts,
+                agenda,
+                extractor,
+                embedder,
+                assigner,
+                evidence_verifier,
+                summarizer,
+                translator,
+                xpoz_reader,
+                xpoz_threads,
+            )
+            _log.error("agenda poll returned unexpectedly")
+        except Exception:
+            _log.exception("agenda poll iteration failed")
+        await asyncio.sleep(max(1, cfg.poll_seconds))
+
+
+async def _finalize_poll_task(poll_task: asyncio.Task[None]) -> None:
+    poll_task.cancel()
+    result = (await asyncio.gather(poll_task, return_exceptions=True))[0]
+    if isinstance(result, Exception):
+        _log.exception("agenda poll task exited unexpectedly", exc_info=result)
 
 
 def _agenda_llm(cfg: Settings, session):
@@ -578,7 +634,7 @@ async def _serve(config_path: str) -> None:
         uvicorn.Config(app, host=cfg.api_host, port=cfg.api_port, log_config=None)
     )
     poll_task = asyncio.create_task(
-        _agenda_poll(
+        _supervised_agenda_poll(
             cfg,
             client,
             posts,
@@ -597,8 +653,7 @@ async def _serve(config_path: str) -> None:
     try:
         await server.serve()
     finally:
-        poll_task.cancel()
-        await asyncio.gather(poll_task, return_exceptions=True)
+        await _finalize_poll_task(poll_task)
         await client.disconnect()
         if xpoz_client is not None:
             await xpoz_client.close()
