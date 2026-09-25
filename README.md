@@ -140,7 +140,7 @@ commits; check `GET /healthz` →
 `commit` when comparing an older pinned snapshot with a newer live one.
 [Response fields, examples and limits](docs/snapshot-changes.md).
 
-### An agent in 10 lines
+### Poll for changes with an agent
 
 Run [the polling example](examples/agent_poll.py) once to save the current `snapshot_id`, then run it again after a later snapshot. It prints only new or updated **report cards**, with `null` when confirmation or OKX price context is unavailable. The cursor belongs to the client.
 
