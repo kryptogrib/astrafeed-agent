@@ -1,9 +1,9 @@
 import inspect
 from collections.abc import Awaitable, Callable
 from pathlib import Path
-from typing import Any, Literal
+from typing import Annotated, Any, Literal
 
-from fastapi import FastAPI, HTTPException, Request
+from fastapi import FastAPI, HTTPException, Query, Request
 from fastapi.responses import FileResponse, HTMLResponse, JSONResponse, PlainTextResponse
 
 from astrafeed.adapters.http.a2mcp import mount_a2mcp
@@ -146,7 +146,7 @@ def create_app(
 
         @app.get("/stories/search", response_model=None)
         async def get_stories_search(
-            q: str,
+            q: Annotated[str, Query(min_length=1, max_length=200, pattern=r"\S")],
             format: Literal["json", "md"] = "json",
             snapshot_id: str | None = None,
             limit: int = 10,

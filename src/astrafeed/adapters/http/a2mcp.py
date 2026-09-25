@@ -35,7 +35,11 @@ A2MCP_USAGE = {
 
 class AstraFeedRequest(BaseModel):
     query: str | None = Field(
-        default=None, description="Search stories by title, entity, alias or claim text."
+        default=None,
+        min_length=1,
+        max_length=200,
+        pattern=r"\S",
+        description="Search stories by title, entity, alias or claim text.",
     )
     story_id: str | None = Field(default=None, description="Open one story card with its sources.")
     snapshot_id: str | None = Field(

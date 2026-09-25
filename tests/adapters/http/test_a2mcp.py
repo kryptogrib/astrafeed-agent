@@ -55,6 +55,39 @@ async def test_bare_post_returns_agenda_for_okx_self_check():
     assert body["result"]["stories"][0]["title"] == "Потоки ETH ETF"
 
 
+async def test_empty_json_post_returns_agenda_for_okx_self_check():
+    response = await _post(await _app(), "/a2mcp/astrafeed", json={})
+    assert response.status_code == 200
+    assert response.json()["action"] == "agenda"
+
+
+@pytest.mark.parametrize("query", ["", "   ", "x" * 201])
+async def test_a2mcp_rejects_blank_or_oversized_search_query(query):
+    response = await _post(await _app(), "/a2mcp/astrafeed", json={"query": query})
+    assert response.status_code == 422
+
+
+async def test_a2mcp_accepts_search_query_at_200_character_boundary():
+    response = await _post(await _app(), "/a2mcp/astrafeed", json={"query": "x" * 200})
+    assert response.status_code == 200
+    assert response.json()["action"] == "search"
+
+
+@pytest.mark.parametrize("query", ["", "   ", "x" * 201])
+async def test_rest_rejects_blank_or_oversized_search_query(query):
+    transport = httpx.ASGITransport(app=await _app())
+    async with httpx.AsyncClient(transport=transport, base_url="http://test") as client:
+        response = await client.get("/stories/search", params={"q": query})
+    assert response.status_code == 422
+
+
+async def test_rest_accepts_search_query_at_200_character_boundary():
+    transport = httpx.ASGITransport(app=await _app())
+    async with httpx.AsyncClient(transport=transport, base_url="http://test") as client:
+        response = await client.get("/stories/search", params={"q": "x" * 200})
+    assert response.status_code == 200
+
+
 async def test_get_tool_url_is_a_landing_page_not_405():
     transport = httpx.ASGITransport(app=await _app())
     async with httpx.AsyncClient(transport=transport, base_url="http://test") as client:

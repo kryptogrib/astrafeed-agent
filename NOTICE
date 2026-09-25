@@ -4,3 +4,16 @@ Copyright 2026 astrafeed contributors
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this project except in compliance with the License.
 A copy of the License is provided in the LICENSE file.
+
+Third-party components and services
+
+The live application uses Telethon, FastAPI, Pydantic, httpx and Instructor;
+their own licenses and notices remain with their distributions. OpenRouter is
+the hosted model provider, Xpoz supplies a sampled X index, and OKX's public
+market API supplies spot-price context where available. These service names do
+not imply endorsement by their operators.
+
+Public Telegram posts, publisher RSS articles, Reddit posts and selected X
+posts are content sources. Their text and links remain attributable to their
+respective authors and platforms; AstraFeed links displayed quotes to the
+source posts.

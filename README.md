@@ -1,10 +1,10 @@
 # AstraFeed
 
+AstraFeed is an OKX.AI agent service that helps trading and research agents see which crypto stories are spreading across monitored sources in the last 24 hours, with exact quotes, first-observed post order, and OKX spot price context where available.
+
 [![check](https://github.com/kryptogrib/astrafeed-agent/actions/workflows/check.yml/badge.svg)](https://github.com/kryptogrib/astrafeed-agent/actions/workflows/check.yml)
 
-**What changed across crypto sources, who said it first, and where is the evidence?**
-
-AstraFeed turns posts from 38 curated public Telegram channels, RSS and Reddit feeds, and selected X accounts into a live agenda for humans and AI agents. It groups posts into stories, compares the last 24 hours with the previous 24, and links every displayed claim to its original source. The same published snapshot is available as a readable page, JSON, Markdown, and an OKX.AI A2MCP service.
+Agents can use one published snapshot instead of reading dozens of feeds or running their own LLM pass. AstraFeed groups posts from public Telegram channels, RSS and Reddit feeds, and selected X accounts; it compares the last 24 hours with the previous 24 and links every displayed quote to its original post. The same snapshot is available as a readable page, JSON, Markdown, and an A2MCP service.
 
 **[Open the live agenda](https://cutememe.lol/agenda?format=html)** · **[Watch the 2:56 demo](docs/submission/astrafeed-demo.mp4)** · [Check the live service](https://cutememe.lol/healthz)
 
@@ -18,6 +18,10 @@ Built for **OKX Dev Day 2026 · Build a Company / OKX AI**. A2MCP endpoint: `POS
 | [Demo video](docs/submission/astrafeed-demo.mp4) | 2:56 narrated product and A2MCP walkthrough |
 
 The marketplace listing points to the same public HTTPS A2MCP endpoint.
+
+### Who pays & why
+
+The proposed buyer is a trading or research agent that polls for changes instead of reading each monitored source. Its unit of use is one agenda call with a client-held `since_snapshot_id`; polling every 15 minutes is an example, not a service guarantee. Each read uses a published snapshot and incurs no per-call LLM charge. The shared background cycle does use OpenRouter; the example configuration sets a **$5/day LLM budget cap**, which is not a measurement of daily spend or necessarily the deployed setting. Hosting also has a cost. There are no paying customers or validated prices yet. A separate x402 paid service after this free demo is a [monetization hypothesis](docs/x402-plan.md), not part of the listed service. For OKX, the current integration is a callable agent service and OKX spot context in applicable cards.
 
 ## Start here
 
@@ -120,7 +124,7 @@ The response has `service`, `action` (`agenda`, `search`, or `story`), and `resu
 | `coverage`, `stale`, `limitations` | What was collected and processed, and what the snapshot cannot support. |
 | `price.verdict` | Code label from OKX spot: did the market move in the hour **before** the first observed post, after it, both, or neither. Context, not causation. |
 
-The watched sources are a curated sample, not a representative sample of the whole market. A top agenda card needs an explicit crypto or market anchor in its displayed title or source quotes; other extracted stories remain searchable. Quotes in the English report may be machine-translated; JSON retains the original. Search also covers archive stories in their source language; displayed agenda titles are English. Reader comments are unverified and shown as takeaways only when the quoted comment explicitly names a story entity. A comment link opens its parent post or thread when Telegram has no direct comment URL. Silence does not mean agreement. No sentiment score or trading recommendation is produced.
+The watched sources are a curated sample, not a representative sample of the whole market. A top agenda card needs an explicit crypto or market anchor in its displayed title or source quotes; other extracted stories remain searchable. Quotes in the English report may be machine-translated; JSON retains the original. Search also covers archive stories in their source language. Titles are usually English; some keep the source language when the extractor does not translate them. Reader comments are unverified and shown as takeaways only when the quoted comment explicitly names a story entity. A comment link opens its parent post or thread when Telegram has no direct comment URL. Silence does not mean agreement. No sentiment score or trading recommendation is produced.
 
 ## Poll for changes
 
@@ -179,7 +183,7 @@ flowchart LR
     E --> F[HTML / Markdown / REST / A2MCP]
 ```
 
-Collection and analysis run in the background. Read requests use the published snapshot and do not call the LLM. A `snapshot_id` pins follow-up searches and cards to one consistent view. Extraction uses OpenRouter under a daily spend cap; source and snapshot data live in SQLite. See the [live smoke record](artifacts/agenda-eval/live-smoke.md) and [manual quality audit](artifacts/agenda-eval/quality-2026-09-25.md) for concrete checks and known errors.
+Collection and analysis run in the background. Read requests use the published snapshot and do not call the LLM. A `snapshot_id` pins follow-up searches and cards to one consistent view. Extraction uses OpenRouter under a daily spend cap; source and snapshot data live in SQLite. `/healthz` intentionally exposes cumulative settled spend and unsettled reservations for budget transparency; neither is a daily cost estimate. See the [live smoke record](artifacts/agenda-eval/live-smoke.md) and [manual quality audit](artifacts/agenda-eval/quality-2026-09-25.md) for concrete checks and known errors.
 
 ## Run locally
 
@@ -198,6 +202,6 @@ The first analysis can take time; `/healthz` shows progress and `/agenda` become
 
 ## Hackathon scope
 
-The earlier [AstraFeed Token Brief](PROVENANCE.md) supplied the Telegram ingestion, filtering, and deduplication engine. This hackathon added live story extraction and assignment, comparable growth, quote and coverage checks, immutable snapshots, the read API, the evidence signals, and the A2MCP endpoint. Changes since the starting commit are visible with `git log aa9a275..HEAD`.
+The earlier [AstraFeed Token Brief](PROVENANCE.md) supplied the Telegram ingestion, filtering, and deduplication engine. This hackathon added live story extraction and assignment, comparable growth, quote and coverage checks, immutable snapshots, the read API, the evidence signals, and the A2MCP endpoint. The [build-period table](PROVENANCE.md#build-period-evidence) identifies module paths and commits; the source diff starts at `aa9a275`.
 
-The OKX.AI service is free; a paid x402 tier is a future plan, not part of the live demo. The [product brief](docs/product.md) defines the current scope; the [MVP plan](docs/plans/community-pulse-mvp.md) records the contracts and earlier experiments.
+The OKX.AI service is free; a [separate paid x402 service](docs/x402-plan.md) is a future hypothesis, not part of the live demo. The [product brief](docs/product.md) defines the current scope; the [MVP plan](docs/plans/community-pulse-mvp.md) records the contracts and earlier experiments. Third-party components and content sources are listed in [NOTICE](NOTICE).
