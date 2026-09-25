@@ -27,7 +27,7 @@ The live service and these six files are the product. The earlier Token Brief en
 2. [src/astrafeed/domain/agenda.py](src/astrafeed/domain/agenda.py) — quote spans, windows, growth rules
 3. [src/astrafeed/application/agenda_signals.py](src/astrafeed/application/agenda_signals.py) — echoes, conflicting figures, price before/after Telegram
 4. [src/astrafeed/application/agenda_changes.py](src/astrafeed/application/agenda_changes.py) — `since_snapshot_id` report delta
-5. [src/astrafeed/application/agenda_query.py](src/astrafeed/application/agenda_query.py) — JSON / Markdown / HTML from the published snapshot
+5. [src/astrafeed/application/agenda_query.py](src/astrafeed/application/agenda_query.py) — JSON from the published snapshot; [agenda_text.py](src/astrafeed/application/agenda_text.py) holds the wording shared by the [Markdown](src/astrafeed/application/agenda_markdown.py) and [HTML](src/astrafeed/application/agenda_html.py) renderers
 6. [src/astrafeed/adapters/http/a2mcp.py](src/astrafeed/adapters/http/a2mcp.py) — OKX.AI tool over the same read API
 
 `make check` runs ruff, mypy, import-linter, and pytest.

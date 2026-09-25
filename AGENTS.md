@@ -20,7 +20,7 @@ HTTP (read-only, no LLM) ◄─────────────────�
 |---|---|---|
 | Domain | `src/astrafeed/domain/agenda.py` | Pure rules: quote spans, windows, growth, number grounding. Imports nothing from adapters or application. |
 | Ports | `src/astrafeed/ports/` | Protocols for stores, extractor, assigner, verifier, translator. |
-| Application | `src/astrafeed/application/agenda_*.py` | The cycle, snapshot math, evidence signals, `since_snapshot_id` deltas, rendering. |
+| Application | `src/astrafeed/application/agenda_*.py` | The cycle, snapshot math, evidence signals, `since_snapshot_id` deltas. `agenda_query` builds JSON; `agenda_markdown` and `agenda_html` render only from that JSON, so every format shows the same snapshot. |
 | Adapters | `src/astrafeed/adapters/` | Telethon/RSS/Reddit/Xpoz sources, OpenRouter LLM, SQLite, FastAPI, OKX prices. |
 
 The layer rules are enforced by `.importlinter`; HTTP adapters cannot import the

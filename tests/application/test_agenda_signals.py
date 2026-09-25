@@ -97,7 +97,9 @@ def test_caveat_drop_requires_close_wording_and_no_later_sourcing():
 def test_caveat_drop_is_visible_with_both_evidence_links():
     from dataclasses import replace
 
-    from astrafeed.application.agenda_query import _card_payload, _html_card_head, _md_card_head
+    from astrafeed.application.agenda_html import _html_card_head
+    from astrafeed.application.agenda_markdown import _md_card_head
+    from astrafeed.application.agenda_query import _card_payload
 
     before = _pub("@first", "POTENTIALLY: Bitget wallets were hacked and $100M was withdrawn.", 0)
     after = _pub("@later", "Bitget wallets were hacked and $100M was withdrawn.", 4)
@@ -328,7 +330,7 @@ async def test_the_official_source_is_priced_even_when_it_posts_last():
 
 
 def test_report_shows_the_price_trail_and_the_wait_for_an_official_statement():
-    from astrafeed.application.agenda_query import _signal_lines
+    from astrafeed.application.agenda_text import evidence_lines
 
     def node(channel: str, minutes: int, sourcing: str = "unmarked") -> dict:
         return {"channel": channel, "minutes_after_first": minutes, "sourcing": sourcing}
@@ -351,9 +353,9 @@ def test_report_shows_the_price_trail_and_the_wait_for_an_official_statement():
             "at_posts": [point("@a", 18), point("@b", 45), point("@c", 86)],
         },
     }
-    lines = _signal_lines({"signals": signals})
+    lines = evidence_lines({"signals": signals})
     assert "🕰 First post citing an official statement: 18h 54m after the first post" in lines
     assert lines[-1].endswith("@a 18% · @b 45% · @c 86%")
 
     signals["price"]["at_posts"] = [point("@a", None), point("@c", None)]
-    assert not any(line.startswith("⏳") for line in _signal_lines({"signals": signals}))
+    assert not any(line.startswith("⏳") for line in evidence_lines({"signals": signals}))
