@@ -98,8 +98,16 @@ class InMemoryAgendaStore:
     async def mark_processed(self, publication_id: str) -> None:
         self._queue.pop(publication_id, None)
 
+    async def expire_before(self, cutoff: datetime) -> None:
+        from astrafeed.domain.agenda import queue_reason_retryable
+
+        for publication_id, reason in self._queue.items():
+            versions = self._versions.get(publication_id)
+            if versions and versions[-1].published_at < cutoff and queue_reason_retryable(reason):
+                self._queue[publication_id] = "expired"
+
     async def queue_depth(self) -> int:
-        return len(self._queue)
+        return len(await self.retryable_ids())
 
     async def queued_ids(self) -> list[str]:
         return list(self._queue)

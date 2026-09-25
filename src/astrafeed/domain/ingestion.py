@@ -10,9 +10,11 @@ from __future__ import annotations
 
 from collections.abc import Sequence
 from dataclasses import dataclass
-from datetime import datetime
+from datetime import datetime, timedelta
 
 from astrafeed.domain.refs import normalize_channel_ref
+
+FRESH_POST_WINDOW = timedelta(hours=12)
 
 
 @dataclass(frozen=True)

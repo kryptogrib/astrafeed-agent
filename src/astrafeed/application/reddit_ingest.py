@@ -10,6 +10,7 @@ from datetime import datetime
 from urllib.parse import urlparse
 
 from astrafeed.adapters.source.rss import RssReader
+from astrafeed.domain.ingestion import FRESH_POST_WINDOW
 from astrafeed.ports.ingestion import IngestionStore
 
 _log = logging.getLogger(__name__)
@@ -55,6 +56,8 @@ async def collect_reddit_feeds(
     if not feeds:
         return {}
     by_name = {name.casefold(): (sid, name) for sid, name in feeds.items()}
+    last = {sid: await store.get_ingest_watermark(sid) for sid in feeds}
+    read_starts = {sid: max(start, end - FRESH_POST_WINDOW, last[sid] or start) for sid in feeds}
     try:
         items = await reader.read(combined_url(feeds))
         grouped: dict[int, list] = {sid: [] for sid in feeds}
@@ -64,22 +67,33 @@ async def collect_reddit_feeds(
             if link.hostname not in {"reddit.com", "www.reddit.com"} or match is None:
                 continue
             target = by_name.get(match.group(1).casefold())
-            if target is None or not (start <= item.timestamp <= end):
+            if target is None:
                 continue
             sid, subreddit = target
+            last_seen = last[sid]
+            if not (
+                read_starts[sid] <= item.timestamp <= end
+                and (last_seen is None or item.timestamp > last_seen)
+            ):
+                continue
             grouped[sid].append(
                 replace(item, channel_ref=f"r/{subreddit}", channel_name=f"r/{subreddit}")
             )
-        complete = bool(items) and items[0].timestamp <= start
         for sid, posts in grouped.items():
             await store.store_items(sid, posts)
-            await store.mark_coverage(sid, start, end, complete=complete)
-        if complete:
+            complete = bool(items) and items[0].timestamp <= read_starts[sid]
+            await store.mark_coverage(sid, read_starts[sid], end, complete=complete)
+            await store.set_ingest_watermark(sid, end)
+        if all(bool(items) and items[0].timestamp <= read_starts[sid] for sid in feeds):
             return {}
-        return dict.fromkeys(feeds, "combined feed history does not reach window start")
+        return {
+            sid: "combined feed history does not reach window start"
+            for sid in feeds
+            if not (bool(items) and items[0].timestamp <= read_starts[sid])
+        }
     except Exception as exc:  # noqa: BLE001 - Reddit failure must not block other sources
         reason = f"{type(exc).__name__}: {exc}"
         _log.warning("Reddit RSS incomplete: %s", reason)
         for sid in feeds:
-            await store.mark_coverage(sid, start, end, complete=False)
+            await store.mark_coverage(sid, read_starts[sid], end, complete=False)
         return dict.fromkeys(feeds, reason)

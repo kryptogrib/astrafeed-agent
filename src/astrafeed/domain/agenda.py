@@ -251,6 +251,8 @@ def is_stale(published_at: datetime, now: datetime) -> bool:
 
 
 def queue_reason_retryable(reason: str) -> bool:
+    if reason == "expired":
+        return False
     head, sep, count = reason.rpartition(":")
     return not (sep and head.endswith("_error") and count.isdecimal() and int(count) >= 3)
 

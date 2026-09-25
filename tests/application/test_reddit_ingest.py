@@ -64,7 +64,36 @@ async def test_combined_reddit_feed_keeps_subreddits_as_distinct_sources():
     assert [item.channel_ref for item in found[FEEDS[0]]] == ["r/CryptoCurrency"]
     assert [item.channel_ref for item in found[FEEDS[1]]] == ["r/Bitcoin"]
     for sid in feeds:
-        assert (await store.coverage(sid, NOW - timedelta(days=2), NOW)).complete
+        assert not (await store.coverage(sid, NOW - timedelta(days=2), NOW)).complete
+
+
+@pytest.mark.asyncio
+async def test_new_reddit_sources_store_only_the_last_12_hours():
+    store = InMemoryRepository()
+    feeds = await resolve_reddit_feeds(store, FEEDS)
+    reader = StubReader(
+        [
+            Item(
+                "reddit.com",
+                "old",
+                "Old",
+                "https://www.reddit.com/r/Bitcoin/comments/old",
+                NOW - timedelta(hours=13),
+            ),
+            Item(
+                "reddit.com",
+                "new",
+                "New",
+                "https://www.reddit.com/r/Bitcoin/comments/new",
+                NOW - timedelta(hours=1),
+            ),
+        ]
+    )
+    await collect_reddit_feeds(store, reader, feeds, NOW - timedelta(hours=72), NOW)
+    bitcoin_id = next(sid for sid, name in feeds.items() if name == "Bitcoin")
+    items = await store.read_window(bitcoin_id, NOW - timedelta(hours=72), NOW)
+    assert [item.external_id for item in items] == ["new"]
+    assert await store.get_ingest_watermark(bitcoin_id) == NOW
 
 
 @pytest.mark.asyncio

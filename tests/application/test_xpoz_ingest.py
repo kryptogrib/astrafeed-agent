@@ -34,6 +34,20 @@ class Reader:
 
 
 @pytest.mark.asyncio
+async def test_new_xpoz_account_searches_at_most_12_hours():
+    store = InMemoryRepository()
+    accounts = await resolve_xpoz_accounts(store, ["@WuBlockchain"])
+
+    class RecordingReader(Reader):
+        async def posts_by_author(self, handle, start):
+            assert start == NOW - timedelta(hours=12)
+            return await super().posts_by_author(handle, start)
+
+    await collect_xpoz_accounts(store, RecordingReader(), accounts, NOW - timedelta(hours=48), NOW)
+    assert await store.get_ingest_watermark(next(iter(accounts))) == NOW
+
+
+@pytest.mark.asyncio
 async def test_xpoz_schedule_skips_duplicate_rss_publishers_and_unchanged_accounts():
     store = InMemoryRepository()
     accounts = await resolve_xpoz_accounts(
