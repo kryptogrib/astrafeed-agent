@@ -7,7 +7,7 @@
 # in .env (the misspelled COUDFLARE_TUNNEL_TOKEN is accepted too).
 services:
   tunnel:
-    image: cloudflare/cloudflared:latest
+    image: cloudflare/cloudflared:2026.9.1
     restart: unless-stopped
     command: tunnel --no-autoupdate run
     environment:

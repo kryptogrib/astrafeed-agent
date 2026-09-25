@@ -9,12 +9,12 @@ from collections.abc import Awaitable, Callable, Sequence
 from dataclasses import dataclass, field
 from typing import Any
 
-import instructor
 import openai
 from instructor.core import IncompleteOutputException, InstructorRetryException
 from pydantic import BaseModel, ValidationError, field_validator
 
 from astrafeed.adapters.llm.contracts import SCORE_V7, ScoreContract
+from astrafeed.adapters.llm.instructor_client import wrap_with_instructor
 from astrafeed.adapters.llm.prompts import (
     REPORT_PROMPT_VERSION,
     REPORT_SYSTEM,
@@ -434,26 +434,6 @@ _ASK_FOR_USAGE = {"usage": {"include": True}}
 _DIRECT_JSON_BODY = {**_ASK_FOR_USAGE, "reasoning": {"enabled": False}}
 
 
-def _wrap_with_instructor(client: Any) -> Any:
-    """Wrap the injected async client with Instructor in JSON mode for the
-    cheap-model scoring path, so each batch is parsed and validated through the
-    Pydantic verdict schema as a ``response_model`` instead of hand-parsed JSON.
-
-    A genuine ``openai`` client goes through ``from_openai`` (which detects the
-    provider from its base_url); any other object that merely exposes
-    ``chat.completions.create`` — notably the test transport — is wrapped
-    directly via ``instructor.patch``. Both are real Instructor JSON-mode
-    wrappers; only construction differs, since ``from_openai`` returns ``None``
-    for non-openai clients."""
-    if isinstance(client, openai.OpenAI | openai.AsyncOpenAI):
-        return instructor.from_openai(client, mode=instructor.Mode.JSON)
-    return instructor.AsyncInstructor(
-        client=client,
-        create=instructor.patch(create=client.chat.completions.create, mode=instructor.Mode.JSON),
-        mode=instructor.Mode.JSON,
-    )
-
-
 class OpenRouterLLMClient:
     def __init__(
         self,
@@ -476,7 +456,7 @@ class OpenRouterLLMClient:
         self._client = client
         # Instructor wraps the same injected client for the cheap-model scoring
         # path; compose_report/judge_events keep using the raw client.
-        self._scorer = _wrap_with_instructor(client)
+        self._scorer = wrap_with_instructor(client)
         self._model = model
         self._strong_model = strong_model or model
         self._log = cost_logger

@@ -636,6 +636,7 @@ class CycleState:
     budget_blocked: bool = False
     queue_depth: int = 0
     first_collect_done: bool = False
+    source_health: dict[str, str] = field(default_factory=dict)
 
 
 @dataclass(frozen=True)

@@ -16,6 +16,7 @@ from openai import AsyncOpenAI
 from sqlalchemy.exc import OperationalError
 from sqlalchemy.ext.asyncio import async_sessionmaker, create_async_engine
 from telethon import TelegramClient
+from telethon.errors import AuthKeyError
 from telethon.sessions import StringSession
 from xpoz import AsyncXpozClient
 
@@ -32,18 +33,11 @@ from astrafeed.adapters.llm.agenda import (
 from astrafeed.adapters.llm.budgeted_client import BudgetedClient
 from astrafeed.adapters.llm.openrouter import OpenRouterLLMClient
 from astrafeed.adapters.llm.stub import StubLLMClient
-from astrafeed.adapters.repository.sqlite.agenda import (
-    SqliteAgendaStore,
-    drop_unused_search_index,
-    migrate_agenda_index_tables,
-)
-from astrafeed.adapters.repository.sqlite.ingestion import SqliteIngestionStore, migrate_rss_sources
-from astrafeed.adapters.repository.sqlite.models import Base
+from astrafeed.adapters.repository.sqlite.agenda import SqliteAgendaStore
+from astrafeed.adapters.repository.sqlite.ingestion import SqliteIngestionStore
 from astrafeed.adapters.repository.sqlite.pulse import SqliteCommentStore
-from astrafeed.adapters.repository.sqlite.spend_budget import (
-    SqliteSpendBudget,
-    migrate_spend_reservations,
-)
+from astrafeed.adapters.repository.sqlite.schema import migrate_schema
+from astrafeed.adapters.repository.sqlite.spend_budget import SqliteSpendBudget
 from astrafeed.adapters.repository.sqlite.xpoz import SqliteXpozThreads
 from astrafeed.adapters.source.fake import FakeSource
 from astrafeed.adapters.source.rss import RssReader
@@ -147,27 +141,19 @@ def _window(value: str) -> timedelta:
     return timedelta(hours=amount if unit == "h" else amount * 24)
 
 
-def _create_missing_indexes(sync_connection) -> None:
-    for table in Base.metadata.sorted_tables:
-        for index in table.indexes:
-            index.create(sync_connection, checkfirst=True)
-
-
 async def _storage(cfg: Settings):
     sqlite = cfg.database_url.startswith("sqlite+")
     engine = create_async_engine(
         cfg.database_url,
         connect_args={"timeout": 30} if sqlite else {},
     )
-    async with engine.begin() as conn:
-        await conn.run_sync(Base.metadata.create_all)
-        if sqlite:
-            await migrate_rss_sources(conn)
-            await migrate_spend_reservations(conn)
-            await migrate_agenda_index_tables(conn)
-            await drop_unused_search_index(conn)
-            # create_all skips indexes of tables that already exist.
-            await conn.run_sync(_create_missing_indexes)
+    if sqlite:
+        await migrate_schema(engine)
+    else:
+        from astrafeed.adapters.repository.sqlite.models import Base
+
+        async with engine.begin() as conn:
+            await conn.run_sync(Base.metadata.create_all)
     if sqlite:
         # Separate connection: SQLite refuses to change the journal mode inside
         # a transaction that has already written (the migrations above may).
@@ -180,7 +166,9 @@ def _llm(cfg: Settings, session, *, stub: bool = False):
     if stub:
         return StubLLMClient()
     budget = SqliteSpendBudget(session, daily_limit=cfg.llm_daily_budget_usd)
-    openai = AsyncOpenAI(api_key=cfg.openrouter.api_key, base_url=cfg.openrouter.base_url)
+    openai = AsyncOpenAI(
+        api_key=cfg.openrouter.api_key, base_url=cfg.openrouter.base_url, timeout=600
+    )
     client = BudgetedClient(
         openai,
         store=budget,
@@ -217,9 +205,21 @@ async def _ensure_connected(client: TelegramClient) -> None:
             await client.connect()
         except asyncio.CancelledError:
             raise
+        except AuthKeyError:
+            raise
         except Exception:
             _log.exception("Telegram connection failed; retrying in 5 seconds")
             await asyncio.sleep(5)
+
+
+def _source_failure_status(error: Exception) -> str:
+    return "auth_key_revoked" if isinstance(error, AuthKeyError) else "unavailable"
+
+
+async def _record_source_health(agenda: SqliteAgendaStore, source: str, status: str) -> None:
+    state = await agenda.get_cycle_state()
+    state.source_health[source] = status
+    await agenda.set_cycle_state(state)
 
 
 async def _brief(args: argparse.Namespace) -> None:
@@ -356,30 +356,52 @@ async def _agenda_poll(
                         source_ids = await _resolve_union(
                             coordinator, [*cfg.channels, *cfg.news_channels]
                         )
+                    await _record_source_health(
+                        agenda, "telegram", "ok" if source_ids else "unavailable"
+                    )
+                except AuthKeyError as exc:
+                    await _record_source_health(agenda, "telegram", _source_failure_status(exc))
+                    _log.error(
+                        "agenda Telegram session is no longer authorized: %s", type(exc).__name__
+                    )
                 except Exception as exc:
+                    await _record_source_health(agenda, "telegram", _source_failure_status(exc))
                     _log.warning("agenda Telegram source resolution failed: %s", type(exc).__name__)
             try:
                 rss_feeds = await resolve_feeds(posts, cfg.rss_feeds)
                 source_ids.extend(rss_feeds)
+                if cfg.rss_feeds:
+                    await _record_source_health(agenda, "rss", "ok" if rss_feeds else "unavailable")
             except Exception as exc:
+                await _record_source_health(agenda, "rss", _source_failure_status(exc))
                 _log.error("agenda RSS source resolution failed: %s", type(exc).__name__)
                 rss_feeds = {}
             try:
                 reddit_feeds = await resolve_reddit_feeds(posts, cfg.reddit_feeds)
                 source_ids.extend(reddit_feeds)
+                if cfg.reddit_feeds:
+                    await _record_source_health(
+                        agenda, "reddit", "ok" if reddit_feeds else "unavailable"
+                    )
             except Exception as exc:
+                await _record_source_health(agenda, "reddit", _source_failure_status(exc))
                 _log.error("agenda Reddit source resolution failed: %s", type(exc).__name__)
                 reddit_feeds = {}
             if cfg.xpoz_accounts:
-                try:
-                    xpoz_accounts = await resolve_xpoz_accounts(posts, cfg.xpoz_accounts)
-                    source_ids.extend(xpoz_accounts)
-                    xpoz_search_id = await resolve_xpoz_search(posts)
-                    source_ids.append(xpoz_search_id)
-                except Exception as exc:
-                    _log.error("agenda Xpoz source resolution failed: %s", type(exc).__name__)
-                    xpoz_accounts = {}
-                    xpoz_search_id = None
+                if xpoz_reader is None:
+                    await _record_source_health(agenda, "xpoz", "unavailable")
+                else:
+                    try:
+                        xpoz_accounts = await resolve_xpoz_accounts(posts, cfg.xpoz_accounts)
+                        source_ids.extend(xpoz_accounts)
+                        xpoz_search_id = await resolve_xpoz_search(posts)
+                        source_ids.append(xpoz_search_id)
+                        await _record_source_health(agenda, "xpoz", "ok")
+                    except Exception as exc:
+                        await _record_source_health(agenda, "xpoz", _source_failure_status(exc))
+                        _log.error("agenda Xpoz source resolution failed: %s", type(exc).__name__)
+                        xpoz_accounts = {}
+                        xpoz_search_id = None
             if not source_ids:
                 cycle_state.last_error = "source_unavailable"
                 cycle_state.phase = "idle"
@@ -550,7 +572,9 @@ async def _finalize_poll_task(poll_task: asyncio.Task[None]) -> None:
 
 def _agenda_llm(cfg: Settings, session):
     budget = SqliteSpendBudget(session, daily_limit=cfg.llm_daily_budget_usd)
-    openai = AsyncOpenAI(api_key=cfg.openrouter.api_key, base_url=cfg.openrouter.base_url)
+    openai = AsyncOpenAI(
+        api_key=cfg.openrouter.api_key, base_url=cfg.openrouter.base_url, timeout=600
+    )
     client = BudgetedClient(
         openai,
         store=budget,

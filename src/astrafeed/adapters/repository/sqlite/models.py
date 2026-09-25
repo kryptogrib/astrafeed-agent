@@ -140,6 +140,13 @@ class AgendaJsonRow(Base):
     payload: Mapped[str]
 
 
+class AgendaEntityTokenRow(Base):
+    __tablename__ = "agenda_entity_token"
+    __table_args__ = (Index("ix_agenda_entity_token_token", "token"),)
+    entity_id: Mapped[str] = mapped_column(String, primary_key=True)
+    token: Mapped[str] = mapped_column(String, primary_key=True)
+
+
 class AgendaLinkRow(Base):
     __tablename__ = "agenda_link"
     link_key: Mapped[str] = mapped_column(String, primary_key=True)

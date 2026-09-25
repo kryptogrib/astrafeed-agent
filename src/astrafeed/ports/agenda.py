@@ -116,6 +116,13 @@ class AgendaStore(Protocol):
         self, predicate: Callable[[Entity], bool] | None = None
     ) -> list[Entity]: ...
 
+    async def entities_matching(
+        self,
+        entity_ids: set[str],
+        terms: set[str],
+        predicate: Callable[[Entity], bool] | None = None,
+    ) -> list[Entity]: ...
+
     async def entity_count(self) -> int: ...
 
     async def save_story(self, story: Story) -> None: ...

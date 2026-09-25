@@ -4,9 +4,12 @@ from datetime import UTC, datetime, timedelta
 from types import SimpleNamespace
 
 import pytest
+from sqlalchemy.ext.asyncio import async_sessionmaker, create_async_engine
 
 from astrafeed.adapters.llm.agenda import Assignment
 from astrafeed.adapters.repository.memory_agenda import InMemoryAgendaStore
+from astrafeed.adapters.repository.sqlite.agenda import SqliteAgendaStore
+from astrafeed.adapters.repository.sqlite.models import Base
 from astrafeed.application.agenda_cycle import (
     _coverage_states,
     _partial_is_publishable,
@@ -14,6 +17,7 @@ from astrafeed.application.agenda_cycle import (
     restore_useful_snapshot,
     run_cycle,
 )
+from astrafeed.application.agenda_query import agenda_payload
 from astrafeed.application.agenda_snapshot import build_snapshot
 from astrafeed.domain.agenda import (
     CLASSIFIER_VERSION,
@@ -292,6 +296,53 @@ async def test_cycle_publishes_snapshot_and_restart_does_not_duplicate():
     assert reanalysis is not None
     assert reanalysis.snapshot_id != again.snapshot_id
     assert await store.get_snapshot(again.snapshot_id) == again
+
+
+@pytest.mark.asyncio
+async def test_real_sqlite_cycle_publishes_once_and_old_snapshot_cursor_degrades_gracefully(
+    tmp_path,
+):
+    engine = create_async_engine(f"sqlite+aiosqlite:///{tmp_path / 'cycle.db'}")
+    async with engine.begin() as conn:
+        await conn.run_sync(Base.metadata.create_all)
+    store = SqliteAgendaStore(async_sessionmaker(engine, expire_on_commit=False))
+    t = datetime(2026, 9, 24, 12, tzinfo=UTC)
+    reader = Reader(
+        {
+            1: [_item("@a", "1", "Отток ETH ETF 120 млн сегодня.", t - timedelta(hours=3))],
+            2: [_item("@b", "2", "BlackRock: отток ETH ETF 120 млн.", t - timedelta(hours=2))],
+        }
+    )
+    try:
+        first = await run_cycle(
+            store,
+            reader=reader,
+            source_ids=[1, 2],
+            extractor=Extractor(),
+            embedder=Embedder(),
+            assigner=Assigner(),
+            now=t,
+        )
+        assert first is not None and first.agenda
+        for _ in range(2):
+            await run_cycle(
+                store,
+                reader=reader,
+                source_ids=[1, 2],
+                extractor=Extractor(),
+                embedder=Embedder(),
+                assigner=Assigner(),
+                now=t + timedelta(days=3),
+            )
+        latest = await store.get_snapshot(None)
+        assert latest is not None
+        delta = await agenda_payload(
+            store, snapshot_id=None, since_snapshot_id=first.snapshot_id, now=t + timedelta(days=3)
+        )
+        assert delta["comparison_status"] == "baseline_unavailable"
+        assert delta["response_mode"] == "full"
+    finally:
+        await engine.dispose()
 
 
 @pytest.mark.asyncio
@@ -655,6 +706,30 @@ async def test_health_redacts_legacy_persisted_provider_error():
 
     assert payload["cycle"]["last_error"] == "analysis_error"
     assert "SECRET_POST_CONTENT" not in str(payload)
+
+
+@pytest.mark.asyncio
+async def test_health_is_degraded_when_telegram_fails_and_rss_succeeds():
+    now = datetime(2026, 9, 24, 12, tzinfo=UTC)
+
+    class HealthStore:
+        async def get_cycle_state(self):
+            from astrafeed.domain.agenda import CycleState
+
+            return CycleState(source_health={"telegram": "auth_key_revoked", "rss": "ok"})
+
+        async def published_snapshot_meta(self):
+            return "snap", now, now
+
+        async def queue_depth(self):
+            return 0
+
+        async def queue_stopped(self):
+            return 0
+
+    payload = await cycle_health(HealthStore(), now=now, commit="test")
+    assert payload["status"] == "degraded"
+    assert payload["cycle"]["sources"] == {"telegram": "auth_key_revoked", "rss": "ok"}
 
 
 @pytest.mark.asyncio

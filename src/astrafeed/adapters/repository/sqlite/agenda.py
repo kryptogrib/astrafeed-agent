@@ -13,6 +13,7 @@ from sqlalchemy import (
     Integer,
     bindparam,
     delete,
+    exists,
     func,
     insert,
     literal_column,
@@ -24,6 +25,7 @@ from sqlalchemy.ext.asyncio import AsyncConnection, async_sessionmaker
 
 from astrafeed.adapters.repository.sqlite.models import (
     AgendaCycleRow,
+    AgendaEntityTokenRow,
     AgendaFragmentRow,
     AgendaJsonRow,
     AgendaLinkRow,
@@ -63,6 +65,7 @@ from astrafeed.domain.agenda import (
     StoryDetail,
     StoryLink,
     StorySignals,
+    lexical_tokens,
 )
 
 _TYPES = {
@@ -143,6 +146,33 @@ def loads(raw: str) -> Any:
 
 # SQLite's default bound-parameter limit is 999 on older builds.
 _IN_CHUNK = 500
+
+
+async def migrate_agenda_entity_tokens(connection: AsyncConnection) -> None:
+    """Backfill the searchable entity-name index in bounded keyset pages."""
+    while True:
+        missing = (
+            select(AgendaJsonRow.item_id, AgendaJsonRow.payload)
+            .where(
+                AgendaJsonRow.kind == "entity",
+                ~exists(
+                    select(AgendaEntityTokenRow.entity_id).where(
+                        AgendaEntityTokenRow.entity_id == AgendaJsonRow.item_id
+                    )
+                ),
+            )
+            .order_by(AgendaJsonRow.item_id)
+            .limit(500)
+        )
+        rows = (await connection.execute(missing)).all()
+        if not rows:
+            return
+        token_rows: list[dict[str, str]] = []
+        for entity_id, payload in rows:
+            entity = loads(payload)
+            tokens = lexical_tokens(entity.canonical_name, *entity.aliases) or {""}
+            token_rows.extend({"entity_id": entity_id, "token": token} for token in tokens)
+        await connection.execute(insert(AgendaEntityTokenRow), token_rows)
 
 
 def _retryable_clause():
@@ -485,7 +515,22 @@ class SqliteAgendaStore:
         await self._put_json("evidence", key, supported)
 
     async def save_entity(self, entity: Entity) -> None:
-        await self._put_json("entity", entity.entity_id, entity)
+        async with self._write_lock, self._session() as session, session.begin():
+            row = await session.get(AgendaJsonRow, ("entity", entity.entity_id))
+            payload = dumps(entity)
+            if row is None:
+                session.add(AgendaJsonRow(kind="entity", item_id=entity.entity_id, payload=payload))
+            else:
+                row.payload = payload
+            await session.execute(
+                delete(AgendaEntityTokenRow).where(
+                    AgendaEntityTokenRow.entity_id == entity.entity_id
+                )
+            )
+            tokens = lexical_tokens(entity.canonical_name, *entity.aliases) or {""}
+            session.add_all(
+                AgendaEntityTokenRow(entity_id=entity.entity_id, token=token) for token in tokens
+            )
 
     async def list_entities(
         self, predicate: Callable[[Entity], bool] | None = None
@@ -502,6 +547,28 @@ class SqliteAgendaStore:
                 if predicate(entity):
                     selected.append(entity)
         return selected
+
+    async def entities_matching(
+        self,
+        entity_ids: set[str],
+        terms: set[str],
+        predicate: Callable[[Entity], bool] | None = None,
+    ) -> list[Entity]:
+        normalized = sorted(term.casefold() for term in terms if term)
+        candidate_ids = set(entity_ids)
+        async with self._session() as session:
+            for offset in range(0, len(normalized), _IN_CHUNK):
+                chunk = normalized[offset : offset + _IN_CHUNK]
+                if chunk:
+                    candidate_ids.update(
+                        await session.scalars(
+                            select(AgendaEntityTokenRow.entity_id).where(
+                                AgendaEntityTokenRow.token.in_(chunk)
+                            )
+                        )
+                    )
+        entities = await self._list_json_ids("entity", candidate_ids)
+        return [entity for entity in entities if predicate is None or predicate(entity)]
 
     async def entity_count(self) -> int:
         async with self._session() as session:

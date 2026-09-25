@@ -39,7 +39,7 @@ def test_assignment_payload_keeps_evidence_but_omits_embedding_vectors():
 
 @pytest.mark.asyncio
 async def test_agenda_chat_calls_disable_hidden_reasoning(monkeypatch):
-    monkeypatch.setattr(agenda_llm, "_wrap_with_instructor", lambda client: client)
+    monkeypatch.setattr(agenda_llm, "wrap_with_instructor", lambda client: client)
     extraction_call = AsyncMock(return_value=agenda_llm.ExtractionSchema())
     assignment_call = AsyncMock(
         return_value=agenda_llm.AssignmentSchema(story_decision="ambiguous")
@@ -63,7 +63,7 @@ async def test_agenda_chat_calls_disable_hidden_reasoning(monkeypatch):
 
 @pytest.mark.asyncio
 async def test_agenda_chat_calls_are_deterministic_and_fence_the_post(monkeypatch):
-    monkeypatch.setattr(agenda_llm, "_wrap_with_instructor", lambda client: client)
+    monkeypatch.setattr(agenda_llm, "wrap_with_instructor", lambda client: client)
     extraction_call = AsyncMock(return_value=agenda_llm.ExtractionSchema())
     assignment_call = AsyncMock(
         return_value=agenda_llm.AssignmentSchema(story_decision="ambiguous")

@@ -8,6 +8,7 @@ license = "Apache-2.0"
 license-files = ["LICENSE", "NOTICE"]
 dependencies = [
     "aiosqlite>=0.22.1",
+    "defusedxml>=0.7.1",
     "fastapi>=0.136.3",
     "httpx>=0.28.1",
     "instructor>=1.15.1",

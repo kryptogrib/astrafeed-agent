@@ -349,6 +349,35 @@ async def test_backfill_reuses_historic_story_id_without_resetting_first_seen():
 
 
 @pytest.mark.asyncio
+async def test_strict_assignment_builds_and_uses_candidate_index(monkeypatch):
+    from astrafeed.adapters.llm.agenda import Assignment
+
+    indexed = []
+    real_index = agenda_assign.CandidateIndex
+
+    class TrackedIndex(real_index):
+        def __init__(self, items):
+            indexed.append(tuple(items))
+            super().__init__(items)
+
+    monkeypatch.setattr(agenda_assign, "CandidateIndex", TrackedIndex)
+    store = InMemoryAgendaStore()
+    text = "Отток ETH ETF сегодня"
+    publication = _pub(text, 1, "strict", "@a", datetime(2026, 9, 24, 12, tzinfo=UTC))
+    await store.record_publication(publication)
+    await assign_speculative_batch(
+        store,
+        Embedder({embedding_input(text, ["ETH"]): [1.0, 0.0]}),
+        Assigner(
+            lambda **_: Assignment((), "new", None, "Потоки ETH ETF", "ETH", "separate", None)
+        ),
+        [(publication, _event_result(text, text, "ETH"))],
+        strict=True,
+    )
+    assert indexed
+
+
+@pytest.mark.asyncio
 async def test_independent_same_time_assignments_overlap():
     from astrafeed.adapters.llm.agenda import Assignment
 

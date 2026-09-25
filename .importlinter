@@ -27,3 +27,26 @@ source_modules =
 forbidden_modules =
     astrafeed.application.agenda_cycle
     astrafeed.adapters.llm
+
+[importlinter:contract:agenda-legacy-isolation]
+name = Agenda, domain, ports and HTTP do not import the legacy engine
+type = forbidden
+source_modules =
+    astrafeed.application.agenda_assign
+    astrafeed.application.agenda_changes
+    astrafeed.application.agenda_cycle
+    astrafeed.application.agenda_discussion
+    astrafeed.application.agenda_extract
+    astrafeed.application.agenda_localize
+    astrafeed.application.agenda_markdown
+    astrafeed.application.agenda_query
+    astrafeed.application.agenda_signals
+    astrafeed.application.agenda_snapshot
+    astrafeed.application.agenda_text
+    astrafeed.domain
+    astrafeed.ports.agenda
+    astrafeed.adapters.http
+forbidden_modules =
+    astrafeed.report
+    astrafeed.pipeline
+    astrafeed.prefilter

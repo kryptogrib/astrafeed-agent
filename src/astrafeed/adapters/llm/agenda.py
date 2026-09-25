@@ -9,7 +9,7 @@ from typing import Any, Literal
 
 from pydantic import BaseModel, Field
 
-from astrafeed.adapters.llm.openrouter import _wrap_with_instructor
+from astrafeed.adapters.llm.instructor_client import wrap_with_instructor
 from astrafeed.domain.agenda import (
     CLASSIFIER_VERSION,
     EMBEDDING_MODEL,
@@ -305,7 +305,7 @@ def _shorten(value: str, limit: int) -> str:
 
 class OpenRouterExtractor:
     def __init__(self, client: object, model: str) -> None:
-        self._client = _wrap_with_instructor(client)
+        self._client = wrap_with_instructor(client)
         self._model = model
 
     async def extract(self, text: str) -> ExtractionResult:
@@ -327,7 +327,7 @@ class OpenRouterExtractor:
 
 class OpenRouterAssigner:
     def __init__(self, client: object, model: str) -> None:
-        self._client = _wrap_with_instructor(client)
+        self._client = wrap_with_instructor(client)
         self._model = model
 
     async def assign(self, **kwargs: object) -> Assignment:
@@ -347,7 +347,7 @@ class OpenRouterAssigner:
 
 class OpenRouterEvidenceVerifier:
     def __init__(self, client: object, model: str) -> None:
-        self._client = _wrap_with_instructor(client)
+        self._client = wrap_with_instructor(client)
         self._model = model
 
     async def verify(self, story: Story, quotes: Sequence[str]) -> list[bool]:
@@ -382,7 +382,7 @@ class OpenRouterEvidenceVerifier:
 
 class OpenRouterDiscussionSummarizer:
     def __init__(self, client: object, model: str) -> None:
-        self._client = _wrap_with_instructor(client)
+        self._client = wrap_with_instructor(client)
         self._model = model
 
     async def summarize(
@@ -440,7 +440,7 @@ texts: one item per input with the same "i" and the English translation "en".
 
 class OpenRouterTranslator:
     def __init__(self, client: object, model: str) -> None:
-        self._client = _wrap_with_instructor(client)
+        self._client = wrap_with_instructor(client)
         self._model = model
 
     async def to_english(self, texts: Sequence[str]) -> list[str]:

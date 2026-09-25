@@ -28,6 +28,7 @@ from astrafeed.domain.agenda import (
     comparable_channel_ids,
     decide_growth,
     in_window,
+    lexical_tokens,
     numbers_are_grounded,
     select_agenda,
     windows_at,
@@ -377,7 +378,9 @@ async def build_snapshot(
     key_entities = {story.key_entity.casefold() for story in stories.values() if story.key_entity}
     entities = {
         entity.entity_id: entity
-        for entity in await store.list_entities(
+        for entity in await store.entities_matching(
+            entity_ids,
+            lexical_tokens(*titles, *key_entities),
             lambda entity: (
                 entity.entity_id in entity_ids
                 or entity.canonical_name.casefold() in key_entities
@@ -386,7 +389,7 @@ async def build_snapshot(
                     for title in titles
                     for name in (entity.canonical_name, *entity.aliases)
                 )
-            )
+            ),
         )
     }
     has_any_entities = bool(await store.entity_count())

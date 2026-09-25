@@ -6,7 +6,11 @@ import re
 from datetime import datetime, timedelta
 
 from astrafeed.application.agenda_changes import compare_snapshots
-from astrafeed.application.agenda_markdown import render_agenda_md, render_story_md
+from astrafeed.application.agenda_markdown import (
+    render_agenda_md,
+    render_search_md,
+    render_story_md,
+)
 from astrafeed.application.agenda_text import source_group
 from astrafeed.domain.agenda import (
     SEARCH_DEFAULT_LIMIT,
@@ -445,9 +449,7 @@ async def search_payload(
         }
         for hit in hits
     ]
-    payload["brief_markdown"] = "\n".join(f"- {hit.title} (`{hit.story_id}`)" for hit in hits) + (
-        "\n" if hits else "No matching stories.\n"
-    )
+    payload["brief_markdown"] = render_search_md(payload)
     return payload
 
 
@@ -459,7 +461,12 @@ async def health_payload(store: AgendaStore, *, now: datetime, commit: str) -> d
     last_full_success_at = state.last_full_success_at or state.last_success_at
     if snapshot is None:
         status = "preparing"
-    elif state.budget_blocked or state.last_error or is_stale(snapshot[2], now):
+    elif (
+        state.budget_blocked
+        or state.last_error
+        or any(status != "ok" for status in state.source_health.values())
+        or is_stale(snapshot[2], now)
+    ):
         status = "degraded"
     else:
         status = "ok"
@@ -477,6 +484,7 @@ async def health_payload(store: AgendaStore, *, now: datetime, commit: str) -> d
             ),
             "queue_depth": queue_depth,
             "queue_stopped": queue_stopped,
+            "sources": dict(state.source_health),
         },
         "last_snapshot": None
         if snapshot is None

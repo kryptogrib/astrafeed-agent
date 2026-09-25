@@ -6,11 +6,13 @@ from datetime import UTC, datetime, timedelta
 from decimal import ROUND_CEILING, Decimal
 from uuid import uuid4
 
-from sqlalchemy import and_, case, func, or_, select, text
+from sqlalchemy import and_, case, func, or_, select, text, update
 from sqlalchemy.ext.asyncio import AsyncConnection, async_sessionmaker
 
 from astrafeed.adapters.repository.sqlite.models import SpendReservationRow
 from astrafeed.domain.spend_budget import BudgetExceeded
+
+UNKNOWN_RESERVATION_TTL = timedelta(minutes=15)
 
 
 def _micros(amount: float) -> int:
@@ -55,6 +57,18 @@ class SqliteSpendBudget:
         async with self._lock, self._session() as session:
             # Serialize the read/check/write across workers and processes.
             await session.execute(text("BEGIN IMMEDIATE"))
+            await session.execute(
+                update(SpendReservationRow)
+                .where(
+                    SpendReservationRow.day == day,
+                    SpendReservationRow.settled.is_(False),
+                    SpendReservationRow.amount_micros > 0,
+                    SpendReservationRow.created_at.is_not(None),
+                    SpendReservationRow.created_at
+                    <= self._clock().astimezone(UTC) - UNKNOWN_RESERVATION_TTL,
+                )
+                .values(amount_micros=0, outcome="released_unknown")
+            )
             used = await session.scalar(
                 select(func.coalesce(func.sum(SpendReservationRow.amount_micros), 0)).where(
                     SpendReservationRow.day == day,
@@ -126,6 +140,7 @@ class SqliteSpendBudget:
                         total(and_(unsettled, row.outcome == "timeout"), 1),
                         total(and_(unsettled, row.outcome.in_(["error", "cancelled"])), 1),
                         total(and_(unsettled, row.outcome == "missing_usage"), 1),
+                        total(and_(unsettled, row.outcome == "released_unknown"), 1),
                         total(
                             and_(
                                 unsettled,
@@ -148,6 +163,7 @@ class SqliteSpendBudget:
             "timed_out_count": int(values[3]),
             "failed_count": int(values[4]),
             "missing_usage_count": int(values[5]),
-            "stale_or_restart_count": int(values[6]),
-            "legacy_unknown_count": int(values[7]),
+            "released_unknown_count": int(values[6]),
+            "stale_or_restart_count": int(values[7]),
+            "legacy_unknown_count": int(values[8]),
         }

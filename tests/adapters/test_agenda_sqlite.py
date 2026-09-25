@@ -438,6 +438,27 @@ async def test_links_and_fragments_are_read_by_index_after_legacy_json_migration
 
 
 @pytest.mark.asyncio
+async def test_entity_lookup_decodes_only_sql_index_candidates(tmp_path):
+    engine = create_async_engine(f"sqlite+aiosqlite:///{tmp_path / 'entity-index.db'}")
+    async with engine.begin() as conn:
+        await conn.run_sync(Base.metadata.create_all)
+    store = SqliteAgendaStore(async_sessionmaker(engine, expire_on_commit=False))
+    try:
+        target = Entity("eth", "Ethereum", aliases=("ETH",))
+        await store.save_entity(target)
+        async with engine.begin() as conn:
+            await conn.exec_driver_sql(
+                "INSERT INTO agenda_json (kind, item_id, payload) VALUES ('entity', 'broken', '{')"
+            )
+        found = await store.entities_matching(
+            entity_ids=set(), terms={"ethereum"}, predicate=lambda item: item.entity_id == "eth"
+        )
+        assert found == [target]
+    finally:
+        await engine.dispose()
+
+
+@pytest.mark.asyncio
 async def test_legacy_index_migration_processes_multiple_pages_and_can_repeat(tmp_path):
     engine = create_async_engine(f"sqlite+aiosqlite:///{tmp_path / 'pages.db'}")
     t = datetime(2026, 9, 25, tzinfo=UTC)

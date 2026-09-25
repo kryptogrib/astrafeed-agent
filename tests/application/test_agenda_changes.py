@@ -152,7 +152,7 @@ async def test_new_caveat_drop_is_reported_to_polling_agent():
     change = result["changes"]["updated_stories"][0]
     assert change["caveat_drop"]["before"] is None
     assert change["caveat_drop"]["after"]["after_link"] == "https://t.me/beta/20"
-    assert "qualifier-drop signal changed" in result["brief_markdown"]
+    assert r"qualifier\-drop signal changed" in result["brief_markdown"]
 
 
 async def test_translation_title_order_and_freshness_do_not_create_news():

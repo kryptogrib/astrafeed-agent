@@ -13,6 +13,7 @@ from astrafeed.domain.agenda import (
     Snapshot,
     Story,
     StoryLink,
+    lexical_tokens,
 )
 
 
@@ -175,6 +176,23 @@ class InMemoryAgendaStore:
     ) -> list[Entity]:
         return [
             entity for entity in self._entities.values() if predicate is None or predicate(entity)
+        ]
+
+    async def entities_matching(
+        self,
+        entity_ids: set[str],
+        terms: set[str],
+        predicate: Callable[[Entity], bool] | None = None,
+    ) -> list[Entity]:
+        normalized = {term.casefold() for term in terms}
+        return [
+            entity
+            for entity in self._entities.values()
+            if (
+                entity.entity_id in entity_ids
+                or bool(normalized & lexical_tokens(entity.canonical_name, *entity.aliases))
+            )
+            and (predicate is None or predicate(entity))
         ]
 
     async def entity_count(self) -> int:

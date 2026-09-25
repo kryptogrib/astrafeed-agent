@@ -1,5 +1,5 @@
 import asyncio
-from datetime import UTC, datetime
+from datetime import UTC, datetime, timedelta
 
 import pytest
 from sqlalchemy import event
@@ -70,6 +70,30 @@ async def test_summary_separates_active_timeout_and_old_reservations(tmp_path):
 
 
 @pytest.mark.asyncio
+async def test_expired_unknown_reservations_are_released_after_fifteen_minutes(tmp_path):
+    moment = [datetime(2026, 9, 24, 12, tzinfo=UTC)]
+    engine = create_async_engine(f"sqlite+aiosqlite:///{tmp_path / 'expiry.db'}")
+    async with engine.begin() as conn:
+        await conn.run_sync(Base.metadata.create_all)
+    session = async_sessionmaker(engine, expire_on_commit=False)
+    budget = SqliteSpendBudget(session, daily_limit=1.0, clock=lambda: moment[0])
+    try:
+        failed = await budget.reserve(0, 0.5)
+        await budget.fail(failed, "cancelled")
+        moment[0] += timedelta(minutes=16)
+        active = await budget.reserve(0, 0.5)
+        await budget.reserve(0, 0.5)
+        with pytest.raises(BudgetExceeded):
+            await budget.reserve(0, 0.01)
+        summary = await budget.summary()
+        assert summary["released_unknown_count"] == 1
+        assert summary["unsettled_usd"] == 1.0
+        assert active != failed
+    finally:
+        await engine.dispose()
+
+
+@pytest.mark.asyncio
 async def test_existing_reservations_migrate_as_unknown_without_clearing_charge(tmp_path):
     engine = create_async_engine(f"sqlite+aiosqlite:///{tmp_path / 'legacy.db'}")
     try:
@@ -127,6 +151,7 @@ async def test_summary_aggregates_all_outcomes_in_one_sql_result(tmp_path):
             "timed_out_count": 1,
             "failed_count": 2,
             "missing_usage_count": 1,
+            "released_unknown_count": 0,
             "stale_or_restart_count": 2,
             "legacy_unknown_count": 1,
         }

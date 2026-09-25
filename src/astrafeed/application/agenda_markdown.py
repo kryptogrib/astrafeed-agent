@@ -2,6 +2,8 @@
 
 from __future__ import annotations
 
+from urllib.parse import quote, urlsplit
+
 from astrafeed.application.agenda_changes import comparison_lines
 from astrafeed.application.agenda_text import (
     AGENDA_LEAD,
@@ -24,8 +26,31 @@ from astrafeed.application.agenda_text import (
 )
 
 
+def _md_text(value: object) -> str:
+    """Escape untrusted source text before placing it in Markdown prose."""
+    text = str(value).replace("\r", " ").replace("\n", " ")
+    for char in "\\`*_{}[]()#+-.!|<>":
+        text = text.replace(char, "\\" + char)
+    return text
+
+
+def _md_url(value: object) -> str:
+    url = str(value)
+    try:
+        if urlsplit(url).scheme.lower() not in {"http", "https"}:
+            return "#"
+    except ValueError:
+        return "#"
+    return quote(url, safe=":/?#@!$&'*+,;=%")
+
+
 def _md_quote(item: dict) -> list[str]:
-    return ["", f"> “{english_text(item)}” — [{item['channel']}]({item['link']})"]
+    channel = _md_text(item["channel"])
+    url = _md_url(item["link"])
+    return [
+        "",
+        f"> “{_md_text(english_text(item))}” — [{channel}](<{url}>)",
+    ]
 
 
 def _md_card_head(card: dict, heading: str) -> list[str]:
@@ -33,21 +58,27 @@ def _md_card_head(card: dict, heading: str) -> list[str]:
         heading,
         "",
         f"**{count_text(card)}** · {growth_text(card)}  ",
-        meta_text(card),
+        _md_text(meta_text(card)),
         "",
-        card["explanation"],
+        _md_text(card["explanation"]),
     ]
     signal_lines = evidence_lines(card)
     if signal_lines:
-        lines += [""] + [f"{line}  " for line in signal_lines]
+        lines += [""] + [f"{_md_text(line)}  " for line in signal_lines]
     caveat = (card.get("signals") or {}).get("caveat_drop")
     if caveat:
         lines += [
             "",
             "⚠️ **Qualifier dropped in later wording** "
             f"(+{duration_text(caveat['minutes_later'])}):",
-            f"- [{caveat['before_channel']}]({caveat['before_link']}): “{caveat['before_quote']}”",
-            f"- [{caveat['after_channel']}]({caveat['after_link']}): “{caveat['after_quote']}”",
+            (
+                f"- [{_md_text(caveat['before_channel'])}]"
+                f"(<{_md_url(caveat['before_link'])}>): “{_md_text(caveat['before_quote'])}”"
+            ),
+            (
+                f"- [{_md_text(caveat['after_channel'])}]"
+                f"(<{_md_url(caveat['after_link'])}>): “{_md_text(caveat['after_quote'])}”"
+            ),
         ]
     channels = channel_links(card)
     if channels:
@@ -55,7 +86,7 @@ def _md_card_head(card: dict, heading: str) -> list[str]:
             "",
             "Covered by: "
             + " · ".join(
-                f"[{name}]({link})" + (f" ({note})" if note else "")
+                f"[{_md_text(name)}](<{_md_url(link)}>)" + (f" ({_md_text(note)})" if note else "")
                 for name, link, note in channels
             ),
         ]
@@ -74,14 +105,16 @@ def _md_discussion(card: dict, *, full: bool) -> list[str]:
         f"💬 **From reader comments** ({discussion['comment_count']} comments, unverified):",
     ]
     # Snapshots published before facts-only comments carry opinion points.
-    lines += [f"- {point}" for point in discussion["points"]]
+    lines += [f"- {_md_text(point)}" for point in discussion["points"]]
     for fact, comment in facts:
         source = (
-            f" — [comments under {comment['channel']} post]({comment['link']})" if comment else ""
+            f" — [comments under {_md_text(comment['channel'])} post](<{_md_url(comment['link'])}>)"
+            if comment
+            else ""
         )
-        lines.append(f"- {fact}{source}")
+        lines.append(f"- {_md_text(fact)}{source}")
         if full and comment:
-            lines.append(f"  > “{english_text(comment, 'text')}”")
+            lines.append(f"  > “{_md_text(english_text(comment, 'text'))}”")
     return lines
 
 
@@ -97,7 +130,7 @@ def render_agenda_md(payload: dict) -> str:
     notes = limitation_notes(payload)
     if notes:
         lines += ["", "⚠️ " + "; ".join(notes) + "."]
-    lines += ["", *comparison_lines(payload)]
+    lines += ["", *(_md_text(line) for line in comparison_lines(payload))]
     lines += _md_source_posts(payload)
     if not payload["stories"]:
         if not delta:
@@ -107,7 +140,7 @@ def render_agenda_md(payload: dict) -> str:
         return "\n".join(lines) + "\n"
     for index, card in enumerate(payload["stories"], 1):
         lines += ["", "---", ""]
-        lines += _md_card_head(card, f"## {index}. {card['title']}")
+        lines += _md_card_head(card, f"## {index}. {_md_text(card['title'])}")
         for claim in card["claims"][:CARD_QUOTES]:
             lines += _md_quote(claim)
         lines += _md_discussion(card, full=False)
@@ -130,9 +163,9 @@ def _md_source_posts(payload: dict) -> list[str]:
         if group := posts.get(source):
             lines += ["", f"### {label}"]
             lines += [
-                f"- {short_time(post['published_at'])} [{post['channel']}]({post['link']}): "
-                f"**{post['title']}**"
-                + (f" — {post['text']}" if post["text"] != post["title"] else "")
+                f"- {short_time(post['published_at'])} [{_md_text(post['channel'])}]"
+                f"(<{_md_url(post['link'])}>): **{_md_text(post['title'])}**"
+                + (f" — {_md_text(post['text'])}" if post["text"] != post["title"] else "")
                 for post in group
             ]
     return lines
@@ -159,7 +192,7 @@ def _md_extras(payload: dict) -> list[str]:
     if leads:
         lines += ["", "---", "", "## ⚡ First to report"]
         lines += [
-            f"- **{lead['channel']}** — first on {lead['stories_first']} "
+            f"- **{_md_text(lead['channel'])}** — first on {lead['stories_first']} "
             f"{'story' if lead['stories_first'] == 1 else 'stories'}, {head_start(lead)}"
             for lead in leads
         ]
@@ -167,14 +200,15 @@ def _md_extras(payload: dict) -> list[str]:
     if upcoming:
         lines += ["", "## 📅 On the calendar"]
         lines += [
-            f"- {card['title']} ({channel_count(card['current_channels'])})" for card in upcoming
+            f"- {_md_text(card['title'])} ({channel_count(card['current_channels'])})"
+            for card in upcoming
         ]
     return lines
 
 
 def render_story_md(payload: dict) -> str:
     card = payload["story"]
-    lines = _md_card_head(card, f"# {card['title']}")
+    lines = _md_card_head(card, f"# {_md_text(card['title'])}")
     if card["claims"]:
         lines += ["", "## What sources say"]
         for claim in card["claims"]:
@@ -187,8 +221,17 @@ def render_story_md(payload: dict) -> str:
     if card.get("publications"):
         lines += ["", "## Posts"]
         lines += [
-            f"- {short_time(pub['published_at'])} [{pub['channel']}]({pub['link']})"
+            (
+                f"- {short_time(pub['published_at'])} [{_md_text(pub['channel'])}]"
+                f"(<{_md_url(pub['link'])}>)"
+            )
             for pub in card["publications"]
         ]
     lines += ["", f"Snapshot `{payload['snapshot_id']}` · {coverage_text(payload)}."]
     return "\n".join(lines) + "\n"
+
+
+def render_search_md(payload: dict) -> str:
+    hits = payload.get("hits") or []
+    lines = [f"- {_md_text(hit['title'])} (`{_md_text(hit['story_id'])}`)" for hit in hits]
+    return "\n".join(lines) + ("\n" if lines else "No matching stories.\n")

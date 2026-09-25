@@ -95,7 +95,8 @@ async def test_markdown_and_html_expose_comparison_and_keep_pinned_export_links(
                 "/agenda", params={"since_snapshot_id": "snap-before", "format": format}
             )
             assert response.status_code == 200
-            assert "snap-before" in response.text and "No changes" in response.text
+            expected_cursor = r"snap\-before" if format == "md" else "snap-before"
+            assert expected_cursor in response.text and "No changes" in response.text
             if format == "html":
                 assert "snapshot_id=snap-after&amp;since_snapshot_id=snap-before" in response.text
         response = await client.post(

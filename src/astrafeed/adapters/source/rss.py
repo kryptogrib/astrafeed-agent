@@ -5,12 +5,12 @@ from __future__ import annotations
 import hashlib
 import html
 import re
-import xml.etree.ElementTree as ET
 from datetime import UTC, datetime
 from email.utils import parsedate_to_datetime
 from urllib.parse import urlparse
 
 import httpx
+from defusedxml import ElementTree as ET
 
 from astrafeed.domain.models import Item
 

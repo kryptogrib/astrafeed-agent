@@ -283,12 +283,14 @@ async def _context_from_store(store: AgendaStore, indexed: IndexedFragment) -> A
         indexed,
         candidates,
         links,
-        await store.list_entities(
+        await store.entities_matching(
+            entity_ids,
+            lexical_tokens(*surfaces),
             lambda entity: (
                 entity.entity_id in entity_ids
                 or entity.canonical_name.casefold() in surfaces
                 or any(alias.casefold() in surfaces for alias in entity.aliases)
-            )
+            ),
         ),
         await store.list_stories(story_ids),
         await store.list_events(event_ids),
@@ -473,12 +475,14 @@ async def assign_speculative_batch(
         for surface in (entity.surface for entity in fragment.entities)
     )
     entity_ids = {entity_id for link in links for entity_id in link.entity_ids}
-    entities = await store.list_entities(
+    entities = await store.entities_matching(
+        entity_ids,
+        lexical_tokens(*catalog_surfaces),
         lambda entity: (
             entity.entity_id in entity_ids
             or entity.canonical_name.casefold() in catalog_surfaces
             or any(alias.casefold() in catalog_surfaces for alias in entity.aliases)
-        )
+        ),
     )
     stories = await store.list_stories({link.story_id for link in links})
     events = await store.list_events({link.event_id for link in links if link.event_id})
@@ -491,7 +495,7 @@ async def assign_speculative_batch(
     entity_map = {entity.entity_id: entity for entity in entities}
     story_map = {story.story_id: story for story in stories}
     event_map = {event.event_id: event for event in events}
-    frozen_candidate_index = CandidateIndex(frozen_pool) if not strict else None
+    frozen_candidate_index = CandidateIndex(frozen_pool)
     semaphore = asyncio.Semaphore(concurrency)
     embed_started = perf_counter()
     inputs: dict[str, str] = {}
@@ -556,6 +560,7 @@ async def assign_speculative_batch(
     ) -> list[PreparedFragment]:
         nonlocal context_seconds, model_seconds
         prior_surfaces = {surface.casefold() for item in prior for surface in item.entity_surfaces}
+        prior_index = CandidateIndex(prior) if strict and prior else None
 
         async def one(index: int, fragment: Fragment, indexed: IndexedFragment) -> PreparedFragment:
             nonlocal context_seconds, model_seconds
@@ -569,21 +574,16 @@ async def assign_speculative_batch(
                 frozen_events,
                 frozen_candidate_index,
             )
-            possible = (
-                _context_from_state(
-                    indexed,
-                    (*frozen_pool, *prior),
-                    frozen_links,
-                    frozen_entities,
-                    frozen_stories,
-                    frozen_events,
-                )
-                if strict
-                else context
-            )
+            prior_candidates = prior_index.find(indexed) if prior_index is not None else ()
             context_seconds += perf_counter() - started
+            context_candidate_keys = {
+                (item.publication_id, item.fragment_index) for item in context.candidates
+            }
             if strict and (
-                possible.candidates != context.candidates
+                any(
+                    (item.publication_id, item.fragment_index) not in context_candidate_keys
+                    for item in prior_candidates
+                )
                 or prior_surfaces.intersection(
                     surface.casefold() for surface in indexed.entity_surfaces
                 )

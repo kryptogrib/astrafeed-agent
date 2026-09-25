@@ -86,14 +86,28 @@ def create_app(
     def favicon() -> FileResponse:
         return FileResponse(_FAVICON, media_type="image/x-icon")
 
-    @app.get("/healthz")
-    async def healthz() -> dict[str, Any]:
+    async def _health_payload() -> dict[str, Any]:
         if health is not None:
             extra = health()
             if inspect.isawaitable(extra):
                 extra = await extra
             return extra
         return {"status": "ok", **(info or {})}
+
+    @app.get("/healthz")
+    async def healthz() -> dict[str, Any]:
+        return await _health_payload()
+
+    @app.get("/healthz/live")
+    async def health_live() -> dict[str, str]:
+        return {"status": "ok"}
+
+    @app.get("/healthz/ready", response_model=None)
+    async def health_ready() -> dict[str, Any] | JSONResponse:
+        payload = await _health_payload()
+        if payload.get("status") != "ok":
+            return JSONResponse(payload, status_code=503)
+        return payload
 
     if pulse is not None:
 

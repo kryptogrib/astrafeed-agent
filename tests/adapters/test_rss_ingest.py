@@ -2,6 +2,7 @@ from datetime import UTC, datetime, timedelta
 
 import httpx
 import pytest
+from defusedxml.common import EntitiesForbidden
 from sqlalchemy import event
 from sqlalchemy.ext.asyncio import async_sessionmaker, create_async_engine
 
@@ -55,6 +56,15 @@ def test_parse_rss_and_atom_preserve_original_link_and_date():
         assert item.timestamp == START
         assert item.channel_name == "Publisher"
         assert "Market update" in item.text
+
+
+def test_parse_feed_rejects_entity_expansion_payload():
+    body = (
+        b'<!DOCTYPE lolz [<!ENTITY lol "lol"><!ENTITY lol2 "&lol;&lol;&lol;&lol;'
+        b'&lol;&lol;&lol;&lol;">]><rss><channel><title>&lol2;</title></channel></rss>'
+    )
+    with pytest.raises(EntitiesForbidden):
+        parse_feed(body, URL)
 
 
 @pytest.mark.asyncio

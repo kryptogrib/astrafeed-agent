@@ -117,9 +117,9 @@ async def test_agenda_search_story_share_one_snapshot():
     assert md.headers["content-type"].startswith("text/markdown")
     assert "Потоки ETH ETF" in md.text
     assert "**2 sources** · ↑ +2 in 24h" in md.text
-    assert "Covered by: [@alpha](https://t.me/alpha/10)" in md.text
+    assert "Covered by: [@alpha](<https://t.me/alpha/10>)" in md.text
     # Without a translation the original quote is shown as is.
-    assert "> “Отток ETH ETF составил 120 млн.” — [@alpha](https://t.me/alpha/10)" in md.text
+    assert r"120 млн\.” — [@alpha](<https://t.me/alpha/10>)" in md.text
 
     page = await _get(app, "/agenda?format=html")
     assert page.headers["content-type"].startswith("text/html")
@@ -286,7 +286,11 @@ def test_discussion_is_rendered_in_markdown_and_html_and_escaped():
                     "link": "https://t.me/a/1?comment=5",
                     "channel": "@a",
                 },
-                {"text": "второй", "link": "javascript:alert(1)", "channel": "@b"},
+                {
+                    "text": "](javascript:x) <script>alert(1)</script>",
+                    "link": "javascript:alert(1)",
+                    "channel": "@b",
+                },
             ],
         },
     }
@@ -307,7 +311,7 @@ def test_discussion_is_rendered_in_markdown_and_html_and_escaped():
     md = render_agenda_md(payload)
     assert "💬 **From reader comments** (214 comments, unverified):" in md
     assert (
-        "- A reader says <b>withdrawals</b> are stuck — [comments under @a post](https://t.me/a/1?comment=5)"
+        r"- A reader says \<b\>withdrawals\</b\> are stuck — [comments under @a post](<https://t.me/a/1?comment=5>)"
     ) in md
     # The agenda keeps facts short; the comment text is on the story page.
     assert "withdrew everything yesterday" not in md and "вывел" not in md
@@ -318,6 +322,8 @@ def test_discussion_is_rendered_in_markdown_and_html_and_escaped():
 
     story = render_story_md({**payload, "story": card})
     assert "  > “withdrew everything yesterday”" in story and "вывел" not in story
+    assert r"](javascript:x)" not in story and r"\]\(javascript:x\)" in story
+    assert r"\<script\>" in story
     story_page = render_story_html({**payload, "story": card})
     assert "<summary>original</summary>вывел всё вчера" in story_page
 
